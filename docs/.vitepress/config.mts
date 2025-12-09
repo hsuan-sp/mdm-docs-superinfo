@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/mdm-support-site/',
   title: "MDM 技術支援中心",
   description: "專業 Apple MDM 部署與技術支援文件",
   cleanUrls: true,
