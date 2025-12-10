@@ -14,6 +14,6 @@
     "noEmit": true,
     "types": ["vite/client"]
   },
-  "include": ["docs/**/*.ts", "docs/**/*.d.ts", "docs/**/*.tsx", "docs/**/*.vue", "docs/.vitepress/**/*.ts"],
+  "include": ["docs/**/*.ts", "docs/**/*.mts", "docs/**/*.d.ts", "docs/**/*.tsx", "docs/**/*.vue", "docs/.vitepress/**/*.ts", "docs/.vitepress/**/*.mts"],
   "exclude": ["node_modules"]
 }
