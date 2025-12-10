@@ -329,4 +329,34 @@ export const glossaryData: Term[] = [
     definition: '暫存資料。Apple 設有 Caching Server 可暫存 App 下載檔，加速內網更新。',
     analogy: '學校的「糧倉」。常用的課本（App）先搬一堆放在學校糧倉，學生要領書直接去糧倉拿，不用每個人都跑去出版社（Apple）搬。'
   },
+  {
+    term: 'JSS (Jamf Software Server)',
+    category: 'Core',
+    definition: 'Jamf Pro 的核心伺服器，負責發送指令與儲存所有裝置資料。',
+    analogy: 'MDM 的「大腦」。所有指令都是從這裡發出去的，它也記得每一台平板叫什麼名字、剩多少電。'
+  },
+  {
+    term: 'Push Notification (推播通知)',
+    category: 'Core',
+    definition: 'MDM 用來叫醒裝置的訊號。透過 Apple 伺服器傳送。',
+    analogy: '給平板的「起床號」。MDM 喊一聲，平板醒來，然後問 MDM：「老闆找我幹嘛？」'
+  },
+  {
+    term: 'Pending Command (擱置的指令)',
+    category: 'Core',
+    definition: '已經發出但裝置尚未執行的指令。通常是因為裝置離線或關機。',
+    analogy: '「未讀訊息」。老闆Line你了，但你手機沒開，訊息就掛在那邊等你開機才看得到。'
+  },
+  {
+    term: 'Renew Certificate (更新憑證)',
+    category: 'Security',
+    definition: '每年必須執行的維護工作，確保 MDM 與 Apple 之間的通訊授權有效。',
+    analogy: '「換發新的識別證」。這張證件一年效期，過期前要去換新的，不然警衛（Apple）就不讓你進去辦公了。'
+  },
+  {
+    term: 'Kiosk Mode (導覽機模式)',
+    category: 'Apps',
+    definition: '即單一 App 模式。限制使用者只能操作某一個特定的 App。',
+    analogy: '「展場模式」。像你去博物館看到的平板，只能按導覽，不能跳出來玩遊戲。'
+  }
 ];

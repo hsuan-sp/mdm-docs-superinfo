@@ -3,14 +3,14 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/mdm-support-site/',
-  title: "MDM 技術支援中心",
+  title: "MDM 與裝置管理常用問答集",
   description: "專業 Apple MDM 部署與技術支援文件",
   cleanUrls: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首頁', link: '/' },
-      { text: '指南', link: '/guide/account-server' },
+      { text: '指南', link: '/guide/01-account' },
       { text: '術語表', link: '/glossary' }
     ],
 
@@ -39,10 +39,6 @@ export default defineConfig({
         }
       ]
     },
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/superinfo-mdm' }
-    ],
 
     footer: {
       message: 'Designed for Clarity. Based on official Apple Best Practices.',

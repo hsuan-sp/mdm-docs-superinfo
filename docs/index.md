@@ -2,11 +2,11 @@
 layout: home
 
 hero:
-  name: "MDM 技術支援中心"
+  name: "MDM 與裝置管理常用問答集"
   text: "打造零摩擦的 Apple 裝置管理體驗"
   tagline: "Designed for Professional IT Administrators"
   image:
-    src: https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80
+    src: /mdm_hero.png
     alt: MDM Dashboard
   actions:
     - theme: brand
