@@ -127,15 +127,6 @@ const navCards = [
       </div>
     </section>
 
-    <!-- Footer Promo -->
-    <section class="promo fade-in-on-scroll">
-      <div class="promo-content">
-        <h2>極電資訊有限公司</h2>
-        <p class="promo-subtitle">Apple 授權教育經銷商｜Apple 校園體驗中心｜軟硬體專業諮詢</p>
-        <p class="promo-desc">致力於給您最好的服務</p>
-      </div>
-    </section>
-
   </div>
 </template>
 
@@ -146,7 +137,6 @@ const navCards = [
   color: var(--vp-c-text-1);
   background: var(--vp-c-bg);
   min-height: 100vh;
-  padding-bottom: 80px;
 }
 
 /* Animations */

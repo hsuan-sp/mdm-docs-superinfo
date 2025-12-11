@@ -152,3 +152,57 @@ h1 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* --- Premium Navigation Polish --- */
+
+/* 1. Center the Search Bar */
+@media (min-width: 960px) {
+  .VPNavBarSearch {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 12px; /* Adjust based on navbar height */
+    z-index: 100;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .VPNavBarSearch .DocSearch {
+    width: 100%;
+    max-width: 400px; /* Wider search bar */
+  }
+
+  /* Adjust Nav Content to not overlap centered search if possible */
+  /* This is tricky, but absolute positioning usually floats over */
+}
+
+/* 2. Logo Separator Line */
+.VPNavBarTitle {
+  display: flex !important;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Target the Logo Image specifically if possible, or just use ::before on text */
+/* VitePress puts logo in A > IMG. */
+.VPNavBarTitle .logo {
+  height: 28px; /* Ensure size */
+  width: auto;
+  padding-right: 18px;
+  margin-right: 0 !important;
+  border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+.dark .VPNavBarTitle .logo {
+  border-right: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Adjust Site Title Text */
+.VPNavBarTitle .title {
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  letter-spacing: -0.01em;
+  opacity: 0.9;
+}
