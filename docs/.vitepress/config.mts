@@ -11,7 +11,17 @@ export default defineConfig({
     nav: [
       { text: '首頁', link: '/' },
       { text: '指南', link: '/guide/01-account' },
-      { text: '術語表', link: '/glossary' }
+      { text: '術語表', link: '/glossary' },
+      {
+        text: '常用連結',
+        items: [
+          { text: '極電資訊官網', link: 'https://www.apple.com/tw/education/' },
+          { text: 'Apple 平台部署指南', link: 'https://support.apple.com/zh-tw/guide/deployment/welcome/web' },
+          { text: 'Apple School Manager 使用手冊', link: 'https://support.apple.com/zh-tw/guide/apple-school-manager/welcome/web' },
+          { text: 'Jamf Pro 官方文件', link: 'https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Jamf_Pro_Documentation.html' },
+          { text: 'Jamf School 官方文件', link: 'https://learn.jamf.com/bundle/jamf-school-documentation/page/Jamf_School_Documentation.html' }
+        ]
+      }
     ],
 
     sidebar: {
