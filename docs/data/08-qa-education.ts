@@ -232,6 +232,82 @@ Wi-Fi 認證與 HTTPS 加密連線都依賴 **「數位憑證 (Certificate)」**
 3.  **統一派送**：建議由 MDM 統一排程在夜間或寒暑假進行 **「受監管更新」**，避免佔用上課頻寬。
 `,
         tags: ["Update Strategy", "iPadOS", "Best Practice"]
+      },
+      {
+        id: "edu-17",
+        question: "「Jamf Pro」與「Jamf School」有什麼不同？為什麼我們學校是用 Pro？",
+        answer: `
+**定位差異**：
+*   **Jamf Pro**：**企業級/旗艦級** 產品。功能最強大，適合跨校區、需高度客製化 Script、整合 AD/LDAP 認證的縣市教育局或大型組織。精進方案多數縣市採用此方案以進行**集中式納管**。
+*   **Jamf School** (原 ZuluDesk)：**專為教育設計**。介面較簡單直覺，針對單一學校或教師優化，但在跨組織的大規模自動化與API整合上不如 Pro 強大。
+
+**為什麼用 Jamf Pro？**
+因為縣市教育局需要統一管理數萬台裝置，Jamf Pro 提供的 **「分站 (Sites)」** 架構與強大的 **「智慧型群組 (Smart Groups)」** 邏輯，最能滿足這種大規模、分層級的管理需求。
+`,
+        tags: ["Jamf Pro", "Jamf School", "Comparison", "MDM Selection"]
+      },
+      {
+        id: "edu-18",
+        question: "老師反映「我的 App Store 不見了」，也無法下載 App，怎麼辦？",
+        answer: `
+**這是正常的管理設定。**
+
+為了避免學生隨意下載遊戲或不當 App，受監管裝置通常會**隱藏 App Store**。
+
+**如何下載 App？**
+請指導老師與學生使用 **「Self Service (自助服務)」** App。
+*   Self Service 是學校專用的 App Store。
+*   裡面只有經過學校或教育局審核通過的 App。
+*   點選 **「安裝 (Install)」** 即可下載，無需輸入 Apple ID 密碼。
+`,
+        tags: ["App Store", "Missing App", "Self Service", "Teacher Basic"]
+      },
+      {
+        id: "edu-19",
+        question: "學生忘記了螢幕鎖定密碼 (Passcode)，平板被鎖住了怎麼辦？",
+        answer: `
+**切勿嘗試猜測密碼**，以免導致平板進入「已停用」狀態需重灌。
+
+**解決方案**：
+1.  **通知管理員**：請資訊組長或管理員登入 Jamf Pro。
+2.  **清除密碼**：
+    *   搜尋該裝置。
+    *   點選 **「管理 (Management)」** 頁籤。
+    *   發送 **「清除密碼 (Clear Passcode)」** 指令。
+3.  **解鎖**：指令送達後 (需連網)，平板密碼會被移除。請學生滑開螢幕後，立即至設定中**重新設定新的密碼**。
+`,
+        tags: ["Passcode", "Unlock", "Troubleshooting", "Teacher Basic"]
+      },
+      {
+        id: "edu-20",
+        question: "為什麼 MDM 這麼耗電？老師覺得平板變耗電了？",
+        answer: `
+**迷思釐清**：
+MDM 本身 (Jamf Pro) 只是在背景久久才執行一次檢核，**通常不耗電**。
+
+**真正耗電原因**：
+1.  **定位服務**：若有 App (如地圖或遺失模式) 持續使用 GPS。
+2.  **螢幕亮度**：上課時螢幕全亮且未設定自動休眠。
+3.  **大量 App 更新**：若剛好 MDM 正在背景同時更新數十個 App。
+4.  **藍牙/AirDrop**：整天開啟藍牙搜尋周邊裝置 (Apple 課堂需求)。
+
+**建議**：請檢查 **「設定 > 電池」**，查看是用電量前幾名的 App 是誰，通常是 Youtube 或教學軟體，而非 MDM 系統。
+`,
+        tags: ["Battery", "Power Drain", "Myth", "Teacher Basic"]
+      },
+      {
+        id: "edu-21",
+        question: "我可以登入自己的「個人 Apple ID」來下載原本買過的 App 嗎？",
+        answer: `
+**視學校政策而定，但通常不建議。**
+
+1.  **管理混淆**：登入個人 ID 後，聯絡人、照片可能會同步進來，造成公私資料混雜。
+2.  **VPP 衝突**：若該 App 學校已經透過 VPP 購買並派送，您又用個人 ID 下載，可能會造成授權判定衝突或無法更新。
+3.  **限制**：許多學校的 MDM 策略會直接 **「禁止帳號修改」**，您可能根本無法登入或登出 Apple ID。
+
+**建議**：若教學上有付費 App 需求，請向學校提出申請，由學校透過 VPP 統一採購派送。
+`,
+        tags: ["Apple ID", "Personal Account", "Policy", "Teacher Basic"]
       }
     ]
   }

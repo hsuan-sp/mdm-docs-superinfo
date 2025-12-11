@@ -258,6 +258,74 @@ export const data: QASection[] = [
     *   因為此限制一旦生效，若藍牙剛好是關閉的，學生將無法自行將其打開，會造成無法連接狀態。
 4.  儲存並套用描述檔。之後，學生在「設定」或「控制中心」中的藍牙開關將會反灰，無法關閉。
 `
+      },
+      {
+        id: 'cls-13',
+        question: 'Jamf Teacher 的「App 鎖定 (App Lock)」與 Apple 課堂的「鎖定 App」有何不同？',
+        important: false,
+        tags: ['App Lock', '比較', 'Jamf Teacher'],
+        answer: `
+**核心差異**：
+*   **Apple 課堂**：
+    *   **即時性**：老師當下點選，學生 iPad 立即開啟並鎖定該 App。
+    *   **解除**：老師點選解鎖，或下課鐘響、藍牙斷線，鎖定即解除。
+    *   **適合**：隨堂測驗、臨時導讀。
+
+*   **Jamf Teacher**：
+    *   **持久性**：透過「課程 (Lesson)」設定。只要課程時間還在進行中，學生就算重開機、斷網，iPad 依然會被鎖定在該 App (透過 Web Clip 或背景派送 Profile)。
+    *   **範圍**：可設定「白名單」，允許學生在 3-4 個 App 之間切換，而非只能鎖定 1 個。
+    *   **適合**：長時間的各科測驗、期中考模式。
+`
+      },
+      {
+        id: 'cls-14',
+        question: '如何使用 Jamf Teacher 進行「網頁鎖定」？(僅允許特定網站)',
+        important: false,
+        tags: ['Jamf Teacher', 'Web Lock', '白名單'],
+        answer: `
+**操作步驟**：
+1.  開啟 **Jamf Teacher App**。
+2.  建立或編輯一個課程 (Lesson)。
+3.  在 **「允許的網站 (Allowed Websites)」** 區塊中：
+    *   加入您允許學生瀏覽的 URL (如 \`kahoot.it\`, \`google.com\`)。
+    *   **注意**：一旦啟用此課程，**Safari 將會隱藏所有其他書籤與網址列**，學生僅能瀏覽您清單中的網站。
+4.  設定課程時間長度 (如 45 分鐘)。
+5.  點選 **「開始 (Start)」**。所有學生的 iPad 將立即進入受限瀏覽模式。
+`
+      },
+      {
+        id: 'cls-15',
+        question: 'Jamf Teacher 顯示「等待中 (Pending)」或學生無法收到指令？',
+        important: false,
+        tags: ['故障排除', 'Jamf Teacher', 'Pending'],
+        answer: `
+**Jamf Teacher 運作原理**：
+它是透過 **網際網路 (Internet)** 與 Jamf Pro 伺服器溝通，再由伺服器發送 APNs 指令給學生 iPad。與 Apple 課堂 (藍牙) 不同。
+
+**排查步驟**：
+1.  **確認網路**：老師 iPad 與學生 iPad **都必須連上網際網路**。若學生斷網，就收不到指令。
+2.  **確認推播 (APNs)**：檢查學校防火牆是否阻擋了 Apple 推播服務 (Port 5223)。
+3.  **重新整理**：在 Jamf Teacher 介面下拉刷新，或請學生打開 **Jamf Student App** (若有安裝) 讓裝置主動回報狀態。
+`
+      },
+      {
+        id: 'cls-16',
+        question: 'Jamf Teacher 可以限制學生的藍牙、相機或拼字檢查嗎？',
+        important: false,
+        tags: ['功能限制', 'Jamf Teacher'],
+        answer: `
+**可以**。這是 Jamf Teacher 的強項。
+
+**設定方式**：
+在建立課程 (Lesson) 時，進入 **「功能限制 (Restrictions)」** 選單，您可以一鍵開關以下功能：
+*   **相機 (Camera)**：禁止拍照/錄影。
+*   **拼字檢查 (Spell Check)**：英文考試時防止作弊。
+*   **字典/定義 (Dictionary)**：防止查詢單字。
+*   **AirDrop**：防止傳遞答案。
+*   **Safari**：直接禁用瀏覽器。
+
+這些限制僅在課程進行期間生效，課程結束後自動恢復。
+`
       }
     ]
   }
