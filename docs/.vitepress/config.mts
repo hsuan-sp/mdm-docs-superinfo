@@ -19,6 +19,7 @@ export default defineConfig({
             text: '常用連結',
             items: [
               { text: '極電資訊官網', link: 'https://www.superinfo.com.tw' },
+              { text: 'Apple 教育官網', link: 'https://www.apple.com/tw/education/' },
               { text: '教育部 MDM 管理平台', link: 'https://mdm.edu.tw' },
               { text: '推動中小學數位學習精進方案入口網', link: 'https://pads.moe.edu.tw/pads_front/index.php?action=city_links' },
               { text: 'Apple 平台部署指南', link: 'https://support.apple.com/zh-tw/guide/deployment/welcome/web' },
@@ -67,7 +68,7 @@ export default defineConfig({
     },
 
     footer: {
-      copyright: 'Copyright © 2025 極電資訊有限公司'
+      copyright: 'Copyright © 2025 極電資訊｜Apple 授權教育經銷商 <br> 極電資訊有限公司 | 統一編號 23756990'
     },
 
     search: {

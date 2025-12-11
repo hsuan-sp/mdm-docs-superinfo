@@ -5,12 +5,14 @@ import './style.css'
 import GlossaryApp from '../components/GlossaryApp.vue'
 import QAViewer from '../components/QAViewer.vue'
 import AppleHome from '../components/AppleHome.vue'
+import BackToTop from '../components/BackToTop.vue'
 
 export default {
   extends: Theme,
   Layout: () => {
     return h(Theme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
+      'layout-bottom': () => h(BackToTop)
     })
   },
   enhanceApp({ app, router, siteData }: EnhanceAppContext) {

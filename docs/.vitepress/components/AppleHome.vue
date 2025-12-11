@@ -130,9 +130,9 @@ const navCards = [
     <!-- Footer Promo -->
     <section class="promo fade-in-on-scroll">
       <div class="promo-content">
-        <h2>還在煩惱 MDM？</h2>
-        <p>讓我們協助您解決所有疑難雜症。</p>
-        <a href="https://www.apple.com/tw/education/" target="_blank" class="apple-link">拜訪 Apple 教育官網 ›</a>
+        <h2>極電資訊有限公司</h2>
+        <p class="promo-subtitle">Apple 授權教育經銷商｜Apple 校園體驗中心｜軟硬體專業諮詢</p>
+        <p class="promo-desc">致力於給您最好的服務</p>
       </div>
     </section>
 
@@ -362,16 +362,16 @@ const navCards = [
 .promo {
   text-align: center;
   margin-top: 140px;
-  padding: 100px 24px;
+  padding: 80px 24px;
   background: var(--vp-c-bg-alt);
   border-radius: 32px;
   margin-left: 24px;
   margin-right: 24px;
 }
 
-.promo h2 { font-size: 48px; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
-.promo p { font-size: 21px; color: var(--vp-c-text-2); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
-.apple-link { color: var(--vp-c-brand-1); font-size: 21px; font-weight: 500; }
+.promo h2 { font-size: 36px; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+.promo-subtitle { font-size: 19px; color: var(--vp-c-text-1); margin-bottom: 8px; font-weight: 600; opacity: 0.9; }
+.promo-desc { font-size: 17px; color: var(--vp-c-text-2); margin-top: 0; }
 
 /* Dark Mode Overrides */
 @media (prefers-color-scheme: dark) {
