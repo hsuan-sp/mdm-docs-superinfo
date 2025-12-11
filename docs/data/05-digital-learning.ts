@@ -204,8 +204,63 @@ export const data: QASection[] = [
 4.  **注意**：若只連上 Wi-Fi 但 Jamf Trust 未啟動 (或被關閉)，數據將**無法回傳**。
 `,
         tags: ['故障排除', '檢查清單', 'VPN']
+      },
+      {
+        id: 'dl-14',
+        question: 'Jamf Trust 可以單獨封鎖「遊戲類」或「社交類」的網站嗎？',
+        important: false,
+        tags: ['內容過濾', '分類阻擋'],
+        answer: `
+**可以。**
+
+Jamf Protect (原 Jamf Trust/Data Policy) 的後台支援**「類別過濾 (Category Blocking)」**。
+*   管理員可以在規則中勾選 **"Games" (遊戲)**、**"Social Networking" (社交)** 或 **"Streaming" (串流)**。
+*   生效後，屬於該類別的已知網站（如 Roblox, Facebook）都會被阻擋。
+*   *注意：此設定通常由縣市教育局或最高管理者統一控管，學校端可能無法自行更改。*
+`
+      },
+      {
+        id: 'dl-15',
+        question: '我們可以強制開啟 YouTube 的「嚴格篩選模式 (Restricted Mode)」嗎？',
+        important: false,
+        tags: ['YouTube', '色情守門員', '限制'],
+        answer: `
+**可以。**
+
+這在教育場域非常常見。設定方式通常有兩種：
+1.  **Jamf Trust 規則**：在已啟用的 Safe Internet 規則中，勾選 **「Enforce YouTube Restricted Mode」**。
+2.  **Google 帳戶層級**：若學生使用學校 Google 帳號登入 YouTube，可從 Google Admin Console 後台強制該 OU 啟用嚴格篩選。
+`
+      },
+      {
+        id: 'dl-16',
+        question: '老師調校轉去別的學校，他使用的 iPad 可以直接帶過去用嗎？',
+        important: false,
+        tags: ['跨校移動', '資產盤點'],
+        answer: `
+**原則上不行。**
+
+1.  **資產歸屬**：iPad 是該學校（或該縣市分配給該校）的財產，應留在原校。
+2.  **MDM 管理權**：甲校的 MDM **無法管理** 乙校的網路與設定。老師帶過去後，會發現無法連上乙校 Wi-Fi，也收不到乙校派送的 App。
+3.  **正確流程**：
+    *   老師應將 iPad **繳回原校** 解除鎖定並重置。
+    *   老師到新學校後，領取新學校配發的 iPad。
+`
+      },
+      {
+        id: 'dl-17',
+        question: 'MDM 或 Jamf Trust 一直在背景傳輸數據，會不會吃光我的手機熱點流量？',
+        important: false,
+        tags: ['流量', '行動網路'],
+        answer: `
+**影響極小。**
+
+*   **MDM 指令**：純文字指令，每次僅幾 KB。
+*   **Jamf Trust 回報**：僅回報網域名稱與計量數據，不包含網頁內容本身，流量極低。
+*   **真正耗流量的是**：App 更新、iOS 系統更新、觀看 YouTube 影片。
+*   **建議**：若使用手機熱點，請在 iPad 設定中開啟 **「低數據模式」**，可暫停自動更新與背景同步，大幅節省流量。
+`
       }
     ]
   }
 ];
-

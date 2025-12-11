@@ -380,6 +380,74 @@ Jamf Pro 的 PreStage 註冊僅能設定「命名規則」（如：統一改為�
 *   學校可以設定 Wi-Fi、學校 Email 等描述檔，方便老師使用。
 *   MDM 的管理權限受到嚴格限制，完美平衡了學校管理需求與個人隱私保護。
 `
+      },
+      {
+        id: 'enr-13',
+        question: '如果我把這台 iPad 借給別校，他們登入自己的 MDM 會發生什麼事？(MDM 衝突)',
+        important: false,
+        tags: ['MDM衝突', '借用'],
+        answer: `
+**核心原則：一台 iOS 裝置同一時間只能被一個 MDM納管。**
+
+若該原本屬於貴校的 iPad 未先從貴校 Jamf 中解除監管與抹除，對方學校**無法**將其納入他們的 MDM。
+*   **正確流程**：
+    1.  貴校 Jamf：**取消指派** (ASM) 並 **刪除裝置** (Jamf)。
+    2.  清除 iPad。
+    3.  對方學校：在 ASM 輸入該 iPad 序號並指派給他們的 Jamf。
+    4.  對方重置 iPad 並納管。
+`
+      },
+      {
+        id: 'enr-14',
+        question: '除了重置清除 (ADE) 之外，還有其他「網頁註冊」的納管方式嗎？',
+        important: false,
+        tags: ['UIE', '網頁註冊'],
+        answer: `
+**有，稱為「使用者啟動註冊 (User-Initiated Enrollment, UIE)」。**
+
+**操作方式**：
+1.  拿一台未受管的 iPad，連接 Wi-Fi。
+2.  打開 Safari，輸入貴校 Jamf 的註冊網址（通常是 \`https://貴校網址.jamfcloud.com/enroll\`）。
+3.  輸入帳號密碼。
+4.  下載並安裝描述檔。
+
+**缺點**：
+*   **無法達到「最高監管層級 (Supervision)」**（除非透過 Apple Configurator 輔助）。
+*   使用者可以隨時自行移除 MDM 描述檔（除非是特定條件下的 ADE 裝置）。
+*   通常僅用於臨時測試或 BYOD 情境。
+`
+      },
+      {
+        id: 'enr-15',
+        question: '如何確保學生絕對無法自行移除 MDM 描述檔？',
+        important: false,
+        tags: ['移除描述檔', '安全性'],
+        answer: `
+**關鍵設定**：
+在 Jamf Pro 的 **PreStage 註冊 (PreStage Enrollments)** 設定中，有一個非常重要的勾選框：
+
+**✅ 防止未註冊 (Prevent Unenrollment)**
+
+*   **若有勾選**：iPad 設定中的「VPN 與裝置管理」內，MDM 描述檔將**不會出現「移除」按鈕**。學生完全無法刪除。
+*   **若未勾選**：學生可以自行進入設定移除描述檔，導致脫管。
+
+*注意：此設定僅對透過 ADE (重置) 納管的裝置有效。手動網頁註冊的裝置無法強制禁止移除。*
+`
+      },
+      {
+        id: 'enr-16',
+        question: 'Jamf Pro 多久會自動更新一次裝置資訊 (Inventory Update)？',
+        important: false,
+        tags: ['資產更新', '頻率'],
+        answer: `
+**預設值**：通常為 **每天一次 (Daily)**。
+
+Jamf Pro 會依據此頻率，在背景默默向 iPad 詢問最新的電量、App 清單、OS 版本等資訊。
+*   **可否手動強制？**
+    *   可以。在裝置紀錄頁面點選 **「Update Inventory」** 按鈕，會立即觸發更新。
+*   **可否縮短頻率？**
+    *   可以（如改為每週、每月），但不建議改為「每小時」，這會對伺服器造成極大負擔，且可能導致指令塞車。
+`
       }
     ]
   }

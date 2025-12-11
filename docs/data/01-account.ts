@@ -320,6 +320,73 @@ Apple 已於 2022 年正式終止 macOS Server 的 Profile Manager 功能。**�
     *   確認學校防火牆是否阻擋了 Jamf 的網域。
     *   若問題持續，請截圖錯誤畫面並聯繫我們。
 `
+      },
+      {
+        id: 'acc-13',
+        question: '我都還沒收到過期通知，可以「提早」更新 APNs 或 VPP 權杖嗎？',
+        important: false,
+        tags: ['憑證更新', 'Best Practice'],
+        answer: `
+**答案**：**絕對可以，且強烈建議這麼做。**
+
+**原因**：
+*   **避免空窗期**：若等到到期當天才更新，萬一遇到 Apple 網站維護或剛好負責人請假，可能會導致管理中斷。
+*   **操作建議**：許多經驗豐富的管理員會固定在**「每年的暑假 (7-8月)」** 統一更新所有憑證 (APNs, ADE, VPP)，避開學期中的忙碌時段，確保未來一整年都不會跳出過期通知。
+`
+      },
+      {
+        id: 'acc-14',
+        question: '學校地址或電話變更了，如何在 Apple School Manager (ASM) 中修改？',
+        important: false,
+        tags: ['ASM', '基本資料'],
+        answer: `
+**操作步驟**：
+1.  以管理員身分登入 ASM。
+2.  點選左下角的使用者帳戶名稱 > **「偏好設定 (Preferences)」**。
+3.  選擇 **「註冊資訊 (Enrollment Information)」**。
+4.  在地址或電話欄位點選 **「編輯」** 進行修改。
+5.  **注意**：此修改可能需要經過 Apple 審核，通常需 1-2 個工作天生效。
+`
+      },
+      {
+        id: 'acc-15',
+        question: 'ASM 中的「人員經理」、「內容經理」與「管理員」權限有何不同？',
+        important: false,
+        tags: ['角色權限', 'ASM'],
+        answer: `
+**權限分級**：
+*   **管理員 (Administrator)**：最大權限。可管理所有帳號、重置任何人密碼、接受條款、轉移 VPP 授權。
+*   **人員經理 (People Manager)**：僅能管理使用者帳號 (建立學生、老師 ID)，此帳號**不能**存取 VPP 或 ADE 功能。
+*   **內容經理 (Content Manager)**：僅能購買 App 與書籍。適合指派給會計或採購人員。
+*   **地點經理 (Site Manager)**：擁有該「地點」內的所有管理權限（包含人員與內容），適合分校區的負責人。
+`
+      },
+      {
+        id: 'acc-16',
+        question: 'Jamf Pro 可以整合學校的 Google 或微軟帳號進行「單一登入 (SSO)」嗎？',
+        important: false,
+        tags: ['SSO', 'Google', 'Azure AD'],
+        answer: `
+**可以。**
+
+Jamf Pro 支援 **SAML 2.0** 與 **OIDC** 標準。
+*   **好處**：管理員登入 Jamf 後台時，直接使用學校原本的 Google/Microsoft 帳號驗證，無需記憶額外的 Jamf 密碼。
+*   **安全性**：可直接沿用貴校在 Google/Microsoft 端設定的雙重驗證 (2FA) 機制，大幅提升安全性。
+`
+      },
+      {
+        id: 'acc-17',
+        question: '一個 Apple School Manager (ASM) 帳號，可以連結到多個 MDM 伺服器嗎？',
+        important: false,
+        tags: ['多伺服器', 'ASM'],
+        answer: `
+**可以。**
+
+**應用情境**：
+若貴校同時有 Jamf Pro (用於公配載具) 與另一個測試用的 MDM，您可以在 ASM 中新增多個 **「MDM 伺服器」**。
+*   **指派方式**：在 ASM 的「裝置」頁面，您可以自由選擇將哪幾台 iPad 指派給 Server A，哪幾台給 Server B。
+*   **VPP 區隔**：建議為不同的 MDM 伺服器建立不同的 **「位置 (Location)」**，以避免 App 授權混用。
+`
       }
     ]
   }

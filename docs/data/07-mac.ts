@@ -163,57 +163,80 @@ Jamf Pro 允許管理者上傳並執行 **Shell Script (Bash/Zsh)** 甚至 Pytho
         tags: ['Gatekeeper', 'Security', 'App Installation']
       },
       {
-        id: 'mac-09',
-        question: '什麼是 FileVault (檔案保險箱)？為什麼 MDM 強制要求開啟？',
+        id: 'mac-13',
+        question: '如何強制統一全校 Mac 電腦的 Dock (工作列) 排列？',
+        important: false,
+        tags: ['Dock', '介面統一', '設定'],
         answer: `
-**FileVault** 是 macOS 的全硬碟加密技術 (Full Disk Encryption)。
+**解決方案**：
+透過 **Dock Payload** 設定描述檔。
 
-**重要性**：
-*   **資料保護**：若 Mac 遺失或被竊，沒有密碼的人完全無法讀取硬碟內的資料（即使將硬碟拆出來接電腦也讀不到）。
-*   **MDM 託管金鑰**：企業/學校透過 MDM 啟用 FileVault 時，會產生一組 **「復原金鑰 (Recovery Key)」** 並自動回傳至 Jamf Pro。若使用者忘記登入密碼，IT 人員可透過此金鑰協助解鎖或重置密碼。
-`,
-        tags: ['FileVault', 'Security', 'Encryption']
+1.  **建立描述檔**：選擇 **Dock** Payload。
+2.  **設定項目**：
+    *   **App 列表**：新增您希望固定顯示的 App (如 Chrome, Word, Excel)。
+    *   **防止修改**：勾選「Merge with user's Dock (與使用者 Dock 合併)」可保留使用者自己加的 App；勾選「Contents are immutable (內容不可變更)」則強制完全鎖定，使用者無法新增或移除任何圖示。
+`
       },
       {
-        id: 'mac-10',
-        question: 'Mac 的「管理者帳號 (Admin)」與「標準帳號 (Standard)」有什麼差別？學生應該用哪種？',
+        id: 'mac-14',
+        question: '什麼是 Nudge？為什麼大家都在用它來管理 macOS 更新？',
+        important: false,
+        tags: ['Nudge', 'macOS Update', '使用者體驗'],
         answer: `
-**權限差異**：
-*   **管理者 (Admin)**：擁有最高權限，可以建立新使用者、更改系統設定、安裝所有軟體。
-*   **標準使用者 (Standard)**：僅能使用 App 與存取自己的檔案，**無法** 更改系統核心設定 (如網路、安全性) 或安裝需管理員權限的軟體。
+**痛點**：
+Apple 原生的 MDM 更新指令有時非常強硬（突然重開機）或容易被使用者一直按「稍後提醒」忽略。
 
-**建議策略**：
-*   **學生機/公用機**：強烈建議僅給予 **「標準帳號」** 權限，避免學生誤刪系統檔或繞過 MDM 管理。
-*   **老師機**：視學校政策，通常給予標準帳號搭配 Jamf Self Service 的暫時提權功能，或給予管理者權限但配合嚴格的監控。
-`,
-        tags: ['User Accounts', 'Permissions', 'Security']
+**Nudge 的優勢**：
+Nudge 是一個開源工具，它提供一個**「溫柔但堅定」的自訂視窗**。
+*   **自訂介面**：可以放學校 Logo，寫上「請在 3 天內更新，否則...」。
+*   **倒數計時**：隨著截止日期逼近，視窗跳出的頻率會變高，甚至最後佔據全螢幕強迫更新。
+*   這是目前 macOS 管理界最主流的 OS 更新溝通工具。
+`
       },
       {
-        id: 'mac-11',
-        question: '如何遠端協助使用者操作 Mac (如 Apple Remote Desktop)？',
+        id: 'mac-15',
+        question: '如何防止聰明的學生進入「復原模式 (Recovery Mode)」把整台 Mac 格式化？',
+        important: true,
+        tags: ['Recovery Lock', 'Firmware Password', '防篡改'],
         answer: `
-**工具選擇**：
-1.  **Jamf Remote** (傳統)：Jamf 提供的遠端管理工具，可執行指令或畫面共享。
-2.  **Apple Remote Desktop (ARD)**：Apple 官方的強大管理工具，可即時監看多台 Mac 畫面、控制游標、傳檔。
-3.  **TeamViewer / AnyDesk**：第三方工具，適合跨網段穿越防火牆的遠端支援。
+**解決方案**：
+設定 **「韌體密碼 (Firmware Password)」** 或 **「復原鎖定 (Recovery Lock)」** (M1/M2/M3 機型)。
 
-**MDM 設定關鍵**：
-要啟用 ARD，必須透過 MDM 推送 **「遠端管理 (Remote Management)」** 描述檔，預先授權特定的管理員帳號可以進行畫面控制，否則即使用者會一直跳出隱私權許可視窗。
-`,
-        tags: ['Remote Desktop', 'Support', 'ARD']
+1.  **Intel Mac**：設定 Firmware Password。開機若要進入 Recovery 或由外接硬碟開機，必須輸入此密碼。
+2.  **Apple Silicon Mac**：MDM 可以設定 **Recovery Lock**。當使用者試圖進入復原模式進行「清除 Mac」等操作時，必須輸入 MDM 預設的管理密碼，否則無法執行。
+`
       },
       {
-        id: 'mac-12',
-        question: 'Mac 的系統更新 (macOS Update) 可以像 iPad 一樣強制執行嗎？',
+        id: 'mac-16',
+        question: 'Mac 支援「漫遊設定檔 (Roaming Profiles)」嗎？學生換電腦登入可以看到自己的檔案嗎？',
+        important: false,
+        tags: ['漫遊設定檔', 'Mobile Account', '限制'],
         answer: `
-**可以，但機制略有不同。**
+**不建議使用。**
 
-*   **M1/M2/M3 (Apple Silicon)**：管理機制已與 iPad 類似。MDM 可以發送指令要求下載並安裝更新，但使用者必須輸入**管理者密碼 (Volume Owner)** 才能授權開始安裝。
-*   **Deferral (延遲更新)**：管理者可以設定「延遲看到更新」的天數 (最多 90 天)，讓 IT 部門有時間測試新系統的相容性，防止使用者第一時間誤升級。
-`,
-        tags: ['macOS Update', 'Apple Silicon', 'Management']
+雖然 AD 綁定提供「行動帳戶 (Mobile Accounts)」可同步部分家目錄，但體驗極差：
+*   **同步緩慢**：登入/登出需等待大量檔案傳輸。
+*   **衝突多**：容易發生權限錯誤或檔案遺失。
+
+**現代化做法**：
+使用 **「雲端儲存 (Google Drive / OneDrive / iCloud)」**。
+讓學生登入雲端硬碟存取資料，而非透過 LAN 同步家目錄設定。
+`
+      },
+      {
+        id: 'mac-17',
+        question: '如何透過 MDM 限制 Time Machine 備份？',
+        important: false,
+        tags: ['Time Machine', '備份'],
+        answer: `
+**設定方式**：
+在 **限制 (Restrictions)** Payload 中設定。
+*   可以限制 **「自動備份」**。
+*   可以限制 **「僅限加密備份」**。
+*   可以指定特定外接硬碟為備份碟，或禁止將備份存到未經授權的磁碟。
+`
       }
     ]
   }
-];
+]
 

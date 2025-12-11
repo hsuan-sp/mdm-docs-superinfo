@@ -298,6 +298,83 @@ Apple 允許使用者在自己的購買紀錄中，為舊裝置下載 App 的「
 *   **務必勾選「指派大量採購的內容 (Assign VPP Content)」**。
 *   這個勾選動作，就是在告訴 Jamf：「請使用新時代的裝置授權模式以及我買好的授權來派送這個 App」。若不勾選，Jamf 就會退回舊模式，導致 iPad 跳出登入 iTunes 的提示。
 `
+      },
+      {
+        id: 'app-13',
+        question: '學校可以用 VPP (ASM) 購買 App 內的「內購項目 (In-App Purchase)」嗎？',
+        important: false,
+        tags: ['內購', 'IAP', '限制'],
+        answer: `
+**答案**：**不行。**
+
+Apple 的大量採購計畫 (VPP) **僅支援購買「App 本體」**（無論是付費或免費）。
+*   **內購限制**：無法透過 VPP 購買如「解鎖完整版」、「訂閱會員」或「遊戲金幣」等內購項目。
+*   **解決方案**：
+    *   尋找該廠商是否提供 **「完整版 App」** (Pro Version) 可直接購買。
+    *   聯繫廠商是否支援 **「大量啟用序號」** 方式，讓您在 App 內輸入序號啟用功能。
+`
+      },
+      {
+        id: 'app-14',
+        question: '我們可以派送電子書 (iBooks/ePub) 給學生嗎？',
+        important: false,
+        tags: ['電子書', 'Books'],
+        answer: `
+**可以。**
+
+Jamf Pro 支援派送 **ePub** 或 **PDF** 格式的電子書。
+1.  **來源**：可以是 ASM 購買的書籍，也可以是學校老師自製的 PDF/ePub 上傳。
+2.  **派送方式**：前往 **「行動裝置」>「eBooks」** 上傳並指派範圍。
+3.  **閱讀**：學生會在 iPad 上的 **「書籍 (Books)」** App 中看到這本書。
+`
+      },
+      {
+        id: 'app-15',
+        question: '什麼是「App 設定 (App Configuration)」？可以用來做什麼？',
+        important: false,
+        tags: ['App Config', '進階設定'],
+        answer: `
+**功能說明**：
+這是一個進階功能，允許 MDM 在派送 App 的同時，**把「預設設定值」一起塞進去**。
+
+**常見應用**：
+*   **Google Chrome**：強制設定首頁、預設書籤。
+*   **Zoom/Webex**：預先填入學校的伺服器網址。
+*   **Microsoft Office**：預先填入使用者的 Email (變數)，簡化登入流程。
+
+*注意：該 App 本身必須支援「Managed App Configuration」規格才有效。*
+`
+      },
+      {
+        id: 'app-16',
+        question: '廠商說要提供「Custom B2B App」給我們學校，這是什麼？',
+        important: false,
+        tags: ['B2B', '客製化App'],
+        answer: `
+**說明**：
+這通常指廠商專為貴校開發的 App，**不希望公開在 App Store 讓大眾下載**。
+
+**流程**：
+1.  廠商在 App Store Connect 上架時，選擇 **「私人發佈 (Private Distribution)」** 並指定貴校的 **機構 ID (Organization ID)**。
+2.  貴校登入 ASM > **「自訂 App (Custom Apps)」**。
+3.  您就會看到該 App 出現在列表中，接著就像買一般 App 一樣購買授權並同步到 Jamf 即可派送。
+`
+      },
+      {
+        id: 'app-17',
+        question: 'Jamf Pro 有沒有「一鍵更新所有 App」的功能？',
+        important: false,
+        tags: ['App更新', '批量操作'],
+        answer: `
+**有類似功能。**
+
+雖然沒有一顆按鈕叫「更新全世界」，但您可以透過 **「大量動作 (Mass Actions)」** 達成：
+1.  前往 **「行動裝置 App」** 列表。
+2.  勾選所有 App（或特定幾個）。
+3.  點選下方的 **「編輯 (Edit)」** (或 Action)。
+4.  在版本設定中選擇 **「強制更新」**。
+5.  或者，最建議的做法是直接將所有 App 設定為 **「自動強制更新」** (參考 Q9)，讓 Jamf 每天自動幫您巡邏並更新。
+`
       }
     ]
   }
