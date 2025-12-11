@@ -84,6 +84,7 @@ export const data: QASection[] = [
       {
         id: 'fed-auth',
         question: '什麼是「聯合驗證」(Federated Authentication)？',
+        tags: ['聯合驗證', 'Google', 'Azure AD', 'SSO'],
         answer: '聯合驗證允許組織連結 **Google Workspace** 或 **Microsoft Azure AD (Entra ID)**。設定後，員工或學生可以直接使用原本的公司/學校 Google 或微軟帳號密碼登入「管理式 Apple ID」，無需另外記憶一組 Apple 專用的密碼，大幅降低忘記密碼的救援成本。'
       },
       {

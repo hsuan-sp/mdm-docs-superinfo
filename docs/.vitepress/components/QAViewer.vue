@@ -245,12 +245,16 @@ const renderMarkdown = (text: string) => {
 }
 
 .badge-important {
-  background: #ff3b30;
-  color: white;
-  font-size: 0.7rem;
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
-  font-weight: bold;
+  background: rgba(255, 59, 48, 0.1);
+  color: #ff3b30;
+  border: 1px solid rgba(255, 59, 48, 0.2);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
 }
 
 .qa-question {

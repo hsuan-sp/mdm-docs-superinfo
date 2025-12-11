@@ -28,6 +28,8 @@ import { withBase } from 'vitepress'
   text-align: center;
   border-top: 1px solid var(--glass-border);
   margin-top: 60px;
+  position: relative;
+  z-index: 200;
 }
 
 /* Promo Section */
