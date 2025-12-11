@@ -233,6 +233,13 @@ Jamf Pro 的 PreStage 註冊僅能設定「命名規則」（如：統一改為�
 `
       },
       {
+        id: 'enr-8-1',
+        question: '什麼是 ADE (Automated Device Enrollment)？',
+        important: false,
+        tags: ['ADE', 'DEP'],
+        answer: 'ADE（自動裝置註冊），舊稱 DEP。這是 Apple 提供的一項重磅功能，讓組織購買的裝置在「第一次開機連網」時，就能自動指向 MDM 伺服器並下載設定。'
+      },
+      {
         id: 'enr-9',
         question: '如何使用 Jamf 的「Return to Service (返回服務)」功能，讓裝置重置後自動連網並完成設定？',
         important: true,

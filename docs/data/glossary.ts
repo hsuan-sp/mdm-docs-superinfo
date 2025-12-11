@@ -5,7 +5,7 @@
  */
 export interface Term {
   term: string;
-  category: 'Core' | 'Enrollment' | 'Apple' | 'Network' | 'Security' | 'Hardware' | 'Apps' | 'Other';
+  category: 'Core' | 'Enrollment' | 'Apple' | 'Network' | 'Security' | 'Hardware' | 'Apps' | 'Other' | 'Education';
   definition: string;
   analogy: string; // "白話文/比喻"
 }
@@ -55,6 +55,12 @@ export const glossaryData: Term[] = [
     analogy: 'MDM 的「傳令兵」。MDM 不能直接對平板大吼大叫，一定要透過這個傳令兵（Apple）把指令送達。'
   },
   {
+    term: 'Federated Authentication (聯合驗證)',
+    category: 'Apple',
+    definition: '讓使用者能使用現有的組織帳號（如 Google Workspace 或 Microsoft Entra ID）直接登入管理式 Apple ID，無需另外記憶一組密碼。',
+    analogy: '「帳號通」。用公司的 Google 帳號就能直接開 Apple 的門，不用再多辦一張證件。'
+  },
+  {
     term: 'Apple ID',
     category: 'Apple',
     definition: 'Apple 生態系的使用者帳戶，用於存取 App Store、iCloud、iMessage 等所有 Apple 服務。',
@@ -80,10 +86,10 @@ export const glossaryData: Term[] = [
     analogy: '設定平板的「模具」。刻好一個模具（包含所有設定），平板接上來，「啪」蓋下去，設定就全好了。'
   },
   {
-    term: 'Brick (變磚)',
-    category: 'Other',
-    definition: '指電子裝置因韌體損壞或嚴重軟體錯誤，導致無法開機或運作，狀如磚頭。',
-    analogy: '「植物人狀態」。平板完全沒反應，按什麼都不理你，只能拿來墊桌腳。'
+    term: 'Brick (磚塊/死機)',
+    category: 'Hardware',
+    definition: '指裝置因軟體更新失敗或嚴重系統錯誤，導致無法開機或無反應，就像一塊磚頭一樣。',
+    analogy: '「高科技紙鎮」。原本是先進的平板，現在因為系統壞掉，只能拿來壓紙或當磚塊墊桌腳。'
   },
   {
     term: 'Bundle ID',
@@ -123,10 +129,10 @@ export const glossaryData: Term[] = [
     analogy: '各科老師的「隨堂助教」。老師在講台上，可以直接看到台下每一位同學的平板畫面，確認大家有沒有專心上課，還能一鍵幫大家開課本（App）。'
   },
   {
-    term: 'Content Filter (內容過濾器)',
-    category: 'Network',
-    definition: '網路內容過濾機制。可基於關鍵字、網址或類別，攔截並封鎖不當的網路流量（如色情、暴力、賭博網站）。',
-    analogy: '學校網路的「守門員」。就像學校門口警衛一樣，這個機制會擋掉危險、不適合的網站內容，保護學生上網安全。'
+    term: 'Content Filter (內容過濾)',
+    category: 'Security',
+    definition: '數位學習精進方案中的關鍵組件（如 Jamf Trust）。用於攔截色情、暴力或賭博等不當網頁，並記錄流量以計算「使用率」。',
+    analogy: '校園網路的「守門員」。就像學校警衛會檢查訪客一樣，它會檢查你要去的網站，壞網站不准進，同時記錄你今天有來上學（有產生流量）。'
   },
   {
     term: 'COPE (Corporate-Owned, Personally Enabled)',
@@ -160,6 +166,12 @@ export const glossaryData: Term[] = [
     analogy: '平板的「加護病房」。當平板病入膏肓（系統掛點），連普通急診（復原模式）都救不了時，就要送進這裡強制電擊（重灌）。'
   },
   {
+    term: 'Digital Learning Enhancement Plan (中小學數位學習精進方案)',
+    category: 'Education',
+    definition: '教育部推動的重大政策（俗稱生生用平板）。目標是達成「班班有網路，生生用平板」，提供載具、內容與管理系統（MDM）的全面支援。',
+    analogy: '教育界的「基礎建設工程」。就像蓋高速公路一樣，政府鋪設網路、發平板、架設管理系統，讓數位學習可以順暢通行。'
+  },
+  {
     term: 'Dongle (轉接器)',
     category: 'Hardware',
     definition: '泛指各種介面轉換器。如 USB-C 轉 HDMI、Lightning 轉 3.5mm 耳機孔等配件。',
@@ -185,6 +197,12 @@ export const glossaryData: Term[] = [
     category: 'Core',
     definition: 'Jamf Pro 系統的核心管理伺服器（現多稱 Jamf Pro Server）。負責儲存裝置清單、發送指令與接收回報。',
     analogy: 'MDM 的「大腦」或「指揮中心」。所有指令都是從這裡發出去的，它也記得每一台平板叫什麼名字、剩多少電。'
+  },
+  {
+    term: 'Jamf Trust',
+    category: 'Apps',
+    definition: '一款安全性 App，需安裝於載具上以執行內容過濾與網路防護。在精進方案中，此 App 的運作狀態直接影響「使用率」的計算。',
+    analogy: '平板的「通行證檢查站」。這款 App 必須一直開著（背景執行），才能幫你過濾網站並證明你有在使用平板。如果不小心關掉，就像翹課一樣，教育部會以為你沒在上課（使用率為零）。'
   },
   // K
   {
@@ -423,8 +441,8 @@ export const glossaryData: Term[] = [
   {
     term: 'Wallpaper (桌布)',
     category: 'Core',
-    definition: '裝置的主畫面與鎖定畫面背景圖片。MDM 可強制派送統一的圖檔至受監管裝置，並不允許使用者修改。',
-    analogy: '平板的「制服」。學校規定大家的桌面都要長一樣（例如校徽），看起來比較整齊，也不能亂換偶像照片。'
+    definition: '裝置的主畫面與鎖定畫面背景。在教育現場，統一桌布常用於識別「公用載具」或「特定年級」，MDM 可強制鎖定不讓學生隨意更換。',
+    analogy: '學校的「制服」。為了管理方便與視覺整齊，學校規定大家的平板都要穿一樣的衣服（桌布），不能自己亂換成偶像照片。'
   },
   {
     term: 'Web Clip',

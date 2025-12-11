@@ -1,118 +1,113 @@
 :root {
-  /* Apple-like Color Palette & Extreme Electric Brand Colors */
-  --vp-c-bg: #fbfbfd;
-  --vp-c-bg-alt: #ffffff;
-  --vp-c-bg-elv: #ffffff;
-  --vp-c-text-1: #1d1d1f;
-  --vp-c-text-2: #86868b;
-
-  /* Brand Colors: Professional Blue/Indigo mix */
-  --vp-c-brand-1: #0066cc; /* Apple Blue */
-  --vp-c-brand-2: #2997ff; /* Lighter Blue */
-  --vp-c-brand-3: #004499; /* Darker Blue */
-
-  /* Typography - Prioritize TC fonts */
-  --vp-font-family-base: "Inter", "Noto Sans TC", -apple-system,
-    BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
-
+  /* Apple-like Color Palette */
+  --vp-c-brand-1: #0071e3; /* Apple Blue */
+  --vp-c-brand-2: #0077ed;
+  --vp-c-brand-3: #2b8afb;
+  
+  --vp-c-bg: #fbfbfd; /* Apple Light Grayish White */
+  --vp-c-bg-alt: #f5f5f7; /* Secondary BG */
+  --vp-c-bg-elv: #ffffff; /* Elevated */
+  
+  --vp-c-text-1: #1d1d1f; /* Apple Black */
+  --vp-c-text-2: #86868b; /* Apple Gray */
+  
+  --vp-font-family-base: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+  
   /* Glassmorphism Logic */
-  --vp-nav-bg-color: rgba(251, 251, 253, 0.65) !important;
-  --vp-local-nav-bg-color: rgba(251, 251, 253, 0.65) !important;
-  --vp-sidebar-bg-color: rgba(251, 251, 253, 0.65) !important;
-  --vp-backdrop-filter: blur(24px) saturate(180%);
-
+  --vp-nav-bg-color: rgba(251, 251, 253, 0.8) !important;
+  --vp-local-nav-bg-color: rgba(251, 251, 253, 0.8) !important;
+  --vp-sidebar-bg-color: rgba(251, 251, 253, 0.8) !important;
+  --vp-backdrop-filter: blur(20px) saturate(180%);
+  
+  /* Custom Glass Variables */
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --glass-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  
   /* Shadows */
-  --vp-shadow-1: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
-    0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  --vp-shadow-2: 0 10px 15px -3px rgba(0, 0, 0, 0.05),
-    0 4px 6px -2px rgba(0, 0, 0, 0.025);
-  --vp-shadow-3: 0 20px 25px -5px rgba(0, 0, 0, 0.05),
-    0 10px 10px -5px rgba(0, 0, 0, 0.02);
-}
-
-body {
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(0, 102, 204, 0.08) 0px, transparent 50%), 
-    radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.08) 0px, transparent 50%), 
-    radial-gradient(at 100% 100%, rgba(45, 212, 191, 0.08) 0px, transparent 50%), 
-    radial-gradient(at 0% 100%, rgba(244, 63, 94, 0.08) 0px, transparent 50%);
-  background-attachment: fixed;
+  --vp-shadow-1: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --vp-shadow-2: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+  --vp-shadow-3: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
 }
 
 .dark {
   --vp-c-bg: #000000;
   --vp-c-bg-alt: #1c1c1e;
   --vp-c-bg-elv: #1c1c1e;
+  
   --vp-c-text-1: #f5f5f7;
   --vp-c-text-2: #86868b;
-
+  
   --vp-c-brand-1: #2997ff;
   --vp-c-brand-2: #5ac8fa;
   --vp-c-brand-3: #007aff;
+  
+  --vp-nav-bg-color: rgba(28, 28, 30, 0.8) !important;
+  --vp-local-nav-bg-color: rgba(28, 28, 30, 0.8) !important;
+  --vp-sidebar-bg-color: rgba(28, 28, 30, 0.8) !important;
+  
+  --glass-bg: rgba(28, 28, 30, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
 
-  --vp-nav-bg-color: rgba(28, 28, 30, 0.7) !important;
-  --vp-local-nav-bg-color: rgba(28, 28, 30, 0.7) !important;
-  --vp-sidebar-bg-color: rgba(28, 28, 30, 0.7) !important;
+body {
+  /* Subtle mesh gradient background */
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(0, 113, 227, 0.03) 0px, transparent 50%), 
+    radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.03) 0px, transparent 50%), 
+    radial-gradient(at 100% 100%, rgba(45, 212, 191, 0.03) 0px, transparent 50%), 
+    radial-gradient(at 0% 100%, rgba(244, 63, 94, 0.03) 0px, transparent 50%);
+  background-attachment: fixed;
 }
 
 /* Feature Cards - Glassy & Floating */
-.VPFeature {
-  border-radius: 20px !important;
+.VPFeature, .link-card {
+  border-radius: 18px !important;
   background-color: var(--vp-c-bg-alt) !important;
   border: 1px solid rgba(0, 0, 0, 0.05) !important;
-  box-shadow: var(--vp-shadow-1) !important;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  box-shadow: none !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) !important;
 }
 
-.dark .VPFeature {
+.dark .VPFeature, .dark .link-card {
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   background-color: rgba(255, 255, 255, 0.05) !important;
 }
 
-.VPFeature:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--vp-shadow-3) !important;
+.VPFeature:hover, .link-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12) !important;
   border-color: var(--vp-c-brand-1) !important;
+  background-color: var(--vp-c-bg) !important;
 }
 
 /* Nav Bar */
 .VPNavBar {
   backdrop-filter: var(--vp-backdrop-filter);
   -webkit-backdrop-filter: var(--vp-backdrop-filter);
-  border-bottom: 1px solid rgba(60, 60, 67, 0.12);
+  border-bottom: 1px solid var(--glass-border) !important;
 }
 
-.dark .VPNavBar {
-  border-bottom: 1px solid rgba(235, 235, 245, 0.12);
+/* Button Refinement */
+.VPButton.brand {
+  border-radius: 980px;
+  background-color: var(--vp-c-brand-1) !important;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 16px;
+  transition: all 0.2s ease;
 }
 
-/* Apple-inspired Clean Design */
-:root {
-  --vp-c-brand-1: #0071e3; /* Apple Blue */
-  --vp-c-brand-2: #0077ed;
-  --vp-c-brand-3: #2b8afb;
-  
-  --vp-c-bg: #ffffff;
-  --vp-c-bg-alt: #f5f5f7; /* Apple Light Gray */
-  --vp-c-text-1: #1d1d1f; /* Apple Black */
-  --vp-c-text-2: #86868b; /* Apple Gray */
-  
-  --vp-font-family-base: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", "PingFang TC", "Microsoft JhengHei", sans-serif;
-  
-  --glass-bg: rgba(255, 255, 255, 0.8);
-  --glass-border: rgba(0, 0, 0, 0.1);
-  --glass-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+.VPButton.brand:hover {
+  background-color: var(--vp-c-brand-2) !important;
+  transform: scale(1.02);
 }
 
-.dark {
-  --vp-c-bg: #000000;
-  --vp-c-bg-alt: #161617;
-  --vp-c-text-1: #f5f5f7;
-  --vp-c-text-2: #86868b;
-  
-  --glass-bg: rgba(28, 28, 30, 0.75);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+/* Layout - REMOVED RESTRICTIVE MAX-WIDTH */
+.VPContent {
+  /* Let content take full width or be controlled by child containers */
+  margin: 0 auto;
 }
 
 /* Typography refinements */
@@ -121,57 +116,9 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.015em;
 }
 
-/* Card Styling - Apple Style */
-.VPFeature, .link-card {
-  background: var(--vp-c-bg-alt) !important;
-  border: 1px solid transparent !important;
-  border-radius: 18px !important;
-  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-  box-shadow: none !important;
-}
-
-.VPFeature:hover, .link-card:hover {
-  transform: scale(1.02);
-  background: var(--vp-c-bg) !important;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12) !important;
-}
-
-/* Navbar Glassmorphism */
-.VPNavBar {
-  background-color: rgba(255, 255, 255, 0.8) !important;
-  backdrop-filter: blur(20px) !important;
-  -webkit-backdrop-filter: blur(20px) !important;
-  border-bottom: 1px solid var(--glass-border) !important;
-}
-
-.dark .VPNavBar {
-  background-color: rgba(0, 0, 0, 0.8) !important;
-}
-
-/* Button Refinement */
-.VPButton.brand {
-  border-radius: 980px;
-  background-color: #0071e3 !important;
-  font-weight: 500;
-  font-size: 14px;
-  padding: 8px 16px;
-  transition: all 0.2s ease;
-}
-
-.VPButton.brand:hover {
-  background-color: #0077ed !important;
-  transform: scale(1.02);
-}
-
-/* Layout spacing */
-.VPContent {
-  max-width: 980px !important; /* Apple content width */
-  margin: 0 auto;
-}
-
-/* Hero Section */
+/* Hero Section cleanup */
 .VPHero .image-bg {
-  display: none; /* Remove distracting blobs */
+  display: none;
 }
 
 /* Hide scrollbar but allow scrolling */

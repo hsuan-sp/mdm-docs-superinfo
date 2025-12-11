@@ -1,5 +1,5 @@
 <script setup>
-import { useRouter } from 'vitepress'
+import { useRouter, withBase } from 'vitepress'
 
 const router = useRouter()
 
@@ -92,12 +92,12 @@ const navCards = [
           專為台灣教育現場打造。
         </p>
         <div class="hero-links">
-           <a href="/guide/01-account" class="primary-btn">開始探索</a>
-           <a href="/glossary" class="text-link">查詢術語表 ›</a>
+           <a :href="withBase('/guide/01-account')" class="primary-btn">開始探索</a>
+           <a :href="withBase('/glossary')" class="text-link">查詢術語表 ›</a>
         </div>
       </div>
       <div class="hero-visual fade-in delay-2">
-        <img src="/mdm_hero.png" alt="MDM Abstract Art" />
+        <img :src="withBase('/mdm_hero.png')" alt="MDM Abstract Art" />
       </div>
     </header>
 
@@ -112,7 +112,7 @@ const navCards = [
         <a 
           v-for="card in navCards" 
           :key="card.link"
-          :href="card.link" 
+          :href="withBase(card.link)"
           class="card fade-in-on-scroll"
           :class="[card.class, { 'dark-mode': card.bg === '#1d1d1f' }]"
           :style="{ background: card.bg, color: card.textColor }"
@@ -171,7 +171,7 @@ const navCards = [
   align-items: center;
   text-align: center;
   padding: 120px 24px 60px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -187,7 +187,7 @@ const navCards = [
 
 .hero h1 {
   font-size: 80px;
-  line-height: 1.05;
+  line-height: 1.1; /* Increased from 1.05 to prevent overlap */
   font-weight: 700;
   letter-spacing: -0.015em;
   margin-bottom: 24px;
@@ -248,7 +248,7 @@ const navCards = [
 
 /* Grid Section */
 .grid-section {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 100px auto 0;
   padding: 0 24px;
 }

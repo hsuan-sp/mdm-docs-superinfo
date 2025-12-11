@@ -267,6 +267,9 @@ export const data: QASection[] = [
     1.  前往 **「設定」> [Apple ID] >「尋找」**。
     2.  關閉 **「尋找我的 iPad」** (需輸入 Apple ID 密碼)。
 
+*   **iPad 出現「已停用」或忘記密碼，如何處理？**
+    若 iPad 為受監管 (Supervised) 狀態，可透過 MDM 發送「清除密碼」指令。若非受管裝置或指令無效，則需進入「復原模式 (Recovery Mode)」連接電腦重刷系統。注意：重刷後會觸發「啟用鎖定」，需輸入原 Apple ID 才能解鎖。
+
 *   **方法 B：從 iCloud.com 遠端移除 (若無法開機)**：
     1.  前往 [iCloud.com/find](https://www.icloud.com/find) 登入。
     2.  點選 **「所有裝置」** > 選取 iPad。
