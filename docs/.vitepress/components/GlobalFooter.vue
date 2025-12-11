@@ -3,109 +3,80 @@ import { withBase } from 'vitepress'
 </script>
 
 <template>
-  <footer class="global-footer fade-in-on-scroll">
-    <div class="footer-content">
-      <div class="footer-columns">
-        <div class="footer-col">
-          <h3>極電資訊 Superinfo</h3>
-          <p>專為台灣教育打造的 MDM 知識庫。<br>Apple 授權教育經銷商。</p>
-        </div>
-        <div class="footer-col">
-          <h3>常用連結</h3>
-          <ul>
-            <li><a href="https://www.superinfo.com.tw" target="_blank">極電資訊官網 ↗</a></li>
-            <li><a href="https://www.apple.com/tw/education/" target="_blank">Apple 教育官網 ↗</a></li>
-            <li><a href="https://school.apple.com/" target="_blank">Apple School Manager ↗</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h3>服務支援</h3>
-          <ul>
-            <li><a href="https://page.line.me/xat.0000119425.rpn?openQrModal=true" target="_blank">LINE 官方客服</a></li>
-            <li><a href="mailto:support@superinfo.com.tw">Email 聯絡我們</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 極電資訊有限公司 Superinfo Co., Ltd. All Rights Reserved.</p>
-        <p class="disclaimer">本站內容僅供教學參考，商標權歸屬原公司所有。</p>
-      </div>
+  <footer class="global-footer">
+    <!-- Top Promo Section -->
+    <div class="footer-promo">
+      <h2 class="company-name">極電資訊有限公司</h2>
+      <p class="service-badges">Apple 授權教育經銷商｜Apple 校園體驗中心｜軟硬體專業諮詢</p>
+      <p class="slogan">致力於給您最好的服務</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Bottom Copyright Section -->
+    <div class="footer-copyright">
+      <p>Copyright ©2025 極電資訊｜Apple 授權教育經銷商</p>
+      <p>極電資訊有限公司 | 統一編號 23756990</p>
     </div>
   </footer>
 </template>
 
 <style scoped>
 .global-footer {
-  border-top: 1px solid var(--vp-c-divider);
-  padding: 64px 24px 48px;
-  background: var(--vp-c-bg-alt);
-  margin-top: auto;
+  background-color: var(--vp-c-bg-alt);
+  padding: 60px 24px 40px;
+  text-align: center;
+  border-top: 1px solid var(--glass-border);
+  margin-top: 60px;
 }
 
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
+/* Promo Section */
+.footer-promo {
+  margin-bottom: 40px;
 }
 
-.footer-columns {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-  margin-bottom: 64px;
-}
-
-.footer-col h3 {
-  font-size: 14px;
-  font-weight: 600;
+.company-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 12px;
   color: var(--vp-c-text-1);
-  margin-bottom: 24px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
-.footer-col p {
+.service-badges {
+  font-size: 16px;
   color: var(--vp-c-text-2);
-  font-size: 14px;
-  line-height: 1.6;
+  margin: 0 0 8px;
+  font-weight: 500;
 }
 
-.footer-col ul {
-  list-style: none;
-  padding: 0;
+.slogan {
+  font-size: 15px;
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+  opacity: 0.9;
   margin: 0;
 }
 
-.footer-col li {
-  margin-bottom: 12px;
+/* Divider */
+.divider {
+  height: 1px;
+  background: var(--vp-c-divider);
+  max-width: 200px;
+  margin: 0 auto 30px;
+  opacity: 0.5;
 }
 
-.footer-col a {
-  color: var(--vp-c-text-2);
-  font-size: 14px;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.footer-col a:hover {
-  color: var(--vp-c-brand-1);
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 32px;
-  border-top: 1px solid var(--vp-c-divider);
+/* Copyright Section */
+.footer-copyright p {
+  font-size: 13px;
   color: var(--vp-c-text-3);
-  font-size: 12px;
-}
-
-.footer-bottom p {
   margin: 4px 0;
+  line-height: 1.5;
 }
 
-/* Dark mode adjustments */
-@media (prefers-color-scheme: dark) {
-  .global-footer {
-    background: #1c1c1e; /* Match pure dark mode bg */
-  }
+/* Dark Mode Adjustments */
+.dark .global-footer {
+  background-color: var(--vp-c-bg);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 </style>

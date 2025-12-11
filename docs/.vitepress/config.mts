@@ -56,8 +56,9 @@ export default defineConfig({
           { text: '04. 課堂管理 (Apple Classroom)', link: '/guide/04-classroom' },
           { text: '05. 數位學習精進方案', link: '/guide/05-digital-learning' },
           { text: '06. 硬體與故障排除', link: '/guide/06-hardware' },
-          { text: '07. Mac 管理與進階', link: '/guide/07-mac' },
-          { text: '08. 番外篇：教育場域實戰', link: '/guide/08-education' }
+          { text: '07. Mac 管理專區', link: '/guide/07-mac' },
+          { text: '08. 教育場域實戰 Q&A', link: '/guide/08-education' },
+          { text: '09. 常用資源與連結', link: '/guide/09-resources' }
         ]
       }
       ],
