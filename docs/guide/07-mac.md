@@ -12,6 +12,7 @@ import { data } from '../data/07-mac'
 
 
 
+
 <!-- SEARCH_INDEX_START -->
 <div style="display: none">
 [常用] 如何在 Mac 上建立本機使用者帳號，或授權一般使用者成為管理者？ Mac 是否需要「綁定 AD (Active Directory)」？還是有更好的身分認證方式？ 如何管理 Mac 上的應用程式更新（如 Chrome, Adobe, Office）？ 如何在 Mac 上自動安裝並設定印表機驅動程式？ 什麼是 FileVault？為什麼 MDM 會要求開啟？忘記密碼怎麼辦？ Jamf Pro 的「Script (腳本)」功能可以用來做什麼？ 如何重置 Mac 的本地管理員密碼 (LAPS 方案)？

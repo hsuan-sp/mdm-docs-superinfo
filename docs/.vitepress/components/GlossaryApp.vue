@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
-import { glossaryData, type Term } from "../../data/glossary";
+import { glossaryData } from "../../data/glossary";
 
 const searchQuery = ref("");
 const selectedCategory = ref("All");
@@ -15,6 +15,7 @@ const categories = [
   "Hardware",
   "Apps",
   "Other",
+  "Education",
 ];
 
 const filteredTerms = computed(() => {
@@ -32,43 +33,55 @@ const filteredTerms = computed(() => {
 });
 
 const getCategoryColor = (cat: string) => {
+  // Enhanced colors for better contrast and visuals
   const map: Record<string, string> = {
-    Core: "bg-blue-100 text-blue-800",
-    Enrollment: "bg-green-100 text-green-800",
-    Apple: "bg-gray-100 text-gray-800",
-    Security: "bg-red-100 text-red-800",
-    Network: "bg-purple-100 text-purple-800",
-    Hardware: "bg-orange-100 text-orange-800",
-    Apps: "bg-pink-100 text-pink-800",
-    Other: "bg-gray-100 text-gray-600",
+    Core: "bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-300",
+    Enrollment: "bg-green-50 text-green-600 dark:bg-green-900/30 dark:text-green-300",
+    Apple: "bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-300",
+    Security: "bg-red-50 text-red-600 dark:bg-red-900/30 dark:text-red-300",
+    Network: "bg-indigo-50 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-300",
+    Hardware: "bg-orange-50 text-orange-600 dark:bg-orange-900/30 dark:text-orange-300",
+    Apps: "bg-pink-50 text-pink-600 dark:bg-pink-900/30 dark:text-pink-300",
+    Other: "bg-gray-50 text-gray-500 dark:bg-gray-900/30 dark:text-gray-400",
+    Education: "bg-yellow-50 text-yellow-600 dark:bg-yellow-900/30 dark:text-yellow-300",
   };
-  return map[cat] || "bg-gray-100 text-gray-800";
+  return map[cat] || "bg-gray-100 text-gray-600";
 };
 </script>
 
 <template>
   <div class="glossary-app">
-    <!-- Search & Filter Header -->
-    <div class="controls">
-      <div class="search-box">
-        <span class="search-icon">🔍</span>
-        <input
-          v-model="searchQuery"
-          type="text"
-          placeholder="搜尋術語、定義或關鍵字..."
-          class="search-input"
-        />
-      </div>
+    <!-- Header Section -->
+    <header class="glossary-header">
+      <h1>MDM Zero-Knowledge Glossary</h1>
+      <p class="subtitle">從專有名詞到白話文翻譯，讓您輕鬆讀懂裝置管理。</p>
+    </header>
 
-      <div class="category-pills">
-        <button
-          v-for="cat in categories"
-          :key="cat"
-          @click="selectedCategory = cat"
-          :class="['pill', { active: selectedCategory === cat }]"
-        >
-          {{ cat }}
-        </button>
+    <!-- Sticky Controls -->
+    <div class="controls-wrapper">
+      <div class="controls glass-effect">
+        <div class="search-box">
+          <span class="search-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </span>
+          <input
+            v-model="searchQuery"
+            type="text"
+            placeholder="搜尋術語（如：ADE, 憑證...）"
+            class="search-input"
+          />
+        </div>
+
+        <div class="category-pills">
+          <button
+            v-for="cat in categories"
+            :key="cat"
+            @click="selectedCategory = cat"
+            :class="['pill', { active: selectedCategory === cat }]"
+          >
+            {{ cat }}
+          </button>
+        </div>
       </div>
     </div>
 
@@ -77,23 +90,20 @@ const getCategoryColor = (cat: string) => {
       <div
         v-for="(item, index) in filteredTerms"
         :key="index"
-        class="term-card glass-panel"
+        class="term-card"
       >
         <div class="card-header">
           <h3 class="term-title">{{ item.term }}</h3>
-          <span :class="['tag', getCategoryColor(item.category)]">{{
-            item.category
-          }}</span>
+          <span :class="['tag', getCategoryColor(item.category)]">{{ item.category }}</span>
         </div>
 
         <div class="card-body">
           <div class="section definition">
-            <span class="label">定義</span>
             <p>{{ item.definition }}</p>
           </div>
 
           <div class="section analogy">
-            <span class="label">白話文</span>
+            <span class="emoji">💡</span>
             <p>{{ item.analogy }}</p>
           </div>
         </div>
@@ -101,196 +111,274 @@ const getCategoryColor = (cat: string) => {
     </div>
 
     <div v-if="filteredTerms.length === 0" class="no-results">
-      <p>找不到符合的術語。</p>
+      <div class="no-content-icon">🔍</div>
+      <p>找不到符合的術語，試試其他關鍵字？</p>
     </div>
   </div>
 </template>
 
 <style scoped>
 .glossary-app {
-  padding: 2rem 0;
+  padding: 40px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Header */
+.glossary-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.glossary-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #1d1d1f 0%, #434344 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glossary-header .subtitle {
+  font-size: 21px;
+  color: #86868b;
+  font-weight: 400;
 }
 
 /* Controls */
+.controls-wrapper {
+  position: sticky;
+  top: 20px;
+  z-index: 100;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
 .controls {
-  margin-bottom: 2.5rem;
+  padding: 20px;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  border: 1px solid rgba(255,255,255,0.4);
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 16px;
+  transition: all 0.3s ease;
 }
 
 .search-box {
   position: relative;
-  max-width: 600px;
-  margin: 0 auto;
   width: 100%;
 }
 
 .search-icon {
   position: absolute;
-  left: 1rem;
+  left: 16px;
   top: 50%;
   transform: translateY(-50%);
-  opacity: 0.5;
-  color: var(--vp-c-text-2);
+  color: #86868b;
+  display: flex;
+  align-items: center;
 }
 
 .search-input {
   width: 100%;
-  padding: 1rem 1rem 1rem 3rem;
+  padding: 14px 16px 14px 48px;
   border-radius: 12px;
-  border: 1px solid rgba(128, 128, 128, 0.1);
-  background: var(--vp-c-bg-alt);
-  color: var(--vp-c-text-1);
-  font-size: 1.1rem;
-  box-shadow: var(--vp-shadow-1);
-  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  background: rgba(0,0,0,0.05);
+  color: #1d1d1f;
+  font-size: 17px;
+  transition: all 0.2s;
 }
 
 .search-input:focus {
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(0,125,250,0.2);
   outline: none;
-  border-color: var(--vp-c-brand-1);
-  box-shadow: 0 0 0 4px rgba(var(--vp-c-brand-1), 0.1), var(--vp-shadow-2);
 }
 
 .category-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 8px;
   justify-content: center;
 }
 
 .pill {
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  border: 1px solid transparent;
-  background: var(--vp-c-bg-alt);
-  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: 980px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: transparent;
+  font-size: 14px;
   font-weight: 500;
-  color: var(--vp-c-text-2);
+  color: #515154;
   cursor: pointer;
   transition: all 0.2s;
-  box-shadow: var(--vp-shadow-1);
 }
 
 .pill:hover {
-  transform: translateY(-1px);
-  background: var(--vp-c-bg-elv);
-  color: var(--vp-c-text-1);
-  box-shadow: var(--vp-shadow-2);
+  background: rgba(0,0,0,0.05);
 }
 
 .pill.active {
-  background: var(--vp-c-brand-1);
-  color: white;
-  box-shadow: 0 4px 12px rgba(var(--vp-c-brand-1), 0.3);
+  background: #1d1d1f;
+  color: #fff;
+  border-color: #1d1d1f;
 }
 
 /* Grid */
 .term-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
 }
 
-/* Card */
-.glass-panel {
-  background: var(--vp-c-bg-alt);
-  border: 1px solid rgba(128, 128, 128, 0.1);
-  border-radius: 16px;
-  padding: 1.5rem;
-  box-shadow: var(--vp-shadow-1);
+.term-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.05);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
 }
 
-.glass-panel:hover {
+.term-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--vp-shadow-3);
-  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
 .card-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
+  gap: 12px;
 }
 
 .term-title {
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: 700;
+  line-height: 1.2;
+  color: #1d1d1f;
   margin: 0;
-  line-height: 1.3;
-  color: var(--vp-c-text-1);
 }
 
 .tag {
-  font-size: 0.75rem;
-  padding: 0.2rem 0.6rem;
+  font-size: 11px;
+  padding: 4px 8px;
   border-radius: 6px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.section {
-  margin-top: 1rem;
-}
-
-.label {
-  display: block;
-  font-size: 0.75rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--vp-c-brand-2);
-  margin-bottom: 0.25rem;
-  font-weight: 600;
 }
-h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 40px;
-  line-height: 1.1;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--vp-c-text-1);
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
+
 .definition p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #424245;
   margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--vp-c-text-1);
 }
 
 .analogy {
-  background: rgba(var(--vp-c-brand-1), 0.04);
-  padding: 1rem;
+  display: flex;
+  gap: 12px;
+  background: #fbfbfd;
+  padding: 14px;
   border-radius: 12px;
-  border-left: 3px solid var(--vp-c-brand-1);
-  margin-top: 1.2rem;
+  align-items: flex-start;
+}
+
+.analogy .emoji {
+  font-size: 18px;
+  margin-top: 1px;
 }
 
 .analogy p {
   margin: 0;
-  font-size: 0.95rem;
-  color: var(--vp-c-text-2);
+  font-size: 14px;
+  color: #6e6e73;
+  line-height: 1.5;
   font-style: italic;
 }
 
+/* No Results */
 .no-results {
   text-align: center;
-  padding: 3rem;
-  color: var(--vp-c-text-2);
+  padding: 80px 0;
+  color: #86868b;
 }
 
-/* Dark Mode Overrides */
-:global(.dark) .search-input,
-:global(.dark) .glass-panel,
-:global(.dark) .pill {
-  background: var(--vp-c-bg-alt);
-  border-color: rgba(255, 255, 255, 0.1);
+.no-content-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
 }
 
-:global(.dark) .analogy {
-  background: rgba(var(--vp-c-brand-1), 0.1);
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .glossary-header h1 {
+    background: linear-gradient(135deg, #fff 0%, #aeb0b2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .controls {
+    background: rgba(28, 28, 30, 0.8);
+    border-color: rgba(255,255,255,0.1);
+  }
+  
+  .search-input {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+  }
+  
+  .search-input:focus {
+    background: #000;
+  }
+  
+  .search-icon { color: #a1a1a6; }
+  
+  .pill {
+    color: #a1a1a6;
+    border-color: rgba(255,255,255,0.1);
+  }
+  
+  .pill:hover { background: rgba(255,255,255,0.1); }
+  
+  .pill.active {
+    background: #fff;
+    color: #000;
+  }
+  
+  .term-card {
+    background: #1c1c1e;
+    border-color: rgba(255,255,255,0.05);
+  }
+  
+  .term-title { color: #f5f5f7; }
+  .definition p { color: #d2d2d7; }
+  
+  .analogy {
+    background: rgba(255,255,255,0.05);
+  }
+  
+  .analogy p { color: #a1a1a6; }
 }
 </style>

@@ -41,7 +41,6 @@ export default defineConfig({
     },
 
     footer: {
-      message: 'Designed for Clarity. Based on official Apple Best Practices.',
       copyright: 'Copyright © 2025 極電資訊有限公司'
     },
 

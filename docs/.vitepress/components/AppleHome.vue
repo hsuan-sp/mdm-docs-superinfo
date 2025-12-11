@@ -11,7 +11,7 @@ const navCards = [
     link: '/guide/02-enrollment', 
     bg: 'linear-gradient(135deg, #FF9A9E 0%, #FECFEF 99%, #FECFEF 100%)',
     textColor: '#333',
-    class: 'col-span-2 row-span-2 big-card'
+    class: 'col-span-1'
   },
   { 
     title: 'Identity', 
@@ -38,7 +38,7 @@ const navCards = [
     link: '/guide/04-classroom', 
     bg: 'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)',
     textColor: '#333',
-    class: 'col-span-1 row-span-1'
+    class: 'col-span-1'
   },
   { 
     title: 'Education', 
@@ -65,7 +65,7 @@ const navCards = [
     link: '/guide/07-mac', 
     bg: '#1d1d1f',
     textColor: '#f5f5f7',
-    class: 'col-span-2 dark-card'
+    class: 'col-span-1 dark-card'
   },
   { 
     title: 'Scenarios', 
@@ -101,14 +101,14 @@ const navCards = [
       </div>
     </header>
 
-    <!-- Masonry Grid -->
+    <!-- Grid Section -->
     <section class="grid-section">
       <div class="section-header fade-in-on-scroll">
         <h2>探索主題</h2>
         <p>從基礎設定到進階管理，一切盡在掌握。</p>
       </div>
       
-      <div class="bento-grid">
+      <div class="cards-grid">
         <a 
           v-for="card in navCards" 
           :key="card.link"
@@ -187,7 +187,7 @@ const navCards = [
 
 .hero h1 {
   font-size: 80px;
-  line-height: 1.1; /* Increased from 1.05 to prevent overlap */
+  line-height: 1.1; 
   font-weight: 700;
   letter-spacing: -0.015em;
   margin-bottom: 24px;
@@ -261,24 +261,33 @@ const navCards = [
 .section-header h2 {
   font-size: 48px;
   font-weight: 700;
+  line-height: 1.1; /* Ensure tight line height */
+  margin-bottom: 16px; /* Explicit margin to prevent overlap */
 }
 
 .section-header p {
   font-size: 21px;
   color: #86868b;
+  margin-top: 0;
+  line-height: 1.4;
 }
 
-/* Bento Grid */
-.bento-grid {
+/* Uniform Grid */
+.cards-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 24px;
 }
 
-@media (min-width: 768px) {
-  .bento-grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(240px, auto);
+@media (min-width: 600px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns for consistency */
   }
 }
 
@@ -290,7 +299,8 @@ const navCards = [
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between; /* Align content nicely */
+  min-height: 280px; /* Uniform height */
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s;
 }
 
@@ -298,6 +308,10 @@ const navCards = [
   transform: scale(1.02);
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
   z-index: 2;
+}
+
+.card-text {
+  z-index: 1;
 }
 
 .card-subtitle {
@@ -311,7 +325,7 @@ const navCards = [
 }
 
 .card h3 {
-  font-size: 32px;
+  font-size: 28px; /* Slightly smaller for uniform cards */
   font-weight: 700;
   margin-bottom: 12px;
   line-height: 1.1;
@@ -322,18 +336,7 @@ const navCards = [
   font-weight: 500;
   opacity: 0.9;
   line-height: 1.4;
-  max-width: 80%;
 }
-
-.col-span-2 { grid-column: span 1; }
-.row-span-2 { grid-row: span 1; min-height: 400px; }
-
-@media (min-width: 768px) {
-  .col-span-2 { grid-column: span 2; }
-  .row-span-2 { grid-row: span 2; }
-}
-
-.big-card h3 { font-size: 48px; }
 
 /* Promo */
 .promo {
@@ -354,5 +357,6 @@ const navCards = [
 @media (prefers-color-scheme: dark) {
   .apple-container { background: #000; color: #f5f5f7; }
   .hero-visual { box-shadow: 0 40px 80px rgba(255,255,255,0.05); }
+  .apple-container .promo { background: #1c1c1e; }
 }
 </style>
