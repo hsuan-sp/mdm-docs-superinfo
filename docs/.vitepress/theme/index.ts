@@ -4,6 +4,7 @@ import type { EnhanceAppContext } from 'vitepress'
 import './style.css'
 import GlossaryApp from '../components/GlossaryApp.vue'
 import QAViewer from '../components/QAViewer.vue'
+import AppleHome from '../components/AppleHome.vue'
 
 export default {
   extends: Theme,
@@ -15,5 +16,6 @@ export default {
   enhanceApp({ app, router, siteData }: EnhanceAppContext) {
     app.component('GlossaryApp', GlossaryApp)
     app.component('QAViewer', QAViewer)
+    app.component('AppleHome', AppleHome)
   }
 }
