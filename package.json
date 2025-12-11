@@ -4,9 +4,8 @@
   "description": "Professional MDM FAQ & Support Documentation",
   "main": "index.js",
   "scripts": {
-    "update-search": "node scripts/update-search-index.js",
-    "docs:dev": "npm run update-search && vitepress dev docs",
-    "docs:build": "npm run update-search && vitepress build docs",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
   "keywords": [],

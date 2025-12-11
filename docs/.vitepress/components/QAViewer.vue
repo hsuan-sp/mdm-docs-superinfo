@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
+import { allQAData, glossaryData } from "../../data/all-data";
 import type { QAItem, QASection } from "../types";
 import MarkdownIt from "markdown-it";
 
@@ -25,32 +26,78 @@ const allTags = computed(() => {
 const sections = computed(() => ["All", ...props.data.map((s) => s.title)]);
 
 const filteredSections = computed(() => {
-  if (!searchQuery.value && activeSection.value === "All") {
-    return props.data;
+  // 1. Local Page Logic (No Search)
+  if (!searchQuery.value) {
+    if (activeSection.value === "All") {
+      return props.data;
+    }
+    return props.data
+      .map((section) => {
+        if (section.title !== activeSection.value) {
+          return { ...section, items: [] };
+        }
+        return section;
+      })
+      .filter((section) => section.items.length > 0);
   }
 
-  return props.data
-    .map((section) => {
-      // If section doesn't match filter, filter its items
-      if (
-        activeSection.value !== "All" &&
-        section.title !== activeSection.value
-      ) {
-        return { ...section, items: [] };
-      }
+  // 2. Global Search Logic
+  const q = searchQuery.value.toLowerCase();
+  const results: QASection[] = [];
 
-      const filteredItems = section.items.filter((item) => {
-        const q = searchQuery.value.toLowerCase();
-        return (
+  // Search Q&A
+  const qaMatches: QAItem[] = [];
+  allQAData.forEach((file) => {
+    file.sections.forEach((section) => {
+      section.items.forEach((item) => {
+        if (
           item.question.toLowerCase().includes(q) ||
           item.answer.toLowerCase().includes(q) ||
           item.tags.some((t) => t.toLowerCase().includes(q))
-        );
+        ) {
+          // Add source file name to key for context if needed, or just push
+          // Cloning item to add contextual tag if beneficial, purely optional
+           qaMatches.push({
+             ...item,
+             tags: [...item.tags, file.source] // Add source as a tag for context
+           });
+        }
       });
+    });
+  });
 
-      return { ...section, items: filteredItems };
+  if (qaMatches.length > 0) {
+    results.push({
+      title: "問答指南搜尋結果",
+      items: qaMatches,
+    });
+  }
+
+  // Search Glossary
+  const glossaryMatches = glossaryData
+    .filter((term) => {
+      return (
+        term.term.toLowerCase().includes(q) ||
+        term.definition.toLowerCase().includes(q) ||
+        term.analogy.toLowerCase().includes(q)
+      );
     })
-    .filter((section) => section.items.length > 0);
+    .map((term) => ({
+      id: `glossary-${term.term}`,
+      question: term.term, // Map Term -> Question
+      answer: `**定義**：${term.definition}\n\n**白話文**：${term.analogy}`, // Map Def -> Answer
+      tags: [term.category, "術語表"],
+      important: false,
+    } as QAItem));
+
+  if (glossaryMatches.length > 0) {
+    results.push({
+      title: "術語表搜尋結果",
+      items: glossaryMatches,
+    });
+  }
+
+  return results;
 });
 
 // Accordion Logic
