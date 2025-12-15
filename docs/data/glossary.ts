@@ -652,7 +652,7 @@ export const glossaryData: Term[] = [
 
     term: 'Jamf Connect',
 
-    category: ['Security'],
+    category: ['Security', 'Jamf'],
 
     definition: 'Jamf Connect。一款用於解決 Mac 本機帳號與雲端身分 (IdP) 密碼同步問題的軟體。它取代了傳統的 AD 綁定，讓使用者用 Google 或 Azure 的密碼登入 Mac，並確保兩邊密碼永遠一致。現在正逐漸整合進 Platform SSO 技術中。',
 
@@ -674,7 +674,7 @@ export const glossaryData: Term[] = [
 
     term: 'Jamf Pro',
 
-    category: ['Core'],
+    category: ['Core', 'Jamf'],
 
     definition: 'Jamf Pro。業界市佔率最高的 Apple 裝置管理解決方案 (MDM)。以其強大的腳本擴充能力 (Scripting)、API 整合性與 Smart Group 邏輯聞名，被視為 Apple 管理的黃金標準，適合中大型企業與高階教育需求。',
 
@@ -685,7 +685,7 @@ export const glossaryData: Term[] = [
 
     term: 'Jamf Protect',
 
-    category: ['Security'],
+    category: ['Security', 'Jamf'],
 
     definition: 'Jamf Protect。專為 Mac 設計的端點防護系統 (Endpoint Security)，功能類似進階版防毒軟體。它利用 Apple 原生的 Endpoint Security Framework 來監控惡意行為，而不像傳統防毒軟體那樣拖慢系統效能。',
 
@@ -1476,7 +1476,7 @@ export const glossaryData: Term[] = [
     definition: 'Jamf Pro 的進階自動化框架。允許管理員定義「理想狀態」並持續監控,當裝置偏離標準時自動修正。例如設定「必須安裝防毒軟體」,Jamf 會定期檢查並自動安裝缺失的軟體。 Blueprint 比傳統 Policy 更智慧,能主動偵測並自我修復,確保裝置始終符合企業安全基準。',
     analogy: '就像「自動駕駛模式」。你設定「時速100公里,保持車道中央」,車子就自動維持;Blueprints 讓你設定「必須有防毒+加密」,裝置就自動保持合規狀態,偏離了會自動拉回來。'
   },
-  
+
   // --- E ---
   {
     term: 'Enrollment Invitation',
@@ -1490,7 +1490,7 @@ export const glossaryData: Term[] = [
     definition: '擴充屬性。Jamf Pro 的自訂資料欄位功能。允許管理員使用腳本或輸入欄位收集標準清單外的裝置資訊,如特定軟體版本、安全設定狀態、使用者自填資料等。這些自訂資料可用於 Smart Group 條件、報表篩選和 Policy 範圍設定,大幅提升管理彈性。',
     analogy: '就像「客製化調查問卷」。標準健康檢查只問身高體重,但你可以加問「有無接種疫苗」「最近一次看牙醫」等客製問題,然後依答案自動分組管理。'
   },
-  
+
   // --- I ---
   {
     term: 'Inventory Collection',
@@ -1498,7 +1498,7 @@ export const glossaryData: Term[] = [
     definition: '清單收集。Jamf 定期從裝置收集硬體資訊、已安裝軟體、系統設定、使用者資料、Extension Attribute 等的程序。預設每天自動執行,也可手動觸發「Update Inventory」指令立即收集最新狀態。這是 Jamf 掌握裝置現況的核心機制,所有報表和 Smart Group 都依賴此資料。',
     analogy: '就像「定期健康檢查」。每天自動量體溫血壓(收集資料),醫生(管理員)就能看到最新健康狀態;也可以說「現在馬上給我量!」立即更新,不用等明天。'
   },
-  
+
   // --- J ---
   {
     term: 'Jamf Connect',
@@ -1537,7 +1537,7 @@ export const glossaryData: Term[] = [
     analogy: '就像「遠端遙控器」。IT坐在辦公室,透過瀏覽器就能看到並控制員工的Mac螢幕,幫忙抓bug或設定軟體,不用跑過去或叫使用者安裝TeamViewer。'
   },
   {
-    term: 'Jamf Now', 
+    term: 'Jamf Now',
     category: ['Jamf'],
     definition: 'Jamf Now。Jamf推出的簡化版雲端MDM解決方案,專為小型企業(50台裝置以下)設計。提供基本的裝置管理、App派送與安全設定功能,但不包含Jamf Pro的進階功能如Policy、Script、Extension Attribute等。定價較低,介面更友善。',
     analogy: '就像「入門版管理工具」。Jamf Pro是專業級瑞士刀(功能超多但複雜),Jamf Now是簡化版多功能刀,只有最基本幾個工具,適合剛起步的小公司使用。'
@@ -1584,7 +1584,7 @@ export const glossaryData: Term[] = [
     definition: 'Casper Suite。Jamf Pro的前身品牌名稱(2002-2015)。早期Jamf的管理工具稱為Casper,後來更名為Jamf Pro。有些舊文件或討論串仍會使用Casper這個稱呼,但指的就是現在的Jamf Pro。',
     analogy: '就像「舊品牌名稱」。就像Facebook改名Meta,Casper Suite就是Jamf Pro的舊名字。看到有人講Casper,不用困惑,他們講的就是Jamf Pro。'
   },
-  
+
   // --- P ---
   {
     term: 'Package',
@@ -1592,7 +1592,7 @@ export const glossaryData: Term[] = [
     definition: '安裝套件。在 Jamf 中,Package 是指 .pkg 或 .dmg 格式的 Mac 應用程式安裝檔。管理員將 Package 上傳到 Jamf Pro,再透過 Policy 或 Self Service 分發到目標裝置。支援使用 Composer 工具自製安裝包,也可直接使用廠商提供的 .pkg 檔。',
     analogy: '就像「軟體快遞箱」。IT 把軟體裝進標準化包裹(Package),貼上標籤「僅限行銷部」,Jamf 就會自動配送到正確的 Mac 桌面,使用者點兩下就安裝完成。'
   },
-  
+
   // --- R ---
   {
     term: 'Restrict Software',

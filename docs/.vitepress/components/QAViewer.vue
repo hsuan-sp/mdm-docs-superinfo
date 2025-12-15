@@ -115,7 +115,7 @@ const renderMarkdown = (text: string) => {
   return md.render(text);
 };
 
-// Instant animation on scroll
+// Smooth card reveal animation on scroll
 onMounted(async () => {
   await nextTick();
   
@@ -123,11 +123,14 @@ onMounted(async () => {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('item-visible');
+          // Add visible class immediately when card enters viewport
+          requestAnimationFrame(() => {
+            entry.target.classList.add('item-visible');
+          });
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.05, rootMargin: '50px' }
   );
 
   document.querySelectorAll('.qa-item').forEach((el) => {
@@ -175,7 +178,11 @@ onMounted(async () => {
             class="qa-item glass-panel"
             :class="{ open: openItems.has(item.id) }"
           >
-            <div class="qa-header" @click="toggleItem(item.id)">
+            <div 
+              class="qa-header" 
+              @click="toggleItem(item.id)"
+              :aria-expanded="openItems.has(item.id)"
+            >
               <h3 class="qa-question">{{ item.question }}</h3>
               <div class="qa-header-right">
                 <span v-if="item.important" class="badge-important">重要</span>
@@ -183,16 +190,13 @@ onMounted(async () => {
               </div>
             </div>
 
-            <div v-show="openItems.has(item.id)" class="qa-body">
-              <div class="tags">
-                <span v-for="tag in item.tags" :key="tag" class="tag"
-                  >#{{ tag }}</span
-                >
+            <div class="qa-content-wrapper" :class="{ 'is-open': openItems.has(item.id) }">
+              <div class="qa-body">
+                <div v-if="item.tags && item.tags.length" class="qa-tags">
+                  <span v-for="tag in item.tags" :key="tag" class="qa-tag">#{{ tag }}</span>
+                </div>
+                <div class="qa-answer" v-html="renderMarkdown(item.answer)"></div>
               </div>
-              <div
-                class="markdown-body"
-                v-html="renderMarkdown(item.answer)"
-              ></div>
             </div>
           </div>
         </div>
@@ -309,11 +313,12 @@ onMounted(async () => {
   border: 1px solid rgba(128, 128, 128, 0.1);
   border-radius: 16px;
   overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   box-shadow: var(--vp-shadow-1);
-  opacity: 1;
-  transform: translateY(0) scale(1);
+  opacity: 0;
+  transform: translateY(15px) scale(0.98);
   position: relative;
+  will-change: opacity, transform;
 }
 
 .glass-panel::before {
@@ -396,16 +401,49 @@ onMounted(async () => {
   color: var(--vp-c-brand-1);
 }
 
-.qa-body {
-  padding: 0 1.5rem 1.5rem;
-  border-top: 1px solid var(--vp-c-divider);
-  background: rgba(var(--vp-c-bg-alt), 0.5);
-  animation: slideDown 0.3s ease-out;
+/* Smooth expansion animation using CSS Grid */
+.qa-content-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+.qa-content-wrapper.is-open {
+  grid-template-rows: 1fr;
+}
+
+.qa-body {
+  overflow: hidden;
+  padding: 0 1.5rem;
+  border-top: 1px solid transparent;
+  background: rgba(var(--vp-c-bg-alt), 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.qa-content-wrapper.is-open .qa-body {
+  padding-bottom: 1.5rem;
+  border-top-color: var(--vp-c-divider);
+  opacity: 1;
+  visibility: visible;
+}
+
+.qa-tags {
+  margin-bottom: 0.8rem;
+  padding-top: 1rem;
+}
+
+.qa-tag {
+  color: var(--vp-c-brand);
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+  font-weight: 500;
+}
+
+.qa-answer {
+  line-height: 1.7;
+  color: var(--vp-c-text-2);
 }
 
 .tags {
