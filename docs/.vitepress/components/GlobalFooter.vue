@@ -22,6 +22,17 @@ import { withBase } from 'vitepress'
 </template>
 
 <style scoped>
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .global-footer {
   background-color: var(--vp-c-bg-alt);
   padding: 60px 24px 40px;
@@ -30,6 +41,7 @@ import { withBase } from 'vitepress'
   margin-top: 60px;
   position: relative;
   z-index: 200;
+  animation: fadeInFooter 0.8s ease-out;
 }
 
 /* Promo Section */
@@ -38,42 +50,66 @@ import { withBase } from 'vitepress'
 }
 
 .company-name {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
-  margin: 0 0 12px;
+  margin: 0 0 16px;
   color: var(--vp-c-text-1);
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
 }
 
 .service-badges {
   font-size: 16px;
   color: var(--vp-c-text-2);
-  margin: 0 0 8px;
+  margin: 0 0 12px;
   font-weight: 500;
+  line-height: 1.6;
+  transition: color 0.3s ease;
 }
 
 .slogan {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--vp-c-brand-1);
   font-weight: 600;
-  opacity: 0.9;
+  opacity: 0.95;
   margin: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.slogan:hover {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 /* Divider */
 .divider {
-  height: 1px;
-  background: var(--vp-c-divider);
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--vp-c-brand-1) 50%, 
+    transparent 100%);
   max-width: 200px;
   margin: 0 auto 30px;
-  opacity: 0.5;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.global-footer:hover .divider {
+  opacity: 0.6;
 }
 
 /* Copyright Section */
 .footer-copyright p {
   font-size: 13px;
   color: var(--vp-c-text-3);
-  margin: 4px 0;
-  line-height: 1.5;
+  margin: 6px 0;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.footer-copyright p:hover {
+  color: var(--vp-c-text-2);
 }
 
 /* Dark Mode Adjustments */

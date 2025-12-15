@@ -1,7 +1,28 @@
 <script setup>
 import { useRouter, withBase } from 'vitepress'
+import { onMounted } from 'vue'
 
 const router = useRouter()
+
+onMounted(() => {
+  // Staggered animation for cards
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('is-visible')
+          }, index * 100)
+        }
+      })
+    },
+    { threshold: 0.1 }
+  )
+
+  document.querySelectorAll('.fade-in-on-scroll').forEach((el) => {
+    observer.observe(el)
+  })
+})
 
 const navCards = [
   { 
@@ -139,9 +160,9 @@ const navCards = [
   min-height: 100vh;
 }
 
-/* Animations */
+/* Enhanced Animations */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
+  from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -150,9 +171,52 @@ const navCards = [
   to { opacity: 1; }
 }
 
-.fade-in-up { animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
-.fade-in { animation: fadeIn 1.5s ease-out forwards; opacity: 0; }
-.delay-2 { animation-delay: 0.2s; }
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.fade-in-up { 
+  animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; 
+  opacity: 0; 
+}
+
+.fade-in { 
+  animation: fadeIn 1.5s ease-out forwards; 
+  opacity: 0; 
+}
+
+.delay-2 { animation-delay: 0.3s; }
+
+/* Scroll-triggered fade-in with stagger */
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* Hero */
 .hero {
@@ -173,15 +237,21 @@ const navCards = [
   text-transform: uppercase;
   margin-bottom: 24px;
   display: block;
+  animation: fadeIn 0.8s ease-out;
 }
 
 .hero h1 {
-  font-size: clamp(48px, 5vw, 84px); /* Responsive Typography */
+  font-size: clamp(48px, 5vw, 84px);
   line-height: 1.05; 
   font-weight: 700;
   letter-spacing: -0.02em;
   margin-bottom: 24px;
-  white-space: pre-wrap; /* Allow wrapping */
+  white-space: pre-wrap;
+  background: linear-gradient(135deg, var(--vp-c-text-1) 0%, var(--vp-c-brand-1) 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .intro {
@@ -209,39 +279,93 @@ const navCards = [
   border-radius: 980px;
   font-size: 17px;
   font-weight: 500;
-  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-  box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 16px rgba(0, 113, 227, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.primary-btn:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .primary-btn:hover {
   background: var(--vp-c-brand-2);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 113, 227, 0.4);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 32px rgba(0, 113, 227, 0.5);
+}
+
+.primary-btn:active {
+  transform: translateY(-1px) scale(1.02);
 }
 
 .text-link {
   color: var(--vp-c-brand-1);
   font-size: 17px;
   font-weight: 500;
-  transition: color 0.2s;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
 }
 
-.text-link:hover { text-decoration: underline; color: var(--vp-c-brand-2); }
+.text-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--vp-c-brand-1);
+  transition: width 0.3s ease;
+}
+
+.text-link:hover::after {
+  width: 100%;
+}
+
+.text-link:hover { 
+  color: var(--vp-c-brand-2);
+  transform: translateX(5px);
+}
 
 .hero-visual {
   width: 100%;
   max-width: 1000px;
   border-radius: 28px;
   overflow: hidden;
-  box-shadow: var(--glass-shadow);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
   border: 1px solid rgba(0,0,0,0.05);
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hero-visual:hover {
+  transform: scale(1.02);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.2);
 }
 
 .hero-visual img {
   width: 100%;
   height: auto;
   display: block;
-  transform: scale(1.01); /* Prevent anti-aliasing gap lines */
+  transform: scale(1.01);
+  transition: transform 0.6s ease;
+}
+
+.hero-visual:hover img {
+  transform: scale(1.05);
 }
 
 /* Grid Section */
@@ -272,7 +396,7 @@ const navCards = [
   line-height: 1.4;
 }
 
-/* Responsive Grid - Strict Uniformity */
+/* Responsive Grid */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -291,6 +415,7 @@ const navCards = [
   }
 }
 
+/* Enhanced Cards */
 .card {
   border-radius: 28px;
   padding: 40px 32px;
@@ -300,26 +425,51 @@ const navCards = [
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 320px; /* Taller for elegance */
+  min-height: 320px;
   background: var(--vp-c-bg-alt);
-  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  box-shadow: var(--vp-shadow-1);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
   border: 1px solid transparent;
 }
 
-/* Explicit Light Mode Card bg override if needed */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
 .card:not(.dark-mode) {
   background: #ffffff;
 }
 
 .card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 24px 48px rgba(0,0,0,0.12);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 28px 60px rgba(0,0,0,0.15);
   z-index: 2;
+}
+
+.card:active {
+  transform: translateY(-4px) scale(1.01);
 }
 
 .card-text {
   z-index: 1;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card:hover .card-text {
+  transform: translateY(-5px);
 }
 
 .card-subtitle {
@@ -330,6 +480,12 @@ const navCards = [
   letter-spacing: 0.05em;
   display: block;
   margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.card:hover .card-subtitle {
+  opacity: 0.9;
+  letter-spacing: 0.1em;
 }
 
 .card h3 {
@@ -338,6 +494,12 @@ const navCards = [
   margin-bottom: 16px;
   line-height: 1.1;
   letter-spacing: -0.01em;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card:hover h3 {
+  transform: scale(1.05);
+  transform-origin: left;
 }
 
 .card p {
@@ -346,6 +508,11 @@ const navCards = [
   opacity: 0.8;
   line-height: 1.5;
   max-width: 90%;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover p {
+  opacity: 1;
 }
 
 /* Promo */
@@ -359,15 +526,50 @@ const navCards = [
   margin-right: 24px;
 }
 
-.promo h2 { font-size: 36px; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
-.promo-subtitle { font-size: 19px; color: var(--vp-c-text-1); margin-bottom: 8px; font-weight: 600; opacity: 0.9; }
-.promo-desc { font-size: 17px; color: var(--vp-c-text-2); margin-top: 0; }
+.promo h2 { 
+  font-size: 36px; 
+  font-weight: 700; 
+  margin-bottom: 16px; 
+  letter-spacing: -0.02em; 
+}
+
+.promo-subtitle { 
+  font-size: 19px; 
+  color: var(--vp-c-text-1); 
+  margin-bottom: 8px; 
+  font-weight: 600; 
+  opacity: 0.9; 
+}
+
+.promo-desc { 
+  font-size: 17px; 
+  color: var(--vp-c-text-2); 
+  margin-top: 0; 
+}
 
 /* Dark Mode Overrides */
 @media (prefers-color-scheme: dark) {
-  .apple-container { background: #000; color: #f5f5f7; }
-  .hero-visual { box-shadow: 0 40px 80px rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); }
-  .card { background: #1c1c1e; border-color: rgba(255,255,255,0.05); }
-  .promo { background: #1c1c1e; }
+  .apple-container { 
+    background: #000; 
+    color: #f5f5f7; 
+  }
+  
+  .hero-visual { 
+    box-shadow: 0 40px 80px rgba(255,255,255,0.05); 
+    border-color: rgba(255,255,255,0.1); 
+  }
+  
+  .card { 
+    background: #1c1c1e; 
+    border-color: rgba(255,255,255,0.05); 
+  }
+  
+  .card:hover {
+    box-shadow: 0 28px 60px rgba(255,255,255,0.1);
+  }
+  
+  .promo { 
+    background: #1c1c1e; 
+  }
 }
 </style>

@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { glossaryData } from "../../data/glossary";
 
+type CategoryType = "Core" | "Enrollment" | "Apple" | "Security" | "Network" | "Hardware" | "Apps" | "Other" | "Education" | "macOS" | "Jamf";
+
 const searchQuery = ref("");
-const selectedCategory = ref("All");
+const selectedCategory = ref<CategoryType | "All">("All");
 const sortOrder = ref<'asc' | 'desc'>('asc'); // 新增排序狀態
 
 const categories = [
@@ -19,7 +21,7 @@ const categories = [
   "Education",
   "macOS",    // 新增
   "Jamf",     // 新增
-];
+] as const;
 
 const filteredTerms = computed(() => {
   let filtered = glossaryData.filter((item) => {
@@ -27,9 +29,13 @@ const filteredTerms = computed(() => {
       item.term.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
       item.definition.includes(searchQuery.value) ||
       item.analogy.includes(searchQuery.value);
+    
+    // 修復: 處理category為數組的情況
     const matchesCategory =
       selectedCategory.value === "All" ||
-      item.category === selectedCategory.value;
+      (Array.isArray(item.category) 
+        ? item.category.includes(selectedCategory.value)
+        : item.category === selectedCategory.value);
 
     return matchesSearch && matchesCategory;
   });
@@ -69,6 +75,28 @@ const getCategoryColor = (cat: string) => {
 const toggleSort = () => {
   sortOrder.value = sortOrder.value === 'asc' ? 'desc' : 'asc';
 };
+
+// Staggered animation on scroll
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('card-visible');
+          }, index * 50);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  setTimeout(() => {
+    document.querySelectorAll('.term-card').forEach((el) => {
+      observer.observe(el);
+    });
+  }, 100);
+});
 </script>
 
 <template>
@@ -130,7 +158,16 @@ const toggleSort = () => {
       >
         <div class="card-header">
           <h3 class="term-title">{{ item.term }}</h3>
-          <span :class="['tag', getCategoryColor(item.category)]">{{ item.category }}</span>
+          <!-- 修復: 顯示所有category標籤 -->
+          <div class="category-badges">
+            <span 
+              v-for="cat in (Array.isArray(item.category) ? item.category : [item.category])" 
+              :key="cat"
+              :class="['badge', getCategoryColor(cat)]"
+            >
+              {{ cat }}
+            </span>
+          </div>
         </div>
 
         <div class="card-body">
@@ -295,17 +332,49 @@ const toggleSort = () => {
   font-weight: 500;
   color: #515154;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.pill::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.05);
+  transform: translate(-50%, -50%);
+  transition: width 0.4s, height 0.4s;
+}
+
+.pill:hover::before {
+  width: 200px;
+  height: 200px;
 }
 
 .pill:hover {
   background: rgba(0,0,0,0.05);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.pill:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .pill.active {
   background: #1d1d1f;
   color: #fff;
   border-color: #1d1d1f;
+  box-shadow: 0 4px 16px rgba(29, 29, 31, 0.3);
+  transform: scale(1.05);
+}
+
+.pill.active:hover {
+  box-shadow: 0 6px 20px rgba(29, 29, 31, 0.4);
 }
 
 /* Grid */
@@ -315,20 +384,48 @@ const toggleSort = () => {
   gap: 24px;
 }
 
+/* Enhanced Card Animations */
 .term-card {
   background: #fff;
   border-radius: 20px;
   padding: 24px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.04);
   border: 1px solid rgba(0,0,0,0.05);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  position: relative;
+  overflow: hidden;
+}
+
+.term-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 113, 227, 0.05) 0%, rgba(0, 113, 227, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.term-card.card-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .term-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  border-color: rgba(0, 113, 227, 0.2);
+}
+
+.term-card:hover::before {
+  opacity: 1;
 }
 
 .card-header {
@@ -383,12 +480,22 @@ const toggleSort = () => {
   margin-top: 1px;
 }
 
-.analogy p {
+.card-header h3 {
   margin: 0;
-  font-size: 14px;
-  color: #6e6e73;
-  line-height: 1.5;
-  font-style: italic;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+.category-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.badge { font-style: italic;
 }
 
 /* No Results */

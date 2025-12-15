@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { allQAData, glossaryData } from "../../data/all-data";
 import type { QAItem, QASection } from "../types";
 import MarkdownIt from "markdown-it";
@@ -114,6 +114,28 @@ const toggleItem = (id: string) => {
 const renderMarkdown = (text: string) => {
   return md.render(text);
 };
+
+// Staggered animation on scroll
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('item-visible');
+          }, index * 80);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  setTimeout(() => {
+    document.querySelectorAll('.qa-item').forEach((el) => {
+      observer.observe(el);
+    });
+  }, 100);
+});
 </script>
 
 <template>
@@ -226,18 +248,42 @@ const renderMarkdown = (text: string) => {
   border-radius: 20px;
   background: var(--vp-c-bg-alt);
   font-size: 0.9rem;
-  transition: all 0.2s;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   border: 1px solid transparent;
   color: var(--vp-c-text-2);
   cursor: pointer;
   box-shadow: var(--vp-shadow-1);
+  position: relative;
+  overflow: hidden;
+}
+
+.pill::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(var(--vp-c-brand-1), 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.4s, height 0.4s;
+}
+
+.pill:hover::before {
+  width: 200px;
+  height: 200px;
 }
 
 .pill:hover {
   background: var(--vp-c-bg-elv);
   color: var(--vp-c-text-1);
-  transform: translateY(-1px);
-  box-shadow: var(--vp-shadow-2);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.pill:active {
+  transform: translateY(-1px) scale(0.98);
 }
 
 .pill.active {
@@ -265,15 +311,41 @@ const renderMarkdown = (text: string) => {
   border: 1px solid rgba(128, 128, 128, 0.1);
   border-radius: 16px;
   overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   box-shadow: var(--vp-shadow-1);
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  position: relative;
+}
+
+.glass-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(var(--vp-c-brand-1), 0.03) 0%, rgba(var(--vp-c-brand-1), 0) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glass-panel.item-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .glass-panel:hover {
   background: var(--vp-c-bg-elv);
-  box-shadow: var(--vp-shadow-3);
-  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+  transform: translateY(-6px) scale(1.01);
   border-color: var(--vp-c-brand-1);
+}
+
+.glass-panel:hover::before {
+  opacity: 1;
 }
 
 .qa-header {
