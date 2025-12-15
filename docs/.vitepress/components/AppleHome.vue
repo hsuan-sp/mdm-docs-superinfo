@@ -118,7 +118,7 @@ const navCards = [
         </div>
       </div>
       <div class="hero-visual fade-in delay-2">
-        <img :src="withBase('/mdm_hero.png')" alt="MDM Abstract Art" />
+        <img :src="withBase('/mdm_hero_premium.png')" alt="MDM Abstract Art with iPad" />
       </div>
     </header>
 
