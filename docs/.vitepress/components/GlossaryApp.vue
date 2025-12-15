@@ -63,26 +63,22 @@ const toggleSort = () => {
   sortOrder.value = sortOrder.value === 'asc' ? 'desc' : 'asc';
 };
 
-// Staggered animation on scroll
+// Instant animation on scroll
 onMounted(() => {
   const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry, index) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add('card-visible');
-          }, index * 50);
+          entry.target.classList.add('card-visible');
         }
       });
     },
     { threshold: 0.1 }
   );
 
-  setTimeout(() => {
-    document.querySelectorAll('.term-card').forEach((el) => {
-      observer.observe(el);
-    });
-  }, 100);
+  document.querySelectorAll('.term-card').forEach((el) => {
+    observer.observe(el);
+  });
 });
 </script>
 

@@ -115,26 +115,22 @@ const renderMarkdown = (text: string) => {
   return md.render(text);
 };
 
-// Staggered animation on scroll
+// Instant animation on scroll
 onMounted(() => {
   const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry, index) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add('item-visible');
-          }, index * 80);
+          entry.target.classList.add('item-visible');
         }
       });
     },
     { threshold: 0.1 }
   );
 
-  setTimeout(() => {
-    document.querySelectorAll('.qa-item').forEach((el) => {
-      observer.observe(el);
-    });
-  }, 100);
+  document.querySelectorAll('.qa-item').forEach((el) => {
+    observer.observe(el);
+  });
 });
 </script>
 
