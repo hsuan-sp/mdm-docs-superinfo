@@ -2,13 +2,13 @@ import { QASection } from '../types'
 
 export const data: QASection[] = [
   {
-    title: '第二部分：裝置註冊、納管與重置 (Enrollment & Reset)',
+    title: '第二部分：裝置註冊、管理與清除 (Enrollment & Erase)',
     items: [
       {
         id: 'enr-1',
-        question: '[常用] 平板被學生設定了密碼且已忘記，導致無法解鎖，如何在不登入的情況下重置？',
+        question: '[常用] 平板被學生設定了密碼且已忘記，導致無法解鎖，如何在不登入的情況下清除 (Erase)？',
         important: true,
-        tags: ['密碼鎖', '重置'],
+        tags: ['密碼鎖', '清除', 'Erase'],
         answer: `
 **問題描述**：iPad 螢幕顯示「iPad 已停用」或「iPad 無法使用」，且無法輸入密碼解鎖。
 
@@ -23,7 +23,7 @@ export const data: QASection[] = [
 4.  指令送達後，iPad 的密碼鎖會直接解除，滑開螢幕即可進入。
 
 #### **方法 B：使用電腦強制回復 (若已斷網或方法 A 無效)**
-若 iPad 已斷網，必須使用電腦 (Mac/Windows) 強制重灌系統，**此動作會清除所有資料**。
+若 iPad 已斷網，必須使用電腦 (Mac/Windows) 強制回復系統，**此動作會清除所有資料**。
 
 **操作步驟：**
 1.  將 iPad 連接至電腦（Mac 使用 Finder 或 Apple Configurator；Windows 使用 Apple Devices App 或 iTunes）。
@@ -35,16 +35,16 @@ export const data: QASection[] = [
     *   **有 Home 鍵機型 (iPad 9 或更舊)**：
         1.  同時按住 **「主畫面按鈕 (Home)」** 與 **「頂端 (或側邊) 電源按鈕」**。
         2.  持續按住不放，即使看到 Apple 標誌也不要放開，直到看到「連接電腦」的圖示才放開。
-3.  電腦端會跳出視窗，請打開您選擇的軟體，並對該裝置選擇 **「回復 (Restore)」**。電腦會下載軟體更新並清除 iPad。
+3.  電腦端會跳出視窗，請打開您選擇的軟體，並對該裝置選擇 **「回復 (Restore)」**。電腦會下載軟體更新並清除裝置。
 `
       },
       {
         id: 'enr-2',
-        question: '[常用] 使用 Apple Configurator (AC2) 重置平板時，卡在「等待裝置」或出現錯誤代碼，如何解決？',
+        question: '[常用] 使用 Apple Configurator 回復平板時，卡在「等待裝置」或出現錯誤代碼，如何解決？',
         important: false,
-        tags: ['AC2', 'DFU', '錯誤代碼'],
+        tags: ['Apple Configurator', 'DFU', '錯誤代碼'],
         answer: `
-**問題描述**：在 AC2 執行「回復」或「清除」時，進度條卡住不動，或跳出錯誤代碼（如 4013, 9, 4005）。
+**問題描述**：在 Apple Configurator 執行「回復」或「清除」時，進度條卡住不動，或跳出錯誤代碼（如 4013, 9, 4005）。
 
 **解決方案**：
 若標準回復失敗，需進入更深層的 **DFU 模式 (Device Firmware Update)** 強制重新寫入韌體。
@@ -60,37 +60,37 @@ export const data: QASection[] = [
 5.  螢幕變黑的瞬間，**繼續按住「電源鍵」，並同時按住「調低音量」鍵**，持續約 5 秒。
 6.  **放開「電源鍵」**，但**繼續按住「調低音量」鍵** 約 10 秒。
 7.  觀察 Apple Configurator 視窗，若出現 **"DFU"** 字樣的裝置圖示，且 iPad 螢幕全黑，即成功。
-8.  在 AC2 對該裝置按右鍵 > **「回復 (Restore)」**。
+8.  在 Apple Configurator 對該裝置按右鍵 > **「回復 (Restore)」**。
 
 **B. 有 Home 鍵機型 (iPad 9 及舊款)：**
 1.  將 iPad 連接電腦，開啟 Apple Configurator。
 2.  同時長按 **「電源鍵」** 與 **「Home 鍵」** 約 8-10 秒，直到螢幕變黑。
 3.  **放開「電源鍵」**，但**繼續按住「Home 鍵」**，持續約 5 秒以上。
 4.  觀察 Apple Configurator 視窗，若出現 **"DFU"** 字樣，且 iPad 螢幕全黑，即成功。
-5.  在 AC2 對該裝置按右鍵 > **「回復 (Restore)」**。
+5.  在 Apple Configurator 對該裝置按右鍵 > **「回復 (Restore)」**。
 
 **其他排查重點**：
-*   **更換傳輸線**：務必使用原廠或通過 MFi 認證或您確保能夠正常使用的線材。
+*   **更換傳輸線**：務必使用原廠，或是通過 MFi 認證且功能正常的傳輸線。
 *   **直接連接**：嘗試不要透過 USB Hub 或鍵盤上的 USB 孔，直接插在電腦主機板的接口（MacBook 請換一個孔試試）。
-*   **網路環境**：回復過程需連線 Apple 伺服器驗證，請確保網路未阻擋 任何 apple 相關域名。
+*   **網路環境**：回復過程需連線 Apple 伺服器驗證，請確保網路未阻擋任何 Apple 相關域名。
 `
       },
       {
         id: 'enr-3',
-        question: '如何將尚未納管（或已脫管）的 iPad，透過 AC2 手動加入 Apple School Manager？',
+        question: '如何將尚未註冊（或已移除管理）的 iPad，透過 Apple Configurator 手動加入 Apple 校務管理 (ASM)？',
         important: false,
-        tags: ['手動納管', 'AC2', 'ASM'],
+        tags: ['手動註冊', 'Apple Configurator', 'ASM'],
         answer: `
-**適用情境**：學校自行購買、家長會捐贈的 iPad，非透過授權經銷商走 DEP 流程採購，需手動納入管理。
+**適用情境**：學校自行購買、家長會捐贈的 iPad，非透過授權經銷商走 ADE 流程採購，需手動加入 ASM。
 
 **詳細步驟**：
 1.  **準備工作**：
     *   Mac 電腦安裝 **Apple Configurator**。
     *   iPad 必須在「哈囉 (Hello)」歡迎畫面（若已進入桌面，請先清除裝置）。
 2.  **建立 Wi-Fi 描述檔**：
-    *   在 AC2 點選 \`檔案\` > \`新增描述檔\` > \`Wi-Fi\` > 設定學校 Wi-Fi 的 SSID 與密碼 > 儲存為 \`wifi.mobileconfig\`。
+    *   在 Apple Configurator 點選 \`檔案\` > \`新增描述檔\` > \`Wi-Fi\` > 設定學校 Wi-Fi 的 SSID 與密碼 > 儲存為 \`wifi.mobileconfig\`。
 3.  **開始流程**：
-    *   連接 iPad，在 AC2 選取裝置，點擊 **「準備 (Prepare)」**。
+    *   連接 iPad，在 Apple Configurator 選取裝置，點擊 **「準備 (Prepare)」**。
     *   **設定選項**：
         *   選擇 **「手動設定 (Manual Configuration)」**。
         *   勾選 **「將裝置加入 Apple 校務管理 (Add to Apple School Manager)」**。
@@ -101,9 +101,9 @@ export const data: QASection[] = [
     *   **指派身分**：選擇「產生新的監管身分」或沿用現有組織。
     *   **設定輔助程式**：建議選擇「不顯示任何步驟」。
     *   **網路設定**：系統會要求載入 Wi-Fi 描述檔，請選取步驟 2 建立的檔案。
-4.  **執行與等待**：AC2 會開始下載啟用紀錄並設定 iPad。
+4.  **執行與等待**：Apple Configurator 會開始下載啟用紀錄並設定 iPad。
 5.  **ASM 端指派 (關鍵)**：
-    *   iPad 跑完流程後，登入 [school.apple.com](https://school.apple.com)。
+    *   iPad 跑完流程後，登入 **[Apple 校務管理 (ASM)](https://school.apple.com)**。
     *   前往 **「裝置」** > 篩選來源 **「已手動新增」**。
     *   選取該 iPad > 點選 **「編輯 MDM 伺服器」** > 指派給 **Jamf Pro**。
 6.  **Jamf Pro 端同步**：
@@ -115,18 +115,18 @@ export const data: QASection[] = [
       },
       {
         id: 'enr-4',
-        question: '裝置重置後，卡在「遠端管理」登入畫面，或顯示「無效的描述檔」，該怎麼辦？',
+        question: '裝置清除 (Erase) 後，卡在「遠端管理」登入畫面，或顯示「無效的描述檔」，該怎麼辦？',
         important: false,
         tags: ['遠端管理', '錯誤排除'],
         answer: `
 **原因分析**：
 1.  **Scope (範圍) 未設定**：裝置在 ASM 指派給了 Jamf，但在 Jamf 的 PreStage 註冊中「未勾選」該裝置，導致 iPad 找不到對應的設定檔。
-2.  **Token 過期**：Jamf 與 ASM 之間的 ADE Token 過期，無法同步。
+2.  **Token (代碼) 過期**：Jamf 與 ASM 之間的 ADE Token 過期，無法同步。
 3.  **時區/網路錯誤**：iPad 系統時間不正確，導致憑證驗證失敗。
 
 **解決方案**：
 1.  **檢查 PreStage 範圍 (最常見)**：
-    *   登入 Jamf Pro > **裝置** > **預先階段註冊**。
+    *   登入 Jamf Pro > **裝置** > **預先階段註冊 (PreStage Enrollments)**。
     *   點進學校使用的設定檔 > **範圍 (Scope)**。
     *   搜尋該裝置序號，**務必打勾**，然後按 **儲存**。
 2.  **強制 iPad 重新抓取**：
@@ -138,12 +138,12 @@ export const data: QASection[] = [
       },
       {
         id: 'enr-5',
-        question: '如何設定讓 iPad 重置後「自動」抓回原本的裝置名稱與群組設定？',
+        question: '如何設定讓 iPad 清除重置後「自動」抓回原本的裝置名稱與群組設定？',
         important: false,
         tags: ['MUT', '名稱同步'],
         answer: `
 **現實狀況**：
-Jamf Pro 的 PreStage 註冊僅能設定「命名規則」（如：統一改為序號），無法直接透過內建功能達成「重置後自動變回自訂名稱（如 112-A01）」。因此，最穩定的管理方式是**「先讓裝置以序號命名，納管後再透過 MUT 批次改回自訂名稱」**。
+Jamf Pro 的 PreStage 註冊僅能設定「命名規則」（如：統一改為序號），無法直接透過內建功能達成「清除後自動變回自訂名稱（如 112-A01）」。因此，最穩定的管理方式是**「先讓裝置以序號命名，註冊後再透過 MUT 批次改回自訂名稱」**。
 
 **建議操作流程**：
 
@@ -156,16 +156,17 @@ Jamf Pro 的 PreStage 註冊僅能設定「命名規則」（如：統一改為�
     *   命名規則選擇 **「Serial Number (序號)」**。
 4.  **效果**：iPad 重置並重新註冊後，名稱會自動變為該裝置的序號 (例如 \`DMPQ1234XYZ\`)，方便管理員辨識。
 
-#### **步驟 2：使用 The MUT (可在 Mac App Store下載) 進行批次更名 (標準解法)**
+#### **步驟 2：使用 The MUT 進行批次更名 (標準解法)**
 當裝置完成註冊並進入 Jamf Pro 後，使用 **The MUT (Mass Update Tool)** 將序號對應回您想要的裝置名稱（如 112-A01）。
 
-1.  **準備 CSV 對照表（The MUT 本身有提供範本模板 MobileDeviceTemplate.csv 可供使用）**：
+1.  **準備 CSV 對照表**（The MUT 本身有提供範本模板 MobileDeviceTemplate.csv 可供使用）：
     *   建立一個試算表（極度推薦使用模板修改），包含三欄：
     *   \`Mobile Device Serial\`：裝置序號。
     *   \`Display Name\`：您希望設定的名稱（如 112-A01）。
-    *   \`Enforce Name\`：強制設定行動裝置名稱，請全數設定為大寫半形的 TRUE 。
+    *   \`Enforce Name\`：強制設定行動裝置名稱，請全數設定為大寫半形的 \`TRUE\`。
     *   將檔案匯出為 \`.csv\` 格式。
 2.  **執行 MUT**：
+    *   可在 Mac App Store 下載 **The MUT**。
     *   開啟 MUT 應用程式，登入學校 Jamf Pro。
     *   將 CSV 拖入視窗。
     *   點擊 **「Submit updates」**。
@@ -182,13 +183,13 @@ Jamf Pro 的 PreStage 註冊僅能設定「命名規則」（如：統一改為�
         tags: ['PreStage', '設定'],
         answer: `
 **設定細節**：
-前往 **Jamf Pro** > **裝置** > **預先階段註冊** > **編輯**。
+前往 **Jamf Pro** > **裝置** > **預先階段註冊 (PreStage Enrollments)** > **編輯**。
 
 1.  **一般 (General)**：
-    *   **自動推進 (Automatically Advance)**：(iPadOS 17+) 勾選此項，iPad 連網後會自動跑完所有設定直接進桌面，完全無需人工點擊「繼續」。
+    *   **自動推進 (Automatically Advance)**：(iPadOS 17+) 勾選此項，iPad 連網後會自動跑完所有設定直接進入桌面，完全無需人工點擊「繼續」。
     *   **監管裝置 (Supervise)**：**必勾**。
     *   **防止取消註冊 (Prevent Unenrollment)**：**必勾**，防止學生刪除 MDM 描述檔。
-    *   **啟用共享 iPad (Enable Shared iPad)**：若為 1:1 載具，**切勿勾選**，否則會變成需要 Apple ID 登入的模式。
+    *   **啟用共享 iPad (Enable Shared iPad)**：若為 1:1 載具，**切勿勾選**，否則會變成需要 Managed Apple ID 登入的模式。
 2.  **行動裝置名稱 (Mobile Device Names)**：
     *   選擇 **Enforce Mobile Device Names** 以確保命名一致。
 3.  **設定輔助程式 (Setup Assistant)**：
@@ -211,7 +212,7 @@ Jamf Pro 的 PreStage 註冊僅能設定「命名規則」（如：統一改為�
 *   **功能**：**格式化**整台 iPad，恢復到原廠出廠狀態。
 *   **結果**：所有照片、App、資料、Wi-Fi 設定**全部消失**。iPad 會重啟並回到「Hello」畫面。
 *   **時機**：學期末回收、裝置轉移給他人、系統異常修復、裝置遺失（為了保密）。
-*   **注意**：若沒有搭配返回服務 (Return to Service)，清除後 iPad 會斷網，需人工重新連 Wi-Fi 才能納管。
+*   **注意**：若沒有搭配返回服務 (Return to Service)，清除後 iPad 會斷網，需人工重新連 Wi-Fi 才能再次註冊。
 `
       },
       {
@@ -225,7 +226,7 @@ Jamf Pro 的 PreStage 註冊僅能設定「命名規則」（如：統一改為�
 **手動強制同步步驟**：
 1.  登入 **Jamf Pro**。
 2.  前往 **設定 (右上角齒輪)** > **全域管理 (Global Management)**。
-3.  點選 **自動裝置註冊 (Automated Device Enrollment / Device Enrollment Program)**。
+3.  點選 **自動裝置註冊 (Automated Device Enrollment)**。
 4.  點選畫面上的伺服器實例（通常是學校名稱）。
 5.  點選下方的 **「Devices (裝置)」** 分頁。
 6.  點擊右上角的 **「Refresh (重新整理)」** 按鈕。
@@ -236,20 +237,20 @@ Jamf Pro 的 PreStage 註冊僅能設定「命名規則」（如：統一改為�
         id: 'enr-8-1',
         question: '什麼是 ADE (Automated Device Enrollment)？',
         important: false,
-        tags: ['ADE', 'DEP'],
-        answer: 'ADE（自動裝置註冊），舊稱 DEP。這是 Apple 提供的一項重磅功能，讓組織購買的裝置在「第一次開機連網」時，就能自動指向 MDM 伺服器並下載設定。'
+        tags: ['ADE', '及時註冊'],
+        answer: 'ADE（自動裝置註冊），舊稱 DEP。這是 Apple 提供的一項重磅功能，讓組織購買的裝置在「第一次開機連網」時，就能自動指向 MDM 伺服器並下載設定，達成零接觸部署 (Zero-Touch Deployment)。'
       },
       {
         id: 'enr-9',
-        question: '如何使用 Jamf 的「Return to Service (返回服務)」功能，讓裝置重置後自動連網並完成設定？',
+        question: '如何使用 Jamf 的「Return to Service (返回服務)」功能，讓裝置清除後自動連網並完成設定？',
         important: true,
         tags: ['Return to Service', '自動連網'],
         answer: `
-**功能說明**：這是 iPadOS 17 以上的強大功能。發送清除指令時，會將 Wi-Fi 設定「暫存」在硬體中，重置完成後 iPad 會自動連回 Wi-Fi 並向 MDM 報到，達成**零接觸重置**。
+**功能說明**：這是 iPadOS 17 以上的強大功能。發送清除指令時，會將 Wi-Fi 設定「暫存」在硬體中，清除重啟後 iPad 會自動連回 Wi-Fi 並向 MDM 報到，達成**零接觸重置**。
 
 **操作條件**：
 *   iPad 必須是 **iPadOS 17.0** 或以上版本。
-*   必須在 Jamf Pro 中建立一個**不需要密碼**或**密碼已預埋**的 Wi-Fi 描述檔，該描述檔不能包含 Wi-Fi以外的任何設定，並且在 PreStage 註冊中的返回服務相關設定中套用該描述檔。
+*   必須在 Jamf Pro 中建立一個**不需要密碼**或**密碼已預埋**的 Wi-Fi 描述檔，該描述檔不能包含 Wi-Fi 以外的任何設定，並且在 PreStage 註冊中的返回服務相關設定中套用該描述檔。
 
 **操作步驟**：
 1.  在 Jamf Pro 搜尋目標裝置（或透過進階搜尋批量選取）。
@@ -264,7 +265,7 @@ Jamf Pro 的 PreStage 註冊僅能設定「命名規則」（如：統一改為�
       },
       {
         id: 'enr-10',
-        question: '平板重置後，裝置名稱變回 "iPad"，如何大量重新命名（使用 MUT 工具及 CSV 匯入）？',
+        question: '平板清除後，裝置名稱變回 "iPad"，如何大量重新命名（使用 MUT 工具及 CSV 匯入）？',
         important: false,
         tags: ['MUT', '重命名'],
         answer: `
@@ -277,7 +278,7 @@ Jamf Pro 的 PreStage 註冊僅能設定「命名規則」（如：統一改為�
     *   建立一個試算表（極度推薦使用模板修改），包含三欄：
     *   \`Mobile Device Serial\`：裝置序號。
     *   \`Display Name\`：您希望設定的名稱（如 112-A01）。
-    *   \`Enforce Name\`：強制設定行動裝置名稱，請全數設定為大寫半形的 TRUE 。
+    *   \`Enforce Name\`：強制設定行動裝置名稱，請全數設定為大寫半形的 \`TRUE\`。
     *   將檔案匯出為 \`.csv\` 格式。
 2.  **執行 MUT**：
     *   開啟 MUT 應用程式，登入學校 Jamf Pro。
@@ -288,29 +289,29 @@ Jamf Pro 的 PreStage 註冊僅能設定「命名規則」（如：統一改為�
       },
       {
         id: 'enr-11',
-        question: '裝置在 Jamf 後台顯示「Unmanaged (未受監管)」或失去連線超過 30 天以上，如何重新納管？',
+        question: '裝置在 Jamf 後台顯示「Unmanaged (未受監管)」或失去連線超過 30 天以上，如何重新註冊？',
         important: false,
-        tags: ['Unmanaged', '脫管'],
+        tags: ['Unmanaged', '移除管理'],
         answer: `
 **狀況判斷**：
 需先區分裝置是「網路失聯」還是「描述檔已移除」。
 *   **狀況 A（失聯）**：裝置仍在手邊，但 Jamf 後台的「上次資產更新」時間超過 30 天。
-*   **狀況 B（脫管）**：Jamf 後台狀態明確顯示為 **Unmanaged**，或裝置設定內的「VPN 與裝置管理」已無 MDM 描述檔。
+*   **狀況 B（未受管）**：Jamf 後台狀態明確顯示為 **Unmanaged**，或裝置設定內的「VPN 與裝置管理」已無 MDM 描述檔。
 
 **解決方案**：
 
-#### **方法一：嘗試恢復連線（僅適用於狀況 A，救回資料免重置）**
+#### **方法一：嘗試恢復連線（僅適用於狀況 A，救回資料免清除）**
 若裝置只是因為 Wi-Fi 連線問題，或裝置設定跑掉導致失聯，可嘗試以下步驟讓它重新報到：
 1.  **檢查連線**：手動連接一個穩定的 Wi-Fi（如手機熱點），看看是否可以進行資產更新，若不行多換幾個熱點。（同時請先嘗試看看步驟 3）
 2.  **若真的沒有辦法，請重置網路設定**：
     *   前往 **「設定」>「一般」>「移轉或重置 iPad」>「重置」>「重置網路設定」**。
     *   裝置會重開機，請重新連上 Wi-Fi。
-    *   **⚠️ 注意**：執行此動作後，**裝置名稱會跳回預設的 "iPad"**。連線恢復後，請務必記得使用 **The MUT** 重新寫入正確的裝置名稱，或是於Jamf Pro手動改回。
+    *   **⚠️ 注意**：執行此動作後，**裝置名稱會跳回預設的 "iPad"**。連線恢復後，請務必記得使用 **The MUT** 重新寫入正確的裝置名稱，或是於 Jamf Pro 手動改回。
 3.  **手動觸發同步**：
     *   打開 iPad 上的 **Jamf Trust App** (若有)，讓它嘗試與伺服器抓取設定。
     *   在 Jamf 後台對該裝置發送 **「更新資產 (Update Inventory)」** 指令。
 
-#### **方法二：清除重置重新納管（無法手動恢復連線時的標準作法 / 適用於狀況 B）**
+#### **方法二：清除重置重新註冊（無法手動恢復連線時的標準作法 / 適用於狀況 B）**
 若方法一無效，或裝置已顯示 Unmanaged，最乾淨且保證成功的作法是讓裝置重跑一次自動註冊流程 (ADE)。
 
 1.  **確認指派狀態**：
@@ -321,7 +322,7 @@ Jamf Pro 的 PreStage 註冊僅能設定「命名規則」（如：統一改為�
 3.  **重新註冊**：
     *   iPad 重開機後會進入 Hello 畫面。
     *   連上 Wi-Fi 後，畫面會顯示 **「遠端管理 (Remote Management)」**。
-    *   點選「下一步」即可自動完成納管與 App 下載。
+    *   點選「下一步」即可自動完成註冊與 App 下載。
 `
       },
       {
@@ -343,7 +344,7 @@ Jamf Pro 的 PreStage 註冊僅能設定「命名規則」（如：統一改為�
     *   學校無法清除整台裝置、無法清除密碼，也無法追蹤裝置的 GPS 定位。
 
 *   **學校管理空間**：
-    *   由學校的 MDM 伺- 服器（Jamf Pro）管理，並與學校配發的 **「管理式 Apple ID (Managed Apple ID)」** 綁定。
+    *   由學校的 MDM 伺服器（Jamf Pro）管理，並與學校配發的 **「管理式 Apple ID (Managed Apple ID)」** 綁定。
     *   學校只能在此空間內派送 App、設定描述檔（如 Wi-Fi、電子郵件帳號）、強制執行部分安全性原則（如密碼複雜度）。
     *   當老師離職或不再需要納管時，MDM 只能移除這個「學校管理空間」，**不會**動到任何個人資料。
 
@@ -387,19 +388,19 @@ Jamf Pro 的 PreStage 註冊僅能設定「命名規則」（如：統一改為�
         important: false,
         tags: ['MDM衝突', '借用'],
         answer: `
-**核心原則：一台 iOS 裝置同一時間只能被一個 MDM納管。**
+**核心原則：一台 iOS 裝置同一時間只能被一個 MDM 註冊管理。**
 
-若該原本屬於貴校的 iPad 未先從貴校 Jamf 中解除監管與抹除，對方學校**無法**將其納入他們的 MDM。
+若該原本屬於貴校的 iPad 未先從貴校 Jamf 中解除監管與清除，對方學校**無法**將其納入他們的 MDM。
 *   **正確流程**：
     1.  貴校 Jamf：**取消指派** (ASM) 並 **刪除裝置** (Jamf)。
     2.  清除 iPad。
     3.  對方學校：在 ASM 輸入該 iPad 序號並指派給他們的 Jamf。
-    4.  對方重置 iPad 並納管。
+    4.  對方清除重置 iPad 並註冊。
 `
       },
       {
         id: 'enr-14',
-        question: '除了重置清除 (ADE) 之外，還有其他「網頁註冊」的納管方式嗎？',
+        question: '除了清除重置 (ADE) 之外，還有其他「網頁註冊」的方式嗎？',
         important: false,
         tags: ['UIE', '網頁註冊'],
         answer: `
@@ -429,9 +430,9 @@ Jamf Pro 的 PreStage 註冊僅能設定「命名規則」（如：統一改為�
 **✅ 防止未註冊 (Prevent Unenrollment)**
 
 *   **若有勾選**：iPad 設定中的「VPN 與裝置管理」內，MDM 描述檔將**不會出現「移除」按鈕**。學生完全無法刪除。
-*   **若未勾選**：學生可以自行進入設定移除描述檔，導致脫管。
+*   **若未勾選**：學生可以自行進入設定移除描述檔，導致移除管理。
 
-*注意：此設定僅對透過 ADE (重置) 納管的裝置有效。手動網頁註冊的裝置無法強制禁止移除。*
+*注意：此設定僅對透過 ADE (重置) 註冊的裝置有效。手動網頁註冊的裝置無法強制禁止移除。*
 `
       },
       {

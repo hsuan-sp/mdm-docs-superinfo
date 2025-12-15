@@ -11,16 +11,16 @@ export const data: QASection[] = [
         tags: ['帳號管理', '權限', 'Mac'],
         answer: `
 **Jamf Connect / 本地帳號管理**：
-1.  **策略建立 (Policy)**：
-    *   在 Jamf Pro 中，使用 **「本機帳戶 (Local Accounts)」** Payload。
+1.  **政策建立 (Policy)**：
+    *   在 Jamf Pro 中，使用 **「本機帳戶 (Local Accounts)」** 承載資料 (Payload)。
     *   **建立新帳戶**：設定帳號名稱 (如 \`student\`)、密碼、以及是否為管理者。
     *   **管理現有帳戶**：可重置密碼或更改圖片。
 
 2.  **授權現有使用者為管理者**：
-    *   建立一個 Policy，在 **「檔案與程序 (Files and Processes)」** Payload 或 **「Script」** 中執行指令：
+    *   建立一個 Policy，在 **「檔案與程序 (Files and Processes)」** 承載資料或 **「腳本 (Script)」** 中執行指令：
     *   \`dscl . -append /Groups/admin GroupMembership <username>\`
     *   將 \`<username>\` 替換為該使用者的短名稱。
-    *   將此 Policy 設為 Self Service 供申請，或直接派送。
+    *   將此 Policy 設為 **自助服務 (Self Service)** 供申請，或直接分發。
 
 **Jamf Connect (進階)**：
 若學校有整合這項產品，可讓使用者直接用 Google/Microsoft 雲端帳號登入 Mac，並自動即時建立對應的本機帳戶。
@@ -35,11 +35,11 @@ export const data: QASection[] = [
 **建議：不要綁定 AD**。
 
 **為什麼？**
-*   **行動化趨勢**：現代 Mac 手提電腦常在校外使用，AD 綁定需要內網連線，離校後無法更改密碼或同步，造成登入問題 (Keychain 錯誤)。
-*   **Apple 發展方向**：Apple 正逐步淘汰傳統 AD 綁定，轉向 **Platform SSO** 與現代化身分驗證。
+*   **行動化趨勢**：現代 Mac 筆記型電腦常在校外使用，AD 綁定需要內網連線，離校後無法更改密碼或同步，造成登入問題 (Keychain 鑰匙圈錯誤)。
+*   **Apple 發展方向**：Apple 正逐步淘汰傳統 AD 綁定，轉向 **平台單一登入 (Platform SSO)** 與現代化身分驗證。
 
 **替代方案**：
-1.  **Jamf Connect**：目前最佳解。它在 Mac 登入畫面加入一個雲端登入視窗 (OIDC)，直接驗證 Google/Azure AD 帳密，驗證通過後才解鎖本機帳戶。密碼同步、MFA 雙重驗證一次搞定。
+1.  **Jamf Connect**：目前最佳解決方案。它在 Mac 登入畫面加入一個雲端登入視窗 (OIDC)，直接驗證 Google/Azure AD 帳密，驗證通過後才解鎖本機帳戶。密碼同步、MFA 雙重驗證一次搞定。
 2.  **Kerberos 單一登入擴充功能**：若必須使用 AD 資源，透過設定檔部署「Kerberos SSO Extension」，讓使用者登入本機後，自動取得 Kerberos 票據以存取內網檔案伺服器，而無需將整台電腦綁入網域。
 `
       },
@@ -49,7 +49,7 @@ export const data: QASection[] = [
         important: false,
         tags: ['Patch Management', '軟體更新'],
         answer: `
-**Jamf Pro 內建功能：Patch Management**
+**Jamf Pro 內建功能：修補程式管理 (Patch Management)**
 
 1.  **設定 Patch 報告**：
     *   在 Jamf Pro > **電腦** > **修補程式管理 (Patch Management)**。
@@ -58,12 +58,12 @@ export const data: QASection[] = [
     *   在軟體標題內，建立 **Patch Policy**。
     *   **目標版本**：選擇最新版。
     *   **部署方式**：
-        *   **Self Service**：讓使用者看到更新按鈕自行點擊。
-        *   **Smart Group 自動推送**：設定「版本 < 最新版」的 Smart Group，自動背景安裝更新。
-    *   **PKG 來源**：您需要將新版 Chrome 的 .pkg 檔上傳至 Jamf Distribution Point。
+        *   **自助服務 (Self Service)**：讓使用者看到更新按鈕自行點擊。
+        *   **智慧型群組 (Smart Group) 自動推送**：設定「版本 < 最新版」的 Smart Group，自動背景安裝更新。
+    *   **PKG 來源**：您需要將新版 Chrome 的 .pkg 檔上傳至 Jamf **分發點 (Distribution Point)**。
 
 **更進階：Jamf App Installers (需特定授權)**
-這是一項全自動服務，Jamf 會自動打包主流軟體 (Chrome, Zoom, etc.) 的最新版並自動派送，管理者完全無需手動下載或包裝 PKG。
+這是一項全自動服務，Jamf 會自動打包主流軟體 (Chrome, Zoom, etc.) 的最新版並自動分發，管理者完全無需手動下載或包裝 PKG。
 `
       },
       {
@@ -78,7 +78,7 @@ export const data: QASection[] = [
     *   使用 **Jamf Composer** (Mac 管理神器) 擷取印表機驅動程式的安裝過程，打包成一個 \`.pkg\` 或 \`.dmg\`。
     *   或者直接使用廠商提供的 \`.pkg\` 安裝檔。
 2.  **上傳至 Jamf**：
-    *   將安裝檔上傳至 Jamf Admin / Distribution Point。
+    *   將安裝檔上傳至 Jamf Admin / 分發點 (Distribution Point)。
 3.  **設定印表機 (Mapping)**：
     *   在 Jamf Pro > **電腦** > **印表機 (Printers)** > **+ 新增**。
     *   輸入印表機名稱、CUPS 名稱。
@@ -88,7 +88,7 @@ export const data: QASection[] = [
     *   建立一個 Policy，包含兩個步驟：
         1.  安裝驅動程式套件 (Packages Payload)。
         2.  對應印表機 (Printers Payload)。
-    *   派送給目標電腦。
+    *   分發給目標電腦。
 `
       },
       {
@@ -101,7 +101,7 @@ export const data: QASection[] = [
 FileVault 是 macOS 內建的**全磁碟加密**技術。開啟後，硬碟資料會被 256 位元加密，即使硬碟被拔出，沒有密碼也無法讀取資料。這是資安合規的基本要求。
 
 **MDM 管理**：
-透過 **「磁碟加密 (Disk Encryption)」** Payload，Jamf Pro 可以強制開啟 FileVault。
+透過 **「磁碟加密 (Disk Encryption)」** 承載資料 (Payload)，Jamf Pro 可以強制開啟 FileVault。
 
 **忘記密碼 (救援金鑰)**：
 當 Jamf 啟用 FileVault 時，會生成一組 **「個人復原金鑰 (Personal Recovery Key)」** 並自動回傳至 Jamf Pro 伺服器記錄。
@@ -126,7 +126,7 @@ Jamf Pro 允許管理者上傳並執行 **Shell Script (Bash/Zsh)** 甚至 Pytho
 
 **使用方式**：
 1.  **設定** > **電腦管理** > **腳本 (Scripts)** 上傳腳本。
-2.  在 Policy 中加入 **「腳本 (Scripts)」** Payload，選擇執行時機 (如 Before/After)。
+2.  在 Policy 中加入 **「腳本 (Scripts)」** 承載資料 (Payload)，選擇執行時機 (如 Before/After)。
 `
       },
       {
@@ -151,14 +151,14 @@ Jamf Pro 允許管理者上傳並執行 **Shell Script (Bash/Zsh)** 甚至 Pytho
         id: 'mac-08',
         question: 'Mac 安裝非 App Store 軟體時顯示「無法打開，因為它來自未識別的開發者」，該如何解決？',
         answer: `
-**原因**：這是 macOS 的 **Gatekeeper** 安全機制，預設只允許安裝來自 App Store 或經過 Apple 公證 (Notarized) 的軟體。
+**原因**：這是 macOS 的 **Gatekeeper (守門員)** 安全機制，預設只允許安裝來自 App Store 或經過 Apple 公證 (Notarized) 的軟體。
 
 **解決方案**：
 1.  **單次允許**：
     *   按住鍵盤上的 **\`Control\`** 鍵，同時點擊該 App 圖示。
     *   在選單中按 **「打開 (Open)」**，接著在彈出視窗中再次按下 **「打開」** 即可。
-2.  **MDM setting**：
-    *   雖然可以透過 MDM 降低安全性設定 (Allow apps from anywhere)，但基於資安考量，**強烈不建議** 全面開放。
+2.  **MDM 設定**：
+    *   雖然可以透過 MDM 降低安全性設定 (允許任何來源)，但基於資安考量，**強烈不建議** 全面開放。
 `,
         tags: ['Gatekeeper', 'Security', 'App Installation']
       },
@@ -169,12 +169,12 @@ Jamf Pro 允許管理者上傳並執行 **Shell Script (Bash/Zsh)** 甚至 Pytho
         tags: ['Dock', '介面統一', '設定'],
         answer: `
 **解決方案**：
-透過 **Dock Payload** 設定描述檔。
+透過 **Dock** 承載資料 (Payload) 設定描述檔。
 
 1.  **建立描述檔**：選擇 **Dock** Payload。
 2.  **設定項目**：
     *   **App 列表**：新增您希望固定顯示的 App (如 Chrome, Word, Excel)。
-    *   **防止修改**：勾選「Merge with user's Dock (與使用者 Dock 合併)」可保留使用者自己加的 App；勾選「Contents are immutable (內容不可變更)」則強制完全鎖定，使用者無法新增或移除任何圖示。
+    *   **防止修改**：勾選「與使用者的 Dock 合併 (Merge with user's Dock)」可保留使用者自己加的 App；勾選「內容不可變更 (Contents are immutable)」則強制完全鎖定，使用者無法新增或移除任何圖示。
 `
       },
       {
@@ -230,7 +230,7 @@ Nudge 是一個開源工具，它提供一個**「溫柔但堅定」的自訂視
         tags: ['Time Machine', '備份'],
         answer: `
 **設定方式**：
-在 **限制 (Restrictions)** Payload 中設定。
+在 **限制 (Restrictions)** 承載資料 (Payload) 中設定。
 *   可以限制 **「自動備份」**。
 *   可以限制 **「僅限加密備份」**。
 *   可以指定特定外接硬碟為備份碟，或禁止將備份存到未經授權的磁碟。
@@ -239,4 +239,3 @@ Nudge 是一個開源工具，它提供一個**「溫柔但堅定」的自訂視
     ]
   }
 ]
-

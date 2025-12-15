@@ -4,7 +4,6 @@ export const educationQA: QASection[] = [
   {
     title: "第八部分：教育場域 MDM 實戰問答 (Education Scenarios)",
     items: [
-      // Original 4 (Modernized)
       {
         id: "edu-01",
         question: "iPadOS 17 以上的裝置，為什麼沒有看見 VPN 圖示？這樣過濾功能有在運作嗎？",
@@ -48,7 +47,7 @@ export const educationQA: QASection[] = [
 *   **隱私**：雖受學校監管，但 MDM **無法** 查看老師的瀏覽紀錄、照片或個人訊息。
 
 **學生用 iPad (Student Device)**：
-*   **限制嚴格**：App Store 通常被隱藏，僅能透過 Self Service 安裝核准的 App。
+*   **限制嚴格**：App Store 通常被隱藏，僅能透過 **自助服務 (Self Service)** 安裝核准的 App。
 *   **功能限制**：可能被禁止修改桌布、禁止修改時間、強制開啟藍牙與 Wi-Fi (為了 Apple 課堂)。
 *   **網路過濾**：在精進方案下，會強制過濾不當資訊並記錄使用時數。
 `,
@@ -67,12 +66,10 @@ export const educationQA: QASection[] = [
 2.  **若使用一般模式 (1對1模式但輪用)**：
     *   **相簿清理**：請學生養成習慣，下課前自行刪除剛剛拍攝的照片。
     *   **帳號登出**：若有登入 Google Classroom 或 Canva，務必在下課前登出。
-    *   **MDM 重置 (進階)**：若需徹底還原，管理員可透過 Jamf Pro 發送 **「清除 (Wipe)」** 指令（需搭配 **Return to Service** 功能），讓平板在 5 分鐘內重置並自動連回 Wi-Fi 待命。
+    *   **MDM 重置 (進階)**：若需徹底還原，管理員可透過 Jamf Pro 發送 **「清除裝置 (Erase Device)」** 指令（需搭配 **Return to Service** 功能），讓平板在 5 分鐘內重置並自動連回 Wi-Fi 待命。
 `,
         tags: ["Classroom Management", "Reset", "Workflow"]
       },
-
-      // New CSV-Derived Scenarios
       {
         id: "edu-05",
         question: "收到通知說「Apple 校務管理 (ASM) 條款已更新」，若不理會會有什麼後果？",
@@ -117,7 +114,7 @@ export const educationQA: QASection[] = [
       },
       {
         id: "edu-08",
-        question: "明明有派送指令，但 Jamf 後台一直顯示「擱置中 (Pending)」且無法消除？",
+        question: "明明有分發指令，但 Jamf 後台一直顯示「擱置中 (Pending)」且無法消除？",
         answer: `
 **原因**：
 裝置可能**太久沒連網**，或者在接收指令時剛好網路中斷，導致指令卡在佇列中。
@@ -125,13 +122,13 @@ export const educationQA: QASection[] = [
 **解決方案**：
 1.  **取消指令**：在 Jamf Pro 中找到該裝置 > **「管理 (Management)」** > 點選 Pending 指令旁的 **「取消 (Cancel)」** 或 **「清除 (Clear)」**。
 2.  **重新喚醒**：確保 iPad 連上 Wi-Fi，在 Jamf Pro 發送一個簡單的 **「更新資產 (Update Inventory)」** 指令。
-3.  **重新派送**：待裝置狀態更新後，再重新派送原本失敗的指令。
+3.  **重新分發**：待裝置狀態更新後，再重新分發原本失敗的指令。
 `,
         tags: ["Pending Commands", "Troubleshooting", "Jamf Pro"]
       },
       {
         id: "edu-09",
-        question: "iPad如果不小心摔破螢幕或無法充電（硬體損壞），該怎麼送修？流程為何？",
+        question: "iPad 如果不小心摔破螢幕或無法充電（硬體損壞），該怎麼送修？流程為何？",
         answer: `
 **報修流程**：
 1.  **切勿自行拆解**：請勿嘗試自行找坊間通訊行維修，以免喪失保固資格 (精進方案設有原廠保固)。
@@ -145,12 +142,12 @@ export const educationQA: QASection[] = [
       },
       {
         id: "edu-10",
-        question: "為什麼要將「VPP 代號 (Token)」每年更新一次？過期了會怎樣？",
+        question: "為什麼要將「VPP 代碼 (Token)」每年更新一次？過期了會怎樣？",
         answer: `
-**VPP 代號** 是 MDM 伺服器用來「代表學校」向 Apple 購買與分配 App 的數位憑證。
+**VPP 代碼 (Token)** 是 MDM 伺服器用來「代表學校」向 Apple 購買與分發 App 的數位憑證。
 
 **過期後果**：
-*   **App 無法安裝**：任何新派送的 App 都會失敗。
+*   **App 無法安裝**：任何新分發的 App 都會失敗。
 *   **App 無法更新**：現有 App 無法更新到最新版。
 *   **授權無法回收**：無法將離職老師或損壞機器的 App 授權收回。
 
@@ -175,11 +172,11 @@ export const educationQA: QASection[] = [
       },
       {
         id: "edu-12",
-        question: "單一裝置突然 VPN消失或無法連線，最快的修復方式是什麼？",
+        question: "單一裝置突然 VPN 消失或無法連線，最快的修復方式是什麼？",
         answer: `
 若確定裝置有連網且無硬體故障，**「重新加入群組」** 是最有效的修復法：
 
-1.  **移除**：在 Jamf Pro 中，將該裝置從 **「Static Group (靜態群組)」** 中移除。
+1.  **移除**：在 Jamf Pro 中，將該裝置從 **「靜態群組 (Static Group)」** 中移除。
 2.  **等待**：等待約 1-2 分鐘，讓 iPad 接收到變更（相關描述檔會被移除）。
 3.  **加入**：再次將該裝置**加入**回原本的群組。
 4.  **效果**：Jamf 會強制重新觸發所有佈建流程，包含重新安裝 VPN/Jamf Trust 與相關憑證。
@@ -191,7 +188,7 @@ export const educationQA: QASection[] = [
         question: "iPad 系統時間跑掉為什麼會導致網路連不上去？",
         answer: `
 **原理**：
-Wi-Fi 認證與 HTTPS 加密連線都依賴 **「數位憑證 (Certificate)」**。憑證都有「有效期限」。如果 iPad 時間回到過去 (如 1970年) 或未來，系統會誤判憑證 **「尚未生效」** 或 **「已過期」**，因此拒絕建立安全連線。
+Wi-Fi 認證與 HTTPS 加密連線都依賴 **「數位憑證 (Certificate)」**。憑證都有「有效期限」。如果 iPad 時間回到過去 (如 1970 年) 或未來，系統會誤判憑證 **「尚未生效」** 或 **「已過期」**，因此拒絕建立安全連線。
 
 **解法**：
 必須先手動調整回正確時間，才能順利連上網路進行後續的自動校時。
@@ -215,7 +212,7 @@ Wi-Fi 認證與 HTTPS 加密連線都依賴 **「數位憑證 (Certificate)」**
         question: "為什麼有些 App 開啟後一直發生閃退 (Crash)？",
         answer: `
 常見原因與解法：
-1.  **版本過舊**：App 太久沒更新，與新的 iPadOS 不相容。請透過 Jamf 派送更新。
+1.  **版本過舊**：App 太久沒更新，與新的 iPadOS 不相容。請透過 Jamf 分發更新。
 2.  **網路過濾誤擋**：該 App 啟動時需連線至特定伺服器，但被 Jamf Trust 或防火牆擋住了。可嘗試暫時切換到個人熱點測試，若正常則需調整過濾白名單。
 3.  **記憶體不足**：背景開太多 App。請**強制重新啟動** iPad。
 `,
@@ -229,7 +226,7 @@ Wi-Fi 認證與 HTTPS 加密連線都依賴 **「數位憑證 (Certificate)」**
 
 1.  **不要搶快**：新版 iOS 剛推出時 (如 .0 版本) 常有未知 Bug 或與 MDM/App 不相容的情況。
 2.  **等待通知**：請等待 Jamf 原廠或經銷商發布相容性公告後再更新。
-3.  **統一派送**：建議由 MDM 統一排程在夜間或寒暑假進行 **「受監管更新」**，避免佔用上課頻寬。
+3.  **統一分發**：建議由 MDM 統一排程在夜間或寒暑假進行 **「受監管更新」**，避免佔用上課頻寬。
 `,
         tags: ["Update Strategy", "iPadOS", "Best Practice"]
       },
@@ -239,7 +236,7 @@ Wi-Fi 認證與 HTTPS 加密連線都依賴 **「數位憑證 (Certificate)」**
         answer: `
 **定位差異**：
 *   **Jamf Pro**：**企業級/旗艦級** 產品。功能最強大，適合跨校區、需高度客製化 Script、整合 AD/LDAP 認證的縣市教育局或大型組織。精進方案多數縣市採用此方案以進行**集中式納管**。
-*   **Jamf School** (原 ZuluDesk)：**專為教育設計**。介面較簡單直覺，針對單一學校或教師優化，但在跨組織的大規模自動化與API整合上不如 Pro 強大。
+*   **Jamf School** (原 ZuluDesk)：**專為教育設計**。介面較簡單直覺，針對單一學校或教師優化，但在跨組織的大規模自動化與 API 整合上不如 Pro 強大。
 
 **為什麼用 Jamf Pro？**
 因為縣市教育局需要統一管理數萬台裝置，Jamf Pro 提供的 **「分站 (Sites)」** 架構與強大的 **「智慧型群組 (Smart Groups)」** 邏輯，最能滿足這種大規模、分層級的管理需求。
@@ -255,7 +252,7 @@ Wi-Fi 認證與 HTTPS 加密連線都依賴 **「數位憑證 (Certificate)」**
 為了避免學生隨意下載遊戲或不當 App，受監管裝置通常會**隱藏 App Store**。
 
 **如何下載 App？**
-請指導老師與學生使用 **「Self Service (自助服務)」** App。
+請指導老師與學生使用 **「自助服務 (Self Service)」** App。
 *   Self Service 是學校專用的 App Store。
 *   裡面只有經過學校或教育局審核通過的 App。
 *   點選 **「安裝 (Install)」** 即可下載，無需輸入 Apple ID 密碼。
@@ -266,7 +263,7 @@ Wi-Fi 認證與 HTTPS 加密連線都依賴 **「數位憑證 (Certificate)」**
         id: "edu-19",
         question: "學生忘記了螢幕鎖定密碼 (Passcode)，平板被鎖住了怎麼辦？",
         answer: `
-**切勿嘗試猜測密碼**，以免導致平板進入「已停用」狀態需重灌。
+**切勿嘗試猜測密碼**，以免導致平板進入「已停用 (Unavailable)」狀態需重置。
 
 **解決方案**：
 1.  **通知管理員**：請資訊組長或管理員登入 Jamf Pro。
@@ -302,10 +299,10 @@ MDM 本身 (Jamf Pro) 只是在背景久久才執行一次檢核，**通常不�
 **視學校政策而定，但通常不建議。**
 
 1.  **管理混淆**：登入個人 ID 後，聯絡人、照片可能會同步進來，造成公私資料混雜。
-2.  **VPP 衝突**：若該 App 學校已經透過 VPP 購買並派送，您又用個人 ID 下載，可能會造成授權判定衝突或無法更新。
+2.  **VPP 衝突**：若該 App 學校已經透過 VPP 購買並分發，您又用個人 ID 下載，可能會造成授權判定衝突或無法更新。
 3.  **限制**：許多學校的 MDM 策略會直接 **「禁止帳號修改」**，您可能根本無法登入或登出 Apple ID。
 
-**建議**：若教學上有付費 App 需求，請向學校提出申請，由學校透過 VPP 統一採購派送。
+**建議**：若教學上有付費 App 需求，請向學校提出申請，由學校透過 VPP 統一採購分發。
 `,
         tags: ["Apple ID", "Personal Account", "Policy", "Teacher Basic"]
       }
