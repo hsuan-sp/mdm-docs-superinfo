@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted, nextTick } from "vue";
 import { glossaryData } from "../../data/glossary";
 
 type CategoryType = "Core" | "Enrollment" | "Apple" | "Security" | "Network" | "Hardware" | "Apps" | "Other" | "Education" | "macOS" | "Jamf";
@@ -7,6 +7,7 @@ type CategoryType = "Core" | "Enrollment" | "Apple" | "Security" | "Network" | "
 const searchQuery = ref("");
 const selectedCategory = ref<CategoryType | "All">("All");
 const sortOrder = ref<'asc' | 'desc'>('asc'); // 新增排序狀態
+const isControlsExpanded = ref(true); // 控制搜尋工具的展開/收起
 
 const categories = [
   "All",
@@ -63,8 +64,15 @@ const toggleSort = () => {
   sortOrder.value = sortOrder.value === 'asc' ? 'desc' : 'asc';
 };
 
+// 切換搜尋工具展開/收起
+const toggleControls = () => {
+  isControlsExpanded.value = !isControlsExpanded.value;
+};
+
 // Instant animation on scroll
-onMounted(() => {
+onMounted(async () => {
+  await nextTick();
+  
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -92,42 +100,62 @@ onMounted(() => {
 
     <!-- Sticky Controls -->
     <div class="controls-wrapper">
-      <div class="controls glass-effect">
-        <div class="search-box">
-          <span class="search-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          </span>
-          <input
-            v-model="searchQuery"
-            type="text"
-            placeholder="搜尋術語（如：ADE, 憑證...）"
-            class="search-input"
-          />
-          <!-- 排序按鈕 -->
-          <button
-            @click="toggleSort"
-            class="sort-button"
-            :title="sortOrder === 'asc' ? '目前：A-Z 順序 (點擊切換為 Z-A)' : '目前：Z-A 倒序 (點擊切換為 A-Z)'"
-          >
-            <svg v-if="sortOrder === 'asc'" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M11 5h10M11 9h7M11 13h4M3 17l3 3 3-3M6 18V4"/>
-            </svg>
-            <svg v-else width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M11 5h10M11 9h7M11 13h4M3 7l3-3 3 3M6 6v14"/>
-            </svg>
-            <span class="sort-label">{{ sortOrder === 'asc' ? 'A-Z' : 'Z-A' }}</span>
-          </button>
-        </div>
+      <!-- Toggle Button -->
+      <button 
+        @click="toggleControls" 
+        class="controls-toggle"
+        :class="{ expanded: isControlsExpanded }"
+        :aria-label="isControlsExpanded ? '收起搜尋工具' : '展開搜尋工具'"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <span>{{ isControlsExpanded ? '收起搜尋' : '展開搜尋' }}</span>
+        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
 
-        <div class="category-pills">
-          <button
-            v-for="cat in categories"
-            :key="cat"
-            @click="selectedCategory = cat"
-            :class="['pill', { active: selectedCategory === cat }]"
-          >
-            {{ cat }}
-          </button>
+      <!-- Collapsible Controls -->
+      <div class="controls-container" :class="{ collapsed: !isControlsExpanded }">
+        <div class="controls glass-effect">
+          <div class="search-box">
+            <span class="search-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </span>
+            <input
+              v-model="searchQuery"
+              type="text"
+              placeholder="搜尋術語（如：ADE, 憑證...）"
+              class="search-input"
+            />
+            <!-- 排序按鈕 -->
+            <button
+              @click="toggleSort"
+              class="sort-button"
+              :title="sortOrder === 'asc' ? '目前：A-Z 順序 (點擊切換為 Z-A)' : '目前：Z-A 倒序 (點擊切換為 A-Z)'"
+            >
+              <svg v-if="sortOrder === 'asc'" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M11 5h10M11 9h7M11 13h4M3 17l3 3 3-3M6 18V4"/>
+              </svg>
+              <svg v-else width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M11 5h10M11 9h7M11 13h4M3 7l3-3 3 3M6 6v14"/>
+              </svg>
+              <span class="sort-label">{{ sortOrder === 'asc' ? 'A-Z' : 'Z-A' }}</span>
+            </button>
+          </div>
+
+          <div class="category-pills">
+            <button
+              v-for="cat in categories"
+              :key="cat"
+              @click="selectedCategory = cat"
+              :class="['pill', { active: selectedCategory === cat }]"
+            >
+              {{ cat }}
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -215,7 +243,66 @@ onMounted(() => {
   z-index: 20;
   margin-bottom: 40px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Toggle Button */
+.controls-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  color: #1d1d1f;
+  font-size: 15px;
+  font-weight: 600;
+  max-width: 200px;
+}
+
+.controls-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  background: rgba(255, 255, 255, 1);
+}
+
+.controls-toggle:active {
+  transform: translateY(0);
+}
+
+.controls-toggle .chevron {
+  transition: transform 0.3s ease;
+}
+
+.controls-toggle.expanded .chevron {
+  transform: rotate(180deg);
+}
+
+/* Collapsible Container */
+.controls-container {
+  width: 100%;
+  max-height: 500px;
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.3s ease,
+              margin 0.4s ease;
+  margin-top: 0;
+}
+
+.controls-container.collapsed {
+  max-height: 0;
+  opacity: 0;
+  margin-top: -12px;
+  pointer-events: none;
 }
 
 .controls {
@@ -223,6 +310,7 @@ onMounted(() => {
   border-radius: 24px;
   width: 100%;
   max-width: 800px;
+  margin: 0 auto;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -518,6 +606,16 @@ onMounted(() => {
     background: linear-gradient(135deg, #fff 0%, #aeb0b2 100%);
     -webkit-background-clip: text;
     background-clip: text;
+  }
+  
+  .controls-toggle {
+    background: rgba(28, 28, 30, 0.95);
+    border-color: rgba(255,255,255,0.1);
+    color: #f5f5f7;
+  }
+  
+  .controls-toggle:hover {
+    background: rgba(28, 28, 30, 1);
   }
   
   .controls {

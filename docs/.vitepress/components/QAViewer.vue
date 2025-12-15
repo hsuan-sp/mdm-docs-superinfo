@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted, nextTick } from "vue";
 import { allQAData, glossaryData } from "../../data/all-data";
 import type { QAItem, QASection } from "../types";
 import MarkdownIt from "markdown-it";
@@ -116,7 +116,9 @@ const renderMarkdown = (text: string) => {
 };
 
 // Instant animation on scroll
-onMounted(() => {
+onMounted(async () => {
+  await nextTick();
+  
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
