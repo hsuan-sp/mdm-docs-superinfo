@@ -41,6 +41,22 @@ export const data: QASection[] = [
 `
       },
       {
+        id: 'acc-7',
+        question: '我可以使用個人的 Apple ID 登入學校 iPad 嗎？',
+        tags: ['Apple ID', '帳號管理', '替代方案'],
+        answer: `
+**標準建議：不可以。**
+學校設備應使用 **「管理式 Apple ID (Managed Apple ID)」**，以確保資料歸屬權與隱私分離。
+
+> **⚠️ 替代方案 (風險警告)**
+> 若老師或學生堅持登入私人 Apple ID (例如為了下載已購項目)，請務必注意：
+> 1.  **資料混合風險**：您的私人相片、聯絡人可能會同步到這台公用平板，被下一位使用者看到。
+> 2.  **啟用鎖定 (Activation Lock) 風險**：若歸還時忘記登出，這台 iPad 將會被您的帳號鎖死，學校可能需送回原廠解鎖 (需數週)。
+> 3.  **App 更新問題**：用私人帳號下載的 App，學校 MDM 無法協助更新。
+> **建議作法**：僅在需要下載特定 App 時「暫時登入」App Store，下載完畢後**立即登出**，且**不要登入 iCloud**。
+`
+      },
+      {
         id: 'acc-4',
         question: 'Jamf Pro 顯示「VPP Token」即將過期，如何更新？',
         tags: ['VPP', 'Token更新'],

@@ -77,6 +77,14 @@ export const data: QASection[] = [
 2.  前往 **「限制 (Restrictions)」** > **「iOS」** > **「App」**。
 3.  取消勾選 **「Allow installing apps (允許安裝 App)」**。
 4.  儲存後，iPad 上的 App Store 圖示將會消失，學生僅能透過 Self Service 安裝學校核准的 App。
+
+> **⚠️ 替代方案 (風險警告)**
+> 若您確實需要開放 App Store 讓師生自行下載 App，請勾選上述的 **「Allow installing apps」** 選項。
+> **潛在風險**：
+> *   學生可登入私人 Apple ID 下載遊戲或社群軟體。
+> *   **無法阻止** VPP 授權衝突 (私人帳號下載了學校買的同款 App)。
+> *   **個資外洩**：私人照片可能會同步到公用載具上。
+> 請務必在開放前評估管理風險。
 `
             },
             {
