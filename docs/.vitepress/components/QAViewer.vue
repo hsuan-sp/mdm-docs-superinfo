@@ -176,11 +176,11 @@ onMounted(async () => {
             :class="{ open: openItems.has(item.id) }"
           >
             <div class="qa-header" @click="toggleItem(item.id)">
-              <div class="qa-title-wrapper">
+              <h3 class="qa-question">{{ item.question }}</h3>
+              <div class="qa-header-right">
                 <span v-if="item.important" class="badge-important">重要</span>
-                <h3 class="qa-question">{{ item.question }}</h3>
+                <span class="icon">{{ openItems.has(item.id) ? "−" : "+" }}</span>
               </div>
-              <span class="icon">{{ openItems.has(item.id) ? "−" : "+" }}</span>
             </div>
 
             <div v-show="openItems.has(item.id)" class="qa-body">
@@ -309,10 +309,10 @@ onMounted(async () => {
   border: 1px solid rgba(128, 128, 128, 0.1);
   border-radius: 16px;
   overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: var(--vp-shadow-1);
-  opacity: 0;
-  transform: translateY(20px) scale(0.98);
+  opacity: 1;
+  transform: translateY(0) scale(1);
   position: relative;
 }
 
@@ -353,12 +353,14 @@ onMounted(async () => {
   align-items: center;
   cursor: pointer;
   user-select: none;
+  gap: 1rem;
 }
 
-.qa-title-wrapper {
+.qa-header-right {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.75rem;
+  flex-shrink: 0;
 }
 
 .badge-important {
@@ -366,12 +368,13 @@ onMounted(async () => {
   color: #ff3b30;
   border: 1px solid rgba(255, 59, 48, 0.2);
   font-size: 0.75rem;
-  padding: 0.25rem 0.6rem;
-  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  border-radius: 12px;
   font-weight: 600;
   letter-spacing: 0.02em;
   display: inline-flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .qa-question {
@@ -379,6 +382,7 @@ onMounted(async () => {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--vp-c-text-1);
+  flex: 1;
 }
 
 .icon {
