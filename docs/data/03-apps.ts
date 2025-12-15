@@ -254,7 +254,7 @@ Apple 的 App 與書籍大量採購方案 (Volume Purchase Program, VPP) 採用�
 **若需要暫時解除限制（管理員操作）**：
 1.  在 Jamf Pro 找到該裝置所屬的群組。
 2.  將該群組從「限制描述檔」的 Scope 中暫時移除。
-3.  等待裝置同步（或手動執行「更新資產」命令）。
+3.  等待裝置同步（或手動執行「更新資產」指令）。
 4.  此時裝置上的限制會暫時解除，可正常長按刪除 App。
 5.  操作完畢後，別忘了將群組重新加回限制描述檔的 Scope。
 
@@ -278,7 +278,7 @@ Apple 的 App 與書籍大量採購方案 (Volume Purchase Program, VPP) 採用�
 
 1.  **登入 Jamf Pro**，前往 **「設定描述檔 (Configuration Profiles)」**。
 
-2.  **編輯或新建一個「限制 (Restrictions)」描述檔**，專門用於學生裝置。
+2.  **編輯或建立一個「限制 (Restrictions)」描述檔**，專門用於學生裝置。
 
 3.  **進入「限制」Payload，找到「App」相關區塊**：
     *   取消勾選 **「允許安裝 App (Allow installing apps)」**。
@@ -336,7 +336,7 @@ Apple 提供幾種方式讓組織分發自行開發的 App：
 |------|------|---------|---------|
 | **Apple Developer Program** | 年費約 $99 USD | 上架 App Store（公開或不公開） | 希望 App 可被外部搜尋下載 |
 | **Apple Developer Enterprise Program** | 年費約 $299 USD | 內部分發（In-House），不上架 App Store | 僅供組織內部人員使用 |
-| **Apple Developer Enterprise + MDM** | 同上 | 透過 MDM 靜默安裝 | 大型組織批量部署 |
+| **Apple Developer Enterprise + MDM** | 同上 | 透過 MDM 靜默安裝 | 大型組織批次部署 |
 
 **In-House App 部署流程**：
 
@@ -460,7 +460,7 @@ Apple 提供幾種方式讓組織分發自行開發的 App：
 
 **重要概念：VPP Token**
 
-VPP Token 是連結 Jamf Pro 與 Apple 校務管理 (ASM) 的橋樑：
+VPP Token 是連結 Jamf Pro 與 Apple 校務管理 (ASM) 的橋梁：
 *   每個 Token 對應 ASM 中的一個「位置 (Location)」。
 *   Token 每年需更新一次。
 *   Token 過期會導致所有管理式分發功能失效。
@@ -498,7 +498,7 @@ VPP Token 是連結 Jamf Pro 與 Apple 校務管理 (ASM) 的橋樑：
 
 **若舊版機制無效**：
 
-有些 App 開發商會主動刪除舊版本，或 App 後端服務本身不支援舊版客戶端。此時可能需考慮：
+有些 App 開發商會主動刪除舊版本，或 App 後端服務本身不支援舊版用戶端。此時可能需考慮：
 
 | 替代方案 | 說明 |
 |---------|------|
@@ -514,7 +514,7 @@ VPP Token 是連結 Jamf Pro 與 Apple 校務管理 (ASM) 的橋樑：
 
 **注意事項**：
 *   舊版 App 可能缺少新功能或有安全漏洞，不建議長期依賴。
-*   若學校有大量舊裝置無法執行必要 App，應將此納入設備採購規劃考量。
+*   若學校有大量舊裝置無法執行必要 App，應將此納入裝置採購規劃考量。
 `
             },
             {
@@ -629,9 +629,9 @@ VPP Token 是連結 Jamf Pro 與 Apple 校務管理 (ASM) 的橋樑：
 
 | App | 可設定參數範例 |
 |-----|---------------|
-| **Google Chrome** | 預設首頁 URL、阻擋特定網站、禁用無痕模式 |
+| **Google Chrome** | 預設首頁 URL、阻擋特定網站、停用無痕模式 |
 | **Microsoft Outlook** | 預填使用者 Email、自動設定 Exchange 帳號 |
-| **Zoom** | 預設關閉視訊/麥克風、禁用虛擬背景 |
+| **Zoom** | 預設關閉視訊/麥克風、停用虛擬背景 |
 | **Adobe Acrobat** | 預設開啟方式、雲端儲存設定 |
 | **Slack** | 預設 Workspace、SSO 設定 |
 

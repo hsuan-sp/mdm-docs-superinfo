@@ -28,7 +28,7 @@ export const data: QASection[] = [
 3.  點選「同意」按鈕即可完成。
 
 **最佳實踐**：
-建議學校指派至少 2 位管理員角色的帳號（例如資訊組長與設備組長），以確保當主要負責人請假或離職時，仍有人可以處理這類緊急事項。
+建議學校指派至少 2 位管理員角色的帳號（例如資訊組長/設備組長及一位系統管理師），以確保當主要負責人請假或離職時，仍有人可以處理這類緊急事項。
 `
       },
       {
@@ -44,10 +44,10 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 **過期後果**：
 *   **所有受管裝置將無法接收任何遠端指令**：包括派送 App、推送設定描述檔、發送清除密碼指令、鎖定裝置等——全部失效。
 *   **裝置不會主動脫離管理**，但管理端已無法控制它們，形同「失聯」。
-*   **若憑證過期太久被 Apple 撤銷**：您可能需要重新建立新憑證，導致所有裝置必須**個別進行清除 (Erase) 並重新註冊**。對於數百台裝置的學校而言，這將是災難性的工作量。
+*   **若憑證過期太久被 Apple 復原**：您可能需要重新建立新憑證，導致所有裝置必須**個別進行清除 (Erase) 並重新註冊**。對於數百台裝置的學校而言，這將是災難性的工作量。
 
 **續約流程（務必使用原本的 Apple ID）**：
-1.  **Jamf Pro 提醒**：系統會在到期前 30 天發送 Email 通知，並在儀表板顯示警告。請立即處理！
+1.  **Jamf Pro 提醒**：系統會在到期前 30 天發送 Email 通知，並在儀錶板顯示警告。請立即處理！
 2.  **登入 Jamf Pro**：前往 **「設定 (Settings)」>「全域管理 (Global Management)」>「推播憑證 (Push Certificates)」**。
 3.  **點選「續約 (Renew)」**，系統會產生一個 **憑證簽署請求 (CSR)** 檔案供您下載。
 4.  **登入 Apple 推播憑證入口網站**：前往 [identity.apple.com/pushcert](https://identity.apple.com/pushcert)，使用**最初建立該憑證的同一個 Apple ID** 登入。
@@ -93,12 +93,12 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
         question: 'Jamf Pro 顯示「VPP Token」即將過期，如何更新？',
         tags: ['VPP', 'Token', '大量採購'],
         answer: `
-**VPP (大量採購方案) Token 是 Jamf Pro 與 Apple 校務管理之間同步 App 授權的橋樑，每年需更新一次。**
+**VPP (大量採購方案) Token 是 Jamf Pro 與 Apple 校務管理之間同步 App 授權的橋梁，每年需更新一次。**
 
 當 Token 過期後，Jamf Pro 將無法從 ASM 取得最新的授權資訊，導致新購買的 App 無法派送、現有授權狀態無法更新。
 
 **過期前 Jamf Pro 會提供以下警告**：
-*   儀表板顯示紅色或橘色警告標籤。
+*   儀錶板顯示紅色或橘色警告標籤。
 *   管理員 Email 會收到到期通知（通常為到期前 30 天）。
 
 **更新流程**：
@@ -192,7 +192,7 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 3.  重新匯入 CSV，系統會批次更新。
 
 **合規提醒**：
-根據《個人資料保護法》，學校對於學生資料應有明確的保存與銷毀政策。建議在新生入學時即告知管理式 Apple ID 資料之保存期限（如離校後保留 90 天），並於離校時讓學生自行備份雲端資料。
+根據《個人資料保護法》，學校對於學生資料應有明確的儲存與銷毀政策。建議在新生入學時即告知管理式 Apple ID 資料之儲存期限（如離校後保留 90 天），並於離校時讓學生自行備份雲端資料。
 `
       },
       {
@@ -200,7 +200,7 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
         question: '我可以使用個人的 Apple ID 登入學校的 iPad 嗎？',
         tags: ['個人 Apple ID', '帳號管理', '風險警告'],
         answer: `
-**標準政策：不可以。學校設備應使用管理式 Apple ID (Managed Apple ID) 或不登入任何 Apple ID。**
+**標準政策：不可以。學校裝置應使用管理式 Apple ID (Managed Apple ID) 或不登入任何 Apple ID。**
 
 這項政策的目的是確保資料歸屬權明確、保護個人隱私、以及維持 MDM 管理的一致性。
 
@@ -251,7 +251,7 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 2.  **設定檔重置**：若完全失去資料庫存取權，可能需要重新初始化 Jamf Pro（這會導致資料遺失），或聯絡 Jamf 企業支援尋求協助。
 
 **最佳實踐（預防再次發生）**：
-*   **建立至少兩組管理員帳號**：一組日常使用，另一組作為「緊急備援帳號」，密碼由資訊組長與設備組長分別保管。
+*   **建立至少兩組管理員帳號**：一組日常使用，另一組作為「緊急備援帳號」，密碼由資訊組長與裝置組長分別保管。
 *   **使用密碼管理工具**：如 Bitwarden、1Password 等，將 Jamf Pro 管理員密碼儲存於機構共用金庫。
 *   **啟用 SSO 整合**：若學校使用 Azure AD 或 Google Workspace，可將 Jamf Pro 與 SAML SSO 整合，管理員使用學校帳號登入，減少獨立密碼管理負擔。
 `
@@ -325,7 +325,7 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 **步驟三：通知使用者重新登入**
 *   已登入的裝置會跳出「Apple ID 驗證失敗」的提示。
 *   使用者需使用 **新的 Apple ID**（新網域格式）重新登入。
-*   密碼通常維持不變（除非您在步驟二中同時重設了密碼）。
+*   密碼通常維持不變（除非您在步驟二中同時重置了密碼）。
 
 **注意事項**：
 *   **共用 iPad**：若使用共用 iPad 模式，使用者登入畫面會自動更新為新的 Apple ID 格式。
