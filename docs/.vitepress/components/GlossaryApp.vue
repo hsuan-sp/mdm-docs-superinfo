@@ -167,24 +167,29 @@ onMounted(async () => {
         :key="index"
         class="term-card"
       >
-        <div class="card-header">
-          <h3 class="term-title">{{ item.term }}</h3>
-          <div class="term-badges">
-            <span 
-              v-for="cat in (Array.isArray(item.category) ? item.category : [item.category])" 
-              :key="cat"
-              :class="['badge', getCategoryColor(cat)]"
-            >
-              {{ cat }}
-            </span>
+        <div class="card-main">
+          <div class="card-header">
+            <h3 class="term-title">{{ item.term }}</h3>
+            <div class="term-badges">
+              <span 
+                v-for="cat in (Array.isArray(item.category) ? item.category : [item.category])" 
+                :key="cat"
+                :class="['badge', getCategoryColor(cat)]"
+              >
+                {{ cat }}
+              </span>
+            </div>
           </div>
+
+          <p class="term-definition">{{ item.definition }}</p>
         </div>
 
-        <p class="term-definition">{{ item.definition }}</p>
-
-        <div v-if="item.analogy" class="term-analogy">
-          <span class="analogy-label">白話文 / 比喻</span>
-          {{ item.analogy }}
+        <div v-if="item.analogy" class="analogy-wrapper">
+          <div class="analogy-icon">💡</div>
+          <div class="analogy-content">
+            <span class="analogy-label">白話文 / 比喻</span>
+            <p class="analogy-text">{{ item.analogy }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -197,11 +202,16 @@ onMounted(async () => {
 </template>
 
 <style scoped>
+/* 
+  Apple-style Design System 
+*/
 .glossary-app {
-  padding: 40px 24px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding: 0 24px 60px;
+  /* Premium Traditional Chinese Font Stack */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei UI", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+  color: var(--vp-c-text-1);
 }
 
 /* Header */
@@ -413,83 +423,110 @@ onMounted(async () => {
 }
 
 
-/* --- Card Design (Apple-style) --- */
+/* --- Card Design (Refined Apple Style) --- */
 .term-card {
   background: var(--vp-c-bg-alt);
   border-radius: 20px;
-  padding: 24px;
+  /* Removed padding here, handled by internal wrappers */
+  padding: 0; 
+  border: 1px solid rgba(128, 128, 128, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
 
-.term-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 113, 227, 0.05) 0%, rgba(0, 113, 227, 0) 100%);
+/* Hover Effect */
+@media (hover: hover) {
+  .term-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); /* Stronger lift */
+    border-color: rgba(128, 128, 128, 0.2);
+    z-index: 10;
+  }
+}
+
+/* Animation Entry */
+.term-card {
   opacity: 0;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
+  transform: translateY(20px);
 }
-
 .term-card.card-visible {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
 }
 
-.term-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
-  border-color: rgba(0, 113, 227, 0.2);
-}
-
-.term-card:hover::before {
-  opacity: 1;
+/* 1. Main Content Zone */
+.card-main {
+  padding: 24px 24px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start; /* Align top if title is long */
   gap: 12px;
   margin-bottom: 16px;
 }
 
 .term-title {
-  font-size: 20px;
+  font-size: 22px; /* Large title */
   font-weight: 700;
+  margin: 0;
+  color: var(--vp-c-text-1);
   line-height: 1.3;
-  color: #1d1d1f;
+}
+
+/* Definition - Readable & Clean */
+.term-definition {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--vp-c-text-2);
   margin: 0;
 }
 
-.card-body {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.definition p {
-  font-size: 15px;
-  line-height: 1.5;
-  color: #424245;
-  margin: 0;
-}
-
-.analogy {
+/* 2. Analogy Zone - Visually Separated */
+.analogy-wrapper {
+  background: var(--vp-c-bg-mute); /* Muted background */
+  padding: 16px 24px;
+  border-top: 1px solid rgba(128, 128, 128, 0.05);
   display: flex;
   gap: 12px;
-  background: #fbfbfd;
-  padding: 14px;
-  border-radius: 12px;
   align-items: flex-start;
 }
 
-.analogy .emoji {
+.analogy-icon {
   font-size: 18px;
-  margin-top: 1px;
+  flex-shrink: 0;
+  padding-top: 2px;
+  filter: grayscale(0.2);
+}
+
+.analogy-content {
+  flex: 1;
+}
+
+.analogy-label {
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--vp-c-brand-1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.analogy-text {
+  font-size: 15px; /* Slightly smaller than main def */
+  line-height: 1.5;
+  color: var(--vp-c-text-2);
+  margin: 0;
 }
 
 .category-badges {
