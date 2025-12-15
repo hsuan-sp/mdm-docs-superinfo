@@ -1,6 +1,6 @@
 import { QASection } from '../types'
 
-export const data: QASection[] = [
+export const educationQA: QASection[] = [
   {
     title: '第八部分：教育場域常見情境 (Education Scenarios)',
     items: [
