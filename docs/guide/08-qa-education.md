@@ -4,7 +4,7 @@ layout: doc
 
 <script setup>
 import QAViewer from '../.vitepress/components/QAViewer.vue'
-import { data } from '../data/07-mac'
+import { educationQA } from '../data/08-qa-education'
 </script>
 
-<QAViewer :data="data" />
+<QAViewer :data="educationQA" />

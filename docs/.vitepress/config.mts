@@ -48,18 +48,18 @@ export default defineConfig({
     sidebar: {
       '/guide/': [
         {
-        text: 'MDM 常見問答集',
-        items: [
-          { text: '01. 帳號、憑證與伺服器', link: '/guide/01-account' },
-          { text: '02. 裝置註冊與重置', link: '/guide/02-enrollment' },
-          { text: '03. App 派送與管理', link: '/guide/03-apps' },
-          { text: '04. 課堂管理 (Apple Classroom)', link: '/guide/04-classroom' },
-          { text: '05. 數位學習精進方案', link: '/guide/05-digital-learning' },
-          { text: '06. 硬體與故障排除', link: '/guide/06-hardware' },
-          { text: '07. Mac 管理專區', link: '/guide/07-mac' },
-          { text: '08. 教育場域實戰 Q&A', link: '/guide/08-education' }
-        ]
-      }
+          text: 'MDM 常見問答集',
+          items: [
+            { text: '01. 帳號、憑證與伺服器', link: '/guide/01-account' },
+            { text: '02. 裝置註冊與重置', link: '/guide/02-enrollment' },
+            { text: '03. App 派送與管理', link: '/guide/03-apps' },
+            { text: '04. 課堂管理 (Apple Classroom)', link: '/guide/04-classroom' },
+            { text: '05. 數位學習精進方案', link: '/guide/05-digital-learning' },
+            { text: '06. 硬體與故障排除', link: '/guide/06-hardware' },
+            { text: '07. Mac 管理專區', link: '/guide/07-mac' },
+            { text: '08. 教育場域實戰 Q&A', link: '/guide/08-qa-education' }
+          ]
+        }
       ],
       '/glossary': [
         {

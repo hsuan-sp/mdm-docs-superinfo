@@ -16,8 +16,9 @@ export const data: QASection[] = [
 
 **影響範圍**：
 *   若未同意新條款，**新購買的裝置將無法完成自動裝置註冊 (Automated Device Enrollment, ADE)**，因為 Apple 伺服器會拒絕回應該組織的註冊請求。
-*   **VPP (大量採購方案) 內容同步將暫停**，導致您無法將新購買的 App 與書籍授權指派給裝置。
+*   **VPP (大量採購計畫) 內容同步將暫停**，導致您無法將新購買的 App 與書籍授權指派給裝置。
 *   現有已註冊的裝置不會立即受影響，但長期拖延可能導致無法派送新的設定描述檔或 App 更新。
+*   **2025 年新功能限制**：若未同意條款，您將無法存取 Apple 校務管理中的新功能，例如 **Apple Intelligence 控制項** 或 **裝置 AppleCare 保養範圍資訊**。
 
 **誰可以同意**：
 只有在 ASM 中具備 **「管理員 (Administrator)」** 角色的帳號才有權限勾選同意條款。「管理者 (Manager)」或「技術經理 (People Manager)」等角色無法代為同意。
@@ -57,8 +58,9 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 
 **最佳實踐**：
 *   在組織共用行事曆中設定每年提前 60 天的續約提醒。
-*   將負責憑證的 Apple ID 密碼與雙重認證備援方法記錄於安全的密碼管理系統中。
+*   將負責憑證的 Apple ID 密碼與雙重認證備援方法或**硬體安全金鑰**記錄於安全的密碼管理系統中。
 *   建議使用機構專屬的 Apple ID（如 mdm-admin@school.edu.tw），而非個人 Apple ID。
+*   **2025 年更新**：現在管理員可以透過 [iforgot.apple.com](https://iforgot.apple.com) 更輕鬆地重設管理式 Apple 帳戶密碼，但仍強烈建議保持電話號碼的有效性。
 `
       },
       {
@@ -139,6 +141,7 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 *   **單一帳號**：師生只需記住一組 Google/Microsoft 帳密，即可登入 iCloud、課堂 App、共用 iPad 等 Apple 服務。
 *   **帳號自動同步**：當學校在 Google Admin 或 Microsoft 365 管理中心建立新帳號時，會自動在 ASM 中建立對應的管理式 Apple ID（透過 SCIM 連接器）。
 *   **密碼同步**：密碼變更在 Google/Microsoft 端進行，ASM 會自動信任該身分驗證。
+*   **2025 年新功能**：macOS 15 (Sequoia) 以上版本支援 **「輕點登入 (Tap to Login)」**，讓師生能透過 iPhone 或 Apple Watch 的 NFC 憑證，快速登入已與 IdP 關聯的 Mac。
 
 **設定需求（需 IT 管理員操作）**：
 1.  **驗證網域**：在 ASM 中新增並驗證學校的 Email 網域（如 @school.edu.tw），需在 DNS 設定中加入 TXT 記錄。
@@ -329,11 +332,137 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 
 **注意事項**：
 *   **共用 iPad**：若使用共用 iPad 模式，使用者登入畫面會自動更新為新的 Apple ID 格式。
-*   **iCloud 資料**：帳號識別碼變更後，iCloud 資料理論上會跟著帳號走。但建議在變更前請使用者自行備份重要資料至本機或 Google Drive。
+*   **iCloud 資料**：帳號識別碼變更後，iCloud 資料理論上會跟著帳號走。但建議在變更前請使用者自行備份重要資料至本機或 Google 雲端硬碟。
 *   **聯邦驗證**：若已設定與 Google/Microsoft 的聯邦驗證，需確認身分提供者端的 Email 也同步更新，否則會驗證失敗。
+*   **2025 年更新**：Apple 現在允許管理員下載已驗證網域中「非管理式 Apple 帳戶」的 Email 清單，協助您識別有哪些個人帳號使用了學校網域。
 
 **回滾計畫**：
 若更新過程發生嚴重問題，可嘗試將 CSV 中的 Apple ID 改回舊格式並重新匯入。但此操作複雜且有資料遺失風險，因此強烈建議在小規模測試群組（如資訊組成員）先行測試後，再全面推行。
+`
+      },
+      {
+        id: 'acc-11',
+        question: '【憑證陷阱】Apple 課堂突然全校失靈，顯示「描述檔無效」？',
+        important: true,
+        tags: ['憑證過期', 'Apple 課堂', '維修'],
+        answer: `
+**這通常是因為「教育身分憑證 (Education Identity Certificate)」過期（效期 2 年）。**
+
+**症狀**：
+老師反映 Apple 課堂 (Classroom) 內所有學生都顯示離線，查驗裝置發現「教育設定描述檔」狀態為「無效」或「紅色」。
+
+**解決方案**：
+1. 進入 Jamf Pro 「設定」 > 「全域管理」 > 「Apple 教育支援」。
+2. 檢查憑證狀態，若已過期，點選「Renew」重新產生。
+3. 重新產生後，所有「班級 (Classes)」的描述檔會進入待推送清單。
+4. **重要**：對所有受影響裝置發送「更新資產」指令，強制重拉新的憑證。
+`
+      },
+      {
+        id: 'acc-12',
+        question: '【Migration】更換新 MDM 廠商時，如何「不抹除資料」進行遷移？',
+        important: true,
+        tags: ['遷移', '2025 新功能', 'MDM 轉移'],
+        answer: `
+**2025 年 Apple 官方支援的「Migration without Wipe」API。**
+
+1. **前提**：原 MDM 與新 MDM 均需支援此遷移 API。
+2. **流程**：
+   *   在 ASM 中將裝置指派從舊 MDM 更改為新 MDM。
+   *   新 MDM 發送「遷移」指令。
+   *   裝置會靜默解除舊描述檔並安裝新描述檔。
+*   **限制**：若裝置版本過舊 (需 iOS 17.5+)，仍需透過清除重置的方式進行遷移。
+`
+      },
+      {
+        id: 'acc-13',
+        question: '【iForgot】忘記管理式 Apple ID 密碼，一定要聯絡資訊組嗎？',
+        tags: ['密碼重置', 'ASM', '2025 新功能'],
+        answer: `
+**2025 年新功能：支援透過 iforgot.apple.com 自行重設。**
+
+*   前提：管理員在 ASM 中有設定「復原聯絡資訊」(手機或備用信箱)。
+*   使用者可自行前往 iforgot 並依照驗證流程重設密碼，無需資訊組介入。
+`
+      },
+      {
+        id: 'acc-14',
+        question: '廠商能幫忙管理學校的 Intune 或 Windows 裝置 (Surface Go) 嗎？',
+        tags: ['Intune', 'Windows', '服務範圍'],
+        answer: `
+**術業有專攻。Apple MDM 廠商通常專注於 Jamf/Apple 生態系。**
+
+*   **Intune / Windows**：屬於 Microsoft 的管理架構，與 Apple MDM 的通訊協定、管理邏輯完全不同。
+*   **建議**：若學校有 Surface Go 或 Windows 筆電的管理需求，建議尋找專門的微軟系統整合商 (SI) 協助 Intune 部署。我們專注於提供最專業的 Apple 裝置管理服務。
+`
+      },
+      {
+        id: 'acc-15',
+        question: '為什麼精進計畫建議學校使用 Jamf Pro 而非 Jamf School？',
+        tags: ['Jamf Pro', 'Jamf School', '比較'],
+        answer: `
+**雖然 Jamf School 介面簡單，但 Jamf Pro 更適合大規模的縣市級集中管理。**
+
+1.  **分層架構 (Sites)**：Jamf Pro 獨有的 Site 架構，能讓教育局 (Super Admin) 與學校 (Site Admin) 完美分權。教育局可派送全縣市統一樣板，學校仍保有校內微調彈性。
+2.  **API 擴充性**：Jamf Pro 擁有強大的 API，能與教育部的數據儀錶板 (mdm.edu.tw) 對接，自動回傳使用率與資產數據。
+3.  **進階排錯**：Jamf Pro 提供更詳細的指令紀錄 (Logs) 與智慧型群組邏輯，對於數萬台裝置的除錯至關重要。
+`
+      },
+      {
+        id: 'acc-16',
+        question: '2025 年新功能：如何在 Apple 校務管理中強制「域名擷取 (Domain Capture)」？',
+        important: true,
+        tags: ['Domain Capture', 'ASM', '2025 新功能', '帳號轉移'],
+        answer: `
+**這是在 iOS 18 / macOS 15 之後最重要的管理功能之一，能將使用學校網域註冊的個人帳號強制納入管理。**
+
+**功能解說**：
+以往師生若先用學校 Email (@school.edu.tw) 註冊了個人的 Apple ID，學校在 ASM 中驗證網域時會發生衝突。2025 年 Apple 提供的「域名擷取 (Domain Capture)」功能允許管理員：
+1.  **識別衝突帳號**：ASM 會列出有多少個人帳號使用了您的已驗證網域。
+2.  **強制轉移 (Account Transfer)**：您可以發出通知，要求這些使用者在 60 天內將帳號改為個人 Email，或是配合轉移為「管理式 Apple ID」。
+3.  **自動擷取**：對於未處理的帳號，系統可設定在期限後自動將其 Email 識別碼擷取，強制轉換為機構管理狀態。
+
+**操作路徑**：
+*   登入 [school.apple.com](https://school.apple.com) >「設定」>「網域」。
+*   選擇已驗證網域，開啟「域名擷取」開關。
+*   設定使用者通知信件內容與緩衝期限。
+
+**注意事項**：
+擷取後的帳號會變成受控狀態，使用者原有的照片、個人資料將受機構政策限制。建議執行前務必發布全校公告，請同仁先自行修改個人帳號的聯繫 Email。
+`
+      },
+      {
+        id: 'acc-17',
+        question: '如何結合 Platform SSO (PSSO) 讓 Mac 直接用網路帳密解鎖 FileVault？',
+        tags: ['PSSO', 'FileVault', 'macOS 15', '身分驗證'],
+        answer: `
+**在 macOS 15 (Sequoia) 以上版本，Platform SSO 終於支援了 FileVault 整合，實現真正的「單一登入」。**
+
+**傳統痛點**：
+以往即使設定了 Azure AD 或 Okta 登入 Mac，開機時的第一層 FileVault 加密畫面仍必須輸入「本機帳號密碼」，造成使用者需要輸入兩次密碼的困擾。
+
+**2025 年解決方案**：
+透過更新 Jamf Pro 描述檔並啟用 **「FileVault 延伸功能」**，系統可將 PSSO 的憑證與加密磁碟解鎖權限綁定。
+1.  **需求**：macOS 15+、支援 PSSO 的 IdP（如 Microsoft Entra ID）、Jamf Pro 11.10+。
+2.  **設定**：在「設定描述檔」>「單一登入延伸功能」中，啟用「啟用 FileVault 解鎖」選項。
+3.  **效果**：使用者只需要輸入一次公司 IDP 帳密，系統就會自動同步解鎖 FileVault 並登入桌面，且密碼會與公司網域保持即時同步。
+`
+      },
+      {
+        id: 'acc-18',
+        question: '學校更換 MDM 廠商時，原本購買的 VPP App 授權需要重新買嗎？如何轉移？',
+        tags: ['VPP', 'MDM 遷移', '授權轉移', '大量採購'],
+        answer: `
+**不需要重新購買。App 授權是綁定在 Apple 校務管理 (ASM) 的「位置 (Location)」上，而非 MDM 軟體本身。**
+
+**轉移步驟**：
+1.  **下載 Token**：從 ASM 下載新廠商所需的 VPP Token（與舊位置相同即可）。
+2.  **上傳 Token**：將 Token 上傳至新的 MDM (如從 MDM A 換到 Jamf Pro)。
+3.  **回收舊授權**：在舊的 MDM 中，將所有指派給裝置的 App 任務刪除或撤銷。這會讓授權回到 ASM 的「可用數量」中。
+4.  **重新指派**：在新 MDM 同步 VPP 內容後，您會看到與之前相同的總授權數，即可開始重新指派給裝置。
+
+**進階 Tip**：
+2025 年 Apple 推出的 **「MDM 遷移 API」** 甚至支援「Preserve VPP Assignment」。若使用此 API，App 在遷移過程中不會被刪除，且授權狀態會靜默移轉到新 MDM 中，無需使用者重新下載。
 `
       }
     ]

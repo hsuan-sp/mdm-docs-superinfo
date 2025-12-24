@@ -238,6 +238,17 @@ export const glossaryData: Term[] = [
   },
   {
 
+    term: 'Apple Intelligence Reports (AI 報告管理)',
+
+    category: ['Security'],
+
+    definition: 'Apple Intelligence 報告管理。MDM 可控制是否允許裝置生成 AI 使用摘要與分析報告。在高風險環境（如考場）中，管理員可停用 Safari 摘要或郵件智慧摘要，防止 AI 代替人工閱讀與總結。',
+
+    analogy: '就像「禁止代看懶人包」。老闆規定你要自己看書，不准助理（AI）幫你寫簡報大綱，這樣才能確定你真的有讀進去。'
+
+  },
+  {
+
     term: 'Apple Pencil',
 
     category: ['Hardware'],
@@ -352,6 +363,17 @@ export const glossaryData: Term[] = [
   // --- C ---
   {
 
+    term: 'CDN (Content Delivery Network)',
+
+    category: ['Network'],
+
+    definition: '內容傳遞網路。由教育部與 Apple 合作建置的本地緩存系統（如台灣學術網路 TANet CDN）。它將熱門的 App 或系統更新檔存放在離學校最近的節點，大幅減少跨國下載流量，提升全校性更新的成功率。',
+
+    analogy: '就像「巷口福利社」。以前買文具要走一個小時去大書局（Apple 總部），現在巷口就有教育部的文具店（CDN），隨走隨買，不用怕排隊。'
+
+  },
+  {
+
     term: 'Certificate (憑證)',
 
     category: ['Security'],
@@ -453,6 +475,17 @@ export const glossaryData: Term[] = [
   },
   {
 
+    term: 'DDM App Management (宣告式 App 管理)',
+
+    category: ['Apps'],
+
+    definition: '宣告式 App 管理。基於 DDM 架構的應用部署。由裝置自主負責 App 的下載、重試與健康監控。若 App 被刪除，裝置會主動偵測並重新安裝，不再需要 MDM 伺服器巡檢與重複下令。',
+
+    analogy: '就像「自動補貨福利社」。只要架子上（平板）少了某樣零食（App），員工（裝置）會自己去倉庫載，不用老闆天天打電話來問貨還在不在。'
+
+  },
+  {
+
     term: 'Deprecated (已棄用)',
 
     category: ['Other'],
@@ -519,6 +552,17 @@ export const glossaryData: Term[] = [
   },
 
   // --- E ---
+  {
+
+    term: 'Domain Capture (域名擷取)',
+
+    category: ['Apple', 'Security'],
+
+    definition: '域名擷取。Apple 校務管理中的一項安全功能。當學校驗證其 Email 網域後，可以將所有使用該網域註冊的個人 Apple ID 識別出來，並要求使用者將其轉換為管理式帳號或更改 Email。這確保了組織對所有含學校網域識別碼的帳號擁有最終控制權。',
+
+    analogy: '就像「收編非正規車輛」。本來有人私下把自家車漆成校車顏色（用學校 Email 註冊個人帳號），現在學校規定：凡是漆成校車顏色的都要登記（納入管理），不想登記的就要把漆刷掉（換 Email）。'
+
+  },
   {
 
     term: 'eSIM',
@@ -694,6 +738,17 @@ export const glossaryData: Term[] = [
   },
   {
 
+    term: 'iPhone Mirroring (iPhone 鏡像)',
+
+    category: ['macOS', 'Security'],
+
+    definition: 'iPhone 鏡像。macOS 15 的新功能，允許在 Mac 螢幕上完全遠端操作 iPhone。MDM 可停用此功能以防止在公用電腦上洩漏個人隱私，或防止透過此管道規避某些 Mac 端的水印或稽核軟體。',
+
+    analogy: '就像「電腦裡的虛擬手機」。你可以直接在電腦螢幕上滑手機、回簡訊，但這對公司的電腦來說，就像是一個無法監控的隱藏小視窗，所以有些公司會為了安全把它鎖起來。'
+
+  },
+  {
+
     term: 'JSON (JavaScript Object Notation)',
 
     category: ['Other'],
@@ -742,6 +797,44 @@ export const glossaryData: Term[] = [
   },
   {
 
+    term: 'NIST Benchmarks (資安基準)',
+
+    category: ['Security', 'Education'],
+
+    definition: 'NIST 行動裝置資安基準。由美國國家標準與技術研究院制定的資安框架，2025 年起被教育部採納作為學習載具的安檢指標。包含 6 碼複雜密碼、自動更新強制、資料不落地等。',
+
+    analogy: '就像「數位消防安檢標準」。每間學校的平板都要通過這套標準：滅火器（防毒）有沒有準備、逃生口（更新）有沒有通、防火牆（加密）有沒有蓋好，通過了才能上線。'
+
+  },
+  {
+
+    term: 'Platform SSO (PSSO)',
+
+    category: ['Security', 'macOS'],
+
+    definition: '平台單一登入。Apple 在 macOS 13+ 引入的新技術，旨在取代傳統 AD 綁定。PSSO 讓 Mac 本機帳號直接與雲端 IdP（如 Entra ID）同步。2025 年新版更支援了 FileVault 解鎖，使用者輸入一次帳密即可完成開機到登入的所有流程。',
+
+    analogy: '就像「一卡通通行」。不用一張門卡開大門，另一張鑰匙開辦公室。PSSO 讓你一張卡（一組帳密）就搞定從進公司到坐下辦公的所有權限驗證。'
+
+  },
+  {
+
+    term: 'RCS (Rich Communication Services)',
+
+    category: ['Network'],
+
+    definition: '豐富通訊服務。新型態的簡訊標準，支援傳輸高畫質圖片、讀取回條與打字狀態。iOS 18 起支援。MDM 可停用此服務以減少學生的社交干擾，同時保留基本的安全通訊。',
+
+    analogy: '就像「加強版簡訊」。以前簡訊只能傳純文字（SMS），現在可以像 Line 一樣傳照片、貼圖，還能看到對方有沒有已讀。'
+
+  },
+  {
+    term: 'SCIM (System for Cross-domain Identity Management)',
+    category: ['Apple'],
+    definition: '身分管理系統。一種用於在不同系統（如 ASM 與 Google Workspace/Entra ID）之間同步使用者帳號的標準。支援自動建立、更新與停用帳號。',
+    analogy: '就像「自動員工清單」。當人事系統增加一個人，所有辦公室系統、MDM 的帳號都會自動跟著開好，不用一個個點。'
+  },
+  {
     term: 'Lightning Connector',
 
     category: ['Hardware'],

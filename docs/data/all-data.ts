@@ -18,7 +18,6 @@ import { data as digitalLearningData } from './05-digital-learning';
 import { data as hardwareData } from './06-hardware';
 import { data as macData } from './07-mac';
 import { educationQA as educationData } from './08-qa-education';
-
 // Aggregate all Q&A data for search indexing
 export const allQAData: { sections: QASection[], source: string }[] = [
   { sections: accountData, source: '帳號與伺服器' },
