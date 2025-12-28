@@ -22,22 +22,22 @@ export const data: QASection[] = [
 **常見原因與方案**：
 *   **網路阻擋**：學校防火牆若未開放 Apple 下載伺服器網域，下載會失敗。
 *   **VPP 授權不足**：確認 ASM (Apple School Manager) 中該 App 的可用數量不為 0。
-*   **Apple ID 衝突**：若設定為「裝置型分派」，則不需要 Apple ID；若設定為「使用者型分派」，則需確認裝置已登入正確的 Apple ID。
+*   **Apple 帳號衝突**：若設定為「裝置型分派」，則不需要 Apple 帳號；若設定為「使用者型分派」，則需確認裝置已登入正確的 Apple 帳號。
 *   **儲存空間不足**：iPad 剩餘空間若小於 App 大小，安裝會卡住。
 `
             },
             {
                 id: 'app-2',
-                question: '不用 Apple ID 也可以在 iPad 上裝 App 嗎？',
+                question: '不用 Apple 帳號 也可以在 iPad 上裝 App 嗎？',
                 important: true,
-                tags: ['VPP', 'Apple ID', '基礎觀念'],
+                tags: ['VPP', 'Apple 帳號', '基礎觀念'],
                 answer: `
 **可以。這稱為「裝置型分派 (Device-based Assignment)」，是學校載具管理的最佳實踐。**
 
-透過 MDM 與 VPP (Volume Purchase Program) 的結合，管裡員可以將 App 直接透過裝置序號指派給該台 iPad，而不需要學生在 iPad 上登入任何個人的 Apple ID。
+透過 MDM 與 VPP (Volume Purchase Program) 的結合，管理員可以將 App 直接透過裝置序號指派給該台 iPad，而不需要學生在 iPad 上登入任何個人的 Apple 帳號。
 
 **優點**：
-1.  **管理方便**：不需要幫每一位學生申請 Apple ID。
+1.  **管理方便**：不需要幫每一位學生申請 Apple 帳號。
 2.  **授權回收**：學生畢業或換機時，管理員可以隨時收回授權並指派給新使用者。
 3.  **隱私保護**：學生不需要洩漏個人帳號資訊給學校。
 `
@@ -54,7 +54,7 @@ export const data: QASection[] = [
 **操作方式**：
 1.  學生在 iPad 上找到 **Self Service** 圖示。
 2.  點進去後，會看到學校已上架且獲派給該生的 App 清單。
-3.  點選「安裝」或「重新安裝」即可，過程完全不需要密碼或 Apple ID。
+3.  點選「安裝」或「重新安裝」即可，過程完全不需要密碼或 Apple 帳號。
 
 這既滿足了教學上的自由度，也確保了載具的純淨度。
 `
@@ -101,7 +101,7 @@ export const data: QASection[] = [
                 answer: `
 **看是「誰」買的。**
 
-1.  **學生用個人 ID 購買**：授權永遠屬於該 Apple ID。即使 MDM 移除後，只要登入原本帳號，App 仍可下載。
+1.  **學生用個人帳號購買**：授權永遠屬於該 Apple 帳號。即使 MDM 移除後，只要登入原本帳號，App 仍可下載。
 2.  **學校透過 VPP 指派**：授權屬於學校。當管理員在 MDM 移除該指派任務，App 可能會從裝置上消失，授權會回到學校的 VPP 池中。
 
 **注意**：受管理裝置通常會被限制無法使用私人 ID 進行 App Store 內購，以維持裝置純淨。
@@ -142,7 +142,7 @@ export const data: QASection[] = [
             },
             {
                 id: 'app-9',
-                question: '更新 App 時，需要學生的 Apple ID 密碼嗎？',
+                question: '更新 App 時，需要學生的 Apple 帳號密碼嗎？',
                 tags: ['App 更新', '管理觀念'],
                 answer: `
 **完全不需要！只要是透過裝置型分派 (Device-based Assignment) 的 App，更新全程自動化。**
@@ -154,8 +154,8 @@ MDM 會自動向 Apple 請求最新的 VPP 資訊，若發現有新版本，會�
             },
             {
                 id: 'app-10',
-                question: '為什麼有些 App 點開後，會一直彈出要我輸入 Apple ID 的對話框？',
-                tags: ['故障排除', 'Apple ID 彈窗'],
+                question: '為什麼有些 App 點開後，會一直彈出要我輸入 Apple 帳號的對話框？',
+                tags: ['故障排除', 'Apple 帳號彈窗'],
                 answer: `
 **這通常表示該 App 的授權來源與「裝置分派」模式發生衝突。**
 
@@ -212,12 +212,12 @@ MDM 會自動向 Apple 請求最新的 VPP 資訊，若發現有新版本，會�
             {
                 id: 'app-14',
                 question: '【TestFlight】可以讓老師測試校內開發的 Beta 版 App 嗎？',
-                tags: ['App 測試', 'TestFlight', '管理式 Apple ID'],
+                tags: ['App 測試', 'TestFlight', '管理式 Apple 帳號'],
                 answer: `
-**2025 年 TestFlight 已支援「管理式 Apple ID」。**
+**TestFlight 現已支援「管理式 Apple 帳號」。**
 
 *   **流程**：
-    1. 管理員將教師的 Management Apple ID 加入 TestFlight 外部測試群組。
+    1. 管理員將教師的 Management Apple Account 加入 TestFlight 外部測試群組。
     2. 教師在 iPad 上安裝 TestFlight App。
     3. 接受邀請後，即可測試尚未在 App Store 上架的校內 App。
 *   **優勢**：無需將 Beta App 打包成 In-House 版本，且更新推送更即時。
@@ -241,7 +241,7 @@ MDM 會自動向 Apple 請求最新的 VPP 資訊，若發現有新版本，會�
                 question: '【Shared Payment】ASM 的 VPP 餘額可以跨校或是跨計畫共用嗎？',
                 tags: ['ASM', 'VPP', '財務管理'],
                 answer: `
-**2025 年 ASM 支援「共享內容購買額度」。**
+**ASM 支援「共享內容購買額度」。**
 
 *   教育局 (Super Admin) 可購買一筆大型 VPP 額度。
 *   透過「位置 (Location)」管理功能，將額度彈性轉移給轄下各校 (Site) 使用。
@@ -321,8 +321,8 @@ Jamf Pro 支援在 App Configuration 中使用變數，讓設定可依裝置或�
             },
             {
                 id: 'app-20',
-                question: '2025 年新架構：什麼是「宣告式 App 管理 (Declarative App Management)」？',
-                tags: ['DDM', 'App 部署', '2025 新功能', '狀態監控'],
+                question: '新架構：什麼是「宣告式 App 管理 (Declarative App Management)」？',
+                tags: ['DDM', 'App 部署', '狀態監控'],
                 answer: `
 **這是從「伺服器推播」轉向「裝置自主管理」的重大技術演進。**
 
@@ -334,7 +334,7 @@ Jamf Pro 支援在 App Configuration 中使用變數，讓設定可依裝置或�
             },
             {
                 id: 'app-21',
-                question: 'iOS 18 新限制：如何防止學生「隱藏」或「鎖定」管理式 App？',
+                question: '如何防止學生「隱藏」或「鎖定」管理式 App？',
                 important: true,
                 tags: ['iOS 18', '隱藏 App', '鎖定 App', '限制'],
                 answer: `

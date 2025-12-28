@@ -18,13 +18,13 @@ export const data: QASection[] = [
 *   若未同意新條款，**新購買的裝置將無法完成自動裝置註冊 (Automated Device Enrollment, ADE)**，因為 Apple 伺服器會拒絕回應該組織的註冊請求。
 *   **VPP (大量採購計畫) 內容同步將暫停**，導致您無法將新購買的 App 與書籍授權指派給裝置。
 *   現有已註冊的裝置不會立即受影響，但長期拖延可能導致無法派送新的設定描述檔或 App 更新。
-*   **2025 年新功能限制**：若未同意條款，您將無法存取 Apple 校務管理中的新功能，例如 **Apple Intelligence 控制項** 或 **裝置 AppleCare 保養範圍資訊**。
+*   **新功能限制**：若未同意條款，您將無法存取 Apple 校務管理中的新功能，例如 **Apple Intelligence 控制項** 或 **裝置 AppleCare 保養範圍資訊**。
 
 **誰可以同意**：
 只有在 ASM 中具備 **「管理員 (Administrator)」** 角色的帳號才有權限勾選同意條款。「管理者 (Manager)」或「技術經理 (People Manager)」等角色無法代為同意。
 
 **操作步驟**：
-1.  使用具備管理員權限的 Apple ID 登入 [school.apple.com](https://school.apple.com)。
+1.  使用具備管理員權限的 Apple 帳號 登入 [school.apple.com](https://school.apple.com)。
 2.  系統會自動彈出條款視窗，請仔細閱讀後勾選「我已閱讀並同意...」。
 3.  點選「同意」按鈕即可完成。
 
@@ -47,35 +47,35 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 *   **裝置不會主動脫離管理**，但管理端已無法控制它們，形同「失聯」。
 *   **若憑證過期太久被 Apple 復原**：您可能需要重新建立新憑證，導致所有裝置必須**個別進行清除 (Erase) 並重新註冊**。對於數百台裝置的學校而言，這將是災難性的工作量。
 
-**續約流程（務必使用原本的 Apple ID）**：
+**續約流程（務必使用原本的 Apple 帳號）**：
 1.  **Jamf Pro 提醒**：系統會在到期前 30 天發送 Email 通知，並在儀錶板顯示警告。請立即處理！
 2.  **登入 Jamf Pro**：前往 **「設定 (Settings)」>「全域管理 (Global Management)」>「推播憑證 (Push Certificates)」**。
 3.  **點選「續約 (Renew)」**，系統會產生一個 **憑證簽署請求 (CSR)** 檔案供您下載。
-4.  **登入 Apple 推播憑證入口網站**：前往 [identity.apple.com/pushcert](https://identity.apple.com/pushcert)，使用**最初建立該憑證的同一個 Apple ID** 登入。
-    *   ⚠️ **嚴重警告**：若使用不同的 Apple ID 登入並建立新憑證，Apple 會將其視為「全新的 MDM 服務」，所有裝置將與 Jamf Pro 斷開連結！
+4.  **登入 Apple 推播憑證入口網站**：前往 [identity.apple.com/pushcert](https://identity.apple.com/pushcert)，使用**最初建立該憑證的同一個 Apple 帳號** 登入。
+    *   ⚠️ **嚴重警告**：若使用不同的 Apple 帳號 登入並建立新憑證，Apple 會將其視為「全新的 MDM 服務」，所有裝置將與 Jamf Pro 斷開連結！
 5.  **找到對應的憑證點選「Renew」**：上傳 CSR 檔案，下載新的 .pem 憑證檔。
 6.  **回到 Jamf Pro 上傳新憑證**：完成後，憑證有效期將延長一年。
 
 **最佳實踐**：
 *   在組織共用行事曆中設定每年提前 60 天的續約提醒。
-*   將負責憑證的 Apple ID 密碼與雙重認證備援方法或**硬體安全金鑰**記錄於安全的密碼管理系統中。
-*   建議使用機構專屬的 Apple ID（如 mdm-admin@school.edu.tw），而非個人 Apple ID。
-*   **2025 年更新**：現在管理員可以透過 [iforgot.apple.com](https://iforgot.apple.com) 更輕鬆地重設管理式 Apple 帳戶密碼，但仍強烈建議保持電話號碼的有效性。
+*   將負責憑證的 Apple 帳號 密碼與雙重認證備援方法或**硬體安全金鑰**記錄於安全的密碼管理系統中。
+*   建議使用機構專屬的 Apple 帳號（如 mdm-admin@school.edu.tw），而非個人 Apple 帳號。
+*   **密碼重置**：現在管理員可以透過 [iforgot.apple.com](https://iforgot.apple.com) 更輕鬆地重設管理式 Apple 帳號密碼，但仍強烈建議保持電話號碼的有效性。
 `
       },
       {
         id: 'acc-3',
-        question: '如何重置學生的「管理式 Apple ID」密碼？',
-        tags: ['密碼重置', 'ASM', '管理式 Apple ID'],
+        question: '如何重置學生的「管理式 Apple 帳號」密碼？',
+        tags: ['密碼重置', 'ASM', '管理式 Apple 帳號'],
         answer: `
-**管理式 Apple ID 的密碼重置只能由管理員在 Apple 校務管理 (ASM) 後台操作。**
+**管理式 Apple 帳號 的密碼重置只能由管理員在 Apple 校務管理 (ASM) 後台操作。**
 
-管理式 Apple ID (Managed Apple ID) 是 Apple 專為教育與企業機構設計的帳號類型，與一般消費者的 Apple ID 不同，它的密碼重置不會寄送 Email 給使用者，而是由機構的 IT 管理員直接在後台處理。
+管理式 Apple 帳號 (Managed Apple Account) 是 Apple 專為教育與企業機構設計的帳號類型，與一般消費者的 Apple 帳號 不同，它的密碼重置不會寄送 Email 給使用者，而是由機構的 IT 管理員直接在後台處理。
 
 **操作步驟**：
 1.  使用管理員帳號登入 **Apple 校務管理** ([school.apple.com](https://school.apple.com))。
 2.  點選左側選單的 **「帳號 (Accounts)」**，再點選 **「使用者 (People)」**。
-3.  在搜尋框中輸入該學生的姓名、Email 或 Apple ID 進行搜尋。
+3.  在搜尋框中輸入該學生的姓名、Email 或 Apple 帳號 進行搜尋。
 4.  點選該使用者進入詳細資訊頁面。
 5.  找到 **「登入資訊 (Sign-in)」** 區塊，點選 **「重置密碼 (Reset Password)」**。
 6.  您有兩個選項：
@@ -135,13 +135,13 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
         answer: `
 **可以，這稱為「聯邦驗證 (Federated Authentication)」，能讓師生使用學校的 Google 或 Microsoft 帳號登入 Apple 服務。**
 
-聯邦驗證是 Apple 校務管理 (ASM) 提供的進階功能，讓學校可以將現有的 Google Workspace 或 Microsoft Entra ID (原 Azure AD) 帳號系統與 Apple 的管理式 Apple ID 整合。
+聯邦驗證是 Apple 校務管理 (ASM) 提供的進階功能，讓學校可以將現有的 Google Workspace 或 Microsoft Entra ID (原 Azure AD) 帳號系統與 Apple 的管理式 Apple 帳號 整合。
 
 **優點**：
 *   **單一帳號**：師生只需記住一組 Google/Microsoft 帳密，即可登入 iCloud、課堂 App、共用 iPad 等 Apple 服務。
-*   **帳號自動同步**：當學校在 Google Admin 或 Microsoft 365 管理中心建立新帳號時，會自動在 ASM 中建立對應的管理式 Apple ID（透過 SCIM 連接器）。
+*   **帳號自動同步**：當學校在 Google Admin 或 Microsoft 365 管理中心建立新帳號時，會自動在 ASM 中建立對應的管理式 Apple 帳號（透過 SCIM 連接器）。
 *   **密碼同步**：密碼變更在 Google/Microsoft 端進行，ASM 會自動信任該身分驗證。
-*   **2025 年新功能**：macOS 15 (Sequoia) 以上版本支援 **「輕點登入 (Tap to Login)」**，讓師生能透過 iPhone 或 Apple Watch 的 NFC 憑證，快速登入已與 IdP 關聯的 Mac。
+*   **輕點登入 (Tap to Login)**：macOS 15 (Sequoia) 以上版本支援此功能，讓師生能透過 iPhone 或 Apple Watch 的 NFC 憑證，快速登入已與 IdP 關聯的 Mac。
 
 **設定需求（需 IT 管理員操作）**：
 1.  **驗證網域**：在 ASM 中新增並驗證學校的 Email 網域（如 @school.edu.tw），需在 DNS 設定中加入 TXT 記錄。
@@ -160,12 +160,12 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
       },
       {
         id: 'acc-6',
-        question: '學生畢業或離校了，我該如何處理他們的管理式 Apple ID？',
+        question: '學生畢業或離校了，我該如何處理他們的管理式 Apple 帳號？',
         tags: ['帳號生命週期', '畢業離校', '資料保留'],
         answer: `
 **畢業或離校帳號應先停用，確認無誤後再刪除。貿然刪除將無法復原！**
 
-管理式 Apple ID 的生命週期管理是學校 IT 的重要職責。妥善處理可確保帳號不被濫用，同時符合個資法規要求。
+管理式 Apple 帳號 的生命週期管理是學校 IT 的重要職責。妥善處理可確保帳號不被濫用，同時符合個資法規要求。
 
 **建議處理流程**：
 
@@ -186,7 +186,7 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 2.  **警告**：刪除是**永久性**的！
     *   該帳號雲端的所有資料（作業、筆記、照片備份）將無法救回。
     *   VPP 授權會自動釋放回授權池。
-    *   該 Apple ID 永遠無法再被使用。
+    *   該 Apple 帳號 永遠無法再被使用。
 
 **批次處理**：
 若需一次處理大量畢業生帳號，可使用 ASM 的 **「匯入」** 功能：
@@ -195,15 +195,15 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 3.  重新匯入 CSV，系統會批次更新。
 
 **合規提醒**：
-根據《個人資料保護法》，學校對於學生資料應有明確的儲存與銷毀政策。建議在新生入學時即告知管理式 Apple ID 資料之儲存期限（如離校後保留 90 天），並於離校時讓學生自行備份雲端資料。
+根據《個人資料保護法》，學校對於學生資料應有明確的儲存與銷毀政策。建議在新生入學時即告知管理式 Apple 帳號 資料之儲存期限（如離校後保留 90 天），並於離校時讓學生自行備份雲端資料。
 `
       },
       {
         id: 'acc-7',
-        question: '我可以使用個人的 Apple ID 登入學校的 iPad 嗎？',
-        tags: ['個人 Apple ID', '帳號管理', '風險警告'],
+        question: '我可以使用個人的 Apple 帳號 登入學校的 iPad 嗎？',
+        tags: ['個人 Apple 帳號', '帳號管理', '風險警告'],
         answer: `
-**標準政策：不可以。學校裝置應使用管理式 Apple ID (Managed Apple ID) 或不登入任何 Apple ID。**
+**標準政策：不可以。學校裝置應使用管理式 Apple 帳號 (Managed Apple Account) 或不登入任何 Apple 帳號。**
 
 這項政策的目的是確保資料歸屬權明確、保護個人隱私、以及維持 MDM 管理的一致性。
 
@@ -212,7 +212,7 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 | 風險項目 | 詳細說明 |
 |---------|---------|
 | 資料混合 | 您的私人照片、聯絡人、訊息可能會透過 iCloud 同步到這台公用平板，被下一個使用者看到。 |
-| 啟用鎖定 (Activation Lock) | 若登入個人 Apple ID 且開啟「尋找」功能，歸還時忘記登出會導致這台 iPad 被您的帳號鎖死。學校可能需要花費數週送 Apple 原廠驗證解鎖。 |
+| 啟用鎖定 (Activation Lock) | 若登入個人 Apple 帳號 且開啟「尋找」功能，歸還時忘記登出會導致這台 iPad 被您的帳號鎖死。學校可能需要花費數週送 Apple 原廠驗證解鎖。 |
 | 授權衝突 | 您用個人帳號下載的 App，學校的 VPP 授權將無法覆蓋它。造成同一款 App 出現兩個來源的混亂狀況。 |
 | 無法遠端管理 | 用個人帳號下載的 App，MDM 無法替您更新或移除。 |
 | 隱私爭議 | 若學校執行遠端清除，您個人的雲端資料設定可能受影響，引發法律爭議。 |
@@ -221,9 +221,9 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 
 > ⚠️ **替代方案（需管理員核准）**
 >
-> 若老師或學生確實需要登入個人 Apple ID 下載已購買的 App，請遵守以下規則：
+> 若老師或學生確實需要登入個人 Apple 帳號 下載已購買的 App，請遵守以下規則：
 >
-> 1.  **僅登入 App Store**：在「設定」>「App Store」中使用個人 Apple ID 登入，但**切勿**登入「設定」>「Apple ID」頂端的 iCloud 帳號區塊。
+> 1.  **僅登入 App Store**：在「設定」>「App Store」中使用個人 Apple 帳號 登入，但**切勿**登入「設定」>「Apple 帳號」頂端的 iCloud 帳號區塊。
 > 2.  **下載完畢立即登出**：完成 App 下載後，請至「設定」>「App Store」>「登出」。
 > 3.  **由學校 MDM 控管更新**：告知管理員您安裝了哪些 App，若需更新請重新短暫登入。
 > 4.  **絕對不要開啟「尋找」功能**。
@@ -301,15 +301,15 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
       },
       {
         id: 'acc-10',
-        question: '學校的 Email 網域更換了（例如從 .edu.tw 改為 .xh.edu.tw），該怎麼更改管理式 Apple ID？',
+        question: '學校的 Email 網域更換了（例如從 .edu.tw 改為 .xh.edu.tw），該怎麼更改管理式 Apple 帳號？',
         tags: ['網域變更', '帳號管理', '重大異動'],
         answer: `
-**這是一項重大變更，需要周詳規劃。管理式 Apple ID 的 Email 格式會隨網域變更而改變，影響所有使用者的登入方式。**
+**這是一項重大變更，需要周詳規劃。管理式 Apple 帳號 的 Email 格式會隨網域變更而改變，影響所有使用者的登入方式。**
 
 **變更前的評估**：
 *   **影響人數**：估算有多少師生帳號需要更新。
 *   **時間點**：強烈建議在 **寒暑假期間** 進行，以減少對教學的影響。
-*   **通知計畫**：事先發布公告，告知師生新的 Apple ID 格式與變更生效日期。
+*   **通知計畫**：事先發布公告，告知師生新的 Apple 帳號 格式與變更生效日期。
 
 **操作流程**：
 
@@ -319,25 +319,25 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 3.  輸入新的網域（如 @school.xh.edu.tw）。
 4.  依指示在 DNS 加入 TXT 驗證記錄，完成網域驗證。
 
-**步驟二：批次更新使用者 Apple ID**
+**步驟二：批次更新使用者 Apple 帳號**
 1.  前往「帳號」>「使用者」。
 2.  使用「匯出」功能將所有帳號匯出為 CSV 檔案。
-3.  在試算表軟體中，將所有 Apple ID 欄位的舊網域（@school.edu.tw）取代為新網域（@school.xh.edu.tw）。
+3.  在試算表軟體中，將所有 Apple 帳號 欄位的舊網域（@school.edu.tw）取代為新網域（@school.xh.edu.tw）。
 4.  儲存並重新匯入 CSV 至 ASM。
 
 **步驟三：通知使用者重新登入**
-*   已登入的裝置會跳出「Apple ID 驗證失敗」的提示。
-*   使用者需使用 **新的 Apple ID**（新網域格式）重新登入。
+*   已登入的裝置會跳出「Apple 帳號驗證失敗」的提示。
+*   使用者需使用 **新的 Apple 帳號**（新網域格式）重新登入。
 *   密碼通常維持不變（除非您在步驟二中同時重置了密碼）。
 
 **注意事項**：
-*   **共用 iPad**：若使用共用 iPad 模式，使用者登入畫面會自動更新為新的 Apple ID 格式。
+*   **共用 iPad**：若使用共用 iPad 模式，使用者登入畫面會自動更新為新的 Apple 帳號 格式。
 *   **iCloud 資料**：帳號識別碼變更後，iCloud 資料理論上會跟著帳號走。但建議在變更前請使用者自行備份重要資料至本機或 Google 雲端硬碟。
 *   **聯邦驗證**：若已設定與 Google/Microsoft 的聯邦驗證，需確認身分提供者端的 Email 也同步更新，否則會驗證失敗。
-*   **2025 年更新**：Apple 現在允許管理員下載已驗證網域中「非管理式 Apple 帳戶」的 Email 清單，協助您識別有哪些個人帳號使用了學校網域。
+*   **帳號識別**：Apple 允許管理員下載已驗證網域中「非管理式 Apple 帳號」的 Email 清單，協助您識別有哪些個人帳號使用了學校網域。
 
 **回滾計畫**：
-若更新過程發生嚴重問題，可嘗試將 CSV 中的 Apple ID 改回舊格式並重新匯入。但此操作複雜且有資料遺失風險，因此強烈建議在小規模測試群組（如資訊組成員）先行測試後，再全面推行。
+若更新過程發生嚴重問題，可嘗試將 CSV 中的 Apple 帳號 改回舊格式並重新匯入。但此操作複雜且有資料遺失風險，因此強烈建議在小規模測試群組（如資訊組成員）先行測試後，再全面推行。
 `
       },
       {
@@ -362,9 +362,9 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
         id: 'acc-12',
         question: '【Migration】更換新 MDM 廠商時，如何「不抹除資料」進行遷移？',
         important: true,
-        tags: ['遷移', '2025 新功能', 'MDM 轉移'],
+        tags: ['遷移', 'MDM 轉移'],
         answer: `
-**2025 年 Apple 官方支援的「Migration without Wipe」API。**
+**Apple 官方支援「Migration without Wipe」API，可保留資料遷移。**
 
 1. **前提**：原 MDM 與新 MDM 均需支援此遷移 API。
 2. **流程**：
@@ -376,10 +376,10 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
       },
       {
         id: 'acc-13',
-        question: '【iForgot】忘記管理式 Apple ID 密碼，一定要聯絡資訊組嗎？',
-        tags: ['密碼重置', 'ASM', '2025 新功能'],
+        question: '【iForgot】忘記管理式 Apple 帳號密碼，一定要聯絡資訊組嗎？',
+        tags: ['密碼重置', 'ASM', '自助重設'],
         answer: `
-**2025 年新功能：支援透過 iforgot.apple.com 自行重設。**
+**支援透過 iforgot.apple.com 自行重設。**
 
 *   前提：管理員在 ASM 中有設定「復原聯絡資訊」(手機或備用信箱)。
 *   使用者可自行前往 iforgot 並依照驗證流程重設密碼，無需資訊組介入。
@@ -410,16 +410,16 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
       },
       {
         id: 'acc-16',
-        question: '2025 年新功能：如何在 Apple 校務管理中強制「域名擷取 (Domain Capture)」？',
+        question: '如何在 Apple 校務管理中強制「域名擷取 (Domain Capture)」？',
         important: true,
-        tags: ['Domain Capture', 'ASM', '2025 新功能', '帳號轉移'],
+        tags: ['Domain Capture', 'ASM', '帳號轉移'],
         answer: `
-**這是在 iOS 18 / macOS 15 之後最重要的管理功能之一，能將使用學校網域註冊的個人帳號強制納入管理。**
+**這是管理組織網域帳號的重要功能，能將使用學校網域註冊的個人帳號強制納入管理。**
 
 **功能解說**：
-以往師生若先用學校 Email (@school.edu.tw) 註冊了個人的 Apple ID，學校在 ASM 中驗證網域時會發生衝突。2025 年 Apple 提供的「域名擷取 (Domain Capture)」功能允許管理員：
+以往師生若先用學校 Email (@school.edu.tw) 註冊了個人的 Apple 帳號，學校在 ASM 中驗證網域時會發生衝突。Apple 提供的「域名擷取 (Domain Capture)」功能允許管理員：
 1.  **識別衝突帳號**：ASM 會列出有多少個人帳號使用了您的已驗證網域。
-2.  **強制轉移 (Account Transfer)**：您可以發出通知，要求這些使用者在 60 天內將帳號改為個人 Email，或是配合轉移為「管理式 Apple ID」。
+2.  **強制轉移 (Account Transfer)**：您可以發出通知，要求這些使用者在 60 天內將帳號改為個人 Email，或是配合轉移為「管理式 Apple 帳號」。
 3.  **自動擷取**：對於未處理的帳號，系統可設定在期限後自動將其 Email 識別碼擷取，強制轉換為機構管理狀態。
 
 **操作路徑**：
@@ -441,7 +441,7 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 **傳統痛點**：
 以往即使設定了 Azure AD 或 Okta 登入 Mac，開機時的第一層 FileVault 加密畫面仍必須輸入「本機帳號密碼」，造成使用者需要輸入兩次密碼的困擾。
 
-**2025 年解決方案**：
+**解決方案**：
 透過更新 Jamf Pro 描述檔並啟用 **「FileVault 延伸功能」**，系統可將 PSSO 的憑證與加密磁碟解鎖權限綁定。
 1.  **需求**：macOS 15+、支援 PSSO 的 IdP（如 Microsoft Entra ID）、Jamf Pro 11.10+。
 2.  **設定**：在「設定描述檔」>「單一登入延伸功能」中，啟用「啟用 FileVault 解鎖」選項。
@@ -462,7 +462,7 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 4.  **重新指派**：在新 MDM 同步 VPP 內容後，您會看到與之前相同的總授權數，即可開始重新指派給裝置。
 
 **進階 Tip**：
-2025 年 Apple 推出的 **「MDM 遷移 API」** 甚至支援「Preserve VPP Assignment」。若使用此 API，App 在遷移過程中不會被刪除，且授權狀態會靜默移轉到新 MDM 中，無需使用者重新下載。
+Apple 推出的 **「MDM 遷移 API」** 甚至支援「Preserve VPP Assignment」。若使用此 API，App 在遷移過程中不會被刪除，且授權狀態會靜默移轉到新 MDM 中，無需使用者重新下載。
 `
       }
     ]

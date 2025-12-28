@@ -1,6 +1,6 @@
 /**
  * 維護指南 (2025/12/11 更新)：
- * 1. 本表已更新至 2025 年底最新技術標準。
+ * 1. 本表已更新至最新技術標準。
  * 2. 定義區塊大幅擴充，旨在讓無背景知識的新手也能理解技術脈絡。
  * 3. 包含 Apple 裝置管理、網路基礎、Jamf 生態系與通用 IT 術語。
  */
@@ -44,7 +44,7 @@ export const glossaryData: Term[] = [
 
     category: ['Apple'],
 
-    definition: 'Apple 商務管理。這是企業管理 Apple 裝置的最高層級入口網站（數位資產的源頭）。它串聯了裝置採購來源（確保裝置屬於公司）、內容購買（大量 App 授權）以及人員帳號管理（管理式 Apple ID）。MDM 伺服器必須與 ABM 串接，才能證明其對裝置的合法管理權。',
+    definition: 'Apple 商務管理。這是企業管理 Apple 裝置的最高層級入口網站（數位資產的源頭）。它串聯了裝置採購來源（確保裝置屬於公司）、內容購買（大量 App 授權）以及人員帳號管理（管理式 Apple 帳號）。MDM 伺服器必須與 ABM 串接，才能證明其對裝置的合法管理權。',
 
     analogy: '就像企業的「數位總司令部」。所有新買的裝備（裝置）、糧草（App）和兵籍資料（帳號）都必須先在這裡列冊，才能分發給底下的連隊（MDM）去指揮。'
 
@@ -55,7 +55,7 @@ export const glossaryData: Term[] = [
 
     category: ['Enrollment'],
 
-    definition: '帳號驅動裝置註冊。這是 2025 年主流的註冊方式，取代了傳統掃描 QR Code 或手動下載描述檔的流程。使用者只需在「設定」>「一般」>「VPN 與裝置管理」中登入公司的管理式 Apple ID，系統便會自動引導完成 MDM 註冊流程，將公私資料分離。',
+    definition: '帳號驅動裝置註冊。這是現代主流的註冊方式，取代了傳統掃描 QR Code 或手動下載描述檔的流程。使用者只需在「設定」>「一般」>「VPN 與裝置管理」中登入公司的管理式 Apple 帳號，系統便會自動引導完成 MDM 註冊流程，將公私資料分離。',
 
     analogy: '就像「識別證報到法」。不用填寫繁瑣的入職表格，只要刷一下公司發的識別證（登入帳號），系統就知道你是誰，並自動配發辦公所需的權限與工具。'
 
@@ -77,7 +77,7 @@ export const glossaryData: Term[] = [
 
     category: ['Security'],
 
-    definition: '啟用鎖定。這是一種硬體層級的防盜機制，預設與「尋找 (Find My)」功能綁定。當裝置被重置或清除後，必須輸入原使用者的 Apple ID 與密碼才能重新啟用。這對企業 IT 是一把雙面刃：它能防盜，但若員工離職未登出，會導致裝置變磚。MDM 可透過託管機制攔截此鎖定。',
+    definition: '啟用鎖定。這是一種硬體層級的防盜機制，預設與「尋找 (Find My)」功能綁定。當裝置被重置或清除後，必須輸入原使用者的 Apple 帳號 與密碼才能重新啟用。這對企業 IT 是一把雙面刃：它能防盜，但若員工離職未登出，會導致裝置變磚。MDM 可透過託管機制攔截此鎖定。',
 
     analogy: '就像「認主人的數位大鎖」。就算小偷把手機拿去重灌洗掉資料，開機時鎖頭還是認得原主人的指紋。如果沒有主人的鑰匙（密碼），這台機器就只能當磚頭。'
 
@@ -297,7 +297,7 @@ export const glossaryData: Term[] = [
 
     category: ['Apple'],
 
-    definition: 'Apple 校務管理。這是教育機構專用的 ABM 版本。除了具備 ABM 的裝置與購買功能外，ASM 還整合了學生資訊系統 (SIS)，可自動建立「管理式 Apple ID」、班級名冊 (Roster) 與講師資料，是推動 Apple 教育應用的基礎資料庫。',
+    definition: 'Apple 校務管理。這是教育機構專用的 ABM 版本。除了具備 ABM 的裝置與購買功能外，ASM 還整合了學生資訊系統 (SIS)，可自動建立「管理式 Apple 帳號」、班級名冊 (Roster) 與講師資料，是推動 Apple 教育應用的基礎資料庫。',
 
     analogy: '就像學校的「數位教務處」。這裡掌管全校師生的數位學籍，誰是老師、誰是學生、誰在哪個班級，全部都在這裡設定好，然後同步給平板使用。'
 
@@ -468,7 +468,7 @@ export const glossaryData: Term[] = [
 
     category: ['Core'],
 
-    definition: '宣告式裝置管理。Apple 於 2021 推出的新一代 MDM 架構。MDM 不再逐條發送命令，而是發送「宣告」（Declarations）描述裝置應達到的狀態。裝置會自主監控並維持該狀態，大幅降低伺服器負載與網路流量。2025年為主流趨勢。',
+    definition: '宣告式裝置管理。Apple 於 2021 推出的新一代 MDM 架構。MDM 不再逐條發送命令，而是發送「宣告」（Declarations）描述裝置應達到的狀態。裝置會自主監控並維持該狀態，大幅降低伺服器負載與網路流量。現今已成為主流趨勢。',
 
     analogy: '就像「目標管理」取代「微觀指令」。以前是老闆每天交辦「早上打掃、中午整理、下午檢查」，現在只說「辦公室要保持整潔」，員工自己檢查並維持，不用老闆一直盯。'
 
@@ -558,7 +558,7 @@ export const glossaryData: Term[] = [
 
     category: ['Apple', 'Security'],
 
-    definition: '域名擷取。Apple 校務管理中的一項安全功能。當學校驗證其 Email 網域後，可以將所有使用該網域註冊的個人 Apple ID 識別出來，並要求使用者將其轉換為管理式帳號或更改 Email。這確保了組織對所有含學校網域識別碼的帳號擁有最終控制權。',
+    definition: '域名擷取。Apple 校務管理中的一項安全功能。當學校驗證其 Email 網域後，可以將所有使用該網域註冊的個人 Apple 帳號 識別出來，並要求使用者將其轉換為管理式帳號或更改 Email。這確保了組織對所有含學校網域識別碼的帳號擁有最終控制權。',
 
     analogy: '就像「收編非正規車輛」。本來有人私下把自家車漆成校車顏色（用學校 Email 註冊個人帳號），現在學校規定：凡是漆成校車顏色的都要登記（納入管理），不想登記的就要把漆刷掉（換 Email）。'
 
@@ -604,7 +604,7 @@ export const glossaryData: Term[] = [
 
     category: ['Apple'],
 
-    definition: '聯合驗證。這是將 ABM 與企業的身分提供者 (IdP，如 Google Workspace 或 Azure AD) 連結的機制。設定後，員工可以使用原本的公司 Email 和密碼登入管理式 Apple ID，無需另外記憶一組 Apple 專用密碼。',
+    definition: '聯合驗證。這是將 ABM 與企業的身分提供者 (IdP，如 Google Workspace 或 Azure AD) 連結的機制。設定後，員工可以使用原本的公司 Email 和密碼登入管理式 Apple 帳號，無需另外記憶一組 Apple 專用密碼。',
 
     analogy: '就像「帳號通」。像去很多網站可以用「Facebook 登入」一樣。員工用公司原本的帳號密碼，就能直接通關進入 Apple 的世界，不用再辦一張新的身分證。'
 
@@ -801,7 +801,7 @@ export const glossaryData: Term[] = [
 
     category: ['Security', 'Education'],
 
-    definition: 'NIST 行動裝置資安基準。由美國國家標準與技術研究院制定的資安框架，2025 年起被教育部採納作為學習載具的安檢指標。包含 6 碼複雜密碼、自動更新強制、資料不落地等。',
+    definition: 'NIST 行動裝置資安基準。由美國國家標準與技術研究院制定的資安框架，已被教育部採納作為學習載具的安檢指標。包含 6 碼複雜密碼、自動更新強制、資料不落地等。',
 
     analogy: '就像「數位消防安檢標準」。每間學校的平板都要通過這套標準：滅火器（防毒）有沒有準備、逃生口（更新）有沒有通、防火牆（加密）有沒有蓋好，通過了才能上線。'
 
@@ -812,7 +812,7 @@ export const glossaryData: Term[] = [
 
     category: ['Security', 'macOS'],
 
-    definition: '平台單一登入。Apple 在 macOS 13+ 引入的新技術，旨在取代傳統 AD 綁定。PSSO 讓 Mac 本機帳號直接與雲端 IdP（如 Entra ID）同步。2025 年新版更支援了 FileVault 解鎖，使用者輸入一次帳密即可完成開機到登入的所有流程。',
+    definition: '平台單一登入。Apple 在 macOS 13+ 引入的新技術，旨在取代傳統 AD 綁定。PSSO 讓 Mac 本機帳號直接與雲端 IdP（如 Entra ID）同步。新版更支援了 FileVault 解鎖，使用者輸入一次帳密即可完成開機到登入的所有流程。',
 
     analogy: '就像「一卡通通行」。不用一張門卡開大門，另一張鑰匙開辦公室。PSSO 讓你一張卡（一組帳密）就搞定從進公司到坐下辦公的所有權限驗證。'
 
@@ -859,11 +859,11 @@ export const glossaryData: Term[] = [
   },
   {
 
-    term: 'Managed Apple ID (管理式 Apple ID)',
+    term: '管理式 Apple 帳號 (Managed Apple Account)',
 
     category: ['Apple'],
 
-    definition: '管理式 Apple ID。由企業或學校在 ABM/ASM 中建立的 Apple 帳號。與個人 Apple ID 不同，它歸組織所有，IT 人員可重置密碼、稽核資料，且預設停用了「尋找」、「錢包」與「App Store 購買」等消費性功能，專注於協作與雲端儲存。',
+    definition: '管理式 Apple 帳號。由企業或學校在 ABM/ASM 中建立的 Apple 帳號。與個人 Apple 帳號 不同，它歸組織所有，IT 人員可重置密碼、稽核資料，且預設停用了「尋找」、「錢包」與「App Store 購買」等消費性功能，專注於協作與雲端儲存。',
 
     analogy: '就像「公務帳號」。這是公司發給你的，不是你自己的。你可以用它來存公文（iCloud）、開會，但不能拿去買遊戲，而且離職時帳號會被公司收回。'
 
@@ -979,7 +979,7 @@ export const glossaryData: Term[] = [
 
     category: ['Security'],
 
-    definition: '通行密鑰。這是 FIDO 聯盟與 Apple 推動的「無密碼」登入標準。它利用裝置的生物辨識（FaceID/TouchID）與公開金鑰加密技術來取代傳統密碼。在 2025 年，企業正逐步導入 Passkeys 以消除釣魚攻擊與密碼外洩風險。',
+    definition: '通行密鑰。這是 FIDO 聯盟與 Apple 推動的「無密碼」登入標準。它利用裝置的生物辨識（FaceID/TouchID）與公開金鑰加密技術來取代傳統密碼。企業正逐步導入 Passkeys 以消除釣魚攻擊與密碼外洩風險。',
 
     analogy: '就像「指紋就是密碼」。以後登入網站不用再想破頭記那串「P@ssw0rd123」了，只要對著鏡頭笑一下（刷臉）或按個指紋，門就開了。鑰匙就在你身上，別人偷不走。'
 
@@ -1271,7 +1271,7 @@ export const glossaryData: Term[] = [
 
     category: ['Enrollment'],
 
-    definition: '設定輔助程式。Apple 裝置第一次開機時出現的引導畫面（Hello/哈囉畫面開始）。它會逐步詢問語言、Wi-Fi、Apple ID、定位服務等設定。透過 ADE + PreStage，IT 可以跳過大部分畫面，讓裝置直接進入可用狀態。',
+    definition: '設定輔助程式。Apple 裝置第一次開機時出現的引導畫面（Hello/哈囉畫面開始）。它會逐步詢問語言、Wi-Fi、Apple 帳號、定位服務等設定。透過 ADE + PreStage，IT 可以跳過大部分畫面，讓裝置直接進入可用狀態。',
 
     analogy: '就像「新手教學關卡」。就像遊戲一開始的新手村，會問你一堆問題：選語言、連網路、創帳號。但公司可以幫你設定「跳關」，讓你直接跳到主畫面開始使用。'
 
@@ -1462,7 +1462,7 @@ export const glossaryData: Term[] = [
 
     category: ['Hardware'],
 
-    definition: 'USB Type-C。2025 年 Apple 全線產品（iPhone 15/16+, iPad, Mac）的通用介面。它支援正反插，且集成了資料傳輸、影音輸出 (DisplayPort) 與雙向高瓦數供電 (PD)。對於管理者而言，這意味著周邊配件與充電器的統一，但也帶來了資料透過隨身碟外洩的風險，需透過 MDM 管控 USB 權限。',
+    definition: 'USB Type-C。現今 Apple 全線產品（iPhone 15/16+, iPad, Mac）的通用介面。它支援正反插，且集成了資料傳輸、影音輸出 (DisplayPort) 與雙向高瓦數供電 (PD)。對於管理者而言，這意味著周邊配件與充電器的統一，但也帶來了資料透過隨身碟外洩的風險，需透過 MDM 管控 USB 權限。',
 
     analogy: '就像「萬用孔」。以前要分 HDMI、電源線、傳輸線，現在全部合併成一個孔。一條線能搞定充電、傳螢幕、傳檔案，插頭還不會插反。'
 
@@ -1508,7 +1508,7 @@ export const glossaryData: Term[] = [
 
     category: ['Apple'],
 
-    definition: '大量採購計畫（現整合於 ABM 的 Apps and Books）。這是企業大量購買 App 授權的機制。企業購買後獲得「虛擬授權」，可透過 MDM 分發給裝置或 Apple ID。最重要的是，企業保有授權的所有權，當員工離職或裝置回收時，MDM 可以「收回」授權並分發給下一位員工。',
+    definition: '大量採購計畫（現整合於 ABM 的 Apps and Books）。這是企業大量購買 App 授權的機制。企業購買後獲得「虛擬授權」，可透過 MDM 分發給裝置或 Apple 帳號。最重要的是，企業保有授權的所有權，當員工離職或裝置回收時，MDM 可以「收回」授權並分發給下一位員工。',
 
     analogy: '就像「數位圖書館」。公司買了一百本電子書（App），借給員工看。員工看完或離職了，書就自動歸還到公司的架上，可以再借給下一個人，不用每次有人來都重新買書。'
 
@@ -1602,7 +1602,7 @@ export const glossaryData: Term[] = [
   {
     term: 'Jamf Pro API',
     category: ['Jamf', 'Other'],
-    definition: 'Jamf Pro 提供的 RESTful API 介面。允許開發者和系統管理員使用程式自動化操作 Jamf,如批量建立 Policy、匯入裝置清單、產生自訂報表、觸發遠端指令等。2025 年已全面改用 Jamf Pro API v2,提供更完整的功能和更好的效能。支援各種程式語言整合。',
+    definition: 'Jamf Pro 提供的 RESTful API 介面。允許開發者和系統管理員使用程式自動化操作 Jamf,如批量建立 Policy、匯入裝置清單、產生自訂報表、觸發遠端指令等。現已全面改用 Jamf Pro API v2,提供更完整的功能和更好的效能。支援各種程式語言整合。',
     analogy: '就像「管理後台的遙控器」。不用手動點網頁,寫程式就能一次建立100條政策、每天自動匯出報表寄信、批量更新1000台裝置設定,省下90%重複操作時間。'
   },
   {

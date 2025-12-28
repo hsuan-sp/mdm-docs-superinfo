@@ -226,7 +226,7 @@ export const data: QASection[] = [
             {
                 id: 'cls-12',
                 question: '【考試防弊】如何避免學生用 Apple Intelligence (Writing Tools) 寫作文或作弊？',
-                tags: ['2025 新功能', 'Apple Intelligence', '防弊', 'AI'],
+                tags: ['Apple Intelligence', '防弊', 'AI'],
                 answer: `
 **針對 iOS 18.1+ 裝置，可透過 MDM 限制描述檔關閉 Writing Tools 與 Genmoji。**
 
@@ -277,7 +277,7 @@ export const data: QASection[] = [
                 answer: `
 **取決於有無開啟「管理式 iCloud」備份。**
 
-*   **有開啟備份**：學生在新機登入其管理式 Apple ID，原本的備忘錄、照片、Freeform (無邊界) 畫布會自動下載同步。
+*   **有開啟備份**：學生在新機登入其管理式 Apple 帳號，原本的備忘錄、照片、Freeform (無邊界) 畫布會自動下載同步。
 *   **無開啟備份**：App 雖然會透過 MDM 裝回來，但 App 內的本地檔案（如未存在雲端的 Keynote 檔案）將無法找回。
 **強烈建議**：所有學生專案應存放在校園雲端 (Google Drive/OneDrive) 或 iCloud Drive。
 `
@@ -299,9 +299,9 @@ export const data: QASection[] = [
             },
             {
                 id: 'cls-17',
-                question: '2025 年新挑戰：如何在課堂中管理「Apple Intelligence」的摘要與寫作工具？',
+                question: '新挑戰：如何在課堂中管理「Apple Intelligence」的摘要與寫作工具？',
                 important: true,
-                tags: ['Apple Intelligence', 'AI 限制', '考試', '2025 新功能'],
+                tags: ['Apple Intelligence', 'AI 限制', '考試'],
                 answer: `
 **生成式 AI 雖然強大，但在考試或基礎作文練習中可能需要暫時封鎖。**
 
@@ -336,7 +336,7 @@ export const data: QASection[] = [
 1. **隱藏 App**：在限制描述檔中將「時鐘」加入 App 黑名單。
     * *缺點：學生也無法使用計時器進行實驗。*
 2. **單一 App 模式 (Single App Mode)**：使用「課堂 (Classroom)」App 將全班鎖定在特定 App，此時鬧鐘即便響起也無法手動關閉，但學生無法進入時鐘修改設定。
-3. **宣告式設定描述檔**：2025 年新功能允許 MDM 監控「正在執行的活動」。雖然無法禁止設定，但可以設定規則：若監測到特定時間點有鬧鐘響起，自動發送推播警告給老師機。
+3. **宣告式設定描述檔**：新功能允許 MDM 監控「正在執行的活動」。雖然無法禁止設定，但可以設定規則：若監測到特定時間點有鬧鐘響起，自動發送推播警告給老師機。
 
 **最佳實踐**：
 對於惡作劇頻繁的班級，建議在「限制描述檔」中暫時隱藏時鐘 App。

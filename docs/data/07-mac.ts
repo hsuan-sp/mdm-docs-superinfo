@@ -52,7 +52,7 @@ Apple 在 macOS Ventura (13) 引入的原生功能，與身分提供者 (IdP) �
 *   **優點**：
     *   Apple 原生支援，整合度高。
     *   不需額外安裝軟體（如 Jamf Connect）。
-*   **2025 年更新 (macOS 15 Sequoia)**：
+*   **macOS 15 (Sequoia) 更新**：
     *   **Tap to Login**：支援使用與 IdP 連結的硬體金鑰或智慧型手機進行生物辨識登入，無需輸入長密碼。
     *   **離線驗證備援**：進一步強化了在沒有網路時的登入可靠性。
 *   **限制**：
@@ -537,7 +537,7 @@ M 系列 Mac 的安全架構不同，不使用傳統韌體密碼，而是使用 
 **注意事項**：
 *   設定後，合法的 IT 維護也需輸入密碼才能進入 Recovery。
 *   若 Mac 需送修，可能需先移除密碼保護。
-*   Apple Silicon Mac 的 Recovery Lock 與「啟用鎖定 (Activation Lock)」不同—啟用鎖定與 Apple ID 綁定；Recovery Lock 與 MDM 綁定。
+*   Apple Silicon Mac 的 Recovery Lock 與「啟用鎖定 (Activation Lock)」不同—啟用鎖定與 Apple 帳號 綁定；Recovery Lock 與 MDM 綁定。
 `
       },
       {
@@ -696,7 +696,7 @@ Microsoft Office 是教育環境的核心生產力工具。正確的部署方式
 
 | 來源 | 適合情境 | 授權管理 |
 |------|---------|---------|
-| **Mac App Store** | 個人購買 | 需個人 Apple ID，不適合組織 |
+| **Mac App Store** | 個人購買 | 需個人 Apple 帳號，不適合組織 |
 | **Microsoft 官網獨立安裝檔** | 組織部署 | 支援大量授權 (VL) 和 Microsoft 365 訂閱 |
 
 **建議使用 Microsoft 官網版本。**
@@ -783,10 +783,10 @@ Microsoft Office 是教育環境的核心生產力工具。正確的部署方式
       },
       {
         id: 'mac-13',
-        question: '【硬體部署】2025 年電腦教室改用 Mac Mini M4 有什麼優勢？',
+        question: '【硬體部署】電腦教室改用 Mac Mini M4 有什麼優勢？',
         tags: ['Mac Mini M4', '硬體選擇', '0-Touch'],
         answer: `
-**Mac Mini M4 憑藉其超小體積與 M4 晶片的 AI 效能，是 2025 年學校電腦教室的首選方案。**
+**Mac Mini M4 憑藉其超小體積與 M4 晶片的 AI 效能，是學校電腦教室的首選方案。**
 
 **核心優勢**：
 *   **極低功耗**：相比傳統桌上型 PC，能大幅減少電力開支，符合淨零排放政策。
@@ -800,13 +800,13 @@ Microsoft Office 是教育環境的核心生產力工具。正確的部署方式
         question: '【Activation Lock】Mac 送修回來被舊使用者的帳號鎖住了，怎麼辦？',
         tags: ['Mac 安全', '啟用鎖定', '解鎖'],
         answer: `
-**2025 年起，歸屬於 ASM 且受 MDM 管理的 Mac，可直接在 ASM 後台自助解鎖。**
+**歸屬於 ASM 且受 MDM 管理的 Mac，可直接在 ASM 後台自助解鎖。**
 
 **操作流程**：
 1.  登入 **Apple School Manager (ASM)**。
 2.  點選「裝置」，搜尋該台 Mac 的序號。
 3.  點選 **「解除啟用鎖定 (Release/Unlock)」**。
-4.  原本的 Apple ID 鎖定會被移除，重灌後即可正常設定。
+4.  原本的 Apple 帳號 鎖定會被移除，重灌後即可正常設定。
 *   **注意**：裝置必須已指派給您的 MDM 伺服器且記錄在 ASM 資產內。
 `
       }
