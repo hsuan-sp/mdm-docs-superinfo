@@ -1,15 +1,15 @@
 import { QASection } from '../types'
 
 export const data: QASection[] = [
-    {
-        title: '第四部分：課堂管理與教學應用 (Classroom Management)',
-        items: [
-            {
-                id: 'cls-1',
-                question: '老師可以透過「課堂 (Classroom)」App 看到每位學生的螢幕嗎？',
-                important: true,
-                tags: ['課堂 App', '螢幕檢視', '教學監控'],
-                answer: `
+  {
+    title: '第四部分：課堂管理與教學應用 (Classroom Management)',
+    items: [
+      {
+        id: 'cls-1',
+        question: '老師可以透過「課堂 (Classroom)」App 看到每位學生的螢幕嗎？',
+        important: true,
+        tags: ['課堂 App', '螢幕檢視', '教學監控'],
+        answer: `
 **可以，但有其先決條件與隱私限制。這是「課堂」App 最受歡迎的功能之一。**
 
 **運作模式**：
@@ -27,13 +27,13 @@ export const data: QASection[] = [
 *   若縮圖顯示「離線」，請確認學生端的藍牙是否誤關，或是否彈出「要求加入班級」的確認框。
 *   若畫面全黑，可能是網路頻寬不足或裝置反應較慢。
 `
-            },
-            {
-                id: 'cls-2',
-                question: '可以限制學生在課堂上只能使用特定的 App 嗎？',
-                important: true,
-                tags: ['App 鎖定', '課堂管理', '防弊'],
-                answer: `
+      },
+      {
+        id: 'cls-2',
+        question: '可以限制學生在課堂上只能使用特定的 App 嗎？',
+        important: true,
+        tags: ['App 鎖定', '課堂管理', '防弊'],
+        answer: `
 **可以。老師可以透過「課堂」功能將學生裝置「鎖入」特定 App，這在考試或專題練習時非常有用。**
 
 **設定方式**：
@@ -51,34 +51,34 @@ export const data: QASection[] = [
 *   此功能對「系統內建 App（如設定、電話）」的支援程度依 iOS 版本而定。
 *   建議優先鎖定教學導引需要的 App，如：Kahoot、Quizlet、或學校指定的學習平台。
 `
-            },
-            {
-                id: 'cls-3',
-                question: '學生的 iPad 導航不到指定的網頁，一直卡在原畫面？',
-                tags: ['網頁導航', '故障排除', 'Safari'],
-                answer: `
+      },
+      {
+        id: 'cls-3',
+        question: '學生的 iPad 導航不到指定的網頁，一直卡在原畫面？',
+        tags: ['網頁導航', '故障排除', 'Safari'],
+        answer: `
 **這通常與 Safari 的「分頁開啟限制」或「網站過濾」設定有關。**
 
 **排查步驟**：
 1.  **檢查 Safari 狀態**：
-    *   學生端是否已開啟 Safari。
-    *   Safari 是否已打開太多分頁（建議關閉一些）。
+*   學生端是否已開啟 Safari。
+*   Safari 是否已打開太多分頁（建議關閉一些）。
 2.  **檢查網站過濾 (Web Content Filter)**：
-    *   MDM 若設定了嚴格的網站白名單，而老師導航的 URL 不在白名單內，Safari 會被阻擋。
+*   MDM 若設定了嚴格的網站白名單，而老師導航的 URL 不在白名單內，Safari 會被阻擋。
 3.  **重新發送指令**：
-    *   嘗試在老師端取消導航，幾秒後再重新發送一次。
+*   嘗試在老師端取消導航，幾秒後再重新發送一次。
 4.  **檢查網路**：
-    *   確認學生端目前可以正常瀏覽一般網頁。
+*   確認學生端目前可以正常瀏覽一般網頁。
 
 **小技巧**：
 老師可事先將常用的 URL 加入 Safari 的書籤，並確保這些 URL 在 MDM 的白名單中，能大幅提升導航的成功率。
 `
-            },
-            {
-                id: 'cls-4',
-                question: '全班安靜！老師如何一鍵鎖定所有學生的螢幕？',
-                tags: ['螢幕鎖定', '課堂秩序'],
-                answer: `
+      },
+      {
+        id: 'cls-4',
+        question: '全班安靜！老師如何一鍵鎖定所有學生的螢幕？',
+        tags: ['螢幕鎖定', '課堂秩序'],
+        answer: `
 **透過「課堂」App 的「鎖定 (Lock)」功能，可讓全班 iPad 瞬間變為黑底的「停用」畫面。**
 
 **使用場景**：
@@ -94,29 +94,29 @@ export const data: QASection[] = [
 *   必須在藍牙收訊範圍內。
 *   鎖定期間，裝置仍會維持連網狀態，並不會中斷 App 的背景下載。
 `
-            },
-            {
-                id: 'cls-5',
-                question: '【實務排錯】iPad 上的藍牙一直開著，但「課堂」App 仍找不到學生？',
-                tags: ['故障排除', '藍牙', '同步'],
-                answer: `
+      },
+      {
+        id: 'cls-5',
+        question: '【實務排錯】iPad 上的藍牙一直開著，但「課堂」App 仍找不到學生？',
+        tags: ['故障排除', '藍牙', '同步'],
+        answer: `
 **這可能與「課程資料未即時更新」或「藍牙快取錯誤」有關。**
 
 **解決方案**：
 1.  **重啟藍牙**：老師與學生端皆重新開關一次藍牙。
 2.  **重啟裝置**：有時候系統層級的藍牙服務當掉，重啟 iPad 是最快的方法。
 3.  **檢查 Jamf 報到**：
-    *   利用 Jamf Teacher 或 Jamf Pro 確認該學生裝置目前的報到狀態是否正常。
-    *   若是透過 Apple 校務管理同步的課程，確認 ASM 中的課程名單已正確同步至 MDM。
+*   利用 Jamf Teacher 或 Jamf Pro 確認該學生裝置目前的報到狀態是否正常。
+*   若是透過 Apple 校務管理同步的課程，確認 ASM 中的課程名單已正確同步至 MDM。
 4.  **更新 Jamf Student 權限**：
-    *   前往「設定」>「Jamf Student」，確認「本地網路」與「藍牙」權限已開啟。
+*   前往「設定」>「Jamf Student」，確認「本地網路」與「藍牙」權限已開啟。
 `
-            },
-            {
-                id: 'cls-6',
-                question: '學生可以自己退出老師建立的「課堂」班級嗎？',
-                tags: ['課堂班級', '管理限制', '自主退出'],
-                answer: `
+      },
+      {
+        id: 'cls-6',
+        question: '學生可以自己退出老師建立的「課堂」班級嗎？',
+        tags: ['課堂班級', '管理限制', '自主退出'],
+        answer: `
 **這取決於該班級是「手動建立」還是「由 MDM 派送」。**
 
 *   **MDM 派送（推薦）**：班級資料由 ASM/MDM 統一推送，學生在「設定」中看不到退出選項。這是目前多數學校採用的穩定方式。
@@ -125,12 +125,12 @@ export const data: QASection[] = [
 **防止學生退出**：
 管理員可以在 Jamf Pro 的「限制」描述檔中，取消勾選 **「允許學生移除由老師建立的課程」**。
 `
-            },
-            {
-                id: 'cls-7',
-                question: '老師端 iPad 出現「等待裝置...」很久，指令都發不出去？',
-                tags: ['指令延遲', '網路環境'],
-                answer: `
+      },
+      {
+        id: 'cls-7',
+        question: '老師端 iPad 出現「等待裝置...」很久，指令都發不出去？',
+        tags: ['指令延遲', '網路環境'],
+        answer: `
 **這通常是「本地網路頻寬飽和」或「Apple 指令伺服器 (APNs) 回應過慢」造成的。**
 
 **優化建議**：
@@ -139,12 +139,12 @@ export const data: QASection[] = [
 3.  **查看 APNs 狀態**：Apple 的推播服務若發生全球性延遲，老師端的指令就會卡住。
 4.  **縮減指令範圍**：嘗試先對單一學生發送鎖定，若成功，再對全小組發送，最後再全班發送。
 `
-            },
-            {
-                id: 'cls-8',
-                question: '全班 iPad 同時播放影片，無線網路會癱瘓嗎？如何優化？',
-                tags: ['網路優化', '內容快取', '快取伺服器'],
-                answer: `
+      },
+      {
+        id: 'cls-8',
+        question: '全班 iPad 同時播放影片，無線網路會癱瘓嗎？如何優化？',
+        tags: ['網路優化', '內容快取', '快取伺服器'],
+        answer: `
 **會。當幾十台裝置同時從互聯網下載相同的高畫質影片，極易造成出口頻寬塞車。**
 
 **最佳方案：架設「內容快取 (Content Caching)」伺服器**。
@@ -154,12 +154,12 @@ export const data: QASection[] = [
 
 這是目前解決學校網路壅塞最節省成本且最有效的方法。
 `
-            },
-            {
-                id: 'cls-9',
-                question: '如何管理學生 iPad 的「螢幕亮度」與「自動鎖定時間」？',
-                tags: ['裝置設定', '省電', '管理政策'],
-                answer: `
+      },
+      {
+        id: 'cls-9',
+        question: '如何管理學生 iPad 的「螢幕亮度」與「自動鎖定時間」？',
+        tags: ['裝置設定', '省電', '管理政策'],
+        answer: `
 **MDM 可以統一設定亮度，並強制固定「自動鎖定」的時間。**
 
 **建議設定**：
@@ -167,12 +167,12 @@ export const data: QASection[] = [
 *   **自動鎖定**：建議設為 5 分鐘或更高，避免上課操作到一半突然熄屏。
 *   **深色模式 (Dark Mode)**：可透過 MDM 統一派送「外觀切換器」，引導全班在特定時間切換，保護視力。
 `
-            },
-            {
-                id: 'cls-10',
-                question: '課堂結束後，老師如何一鍵「登出」所有學生的共用 iPad？',
-                tags: ['共用 iPad', '登出指令', 'Shared iPad'],
-                answer: `
+      },
+      {
+        id: 'cls-10',
+        question: '課堂結束後，老師如何一鍵「登出」所有學生的共用 iPad？',
+        tags: ['共用 iPad', '登出指令', 'Shared iPad'],
+        answer: `
 **若是使用「共用 iPad (Shared iPad)」模式，老師可在「課堂」App 中點選「結束課程」並選擇「登出學生」。**
 
 **優勢**：
@@ -180,13 +180,13 @@ export const data: QASection[] = [
 *   強制觸發本地資料與 iCloud 的同步。
 *   釋放本機儲存空間（若管理員有設定儲存空間回收機制）。
 `
-            },
-            {
-                id: 'cls-11',
-                question: '為什麼 iPadOS 17 以後，有些網管反應無法抓到裝置的硬體 MAC 位址？',
-                tags: ['MAC 位址', '專用 Wi-Fi 位址', '隱私功能', '網管必看'],
-                important: true,
-                answer: `
+      },
+      {
+        id: 'cls-11',
+        question: '為什麼 iPadOS 17 以後，有些網管反應無法抓到裝置的硬體 MAC 位址？',
+        important: true,
+        tags: ['MAC 位址', '專用 Wi-Fi 位址', '隱私功能', '網管必看'],
+        answer: `
 **這是因為 Apple 預設啟用了「專用 Wi-Fi 位址 (Private Wi-Fi Address)」功能，又稱 MAC 位址隨機化。**
 
 **對教學管理的影響**：
@@ -198,11 +198,11 @@ export const data: QASection[] = [
 1.  **在 Jamf Pro 建立或編輯「Wi-Fi」設定描述檔**。
 
 2.  **進入「Wi-Fi」Payload 設定**：
-    *   設定學校的 Wi-Fi SSID、安全類型、密碼等。
+*   設定學校的 Wi-Fi SSID、安全類型、密碼等。
 
 3.  **找到「MAC 位址隨機化」相關選項**：
-    *   **「停用 MAC 位址隨機化 (Disable MAC Address Randomization)」**：勾選此選項。
-    *   或者類似名稱如「使用裝置 MAC 位址」。
+*   **「停用 MAC 位址隨機化 (Disable MAC Address Randomization)」**：勾選此選項。
+*   或者類似名稱如「使用裝置 MAC 位址」。
 
 4.  **儲存並推送至目標裝置**。
 
@@ -222,12 +222,12 @@ export const data: QASection[] = [
 *   **每個 SSID 需個別設定**：若學校有多個 Wi-Fi（如 Teacher-WiFi、Student-WiFi），需為每個 SSID 分別建立描述檔並關閉隨機化。
 *   **較舊版 Jamf Pro 可能無此選項**：請確認 Jamf Pro 版本足夠新。
 `
-            },
-            {
-                id: 'cls-12',
-                question: '【考試防弊】如何避免學生用 Apple Intelligence (Writing Tools) 寫作文或作弊？',
-                tags: ['Apple Intelligence', '防弊', 'AI'],
-                answer: `
+      },
+      {
+        id: 'cls-12',
+        question: '【考試防弊】如何避免學生用 Apple Intelligence (Writing Tools) 寫作文或作弊？',
+        tags: ['Apple Intelligence', '防弊', 'AI'],
+        answer: `
 **針對 iOS 18.1+ 裝置，可透過 MDM 限制描述檔關閉 Writing Tools 與 Genmoji。**
 
 **設定路徑**：
@@ -236,12 +236,12 @@ export const data: QASection[] = [
 3. 取消勾選 **「Allow Writing Tools」**、**「Allow Genmoji」**、**「Allow Image Playground」**。
 4. **考試模式**：若使用 Jamf Teacher，可在「課程限制」中暫時鎖定這些 AI 功能，考完試自動恢復。
 `
-            },
-            {
-                id: 'cls-13',
-                question: '【共用 iPad】不想要每節課都輸入帳號密碼，有「訪客模式」嗎？',
-                tags: ['共用 iPad', '訪客模式', 'Shared iPad'],
-                answer: `
+      },
+      {
+        id: 'cls-13',
+        question: '【共用 iPad】不想要每節課都輸入帳號密碼，有「訪客模式」嗎？',
+        tags: ['共用 iPad', '訪客模式', 'Shared iPad'],
+        answer: `
 **有。Shared iPad 支援「Guest Mode (訪客模式)」，使用者點擊「Guest」即可登入，無需帳密。**
 
 **特性**：
@@ -250,43 +250,43 @@ export const data: QASection[] = [
 *   **適用**：圖書館查詢機、臨時借用、幼兒園或低年級不便記憶密碼的場景。
 *   **設定**：在 PreStage Enrollment 的 Shared iPad 設定中，勾選 **「Allow Guest Login」**。
 `
-            },
-            {
-                id: 'cls-14',
-                question: '如何「完全關閉」AirDrop？避免學生上課亂傳迷因圖？',
-                tags: ['AirDrop', '限制', '課堂秩序'],
-                answer: `
+      },
+      {
+        id: 'cls-14',
+        question: '如何「完全關閉」AirDrop？避免學生上課亂傳迷因圖？',
+        tags: ['AirDrop', '限制', '課堂秩序'],
+        answer: `
 **AirDrop 是課堂干擾源之首。可透過 MDM 將其設定為「受管理」或「完全停用」。**
 
 **三種管制強度**：
 1.  **完全停用 (最嚴格)**：
-    *   在限制描述檔中取消勾選 **「Allow AirDrop」**。
-    *   結果：控制中心的 AirDrop 按鈕消失，任何人都無法傳送/接收。
+*   在限制描述檔中取消勾選 **「Allow AirDrop」**。
+*   結果：控制中心的 AirDrop 按鈕消失，任何人都無法傳送/接收。
 2.  **僅限接受管理式聯絡人 (折衷)**：
-    *   勾選 **「Force AirDrop to be treated as unmanaged destination」**。
-    *   這會讓 AirDrop 難以在私人裝置與學校裝置間互傳。
+*   勾選 **「Force AirDrop to be treated as unmanaged destination」**。
+*   這會讓 AirDrop 難以在私人裝置與學校裝置間互傳。
 3.  **Jamf Teacher 臨時管控 (推薦)**：
-    *   平時開放 AirDrop 方便交作業。
-    *   上課時老師按下 **「Turn off AirDrop」**，下課自動恢復。
+*   平時開放 AirDrop 方便交作業。
+*   上課時老師按下 **「Turn off AirDrop」**，下課自動恢復。
 `
-            },
-            {
-                id: 'cls-15',
-                question: '學生 iPad 壞了，臨時借用的備用機，個人資料還會在嗎？',
-                tags: ['備份', '備用機', 'iCloud'],
-                answer: `
+      },
+      {
+        id: 'cls-15',
+        question: '學生 iPad 壞了，臨時借用的備用機，個人資料還會在嗎？',
+        tags: ['備份', '備用機', 'iCloud'],
+        answer: `
 **取決於有無開啟「管理式 iCloud」備份。**
 
 *   **有開啟備份**：學生在新機登入其管理式 Apple 帳號，原本的備忘錄、照片、Freeform (無邊界) 畫布會自動下載同步。
 *   **無開啟備份**：App 雖然會透過 MDM 裝回來，但 App 內的本地檔案（如未存在雲端的 Keynote 檔案）將無法找回。
 **強烈建議**：所有學生專案應存放在校園雲端 (Google Drive/OneDrive) 或 iCloud Drive。
 `
-            },
-            {
-                id: 'cls-16',
-                question: '如何防止學生自己手動刪除 App？',
-                tags: ['限制', 'App 刪除', '穩定環境'],
-                answer: `
+      },
+      {
+        id: 'cls-16',
+        question: '如何防止學生自己手動刪除 App？',
+        tags: ['限制', 'App 刪除', '穩定環境'],
+        answer: `
 **在限制描述檔中關閉「允許移除 App (Allow removing apps)」即可。**
 
 **效果**：
@@ -296,13 +296,13 @@ export const data: QASection[] = [
 **專家建議**：
 如果您在管理大量 iPad，建議在 Jamf Pro 開啟「限制 App 移除」的功能，以維持教學環境的穩定。
 `
-            },
-            {
-                id: 'cls-17',
-                question: '新挑戰：如何在課堂中管理「Apple Intelligence」的摘要與寫作工具？',
-                important: true,
-                tags: ['Apple Intelligence', 'AI 限制', '考試'],
-                answer: `
+      },
+      {
+        id: 'cls-17',
+        question: '新挑戰：如何在課堂中管理「Apple Intelligence」的摘要與寫作工具？',
+        important: true,
+        tags: ['Apple Intelligence', 'AI 限制', '考試'],
+        answer: `
 **生成式 AI 雖然強大，但在考試或基礎作文練習中可能需要暫時封鎖。**
 
 **管理員操作：**
@@ -310,12 +310,12 @@ export const data: QASection[] = [
 2. **Writing Tools 限制**：在 iOS 18.1+ 的限制 Payload 中，可細部關閉寫作建議。
 3. **Genmoji 控管**：若學生在作業中亂傳 AI 生成的圖片，可單獨禁用 Genmoji 功能。
 `
-            },
-            {
-                id: 'cls-18',
-                question: '【實務排錯】Apple Pencil 連接後畫面出現「正在配對」卻轉圈圈很久，如何處理？',
-                tags: ['Apple Pencil', '藍牙', '課堂排錯'],
-                answer: `
+      },
+      {
+        id: 'cls-18',
+        question: '【實務排錯】Apple Pencil 連接後畫面出現「正在配對」卻轉圈圈很久，如何處理？',
+        tags: ['Apple Pencil', '藍牙', '課堂排錯'],
+        answer: `
 **這不一定是硬體損壞，通常與裝置的「藍牙快取狀態」或「MDM 限制」有關。**
 
 **排錯流程：**
@@ -324,17 +324,17 @@ export const data: QASection[] = [
 3. **清潔接點**：磁吸式 Pencil 請擦拭 iPad 側邊與 Pencil 平坦面；插孔式 Pencil 請檢查 Lightning 埠是否有紙屑。
 4. **MDM 檢查**：確認描述檔中沒有「禁用藍牙配對」的限制。
 `
-            },
-            {
-                id: 'cls-19',
-                question: '學生利用「鬧鐘」或「計時器」在課堂惡作劇，MDM 有辦法管嗎？',
-                tags: ['時鐘 App', '鬧鐘限制', '課堂秩序'],
-                answer: `
+      },
+      {
+        id: 'cls-19',
+        question: '學生利用「鬧鐘」或「計時器」在課堂惡作劇，MDM 有辦法管嗎？',
+        tags: ['時鐘 App', '鬧鐘限制', '課堂秩序'],
+        answer: `
 **「時鐘」App 本身沒有「禁止設定鬧鐘」的單獨開關，但我們可以透過「隱藏」或「導引使用」來控制。**
 
 **處置策略：**
 1. **隱藏 App**：在限制描述檔中將「時鐘」加入 App 黑名單。
-    * *缺點：學生也無法使用計時器進行實驗。*
+* *缺點：學生也無法使用計時器進行實驗。*
 2. **單一 App 模式 (Single App Mode)**：使用「課堂 (Classroom)」App 將全班鎖定在特定 App，此時鬧鐘即便響起也無法手動關閉，但學生無法進入時鐘修改設定。
 3. **宣告式設定描述檔**：新功能允許 MDM 監控「正在執行的活動」。雖然無法禁止設定，但可以設定規則：若監測到特定時間點有鬧鐘響起，自動發送推播警告給老師機。
 
@@ -343,7 +343,7 @@ export const data: QASection[] = [
 **專家建議**：
 如果您在管理大量 iPad，建議在 Jamf Pro 開啟「限制 App 移除」的功能，以維持教學環境的穩定。
 `
-            }
-        ]
-    }
+      }
+    ]
+  }
 ];
