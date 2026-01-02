@@ -208,10 +208,11 @@ onMounted(async () => {
 
         <div class="cards-stack">
           <div
-            v-for="item in section.items"
+            v-for="(item, idx) in section.items"
             :key="item.id"
             class="qa-card"
             :class="{ 'is-open': openItems.has(item.id) }"
+            :style="{ '--delay': idx }"
           >
             <!-- Card Header (Question) -->
             <div 
@@ -221,11 +222,16 @@ onMounted(async () => {
               :aria-expanded="openItems.has(item.id)"
             >
               <div class="header-main">
-                <span v-if="item.important" class="badge-important">重要</span>
+                <span v-if="item.important" class="badge-important">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="margin-right: 4px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"></path></svg>
+                  重要
+                </span>
                 <h3 class="question-text">{{ item.question }}</h3>
               </div>
               <div class="header-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                <div class="icon-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="chevron"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
               </div>
             </div>
 
@@ -251,9 +257,23 @@ onMounted(async () => {
 <style scoped>
 /* --- Layout & Reset --- */
 .qa-container {
-  max-width: 100%; /* Go full width */
+  max-width: 100%;
   margin: 0;
-  padding: 60px 2% 120px; /* Reduced from 5% to 2% for even more width */
+  padding: 60px 4% 120px; /* Base desktop padding */
+  transition: padding 0.3s ease;
+}
+
+@media (min-width: 1600px) {
+  .qa-container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .qa-container {
+    padding: 40px 24px 100px;
+  }
 }
 
 /* --- Hero Search --- */
@@ -284,20 +304,21 @@ onMounted(async () => {
   width: 100%;
   padding: 18px 56px;
   font-size: 18px;
-  border-radius: 16px;
+  border-radius: 20px;
   border: 1px solid var(--vp-c-divider);
   background: var(--vp-c-bg-soft);
   color: var(--vp-c-text-1);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.04);
-  backdrop-filter: blur(10px);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .search-input:focus {
   border-color: var(--vp-c-brand-1);
-  box-shadow: 0 12px 40px rgba(var(--vp-c-brand-1), 0.2);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1), 0 15px 45px rgba(0, 0, 0, 0.1);
   outline: none;
-  transform: translateY(-4px);
+  transform: translateY(-4px) scale(1.01);
   background: var(--vp-c-bg);
 }
 
@@ -326,11 +347,32 @@ onMounted(async () => {
 .filter-bar-sticky {
   position: sticky;
   top: var(--vp-nav-height);
-  z-index: 10;
+  z-index: 100;
   background: var(--vp-c-bg);
   margin: 0 -40px 40px -40px;
-  padding: 20px 40px;
+  padding: 16px 40px;
   border-bottom: 1px solid var(--vp-c-divider);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .filter-bar-sticky {
+    margin: 0;
+    padding: 12px 0;
+    border-bottom: none;
+    background: transparent;
+    pointer-events: none;
+  }
+  
+  .filter-scroll-container {
+    padding: 10px 16px;
+    pointer-events: auto;
+    background: var(--vp-c-bg);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 40px;
+    margin: 0 16px;
+    border: 1px solid var(--vp-c-divider);
+  }
 }
 
 .filter-scroll-container {
@@ -374,14 +416,30 @@ onMounted(async () => {
 /* --- Results Stack --- */
 .qa-results {
   opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  padding: 0; /* Remove padding, parent container has it */
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .qa-results.fade-in {
   opacity: 1;
   transform: translateY(0);
+}
+
+.qa-card {
+  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: calc(var(--delay) * 50ms);
+  opacity: 0;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .section-title {
@@ -421,17 +479,35 @@ onMounted(async () => {
 }
 
 .card-header {
-  padding: 16px 20px;
+  padding: 20px 24px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 16px;
+  align-items: center;
+  gap: 20px;
   background: var(--vp-c-bg);
+  transition: background 0.2s;
 }
 
-.card-header:active {
+.card-header:hover {
   background: var(--vp-c-bg-mute);
+}
+
+.icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--vp-c-bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--vp-c-divider);
+  transition: all 0.3s;
+}
+
+.qa-card.is-open .icon-circle {
+  background: var(--vp-c-brand-soft);
+  border-color: var(--vp-c-brand-1);
 }
 
 .question-text {
@@ -443,14 +519,18 @@ onMounted(async () => {
 }
 
 .badge-important {
-  display: inline-block;
-  font-size: 12px;
-  color: #ff3b30;
-  background: rgba(255, 59, 48, 0.1);
-  padding: 3px 8px;
-  border-radius: 4px;
-  margin-bottom: 8px;
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background: linear-gradient(135deg, #ff3b30, #ff7b71);
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  font-weight: 800;
+  box-shadow: 0 4px 10px rgba(255, 59, 48, 0.2);
+  text-transform: uppercase;
 }
 
 .header-icon {
@@ -514,15 +594,22 @@ onMounted(async () => {
   margin-bottom: 16px;
 }
 
-/* --- Mobile / Dark Mode Fixes --- */
+/* --- Mobile Enhancements --- */
 @media (max-width: 600px) {
-  .qa-container {
-    padding: 20px 16px 80px; /* Add horizontal padding for mobile */
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .question-text {
+    font-size: 17px;
+  }
+
+  .answer-content {
+    font-size: 16px;
   }
   
-  .filter-bar-sticky {
-    margin: 0 -16px 30px -16px; /* Negative margin to bleed to edges */
-    padding: 12px 16px;
+  .card-header {
+    padding: 16px;
   }
 }
 </style>

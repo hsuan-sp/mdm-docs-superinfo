@@ -160,12 +160,12 @@ onMounted(async () => {
       </div>
     </div>
 
-    <!-- Results Grid -->
     <div class="terms-grid">
       <div
         v-for="(item, index) in filteredTerms"
         :key="index"
         class="term-card"
+        :style="{ '--delay': index % 20 }"
       >
         <div class="card-main">
           <div class="card-header">
@@ -218,27 +218,26 @@ onMounted(async () => {
 .glossary-header {
   text-align: center;
   margin-bottom: 60px;
+  padding: 60px 0 20px;
 }
 
 .glossary-header h1 {
-  font-size: 48px;
-  font-weight: 700;
-  letter-spacing: -0.015em;
-  margin-bottom: 16px;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
   background: linear-gradient(135deg, var(--vp-c-text-1) 0%, var(--vp-c-brand-1) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  line-height: 1.1;
 }
 
 .subtitle {
-  font-size: clamp(17px, 2vw, 21px);
+  font-size: clamp(16px, 2vw, 19px);
   color: var(--vp-c-text-2);
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
-  line-height: 1.5;
-  font-weight: 400;
+  line-height: 1.6;
 }
 
 /* --- Controls Section (Sticky & Glassmorphism) --- */
@@ -327,38 +326,52 @@ onMounted(async () => {
 
 .search-input {
   width: 100%;
-  padding: 14px 16px 14px 48px;
-  font-size: 17px;
-  border-radius: 16px;
-  border: 1px solid rgba(128, 128, 128, 0.15);
-  background: var(--vp-c-bg-alt);
+  padding: 16px 20px 16px 52px;
+  font-size: 18px;
+  border-radius: 20px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
   color: var(--vp-c-text-1);
-  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
 }
 
 .search-input:focus {
   outline: none;
   border-color: var(--vp-c-brand-1);
-  box-shadow: 0 0 0 4px rgba(var(--vp-c-brand-1), 0.15);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1), 0 10px 30px rgba(0,0,0,0.08);
   background: var(--vp-c-bg);
+  transform: translateY(-2px);
 }
 
 /* Categories */
 .categories {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
   justify-content: center;
-  align-items: center; /* Align items vertically */
-  padding-bottom: 8px; 
+  align-items: center;
+  padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .categories {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 10px 4px;
+    margin: 0 -10px;
+  }
+  .categories::-webkit-scrollbar { display: none; }
 }
 
 .divider {
   width: 1px;
   height: 24px;
-  background: rgba(128, 128, 128, 0.2);
-  margin: 0 8px;
+  background: var(--vp-c-divider);
+  margin: 0 4px;
+  flex-shrink: 0;
 }
 
 .cat-btn {
@@ -443,13 +456,20 @@ onMounted(async () => {
 }
 
 /* Animation Entry */
-.term-card {
-  opacity: 0;
-  transform: translateY(20px);
-}
 .term-card.card-visible {
-  opacity: 1;
-  transform: translateY(0);
+  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: calc(var(--delay) * 40ms);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* 1. Main Content Zone */
@@ -580,75 +600,25 @@ onMounted(async () => {
   opacity: 0.5;
 }
 
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-  .glossary-header h1 {
-    background: linear-gradient(135deg, #fff 0%, #aeb0b2 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
-  
-  .controls-toggle {
-    background: rgba(28, 28, 30, 0.95);
-    border-color: rgba(255,255,255,0.1);
-    color: #f5f5f7;
-  }
-  
-  .controls-toggle:hover {
-    background: rgba(28, 28, 30, 1);
-  }
-  
-  .controls {
-    background: rgba(28, 28, 30, 0.8);
-    border-color: rgba(255,255,255,0.1);
-  }
-  
-  .search-input {
-    background: rgba(255,255,255,0.1);
-    color: #fff;
-  }
-  
-  .search-input:focus {
-    background: #000;
-  }
-  
-  .search-icon { color: #a1a1a6; }
-  
-  .sort-button {
-    background: rgba(255,255,255,0.08);
-    border-color: rgba(255,255,255,0.1);
-    color: #a1a1a6;
-  }
-  
-  .sort-button:hover {
-    background: rgba(255,255,255,0.12);
-    border-color: rgba(255,255,255,0.15);
-  }
-  
-  .pill {
-    color: #a1a1a6;
-    border-color: rgba(255,255,255,0.1);
-  }
-  
-  .pill:hover { background: rgba(255,255,255,0.1); }
-  
-  .pill.active {
-    background: #fff;
-    color: #000;
-  }
-  
-  .term-card {
-    background: #1c1c1e;
-    border-color: rgba(255,255,255,0.05);
-  }
-  
-  .term-title { color: #f5f5f7; }
-  .definition p { color: #d2d2d7; }
-  
-  .analogy {
-    background: rgba(255,255,255,0.05);
-  }
-  
-  .analogy p { color: #a1a1a6; }
+/* Dark Mode Polish */
+.dark .term-card {
+  background: #1c1c1e;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark .analogy-wrapper {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.dark .controls-wrapper {
+  background: var(--vp-c-bg);
+}
+
+.dark .cat-btn {
+  background: #2c2c2e;
+}
+
+.dark .cat-btn.active {
+  background: var(--vp-c-brand-1);
 }
 </style>
