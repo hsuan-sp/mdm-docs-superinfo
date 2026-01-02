@@ -253,30 +253,30 @@ onMounted(async () => {
 .qa-container {
   max-width: 100%; /* Go full width */
   margin: 0;
-  padding: 60px 5% 120px; /* Use percentage padding for ultra-wide support */
+  padding: 60px 2% 120px; /* Reduced from 5% to 2% for even more width */
 }
 
 /* --- Hero Search --- */
 .qa-hero {
   text-align: center;
-  margin-bottom: 40px;
-  padding: 0; /* Remove padding, parent has it */
+  margin-bottom: 60px; /* More space */
+  padding: 0;
 }
 
 .hero-title {
-  font-size: 40px; /* Larger title */
+  font-size: 48px; /* Even larger */
   font-weight: 800;
   margin-bottom: 32px;
   background: linear-gradient(135deg, var(--vp-c-brand-1) 0%, var(--vp-c-brand-2) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .search-box-wrapper {
   position: relative;
-  max-width: 600px;
+  max-width: 1000px; /* Increased from 600px */
   margin: 0 auto;
 }
 

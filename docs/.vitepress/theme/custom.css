@@ -19,6 +19,9 @@
 
   /* Typography */
   --vp-font-family-base: "Inter", "Noto Sans TC", system-ui, sans-serif;
+
+  /* Global Layout Expansion - Force Full Width for Wide Screens */
+  --vp-layout-max-width: 100% !important;
 }
 
 .dark {
@@ -48,17 +51,6 @@
   color: var(--vp-c-brand-1);
 }
 
-/* Global Layout Expansion */
-:root {
-  --vp-layout-max-width: 1720px; /* Increase global width for wider screens */
-}
-
-@media (min-width: 1440px) {
-  .VPDoc .container {
-    max-width: 100% !important;
-  }
-}
-
 /* Custom Hero Button */
 .VPButton.brand {
   border-radius: 30px;
@@ -69,17 +61,48 @@
   box-shadow: 0 6px 20px rgba(79, 70, 229, 0.6);
 }
 
+/* Force Layout width overrides to break VitePress default 1152px limit */
+.VPDoc .container {
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.VPDoc .content-container {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.VPDoc .content {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.VPDoc.has-aside .content-container {
+  max-width: 100% !important;
+}
+
+@media (min-width: 1440px) {
+  /* Ultra-aggressive expansion: Remove standard document paddings */
+  .VPDoc {
+    padding: 0 !important;
+  }
+  
+  .VPContent.has-sidebar {
+    padding-right: 0 !important;
+    padding-left: var(--vp-sidebar-width) !important;
+  }
+
+  .VPDoc .container {
+    padding: 0 !important;
+  }
+}
+
 /* Subtle page-level background touch for "Premium" feel */
 body {
-  background-image: radial-gradient(
-      at 0% 0%,
-      hsla(243, 75%, 58%, 0.05) 0px,
-      transparent 50%
-    ),
-    radial-gradient(
-      at 100% 100%,
-      hsla(243, 75%, 58%, 0.03) 0px,
-      transparent 50%
-    );
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(243, 75%, 58%, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(243, 75%, 58%, 0.03) 0px, transparent 50%);
   background-attachment: fixed;
 }

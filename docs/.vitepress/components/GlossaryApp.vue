@@ -255,7 +255,7 @@ onMounted(async () => {
 
 .controls-inner {
   max-width: 100%;
-  padding: 0 5%;
+  padding: 0 2%;
 }
 
 /* Toggle Button */
@@ -265,13 +265,13 @@ onMounted(async () => {
   justify-content: center;
   gap: 8px;
   width: 100%;
-  padding: 12px;
+  padding: 16px; /* Slightly larger */
   background: var(--vp-c-bg-alt);
   border: 1px solid transparent;
-  border-radius: 12px;
+  border-radius: 16px;
   color: var(--vp-c-text-2);
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
   margin-bottom: 0;
@@ -391,10 +391,10 @@ onMounted(async () => {
 /* --- Grid Layout --- */
 .terms-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 40px;
   max-width: 100%;
-  padding: 0 5% 100px;
+  padding: 0 2% 100px;
 }
 
 /* Mobile: Single column is handled by minmax(300px), but let's ensure small screens are safe */
@@ -413,12 +413,7 @@ onMounted(async () => {
   }
 }
 
-/* 4K/Wide Screens: Limit max width of cards so they don't look stretched */
-@media (min-width: 1440px) {
-  .terms-grid {
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  }
-}
+
 
 
 /* --- Card Design (Refined Apple Style) --- */
