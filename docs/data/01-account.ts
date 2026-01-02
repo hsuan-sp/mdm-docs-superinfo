@@ -1,15 +1,16 @@
-import { QASection } from '../types'
+import { QASection } from "../types";
 
 export const data: QASection[] = [
   {
-    title: '第一部分：帳號與伺服器管理 (Account & Server Management)',
+    title: "第一部分：帳號與伺服器管理 (Account & Server Management)",
     items: [
-  {
-      id: 'acc-1',
-      question: '登入 Apple 校務管理 (ASM) 時，系統提示需同意新的條款與約定，這很重要嗎？',
-important: true,
-      tags: ['ASM', '條款更新'],
-    answer: `
+      {
+        id: "acc-1",
+        question:
+          "登入 Apple 校務管理 (ASM) 時，系統提示需同意新的條款與約定，這很重要嗎？",
+        important: true,
+        tags: ["ASM", "條款更新"],
+        answer: `
 **非常重要，請優先處理。**
 
 當 Apple 更新服務條款時，系統會在登入 Apple 校務管理 (Apple School Manager, ASM) 時跳出「條款與約定」的彈出視窗。請注意以下重點：
@@ -30,14 +31,14 @@ important: true,
 
 **最佳實踐**：
 建議學校指派至少 2 位管理員角色的帳號（例如資訊組長/設備組長及一位系統管理師），以確保當主要負責人請假或離職時，仍有人可以處理這類緊急事項，確保管理不中斷。
-    `
-  },
-  {
-      id: 'acc-2',
-      question: '推播憑證 (APNs Certificate) 過期會發生什麼事？如何續約？',
-important: true,
-      tags: ['APNs', '憑證', '災難預防'],
-    answer: `
+    `,
+      },
+      {
+        id: "acc-2",
+        question: "推播憑證 (APNs Certificate) 過期會發生什麼事？如何續約？",
+        important: true,
+        tags: ["APNs", "憑證", "災難預防"],
+        answer: `
 **後果極為嚴重：MDM 系統將完全失效，無法推送任何新命令以管理裝置。**
 
 Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APNs Certificate) 是 MDM 與 Apple 伺服器溝通的「身分證」，所有 MDM 指令都必須透過此憑證簽章才能被 Apple 伺服器轉發至裝置。
@@ -61,13 +62,13 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 *   將負責憑證的 Apple 帳號 密碼與雙重認證備援方法或**硬體安全金鑰**記錄於安全且不會有突然無法存取的問題的密碼管理系統中。
 *   請務必使用機構專屬的管理式 Apple 帳號（如 mdm-admin@school.edu.tw），而非個人 Apple 帳號去交換憑證，以確保管理不中斷。
 *   **密碼重置**：管理員可以透過 [iforgot.apple.com](https://iforgot.apple.com) 更輕鬆地重設管理式 Apple 帳號密碼，但仍強烈建議保持電話號碼的有效性，避免難以找回帳號。
-    `
-  },
-  {
-      id: 'acc-3',
-      question: '如何重置學生的「管理式 Apple 帳號」密碼？',
-      tags: ['密碼重置', 'ASM', '管理式 Apple 帳號'],
-    answer: `
+    `,
+      },
+      {
+        id: "acc-3",
+        question: "如何重置學生的「管理式 Apple 帳號」密碼？",
+        tags: ["密碼重置", "ASM", "管理式 Apple 帳號"],
+        answer: `
 **管理式 Apple 帳號的密碼重置須由管理員在 Apple 校務管理 (ASM) 中操作。**
 
 由於安全規範，這類帳號無法由學生自行找回密碼。管理員可依據人數進行個別或批次重置。
@@ -89,13 +90,13 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 **注意事項**：
 *   **聯合驗證 (Federated Authentication)**：若學校啟用了與 Google 或 Microsoft 的聯合驗證，密碼權限在該平台端。請直接在 Google 管理主控台或 Microsoft 管理中心重置密碼，ASM 端的按鈕將失效。
 *   **介面提醒**：ASM 使用者清單中不提供勾選框，必須透過電腦鍵盤快捷鍵進行多重選取。
-    `
-  },
-  {
-      id: 'acc-4',
-      question: 'Jamf Pro 顯示「VPP Token」即將過期，如何更新？',
-      tags: ['VPP', 'Token', '大量採購'],
-    answer: `
+    `,
+      },
+      {
+        id: "acc-4",
+        question: "Jamf Pro 顯示「VPP Token」即將過期，如何更新？",
+        tags: ["VPP", "Token", "大量採購"],
+        answer: `
 **VPP (大量採購方案) Token 是 Jamf Pro 與 Apple 校務管理之間同步 App 授權的橋梁，每年需更新一次。**
 
 當 Token 過期後，Jamf Pro 將無法從 ASM 取得最新的授權資訊，導致新購買的 App 無法派送、現有授權狀態無法更新。
@@ -127,13 +128,14 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 **最佳實踐**：
 *   將 VPP Token 更新日期設定在行事曆提醒，建議每年固定日期處理（例如暑假開學前）。
 *   更新 Token 後，建議執行一次 **「同步大量採購內容 (Sync Volume Purchasing Content)」** 以確保授權數量正確。
-    `
-  },
-  {
-      id: 'acc-5',
-      question: '我們學校有使用 Google Workspace / Microsoft 365，可以用這些帳號登入 Apple 服務嗎？',
-      tags: ['聯合驗證', 'Google Workspace', 'Microsoft Entra ID', 'SSO'],
-    answer: `
+    `,
+      },
+      {
+        id: "acc-5",
+        question:
+          "我們學校有使用 Google Workspace / Microsoft 365，可以用這些帳號登入 Apple 服務嗎？",
+        tags: ["聯合驗證", "Google Workspace", "Microsoft Entra ID", "SSO"],
+        answer: `
 **可以，這稱為「聯合驗證 (Federated Authentication)」，能讓師生使用學校現有的 Google 或 Microsoft 帳號登入 Apple 服務。**
 
 聯合驗證是 Apple 校務管理 (ASM) 的核心整合功能，讓學校可以將 Google Workspace 或 Microsoft Entra ID 的帳號系統與「管理式 Apple 帳號」串接。
@@ -157,13 +159,13 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 
 **適用情境**：
 特別適合已全面使用 Google Classroom 或 Microsoft Teams 的學校，可達成「一組帳號走遍校園」的目標，大幅減輕 IT 負擔。
-    `
-  },
-  {
-      id: 'acc-6',
-      question: '學生畢業或離校了，我該如何處理他們的管理式 Apple 帳號？',
-      tags: ['帳號生命週期', '畢業離校', '資料保留'],
-    answer: `
+    `,
+      },
+      {
+        id: "acc-6",
+        question: "學生畢業或離校了，我該如何處理他們的管理式 Apple 帳號？",
+        tags: ["帳號生命週期", "畢業離校", "資料保留"],
+        answer: `
 **建議先「停用」帳號，待確認學生已完成資料遷移後再行「刪除」。請注意，刪除操作是永久性且無法復原的。**
 
 管理式 Apple 帳號 (Managed Apple Account) 的生命週期應配合學校的行政流程。妥善的管理能確保 VPP 授權回收，並符合教育單位的個資保存規範。
@@ -198,13 +200,13 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 **注意事項**：
 *   **聯合驗證使用者**：若學生帳號是透過 Google 或 Microsoft 聯合驗證，您應先在 Google/Microsoft 端停用該員，再回到 ASM 檢查同步狀態。
 *   **授權回收**：只要帳號被停用或刪除，該帳號先前取得的所有 App 分配授權都會自動歸還給學校。
-    `
-  },
-  {
-      id: 'acc-7',
-      question: '我可以使用個人的 Apple 帳號登入學校的 iPad 嗎？',
-      tags: ['個人 Apple 帳號', '管理式 Apple 帳號', '存取控制'],
-    answer: `
+    `,
+      },
+      {
+        id: "acc-7",
+        question: "我可以使用個人的 Apple 帳號登入學校的 iPad 嗎？",
+        tags: ["個人 Apple 帳號", "管理式 Apple 帳號", "存取控制"],
+        answer: `
 **標準政策：不建議。學校裝置應優先使用「管理式 Apple 帳號 (Managed Apple Account)」，或在不登入帳號的情況下使用。**
 
 學校管理員現在可透過 Apple 校務管理 (ASM) 設定，限制組織擁有的裝置僅能登入受管理的帳號。若您的裝置尚未開啟此限制，仍應注意以下風險。
@@ -229,13 +231,13 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 > 2.  **停用尋找功能**：若系統提示開啟「尋找」或 iCloud 同步，請務必選擇「不使用」。
 > 3.  **下載後立即登出**：安裝完所需 App 後，請立即從 App Store 登出，以維持裝置的清潔狀態。
 > 4.  **告知管理員**：部分學校政策會定期清除未經授權的 App，請先確認您的操作符合校規。
-    `
-  },
-  {
-      id: 'acc-8',
-      question: '忘記 Jamf Pro 的管理員登入密碼怎麼辦？',
-      tags: ['密碼重置', 'Jamf Pro', '災難復原'],
-    answer: `
+    `,
+      },
+      {
+        id: "acc-8",
+        question: "忘記 Jamf Pro 的管理員登入密碼怎麼辦？",
+        tags: ["密碼重置", "Jamf Pro", "災難復原"],
+        answer: `
 **重置方式取決於您的 Jamf Pro 部署環境（雲端版或地端版），以及是否啟用了 SSO。**
 
 **情境一：Jamf Pro 雲端版 (Jamf Cloud)**
@@ -264,13 +266,13 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 *   **設置緊急備用帳號 (Break-glass Account)**：建立一個不與個人信箱綁定、使用超強密碼且排除在 SSO 之外的在地管理員帳號，並將帳密物理備份於安全處。
 *   **備援管理員**：機構應至少維持兩位具備管理權限的人員，避免單點故障。
 *   **託管密碼管理**：建議將管理員憑證儲存於組織級的密碼管理工具（如 1Password 或 Bitwarden）中，而非瀏覽器記憶密碼。
-    `
-  },
-  {
-      id: 'acc-9',
-      question: '裝置一直顯示「連線失敗」或無法更新資產 (Inventory)？',
-      tags: ['連線問題', 'APNs', '網路', '故障排除'],
-    answer: `
+    `,
+      },
+      {
+        id: "acc-9",
+        question: "裝置一直顯示「連線失敗」或無法更新資產 (Inventory)？",
+        tags: ["連線問題", "APNs", "網路", "故障排除"],
+        answer: `
 **這通常表示裝置與 MDM 伺服器或 Apple 服務之間的通訊中斷。請依序檢查以下四個核心項目：**
 
 **檢查一：APNs 憑證狀態**
@@ -300,13 +302,14 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 
 **進階排查：**
 若上述皆正常但仍無法更新，可能是裝置端的 **宣告式裝置管理 (DDM)** 狀態卡住。您可以嘗試重啟裝置，或透過 Jamf 發送「空白推播 (Blank Push)」指令來強迫喚醒裝置的連線程序。
-    `
-  },
-  {
-      id: 'acc-10',
-      question: '學校的 Email 網域更換了（例如從 .edu.tw 改為 .xh.edu.tw），該怎麼更改管理式 Apple 帳號？',
-      tags: ['網域變更', '帳號管理', '重大異動'],
-    answer: `
+    `,
+      },
+      {
+        id: "acc-10",
+        question:
+          "學校的 Email 網域更換了（例如從 .edu.tw 改為 .xh.edu.tw），該怎麼更改管理式 Apple 帳號？",
+        tags: ["網域變更", "帳號管理", "重大異動"],
+        answer: `
 **這是一項涉及系統底層的重大變更。管理式 Apple 帳號的格式隨網域更換而變動時，將直接影響使用者的登入身分。**
 
 **變更前的核心評估**：
@@ -341,14 +344,14 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 
 **建議方案**：
 在全面推行前，建議先手動更改 2-3 位測試人員（如資訊組長）的帳號，確認在新舊網域切換後，iCloud 資料與 MDM 指令是否都能正常運作。
-    `
-  },
-  {
-      id: 'acc-11',
-      question: '【憑證陷阱】Apple 課堂突然全校失靈，顯示「描述檔無效」？',
-important: true,
-      tags: ['憑證過期', 'Apple 課堂', '教育描述檔'],
-    answer: `
+    `,
+      },
+      {
+        id: "acc-11",
+        question: "【憑證陷阱】Apple 課堂突然全校失靈，顯示「描述檔無效」？",
+        important: true,
+        tags: ["憑證過期", "Apple 課堂", "教育描述檔"],
+        answer: `
 **這通常是「教育身分憑證 (Education Identity Certificate)」過期所致，該憑證效期固定為 2 年。**
 
 **故障症狀**：
@@ -365,14 +368,15 @@ important: true,
 **專家建議**：
 *   **預先排程**：建議在每兩年的暑假期間，手動進來點選一次更新，避免學期中突然失效影響教學。
 *   **檢查管理式 Apple 帳號**：若憑證正常但仍失靈，請確認師生的「管理式 Apple 帳號」是否因網域異動或聯合驗證失敗而導致身分無法對齊。
-    `
-  },
-  {
-      id: 'acc-12',
-      question: '【MDM 遷移】更換新 MDM 廠商時，可以「不抹除資料」直接轉移嗎？',
-important: true,
-      tags: ['遷移', 'MDM 轉移', 'OS 26'],
-    answer: `
+    `,
+      },
+      {
+        id: "acc-12",
+        question:
+          "【MDM 遷移】更換新 MDM 廠商時，可以「不抹除資料」直接轉移嗎？",
+        important: true,
+        tags: ["遷移", "MDM 轉移", "OS 26"],
+        answer: `
 **雖然系統版本 26 已支援「自動 MDM 遷移」，但在教育環境下仍「強烈不建議」採取不抹除遷移。**
 
 根據 WWDC25 的最新更新，Apple 在 **系統版本 26** (iOS 26 / macOS 26) 中進一步強化了 \`MigrateDevice\` 指令，允許裝置從舊 MDM 靜默遷移至新 MDM，但這仍存在顯著風險：
@@ -388,13 +392,13 @@ important: true,
 
 **最佳實踐方案**：
 為了確保新學期裝置穩定，請優先使用 **「回到服務 (Return to Service)」** 功能。這是 iOS 17 加入並在版本 26 最佳化的功能：管理員只需發送一個指令，裝置會自動抹除並利用快取的 Wi-Fi 資訊自動重新註冊。這能達成「乾淨、穩定且全自動」的遷移，遠優於不抹除資料的轉移方式。
-    `
-  },
-  {
-      id: 'acc-13',
-      question: '【自助重設】忘記管理式 Apple 帳號密碼，可以自己重置嗎？',
-      tags: ['密碼重置', 'ASM', '管理員操作'],
-    answer: `
+    `,
+      },
+      {
+        id: "acc-13",
+        question: "【自助重設】忘記管理式 Apple 帳號密碼，可以自己重置嗎？",
+        tags: ["密碼重置", "ASM", "管理員操作"],
+        answer: `
 **目前的 Apple 校務管理 (ASM) 後台中，並沒有提供「讓使用者自行重設密碼」的全局開關。**
 
 如果您在 ASM 介面中找不到相關設定，這是正常的，因為 Apple 對「管理式 Apple 帳號」的密碼管理採取了嚴格的權限區分。重置密碼的邏輯如下：
@@ -412,14 +416,15 @@ important: true,
 
 **結論**：
 若您的帳號不是聯合驗證帳號，學生忘記密碼時 **「一定要聯絡資訊組」**。建議資訊組在開學時統一利用批次選取功能，產生成包含暫時密碼的 PDF 或 CSV 發放給師生，以利後續管理。
-    `
-  },
-  {
-      id: 'acc-14',
-      question: 'ASM 中新採購的裝置無法同步到 Jamf Pro？（ADE 伺服器代號續約）',
-important: true,
-      tags: ['ADE', 'Server Token', '自動裝置註冊'],
-    answer: `
+    `,
+      },
+      {
+        id: "acc-14",
+        question:
+          "ASM 中新採購的裝置無法同步到 Jamf Pro？（ADE 伺服器代號續約）",
+        important: true,
+        tags: ["ADE", "Server Token", "自動裝置註冊"],
+        answer: `
 **新採購的裝置若未出現在清單中，最常見的原因是「伺服器代號 (Server Token)」過期或裝置未指派。**
 
 這是連結 Apple 校務管理 (ASM) 與 Jamf Pro 之間關於「硬體裝置」的橋梁（即原 DEP 流程）。它負責將 Apple 端的採購序號同步至 MDM 後台。
@@ -442,13 +447,13 @@ important: true,
 
 **最佳實踐**：
 建議在 ASM 中設定「預設裝置指派」，讓未來所有新購的 iPad/Mac 自動指派給您的 Jamf Pro 伺服器。這樣您只需每年定期續約一次 Token，就能實現完全自動化的裝置入庫流程。
-    `
-  },
-  {
-      id: 'acc-15',
-      question: 'Jamf Pro 與 Jamf School 的主要差異為何？該如何選擇？',
-      tags: ['Jamf Pro', 'Jamf School', '產品比較'],
-    answer: `
+    `,
+      },
+      {
+        id: "acc-15",
+        question: "Jamf Pro 與 Jamf School 的主要差異為何？該如何選擇？",
+        tags: ["Jamf Pro", "Jamf School", "產品比較"],
+        answer: `
 **這兩款產品均為 Apple 官方認可的 MDM 解決方案，但在設計邏輯、語言支援與管理深度上有所不同。**
 
 以下根據 Jamf 官方技術規格彙整之客觀對照：
@@ -472,14 +477,14 @@ important: true,
 **總結建議**：
 *   **選擇 Jamf Pro**：若機構需要 **繁體中文介面**、涉及大規模多站點管理、或需執行複雜的自動化腳本與第三方系統對接，Jamf Pro 是更完整的選擇。
 *   **選擇 Jamf School**：若管理規模較小、技術人力有限，且管理員能順暢操作英文介面，則可考慮架構較簡潔的 Jamf School。
-    `
-  },
-  {
-      id: 'acc-16',
-      question: '如何在 Apple 校務管理中處理「網域衝突」並取回帳號主導權？',
-important: true,
-      tags: ['網域衝突', '帳號轉移', 'ASM'],
-    answer: `
+    `,
+      },
+      {
+        id: "acc-16",
+        question: "如何在 Apple 校務管理中處理「網域衝突」並取回帳號主導權？",
+        important: true,
+        tags: ["網域衝突", "帳號轉移", "ASM"],
+        answer: `
 **當學校驗證網域後，系統會自動識別出使用學校 Email 註冊的「個人 Apple 帳號」，並啟動移轉程序。**
 
 這在 ASM 中稱為處理「網域衝突」。為了保護隱私並確保組織資安，Apple 提供了一套標準化的流程：
@@ -497,13 +502,14 @@ important: true,
 
 **操作路徑**：
 登入 ASM > **「設定」>「使用者登入與目錄同步」**，在已驗證網域旁可查看衝突狀態與剩餘天數。
-    `
-  },
-  {
-      id: 'acc-17',
-      question: '如何結合 Platform SSO (PSSO) 實現 Mac 開機即解鎖 FileVault？',
-      tags: ['PSSO', 'FileVault', 'macOS 15+', '身分驗證'],
-    answer: `
+    `,
+      },
+      {
+        id: "acc-17",
+        question:
+          "如何結合 Platform SSO (PSSO) 實現 Mac 開機即解鎖 FileVault？",
+        tags: ["PSSO", "FileVault", "macOS 15+", "身分驗證"],
+        answer: `
 **在 macOS 15 (Sequoia) 以上版本，Platform SSO 支援了與 FileVault 的深度整合，真正解決了「二次密碼」的痛點。**
 
 **解決方案**：
@@ -518,13 +524,13 @@ important: true,
 
 **效益**：
 大幅減少師生因忘記本機密碼而導致無法解鎖電腦的報修案件，並確保 FileVault 密碼與組織密碼策略完全同步。
-    `
-  },
-  {
-      id: 'acc-18',
-      question: '更換 MDM 廠商時，VPP App 授權如何平順轉移？需要重新購買嗎？',
-      tags: ['VPP', 'MDM 遷移', '授權回收'],
-    answer: `
+    `,
+      },
+      {
+        id: "acc-18",
+        question: "更換 MDM 廠商時，VPP App 授權如何平順轉移？需要重新購買嗎？",
+        tags: ["VPP", "MDM 遷移", "授權回收"],
+        answer: `
 **不需要重新購買。App 授權是綁定在 ASM 的「位置 (Location)」上，而非特定的 MDM 軟體。**
 
 只要您的 App 授權仍在 Apple 校務管理的後台內，就可以在不同 MDM 之間流轉。
@@ -536,13 +542,14 @@ important: true,
 
 **進階技術 (MDM Migration API)**：
 若新舊廠商皆支援 Apple 於 iOS 17.5 引入的遷移 API，在特定條件下可以達成 **「靜默遷移」**。這意味著裝置在更換 MDM 時，內部的 App 無需刪除，授權會直接由 Apple 伺服器後台「重新分派」給新的 MDM 伺服器，使用者端完全無感。
-    `
-  },
-  {
-      id: 'acc-19',
-      question: '如何控管「管理式 Apple 帳號」是否能使用 Apple Intelligence 功能？',
-      tags: ['Apple Intelligence', '服務存取', 'ASM'],
-    answer: `
+    `,
+      },
+      {
+        id: "acc-19",
+        question:
+          "如何控管「管理式 Apple 帳號」是否能使用 Apple Intelligence 功能？",
+        tags: ["Apple Intelligence", "服務存取", "ASM"],
+        answer: `
 **管理員可透過 Apple 校務管理 (ASM) 的服務存取設定，決定是否開放 AI 相關功能。**
 
 隨著 Apple 於 2024 年底至 2025 年全面推廣 **Apple Intelligence**，ASM 提供了帳號層級的開關，這與 MDM 的裝置限制是相輔相成的。
@@ -553,13 +560,13 @@ important: true,
 
 **為什麼要在帳號層級設定？**
 若在 ASM 中關閉了該服務，即便學生將其管理式帳號登入到未受監管的個人裝置，該帳號依然無法使用 Apple Intelligence 的雲端運算功能。這確保了教育機構對資料流向的絕對控制權。
-    `
-  },
-  {
-      id: 'acc-20',
-      question: '管理式 Apple 帳號支援「多重身分驗證 (MFA)」嗎？如何管理？',
-      tags: ['MFA', '資安', '管理式 Apple 帳號'],
-    answer: `
+    `,
+      },
+      {
+        id: "acc-20",
+        question: "管理式 Apple 帳號支援「多重身分驗證 (MFA)」嗎？如何管理？",
+        tags: ["MFA", "資安", "管理式 Apple 帳號"],
+        answer: `
 **支援。管理式 Apple 帳號可以透過受管理的救援電話或聯合驗證來達成身分防護。**
 
 對於具備較高權限的帳號（如管理員或教師），啟用 MFA 是 2025 年的基本資安標準。
@@ -570,8 +577,37 @@ important: true,
 
 **管理建議**：
 強烈建議所有具備「管理員 (Administrator)」職務的帳號，必須綁定至少兩個以上的救援管道，或使用實體硬體安全金鑰 (Security Keys)，以防止因單一設備遺失導致全校管理後台鎖死的災難。
-    `
-}
-    ]
-}
-    ]
+    `,
+      },
+      {
+        id: "acc-21",
+        question:
+          "「moemdm」跟「Jamf Pro」是一樣的東西嗎？為什麼學校需要兩個帳號？",
+        important: true,
+        tags: ["moemdm", "教育部", "Jamf Pro", "架構說明"],
+        answer: `
+**兩者完全不同。Jamf Pro 是真正的「遙控器（管理系統）」，而 moemdm 是教育部的「儀表板（回報平台）」。**
+
+許多學校管理員會感到困惑，以為要在兩個地方重複操作。請釐清以下分工：
+
+**1. Jamf Pro (校園管理核心)**：
+*   **功能**：這是您日常操作的地方。包含派送 App、設定 Wi-Fi、修改密碼、限制學生功能等。
+*   **性質**：實質的管理工具。指令是由 Jamf 伺服器直接發送到學生的 iPad 上。
+*   **對象**：資訊組長、系管師、教師。
+
+**2. moemdm (教育部回報平台)**：
+*   **功能**：這是教育部用來統計全台灣精進方案載具「健康狀況」與「使用率」的地方。
+*   **性質**：純粹的資料彙整與統計平台。您在 moemdm 網頁上修改設定，並不會直接改變 iPad 的行為。
+*   **關鍵聯繫**：moemdm 會透過 API 與 Jamf Pro 接軌。只要您在 Jamf Pro 設定正確，數據就會自動同步到 moemdm 供教育部查核。
+
+**為什麼要區分？**
+*   **資安考量**：教育部不需要、也不應該直接控制每一所學校的設備（這會造成單點崩潰風險）。
+*   **權責分明**：學校保有教學自主權（由校方 Jamf 管理），教育部則透過 moemdm 執行資產盤點與績效考核。
+
+**專家建議**：
+若要檢查設備是否故障或更換 App，請登入 **Jamf Pro**。若要查看學校的 KPI 是否達標或填寫期末報表，請登入 **moemdm**。
+    `,
+      },
+    ],
+  },
+];

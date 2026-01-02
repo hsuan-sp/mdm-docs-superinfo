@@ -1,15 +1,16 @@
-import { QASection } from '../types'
+import { QASection } from "../types";
 
 export const data: QASection[] = [
   {
-    title: '第三部分：應用程式分發與管理 (Apps & Books)',
+    title: "第三部分：應用程式分發與管理 (Apps & Books)",
     items: [
-  {
-      id: 'app-1',
-      question: 'iPad 上的 App 一直顯示「等待中 (Waiting)」或無法安裝，如何排除？',
-important: true,
-      tags: ['故障排除', 'App 安裝', 'VPP', 'DDM'],
-    answer: `
+      {
+        id: "app-1",
+        question:
+          "iPad 上的 App 一直顯示「等待中 (Waiting)」或無法安裝，如何排除？",
+        important: true,
+        tags: ["故障排除", "App 安裝", "VPP", "DDM"],
+        answer: `
 **「等待中」通常表示 App 安裝流程在「授權檢核」或「下載佇列」環節卡住了。**
 
 當 MDM 向裝置發送 App 安裝指令後，裝置會經歷複雜的握手流程。請依序排查以下關鍵點：
@@ -32,14 +33,14 @@ important: true,
 
 5.  **儲存空間不足**：
 *   若 iPad 剩餘空間小於 App 大小，系統會主動在後台暫停下載。請檢查「設定」>「一般」>「iPad 儲存空間」。
-    `
-  },
-  {
-      id: 'app-2',
-      question: '不用登入 Apple 帳號也可以在 iPad 上安裝 App 嗎？',
-important: true,
-      tags: ['VPP', '裝置型分派', 'Apple 帳號', '管理式 Apple 帳號'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-2",
+        question: "不用登入 Apple 帳號也可以在 iPad 上安裝 App 嗎？",
+        important: true,
+        tags: ["VPP", "裝置型分派", "Apple 帳號", "管理式 Apple 帳號"],
+        answer: `
 **可以。這在技術上稱為「裝置型分派 (Device-based Assignment)」，是校園環境中分發 App 的首選方案。**
 
 透過 **Apple 校務管理 (ASM)** 的大量採購計畫與 MDM 結合，管理員可以將 App 授權直接與裝置的「硬體序號」綁定，而非與「Apple 帳號」綁定。
@@ -52,13 +53,13 @@ important: true,
 
 **操作建議**：
 在 Jamf Pro 分派 App 時，務必在「VPP」分頁中勾選 **「指派 VPP 內容 (Assign VPP Content)」**，並確認分發方法設定為 **「裝置指派 (Device Assignment)」**。
-    `
-  },
-  {
-      id: 'app-3',
-      question: '如果隱藏了 App Store，學生要如何獲取教學所需的 App？',
-      tags: ['Self Service', 'App Store', '限制描述檔', '自主學習'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-3",
+        question: "如果隱藏了 App Store，學生要如何獲取教學所需的 App？",
+        tags: ["Self Service", "App Store", "限制描述檔", "自主學習"],
+        answer: `
 **即使透過限制描述檔隱藏了官方 App Store，學生仍能透過「Self Service (自助服務)」App 安全地獲取 App。**
 
 **Self Service 的角色**：
@@ -72,13 +73,13 @@ important: true,
 **注意事項**：
 *   **Self Service 無法開啟**：請確認裝置已正確註冊，且「Self Service」App 本身已成功安裝並獲得信任。
 *   **Web Clips 整合**：除了 App，您也可以將網頁捷徑（如：因材網、酷課雲）放在 Self Service 中，讓學生一鍵開啟。
-    `
-  },
-  {
-      id: 'app-4',
-      question: '大量採購免費 App 時，有哪些容易被忽略的細節？',
-      tags: ['VPP', 'ASM', '位置代號', '授權管理'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-4",
+        question: "大量採購免費 App 時，有哪些容易被忽略的細節？",
+        tags: ["VPP", "ASM", "位置代號", "授權管理"],
+        answer: `
 **在 Apple 的機制中，即使是 $0 的免費 App 也必須完成「取得」流程，才能獲得分發權。**
 
 **實務操作與潛在陷阱**：
@@ -91,13 +92,14 @@ important: true,
 
 **風險管理**：
 若發生「App 已採購但 Jamf 顯示數量為 0」，請先確認 ASM 中的位置是否正確，並在 Jamf Pro 中手動執行「同步 VPP 內容 (Sync VPP Content)」。
-    `
-  },
-  {
-      id: 'app-5',
-      question: '如何平衡「自動安裝」與「網路頻寬」？大批 App 下載不動怎麼辦？',
-      tags: ['部署策略', '內容快取', '頻寬管理', '自動安裝'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-5",
+        question:
+          "如何平衡「自動安裝」與「網路頻寬」？大批 App 下載不動怎麼辦？",
+        tags: ["部署策略", "內容快取", "頻寬管理", "自動安裝"],
+        answer: `
 **大型部署環境下（如開學第一天），數百台 iPad 同時下載 App 會導致網路癱瘓。建議採用「分層派送」策略。**
 
 **解決方案方案建議**：
@@ -112,13 +114,14 @@ important: true,
 
 **風險提示**：
 若裝置卡在「等待中」，請先檢查是否全校都在下載同一個 App，此時直接強制取消指令並重新派送往往無濟於事，應優先改善內網快取環境。
-    `
-  },
-  {
-      id: 'app-6',
-      question: '管理式 App 與個人安裝的 App 有何不同？學生畢業後可以將 App 帶走嗎？',
-      tags: ['管理式 App', '授權歸屬', 'VPP', '資料保護'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-6",
+        question:
+          "管理式 App 與個人安裝的 App 有何不同？學生畢業後可以將 App 帶走嗎？",
+        tags: ["管理式 App", "授權歸屬", "VPP", "資料保護"],
+        answer: `
 **這取決於該 App 的「購買者」身分以及它的「管理屬性」。App 授權與其內部的資料應分開來看。**
 
 在受管理環境中，App 分為「管理式」與「個人式」兩大類，其生命週期完全不同：
@@ -131,7 +134,7 @@ important: true,
 *   **資料風險**：若管理員啟用了「當移除管理描述檔時一併移除 App」設定，則 App 內儲存的資料（如：未存檔的專案、本地筆記）會隨之 **永久抹除**。
 
 **2. 學生以個人 Apple 帳號購買的 App**
-*   **來源**：學生在個人裝置或未受限制的設備上，登入私人的 Apple ID 購買。
+*   **來源**：學生在個人裝置或未受限制的設備上，登入私人的 Apple 帳號購買。
 *   **所有權**：授權永久屬於 **該學生個人**。
 *   **畢業離校處理**：
 *   **永久持有**：學生只要在自己的新設備登入同一個 Apple 帳號，即可重新下載，不受學校 MDM 影響。
@@ -144,16 +147,17 @@ important: true,
 **專家建議與風險控管**：
 *   **資料遷移**：建議師生在畢業前，務必將重要作品透過雲端硬碟（如：Google Drive）或 AirDrop 導出。一旦管理權限撤銷，**管理式 App 及其內部未備份的資料將無法救回**。
 *   **BYOD 建議**：對於學生自有的裝置，建議使用「使用者註冊 (User Enrollment)」模式，這能實現「公私分明」，在移除學校資料時不影響學生個人的 App 與照片。
-    `
-  },
-  {
-      id: 'app-7',
-      question: '我想用的 App 在 ASM 搜不到（例如特定地區限制或下架），該如何解決？',
-      tags: ['ASM 搜尋', '地區限制', '開發者設定', 'App Store'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-7",
+        question:
+          "我想用的 App 在 ASM 搜不到（例如特定地區限制或下架），該如何解決？",
+        tags: ["ASM 搜尋", "地區限制", "開發者設定", "App Store"],
+        answer: `
 **ASM 的搜尋結果與個人手機上的 App Store 有時不一致。若遇到搜不到的情況，可依序檢查以下因素：**
 
-1.  **使用 Apple ID 字串搜尋 (推薦)**：
+1.  **使用 Apple 帳號字串搜尋 (推薦)**：
 *   不要搜尋名稱，而是去 App Store 網頁版找到該 App 的 ID（例如：\`id123456789\`）。將此 ID 直接貼入 ASM 搜尋框，通常能精確命中。
 2.  **地區與商店一致性**：
 *   ASM 只能搜尋到您組織帳號所屬地區的 App（如：台灣商店）。若開發者只在美國商店上架，您將無法在台灣的 ASM 採購。
@@ -162,13 +166,13 @@ important: true,
 
 **風險提示**：
 若 App 已從 App Store 下架，即使您還有剩餘的 VPP 授權，新裝置可能也將無法下載。建議管理員針對關鍵教學 App，定期檢查其在商店的狀態。
-    `
-  },
-  {
-      id: 'app-8',
-      question: '可以派送網頁捷徑 (Web Clip) 到學生桌面上嗎？這算 App 嗎？',
-      tags: ['Web Clip', 'Safari', '設定描述檔', '教學工具'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-8",
+        question: "可以派送網頁捷徑 (Web Clip) 到學生桌面上嗎？這算 App 嗎？",
+        tags: ["Web Clip", "Safari", "設定描述檔", "教學工具"],
+        answer: `
 **可以。Web Clip 並非真正的 App，而是在桌面上建立一個指向特定網址的「書籤圖示」。這對於引導學生進入特定教學網站（如：因材網、酷課雲）非常有效。**
 
 **技術細節與設定建議**：
@@ -188,13 +192,14 @@ important: true,
 **限制與風險提示**：
 *   **瀏覽器依賴**：Web Clip 預設依賴內建的 Safari 引擎。若您在限制描述檔中徹底停用了 Safari 瀏覽器，Web Clip 將會無法開啟。
 *   **網路連線**：它本質上是網頁，因此裝置必須在連網狀態下才能載入內容。若需離線使用，則必須尋找支援離線快取的 PWA (Progressive Web App) 或安裝原生 App。
-    `
-  },
-  {
-      id: 'app-9',
-      question: '更新 App 時，需要學生的 Apple 帳號密碼嗎？如何實現靜默更新？',
-      tags: ['App 更新', '裝置型分派', '自動更新', 'DDM'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-9",
+        question:
+          "更新 App 時，需要學生的 Apple 帳號密碼嗎？如何實現靜默更新？",
+        tags: ["App 更新", "裝置型分派", "自動更新", "DDM"],
+        answer: `
 **不需要。只要使用「裝置型分派 (Device-based Assignment)」，更新過程完全無需人工介入。**
 
 **實現靜默更新的條件**：
@@ -208,13 +213,14 @@ important: true,
 *   **指令卡住**：若大量更新指令 Pending，可嘗試發送一個 **「空白推播 (Blank Push)」** 來強迫裝置與 Apple 伺服器 Check-in。
 
 **注意**：在最新系統架構下，**宣告式管理 (DDM)** 讓裝置能更主動地排程更新，降低了對 MDM 指令的即時性依賴。
-    `
-  },
-  {
-      id: 'app-10',
-      question: '為什麼開啟 App 時，iPad 會跳出要求輸入 Apple 帳號密碼的對話框？',
-      tags: ['故障排除', '授權衝突', '管理式 App', '裝置型指派'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-10",
+        question:
+          "為什麼開啟 App 時，iPad 會跳出要求輸入 Apple 帳號密碼的對話框？",
+        tags: ["故障排除", "授權衝突", "管理式 App", "裝置型指派"],
+        answer: `
 **這通常是因為該 App 的「授權來源」與「安裝身分」不符，導致系統試圖驗證原購買者的身分。**
 
 在受管理的 iPad 上，這類「彈出視窗」主要源於以下三種技術衝突：
@@ -236,13 +242,13 @@ important: true,
 
 **專家建議**：
 在學校公用載具上，應嚴格執行 **「裝置型指派」**。若遇到單一裝置反覆跳出彈窗，最有效率的解法通常是刪除該 App 後，透過 Jamf 的 **「Self Service (自助服務)」** 重新下載，以重新建立正確的授權連結。
-    `
-  },
-  {
-      id: 'app-11',
-      question: '如何派送「電子書 (PDF/ePub)」教材到學生 iPad？',
-      tags: ['電子書', '教材派送', 'PDF', '限制'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-11",
+        question: "如何派送「電子書 (PDF/ePub)」教材到學生 iPad？",
+        tags: ["電子書", "教材派送", "PDF", "限制"],
+        answer: `
 **在台灣，Apple 校務管理 (ASM) 目前不支援直接採購或分發「Apple Books」商店內的內容。**
 
 但您仍有多種方法將學校自製或購買的電子教材（如 PDF、ePub 檔案）派送至學生 iPad：
@@ -266,13 +272,13 @@ important: true,
 
 **總結**：
 在台灣的教育環境下，管理員應將重點放在自定義的 PDF/ePub 檔案或利用現有的雲端儲存與學習平台來分發教材，而非透過 ASM 直接派送 Apple Books 商店的內容。
-    `
-  },
-  {
-      id: 'app-12',
-      question: '付費 App 的授權可以分給不同學校用嗎？(跨校 VPP)',
-      tags: ['VPP 位置', '資源共享', '跨校管理', 'ASM'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-12",
+        question: "付費 App 的授權可以分給不同學校用嗎？(跨校 VPP)",
+        tags: ["VPP 位置", "資源共享", "跨校管理", "ASM"],
+        answer: `
 **可以，這透過 ASM 的「位置 (Location)」管理達成。**
 
 這在教育局或總校統一採購的情境下非常實用：
@@ -283,12 +289,14 @@ important: true,
 3.  **獨立分發**：各校的管理員登入自己的 MDM，僅能看到並使用被分配到的那 1,000 套或 500 套授權。
 
 **優點**：實現「統一議價採購，各校獨立管理」，大幅簡化核銷流程。
-    `
-    },{
-      id: 'app-13',
-      question: '什麼是「受管理的應用程式配置 (Managed App Configuration)」？如何應用於大量部署？',
-      tags: ['AppConfig', 'XML', '變數代換', 'Jamf Pro'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-13",
+        question:
+          "什麼是「受管理的應用程式配置 (Managed App Configuration)」？如何應用於大量部署？",
+        tags: ["AppConfig", "XML", "變數代換", "Jamf Pro"],
+        answer: `
 **「受管理的應用程式配置」是利用 MDM 協定，將 XML 格式的設定檔注入至支援 AppConfig 標準的應用程式中，實現「免接觸設定 (Zero-touch Configuration)」。**
 
 這不只是單純的預填資料，而是能強制鎖定 App 的特定行為，防止使用者修改。
@@ -316,13 +324,19 @@ important: true,
 </dict>
 \`\`\`
 *(注意：具體的 Key 值必須參閱該 App 開發商（如 Zoom, Chrome, Microsoft）的官方管理手冊。)*
-    `
-  },
-  {
-      id: 'app-14',
-      question: '【TestFlight】可以讓老師使用「管理式 Apple 帳號」測試校內開發的 Beta 版 App 嗎？',
-      tags: ['TestFlight', 'App Store Connect', '管理式 Apple 帳號', '服務存取'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-14",
+        question:
+          "【TestFlight】可以讓老師使用「管理式 Apple 帳號」測試校內開發的 Beta 版 App 嗎？",
+        tags: [
+          "TestFlight",
+          "App Store Connect",
+          "管理式 Apple 帳號",
+          "服務存取",
+        ],
+        answer: `
 **可以。Apple 已允許「管理式 Apple 帳號 (Managed Apple Account)」作為 TestFlight 的測試者，但必須先在 ASM 端開放權限。**
 
 **前置需求檢查 (ASM 端)**：
@@ -341,13 +355,14 @@ important: true,
 
 **與個人帳號的差異**：
 管理式帳號無法進行 App 內購，因此無法測試涉及實際金流支付的 Beta 功能（除非是在沙盒環境下）。
-    `
-  },
-  {
-      id: 'app-15',
-      question: '【App 更新策略】如何避免 App 在上課時間突然更新，導致斷線或頻寬塞車？',
-      tags: ['App 更新', '課堂管理', '更新策略', '頻寬控管'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-15",
+        question:
+          "【App 更新策略】如何避免 App 在上課時間突然更新，導致斷線或頻寬塞車？",
+        tags: ["App 更新", "課堂管理", "更新策略", "頻寬控管"],
+        answer: `
 **關鍵在於關閉「自動更新」，並改採「維護時段手動推送」的策略。**
 
 App Store 的自動更新機制難以預測時間。為了教學穩定，建議針對關鍵 App 採取以下設定：
@@ -362,13 +377,14 @@ App Store 的自動更新機制難以預測時間。為了教學穩定，建議�
 
 **3. 善用版本鎖定 (Version Pinning)**
 *   若您的環境使用「大量採購 (VPP)」，雖然無法指定降版，但您可以暫時不按更新鈕，讓全校裝置維持在當前的穩定版本，直到寒暑假再統一升級。
-    `
-  },
-  {
-      id: 'app-16',
-      question: '我可以統一排版學生 iPad 的桌面嗎？（例如：把數學 App 放在第一頁）',
-      tags: ['主畫面佈局', 'Home Screen Layout', '限制', '資料夾'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-16",
+        question:
+          "我可以統一排版學生 iPad 的桌面嗎？（例如：把數學 App 放在第一頁）",
+        tags: ["主畫面佈局", "Home Screen Layout", "限制", "資料夾"],
+        answer: `
 **可以。透過「主畫面佈局 (Home Screen Layout)」設定檔，管理員可以強制定義 App 的排列位置。**
 
 **設定方式**：
@@ -382,13 +398,14 @@ App Store 的自動更新機制難以預測時間。為了教學穩定，建議�
 *   **排擠效應**：未被您排入佈局清單的其他 App，會被自動擠到最後一頁或 App 資料庫中。
 *   **建議**：此功能適合低年級或特殊教育需求（介面單純化）；對於高年級，建議保留彈性讓學生建立自己的學習環境。
 *   **注意**：教育部/教育局本身應該已經有預設的主畫面佈局描述檔，請務必確認是否已套用。若要更改可能要更改該描述檔而非另外開一個新的。
-    `
-  },
-  {
-      id: 'app-17',
-      question: '我在 ASM 已經「取得」了 App，為什麼 Jamf Pro 列表裡還是找不到？',
-      tags: ['VPP 同步', 'ASM', '故障排除', '大量採購'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-17",
+        question:
+          "我在 ASM 已經「取得」了 App，為什麼 Jamf Pro 列表裡還是找不到？",
+        tags: ["VPP 同步", "ASM", "故障排除", "大量採購"],
+        answer: `
 **這通常是因為「Apple 伺服器」與「MDM 伺服器」之間的排程同步尚未完成。**
 
 **運作機制**：
@@ -403,13 +420,13 @@ Jamf Pro 預設通常每天只會自動與 ASM 同步一次（或依管理員設
 
 **檢查重點**：
 若強制同步後仍未出現，請檢查 ASM 中該次購買是否選對了 **「位置 (Location)」**。若買到了 A 校區，B 校區的 MDM 是絕對抓不到的。
-    `
-  },
-  {
-      id: 'app-18',
-      question: '我的 App Store 圖示不見了！我也沒設限制，怎麼找回來？',
-      tags: ['App Store', '圖示消失', '故障排除', '螢幕使用時間', '限制'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-18",
+        question: "我的 App Store 圖示不見了！我也沒設限制，怎麼找回來？",
+        tags: ["App Store", "圖示消失", "故障排除", "螢幕使用時間", "限制"],
+        answer: `
 **App Store 圖示消失通常源於「本機螢幕使用時間」或「MDM 限制描述檔」的權限鎖定。請依序排查：**
 
 **排查一：檢查本機「螢幕使用時間」 (最常見)**
@@ -427,14 +444,15 @@ Jamf Pro 預設通常每天只會自動與 ASM 同步一次（或依管理員設
 
 **排查四：重置主畫面佈局 (最後手段)**
 *   若圖示真的憑空消失，可前往「設定」>「一般」>「移轉或重置 iPad」>「重置」> **「重置主畫面佈局」**。注意：這會打亂所有已整理的 App 排列。
-    `
-  },
-  {
-      id: 'app-19',
-      question: '如何將 iPad 鎖定在「單一 App」進行考試？能設定讓學生自行退出嗎？',
-important: true,
-      tags: ['單一 App 模式', 'ASAM', '考試模式', '風險警示'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-19",
+        question:
+          "如何將 iPad 鎖定在「單一 App」進行考試？能設定讓學生自行退出嗎？",
+        important: true,
+        tags: ["單一 App 模式", "ASAM", "考試模式", "風險警示"],
+        answer: `
 **標準的「單一 App 模式」無法由使用者自行退出。若需要保留退出彈性，應改用「自主單一 App 模式 (ASAM)」。**
 
 這兩者的運作邏輯完全不同，選錯模式是造成「死機」的主因：
@@ -457,13 +475,14 @@ important: true,
 *   **正規考試**：請要求軟體商支援 **ASAM**（如 LockDown Browser），這是最安全且專業的做法。
 *   **臨時測驗**：若 App 不支援 ASAM，請使用 **「引導使用模式」** 由監考老師手動控管。
 *   **盡量避免**：對大量學生裝置使用 MDM 強制單一 App 模式，除非您有把握 Wi-Fi 絕對穩定且有能力處理死機救援。
-    `
-  },
-  {
-      id: 'app-20',
-      question: '新架構：什麼是「宣告式 App 管理 (Declarative App Management)」？',
-      tags: ['DDM', 'App 部署', '狀態監控', '新技術'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-20",
+        question:
+          "新架構：什麼是「宣告式 App 管理 (Declarative App Management)」？",
+        tags: ["DDM", "App 部署", "狀態監控", "新技術"],
+        answer: `
 **這是 Apple MDM 協定的重大演進，讓裝置能根據伺服器發出的「宣告 (Declarations)」，自主維持 App 的安裝狀態。**
 
 **與傳統 MDM 的核心差異**：
@@ -477,14 +496,15 @@ important: true,
 
 3.  **邏輯判斷 (Predicates)**：
 *   管理員可以設定安裝條件（例如：「僅在裝置版本 > iOS 17 時安裝」）。裝置會自行在本地端判斷是否符合條件並執行安裝，無需伺服器反覆運算。
-    `
-  },
-  {
-      id: 'app-21',
-      question: '如何防止學生利用 iOS 18 的功能「隱藏」或「鎖定」管理式 App？',
-important: true,
-      tags: ['iOS 18', '隱藏 App', '鎖定 App', '限制描述檔', '受監管'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-21",
+        question:
+          "如何防止學生利用 iOS 18 的功能「隱藏」或「鎖定」管理式 App？",
+        important: true,
+        tags: ["iOS 18", "隱藏 App", "鎖定 App", "限制描述檔", "受監管"],
+        answer: `
 **iOS 18 新增的隱私功能允許使用者透過 Face ID 鎖定或隱藏 App，這會干擾校園的資產盤點與教學管理。**
 
 **MDM 對策 (需 Jamf Pro 11.9+ 與 iOS 18+)**：
@@ -497,13 +517,14 @@ important: true,
 
 **實務影響**：
 套用此限制後，學生長按 App Icon 時，選單中的「需要 Face ID」或「隱藏並需要 Face ID」選項將會反灰或消失，確保老師能隨時在主畫面或 App 資料庫中檢查學生安裝的軟體。
-    `
-  },
-  {
-      id: 'app-22',
-      question: '【番外篇-實務採購常見狀況】Procreate 與 Procreate Pocket 有什麼差別？學校買錯了怎麼辦？',
-      tags: ['Procreate', 'App 採購', 'VPP', '通用購買', '退款'],
-    answer: `
+    `,
+      },
+      {
+        id: "app-22",
+        question:
+          "【番外篇-實務採購常見狀況】Procreate 與 Procreate Pocket 有什麼差別？學校買錯了怎麼辦？",
+        tags: ["Procreate", "App 採購", "VPP", "通用購買", "退款"],
+        answer: `
 **買錯 App 版本，是教育採購很常發生的錯誤。這兩款 App 屬於不同的產品線，且不支援「通用購買 (Universal Purchase)」。**
 
 **規格對照**：
@@ -519,8 +540,8 @@ important: true,
 *   由於授權不通用，您必須重新購買正確的 iPad 版本才能進行派送。
 3.  **移除錯誤指派**：
 *   在 Jamf Pro 中，務必移除 Pocket 版的指派範圍，以免學生安裝到錯誤版本，影響上課體驗。
-    `
-}
-    ]
-}
+    `,
+      },
+    ],
+  },
 ];

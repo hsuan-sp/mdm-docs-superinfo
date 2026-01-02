@@ -206,9 +206,9 @@ onMounted(async () => {
   Apple-style Design System 
 */
 .glossary-app {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 0 24px 60px;
+  padding: 0 2% 60px;
   /* Premium Traditional Chinese Font Stack */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei UI", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
   color: var(--vp-c-text-1);

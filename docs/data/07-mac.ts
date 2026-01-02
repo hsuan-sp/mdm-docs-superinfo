@@ -1,15 +1,15 @@
-import { QASection } from '../types'
+import { QASection } from "../types";
 
 export const data: QASection[] = [
   {
-    title: '第七部分：Mac 電腦進階管理 (Mac Management)',
+    title: "第七部分：Mac 電腦進階管理 (Mac Management)",
     items: [
-  {
-      id: 'mac-1',
-      question: 'Mac 需要綁定 AD (Active Directory) 嗎？現代化的建議是什麼？',
-important: true,
-      tags: ['AD', '身分認證', 'Jamf Connect', 'Platform SSO', 'No-Bind'],
-    answer: `
+      {
+        id: "mac-1",
+        question: "Mac 需要綁定 AD (Active Directory) 嗎？現代化的建議是什麼？",
+        important: true,
+        tags: ["AD", "身分認證", "Jamf Connect", "Platform SSO", "No-Bind"],
+        answer: `
 **高度建議不要綁定 AD (No-Bind 策略)。請改用「平台單一登入 (Platform SSO)」或 Jamf Connect。**
 
 傳統將 Mac「綁定 (Bind)」至 AD 網域的做法，在行動辦公與資安零信任（Zero Trust）架構下已顯得笨重且不可靠。
@@ -36,13 +36,13 @@ important: true,
 
 **遷移建議**：
 若貴校仍有大量 Mac 綁定 AD，請優先計畫「解除綁定 (Unbind)」專案，並導入 Platform SSO，這能大幅減少資訊組長處理「密碼不同步」工單的數量。
-    `
-  },
-  {
-      id: 'mac-2',
-      question: '如何管理 Mac 的本機管理者權限 (Local Admin)？',
-      tags: ['帳號權限', 'LAPS', '資安', 'Privileges', '最小權限原則'],
-    answer: `
+    `,
+      },
+      {
+        id: "mac-2",
+        question: "如何管理 Mac 的本機管理者權限 (Local Admin)？",
+        tags: ["帳號權限", "LAPS", "資安", "Privileges", "最小權限原則"],
+        answer: `
 **最佳實踐是「日常使用標準帳戶」搭配「LAPS (本機管理員密碼解決方案)」。嚴禁讓使用者長期持有 Admin 權限。**
 
 給予教師或學生 Admin 權限是校園資安的最大破口，這會導致防毒軟體被關閉、惡意軟體被安裝，甚至整個內網被勒索病毒加密。
@@ -63,13 +63,13 @@ important: true,
 *   **工具**：部署 **Privileges** (免費開源工具) 或 Jamf 內建的類似功能。
 *   **流程**：老師點選 Dock 上的鎖頭圖示 > 說明理由 > 獲得 **「20 分鐘的管理員權限」**。時間一到，系統自動將其降回標準使用者。
 *   這既給予了方便，又維持了「最小權限原則 (Principle of Least Privilege)」。
-    `
-  },
-  {
-      id: 'mac-3',
-      question: '如何派送非 App Store 的軟體（如 Chrome, Adobe, Office）？',
-      tags: ['軟體派送', 'App Installers', 'PKG', '自動更新'],
-    answer: `
+    `,
+      },
+      {
+        id: "mac-3",
+        question: "如何派送非 App Store 的軟體（如 Chrome, Adobe, Office）？",
+        tags: ["軟體派送", "App Installers", "PKG", "自動更新"],
+        answer: `
 **放棄手動打包。請優先使用 Jamf Pro 的「App Installers」服務，實現「隨選即裝」與「自動更新」。**
 
 在 Mac 管理中，軟體派送曾經是最繁瑣的工作（下載 DMG -> 封裝成 PKG -> 上傳 -> 測試）。現在有更聰明的方法。
@@ -92,13 +92,14 @@ important: true,
 
 **實務建議**：
 對於 Adobe Creative Cloud (CC)，建議使用 Adobe Admin Console 建立 **「Shared Device License (共用裝置授權)」** 的安裝包，再透過 Jamf Pro 派送，以符合電腦教室多人共用的授權規範。
-    `
-  },
-  {
-      id: 'mac-4',
-      question: 'Mac 下載軟體時出現「無法打開，因為它來自未識別的開發者」，如何解決？',
-      tags: ['Gatekeeper', '安全性', 'Notarization', '軟體簽署'],
-    answer: `
+    `,
+      },
+      {
+        id: "mac-4",
+        question:
+          "Mac 下載軟體時出現「無法打開，因為它來自未識別的開發者」，如何解決？",
+        tags: ["Gatekeeper", "安全性", "Notarization", "軟體簽署"],
+        answer: `
 **這是 macOS 的「Gatekeeper (守門員)」安全機制。管理員可透過 MDM 允許特定開發者，或教導使用者正確的開啟方式。**
 
 Apple 強制要求軟體需經過 **公證 (Notarization)**。若軟體太舊或未簽署，就會被阻擋。
@@ -121,13 +122,14 @@ Apple 強制要求軟體需經過 **公證 (Notarization)**。若軟體太舊或
 
 **實務建議**：
 若遇到連右鍵都打不開的軟體（顯示「已損毀」），通常是因為該軟體未經公證且被隔離 (Quarantine)。需透過終端機指令 \`xattr -r -d com.apple.quarantine /path/to/app\` 解除隔離，這可透過 Jamf Policy 的 Script 功能統一執行。
-    `
-  },
-  {
-      id: 'mac-5',
-      question: '如何強制 Mac 進行 macOS 系統更新？學生一直按「稍後提醒」怎麼辦？',
-      tags: ['系統更新', 'DDM', 'Nudge', '宣告式管理', 'SOP'],
-    answer: `
+    `,
+      },
+      {
+        id: "mac-5",
+        question:
+          "如何強制 Mac 進行 macOS 系統更新？學生一直按「稍後提醒」怎麼辦？",
+        tags: ["系統更新", "DDM", "Nudge", "宣告式管理", "SOP"],
+        answer: `
 **現在的標準是使用「宣告式裝置管理 (DDM)」。若需更強烈的視覺提醒，則搭配開源工具 "Nudge"。**
 
 與 iOS 不同，macOS 的更新往往涉及長時間重開機，因此 Apple 的設計傾向讓使用者選擇時間，但這常導致校園電腦版本碎片化。
@@ -147,13 +149,13 @@ Apple 強制要求軟體需經過 **公證 (Notarization)**。若軟體太舊或
 
 **實務建議**：
 對於電腦教室（無人使用的時段），可設定 **「Power Nap」** 與 **「排程開機」**，並發送 MDM 指令在深夜自動執行下載與安裝，避開教學時段。
-    `
-  },
-  {
-      id: 'mac-6',
-      question: 'Mac 電腦教室如何像還原卡一樣，快速清除重置 (Wipe)？',
-      tags: ['重置', 'EACS', '抹除所有內容', '電腦教室', 'Imaging'],
-    answer: `
+    `,
+      },
+      {
+        id: "mac-6",
+        question: "Mac 電腦教室如何像還原卡一樣，快速清除重置 (Wipe)？",
+        tags: ["重置", "EACS", "抹除所有內容", "電腦教室", "Imaging"],
+        answer: `
 **Apple Silicon (M系列) 時代已不建議，而且可能也無法使用「還原卡」或「Ghost」。請改用「清除所有內容和設定 (EACS)」指令。**
 
 傳統的磁碟映像檔部署 (Monolithic Imaging) 因為已被 Apple 徹底淘汰。現在的重置邏輯是「清除使用者資料 + 保留作業系統 + 自動重新註冊」。
@@ -177,13 +179,13 @@ Apple 強制要求軟體需經過 **公證 (Notarization)**。若軟體太舊或
 **與傳統還原卡的差異**：
 *   傳統還原卡是「開機即還原」。
 *   現代 Mac 管理是「學期末/專案結束時」執行一次 EACS 重置。若需每日還原（如圖書館公用機），則需透過 **「Guest User (訪客模式)」** 設定登出即刪除資料，或使用專門的 kiosk 軟體 (如 Deep Freeze Mac 版，但支援度需確認)。
-    `
-  },
-  {
-      id: 'mac-7',
-      question: 'M 系列晶片 (Apple Silicon) 的 Mac 在管理上有什麼特殊限制？',
-      tags: ['Apple Silicon', 'Bootstrap Token', '安全啟動', '核心延伸功能'],
-    answer: `
+    `,
+      },
+      {
+        id: "mac-7",
+        question: "M 系列晶片 (Apple Silicon) 的 Mac 在管理上有什麼特殊限制？",
+        tags: ["Apple Silicon", "Bootstrap Token", "安全啟動", "核心延伸功能"],
+        answer: `
 **Apple Silicon (M1/M2/M3/M4) 的安全性架構與 Intel Mac 完全不同。管理核心在於「Bootstrap Token」與「擁有權 (Ownership)」。**
 
 若未正確配置，MDM 將無法執行軟體更新或安裝核心外掛。
@@ -203,14 +205,22 @@ Apple 強制要求軟體需經過 **公證 (Notarization)**。若軟體太舊或
 *   Apple Silicon 預設**封鎖**所有第三方 KEXTs。
 *   若必須安裝（如舊款防毒軟體），必須重開機進入 Recovery Mode 降低安全性設定（Reduced Security）。
 *   **現代建議**：請改用 **系統延伸功能 (System Extensions)**，這是 Apple 推薦的新架構，可直接透過 MDM 設定檔授權，無需降低系統安全性。
-    `
-  },
-  {
-      id: 'mac-8',
-      question: '為什麼 MDM 要求開啟 FileVault？使用者忘記登入密碼時該如何救援？',
-important: true,
-      tags: ['FileVault', '全磁碟加密', '資料安全', '復原密鑰', 'Jamf Pro', '資產'],
-    answer: `
+    `,
+      },
+      {
+        id: "mac-8",
+        question:
+          "為什麼 MDM 要求開啟 FileVault？使用者忘記登入密碼時該如何救援？",
+        important: true,
+        tags: [
+          "FileVault",
+          "全磁碟加密",
+          "資料安全",
+          "復原密鑰",
+          "Jamf Pro",
+          "資產",
+        ],
+        answer: `
 **FileVault 是 macOS 內建的「全磁碟加密」技術，能確保電腦遺失時資料無法被竊取。透過 MDM 託管「復原密鑰 (Recovery Key)」，管理員可在使用者忘記密碼時協助解鎖。**
 
 **技術原理：**
@@ -247,13 +257,13 @@ important: true,
 **重要注意事項：**
 *   **資料遺失風險**：若 FileVault 已開啟但 Jamf Pro 顯示「Unknown」或無金鑰，代表託管失敗。此時若忘記密碼，資料將**永久無法救回**，只能清除重灌。
 *   **機構復原密鑰 (IRK)**：現代管理建議優先使用「個人復原密鑰 (PRK)」機制，安全性較高。
-    `
-  },
-  {
-      id: 'mac-9',
-      question: 'Jamf 的 Script (腳本) 功能可以做什麼？如何建立與執行？',
-      tags: ['自動化', 'Shell Script', 'Zsh', '政策', '腳本', 'jamfHelper'],
-    answer: `
+    `,
+      },
+      {
+        id: "mac-9",
+        question: "Jamf 的 Script (腳本) 功能可以做什麼？如何建立與執行？",
+        tags: ["自動化", "Shell Script", "Zsh", "政策", "腳本", "jamfHelper"],
+        answer: `
 **腳本 (Scripts) 讓管理員能以 Root 權限在 Mac 上執行 Shell 指令，實現標準 MDM 描述檔 (Payload) 無法達成的進階客製化功能。**
 
 Jamf Pro 的強大之處在於其專屬的二進位檔案 (Binary)，配合 **「政策 (Policies)」** 使用，可達成以下進階場景：
@@ -307,13 +317,20 @@ DESC="您的電腦將在 10 分鐘後進行安全性更新，請儲存手邊的�
 **專家提示：**
 *   **權限**：Jamf Pro 執行的腳本預設皆為 **Root (系統最高權限)**，請務必先在測試機上驗證，以免誤刪重要系統檔。
 *   **登入使用者的執行**：若需以當前登入使用者的身分執行指令（例如修改使用者的 Dock），需使用 \`sudo -u $(stat -f%Su /dev/console) command\` 的語法切換身分。
-    `
-  },
-  {
-      id: 'mac-10',
-      question: 'Jamf Pro 預設的「資產」報告中沒有我要的資訊（如特定檔案版本、最後重開機時間），該如何自訂收集？',
-      tags: ['延伸屬性', 'Extension Attributes', '腳本', '資產', '客製化欄位'],
-    answer: `
+    `,
+      },
+      {
+        id: "mac-10",
+        question:
+          "Jamf Pro 預設的「資產」報告中沒有我要的資訊（如特定檔案版本、最後重開機時間），該如何自訂收集？",
+        tags: [
+          "延伸屬性",
+          "Extension Attributes",
+          "腳本",
+          "資產",
+          "客製化欄位",
+        ],
+        answer: `
 **請使用「電腦延伸屬性 (Computer Extension Attributes)」功能。這是 Jamf Pro 用於擴充資料庫欄位、收集非標準硬體/軟體資訊的核心工具。**
 
 標準的 Jamf Pro 資產檢視雖然已包含硬體規格、作業系統、應用程式清單等資訊，但面對特殊管理需求（例如：檢查某個特定設定檔是否被竄改、電池循環次數、或是自訂的財產編號），就需要透過「延伸屬性」來達成。
@@ -353,13 +370,14 @@ echo "<result>$days</result>"
 
 **專家提示：**
 *   **執行效能**：延伸屬性腳本會在**每次**資產更新時執行。請避免撰寫耗時過長（如 \`find / ...\` 掃描全硬碟）的腳本，以免拖慢全校電腦的資產回報速度或造成系統卡頓。
-    `
-  },
-  {
-      id: 'mac-11',
-      question: 'Mac 安裝軟體時顯示「來自未識別的開發者」或「無法打開」，如何解決？',
-      tags: ['Gatekeeper', '安全性', '公證', 'Notarization', '軟體安裝'],
-    answer: `
+    `,
+      },
+      {
+        id: "mac-11",
+        question:
+          "Mac 安裝軟體時顯示「來自未識別的開發者」或「無法打開」，如何解決？",
+        tags: ["Gatekeeper", "安全性", "公證", "Notarization", "軟體安裝"],
+        answer: `
 **這是 macOS 的 Gatekeeper 安全機制。對於教學所需但未經公證的軟體，建議透過「右鍵開啟」繞過，或由 MDM 統一派送以避免隔離標記。**
 
 Apple 強制要求所有 macOS 軟體必須經過 **「公證 (Notarization)」**，以確保不含惡意程式碼。若軟體太舊或開發者未向 Apple 註冊，就會被系統阻擋。
@@ -397,13 +415,13 @@ xattr -r -d com.apple.quarantine /Applications/AppName.app
 
 **專家建議：**
 若遇到軟體顯示 **「已損毀，應丟到垃圾桶」**，通常不是真的壞了，而是該軟體的簽署憑證過期或未經公證。請優先嘗試上述「移除隔離屬性」的指令，通常能起死回生。
-    `
-  },
-  {
-      id: 'mac-12',
-      question: '如何防止學生進入 Recovery Mode (復原模式) 格式化電腦？',
-      tags: ['防篡改', 'Recovery Lock', '韌體密碼', '資安', '遠端指令'],
-    answer: `
+    `,
+      },
+      {
+        id: "mac-12",
+        question: "如何防止學生進入 Recovery Mode (復原模式) 格式化電腦？",
+        tags: ["防篡改", "Recovery Lock", "韌體密碼", "資安", "遠端指令"],
+        answer: `
 **針對不同架構的 Mac，防護機制有所不同：Intel 機型需設定「韌體密碼」，而 Apple Silicon (M系列) 則需設定「復原鎖定 (Recovery Lock)」。兩者皆可透過 Jamf Pro 部署。**
 
 Mac 的復原模式功能強大，若未加鎖，任何人只要接觸實體機器，即可透過「抹除磁碟」或「重灌系統」來規避監管。
@@ -448,16 +466,17 @@ Mac 的復原模式功能強大，若未加鎖，任何人只要接觸實體機�
 **重要差異與注意事項：**
 
 *   **與「啟用鎖定 (Activation Lock)」的區別**：
-*   **啟用鎖定**：綁定 Apple ID (防盜用)。
+*   **啟用鎖定**：綁定 Apple 帳號 (防盜用)。
 *   **復原鎖定**：綁定 MDM (防篡改)。學校資產建議兩者並行，但管理權責不同。
 *   **維修前置作業**：若 Mac 需要送修，除了關閉「尋找」外，管理員也必須透過 Jamf Pro 發送 **「移除復原鎖定」** 指令，否則維修中心無法進行硬體檢測。
-    `
-  },
-  {
-      id: 'mac-13',
-      question: 'Google Meet 或 Zoom 想要分享螢幕，卻一直跳出權限請求？MDM 能自動全開嗎？',
-      tags: ['PPPC', '隱私權限', 'TCC', '螢幕錄製', '標準使用者'],
-    answer: `
+    `,
+      },
+      {
+        id: "mac-13",
+        question:
+          "Google Meet 或 Zoom 想要分享螢幕，卻一直跳出權限請求？MDM 能自動全開嗎？",
+        tags: ["PPPC", "隱私權限", "TCC", "螢幕錄製", "標準使用者"],
+        answer: `
 **這是 macOS 的 TCC (透明度、同意與控制) 隱私機制。針對「螢幕錄製」、「麥克風」與「相機」，Apple 強制要求必須由使用者「親自點選同意」，MDM 無法越俎代庖強制開啟。**
 
 但管理員可以透過 Jamf Pro 派送 **PPPC (隱私權偏好設定原則控制)** 描述檔，來解決「標準使用者 (老師)」無法自行修改設定的權限問題。
@@ -490,13 +509,14 @@ Zoom 或 Teams 的遠端控制功能需要「輔助使用」權限。
 
 **專家提示：**
 若發現 PPPC 設定檔派送後無效（User 仍需輸密碼），通常是因為 **Bundle ID** 或 **Code Requirement** 填寫錯誤。建議使用開源工具 **"PPPC Utility"** 來產生正確的參數，再上傳至 Jamf Pro。
-    `
-  },
-  {
-      id: 'mac-14',
-      question: '學校有多台網路印表機，如何透過 Jamf Pro 派送設定給老師的 Mac？',
-      tags: ['印表機', 'AirPrint', 'lpadmin', '政策', '自助服務', '驅動程式'],
-    answer: `
+    `,
+      },
+      {
+        id: "mac-14",
+        question:
+          "學校有多台網路印表機，如何透過 Jamf Pro 派送設定給老師的 Mac？",
+        tags: ["印表機", "AirPrint", "lpadmin", "政策", "自助服務", "驅動程式"],
+        answer: `
 **現代化 Mac 列印部署應優先採用「AirPrint (免驅動)」協定。若需進階設定，則透過「政策 (Policies)」或 Shell 腳本執行 \`lpadmin\` 指令。**
 
 在過去，Mac 管理員需花費大量時間打包驅動程式 (PPD)。但在 macOS 12 Monterey 之後，Apple 大力推動 IPP/AirPrint 通用協定，大幅簡化了流程。
@@ -546,13 +566,20 @@ echo "Printer $DISPLAY_NAME installed successfully."
 **最佳實踐：自助服務 (Self Service)**
 *   **痛點**：學校印表機眾多，全校派送會導致老師的選單出現數十台印表機，造成混亂。
 *   **解法**：將每台印表機做成一個 **「自助服務」** 項目，並附上位置說明（如：「安裝 - 二樓導師室印表機」）。讓老師走到哪、裝到哪，亦可減少驅動衝突。
-    `
-  },
-  {
-      id: 'mac-15',
-      question: '如何大量部署 Microsoft Office 並啟用授權？電腦教室與行政機有何不同？',
-      tags: ['Office', 'Microsoft 365', 'Serializer', '大量授權', 'Jamf App Installers'],
-    answer: `
+    `,
+      },
+      {
+        id: "mac-15",
+        question:
+          "如何大量部署 Microsoft Office 並啟用授權？電腦教室與行政機有何不同？",
+        tags: [
+          "Office",
+          "Microsoft 365",
+          "Serializer",
+          "大量授權",
+          "Jamf App Installers",
+        ],
+        answer: `
 **最佳實踐是使用「Jamf App Installers」自動部署安裝檔，並依據使用場景區分「序列化 (Serializer)」或「使用者登入」兩種啟用方式。**
 
 請務必使用 Microsoft 官方 CDN 版本（或透過 Jamf 派送），**嚴禁使用 Mac App Store 版本**，否則將無法支援大量授權功能。
@@ -580,13 +607,14 @@ echo "Printer $DISPLAY_NAME installed successfully."
 
 **專家提示**：
 若發生「授權衝突」，通常是因為電腦同時殘留了舊版的 Serializer 與新版登入資訊。建議使用微軟官方的 **License Removal Tool** (可包裝成腳本透過 Jamf 執行) 清除乾淨後再重新部署。
-    `
-  },
-  {
-      id: 'mac-16',
-      question: '【Sequoia 新功能】如何管理或禁用「iPhone 鏡像輸出 (iPhone Mirroring)」？',
-      tags: ['macOS 15', 'iPhone Mirroring', '隱私', '限制', 'DLP'],
-    answer: `
+    `,
+      },
+      {
+        id: "mac-16",
+        question:
+          "【Sequoia 新功能】如何管理或禁用「iPhone 鏡像輸出 (iPhone Mirroring)」？",
+        tags: ["macOS 15", "iPhone Mirroring", "隱私", "限制", "DLP"],
+        answer: `
 **macOS 15 Sequoia 引入的「iPhone 鏡像輸出」雖然方便，但在校園公用電腦或高機密行政機上存在資料外洩 (DLP) 風險，建議透過 MDM 限制。**
 
 **資安風險：**
@@ -602,13 +630,13 @@ echo "Printer $DISPLAY_NAME installed successfully."
 
 **效果**：
 設定生效後，即使使用者登入了相同的 Apple 帳號，開啟「iPhone 鏡像輸出」App 時會顯示「由管理員停用」的訊息。
-    `
-  },
-  {
-      id: 'mac-17',
-      question: '【硬體部署】學校電腦教室改用 Mac mini (M4) 有什麼優勢？',
-      tags: ['Mac mini', 'M4', '電腦教室', '自動部署', 'ADE'],
-    answer: `
+    `,
+      },
+      {
+        id: "mac-17",
+        question: "【硬體部署】學校電腦教室改用 Mac mini (M4) 有什麼優勢？",
+        tags: ["Mac mini", "M4", "電腦教室", "自動部署", "ADE"],
+        answer: `
 **Mac mini (M4) 憑藉其「零接觸部署 (Zero-Touch)」與「極低功耗」，已成為取代傳統 PC 電腦教室的首選方案。**
 
 **架構師觀點：為何選擇 Mac mini？**
@@ -624,13 +652,14 @@ echo "Printer $DISPLAY_NAME installed successfully."
 
 3.  **AI 教學就緒**：
 *   M4 晶片內建強大的神經網路引擎 (NPU)，無需依賴雲端算力即可執行本機 AI 模型教學或 4K 影片剪輯，符合新課綱數位內容需求。
-    `
-  },
-  {
-      id: 'mac-18',
-      question: '【資產救援】Mac 送修回來或離職交接時被舊 Apple 帳號鎖住 (啟用鎖定)，怎麼辦？',
-      tags: ['啟用鎖定', 'Activation Lock', 'ASM', '解除鎖定', '資產回收'],
-    answer: `
+    `,
+      },
+      {
+        id: "mac-18",
+        question:
+          "【資產救援】Mac 送修回來或離職交接時被舊 Apple 帳號鎖住 (啟用鎖定)，怎麼辦？",
+        tags: ["啟用鎖定", "Activation Lock", "ASM", "解除鎖定", "資產回收"],
+        answer: `
 **只要該 Mac 屬於學校資產（已加入 ASM），管理員可直接在 Apple School Manager 後台強制解除鎖定，無需聯絡原使用者。**
 
 這是 Apple 針對教育與企業提供的最高權限救援機制，解決「人員離職/畢業後帳號未登出」導致電腦變磚的問題。
@@ -650,8 +679,8 @@ echo "Printer $DISPLAY_NAME installed successfully."
 **前提條件**：
 *   該裝置必須是 **「自動裝置註冊 (ADE/DEP)」** 的一部分，且已指派給學校的 MDM 伺服器。
 *   若為早期自行購買未入庫的機器，需先透過 Apple Configurator 將其加入 ASM 才能使用此功能。
-    `
-}
-    ]
-}
-    ]
+    `,
+      },
+    ],
+  },
+];

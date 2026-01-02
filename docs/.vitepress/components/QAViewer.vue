@@ -257,16 +257,16 @@ onMounted(async () => {
 <style scoped>
 /* --- Layout & Reset --- */
 .qa-container {
-  max-width: 100%;
-  margin: 0;
-  padding: 60px 4% 120px; /* Base desktop padding */
+  max-width: 1600px; /* Maximum readable width */
+  margin: 0 auto;
+  padding: 60px 2% 120px; /* Reduced padding to 2% */
   transition: padding 0.3s ease;
 }
 
 @media (min-width: 1600px) {
   .qa-container {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
   }
 }
 
