@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 import { useLayoutMode } from '../composables/useLayoutMode';
 import { useData } from 'vitepress';
 
@@ -7,9 +7,10 @@ const { isMobileView, toggleLayout } = useLayoutMode();
 const { isDark } = useData();
 
 const user = ref<string | null>(null);
-const isGuest = ref(false); // Track if it's the sample account
+const isGuest = ref(false);
 const isMenuOpen = ref(false);
 
+// Ensure user is always set for consistent UI
 onMounted(async () => {
   try {
     const res = await fetch('/auth/me');
@@ -25,25 +26,24 @@ onMounted(async () => {
         throw new Error();
     }
   } catch (e) {
-    // Guest/GitHub Pages Mode: Use sample account to keep UI consistent
     user.value = 'sample@edu.tw';
     isGuest.value = true;
   }
 });
 
 const toggleDarkMode = () => {
-  isDark.value = !isDark.value;
+  // VitePress dark mode toggle
+  const html = document.documentElement;
+  html.classList.toggle('dark');
+  const newValue = html.classList.contains('dark');
+  localStorage.setItem('vitepress-theme-appearance', newValue ? 'dark' : 'light');
 };
 
 const logout = () => {
-    if (isGuest.value) return; // Cannot logout from sample account
+    if (isGuest.value) return;
     if (confirm('確定要登出系統嗎？')) {
         location.href = '/auth/logout';
     }
-};
-
-const closeMenu = () => {
-    isMenuOpen.value = false;
 };
 </script>
 
@@ -203,31 +203,35 @@ const closeMenu = () => {
 .mobile-dropdown-overlay {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.3);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    z-index: 1000;
+    z-index: 9999;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
     padding: 16px;
     padding-bottom: calc(16px + env(safe-area-inset-bottom));
 }
 
 .mobile-dropdown-card {
     width: 100%;
-    background: rgba(255, 255, 255, 0.75);
+    max-width: 500px;
+    min-height: 300px;
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(40px) saturate(200%);
     -webkit-backdrop-filter: blur(40px) saturate(200%);
     border-radius: 32px;
     padding: 28px;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
     border: 1px solid rgba(255, 255, 255, 0.5);
     max-height: 85vh;
     overflow-y: auto;
+    position: relative;
 }
 
 .dark .mobile-dropdown-card {
-    background: rgba(28, 28, 30, 0.8);
+    background: rgba(28, 28, 30, 0.95);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
