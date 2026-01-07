@@ -98,7 +98,32 @@ export default {
       return new Response(JSON.stringify({ error: "驗證失敗" }), { status: 401 });
     }
 
-    // --- 3. 登入狀態檢查 (JWT 驗證) ---
+    // --- 3. API: 處理 Magic Link 回調並紀錄 ---
+    if (url.pathname === "/auth/session" && request.method === "POST") {
+      const { access_token } = await request.json();
+      const user = await verifyJWT(access_token, env.JWT_SECRET);
+      
+      if (user && user.email) {
+        // 紀錄登入
+        ctx.waitUntil(fetch(`${env.SUPABASE_URL}/rest/v1/login_logs`, {
+          method: "POST",
+          headers: { 
+            "Content-Type": "application/json", 
+            "apikey": env.SUPABASE_ANON_KEY, 
+            "Authorization": `Bearer ${env.SUPABASE_SERVICE_ROLE_KEY}` 
+          },
+          body: JSON.stringify({ email: user.email })
+        }));
+
+        return new Response(JSON.stringify({ success: true }), {
+          status: 200,
+          headers: { "Set-Cookie": `sb-access-token=${access_token}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=86400` }
+        });
+      }
+      return new Response(JSON.stringify({ error: "無效的 Session" }), { status: 401 });
+    }
+
+    // --- 4. 登入狀態檢查 (JWT 驗證) ---
     const tokenMatch = cookie.match(/sb-access-token=([^;]+)/);
     // 詳細 Log: 偵測到的 Cookie 狀態
     console.log(`[Auth Check] Cookie present: ${!!cookie}, Token match: ${!!tokenMatch}`);

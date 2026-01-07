@@ -124,9 +124,18 @@
 
         // 如果找到 Token，設定 Cookie 並重整
         if (accessToken) {
-            // 使用 Lax + Secure
-            document.cookie = `sb-access-token=${accessToken}; Path=/; Max-Age=86400; SameSite=Lax; Secure`;
-            location.href = '/';
+            log('正在登入並紀錄...');
+            fetch('/auth/session', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ access_token: accessToken })
+            }).then(res => {
+                if (res.ok) {
+                    location.href = '/';
+                } else {
+                    log('登入失敗，請重試');
+                }
+            });
         } else if (hashParams.get('error_description')) {
             document.getElementById('message').className = 'error';
             document.getElementById('message').innerText = hashParams.get('error_description');
