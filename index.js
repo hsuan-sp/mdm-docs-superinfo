@@ -4,31 +4,18 @@ async function verifyJWT(token, secret) {
     const [headerB64, payloadB64, signatureB64] = token.split('.');
     const encoder = new TextEncoder();
     const data = encoder.encode(`${headerB64}.${payloadB64}`);
-    
-    // 將 Secret 轉為 CryptoKey
     const key = await crypto.subtle.importKey(
-      "raw",
-      encoder.encode(secret),
+      "raw", encoder.encode(secret),
       { name: "HMAC", hash: "SHA-256" },
-      false,
-      ["verify"]
+      false, ["verify"]
     );
-
-    // 驗證簽章
     const signature = Uint8Array.from(atob(signatureB64.replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0));
     const isValid = await crypto.subtle.verify("HMAC", key, signature, data);
-    
     if (!isValid) return null;
-
-    // 解析 Payload 檢查過期時間
     const payload = JSON.parse(atob(payloadB64.replace(/-/g, '+').replace(/_/g, '/')));
-    const now = Math.floor(Date.now() / 1000);
-    if (payload.exp && now > payload.exp) return null;
-
+    if (payload.exp && Math.floor(Date.now() / 1000) > payload.exp) return null;
     return payload;
-  } catch (err) {
-    return null;
-  }
+  } catch (err) { return null; }
 }
 
 export default {
@@ -36,45 +23,33 @@ export default {
     const url = new URL(request.url);
     const cookie = request.headers.get("Cookie") || "";
     
-    // 1. 從 Cookie 提取 Token
-    const tokenMatch = cookie.match(/sb-access-token=([^;]+)/);
-    const token = tokenMatch ? tokenMatch[1] : null;
+    console.log(`[Request] ${request.method} ${url.pathname}`);
 
-    // 2. 核心驗證：使用 JWT_SECRET 檢查 Token 真偽
-    let user = null;
-    if (token && env.JWT_SECRET) {
-      user = await verifyJWT(token, env.JWT_SECRET);
-    }
-    const isAuthenticated = !!user;
+    // --- 1. 定義 API 邏輯 (優先處理，不要被靜態資源攔截) ---
 
-    // --- 3. 靜態資源、登入、健康檢查不受限 ---
-    const isLoginPage = url.pathname === "/login";
-    const isHealthCheck = url.pathname === "/auth/health";
-    const isAuthApi = url.pathname.startsWith("/auth/");
-    const isPublicAsset = url.pathname.match(/\.(css|js|png|jpg|jpeg|gif|ico|svg|woff2?|json)$/);
-    
-    if (isLoginPage || isHealthCheck || isAuthApi || isPublicAsset || url.pathname === "/login.html") {
-      return await env.ASSETS.fetch(request);
-    }
-
-    // --- 4. 健康檢查 API ---
+    // 健康檢查
     if (url.pathname === "/auth/health") {
+      const hasUrl = !!env.SUPABASE_URL;
+      const hasKey = !!env.SUPABASE_ANON_KEY;
+      console.log(`[Health] URL:${hasUrl}, Key:${hasKey}`);
+      
       try {
-        if (!env.SUPABASE_URL || !env.SUPABASE_ANON_KEY) {
-          return new Response(JSON.stringify({ status: "error", error: "環境變數未設定" }), { status: 200 });
-        }
-        const res = await fetch(`${env.SUPABASE_URL}/auth/v1/health`, { headers: { "apikey": env.SUPABASE_ANON_KEY } });
-        return new Response(JSON.stringify({ status: res.ok ? "online" : "error" }), { status: 200 });
+        const res = await fetch(`${env.SUPABASE_URL}/auth/v1/health`, {
+          headers: { "apikey": env.SUPABASE_ANON_KEY }
+        });
+        return new Response(JSON.stringify({ 
+          status: res.ok ? "online" : "error",
+          details: `Supabase status: ${res.status}`
+        }), { headers: { "Content-Type": "application/json" } });
       } catch (e) {
-        return new Response(JSON.stringify({ status: "offline" }), { status: 200 });
+        return new Response(JSON.stringify({ status: "offline", error: e.message }), { status: 200 });
       }
     }
 
-    // --- 5. OTP 發送 API ---
+    // 發送 OTP
     if (url.pathname === "/auth/otp" && request.method === "POST") {
       const { email } = await request.json();
-      const isAllowed = email.endsWith("@superinfo.com.tw") || email.endsWith(".edu.tw");
-      if (!isAllowed) {
+      if (!email.endsWith("@superinfo.com.tw") && !email.endsWith(".edu.tw")) {
         return new Response(JSON.stringify({ error: "禁止登入：僅限指定網域" }), { status: 403 });
       }
       return await fetch(`${env.SUPABASE_URL}/auth/v1/otp`, {
@@ -84,17 +59,16 @@ export default {
       });
     }
 
-    // --- 6. OTP 驗證 API ---
+    // 驗證 OTP
     if (url.pathname === "/auth/verify" && request.method === "POST") {
-      const { email, token: otpToken } = await request.json();
+      const { email, token } = await request.json();
       const res = await fetch(`${env.SUPABASE_URL}/auth/v1/verify`, {
         method: "POST",
         headers: { "Content-Type": "application/json", "apikey": env.SUPABASE_ANON_KEY },
-        body: JSON.stringify({ email, token: otpToken, type: "email" })
+        body: JSON.stringify({ email, token, type: "email" })
       });
       const data = await res.json();
       if (res.ok && data.access_token) {
-        // 背景紀錄 Email 到資料表
         ctx.waitUntil(fetch(`${env.SUPABASE_URL}/rest/v1/login_logs`, {
           method: "POST",
           headers: { 
@@ -104,7 +78,6 @@ export default {
           },
           body: JSON.stringify({ email })
         }));
-        // 回傳並設定 Cookie
         return new Response(JSON.stringify({ success: true }), {
           status: 200,
           headers: { "Set-Cookie": `sb-access-token=${data.access_token}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=86400` }
@@ -113,11 +86,31 @@ export default {
       return new Response(JSON.stringify({ error: "驗證失敗" }), { status: 401 });
     }
 
-    // --- 7. 最終攔截：未登入者導向 /login ---
+    // --- 2. 處理頁面與靜態資源 ---
+
+    // 登入狀態檢查
+    const tokenMatch = cookie.match(/sb-access-token=([^;]+)/);
+    const user = tokenMatch ? await verifyJWT(tokenMatch[1], env.JWT_SECRET) : null;
+    const isAuthenticated = !!user;
+
+    // 登入頁面
+    if (url.pathname === "/login") {
+      const res = await env.ASSETS.fetch(new Request(new URL("/login.html", request.url)));
+      return new Response(res.body, { headers: { "Content-Type": "text/html; charset=utf-8" } });
+    }
+
+    // 靜態資源放行
+    const isPublicAsset = url.pathname.match(/\.(css|js|png|jpg|jpeg|gif|ico|svg|woff2?|json)$/);
+    if (isPublicAsset || url.pathname === "/login.html") {
+      return await env.ASSETS.fetch(request);
+    }
+
+    // 攔截未登入者
     if (!isAuthenticated) {
       return Response.redirect(`${url.origin}/login`, 302);
     }
 
+    // 正常存取內容
     return await env.ASSETS.fetch(request);
   },
 };
