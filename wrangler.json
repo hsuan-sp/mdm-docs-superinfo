@@ -8,7 +8,8 @@
     "run_worker_first": true
   },
   "vars": {
-    "SUPABASE_URL": "https://klcskeeqkwkakgzrewtn.supabase.co"
+    "SUPABASE_URL": "https://klcskeeqkwkakgzrewtn.supabase.co",
+    "SUPABASE_ANON_KEY": "sb_publishable_Hv9m5KmbP0Gx30_kXbZgHg_5a56ElOJ"
   },
   "observability": {
     "enabled": true
