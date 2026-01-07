@@ -224,7 +224,22 @@ h1 {
 }
 
 @media (max-width: 600px) {
+    /* Hide Text Title */
     .VPNavBarTitle .title {
         display: none !important;
+    }
+    
+    /* Ensure Logo is Visible & Not Shrunk */
+    :deep(.VPNavBarTitle .logo), 
+    .VPNavBarTitle .logo {
+        display: block !important;
+        flex-shrink: 0 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    /* Allow Title Container to shrink to fit logo */
+    .VPNavBarTitle {
+        flex-shrink: 0;
     }
 }
