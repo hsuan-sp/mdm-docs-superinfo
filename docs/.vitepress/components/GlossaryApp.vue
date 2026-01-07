@@ -226,10 +226,7 @@ onMounted(async () => {
   font-weight: 800;
   letter-spacing: -0.02em;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, var(--vp-c-text-1) 0%, var(--vp-c-brand-1) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--vp-c-text-1);
 }
 
 .subtitle {

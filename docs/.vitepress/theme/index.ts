@@ -8,11 +8,13 @@ import AppleHome from '../components/AppleHome.vue'
 import BackToTop from '../components/BackToTop.vue'
 import GlobalFooter from '../components/GlobalFooter.vue'
 
+import LoginStatus from './components/LoginStatus.vue'
+
 export default {
   extends: Theme,
   Layout: () => {
     return h(Theme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
+      'nav-bar-content-after': () => h(LoginStatus),
       'layout-bottom': () => [h(GlobalFooter), h(BackToTop)]
     })
   },
