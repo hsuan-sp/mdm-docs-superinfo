@@ -171,9 +171,7 @@ export default {
         let html = await response.text();
         const injection = `
         <style>
-          /* 防選取與防右鍵 */
-          body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-          img { pointer-events: none; }
+          /* 懸浮登出按鈕 */
           #global-auth-bar {
             position: fixed; top: 0; left: 50%; transform: translateX(-50%);
             background: rgba(0,0,0,0.8); backdrop-filter: blur(10px);
@@ -184,7 +182,6 @@ export default {
           #global-auth-bar:hover { padding-bottom: 12px; }
           .auth-btn { color: #ff5e5e; text-decoration: none; font-weight: bold; cursor: pointer; }
           .auth-info { color: #ccc; font-size: 11px; }
-          @media print { body { display: none; } }
         </style>
         <div id="global-auth-bar">
            <span>👤 ${user ? user.email : '已登入'}</span>
@@ -192,18 +189,10 @@ export default {
            <a href="#" onclick="logout()" class="auth-btn">登出</a>
         </div>
         <script>
-           document.addEventListener('contextmenu', e => e.preventDefault());
-           // ... (其餘防盜JS同樣保留) ...
-           document.onkeydown = function(e) {
-               if(e.keyCode == 123) return false;
-               if(e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'C'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0))) return false;
-               if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
-           };
            function logout() { if(confirm('確定要登出系統嗎？')) location.href = '/auth/logout'; }
         </script>
         `;
         html = html.replace('</body>', injection + '</body>');
-        // 暫時移除 Obfuscation 以恢復服務
         return new Response(html, response);
     }
     return response;
