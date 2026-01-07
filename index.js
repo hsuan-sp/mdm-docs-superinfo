@@ -16,14 +16,12 @@ async function verifyUserWithSupabase(token, url, anonKey) {
 
 // 紀錄日誌 (抓取 IP, 國家, 裝置)
 async function logLogin(user, request, actionType, SB_URL, SB_ANON, SB_SERVICE) {
-  const ip = request.headers.get("cf-connecting-ip") || "unknown";
+  const ip = request.headers.get("cf-connecting-ip") || request.headers.get("x-real-ip") || "unknown";
   const country = request.headers.get("cf-ipcountry") || "unknown";
   const ua = request.headers.get("user-agent") || "unknown";
   
-  console.log(`[Attempting Log] User: ${user.email}, IP: ${ip}, Action: ${actionType}`);
-
   try {
-    const res = await fetch(`${SB_URL}/rest/v1/login_logs`, {
+    await fetch(`${SB_URL}/rest/v1/login_logs`, {
       method: "POST",
       headers: { 
         "Content-Type": "application/json", 
@@ -32,16 +30,11 @@ async function logLogin(user, request, actionType, SB_URL, SB_ANON, SB_SERVICE) 
         "Prefer": "return=minimal"
       },
       body: JSON.stringify({ 
-          email: user.email, 
-          user_id: user.id, 
-          ip_address: ip, 
-          country: country, 
-          user_agent: ua, 
-          action: actionType,
+          email: user.email, user_id: user.id, ip_address: ip, 
+          country: country, user_agent: ua, action: actionType,
           meta_data: { method: actionType === "manual" ? "OTP 驗證" : "自動快取" }
       })
     });
-    console.log(`[Log Result] Status: ${res.status} ${res.statusText}`);
   } catch (e) {
     console.error(`[Log Error] ${e.message}`);
   }
@@ -53,16 +46,30 @@ export default {
     const url = new URL(request.url);
     const cookie = request.headers.get("Cookie") || "";
     
-    // 優先讀取 Cloudflare 環境變數 (最穩定的做法)
+    // 0. 極速健康檢查 (放在最前面，避免被配置檢查擋住)
+    if (url.pathname === "/auth/health") {
+        return new Response(JSON.stringify({ status: "online" }), {
+            headers: { 
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*" 
+            }
+        });
+    }
+
     const SB_URL = (env.SUPABASE_URL || SUPABASE_CONFIG.URL)?.replace(/\/$/, "");
     const SB_ANON = env.SUPABASE_ANON_KEY || SUPABASE_CONFIG.ANON_KEY;
     const SB_SERVICE = env.SUPABASE_SERVICE_ROLE_KEY;
 
-    if (!SB_URL || SB_URL.includes("your-project")) return new Response("Supabase URL Missing", { status: 500 });
-    if (!SB_ANON || SB_ANON.includes("your-anon")) return new Response("Supabase Anon Key Missing", { status: 500 });
-    
-    // API: 健康檢查
-    if (url.pathname === "/auth/health") return new Response("OK");
+    // 1. 配置檢查 (回傳 JSON 避免前端解析失敗)
+    if (!SB_URL || SB_URL.includes("your-project")) {
+        return new Response(JSON.stringify({ error: "Supabase URL 未設定" }), { status: 500, headers: { "Content-Type": "application/json" } });
+    }
+
+    // 安全防護
+    const ua = request.headers.get("User-Agent") || "";
+    if (ua.match(/(GPTBot|ChatGPT|Bytespider|CCBot|FacebookBot|Google-Extended)/i)) {
+       return new Response("Forbidden", { status: 403 });
+    }
 
     // API: 發送 OTP
     if (url.pathname === "/auth/otp" && request.method === "POST") {
@@ -103,32 +110,38 @@ export default {
           headers: { "Set-Cookie": `sb-access-token=${access_token}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=31536000` }
         });
       }
-      return new Response("Unauthorized", { status: 401 });
+      return new Response(JSON.stringify({ error: "驗證失敗" }), { status: 401 });
     }
 
     // API: 取得使用者
     if (url.pathname === "/auth/me") {
-        const token = cookie.match(/sb-access-token=([^;]+)/)?.[1];
-        const user = token ? await verifyUserWithSupabase(token, SB_URL, SB_ANON) : null;
+        const tokenMatch = cookie.match(/sb-access-token=([^;]+)/);
+        const user = tokenMatch ? await verifyUserWithSupabase(tokenMatch[1], SB_URL, SB_ANON) : null;
         return new Response(JSON.stringify({ email: user?.email || null }), { headers: { "Content-Type": "application/json" } });
     }
 
     // 登出
     if (url.pathname === "/auth/logout") {
-        return new Response(null, { status: 302, headers: { "Location": "/login", "Set-Cookie": "sb-access-token=; Path=/; HttpOnly; Max-Age=0" } });
+        return new Response(null, {
+            status: 302,
+            headers: {
+                "Location": "/login",
+                "Set-Cookie": "sb-access-token=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0"
+            }
+        });
     }
 
-    // --- 3. 靜態資源與重定向 ---
-    const token = cookie.match(/sb-access-token=([^;]+)/)?.[1];
-    const isAuth = token ? !!(await verifyUserWithSupabase(token, SB_URL, SB_ANON)) : false;
+    // --- 3. 靜態資源管理 ---
+    const tokenMatch = cookie.match(/sb-access-token=([^;]+)/);
+    const isAuth = tokenMatch ? !!(await verifyUserWithSupabase(tokenMatch[1], SB_URL, SB_ANON)) : false;
 
     if (isAuth && url.pathname === "/login") return Response.redirect(`${url.origin}/`, 302);
-    const isPublic = url.pathname.match(/\.(css|js|png|jpg|ico|svg|json)$/) || url.pathname === "/login.html";
+    const isPublic = url.pathname.match(/\.(css|js|png|jpg|jpeg|gif|ico|svg|woff2?|json)$/) || url.pathname === "/login.html";
     if (!isAuth && !isPublic && url.pathname !== "/login") return Response.redirect(`${url.origin}/login`, 302);
 
     if (url.pathname === "/login") {
       const res = await env.ASSETS.fetch(new Request(new URL("/login.html", request.url)));
-      return new Response(res.body, { headers: { "Content-Type": "text/html" } });
+      return new Response(res.body, { headers: { "Content-Type": "text/html; charset=utf-8" } });
     }
 
     return await env.ASSETS.fetch(request);
