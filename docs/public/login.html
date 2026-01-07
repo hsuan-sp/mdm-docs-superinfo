@@ -100,50 +100,34 @@
         const otpInput = document.getElementById('otp');
         const msg = document.getElementById('message');
         const statusBadge = document.getElementById('status');
-        const debugDiv = document.createElement('div');
-        debugDiv.style.cssText = "margin-top:20px; font-size:10px; color:#999; text-align:left; background:#fff; padding:10px; border-radius:8px; display:none;";
-        document.querySelector('.card').appendChild(debugDiv);
-
         function log(msg) {
-            console.log(msg);
-            debugDiv.style.display = 'block';
-            debugDiv.innerHTML += `> ${msg}<br>`;
+            console.log(`[Auth] ${msg}`);
         }
 
         // Magic Link 處理：檢查 URL 是否帶有 #access_token=... 或 ?code=...
-        // Supabase 有時會給 #access_token=..., 有時會給 error_description=...
         const hash = window.location.hash.substring(1);
         const search = window.location.search.substring(1);
         
-        log(`Checking URL... Hash: ${hash.substring(0, 10)}..., Search: ${search.substring(0, 10)}...`);
-
         let accessToken = null;
 
         // 嘗試從 Hash 解析
         const hashParams = new URLSearchParams(hash);
         if (hashParams.get('access_token')) {
             accessToken = hashParams.get('access_token');
-            log('Found access_token in Hash');
         }
 
-        // 嘗試從 Search 解析 (雖然 Supabase 通常用 fragment)
+        // 嘗試從 Search 解析
         const searchParams = new URLSearchParams(search);
         if (searchParams.get('access_token')) {
             accessToken = searchParams.get('access_token');
-            log('Found access_token in Search');
         }
 
         // 如果找到 Token，設定 Cookie 並重整
         if (accessToken) {
-            log('Setting cookie...');
-            // 使用 Lax + Secure確保現代瀏覽器接受
+            // 使用 Lax + Secure
             document.cookie = `sb-access-token=${accessToken}; Path=/; Max-Age=86400; SameSite=Lax; Secure`;
-            log('Cookie set. Redirecting to root...');
-            setTimeout(() => {
-                location.href = '/';
-            }, 1000); // 延遲 1 秒讓使用者看到 Log
+            location.href = '/';
         } else if (hashParams.get('error_description')) {
-            log(`Supabase Error: ${hashParams.get('error_description')}`);
             document.getElementById('message').className = 'error';
             document.getElementById('message').innerText = hashParams.get('error_description');
         }
