@@ -87,25 +87,20 @@ export default {
       });
     }
 
-    // 5. 路由攔截
-    if (!isAuthenticated) {
-      try {
-        const loginHtmlRes = await env.ASSETS.fetch(new Request(new URL("/login.html", request.url)));
-        if (loginHtmlRes.ok) {
-          return new Response(loginHtmlRes.body, {
-            headers: { "Content-Type": "text/html; charset=utf-8" }
-          });
-        }
-      } catch (e) {}
-      
-      // 備援：如果找不到 login.html 資源，直接噴出基本的 HTML
-      return new Response("請稍候... 正在載入登入系統。 (如果畫面沒跳轉，請重新整理)", {
-        status: 200, 
-        headers: { "Content-Type": "text/html; charset=utf-8", "Refresh": "1" }
+    // 5. 登入頁面路由
+    if (url.pathname === "/login") {
+      const loginHtmlRes = await env.ASSETS.fetch(new Request(new URL("/login.html", request.url)));
+      return new Response(loginHtmlRes.body, {
+        headers: { "Content-Type": "text/html; charset=utf-8" }
       });
     }
 
-    // 6. 已登入，正常存取 VitePress 靜態資源
+    // 6. 路由攔截：未登入者一律導向 /login
+    if (!isAuthenticated) {
+      return Response.redirect(`${url.origin}/login`, 302);
+    }
+
+    // 7. 已登入，正常存取 VitePress 靜態資源
     return await env.ASSETS.fetch(request);
   },
 };
