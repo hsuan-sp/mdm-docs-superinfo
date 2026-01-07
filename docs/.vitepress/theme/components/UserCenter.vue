@@ -236,32 +236,32 @@ const logout = () => {
     }
 }
 
-/* Mobile Dropdown - Liquid Glass */
+/* Mobile Dropdown - Bottom Sheet Style */
 .mobile-dropdown-overlay {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.3);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     z-index: 9999;
     display: flex;
-    align-items: center; /* Center Vertically (Modal Style) */
-    justify-content: center; /* Center Horizontally */
-    padding: 16px;
+    align-items: flex-end; /* Align to Bottom */
+    justify-content: center;
+    padding: 0; /* Full width touches edges */
 }
 
 .mobile-dropdown-card {
     width: 100%;
-    max-width: 500px;
-    min-height: 300px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(40px) saturate(200%);
-    -webkit-backdrop-filter: blur(40px) saturate(200%);
-    border-radius: 32px;
-    padding: 28px;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    max-height: 85vh;
+    max-width: 100%; /* Full Width */
+    background: rgba(255, 255, 255, 0.96); /* Slightly more opaque */
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    border-radius: 28px 28px 0 0; /* Top corners only */
+    padding: 24px 24px calc(24px + env(safe-area-inset-bottom)) 24px; /* Safe Area Padding */
+    box-shadow: 0 -10px 40px rgba(0,0,0,0.15);
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    max-height: 85vh; /* Max height limit */
     overflow-y: auto;
     position: relative;
 }
