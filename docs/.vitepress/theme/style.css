@@ -222,3 +222,9 @@ h1 {
   letter-spacing: -0.01em;
   opacity: 0.9;
 }
+
+@media (max-width: 600px) {
+    .VPNavBarTitle .title {
+        display: none !important;
+    }
+}
