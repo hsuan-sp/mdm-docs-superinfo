@@ -53,11 +53,13 @@ export default {
     const url = new URL(request.url);
     const cookie = request.headers.get("Cookie") || "";
     
-    const SB_URL = (SUPABASE_CONFIG.URL.includes("your-project") ? env.SUPABASE_URL : SUPABASE_CONFIG.URL)?.replace(/\/$/, "");
-    const SB_ANON = SUPABASE_CONFIG.ANON_KEY.includes("your-anon") ? env.SUPABASE_ANON_KEY : SUPABASE_CONFIG.ANON_KEY;
+    // 優先讀取 Cloudflare 環境變數 (最穩定的做法)
+    const SB_URL = (env.SUPABASE_URL || SUPABASE_CONFIG.URL)?.replace(/\/$/, "");
+    const SB_ANON = env.SUPABASE_ANON_KEY || SUPABASE_CONFIG.ANON_KEY;
     const SB_SERVICE = env.SUPABASE_SERVICE_ROLE_KEY;
 
-    if (!SB_URL || !SB_ANON) return new Response("Config Missing", { status: 500 });
+    if (!SB_URL || SB_URL.includes("your-project")) return new Response("Supabase URL Missing", { status: 500 });
+    if (!SB_ANON || SB_ANON.includes("your-anon")) return new Response("Supabase Anon Key Missing", { status: 500 });
     
     // API: 健康檢查
     if (url.pathname === "/auth/health") return new Response("OK");
