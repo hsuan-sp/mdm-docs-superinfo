@@ -100,6 +100,30 @@ export default {
       return new Response(JSON.stringify({ error: "驗證失敗" }), { status: 401 });
     }
 
+    // 取得當前使用者資訊 (Email)
+    if (url.pathname === "/auth/me") {
+        const tokenMatch = cookie.match(/sb-access-token=([^;]+)/);
+        if (tokenMatch) {
+            // 嘗試快取驗證或直接問 Supabase
+            const user = await verifyUserWithSupabase(tokenMatch[1], SB_URL, SB_ANON);
+            if (user) {
+                return new Response(JSON.stringify({ email: user.email }), { headers: { "Content-Type": "application/json" } });
+            }
+        }
+        return new Response(JSON.stringify({ email: null }), { headers: { "Content-Type": "application/json" } });
+    }
+
+    // 登出 (清除 Cookie)
+    if (url.pathname === "/auth/logout") {
+        return new Response(null, {
+            status: 302,
+            headers: {
+                "Location": "/login",
+                "Set-Cookie": "sb-access-token=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0" // 立即過期
+            }
+        });
+    }
+
     // --- 2. 登入狀態檢查 (透過 API 驗證) ---
     const tokenMatch = cookie.match(/sb-access-token=([^;]+)/);
     let isAuthenticated = false;
