@@ -74,8 +74,8 @@
     <div class="card">
         <img src="/superinfo_logo.png" alt="Logo" class="logo">
         <h1>身分驗證</h1>
-        <p>請使用教育網域信箱 (@*.edu.tw) <br> 或極電資訊信箱登入</p>
-        <div id="status" class="status-badge">正在檢查服務狀態...</div>
+        <p>請使用教育網域信箱 (@*.edu.tw) 登入</p>
+        <div id="status" class="status-badge hidden"></div>
         <br><br>
         
         <div id="step-email">
@@ -84,10 +84,10 @@
         </div>
 
         <div id="step-otp" class="hidden">
-            <p id="otp-hint" style="margin-bottom: 15px; font-size: 12px;"></p>
+            <p id="otp-hint" style="margin-bottom: 15px; font-size: 14px; color: #333;"></p>
             <input type="text" id="otp" placeholder="輸入 6 位數驗證碼" maxlength="6">
             <button id="btn-verify">登入</button>
-            <a href="#" onclick="location.reload()" style="display:block; margin-top:15px; font-size:12px; color:var(--primary); text-decoration:none;">重新輸入 Email</a>
+            <a href="#" id="link-retry" style="display:block; margin-top:15px; font-size:14px; color:var(--primary); text-decoration:none;">重新輸入 Email</a>
         </div>
 
         <div id="message"></div>
@@ -100,29 +100,20 @@
         const otpInput = document.getElementById('otp');
         const msg = document.getElementById('message');
         const statusBadge = document.getElementById('status');
+
         function log(msg) {
             console.log(`[Auth] ${msg}`);
         }
 
-        // Magic Link 處理：檢查 URL 是否帶有 #access_token=... 或 ?code=...
+        // Magic Link 處理
         const hash = window.location.hash.substring(1);
         const search = window.location.search.substring(1);
         
-        let accessToken = null;
-
-        // 嘗試從 Hash 解析
+        // ... (Magic Link logic remains same) ...
         const hashParams = new URLSearchParams(hash);
-        if (hashParams.get('access_token')) {
-            accessToken = hashParams.get('access_token');
-        }
-
-        // 嘗試從 Search 解析
         const searchParams = new URLSearchParams(search);
-        if (searchParams.get('access_token')) {
-            accessToken = searchParams.get('access_token');
-        }
+        let accessToken = hashParams.get('access_token') || searchParams.get('access_token');
 
-        // 如果找到 Token，設定 Cookie 並重整
         if (accessToken) {
             log('正在登入並紀錄...');
             fetch('/auth/session', {
@@ -141,23 +132,29 @@
             document.getElementById('message').innerText = hashParams.get('error_description');
         }
 
-        // 啟動時檢查服務狀態
+        // 啟動時檢查服務狀態 (僅在錯誤時顯示)
         (async () => {
             try {
                 const res = await fetch('/auth/health');
                 const data = await res.json();
-                if (data.status === 'online') {
-                    statusBadge.innerText = '● 驗證服務連線正常';
-                    statusBadge.className = 'status-badge status-online';
-                } else {
-                    statusBadge.innerText = '● 驗證服務異常';
+                if (data.status !== 'online') {
+                    statusBadge.innerText = '⚠️ 驗證服務暫時無法使用';
                     statusBadge.className = 'status-badge status-offline';
                 }
             } catch (e) {
-                statusBadge.innerText = '● 無法連線至驗證伺服器';
+                statusBadge.innerText = '⚠️ 無法連線至伺服器';
                 statusBadge.className = 'status-badge status-offline';
             }
         })();
+
+        // 初始化：點擊重新輸入時的行為
+        document.getElementById('link-retry').onclick = (e) => {
+            e.preventDefault();
+            stepOtp.classList.add('hidden');
+            stepEmail.classList.remove('hidden');
+            msg.innerText = '';
+            document.getElementById('otp').value = '';
+        };
 
         // 初始化：檢查是否有先前輸入的 Email (如果使用者按上一頁回來)
         if (emailInput.value && !stepOtp.classList.contains('hidden')) {
