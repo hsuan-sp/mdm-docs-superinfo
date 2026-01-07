@@ -299,32 +299,30 @@ const getCategoryCount = (cat: string) => {
     to { opacity: 1; transform: translate(-50%, 0); }
 }
 
-/* Liquid Glass FAB */
+/* Standard Solid FAB - Bottom Left */
 .mobile-floating-btn {
   display: none; /* Desktop hidden */
   position: fixed;
   bottom: 34px;
-  right: 24px;
-  background: rgba(var(--vp-c-brand-rgb), 0.85);
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  left: 24px; /* Move to Left */
+  right: auto;
+  background: var(--vp-c-brand); /* Solid Brand Color */
   color: white;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 14px 28px;
+  border: none;
+  padding: 14px 24px;
   border-radius: 100px;
   font-weight: 700;
   font-size: 15px;
-  box-shadow: 0 12px 36px rgba(0,0,0,0.15), 0 4px 12px rgba(var(--vp-c-brand-rgb), 0.3);
+  box-shadow: 0 4px 12px rgba(var(--vp-c-brand-rgb), 0.4);
   z-index: 100;
   align-items: center;
   gap: 10px;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .mobile-floating-btn:active {
-  transform: scale(0.92) translateY(4px);
-  background: var(--vp-c-brand);
+  transform: scale(0.95) translateY(2px);
 }
 
 /* Liquid Glass Drawer */

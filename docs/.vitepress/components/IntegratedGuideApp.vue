@@ -15,7 +15,7 @@ const md = new MarkdownIt({
 const searchQuery = ref("");
 // Default active source (first available)
 const activeSource = ref(allQAData[0].source);
-const isSidebarOpen = ref(false); // Mobile sidebar toggle
+const isSidebarOpen = ref(false); // Mobile drawer toggle
 
 // Computed: Search Logic across ALL 8 files
 const searchResults = computed(() => {
@@ -86,45 +86,32 @@ onMounted(async () => {
     </div>
 
     <div class="app-layout">
-      <!-- Left Sidebar: Navigation & Search -->
-      <aside class="app-sidebar">
-        
-        <!-- Mobile Toggle (Only visible on small screens) -->
-        <div class="mobile-nav-header">
-            <span>章節導覽</span>
-            <button class="menu-toggle" @click="isSidebarOpen = !isSidebarOpen">
-                {{ isSidebarOpen ? '✕' : '☰' }}
-            </button>
+      <!-- Left Sidebar: Navigation & Search (Desktop Only) -->
+      <aside class="app-sidebar desktop-only">
+        <div class="sidebar-section">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input 
+                    v-model="searchQuery" 
+                    type="text" 
+                    placeholder="搜尋全站指南..." 
+                    class="search-input"
+                />
+            </div>
         </div>
 
-        <div class="sidebar-inner" :class="{ 'mobile-hidden': !isSidebarOpen }">
-             <!-- Search Box -->
-            <div class="sidebar-section">
-                <div class="search-box">
-                    <span class="search-icon">🔍</span>
-                    <input 
-                        v-model="searchQuery" 
-                        type="text" 
-                        placeholder="搜尋全站指南..." 
-                        class="search-input"
-                    />
-                </div>
-            </div>
-
-            <!-- Navigation Menu -->
-            <div class="sidebar-section nav-menu">
-                <h3>章節選擇</h3>
-                <button 
-                    v-for="module in allQAData" 
-                    :key="module.source"
-                    @click="activeSource = module.source; searchQuery = ''; isSidebarOpen = false"
-                    :class="['nav-item', { active: activeSource === module.source && !searchQuery }]"
-                >
-                    <span class="nav-icon">📄</span>
-                    <span class="nav-text">{{ module.source }}</span>
-                    <span class="nav-arrow">›</span>
-                </button>
-            </div>
+        <div class="sidebar-section nav-menu">
+            <h3>章節選擇</h3>
+            <button 
+                v-for="module in allQAData" 
+                :key="module.source"
+                @click="activeSource = module.source; searchQuery = ''"
+                :class="['nav-item', { active: activeSource === module.source && !searchQuery }]"
+            >
+                <span class="nav-icon">📄</span>
+                <span class="nav-text">{{ module.source }}</span>
+                <span class="nav-arrow">›</span>
+            </button>
         </div>
       </aside>
 
@@ -187,6 +174,42 @@ onMounted(async () => {
         </div>
 
       </main>
+    </div>
+    <!-- Mobile Floating Filter Button (Standard Solid) -->
+    <button class="mobile-floating-btn" @click="isSidebarOpen = true" v-if="!isSidebarOpen">
+      <span class="icon">🔍</span>
+      <span class="label">搜尋與章節</span>
+    </button>
+
+    <!-- Mobile Drawer Overlay (Liquid Glass) -->
+    <div class="mobile-drawer-overlay" :class="{ open: isSidebarOpen }" @click="isSidebarOpen = false">
+      <div class="mobile-drawer" @click.stop>
+        <div class="drawer-header">
+          <h3>搜尋與章節</h3>
+          <button class="close-btn" @click="isSidebarOpen = false">✕</button>
+        </div>
+        
+        <div class="drawer-content">
+            <div class="search-box mobile-search">
+                <span class="search-icon">🔍</span>
+                <input v-model="searchQuery" type="text" placeholder="搜尋全站指南..." class="search-input" />
+            </div>
+
+            <div class="nav-menu mobile-menu">
+                <h3>章節選擇</h3>
+                <button 
+                    v-for="module in allQAData" 
+                    :key="module.source"
+                    @click="activeSource = module.source; searchQuery = ''; isSidebarOpen = false"
+                    :class="['nav-item', { active: activeSource === module.source && !searchQuery }]"
+                >
+                    <span class="nav-icon">📄</span>
+                    <span class="nav-text">{{ module.source }}</span>
+                    <span class="nav-arrow">›</span>
+                </button>
+            </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -377,18 +400,120 @@ onMounted(async () => {
 .tag { font-size: 12px; background: var(--vp-c-bg); padding: 4px 10px; border-radius: 8px; border: 1px solid var(--vp-c-divider); }
 
 /* Mobile Responsive Logic */
-.mobile-nav-header { display: none; }
-
-@media (max-width: 960px) {
-    .guide-app:not(.is-mobile-device) .app-layout { flex-direction: column; gap: 30px; }
-    .guide-app:not(.is-mobile-device) .app-sidebar { width: 100%; top: 0; z-index: 5; position: relative; }
-    .guide-app:not(.is-mobile-device) .mobile-nav-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: bold; }
-    .guide-app:not(.is-mobile-device) .sidebar-inner.mobile-hidden { display: none; }
+/* Mobile Responsive Logic */
+@media (max-width: 1200px) {
+    .desktop-only { display: none !important; }
+    .app-layout { display: block; }
+    .mobile-floating-btn { display: flex; }
 }
 
-/* Forced Mobile Layout */
-.is-mobile-device .app-layout { flex-direction: column; gap: 30px; }
-.is-mobile-device .app-sidebar { width: 100%; top: 0; z-index: 5; position: relative; }
-.is-mobile-device .mobile-nav-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-weight: bold; }
-.is-mobile-device .sidebar-inner.mobile-hidden { display: none; }
+.is-mobile-device .desktop-only { display: none !important; }
+.is-mobile-device .app-layout { display: block; }
+.is-mobile-device .mobile-floating-btn { display: flex; }
+
+/* Standard Solid FAB - Bottom Left */
+.mobile-floating-btn {
+  display: none;
+  position: fixed;
+  bottom: 34px;
+  left: 24px;
+  right: auto;
+  background: var(--vp-c-brand);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 4px 12px rgba(var(--vp-c-brand-rgb), 0.4);
+  z-index: 100;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.mobile-floating-btn:active {
+  transform: scale(0.95) translateY(2px);
+}
+
+/* Liquid Glass Drawer */
+.mobile-drawer-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.15);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  padding-bottom: calc(16px + env(safe-area-inset-bottom));
+}
+
+.mobile-drawer-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-drawer {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(40px) saturate(200%);
+  -webkit-backdrop-filter: blur(40px) saturate(200%);
+  border-radius: 32px;
+  padding: 30px;
+  max-height: 80vh;
+  overflow-y: auto;
+  transform: translateY(30px) scale(0.95);
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.2, 0.9, 0.2, 1.05);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+
+.dark .mobile-drawer {
+  background: rgba(28, 28, 30, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-drawer-overlay.open .mobile-drawer {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.drawer-header h3 { 
+  font-size: 22px; 
+  font-weight: 800; 
+  margin: 0; 
+  letter-spacing: -0.03em;
+}
+
+.close-btn { 
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.05);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--vp-c-text-2);
+}
+.dark .close-btn { background: rgba(255,255,255,0.1); }
+
+.mobile-search { margin-bottom: 24px; }
+.mobile-menu { display: flex; flex-direction: column; gap: 8px; }
 </style>
