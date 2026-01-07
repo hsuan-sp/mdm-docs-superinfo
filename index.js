@@ -6,13 +6,12 @@ export default {
     // 1. 檢查是否已登入 (驗證 Cookie)
     const isAuthenticated = cookie.includes("sb-access-token");
 
-    // --- 2. 靜態資源、API、登入頁不攔截 ---
-    const isAuthApi = url.pathname.startsWith("/auth/");
+    // --- 2. 靜態資源、登入頁不攔截 ---
     const isLoginPage = url.pathname === "/login";
     const isPublicAsset = url.pathname.match(/\.(css|js|png|jpg|jpeg|gif|ico|svg|woff2?|json)$/);
     
-    // 這裡我們也放行 login.html 檔案本身，讓 Worker 可以 fetch 到它
-    if (isAuthApi || isLoginPage || isPublicAsset || url.pathname === "/login.html") {
+    // 這裡我們也放行 login.html 檔案本身
+    if (isLoginPage || isPublicAsset || url.pathname === "/login.html") {
       return await env.ASSETS.fetch(request);
     }
 
