@@ -192,8 +192,19 @@ export default {
            function logout() { if(confirm('確定要登出系統嗎？')) location.href = '/auth/logout'; }
         </script>
         `;
+        // 插入到 body 結束前
         html = html.replace('</body>', injection + '</body>');
-        return new Response(html, response);
+        
+        // 重要修正：建立全新的 Response，避免繼承 gzip 等導致 Error 1101
+        const newHeaders = new Headers(response.headers);
+        newHeaders.delete("Content-Encoding"); // 移除壓縮標頭，因為我們回傳的是字串
+        newHeaders.set("Content-Type", "text/html; charset=utf-8");
+
+        return new Response(html, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: newHeaders
+        });
     }
     return response;
   },
