@@ -15,28 +15,45 @@ async function verifyUserWithSupabase(token, url, anonKey) {
 }
 
 // 紀錄日誌 (抓取 IP, 國家, 裝置)
-async function logLogin(user, request, actionType, SB_URL, SB_ANON, SB_SERVICE) {
-  const ip = request.headers.get("cf-connecting-ip") || request.headers.get("x-real-ip") || "unknown";
+async function logLogin(user, request, actionType, SB_URL, SB_SERVICE) {
+  const ip = request.headers.get("cf-connecting-ip") || "unknown";
   const country = request.headers.get("cf-ipcountry") || "unknown";
   const ua = request.headers.get("user-agent") || "unknown";
   
+  // 核心檢查：如果沒有 SERVICE_ROLE_KEY，寫入一定會失敗
+  if (!SB_SERVICE) {
+    console.error("[Log Error] Missing SERVICE_ROLE_KEY");
+    return;
+  }
+
   try {
-    await fetch(`${SB_URL}/rest/v1/login_logs`, {
+    const res = await fetch(`${SB_URL}/rest/v1/login_logs`, {
       method: "POST",
       headers: { 
         "Content-Type": "application/json", 
-        "apikey": SB_ANON, 
+        "apikey": SB_SERVICE, // 關鍵：寫入時 apikey 也要用 Service Key
         "Authorization": `Bearer ${SB_SERVICE}`, 
         "Prefer": "return=minimal"
       },
       body: JSON.stringify({ 
-          email: user.email, user_id: user.id, ip_address: ip, 
-          country: country, user_agent: ua, action: actionType,
+          email: user.email, 
+          user_id: user.id, 
+          ip_address: ip, 
+          country: country, 
+          user_agent: ua, 
+          action: actionType,
           meta_data: { method: actionType === "manual" ? "OTP 驗證" : "自動快取" }
       })
     });
+    
+    if (!res.ok) {
+        const errText = await res.text();
+        console.error(`[Log Error] Supabase returned ${res.status}: ${errText}`);
+    } else {
+        console.log(`[Log Success] User logged: ${user.email}`);
+    }
   } catch (e) {
-    console.error(`[Log Error] ${e.message}`);
+    console.error(`[Log Error] Fetch failed: ${e.message}`);
   }
 }
 
@@ -46,13 +63,10 @@ export default {
     const url = new URL(request.url);
     const cookie = request.headers.get("Cookie") || "";
     
-    // 0. 極速健康檢查 (放在最前面，避免被配置檢查擋住)
+    // 0. 極速健康檢查
     if (url.pathname === "/auth/health") {
         return new Response(JSON.stringify({ status: "online" }), {
-            headers: { 
-                "Content-Type": "application/json",
-                "Access-Control-Allow-Origin": "*" 
-            }
+            headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" }
         });
     }
 
@@ -60,15 +74,8 @@ export default {
     const SB_ANON = env.SUPABASE_ANON_KEY || SUPABASE_CONFIG.ANON_KEY;
     const SB_SERVICE = env.SUPABASE_SERVICE_ROLE_KEY;
 
-    // 1. 配置檢查 (回傳 JSON 避免前端解析失敗)
     if (!SB_URL || SB_URL.includes("your-project")) {
-        return new Response(JSON.stringify({ error: "Supabase URL 未設定" }), { status: 500, headers: { "Content-Type": "application/json" } });
-    }
-
-    // 安全防護
-    const ua = request.headers.get("User-Agent") || "";
-    if (ua.match(/(GPTBot|ChatGPT|Bytespider|CCBot|FacebookBot|Google-Extended)/i)) {
-       return new Response("Forbidden", { status: 403 });
+        return new Response(JSON.stringify({ error: "Config Missing" }), { status: 500, headers: { "Content-Type": "application/json" } });
     }
 
     // API: 發送 OTP
@@ -104,13 +111,15 @@ export default {
       }
 
       if (access_token && user) {
-        ctx.waitUntil(logLogin(user, request, url.pathname === "/auth/session" ? "auto" : "manual", SB_URL, SB_ANON, SB_SERVICE));
+        // 重要：這裏改傳 SB_SERVICE 確保 logLogin 有最高權限
+        ctx.waitUntil(logLogin(user, request, url.pathname === "/auth/session" ? "auto" : "manual", SB_URL, SB_SERVICE));
+        
         return new Response(JSON.stringify({ success: true }), {
           status: 200,
           headers: { "Set-Cookie": `sb-access-token=${access_token}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=31536000` }
         });
       }
-      return new Response(JSON.stringify({ error: "驗證失敗" }), { status: 401 });
+      return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401 });
     }
 
     // API: 取得使用者
@@ -131,7 +140,7 @@ export default {
         });
     }
 
-    // --- 3. 靜態資源管理 ---
+    // 靜態資源管理
     const tokenMatch = cookie.match(/sb-access-token=([^;]+)/);
     const isAuth = tokenMatch ? !!(await verifyUserWithSupabase(tokenMatch[1], SB_URL, SB_ANON)) : false;
 
