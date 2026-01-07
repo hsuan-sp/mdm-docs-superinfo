@@ -89,10 +89,19 @@ export default {
 
     // 5. 路由攔截
     if (!isAuthenticated) {
-      // 未登入且不是 API 請求，傳回登入頁面
-      const loginHtml = await env.ASSETS.fetch(new Request(new URL("/login.html", request.url)));
-      return new Response(loginHtml.body, {
-        headers: { "Content-Type": "text/html; charset=utf-8" }
+      try {
+        const loginHtmlRes = await env.ASSETS.fetch(new Request(new URL("/login.html", request.url)));
+        if (loginHtmlRes.ok) {
+          return new Response(loginHtmlRes.body, {
+            headers: { "Content-Type": "text/html; charset=utf-8" }
+          });
+        }
+      } catch (e) {}
+      
+      // 備援：如果找不到 login.html 資源，直接噴出基本的 HTML
+      return new Response("請稍候... 正在載入登入系統。 (如果畫面沒跳轉，請重新整理)", {
+        status: 200, 
+        headers: { "Content-Type": "text/html; charset=utf-8", "Refresh": "1" }
       });
     }
 
