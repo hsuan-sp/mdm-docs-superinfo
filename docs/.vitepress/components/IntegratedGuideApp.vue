@@ -354,46 +354,79 @@ onMounted(async () => {
 .qa-card {
     background: var(--vp-c-bg);
     border: 1px solid var(--vp-c-divider);
-    border-radius: 16px;
+    border-radius: 18px; /* Slightly more rounded */
     margin-bottom: 20px;
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02); /* Subtle initial shadow */
 }
 
-.qa-card:hover { border-color: var(--vp-c-text-3); }
-.qa-card.is-open { border-color: var(--vp-c-brand); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+.qa-card:hover { 
+    border-color: var(--vp-c-brand); 
+    box-shadow: 0 12px 32px rgba(var(--vp-c-brand-rgb), 0.1); /* Glow effect on hover */
+    transform: translateY(-2px); /* Slight lift */
+}
+
+.qa-card.is-open { 
+    border-color: var(--vp-c-brand); 
+    box-shadow: 0 16px 48px rgba(0,0,0,0.08); /* Stronger shadow when open */
+    transform: translateY(-2px);
+}
 
 .card-header {
-    padding: 20px;
+    padding: 24px; /* More padding for breathing room */
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; /* Better alignment for multi-line questions */
     user-select: none;
+    gap: 16px;
 }
-.card-header h3 { font-size: 17px; font-weight: 600; margin: 0; line-height: 1.5; }
-.chevron { transition: transform 0.3s; opacity: 0.5; }
+.header-main { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+.card-header h3 { 
+    font-size: 18px; 
+    font-weight: 700; 
+    margin: 0; 
+    line-height: 1.5; 
+    color: var(--vp-c-text-1);
+    letter-spacing: -0.01em;
+}
+
+.chevron { 
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); 
+    opacity: 0.4; 
+    margin-top: 4px; /* Align with text top */
+    color: var(--vp-c-text-2);
+}
 .qa-card.is-open .chevron { transform: rotate(180deg); opacity: 1; color: var(--vp-c-brand); }
 
 .card-body-wrapper {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-in-out;
+    transition: max-height 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); /* Smoother expansion */
 }
 .card-body {
-    padding: 0 24px 24px 24px;
+    padding: 0 28px 28px 28px;
     border-top: 1px solid var(--vp-c-divider);
-    background: var(--vp-c-bg-alt);
-    padding-top: 20px;
+    background: var(--vp-c-bg-alt); /* Subtle contrast for content */
+    padding-top: 24px;
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.8;
     color: var(--vp-c-text-2);
 }
 
 .badge-important {
-    background: #ff3b30; color: white;
-    font-size: 10px; padding: 2px 8px; border-radius: 10px;
-    margin-right: 8px; vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 59, 48, 0.1);
+    color: #ff3b30;
+    font-size: 11px; 
+    padding: 4px 10px; 
+    border-radius: 100px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    width: fit-content;
+    margin-bottom: 4px;
 }
 
 .tags { margin-top: 16px; display: flex; gap: 8px; }

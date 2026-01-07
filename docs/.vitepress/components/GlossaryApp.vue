@@ -512,12 +512,19 @@ const getCategoryCount = (cat: string) => {
 
 /* Card Design */
 .term-card {
-  background: var(--vp-c-bg-alt);
+  background: var(--vp-c-bg-alt); /* Keep bg-alt for contrast */
   border-radius: 20px;
   border: 1px solid rgba(128, 128, 128, 0.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   display: flex; flex-direction: column; position: relative; overflow: hidden; height: 100%;
+}
+
+.term-card:hover {
+  border-color: var(--vp-c-brand);
+  background: var(--vp-c-bg); /* Slight lift */
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(var(--vp-c-brand-rgb), 0.12), 0 4px 12px rgba(0,0,0,0.05);
 }
 .card-main { padding: 24px; flex-grow: 1; display: flex; flex-direction: column; }
 .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 12px; }

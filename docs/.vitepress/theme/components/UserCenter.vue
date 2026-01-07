@@ -218,10 +218,9 @@ const logout = () => {
     -webkit-backdrop-filter: blur(8px);
     z-index: 9999;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    align-items: center; /* Center Vertically (Modal Style) */
+    justify-content: center; /* Center Horizontally */
     padding: 16px;
-    padding-bottom: calc(16px + env(safe-area-inset-bottom));
 }
 
 .mobile-dropdown-card {
