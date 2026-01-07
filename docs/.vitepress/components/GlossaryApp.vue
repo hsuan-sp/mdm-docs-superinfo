@@ -338,6 +338,7 @@ const getCategoryCount = (cat: string) => {
   text-align: center;
   margin-bottom: 40px;
   padding: 80px 0 20px; 
+  margin-top: 60px; /* Force extra space for navbar */
 }
 .glossary-header h1 {
   font-size: clamp(32px, 5vw, 48px);

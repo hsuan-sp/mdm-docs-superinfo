@@ -200,6 +200,7 @@ onMounted(async () => {
 .page-header {
     text-align: center;
     margin-bottom: 60px;
+    margin-top: 60px; /* Force extra space */
 }
 .page-header h1 {
     font-size: 36px;
