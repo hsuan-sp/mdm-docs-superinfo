@@ -98,10 +98,19 @@ const getCategoryCount = (cat: string) => {
       : item.category === cat
   ).length;
 };
+
+// Platform Detection
+const isMobilePlatform = ref(false);
+onMounted(() => {
+    isMobilePlatform.value = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth <= 1200);
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 1200) isMobilePlatform.value = true;
+    });
+});
 </script>
 
 <template>
-  <div class="glossary-app">
+  <div class="glossary-app" :class="{ 'is-mobile-device': isMobilePlatform }">
     <!-- Header Section -->
     <header class="glossary-header">
       <h1>零知識術語表</h1>
@@ -443,7 +452,7 @@ const getCategoryCount = (cat: string) => {
 .term-badges { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
 .badge { font-size: 10px; padding: 3px 8px; border-radius: 6px; font-weight: 600; text-transform: uppercase; background: #f5f5f7; color: #6e6e73; white-space: nowrap; }
 
-/* Responsive Breakpoints */
+/* Responsive Breakpoints & Platform Logic */
 @media (max-width: 1200px) {
   .desktop-only { display: none !important; }
   .app-layout { display: block; }
@@ -451,6 +460,13 @@ const getCategoryCount = (cat: string) => {
   .terms-grid { grid-template-columns: 1fr; } 
   .term-card { border-radius: 16px; }
 }
+
+/* Force Mobile Layout on Mobile OS even if resolution is high (e.g. iPad Pro landscape) */
+.is-mobile-device .desktop-only { display: none !important; }
+.is-mobile-device .app-layout { display: block; }
+.is-mobile-device .mobile-floating-btn { display: flex; }
+.is-mobile-device .terms-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); } 
+.is-mobile-device .term-card { border-radius: 16px; }
 
 
 /* Badge Colors */
