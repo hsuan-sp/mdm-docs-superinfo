@@ -101,16 +101,36 @@ const getCategoryCount = (cat: string) => {
 
 // Platform Detection
 const isMobilePlatform = ref(false);
+const preferDesktop = ref(false);
+const windowWidth = ref(0); // Track width for prompt logic
+
 onMounted(() => {
-    isMobilePlatform.value = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth <= 1200);
+    // 判定是否為行動裝置 (包含 iPadOS Desktop Mode)
+    const nav = navigator as any;
+    const isTouch = navigator.maxTouchPoints > 0 || (nav.msMaxTouchPoints > 0);
+    const isMobileUA = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    // iPadOS 13+ often lies and says it's Macintosh, so check touch points
+    const isIpadOS = navigator.userAgent.includes("Mac") && isTouch;
+    
+    isMobilePlatform.value = isMobileUA || isIpadOS;
+    windowWidth.value = window.innerWidth;
+
     window.addEventListener('resize', () => {
-        if (window.innerWidth <= 1200) isMobilePlatform.value = true;
+        windowWidth.value = window.innerWidth;
     });
 });
 </script>
 
 <template>
-  <div class="glossary-app" :class="{ 'is-mobile-device': isMobilePlatform }">
+  <div class="glossary-app" :class="{ 'is-mobile-device': isMobilePlatform && !preferDesktop }">
+    <!-- Desktop Switch Prompt (Only on High-Res Tablets) -->
+    <div class="desktop-switch-toast" v-if="isMobilePlatform && windowWidth > 1200 && !preferDesktop">
+        <span class="toast-text">偵測到大螢幕裝置，是否切換至電腦版佈局？</span>
+        <div class="toast-actions">
+            <button class="toast-btn primary" @click="preferDesktop = true">切換電腦版</button>
+            <button class="toast-btn secondary" @click="windowWidth = 0">維持行動版</button>
+        </div>
+    </div>
     <!-- Header Section -->
     <header class="glossary-header">
       <h1>零知識術語表</h1>
@@ -246,6 +266,64 @@ onMounted(() => {
 </template>
 
 <style scoped>
+/* Desktop Switch Toast */
+.desktop-switch-toast {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(30, 30, 30, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    z-index: 9999;
+    width: 90%;
+    max-width: 360px;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.toast-text {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.toast-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.toast-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.1s;
+}
+.toast-btn:active { transform: scale(0.95); }
+
+.toast-btn.primary {
+    background: var(--vp-c-brand);
+    color: white;
+}
+.toast-btn.secondary {
+    background: rgba(255,255,255,0.1);
+    color: #ccc;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translate(-50%, 20px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+}
+
 /* Mobile Drawer & Floating Button */
 .mobile-floating-btn {
   display: none; /* Desktop hidden */
