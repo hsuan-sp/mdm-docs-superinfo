@@ -156,57 +156,13 @@ export default {
       return Response.redirect(`${url.origin}/login`, 302);
     }
 
-    // --- 4. 返回資源 (注入防盜與原始碼隱藏) ---
+    // --- 4. 返回資源 ---
     if (url.pathname === "/login") {
       const res = await env.ASSETS.fetch(new Request(new URL("/login.html", request.url)));
-      // 對登入頁進行原始碼混淆 (暫停使用)
-      const originalHtml = await res.text();
-      return new Response(originalHtml, { headers: { "Content-Type": "text/html; charset=utf-8" } });
+      return new Response(res.body, { headers: { "Content-Type": "text/html; charset=utf-8" } });
     }
 
-    const response = await env.ASSETS.fetch(request);
-    
-    // 如果是 HTML 頁面且非登入頁，注入全域腳本並混淆
-    if (response.headers.get("Content-Type")?.includes("text/html") && isAuthenticated) {
-        let html = await response.text();
-        const injection = `
-        <style>
-          /* 懸浮登出按鈕 */
-          #global-auth-bar {
-            position: fixed; top: 0; left: 50%; transform: translateX(-50%);
-            background: rgba(0,0,0,0.8); backdrop-filter: blur(10px);
-            color: white; padding: 8px 16px; border-radius: 0 0 12px 12px;
-            font-size: 13px; z-index: 99999; display: flex; align-items: center; gap: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: top 0.3s;
-          }
-          #global-auth-bar:hover { padding-bottom: 12px; }
-          .auth-btn { color: #ff5e5e; text-decoration: none; font-weight: bold; cursor: pointer; }
-          .auth-info { color: #ccc; font-size: 11px; }
-        </style>
-        <div id="global-auth-bar">
-           <span>👤 ${user ? user.email : '已登入'}</span>
-           <span class="auth-info">| 系統僅暫存身分識別</span>
-           <a href="#" onclick="logout()" class="auth-btn">登出</a>
-        </div>
-        <script>
-           function logout() { if(confirm('確定要登出系統嗎？')) location.href = '/auth/logout'; }
-        </script>
-        `;
-        // 插入到 body 結束前
-        html = html.replace('</body>', injection + '</body>');
-        
-        // 重要修正：建立全新的 Response，避免繼承 gzip 等導致 Error 1101
-        const newHeaders = new Headers(response.headers);
-        newHeaders.delete("Content-Encoding"); // 移除壓縮標頭，因為我們回傳的是字串
-        newHeaders.set("Content-Type", "text/html; charset=utf-8");
-
-        return new Response(html, {
-            status: response.status,
-            statusText: response.statusText,
-            headers: newHeaders
-        });
-    }
-    return response;
+    return await env.ASSETS.fetch(request);
   },
 };
 
