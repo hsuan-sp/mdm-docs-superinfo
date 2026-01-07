@@ -1,15 +1,27 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue';
 import { useLayoutMode } from '../composables/useLayoutMode';
-import { useData } from 'vitepress';
+import { useData, useRouter } from 'vitepress';
 
 const { isMobileView, toggleLayout } = useLayoutMode();
 const { isDark, theme } = useData();
+const router = useRouter();
 
 const user = ref<string | null>(null);
 const isGuest = ref(false);
 const isMenuOpen = ref(false);
 const expandedNav = ref<number | null>(null);
+
+const handleLinkClick = (e: Event, link: string) => {
+    isMenuOpen.value = false;
+    if (link.startsWith('http')) {
+        // External link, let default behavior happen (target blank usually in config, or current)
+        return; 
+    }
+    // Internal SPA navigation
+    e.preventDefault();
+    router.go(link);
+};
 
 const toggleNav = (index: any) => {
     expandedNav.value = expandedNav.value === index ? null : index;
@@ -92,7 +104,7 @@ const logout = () => {
                         <template v-if="theme.nav">
                             <div v-for="(item, index) in theme.nav" :key="index" class="nav-group">
                                 <!-- Level 1: Single Link -->
-                                <a v-if="item.link" :href="item.link" class="menu-item nav-link" @click="isMenuOpen = false">
+                                <a v-if="item.link" :href="item.link" class="menu-item nav-link" @click="handleLinkClick($event, item.link)">
                                     <div class="item-text">
                                         <div class="label">{{ item.text }}</div>
                                     </div>
