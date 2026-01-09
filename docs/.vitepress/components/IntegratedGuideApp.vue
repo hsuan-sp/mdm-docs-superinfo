@@ -83,15 +83,18 @@ const toggleItem = (id: string) => {
 const renderMarkdown = (text: string | undefined | null) => {
   if (!text) return "";
   
-  // 1. 去除首尾空白並移除統一的縮排
+  // 1. 去除首尾空白
   let cleaned = text.trim();
   
   // 2. 處理列表與段落：解決文字擠在一起的問題
-  // 核心邏輯：確保標題後的內容有空行，且列表項之間有呼吸空間
+  // 核心邏輯：在每個段落/列表項之間插入雙換行，確保 Markdown 渲染器能識別出獨立區塊
   let processed = cleaned
-    .replace(/^(\*\*.+\*\*[:：])\s*\n/gm, '$1\n\n') // 粗體標題後強制加空行
-    .replace(/^([*•\-]\s+.+)\n(?=[*•\-])/gm, '$1\n\n') // 列表項之間加空行
-    .replace(/^(\d+\.\s+.+)\n(?=\d+\.)/gm, '$1\n\n'); // 數字列表項之間加空行
+    .split('\n')
+    .map(line => line.trim())
+    .join('\n')
+    .replace(/^(\*\*.+\*\*[:：])\s*/gm, '$1\n\n') // 粗體標題後強制空行
+    .replace(/^([*•\-]\s+.+?)(?=\n[*•\-])/gm, '$1\n\n') // 列表項後空行
+    .replace(/^(\d+\.\s+.+?)(?=\n\d+\.)/gm, '$1\n\n'); // 數字列表後空行
 
   try {
     return md.render(processed);
@@ -300,6 +303,7 @@ const switchModule = (source: string) => {
     margin-bottom: 12px;
     background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -326,37 +330,44 @@ const switchModule = (source: string) => {
     border-radius: 16px;
     margin-bottom: 24px;
     border: 1px solid var(--vp-c-divider);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
 }
 
 .control-label {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--vp-c-text-2);
     margin-bottom: 12px;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .font-size-controls {
     display: flex;
-    gap: 8px;
+    gap: 6px;
+    background: var(--vp-c-bg-mute);
+    padding: 4px;
+    border-radius: 10px;
 }
 
 .font-btn {
     flex: 1;
-    height: 36px;
-    border: 1px solid var(--vp-c-divider);
-    background: var(--vp-c-bg);
-    border-radius: 8px;
-    font-size: 14px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: var(--vp-c-text-2);
+    border-radius: 6px;
+    font-size: 13px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.2s;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.font-btn:hover { border-color: var(--vp-c-brand-1); }
+.font-btn:hover { color: var(--vp-c-brand-1); }
 .font-btn.active {
-    background: var(--vp-c-brand-1);
-    color: white;
-    border-color: var(--vp-c-brand-1);
+    background: var(--vp-c-bg-alt);
+    color: var(--vp-c-brand-1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .search-input {
@@ -417,6 +428,42 @@ const switchModule = (source: string) => {
     font-size: var(--content-font-size);
     line-height: var(--content-line-height);
     padding: 0 24px 24px;
+    color: var(--vp-c-text-1);
+}
+
+/* 修復段落與列表間距 */
+.markdown-body :deep(p) {
+    margin-top: 0;
+    margin-bottom: 1.2em; /* 確保段落間有呼吸空間 */
+}
+
+.markdown-body :deep(p:last-child) {
+    margin-bottom: 0;
+}
+
+.markdown-body :deep(ul), 
+.markdown-body :deep(ol) {
+    margin-top: 0;
+    margin-bottom: 1.2em;
+    padding-left: 1.5em; /* 確保清單縮排 */
+}
+
+.markdown-body :deep(li) {
+    margin-bottom: 0.6em; /* 列表項之間稍微拉開 */
+    list-style-position: outside;
+}
+
+.markdown-body :deep(ul) li {
+    list-style-type: disc; /* 恢復圓點 */
+}
+
+.markdown-body :deep(ol) li {
+    list-style-type: decimal; /* 恢復數字 */
+}
+
+.markdown-body :deep(strong) {
+    font-weight: 800;
+    color: var(--vp-c-brand-1); /* 重點文字彩色化 */
 }
 
 .tags { display: flex; gap: 8px; margin: 16px 24px 24px; }
