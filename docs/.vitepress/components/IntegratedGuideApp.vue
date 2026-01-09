@@ -93,8 +93,16 @@ const toggleItem = (id: string) => {
   openItems.value = next;
 };
 
-// Markdown rendering
-const renderMarkdown = (text: string) => md.render(text);
+// Markdown rendering with safety check
+const renderMarkdown = (text: string | undefined | null) => {
+  if (!text) return "";
+  try {
+    return md.render(text);
+  } catch (e) {
+    console.error("Markdown rendering error:", e);
+    return text;
+  }
+};
 
 // Listen to URL changes
 onMounted(() => {
@@ -115,18 +123,23 @@ onMounted(() => {
     // Watch for internal navigation and search results
     watch([activeSource, searchQuery, searchResults], async () => {
         await nextTick();
-        // Force a re-scan of all cards
+        // Force a re-scan of all cards safely
         const cards = document.querySelectorAll('.qa-card');
         cards.forEach(el => {
-            // Remove visible class briefly to re-trigger if needed? No, just observe.
-            observer.observe(el);
+            if (!el.classList.contains('visible')) {
+                observer.observe(el);
+            }
         });
         
-        // Scroll to top on module switch, but not necessarily on search typing
-        if (!searchQuery.value) {
-           window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Scroll to top on category change
+        if (!searchQuery.value && typeof window !== 'undefined') {
+          window.scrollTo({ top: 0, behavior: 'auto' });
         }
     }, { immediate: true });
+
+    console.log("IntegratedGuideApp mounted. allQAData length:", allQAData.length);
+    console.log("Current activeSource:", activeSource.value);
+    console.log("Current module data:", currentModule.value);
 });
 
 
@@ -534,19 +547,24 @@ const switchModule = (source: string) => {
 
 /* QA Cards */
 .qa-card {
-    background: var(--vp-c-bg);
+    background: var(--vp-c-bg-alt);
     border: 1px solid var(--vp-c-divider);
-    border-radius: 16px;
+    border-radius: 20px;
     margin-bottom: 16px;
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    opacity: 1; /* Default to visible for safety */
+    transform: translateY(0);
+}
+
+.qa-card.not-visible {
     opacity: 0;
     transform: translateY(20px);
 }
 
 .qa-card.visible {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 .qa-card:hover {
