@@ -3,7 +3,7 @@ import { withBase } from 'vitepress'
 </script>
 
 <template>
-  <footer class="global-footer">
+  <footer class="global-footer" role="contentinfo">
     <!-- Top Promo Section -->
     <div class="footer-promo">
       <h2 class="company-name">極電資訊有限公司</h2>
@@ -11,11 +11,11 @@ import { withBase } from 'vitepress'
       <p class="slogan">致力於給您最好的服務</p>
     </div>
 
-    <div class="divider"></div>
+    <div class="divider" role="presentation"></div>
 
     <!-- Bottom Copyright Section -->
     <div class="footer-copyright">
-      <p>Copyright ©2025 極電資訊｜Apple 授權教育經銷商</p>
+      <p>Copyright ©2026 極電資訊｜Apple 授權教育經銷商</p>
       <p>極電資訊有限公司 | 統一編號 23756990</p>
     </div>
   </footer>

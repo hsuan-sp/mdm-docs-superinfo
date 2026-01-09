@@ -1,23 +1,58 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, nextTick, watch } from "vue";
+import { useRoute, useRouter } from "vitepress";
 import { allQAData } from "../../data/all-data";
 import type { QAItem, QASection } from "../types";
 import MarkdownIt from "markdown-it";
-import { useLayoutMode } from '../theme/composables/useLayoutMode';
 
-const { isMobileView } = useLayoutMode();
+const route = useRoute();
+const router = useRouter();
+
 const md = new MarkdownIt({
   html: true,
   linkify: true,
   typographer: true
 });
 
+// State
 const searchQuery = ref("");
-// Default active source (first available)
 const activeSource = ref(allQAData[0].source);
-const isSidebarOpen = ref(false); // Mobile drawer toggle
+const isSidebarOpen = ref(false);
 
-// Computed: Search Logic across ALL 8 files
+const handleHashChange = () => {
+  const hash = window.location.hash.replace('#', '').toLowerCase();
+  if (hash) {
+    // Explicit mapping for predictable navigation
+    const hashMap: Record<string, string> = {
+      'account': '帳號與伺服器',
+      'enrollment': '裝置註冊',
+      'apps': 'App 管理',
+      'classroom': '課堂管理',
+      'digital': '數位精進',
+      'hardware': '硬體排除',
+      'mac': 'Mac 管理',
+      'education': '教育實戰'
+    };
+
+    const targetSource = hashMap[hash];
+    if (targetSource) {
+      activeSource.value = targetSource;
+      searchQuery.value = '';
+    } else {
+      // Fallback: Fuzzy match
+      const matched = allQAData.find(m => 
+        m.source.toLowerCase().includes(hash) ||
+        hash.includes(m.source.toLowerCase().slice(0, 3))
+      );
+      if (matched) {
+        activeSource.value = matched.source;
+        searchQuery.value = '';
+      }
+    }
+  }
+};
+
+// Search across ALL modules
 const searchResults = computed(() => {
   if (!searchQuery.value.trim()) return null;
 
@@ -31,7 +66,7 @@ const searchResults = computed(() => {
       section.items.forEach(item => {
         const textToSearch = (item.question + item.answer + item.tags.join(" ")).toLowerCase();
         if (terms.every(t => textToSearch.includes(t))) {
-            fileMatches.push({ ...item, tags: [...item.tags, file.source] }); // Add context tag
+            fileMatches.push({ ...item, tags: [...item.tags, file.source] });
         }
       });
     });
@@ -43,276 +78,390 @@ const searchResults = computed(() => {
   return results;
 });
 
-// Computed: Current Module Content (when NOT searching)
+// Current module content
 const currentModule = computed(() => {
     return allQAData.find(d => d.source === activeSource.value);
 });
 
-// Accordion Logic
+// Accordion state
 const openItems = ref<Set<string>>(new Set());
 const toggleItem = (id: string) => {
   if (openItems.value.has(id)) openItems.value.delete(id);
   else openItems.value.add(id);
 };
 
-// Markdown Helper
+// Markdown rendering
 const renderMarkdown = (text: string) => md.render(text);
 
-// Animation Logic
-onMounted(async () => {
-    await nextTick();
+// Listen to URL changes
+onMounted(() => {
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    
     // Intersection Observer for animation trigger
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if(entry.isIntersecting) entry.target.classList.add('visible');
+            if(entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.1, rootMargin: '50px' });
 
-    // Watch for DOM updates to re-attach observer
+    // Watch for internal navigation
     watch([activeSource, searchQuery], async () => {
         await nextTick();
         document.querySelectorAll('.qa-card').forEach(el => observer.observe(el));
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, { immediate: true });
 });
+
+
+// Switch module
+const switchModule = (source: string) => {
+  activeSource.value = source;
+  searchQuery.value = '';
+  isSidebarOpen.value = false;
+  openItems.value.clear();
+};
 </script>
 
 <template>
-  <div class="guide-app" :class="{ 'is-mobile-device': isMobileView }">
-    <!-- Header (Title Only) -->
-    <div class="page-header">
+  <div class="guide-app">
+    <!-- Header -->
+    <header class="page-header">
         <h1>MDM 實戰指南</h1>
         <p>完整收錄 8 大管理模組，超過 100+ 實務常見問答。</p>
-    </div>
+    </header>
 
     <div class="app-layout">
-      <!-- Left Sidebar: Navigation & Search (Desktop Only) -->
-      <aside class="app-sidebar desktop-only">
+      <!-- Desktop Sidebar -->
+      <aside class="app-sidebar">
         <div class="sidebar-section">
             <div class="search-box">
-                <span class="search-icon">🔍</span>
+                <span class="search-icon" aria-hidden="true">🔍</span>
                 <input 
                     v-model="searchQuery" 
                     type="text" 
                     placeholder="搜尋全站指南..." 
                     class="search-input"
+                    aria-label="搜尋指南內容"
                 />
+                <button 
+                  v-if="searchQuery" 
+                  @click="searchQuery = ''" 
+                  class="clear-btn"
+                  aria-label="清除搜尋"
+                >
+                  ✕
+                </button>
             </div>
         </div>
 
-        <div class="sidebar-section nav-menu">
+        <nav class="sidebar-section nav-menu" aria-label="模組導航">
             <h3>章節選擇</h3>
             <button 
                 v-for="module in allQAData" 
                 :key="module.source"
-                @click="activeSource = module.source; searchQuery = ''"
+                @click="switchModule(module.source)"
                 :class="['nav-item', { active: activeSource === module.source && !searchQuery }]"
+                :aria-current="activeSource === module.source && !searchQuery ? 'page' : undefined"
             >
-                <span class="nav-icon">📄</span>
+                <span class="nav-icon" aria-hidden="true">📄</span>
                 <span class="nav-text">{{ module.source }}</span>
-                <span class="nav-arrow">›</span>
+                <span class="nav-arrow" aria-hidden="true">›</span>
             </button>
-        </div>
+        </nav>
       </aside>
 
-      <!-- Right Content Area -->
+      <!-- Main Content -->
       <main class="app-content">
         
-        <!-- Case 1: Search Results -->
+        <!-- Search Results -->
         <div v-if="searchQuery" class="result-container">
             <h2 class="section-title">搜尋結果：{{ searchQuery }}</h2>
             <div v-if="searchResults && searchResults.length > 0">
-                <div v-for="group in searchResults" :key="group.source" class="module-group">
+                <section v-for="group in searchResults" :key="group.source" class="module-group">
                     <h3 class="group-title">{{ group.source }}</h3>
                     <div class="cards-stack">
-                        <div v-for="item in group.items" :key="item.id" class="qa-card" 
-                             :class="{ 'is-open': openItems.has(item.id) }">
-                            <div class="card-header" @click="toggleItem(item.id)">
-                                <h3>{{ item.question }}</h3>
-                                <span class="chevron">▼</span>
+                        <article 
+                          v-for="item in group.items" 
+                          :key="item.id" 
+                          class="qa-card" 
+                          :class="{ 'is-open': openItems.has(item.id) }"
+                        >
+                            <div 
+                              class="card-header" 
+                              @click="toggleItem(item.id)"
+                              role="button"
+                              :aria-expanded="openItems.has(item.id)"
+                              tabindex="0"
+                              @keydown.enter="toggleItem(item.id)"
+                              @keydown.space.prevent="toggleItem(item.id)"
+                            >
+                                <div class="header-main">
+                                  <span v-if="item.important" class="badge-important" aria-label="重要問題">⭐ 重要</span>
+                                  <h3>{{ item.question }}</h3>
+                                </div>
+                                <span class="chevron" aria-hidden="true">▼</span>
                             </div>
-                            <div class="card-body" v-if="openItems.has(item.id)">
+                            <div class="card-body-wrapper" :style="{ maxHeight: openItems.has(item.id) ? '3000px' : '0px' }">
+                              <div class="card-body">
                                 <div class="markdown-body" v-html="renderMarkdown(item.answer)"></div>
+                                <div class="tags" v-if="item.tags && item.tags.length">
+                                    <span v-for="tag in item.tags" :key="tag" class="tag">{{ tag }}</span>
+                                </div>
+                              </div>
                             </div>
-                        </div>
+                        </article>
                     </div>
-                </div>
+                </section>
             </div>
             <div v-else class="empty-state">
+                <div class="empty-icon">🤔</div>
                 <p>找不到相關內容，請嘗試其他關鍵字。</p>
             </div>
         </div>
 
-        <!-- Case 2: Browse Module -->
+        <!-- Browse Module -->
         <div v-else class="module-container">
             <h2 class="module-title">{{ currentModule?.source }}</h2>
             
-            <div v-for="section in currentModule?.sections" :key="section.title" class="qa-section">
-                <h3 class="section-top-title">{{ section.title }}</h3>
+            <section v-for="section in currentModule?.sections" :key="section.title" class="qa-section">
+                <h3 class="section-subtitle">{{ section.title }}</h3>
                 
                 <div class="cards-stack">
-                    <div v-for="item in section.items" :key="item.id" class="qa-card"
-                         :class="{ 'is-open': openItems.has(item.id) }">
-                        <div class="card-header" @click="toggleItem(item.id)">
+                    <article 
+                      v-for="item in section.items" 
+                      :key="item.id" 
+                      class="qa-card"
+                      :class="{ 'is-open': openItems.has(item.id) }"
+                    >
+                        <div 
+                          class="card-header" 
+                          @click="toggleItem(item.id)"
+                          role="button"
+                          :aria-expanded="openItems.has(item.id)"
+                          tabindex="0"
+                          @keydown.enter="toggleItem(item.id)"
+                          @keydown.space.prevent="toggleItem(item.id)"
+                        >
                             <div class="header-main">
-                                <span v-if="item.important" class="badge-important">重要</span>
-                                <h3>{{ item.question }}</h3>
+                              <span v-if="item.important" class="badge-important" aria-label="重要問題">⭐ 重要</span>
+                              <h3>{{ item.question }}</h3>
                             </div>
-                            <span class="chevron">▼</span>
+                            <span class="chevron" aria-hidden="true">▼</span>
                         </div>
-                        <div class="card-body-wrapper" :style="{ maxHeight: openItems.has(item.id) ? '2000px' : '0px' }">
-                             <div class="card-body">
-                                <div class="markdown-body" v-html="renderMarkdown(item.answer)"></div>
-                                <div class="tags" v-if="item.tags">
-                                    <span v-for="tag in item.tags" :key="tag" class="tag">{{ tag }}</span>
-                                </div>
-                             </div>
+                        <div class="card-body-wrapper" :style="{ maxHeight: openItems.has(item.id) ? '3000px' : '0px' }">
+                          <div class="card-body">
+                            <div class="markdown-body" v-html="renderMarkdown(item.answer)"></div>
+                            <div class="tags" v-if="item.tags && item.tags.length">
+                                <span v-for="tag in item.tags" :key="tag" class="tag">{{ tag }}</span>
+                            </div>
+                          </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
-            </div>
+            </section>
         </div>
 
       </main>
     </div>
-    <!-- Mobile Floating Filter Button (Standard Solid) -->
-    <button class="mobile-floating-btn" @click="isSidebarOpen = true" v-if="!isSidebarOpen">
-      <span class="icon">🔍</span>
-      <span class="label">搜尋與章節</span>
+
+    <!-- Mobile FAB Button -->
+    <button 
+      class="mobile-fab" 
+      @click="isSidebarOpen = true" 
+      v-show="!isSidebarOpen"
+      aria-label="開啟搜尋與章節選單"
+    >
+      <span aria-hidden="true">🔍</span>
+      <span class="fab-label">搜尋</span>
     </button>
 
-    <!-- Mobile Drawer Overlay (Liquid Glass) -->
+    <!-- Mobile Drawer -->
     <div class="mobile-drawer-overlay" :class="{ open: isSidebarOpen }" @click="isSidebarOpen = false">
-      <div class="mobile-drawer" @click.stop>
+      <aside class="mobile-drawer" @click.stop role="dialog" aria-label="搜尋與章節選單">
         <div class="drawer-header">
           <h3>搜尋與章節</h3>
-          <button class="close-btn" @click="isSidebarOpen = false">✕</button>
+          <button class="close-btn" @click="isSidebarOpen = false" aria-label="關閉選單">✕</button>
         </div>
         
         <div class="drawer-content">
             <div class="search-box mobile-search">
-                <span class="search-icon">🔍</span>
-                <input v-model="searchQuery" type="text" placeholder="搜尋全站指南..." class="search-input" />
+                <span class="search-icon" aria-hidden="true">🔍</span>
+                <input 
+                  v-model="searchQuery" 
+                  type="text" 
+                  placeholder="搜尋全站指南..." 
+                  class="search-input"
+                  aria-label="搜尋指南內容"
+                />
             </div>
 
-            <div class="nav-menu mobile-menu">
-                <h3>章節選擇</h3>
+            <nav class="nav-menu mobile-menu" aria-label="模組導航">
+                <h4>章節選擇</h4>
                 <button 
                     v-for="module in allQAData" 
                     :key="module.source"
-                    @click="activeSource = module.source; searchQuery = ''; isSidebarOpen = false"
+                    @click="switchModule(module.source)"
                     :class="['nav-item', { active: activeSource === module.source && !searchQuery }]"
                 >
-                    <span class="nav-icon">📄</span>
+                    <span class="nav-icon" aria-hidden="true">📄</span>
                     <span class="nav-text">{{ module.source }}</span>
-                    <span class="nav-arrow">›</span>
+                    <span class="nav-arrow" aria-hidden="true">›</span>
                 </button>
-            </div>
+            </nav>
         </div>
-      </div>
+      </aside>
     </div>
   </div>
 </template>
 
 <style scoped>
-/* Layout */
+/* Modern Layout with Container Queries */
 .guide-app {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 40px 24px 100px;
+    padding: clamp(32px, 5vw, 60px) clamp(20px, 3vw, 40px) 100px;
+    container-type: inline-size;
 }
 
+/* Header */
 .page-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: clamp(40px, 8vh, 80px);
 }
+
 .page-header h1 {
-    font-size: 36px;
+    font-size: clamp(32px, 5vw, 48px);
     font-weight: 800;
-    margin-bottom: 12px;
-    line-height: 1.4; /* Fix clipping */
-    padding-top: 10px; /* Fix clipping */
+    margin-bottom: 16px;
+    line-height: 1.2;
+    background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
 .page-header p {
+    font-size: clamp(16px, 2vw, 20px);
     color: var(--vp-c-text-2);
 }
 
+/* Layout */
 .app-layout {
-    display: flex;
-    gap: 50px;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: clamp(32px, 5vw, 60px);
+    align-items: start;
+}
+
+@media (max-width: 960px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Sidebar */
 .app-sidebar {
-    width: 280px;
-    flex-shrink: 0;
     position: sticky;
-    top: var(--vp-nav-height);
-    background: var(--vp-c-bg-alt);
-    border-radius: 16px;
+    top: calc(var(--vp-nav-height, 60px) + 24px);
+    border-radius: 20px;
+    background: var(--vp-c-bg-soft);
     padding: 24px;
     border: 1px solid var(--vp-c-divider);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-    z-index: 5; /* Lowered to prevent menu overlap */
+}
+
+@media (max-width: 960px) {
+  .app-sidebar {
+    display: none;
+  }
 }
 
 .sidebar-section {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
+}
+
+.sidebar-section:last-child {
+  margin-bottom: 0;
 }
 
 .sidebar-section h3 {
-    font-size: 13px;
-    text-transform: uppercase;
-    color: var(--vp-c-text-3);
-    margin-bottom: 16px;
-    letter-spacing: 0.05em;
+    font-size: 14px;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--vp-c-text-2);
+    margin-bottom: 16px;
 }
 
 /* Search Box */
 .search-box {
     position: relative;
 }
+
 .search-input {
     width: 100%;
-    padding: 12px 16px 12px 40px;
-    border-radius: 10px;
-    background: var(--vp-c-bg);
+    padding: 12px 40px 12px 40px;
+    border-radius: 12px;
     border: 1px solid var(--vp-c-divider);
+    background: var(--vp-c-bg);
     color: var(--vp-c-text-1);
+    font-size: 14px;
     transition: all 0.2s;
 }
+
 .search-input:focus {
-    border-color: var(--vp-c-brand);
-    box-shadow: 0 0 0 3px rgba(var(--vp-c-brand-rgb), 0.1);
+    outline: none;
+    border-color: var(--vp-c-brand-1);
+    box-shadow: 0 0 0 3px rgba(var(--vp-c-brand-rgb, 0, 113, 227), 0.1);
 }
+
 .search-icon {
     position: absolute;
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
+    pointer-events: none;
     opacity: 0.5;
 }
 
-/* Nav Menu */
-.nav-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+.clear-btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--vp-c-text-3);
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all 0.2s;
 }
 
-.nav-item {
+.clear-btn:hover {
+    background: var(--vp-c-bg-mute);
+    color: var(--vp-c-text-1);
+}
+
+/* Navigation */
+.nav-menu .nav-item {
+    width: 100%;
     display: flex;
     align-items: center;
+    gap: 12px;
     padding: 12px 16px;
-    border-radius: 12px;
+    border-radius: 10px;
+    border: none;
     background: transparent;
     color: var(--vp-c-text-2);
+    font-size: 14px;
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.2s;
-    text-align: left;
-    border: 1px solid transparent;
+    margin-bottom: 4px;
 }
 
 .nav-item:hover {
@@ -321,232 +470,333 @@ onMounted(async () => {
 }
 
 .nav-item.active {
-    background: var(--vp-c-brand);
-    color: #fff;
-    box-shadow: 0 4px 12px rgba(var(--vp-c-brand-rgb), 0.3);
+    background: var(--vp-c-brand-soft);
+    color: var(--vp-c-brand-1);
+    font-weight: 600;
 }
 
-.nav-icon { margin-right: 12px; font-size: 16px; }
-.nav-text { flex-grow: 1; font-weight: 500; font-size: 15px; }
-.nav-arrow { opacity: 0; transform: translateX(-5px); transition: all 0.2s; }
-.nav-item.active .nav-arrow { opacity: 1; transform: translateX(0); }
+.nav-text {
+    flex: 1;
+    text-align: left;
+}
 
-/* Content Area */
+.nav-arrow {
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.nav-item:hover .nav-arrow,
+.nav-item.active .nav-arrow {
+    opacity: 1;
+}
+
+/* Main Content */
 .app-content {
-    flex-grow: 1;
-    min-width: 0;
+    min-width: 0; /* Fix flex overflow */
 }
 
+.section-title,
 .module-title {
-    font-size: 32px;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 800;
+    margin-bottom: 32px;
+    line-height: 1.2;
+}
+
+.group-title,
+.section-subtitle {
+    font-size: clamp(18px, 3vw, 24px);
     font-weight: 700;
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--vp-c-divider);
-}
-
-.section-top-title {
-    font-size: 20px;
-    color: var(--vp-c-brand);
     margin: 40px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--vp-c-divider);
 }
 
+.module-group:first-child .group-title,
+.qa-section:first-child .section-subtitle {
+  margin-top: 0;
+}
+
+/* QA Cards */
 .qa-card {
     background: var(--vp-c-bg);
     border: 1px solid var(--vp-c-divider);
-    border-radius: 18px; /* Slightly more rounded */
-    margin-bottom: 20px;
+    border-radius: 16px;
+    margin-bottom: 16px;
     overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.02); /* Subtle initial shadow */
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    opacity: 0;
+    transform: translateY(20px);
 }
 
-.qa-card:hover { 
-    border-color: var(--vp-c-brand); 
-    box-shadow: 0 12px 32px rgba(var(--vp-c-brand-rgb), 0.1); /* Glow effect on hover */
-    transform: translateY(-2px); /* Slight lift */
+.qa-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.qa-card.is-open { 
-    border-color: var(--vp-c-brand); 
-    box-shadow: 0 16px 48px rgba(0,0,0,0.08); /* Stronger shadow when open */
+.qa-card:hover {
+    border-color: var(--vp-c-brand-soft);
+   box-shadow: 0 8px 24px rgba(0,0,0,0.06);
     transform: translateY(-2px);
 }
 
+.qa-card.is-open {
+    border-color: var(--vp-c-brand-1);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+}
+
 .card-header {
-    padding: 24px; /* More padding for breathing room */
+    padding: 20px 24px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Better alignment for multi-line questions */
-    user-select: none;
-    gap: 16px;
+    align-items: center;
+    gap: 20px;
+    transition: background 0.2s;
 }
-.header-main { display: flex; flex-direction: column; gap: 8px; width: 100%; }
-.card-header h3 { 
-    font-size: 18px; 
-    font-weight: 700; 
-    margin: 0; 
-    line-height: 1.5; 
+
+.card-header:hover {
+    background: var(--vp-c-bg-soft);
+}
+
+.card-header:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: -2px;
+}
+
+.header-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.header-main h3 {
+    font-size: clamp(16px, 2.5vw, 19px);
+    font-weight: 700;
+    line-height: 1.4;
     color: var(--vp-c-text-1);
-    letter-spacing: -0.01em;
-}
-
-.chevron { 
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); 
-    opacity: 0.4; 
-    margin-top: 4px; /* Align with text top */
-    color: var(--vp-c-text-2);
-}
-.qa-card.is-open .chevron { transform: rotate(180deg); opacity: 1; color: var(--vp-c-brand); }
-
-.card-body-wrapper {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); /* Smoother expansion */
-}
-.card-body {
-    padding: 0 28px 28px 28px;
-    border-top: 1px solid var(--vp-c-divider);
-    background: var(--vp-c-bg-alt); /* Subtle contrast for content */
-    padding-top: 24px;
-    font-size: 16px;
-    line-height: 1.8;
-    color: var(--vp-c-text-2);
+    margin: 0;
 }
 
 .badge-important {
     display: inline-flex;
     align-items: center;
-    background: rgba(255, 59, 48, 0.1);
-    color: #ff3b30;
-    font-size: 11px; 
-    padding: 4px 10px; 
-    border-radius: 100px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    width: fit-content;
-    margin-bottom: 4px;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #fff;
+    background: linear-gradient(135deg, #ff3b30, #ff7b71);
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 8px rgba(255, 59, 48, 0.25);
 }
 
-.tags { margin-top: 16px; display: flex; gap: 8px; }
-.tag { font-size: 12px; background: var(--vp-c-bg); padding: 4px 10px; border-radius: 8px; border: 1px solid var(--vp-c-divider); }
-
-/* Mobile Responsive Logic */
-/* Mobile Responsive Logic */
-@media (max-width: 1200px) {
-    .desktop-only { display: none !important; }
-    .app-layout { display: block; }
-    .mobile-floating-btn { display: flex; }
+.chevron {
+    font-size: 14px;
+    color: var(--vp-c-text-3);
+    transition: transform 0.3s;
+    flex-shrink: 0;
 }
 
-.is-mobile-device .desktop-only { display: none !important; }
-.is-mobile-device .app-layout { display: block; }
-.is-mobile-device .mobile-floating-btn { display: flex; }
-
-/* Standard Solid FAB - Bottom Left */
-.mobile-floating-btn {
-  display: none;
-  position: fixed;
-  bottom: 34px;
-  left: 24px;
-  right: auto;
-  background: var(--vp-c-brand);
-  color: white;
-  border: none;
-  padding: 14px 24px;
-  border-radius: 100px;
-  font-weight: 700;
-  font-size: 15px;
-  box-shadow: 0 4px 12px rgba(var(--vp-c-brand-rgb), 0.4);
-  z-index: 100;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+.qa-card.is-open .chevron {
+    transform: rotate(180deg);
+    color: var(--vp-c-brand-1);
 }
 
-.mobile-floating-btn:active {
-  transform: scale(0.95) translateY(2px);
+/* Card Body */
+.card-body-wrapper {
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-top: 1px solid transparent;
 }
 
-/* Liquid Glass Drawer */
+.qa-card.is-open .card-body-wrapper {
+    border-top-color: var(--vp-c-divider);
+}
+
+.card-body {
+    padding: 20px 24px;
+    background: var(--vp-c-bg-soft);
+}
+
+.markdown-body {
+    font-size: clamp(15px, 2vw, 17px);
+    line-height: 1.7;
+    color: var(--vp-c-text-1);
+}
+
+/* Tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.tag {
+    font-size: 12px;
+    padding: 4px 12px;
+    background: var(--vp-c-bg);
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 12px;
+    color: var(--vp-c-text-2);
+    font-weight: 500;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--vp-c-text-3);
+}
+
+.empty-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+/* Mobile FAB */
+.mobile-fab {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--vp-c-brand-1);
+    color: #fff;
+    border: none;
+    border-radius: 28px;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 8px 24px rgba(0, 113, 227, 0.3);
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    gap: 8px;
+    z-index: 100;
+    transition: all 0.3s;
+}
+
+.mobile-fab:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 113, 227, 0.4);
+}
+
+@media (max-width: 960px) {
+  .mobile-fab {
+    display: flex;
+  }
+}
+
+/* Mobile Drawer */
 .mobile-drawer-overlay {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.15);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  z-index: 200;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-  display: flex;
-  align-items: flex-end;
-  padding: 16px;
-  padding-bottom: calc(16px + env(safe-area-inset-bottom));
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
 }
 
 .mobile-drawer-overlay.open {
-  opacity: 1;
-  pointer-events: auto;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .mobile-drawer {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(40px) saturate(200%);
-  -webkit-backdrop-filter: blur(40px) saturate(200%);
-  border-radius: 32px;
-  padding: 30px;
-  max-height: 80vh;
-  overflow-y: auto;
-  transform: translateY(30px) scale(0.95);
-  opacity: 0;
-  transition: all 0.5s cubic-bezier(0.2, 0.9, 0.2, 1.05);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  position: relative;
-}
-
-.dark .mobile-drawer {
-  background: rgba(28, 28, 30, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(360px, 85vw);
+    background: var(--vp-c-bg);
+    box-shadow: -4px 0 24px rgba(0,0,0,0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: flex;
+    flex-direction: column;
 }
 
 .mobile-drawer-overlay.open .mobile-drawer {
-  transform: translateY(0) scale(1);
-  opacity: 1;
+    transform: translateX(0);
 }
 
 .drawer-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
+    padding: 24px;
+    border-bottom: 1px solid var(--vp-c-divider);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.drawer-header h3 { 
-  font-size: 22px; 
-  font-weight: 800; 
-  margin: 0; 
-  letter-spacing: -0.03em;
+.drawer-header h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
 }
 
-.close-btn { 
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.05);
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: var(--vp-c-text-2);
+.close-btn {
+    background: var(--vp-c-bg-soft);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
 }
-.dark .close-btn { background: rgba(255,255,255,0.1); }
 
-.mobile-search { margin-bottom: 24px; }
-.mobile-menu { display: flex; flex-direction: column; gap: 8px; }
+.close-btn:hover {
+    background: var(--vp-c-bg-mute);
+}
+
+.drawer-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+}
+
+.mobile-search {
+    margin-bottom: 24px;
+}
+
+.mobile-menu h4 {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--vp-c-text-3);
+    margin-bottom: 12px;
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .app-sidebar,
+  .mobile-fab,
+  .mobile-drawer-overlay {
+    display: none !important;
+  }
+  
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .qa-card {
+    break-inside: avoid;
+  }
+}
 </style>
