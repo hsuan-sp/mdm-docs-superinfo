@@ -11,7 +11,7 @@ const md = new MarkdownIt({
   html: true,
   linkify: true,
   typographer: true,
-  breaks: true // 確保單次換行也會生效
+  breaks: false // 關鍵：改為 false，回歸標準 Markdown 行為，讓單次換行不產生斷行
 });
 
 // State
@@ -63,17 +63,17 @@ const renderMarkdown = (text: string) => {
     const match = line.match(/^\s*/);
     return Math.min(min, match ? match[0].length : min);
   }, Infinity);
-  const cleaned = lines.map(line => line.slice(minIndent)).join('\n');
+  const cleaned = lines.map(line => line.slice(minIndent)).join('\n').trim();
   
   // 排版增強處理
   let processed = cleaned
-    // 1. 在列表項目前確保有空行（無論是 *、-、+ 或數字列表）
+    // 1. 在列表項目前確保有空行
     .replace(/([^\n])\n(\s*[-*+])/g, '$1\n\n$2')
     .replace(/([^\n])\n(\s*\d+\.)/g, '$1\n\n$2')
-    // 2. 在粗體標題行（如 **標題**：）後面如果直接接內容，確保段落分隔
-    .replace(/(\*\*[^*]+\*\*[：:]\s*)\n([^\n*\d-])/g, '$1\n\n$2')
-    // 3. 在引用區塊前確保有空行
-    .replace(/([^\n])\n(>)/g, '$1\n\n$2');
+    // 2. 在引用區塊前確保有空行
+    .replace(/([^\n])\n(>)/g, '$1\n\n$2')
+    // 3. 特殊處理：當您在內文中使用 \n\n\n (或更多換行) 時，我們補一個視覺上的大間隙
+    .replace(/\n\s*\n\s*\n+/g, '\n\n<div class="large-spacer"></div>\n\n');
   
   return md.render(processed);
 };
@@ -275,8 +275,9 @@ const switchModule = (source: string) => {
     /* 核心修復：強制尊重原始換行 */
     white-space: normal;
 }
-.markdown-body :deep(p) { margin-bottom: 1.2em; }
-.markdown-body :deep(li) { margin-bottom: 0.5em; }
+.markdown-body :deep(p) { margin-bottom: 1.5em; }
+.markdown-body :deep(li) { margin-bottom: 0.6em; }
+.markdown-body :deep(.large-spacer) { height: 1.2em; }
 .markdown-body :deep(strong) { color: var(--vp-c-brand-1); font-weight: 800; }
 
 .tags { margin-top: 15px; display: flex; gap: 8px; flex-wrap: wrap; }
