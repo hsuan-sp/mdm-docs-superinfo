@@ -11,7 +11,7 @@ const md = new MarkdownIt({
   html: true,
   linkify: true,
   typographer: true,
-  breaks: false // 關鍵：改為 false，回歸標準 Markdown 行為，讓單次換行不產生斷行
+  breaks: true // 確保單次換行也會生效
 });
 
 // State
@@ -63,17 +63,15 @@ const renderMarkdown = (text: string) => {
     const match = line.match(/^\s*/);
     return Math.min(min, match ? match[0].length : min);
   }, Infinity);
-  const cleaned = lines.map(line => line.slice(minIndent)).join('\n').trim();
   
-  // 排版增強處理
+  // 保持原始結構，僅處理縮排
+  let cleaned = lines.map(line => line.slice(minIndent)).join('\n').trim();
+  
+  // 優化排版：僅針對 Markdown 解析必須的「列表前置空行」做補強
+  // 這樣您在內文中「有沒有空行」就會直接反映在畫面上
   let processed = cleaned
-    // 1. 在列表項目前確保有空行
     .replace(/([^\n])\n(\s*[-*+])/g, '$1\n\n$2')
-    .replace(/([^\n])\n(\s*\d+\.)/g, '$1\n\n$2')
-    // 2. 在引用區塊前確保有空行
-    .replace(/([^\n])\n(>)/g, '$1\n\n$2')
-    // 3. 特殊處理：當您在內文中使用 \n\n\n (或更多換行) 時，我們補一個視覺上的大間隙
-    .replace(/\n\s*\n\s*\n+/g, '\n\n<div class="large-spacer"></div>\n\n');
+    .replace(/([^\n])\n(\s*\d+\.)/g, '$1\n\n$2');
   
   return md.render(processed);
 };
@@ -268,17 +266,23 @@ const switchModule = (source: string) => {
 .qa-item.open .arrow { transform: rotate(180deg); color: var(--vp-c-brand-1); }
 
 /* 內容樣式 */
-.qa-content { padding: 0 20px 20px; border-top: 1px solid var(--vp-c-divider); background: var(--vp-c-bg-soft); }
+.qa-content { padding: 0 24px 24px; border-top: 1px solid var(--vp-c-divider); background: var(--vp-c-bg-soft); }
 .markdown-body { 
-    font-size: 1em; line-height: 1.8; color: var(--vp-c-text-1); 
-    padding-top: 20px;
-    /* 核心修復：強制尊重原始換行 */
-    white-space: normal;
+    font-size: 1.05em; line-height: 1.8; color: var(--vp-c-text-1); 
+    padding-top: 24px;
 }
 .markdown-body :deep(p) { margin-bottom: 1.5em; }
-.markdown-body :deep(li) { margin-bottom: 0.6em; }
-.markdown-body :deep(.large-spacer) { height: 1.2em; }
+.markdown-body :deep(ul), .markdown-body :deep(ol) { margin-bottom: 1.5em; padding-left: 1.5em; }
+.markdown-body :deep(li) { margin-bottom: 0.8em; }
+.markdown-body :deep(li:last-child) { margin-bottom: 0; }
 .markdown-body :deep(strong) { color: var(--vp-c-brand-1); font-weight: 800; }
+.markdown-body :deep(blockquote) { 
+    margin: 1.5em 0; padding: 12px 20px; 
+    border-left: 4px solid var(--vp-c-brand-1); 
+    background: var(--vp-c-bg-alt); 
+    border-radius: 4px;
+}
+.markdown-body :deep(blockquote p) { margin-bottom: 0; }
 
 .tags { margin-top: 15px; display: flex; gap: 8px; flex-wrap: wrap; }
 .tag { font-size: 0.8em; color: var(--vp-c-text-3); font-style: italic; }
