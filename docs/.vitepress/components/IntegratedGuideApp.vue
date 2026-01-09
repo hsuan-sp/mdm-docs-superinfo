@@ -38,7 +38,7 @@ const searchResults = computed(() => {
   const query = searchQuery.value.trim().toLowerCase();
   const results: { source: string, items: QAItem[] }[] = [];
   allQAData.forEach(file => {
-    const matches = [];
+    const matches: QAItem[] = [];
     file.sections.forEach(s => s.items.forEach(i => {
       if ((i.question + i.answer).toLowerCase().includes(query)) matches.push({...i, tags: [...i.tags, file.source]});
     }));
@@ -58,14 +58,19 @@ const toggleItem = (id: string) => {
 
 const renderMarkdown = (text: string) => {
   if (!text) return "";
-  // 保持原始換行，僅移除模板字串造成的全局縮排
   const lines = text.split('\n');
   const minIndent = lines.filter(l => l.trim()).reduce((min, line) => {
     const match = line.match(/^\s*/);
     return Math.min(min, match ? match[0].length : min);
   }, Infinity);
   const cleaned = lines.map(line => line.slice(minIndent)).join('\n');
-  return md.render(cleaned);
+  
+  // 核心修復：在列表與文字之間強制補上空行，解決渲染問題
+  const processed = cleaned
+    .replace(/([^\n])\n(\s*[-*+])/g, '$1\n\n$2')
+    .replace(/([^\n])\n(\s*\d+\.)/g, '$1\n\n$2');
+  
+  return md.render(processed);
 };
 
 onMounted(() => {
@@ -83,37 +88,34 @@ const switchModule = (source: string) => {
 
 <template>
   <div class="guide-app" :style="{ '--app-scale': fontScale }">
-    <!-- 頂部頁首 -->
-    <header class="page-header">
-        <h1>MDM 實戰指南</h1>
-        <p>優質教育場域管理指南，全方位問題解答。</p>
-        
-        <!-- 字體控制與工具列 -->
-        <div class="toolbar">
+    <div class="app-layout">
+      <!-- 重新設計的側邊欄：固定位置 + 功能整合 -->
+      <aside class="app-sidebar">
+        <div class="sidebar-top">
+            <div class="search-section">
+                <input v-model="searchQuery" type="text" placeholder="🔍 搜尋問答..." class="search-input" />
+            </div>
+            <nav class="nav-menu">
+                <button 
+                    v-for="module in allQAData" :key="module.source"
+                    @click="switchModule(module.source)"
+                    :class="['nav-item', { active: activeSource === module.source && !searchQuery }]"
+                >
+                    {{ module.source }}
+                </button>
+            </nav>
+        </div>
+
+        <div class="sidebar-bottom">
             <div class="font-controls">
-                <span>字體調整：</span>
-                <button @click="fontScale = 0.9" :class="{active: fontScale === 0.9}">小</button>
-                <button @click="fontScale = 1.0" :class="{active: fontScale === 1.0}">中</button>
-                <button @click="fontScale = 1.2" :class="{active: fontScale === 1.2}">大</button>
+                <span class="ctrl-label">字體大小調整</span>
+                <div class="btn-group">
+                    <button @click="fontScale = 0.9" :class="{active: fontScale === 0.9}">小</button>
+                    <button @click="fontScale = 1.0" :class="{active: fontScale === 1.0}">中</button>
+                    <button @click="fontScale = 1.2" :class="{active: fontScale === 1.2}">大</button>
+                </div>
             </div>
         </div>
-    </header>
-
-    <div class="app-layout">
-      <!-- 簡化後的側邊欄 -->
-      <aside class="app-sidebar">
-        <div class="search-section">
-            <input v-model="searchQuery" type="text" placeholder="🔍 搜尋問答..." class="search-input" />
-        </div>
-        <nav class="nav-menu">
-            <button 
-                v-for="module in allQAData" :key="module.source"
-                @click="switchModule(module.source)"
-                :class="['nav-item', { active: activeSource === module.source && !searchQuery }]"
-            >
-                {{ module.source }}
-            </button>
-        </nav>
       </aside>
 
       <!-- 主要内容 -->
@@ -182,48 +184,73 @@ const switchModule = (source: string) => {
     font-size: var(--base-size);
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px 40px;
     color: var(--vp-c-text-1);
     line-height: 1.6;
 }
 
-.page-header { text-align: center; margin-bottom: 40px; }
-.page-header h1 { font-size: 2.5em; font-weight: 800; color: var(--vp-c-brand-1); margin-bottom: 0.5em; }
-
-/* 工具列 */
-.toolbar {
-    display: flex;
-    justify-content: center;
-    background: var(--vp-c-bg-soft);
-    padding: 10px 20px;
-    border-radius: 50px;
-    margin: 20px auto;
-    width: fit-content;
-    border: 1px solid var(--vp-c-divider);
+/* 佈局：電腦版固定側邊欄 */
+.app-layout { 
+    display: grid; 
+    grid-template-columns: 260px 1fr; 
+    gap: 40px; 
+    align-items: start;
+    padding-top: 20px;
 }
-.font-controls { display: flex; align-items: center; gap: 10px; font-size: 0.9em; }
-.font-controls button {
-    padding: 4px 12px;
-    border: 1px solid var(--vp-c-divider);
-    background: var(--vp-c-bg);
-    border-radius: 4px;
-    cursor: pointer;
+
+@media (max-width: 900px) { 
+    .app-layout { grid-template-columns: 1fr; } 
+    .app-sidebar { display: none; } 
 }
-.font-controls button.active { background: var(--vp-c-brand-1); color: white; border-color: var(--vp-c-brand-1); }
 
-/* 佈局 */
-.app-layout { display: grid; grid-template-columns: 240px 1fr; gap: 40px; }
-@media (max-width: 900px) { .app-layout { grid-template-columns: 1fr; } .app-sidebar { display: none; } }
+/* 側邊欄視覺與固定邏輯 */
+.app-sidebar { 
+    position: sticky; 
+    top: 80px; 
+    height: calc(100vh - 120px); 
+    display: flex; 
+    flex-direction: column;
+}
 
-/* 側邊欄 */
-.app-sidebar { position: sticky; top: 100px; height: fit-content; }
-.search-input { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--vp-c-divider); margin-bottom: 20px; background: var(--vp-c-bg-soft); }
+.sidebar-top { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+.nav-menu { flex: 1; overflow-y: auto; margin: 10px 0; padding-right: 8px; }
+
+/* 滾動條樣式 */
+.nav-menu::-webkit-scrollbar { width: 4px; }
+.nav-menu::-webkit-scrollbar-thumb { background: var(--vp-c-divider); border-radius: 4px; }
+
+.sidebar-bottom { 
+    padding-top: 20px; 
+    border-top: 1px solid var(--vp-c-divider); 
+}
+
+.search-input { 
+    width: 100%; 
+    padding: 12px; 
+    border-radius: 10px; 
+    border: 1px solid var(--vp-c-divider); 
+    margin-bottom: 5px; 
+    background: var(--vp-c-bg-soft); 
+    font-size: 0.9em;
+}
+
 .nav-item { 
-    display: block; width: 100%; text-align: left; padding: 12px; border: none; 
-    background: transparent; cursor: pointer; border-radius: 8px; margin-bottom: 4px;
+    display: block; width: 100%; text-align: left; padding: 10px 15px; border: none; 
+    background: transparent; cursor: pointer; border-radius: 8px; margin-bottom: 2px;
     font-size: 0.95em; color: var(--vp-c-text-2); transition: 0.2s;
 }
+.nav-item:hover { background: var(--vp-c-bg-soft); color: var(--vp-c-text-1); }
 .nav-item.active { background: var(--vp-c-brand-soft); color: var(--vp-c-brand-1); font-weight: 700; }
+
+/* 側邊欄字體控制 */
+.font-controls { display: flex; flex-direction: column; gap: 8px; }
+.ctrl-label { font-size: 0.75em; color: var(--vp-c-text-3); font-weight: 600; text-transform: uppercase; }
+.btn-group { display: flex; gap: 2px; background: var(--vp-c-bg-soft); padding: 3px; border-radius: 8px; border: 1px solid var(--vp-c-divider); }
+.btn-group button { 
+    flex: 1; padding: 6px; border: none; background: transparent; border-radius: 6px; 
+    cursor: pointer; font-size: 0.8em; transition: 0.2s; color: var(--vp-c-text-2);
+}
+.btn-group button.active { background: var(--vp-c-bg); color: var(--vp-c-brand-1); box-shadow: 0 2px 6px rgba(0,0,0,0.06); font-weight: 700; }
 
 /* 問答卡片 */
 .qa-item { border: 1px solid var(--vp-c-divider); border-radius: 12px; margin-bottom: 15px; overflow: hidden; background: var(--vp-c-bg-alt); transition: 0.3s; }
@@ -250,8 +277,8 @@ const switchModule = (source: string) => {
 .tags { margin-top: 15px; display: flex; gap: 8px; flex-wrap: wrap; }
 .tag { font-size: 0.8em; color: var(--vp-c-text-3); font-style: italic; }
 
-.section-label { font-size: 1.5em; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid var(--vp-c-divider); font-weight: 800; }
-.title-text { font-size: 2em; margin-bottom: 30px; font-weight: 800; }
+.section-label { font-size: 1.5em; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid var(--vp-c-divider); font-weight: 800; line-height: 1.4; }
+.title-text { font-size: 2em; margin: 0 0 30px 0; font-weight: 800; line-height: 1.2; }
 
 /* 行動版 */
 .mobile-menu-btn { 
