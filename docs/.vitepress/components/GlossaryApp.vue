@@ -442,7 +442,7 @@ const toggleSidebar = () => {
   position: relative;
   max-width: 1600px;
   margin: 0 auto;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* 內容區頂部控制列 */
@@ -493,7 +493,7 @@ const toggleSidebar = () => {
   border-radius: 20px;
   padding: 24px;
   border: 1px solid var(--vp-c-divider);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
   overflow: hidden;
 }
 

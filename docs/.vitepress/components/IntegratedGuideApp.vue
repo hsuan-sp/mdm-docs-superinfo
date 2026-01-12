@@ -255,7 +255,7 @@ const toggleSidebar = () => {
     position: relative;
     max-width: 1400px;
     margin: 0 auto;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* 統一頁首樣式 */
@@ -311,9 +311,9 @@ const toggleSidebar = () => {
     height: calc(100vh - 140px); 
     display: flex; 
     flex-direction: column;
-    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
-                opacity 0.3s,
-                margin 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+                opacity 0.4s,
+                margin 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     overflow: hidden;
 }
 
@@ -417,15 +417,15 @@ const toggleSidebar = () => {
     margin-bottom: 16px; 
     overflow: hidden; 
     background: var(--vp-c-bg-alt); 
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .qa-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.06);
 }
 .qa-item.open { 
     border-color: var(--vp-c-brand-1); 
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08); 
+    box-shadow: 0 16px 40px rgba(0,0,0,0.1); 
     transform: translateY(-2px); 
 }
 .qa-trigger { 
@@ -435,7 +435,7 @@ const toggleSidebar = () => {
     justify-content: space-between; 
     align-items: flex-start; 
     gap: 16px; 
-    transition: background-color 0.2s ease;
+    transition: background-color 0.3s ease;
 }
 .qa-trigger:hover {
     background-color: var(--vp-c-bg-soft);
