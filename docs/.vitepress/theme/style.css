@@ -6,7 +6,7 @@
   --vp-c-brand-2: #0077ed;
   --vp-c-brand-3: #2b8afb;
 
-  --vp-c-bg: rgba(245, 245, 247, 0.85); /* Semi-transparent to show misty background */
+  --vp-c-bg: rgba(245, 245, 247, 0.7); /* Further reduced opacity to show misty background */
   --vp-c-bg-alt: #ffffff; /* Cards are White */
   --vp-c-bg-elv: #ffffff; /* Elevated */
 
@@ -38,7 +38,7 @@
 }
 
 .dark {
-  --vp-c-bg: rgba(0, 0, 0, 0.85);
+  --vp-c-bg: rgba(0, 0, 0, 0.7);
   --vp-c-bg-alt: #1c1c1e;
   --vp-c-bg-elv: #1c1c1e;
 

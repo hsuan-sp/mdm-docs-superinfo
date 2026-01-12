@@ -118,9 +118,9 @@ body::before {
   background-image: url('/mdm_hero_premium.png');
   background-size: cover;
   background-position: center;
-  /* 降低透明度且提供霧化效果 */
-  opacity: 0.12;
-  filter: blur(60px) saturate(150%);
+  /* 提高透明度並減少霧化效果，讓內容可被辨識 */
+  opacity: 0.35;
+  filter: blur(30px) saturate(120%);
   z-index: -1;
   pointer-events: none;
   transition: opacity 0.5s ease;
@@ -131,8 +131,8 @@ body::before {
 }
 
 .dark body::before {
-  opacity: 0.18;
-  filter: blur(80px) saturate(120%) brightness(0.7);
+  opacity: 0.45;
+  filter: blur(40px) saturate(110%) brightness(0.8);
 }
 
 .VPButton {
