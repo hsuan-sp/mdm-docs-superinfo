@@ -38,6 +38,21 @@ export const glossaryData: Term[] = [
       "這是企業級網路的身分檢查站。家用 Wi-Fi 就像家門鑰匙，誰拿到都能開門；802.1X 則像機場安檢，每個人都要出示自己的護照（憑證）與機票，確認身分無誤才准進入，無法共用或冒用。",
   },
 
+  // --- 中文 ---
+  {
+    term: "管理式 Apple 帳號 (Managed Apple Account)",
+
+    category: ["Apple"],
+
+    definition:
+      "Managed Apple Account（管理式 Apple 帳號）是專為企業與教育機構設計的帳號類型，舊稱 Managed Apple ID。它由組織透過 ABM/ASM 建立與擁有，雖然可用於登入 iCloud 與下載 App，但無法自行購買付費軟體，且組織有權重置密碼與稽核資料。",
+
+    analogy:
+      "這是「公務用」的 Apple 帳號。就像公司配發的 Email 信箱，是給你工作用的。公司可以隨時幫你找回密碼，離職時公司也會收回。跟你自己用 Gmail 註冊的私人帳號（個人 Apple ID）是完全不同的兩回事。",
+  },
+
+
+
   // --- A ---
   {
     term: "AAS (Automatic Assessment Configuration)",
@@ -60,6 +75,17 @@ export const glossaryData: Term[] = [
 
     analogy:
       "ABM 是企業 Apple 裝置的「資產總部」。所有公司買來的設備、軟體授權和員工帳號，都要先在這裡註冊建檔。MDM 就像外包的管理公司，必須獲得總部（ABM）的授權，才能進場管理這些資產。",
+  },
+  {
+    term: "Accessibility Features（輔助使用功能）",
+
+    category: ["Apple"],
+
+    definition:
+      "Accessibility Features（輔助使用功能）是 Apple 內建於 iOS/iPadOS/macOS 的無障礙工具集，包含 VoiceOver（語音朗讀）、放大鏡、語音控制、切換控制等。這些功能讓視障、聽障或肢體障礙使用者也能順暢操作裝置。MDM 可預先啟用或鎖定特定輔助功能設定。",
+
+    analogy:
+      "這是裝置的「無障礙坡道」。就像公共建築必須設置殘障坡道 and 點字標示，Apple 在每台裝置裡都內建了這些工具，讓不同需求的人都能使用。學校可以預先開啟給需要的學生，省去每次都要手動設定的麻煩。",
   },
   {
     term: "Account-Driven Device Enrollment",
@@ -216,6 +242,18 @@ export const glossaryData: Term[] = [
       "這是 Apple 的「官方軟體百貨公司」。為了怕員工上班逛街、學生上課玩遊戲，公司可以直接把通往百貨公司的大門「水泥封死」（隱藏 App Store）。這樣使用者就只能去公司開設的福利社（Self Service）領取文具用品。",
   },
   {
+    term: "App Thinning（App 精簡化）",
+
+    category: ["Apps"],
+
+    definition:
+      "App Thinning 是 Apple 的 App 傳輸最佳化技術，包含 Slicing、Bitcode 與 On-Demand Resources 三種機制。當裝置從 App Store 下載 App 時，系統只會下載該裝置所需的資源（如特定螢幕尺寸的圖片），而非完整的通用版本，有效減少下載量與儲存空間佔用。",
+
+    analogy:
+      "這是 App 的「量身裁剪」。就像買衣服時店員只拿出你尺寸的衣服，而不是把 S/M/L/XL 全部塞給你。你的 iPad 只下載它需要的零件，不用扛一堆用不到的 iPhone 專用資源回家。",
+  },
+  {
+
     term: "Apple Classroom (Apple 課堂)",
 
     category: ["Education"],
@@ -325,6 +363,17 @@ export const glossaryData: Term[] = [
     analogy:
       "這是印在螢幕上的「數位財產標籤」。就像公司會在椅子、螢幕背面貼上一張有條碼的財產貼紙。MDM 把這張貼紙數位化，直接顯示在 iPad 的鎖定畫面上，撿到的人不用解鎖就能知道這是「編號 A-101」的公務資產。",
   },
+  {
+    term: "Automatic App Updates（自動更新 App）",
+
+    category: ["Apps"],
+
+    definition:
+      "Automatic App Updates（自動更新 App）是 iOS/macOS 的背景更新機制。啟用後，裝置會在連接 Wi-Fi 且處於閒置狀態時，自動下載並安裝 App 的最新版本。MDM 可強制啟用或停用此功能，確保所有裝置維持在統一的 App 版本。",
+
+    analogy:
+      "這是 App 的「自動保養」。就像你車子的機油到期，修車廠自動幫你換好，你下次開車就是最新狀態。不用擔心員工手上的 App 版本太舊有漏洞，系統會自動幫他們更新到最新。",
+  },
 
   // --- B ---
   {
@@ -339,6 +388,18 @@ export const glossaryData: Term[] = [
       "這是電池的「體力檢測報告」。新電池體力是 100%，用久了體力會衰退。IT 不用把每一台 iPad 收回來檢查，只要看報表就知道哪幾台「體力不支」（老化），該換電池了，避免影響員工工作。",
   },
   {
+    term: "Background App Refresh（背景 App 重新整理）",
+
+    category: ["Apps"],
+
+    definition:
+      "Background App Refresh（背景 App 重新整理）允許 App 在待機狀態時定期更新內容。例如 Email App 會在背景收信，新聞 App 會預先載入頭條。MDM 可開啟或關閉此功能，以平衡便利性與電池續航。禁用後，App 只有在開啟時才會更新。",
+
+    analogy:
+      "這是 App 的「待機工作模式」。就像管家會在你不在家時幫你整理房間、收信件。打開 iPad 時，信箱已經整理好了。但如果管家太勤勞（能耗太高），可以請他休息（关閉功能）。",
+  },
+  {
+
     term: "Blueprints",
     category: ["Jamf", "Core"],
     definition:
@@ -500,6 +561,30 @@ export const glossaryData: Term[] = [
       "這是企業內部的「私房軟體」。就像公司餐廳的隱藏菜單，外面的人點不到也買不到。只有公司授權的員工，才能透過內部的管道（MDM）安裝使用。",
   },
 
+  // --- Configuration Profile Removal ---
+  {
+    term: "Configuration Profile Removal（描述檔移除）",
+
+    category: ["Core"],
+
+    definition:
+      "Configuration Profile Removal（描述檔移除）指 MDM 遠端下達移除特定設定描述檔的指令。當描述檔被移除後，由該描述檔安裝的憑證、Wi-Fi 設定、VPN 設定等都會一併刪除。此功能常用於員工離職或裝置回收時的清理作業。",
+
+    analogy:
+      "這是「設定收回」功能。就像員工離職時要繳回門禁卡、停車證和公司標誌一樣，IT 可以一鍵收回之前派發給這台 iPad 的所有公司權限，讓它變回一台乾淨的個人裝置。",
+  },
+  {
+    term: "Continuity（接續互通）",
+
+    category: ["Apple"],
+
+    definition:
+      "Continuity（接續互通）是 Apple 生態系統的無縫整合技術統稱，包含 Handoff、AirDrop、Sidecar、Universal Control 等功能。它讓 iPhone、iPad、Mac 能在同一 Apple ID 下無縫協作，例如在 Mac 上接聽 iPhone 來電、複製文字在另一台裝置上貼上。",
+
+    analogy:
+      "這是 Apple 裝置的「心電感應」。就像一家人竟和力強、默契絕佳，在 iPhone 複製的東西直接在 Mac 貼上、在 iPad 寫一半的信跳到 Mac 繼續寫。各裝置之間好像看不見的導線串連。",
+  },
+
   // --- D ---
   {
     term: "DDM (Declarative Device Management)",
@@ -507,22 +592,12 @@ export const glossaryData: Term[] = [
     category: ["Core"],
 
     definition:
-      "Declarative Device Management (DDM) 是 Apple 推出的新一代 MDM 架構。不同於傳統 MDM 由伺服器持續輪詢指令，DDM 允許伺服器傳送「宣告 (Declaration)」給裝置。裝置會自主監控狀態並執行宣告內容，並在狀態改變時透過 Status Channel 主動回報，大幅減輕伺服器負擔並提升反應速度。",
+      "Declarative Device Management (DDM) 是 Apple 推出的新一代 MDM 架構。不同於傳統 MDM 由伺服器持續輪詢指令，DDM 允許裝置依據收到的「宣告 (Declaration)」自主監控狀態並執行動作，並在狀態改變時透過 Status Channel 主動回報。這進化了裝置的自主性，大幅減輕伺服器負擔並提升反應速度。",
 
     analogy:
       "這是從「聽口令動作」進化到「自主管理」的變革。傳統 MDM 像遙控車，按一下走一步；DDM 像自動駕駛車，你只要給它目的地（規則），車子會自己判斷路況、自己轉彎煞車，並主動回報「我到了」。",
   },
-  {
-    term: "DDM (Declarative Device Management)",
 
-    category: ["Core"],
-
-    definition:
-      "Declarative Device Management (DDM) 是 MDM 的未來標準。Apple 透過此架構強化了裝置的自主性 (Autonomy) 與主動性 (Proactive)。裝置不再被動等待指令，而是能主動評估自身狀態（如空間不足、版本過舊）並觸發預定的管理動作。",
-
-    analogy:
-      "這是從「被動指派」轉變為「主動執行」。就像以前員工只會坐在位子上等老闆派工作，現在員工（裝置）拿到工作手冊後，會自己看進度、自己找事做，做完了再跟老闆回報。",
-  },
   {
     term: "DDM App Management (宣告式 App 管理)",
 
@@ -535,6 +610,18 @@ export const glossaryData: Term[] = [
       "這是 App 的「自動補貨機制」。就像便利商店的智慧貨架，一旦發現架上的商品（App）被拿走了，貨架會自己發通知補貨，不用等店長巡店時才發現東西沒了。",
   },
   {
+    term: "Device Name（裝置名稱）",
+
+    category: ["Core"],
+
+    definition:
+      "Device Name（裝置名稱）是顯示在 MDM 管理介面與裝置設定中的友善識別名稱。IT 可透過 MDM 遠端設定裝置名稱（如「賬務部-王小明-iPad」），方便在數百台裝置中快速識別特定設備。名稱也會顯示在 AirDrop 與 Bonjour 發現列表中。",
+
+    analogy:
+      "這是裝置的「名牌」。就像每個員工衣服上繡的名字個，IT 可以遠端幫每台 iPad 貼上「姓名+部門」的標籤。有人掃地憑到 iPad，一看名稱就知道要還給誰。",
+  },
+  {
+
     term: "Deprecated (已棄用)",
 
     category: ["Other"],
@@ -625,6 +712,12 @@ export const glossaryData: Term[] = [
 
   // --- E ---
   {
+    term: "Enrollment Customization (註冊自訂內容)",
+    category: ["Enrollment", "Apple"],
+    definition: "Enrollment Customization 是在自動裝置註冊 (ADE) 過程中顯示的自訂介面。它可包含歡迎畫面、使用合約、或整合第三方身分驗證 (現代化認證)。這讓組織能在裝置設定初期就傳達品牌訊息與法律規範，並確保使用者身分正確。",
+    analogy: "這是裝置的「迎賓大廳」。就像新員工第一天報到，公司在門口放了看板、發了員工手冊，還要你簽一份保密協議。這一切都在你拿到手機、還沒進入系統前就完成了，既專業又符合公司規定。"
+  },
+  {
     term: "Enrollment Invitation",
     category: ["Jamf", "Enrollment"],
     definition:
@@ -642,6 +735,17 @@ export const glossaryData: Term[] = [
 
     analogy:
       "這是「虛擬化」的手機門號卡。以前換電信公司要用迴紋針戳半天換小卡片，現在只要掃個條碼或按個鈕，卡片資料就直接寫進手機裡，馬上就能上網。",
+  },
+  {
+    term: "Ethernet（乙太網路）",
+
+    category: ["Network"],
+
+    definition:
+      "Ethernet 為有線網路連接標準（如 RJ45 接孔）。雖然現代行動裝置多用 Wi-Fi，但在 macOS 部署中，使用乙太網路連接能提供更穩定的傳輸速率與 APNs 連線品質，是 DEP 註冊與大型軟體派送的推薦方式。",
+
+    analogy:
+      "這是網路的「高速專用鐵路」。Wi-Fi 像是在公路上開車，人多會塞車、訊號會飄移；乙太網路則是鋪好軌道，速度最快、最穩定，且絕對不會斷線。",
   },
   {
     term: "Extension Attribute (擴充屬性)",
@@ -711,9 +815,21 @@ export const glossaryData: Term[] = [
     analogy:
       "這是電腦的最底層「開機鎖」。一般的密碼是進了系統才要打，韌體密碼是一按開機鈕就要打。沒有這個密碼，小偷連重灌系統或用隨身碟開機這招都沒辦法用。",
   },
+  {
+    term: "Find My（尋找）",
+
+    category: ["Apple", "Security"],
+
+    definition:
+      "Find My（尋找）是 Apple 的裝置追蹤服務，可在地圖上定位裝置、播放聲音、顯示遊失訊息或遠端清除資料。MDM 可透過 Lost Mode（進階版）鎖定裝置並顯示聯絡資訊。對於受監管裝置，MDM 可強制啟用 Find My。",
+
+    analogy:
+      "這是裝置的「 GPS 追蹤器」。就像汽車的衛星定位一樣，遊失時可以在地圖上看到它在哪，還能撥放「嘴嘴」聲讓它叫出來。找不到的話，還可以遠端「自毀」清除資料防止外洩。",
+  },
 
   // --- G ---
   {
+
     term: "Gatekeeper",
 
     category: ["Security"],
@@ -735,6 +851,30 @@ export const glossaryData: Term[] = [
     analogy:
       "這是網路流量的「必經檢查哨」。所有要進出的車輛（網路流量）都必須先開進這個檢查站受檢。檢查站可以過濾違禁品（色情網站），但也因為每台車都要停下來檢查，常會造成塞車（網速變慢）。",
   },
+  {
+    term: "Guided Access（引導使用模式）",
+
+    category: ["Education", "Apple"],
+
+    definition:
+      "Guided Access（引導使用模式）是 iOS/iPadOS 內建的單一 App 鎖定功能。啟用後，裝置會鎖定在當前 App，無法推出或切換其他應用。老師可用於考試場景，家長可用於限制孩子只能用特定 App。該功能會在設定的密碼輸入後方可解除。",
+
+    analogy:
+      "這是 App 的「手動鎖定模式」。老師發考卷前點三下，學生的 iPad 就被鎖在考試 App 上，連 Home 鍵都按不出去。考完試老師輸入密碼才能解鎖。家長也能用這招讓小孩只能用學習 App。",
+  },
+
+  // --- H ---
+  {
+    term: "Handoff（接力）",
+
+    category: ["Apple"],
+
+    definition:
+      "Handoff（接力）是 Continuity 的核心功能之一，讓使用者可在一台裝置上開始工作，然後無縫蠍接到另一台裝置繼續。例如在 iPhone 上寫到一半的 Email，可在 Mac 的 Dock 上看到圖示，點擊即可繼續編輯。需在同一 Apple ID 且藍芽/Wi-Fi 開啟。",
+
+    analogy:
+      "這是工作的「接力賽跑」。iPhone 跑了第一棒（寫一半信），到了交接區 Mac 就能接上繼續跑完。不用再寫 Email 寄給自己或用雲端同步，整個逾接過程在瞬間完成。",
+  },
 
   // --- I ---
   {
@@ -747,6 +887,17 @@ export const glossaryData: Term[] = [
 
     analogy:
       "這是教室裡的「隱形感應樁」。就像捷運進站感應一樣，當 iPad 靠近裝有 iBeacon 的教室時，不需要刷卡，系統就會感應到「你進教室了」，然後自動幫你把上課用的書打開。",
+  },
+  {
+    term: "iCloud Backup（iCloud 備份）",
+
+    category: ["Core", "Apple"],
+
+    definition:
+      "iCloud Backup（iCloud 備份）會在裝置連接 Wi-Fi、鎖定且充電時，自動將 App 資料、設定、照片等備份至 iCloud。裝置遺失或更換新機時，可透過 iCloud 快速恢復原狀。MDM 可強制啟用或禁用此功能。",
+
+    analogy:
+      "這是裝置的「自動雲端照相館」。每晚充電時，iPad 會自己把最新的資料、照片、設定打包備份到雲端。萬一學生弄壞或缺失裝置，拿到新的後從備份恢復，各種資料就都回來了。",
   },
   {
     term: "Identity Provider (IdP)",
@@ -803,6 +954,7 @@ export const glossaryData: Term[] = [
     analogy:
       "這是裝置上的「公司入口 App」。就像是公司專屬的 App Store 兼佈告欄。雖然這是別家廠商（VMware）的產品名稱，但概念跟 Jamf Self Service 是一樣的。員工有問題先開這個 App 就對了。",
   },
+
   {
     term: "Inventory",
 
@@ -868,22 +1020,11 @@ export const glossaryData: Term[] = [
   },
   {
     term: "Jamf Connect",
-
-    category: ["Security", "Jamf"],
-
-    definition:
-      "Jamf Connect 是 Jamf 開發的 mac 登入體驗強化工具。它取代了 macOS 原生的登入畫面，允許使用者直接用雲端帳號（Google, Microsoft Entra ID）登入 Mac，並自動同步雲端密碼與本機帳號密碼，解決忘記密碼與帳號不同步的問題。",
-
-    analogy:
-      "這是 Mac 的「雲端登入畫面」。傳統 Mac 要設另外一組開機密碼，容易忘記。用了 Jamf Connect，開機就可以直接打你在公司的 Google 帳號密碼登入，就像登入網頁一樣方便，而且密碼永遠跟公司同步。",
-  },
-  {
-    term: "Jamf Connect",
     category: ["Jamf", "Security", "macOS"],
     definition:
-      "Jamf 的雲端身分認證解決方案。讓 Mac 使用者可用公司的雲端帳號(如 Azure AD、Okta、Google Workspace)登入 macOS,取代傳統本機帳號。支援密碼同步、多重驗證(MFA)整合和零接觸部署。使用者只需一組密碼即可登入 Mac 和所有企業服務,IT 也能集中管理身分。",
+      "Jamf Connect 是 Jamf 開發的 mac 雲端身分認證與登入體驗強化工具。它取代了 macOS 原生的登入畫面，允許使用者直接用公司的雲端帳號（如 Microsoft Entra ID、Google Workspace、Okta）登入 Mac，並自動同步雲端密碼與本機帳號密碼，解決忘記密碼與帳號不同步的問題。支援多重驗證 (MFA) 整合與零接觸部署。",
     analogy:
-      "就像「公司門禁卡通用化」。不用記一堆密碼,刷同一張員工證(雲端帳號)就能開公司大門、登 Mac、進 Google Workspace,全部統一管理,改密碼也一次搞定。",
+      "這是 Mac 的「雲端通行證」。不用再另外記一組開機密碼，直接用公司的雲端帳號就能登入電腦。就像「公司門禁卡通用化」，改了雲端密碼，電腦密碼也會跟著換，真正實現一組帳號走天下。",
   },
   {
     term: "Jamf Data Policy",
@@ -918,26 +1059,15 @@ export const glossaryData: Term[] = [
     definition:
       "Jamf Pro 提供的 RESTful API 介面。允許開發者和系統管理員使用程式自動化操作 Jamf,如批量建立 Policy、匯入裝置清單、產生自訂報表、觸發遠端指令等。現已全面改用 Jamf Pro API v2,提供更完整的功能和更好的效能。支援各種程式語言整合。",
     analogy:
-      "就像「管理後台的遙控器」。不用手動點網頁,寫程式就能一次建立100條政策、每天自動匯出報表寄信、批量更新1000台裝置設定,省下90%重複操作時間。",
-  },
-  {
-    term: "Jamf Protect",
-
-    category: ["Security", "Jamf"],
-
-    definition:
-      "Jamf Protect。專為 Mac 設計的端點防護系統 (Endpoint Security)，功能類似進階版防毒軟體。它利用 Apple 原生的 Endpoint Security Framework 來監控惡意行為，而不像傳統防毒軟體那樣拖慢系統效能。",
-
-    analogy:
-      "就像「專懂 Mac 的保鑣」。一般防毒軟體像外來的傭兵，穿著厚重盔甲（耗資源）且動作笨重。Jamf Protect 像受過忍者訓練的貼身保鑣，輕裝上陣，平常感覺不到他在，但在威脅出現的瞬間就會出手攔截。",
+      "就像「管理後台的遙控器」。不用手動點網頁,寫程式就能一次建立100條政策、每天自動匯出報表寄信,批量更新1000台裝置設定,省下90%重複操作時間。",
   },
   {
     term: "Jamf Protect",
     category: ["Jamf", "Security", "macOS"],
     definition:
-      "Jamf 的 macOS 端點偵測與回應(EDR)解決方案。提供即時威脅偵測、惡意軟體防護、行為分析和自動化回應。與 Jamf Pro 深度整合,可在發現威脅時自動隔離裝置、執行修復 Policy 或通知管理員。使用機器學習偵測未知威脅,填補傳統防毒軟體的不足。",
+      "Jamf Protect 是專為 Mac 設計的端點偵測與回應 (EDR) 解決方案。它利用 Apple 原生的 Endpoint Security Framework 來監控惡意行為，提供即時威脅偵測、惡意軟體防護與自動化回應。與 Jamf Pro 深度整合，可在發現威脅時自動隔離裝置或執行修復，且不會像傳統防毒軟體那樣拖慢系統效能。",
     analogy:
-      "就像「保鑣+監視器」。不只鎖門(防火牆),還有保鑣24小時巡邏,發現可疑人士(惡意程式)立刻警報,自動隔離並通知警衛室(IT),甚至能認出偽裝的壞人。",
+      "就像「專懂 Mac 的高級保鑣兼監視器」。它不像傳統防毒軟體穿著厚重盔甲（耗資源）且動作笨重，而是像受過訓練的貼身保鑣，輕裝上陣且24小時巡邏。一旦發現可疑人士（惡意程式），會立刻動作並自動隔離威脅。",
   },
   {
     term: "Jamf Remote",
@@ -1076,49 +1206,29 @@ export const glossaryData: Term[] = [
       "這是 Apple 舊款裝置的「專用充電孔」。跟安卓手機通用的 USB-C 長得不一樣，線不能混用。雖然現在新機都改用 USB-C 了，但學校裡那些還沒壞的舊平板都還是用這種線。",
   },
   {
-    term: "Local Account",
-
+    term: "Local Account (本機帳號)",
     category: ["Core"],
-
     definition:
       "Local Account（本機帳號）是僅存在於該台電腦上的使用者帳號，其密碼與權限資訊都儲存在電腦硬碟裡，不與雲端同步。與「網路帳號」或「行動帳號」不同，本機帳號通常用於管理員維護或不聯網的裝置。",
-
     analogy:
       "這是房間的「獨立鑰匙」。這把鑰匙（帳號）只能開這扇門（這台電腦），去開別的房間門（其他電腦）是打不開的。不像通用的房卡（網域帳號）一張卡可以開很多間會議室。",
   },
   {
-    term: "Local Account",
-
-    category: ["Core"],
-
-    definition:
-      "Local Account（本機帳號）是僅存在於該台電腦上的使用者帳號，其密碼與權限資訊都儲存在電腦硬碟裡，不與雲端同步。與「網路帳號」或「行動帳號」不同，本機帳號通常用於管理員維護或不聯網的裝置。",
-
-    analogy:
-      "這是房間的「獨立鑰匙」。這把鑰匙（帳號）只能開這扇門（這台電腦），去開別的房間門（其他電腦）是打不開的。不像通用的房卡（網域帳號）一張卡可以開很多間會議室。",
+    term: "Location Services（定位服務）",
+    category: ["Apple", "Core"],
+    definition: "Location Services（定位服務）是 Apple 裝置內建的地理位置偵測功能。它結合了 GPS、藍牙、Wi-Fi 熱點與基地台資訊來判斷裝置位置。管理員可透過 MDM 強制開啟此功能，以確保在裝置遺失並進入「遺失模式 (Lost Mode)」時能獲取座標，或設定限制以防止使用者自行關閉。",
+    analogy: "這是裝置的「定位雷達」。就像手機內建的指南針和地圖，開了之後系統才知道你在哪裡。對於學校來說，這非常重要，因為萬一學生的平板不見了，老師才能透過管理系統看到這台平板最後出現在哪間教室或哪個角落。"
   },
+
   {
     term: "Lost Mode (遺失模式)",
-
     category: ["Security"],
-
     definition:
       "遺失模式。這是 MDM 的遠端鎖定功能。當裝置遺失時，IT 可透過 MDM 啟用此模式，裝置會立即鎖定並顯示自訂訊息（如聯絡電話），同時持續回報 GPS 位置。對方無法使用裝置，也無法關機或清除資料。找回後，IT 可遠端解除鎖定。此功能需要裝置處於受監管 (Supervised) 狀態。",
-
     analogy:
       "就像「手機的遠端防盜鎖」。iPad 掉了之後，IT 在辦公室按一個按鈕，這台 iPad 就會立刻鎖死並顯示「此裝置屬於 XX 學校，請撥 02-1234-5678」，同時會一直回報位置，讓你有機會找回來。",
   },
-  {
-    term: "Lost Mode (遺失模式)",
 
-    category: ["Security"],
-
-    definition:
-      "遺失模式。這是 MDM 的遠端鎖定功能。當裝置遺失時，IT 可透過 MDM 啟用此模式，裝置會立即鎖定並顯示自訂訊息（如聯絡電話），同時持續回報 GPS 位置。對方無法使用裝置，也無法關機或清除資料。找回後，IT 可遠端解除鎖定。此功能需要裝置處於受監管 (Supervised) 狀態。",
-
-    analogy:
-      "就像「手機的遠端防盜鎖」。iPad 掉了之後，IT 在辦公室按一個按鈕，這台 iPad 就會立刻鎖死並顯示「此裝置屬於 XX 學校，請撥 02-1234-5678」，同時會一直回報位置，讓你有機會找回來。",
-  },
 
   // --- M ---
   {
@@ -1132,6 +1242,13 @@ export const glossaryData: Term[] = [
     analogy:
       "這是網卡的「指紋」。理論上每張網卡的指紋都是全世界獨一無二的。但為了怕被跟蹤，現在的手機連 Wi-Fi 時會「戴手套」（私有位址），讓基地台看不出真正的指紋是誰。",
   },
+  {
+    term: "Managed Classes（管理化班級）",
+    category: ["Education", "Jamf"],
+    definition: "Managed Classes（管理化班級）是在 MDM（如 Jamf School）或 Apple School Manager (ASM) 中建立的教學群組。它包含了學生選課、任課老師、上課時間以及所需的 App 清單。這些資訊會自動同步到 Apple「課堂」App 中，讓老師能即時監控並管理該班級所有學生的 iPad。",
+    analogy: "這是數位的「班級點名簿」。老師只要打開「課堂」App，系統就已經自動把這節課要上的學生名單、他們的 iPad 資料都準備好了。老師可以直接一鍵叫全班打開課本，或看看誰在偷偷玩遊戲，不用一個個去對序號。"
+  },
+
   {
     term: "Managed Device Attestation",
 
@@ -1260,6 +1377,13 @@ export const glossaryData: Term[] = [
       "這是軟體的「懶人包」。裡面不只有軟體本身，還包含了「要把檔案放在哪裡」、「安裝後要不要重開機」的說明書。電腦收到這個懶人包，就會自動照著說明書把軟體裝好。",
   },
   {
+    term: "Passcode Policy（密碼原則）",
+    category: ["Security", "Core"],
+    definition: "Passcode Policy（密碼原則）是企業針對行動裝置解鎖密碼所設定的強制規範。MDM 可設定要求的密碼複雜度（如：最少位數、是否包含字母、不可包含重複字元）以及密碼到期天數。若裝置不符合規範，系統會強制要求使用者在設定時更新密碼才能繼續使用。",
+    analogy: "這是家裡的「大門密碼規定」。為了安全，公司規定密碼不能設「0000」或「1234」，必須得有 6 位數以上，還要定期更換。這就像是規定每三個月就要換一次門鎖密碼一樣，雖然有點麻煩，但能確保萬一裝置弄丟了，裡面的機密資料也不會被外人輕易解鎖。"
+  },
+
+  {
     term: "Passkeys",
 
     category: ["Security"],
@@ -1304,20 +1428,16 @@ export const glossaryData: Term[] = [
       "就像「郵局待寄包裹」。信已經寫好放在郵局（MDM），但收件人（裝置）不在家或地址找不到，暫時寄不出去。等收件人回來就會自動送達。",
   },
   {
-    term: "Platform SSO",
-
-    category: ["Security"],
-
-    definition:
-      "Platform SSO (PSSO) 是 Apple 在 macOS 13 推出的新一代身分驗證技術，旨在取代傳統 AD 綁定。PSSO 允許 Mac 本機帳號與雲端 IdP（如 Microsoft Entra ID）直接同步密碼與權限，且支援在開機畫面直接進行雲端身分驗證。",
-
-    analogy:
-      "這是 Mac 的「雲端通行證」。以前電腦只認得本機密碼，現在透過 PSSO，電腦直接聽命於雲端總部。你在雲端改了密碼，電腦門鎖也會自動跟著換，真正實現一組帳號走天下。",
+    term: "Platform SSO (平台單一登入)",
+    category: ["Security", "macOS"],
+    definition: "Platform SSO 是 macOS 13+ 引入的高階身分驗證功能。它將 Mac 的本機登入帳號與雲端身分提供者 (IdP，如 Microsoft Entra ID) 深度整合。使用者登入 Mac 時，系統會自動在後台完成雲端帳號驗證，實現真正的一鍵登入所有企業資源，且支援密碼即時同步。",
+    analogy: "這是「全機通行的通行證」。以前登入電腦要一個密碼，進公司網域也要一個密碼。現在 Platform SSO 把這兩個密碼合而為一，你只要刷臉或輸入一次密碼進入 Mac，整間公司的大門（所有 App 和網頁）都自動幫你預先打開了。"
   },
-  {
-    term: "Policy",
 
-    category: ["macOS", "Jamf"],
+  {
+    term: "Policy (原則/政策)",
+
+    category: ["Core"],
 
     definition:
       "Policy（政策）是 Jamf Pro 用來執行管理任務的邏輯單元。一個 Policy 包含「觸發時機 (Trigger)」、「執行頻率 (Frequency)」與「執行內容 (Payload)」。例如：「每週一次 (頻率) 當使用者登入時 (時機)，執行軟體更新 (內容)」。",
@@ -1325,17 +1445,7 @@ export const glossaryData: Term[] = [
     analogy:
       "這是 IT 的「自動化SOP」。就像你規定：「每週一早上（時機 + 頻率），警衛要檢查全大樓滅火器（任務）」。設好 Policy，MDM 就會自動照表操課，不用你每次手動下令。",
   },
-  {
-    term: "Policy (原則)",
 
-    category: ["Core"],
-
-    definition:
-      "原則 (Policy)。這是 Jamf Pro (macOS) 管理的核心邏輯單元。一個 Policy 包含三個要素：觸發時機 (Trigger，如開機時)、執行範圍 (Scope，如所有工程師電腦)、以及執行動作 (Package/Script)。這是讓 Mac 自動執行任務的劇本。",
-
-    analogy:
-      "就像「自動化任務包」。設定好：「每天早上九點（時機），對所有業務部的電腦（範圍），執行安裝 Office 的動作（任務）」。時間一到，機器人就會自動去跑這些流程。",
-  },
   {
     term: "PPPC (Privacy Preferences Policy Control)",
 
@@ -1470,6 +1580,13 @@ export const glossaryData: Term[] = [
       "就像「立即體檢」指令。跟電腦說`sudo jamf recon`,它就會馬上量身高體重、檢查有裝哪些軟體,然後把最新健康報告傳回總部(Jamf),不用等每天的定期檢查。",
   },
   {
+    term: "Recovery Mode（復原模式）",
+    category: ["Apple", "macOS"],
+    definition: "Recovery Mode（復原模式）是 Apple 裝置內建的緊急救援系統。當作業系統無法正常啟動、需要修復磁碟或重新安裝 OS 時，可進入此模式。MDM 支援「復原鎖 (Recovery Lock)」，可設定密碼防止未授權人員進入此模式清除裝置，確保安全性。",
+    analogy: "這是裝置的「急救室」。當手機或電腦「生重病」開不了機時，我們可以把它送進這個特殊的急救環境來修復。為了怕壞人闖進急診室亂搞（重灌系統），IT 管理員可以幫急救室裝上一道門鎖，只有拿著正確密碼的人才能進去修理。"
+  },
+
+  {
     term: "Recovery Lock",
 
     category: ["Security"],
@@ -1581,6 +1698,13 @@ export const glossaryData: Term[] = [
     analogy:
       "這是任務的「點名單」。就像老師指派打掃工作：「全班同學（Target）都要去掃地，但是受傷的同學（Exclusion）不用去」。Scope 就是這張決定誰要做、誰不做的名單。",
   },
+  {
+    term: "Screen Time（螢幕使用時間）",
+    category: ["Apple", "Core"],
+    definition: "Screen Time（螢幕使用時間）是 Apple 提供的裝置使用監控與限制工具。它能記錄各類 App 的使用時長、設定 App 使用上限、或設定「停用時間」。MDM 可預先配置這些設定，協助老師管控課堂紀律，或防止學生在晚上過度使用平板。",
+    analogy: "這是平板的「健康小管家」。它會幫你記帳，看你今天看影片看多久、玩遊戲玩幾分鐘。老師或家長可以跟管家說：『每天只能玩一小時，時間到了就把門關上』。這樣就能幫學生養成良好的數位使用習慣，不會玩到廢寢忘食。"
+  },
+
   {
     term: "Script",
 
@@ -1725,6 +1849,12 @@ export const glossaryData: Term[] = [
       "就像「主動回報系統」。以前是老闆每小時問一次「做完了沒」（輪詢），現在是員工做完就主動回報「完成了」（狀態通道），效率更高也不用一直打擾。",
   },
   {
+    term: "Student Information System（SIS，學生資訊系統）",
+    category: ["Education", "Other"],
+    definition: "Student Information System (SIS) 是學校用來儲存及管理學生基本資料、出席、成績、課表與親師聯繫資訊的大型資料庫。Apple School Manager 可與主流 SIS 系統接軌，自動同步全校的師生帳號與班級資料，省去手動建立上千個 Apple ID 的繁瑣程序。",
+    analogy: "這是學校的「數位總機房」。裡面存著全校幾千個學生的戶籍、成績和班級清單。現在這個機房可以跟 Apple 的管理系統直接連線，只要機房的名單改了，Apple 那邊就會自動幫新轉來的學生開好帳號，幫畢業生消掉帳號，省時又省力。"
+  },
+  {
     term: "Supervision (受監管)",
 
     category: ["Core"],
@@ -1735,6 +1865,7 @@ export const glossaryData: Term[] = [
     analogy:
       "這是裝置的「公司資產模式」。一般買來的 iPhone 是「個人模式」，很多設定不能鎖。一旦進入監管模式，這台手機就認定是「公司的財產」，權限全開，IT 想鎖什麼就可以鎖什麼。",
   },
+
   {
     term: "System Extension",
 
@@ -1836,6 +1967,13 @@ export const glossaryData: Term[] = [
       "就像「雙語版軟體」。同一個App裡面包含兩種語言版本（Intel版和M晶片版），電腦會自動選擇對應語言執行，不需要翻譯，速度最快。",
   },
   {
+    term: "Universal Control（通用控制）",
+    category: ["Apple", "macOS"],
+    definition: "Universal Control（通用控制）是 Apple 的一項接續互通技術。它允許使用者只需使用一組滑鼠與鍵盤，即可無縫操控放置在旁邊的多台 Mac 或 iPad。指標能跨越螢幕邊界，檔案也能直接跨裝置拖放。MDM 可管理此功能，以符合特定的資安隔離需求。",
+    analogy: "這是「螢幕穿越術」。就像你的滑鼠有超能力一樣，在 Mac 螢幕邊緣溜過去，就直接跑到隔壁的 iPad 上了。你甚至可以直接把一張照片 from iPad 拖到 Mac 裡貼上，好像兩台機器變成了一台大電腦的兩個螢幕一樣，工作起來超級方便。"
+  },
+
+  {
     term: "Update Inventory",
 
     category: ["Core"],
@@ -1857,6 +1995,13 @@ export const glossaryData: Term[] = [
     analogy:
       "就像「萬用孔」。以前要分 HDMI、電源線、傳輸線，現在全部合併成一個孔。一條線能搞定充電、傳螢幕、傳檔案，插頭還不會插反。",
   },
+  {
+    term: "User Approved MDM（使用者核准的 MDM）",
+    category: ["Enrollment", "macOS"],
+    definition: "User Approved MDM（使用者核准的 MDM）是 macOS 的一項安全性要求。當裝置不是透過自動註冊 (ADE) 加入 MDM 時，使用者必須在下載描述檔後，手動前往「系統設定」點選核准。只有獲得核准的 MDM 才能管理關鍵資安設定（如安裝核心延伸功能、核心軟體更新或安全性原則）。",
+    analogy: "這是管理的「正式授權書」。就像你請代書幫忙處理房子（電腦），你得親自簽名點頭同意，代書才能去處理產權（系統核心設定）這麼重要的大事。如果沒有你的點頭，就算裝了管理程式，它也只能做些打掃的小事，不能動到系統的大樑。"
+  },
+
   {
     term: "User Enrollment",
 
@@ -1973,17 +2118,4 @@ export const glossaryData: Term[] = [
     analogy:
       "這是「開箱即用」的魔法。IT 人員甚至連箱子都不用拆，直接把新買的 1000 台 iPad 寄給員工。員工打開連上 Wi-Fi，iPad 就自動開始安裝公司軟體、設定 Email。就像變魔術一樣，完全自動化。",
   },
-
-  // --- 管理式 ---
-  {
-    term: "管理式 Apple 帳號 (Managed Apple Account)",
-
-    category: ["Apple"],
-
-    definition:
-      "Managed Apple Account（管理式 Apple 帳號）是專為企業與教育機構設計的帳號類型，舊稱 Managed Apple ID。它由組織透過 ABM/ASM 建立與擁有，雖然可用於登入 iCloud 與下載 App，但無法自行購買付費軟體，且組織有權重置密碼與稽核資料。",
-
-    analogy:
-      "這是「公務用」的 Apple 帳號。就像公司配發的 Email 信箱，是給你工作用的。公司可以隨時幫你找回密碼，離職時公司也會收回。跟你自己用 Gmail 註冊的私人帳號（個人 Apple ID）是完全不同的兩回事。",
-  }
 ];
