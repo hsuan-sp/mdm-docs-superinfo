@@ -131,15 +131,19 @@ const toggleSidebar = () => {
     </header>
 
     <div class="app-layout">
+      <!-- 側邊欄切換鈕 (位置固定) -->
+      <button class="global-sidebar-toggle desktop-only" @click="toggleSidebar" :title="isSidebarCollapsed ? '展開側邊欄' : '收合側邊欄'">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="9" y1="3" x2="9" y2="21"></line>
+            <path v-if="isSidebarCollapsed" d="M12 9l3 3-3 3"></path>
+          </svg>
+      </button>
+
       <!-- Left Sidebar: Filters & Search (Desktop > 1200px) -->
       <aside class="app-sidebar desktop-only">
         <div class="sidebar-header">
-           <div class="sidebar-title-row">
-                <h2>篩選與搜尋</h2>
-                <button class="collapse-toggle-btn" @click="toggleSidebar" title="收合側邊欄">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
-                </button>
-           </div>
+           <h2>篩選與搜尋</h2>
         </div>
         
         <div class="search-box">
@@ -189,11 +193,6 @@ const toggleSidebar = () => {
       </aside>
 
       <main class="app-content">
-        <!-- 展開按鈕 (僅在側邊欄收合時顯示) -->
-        <button v-if="isSidebarCollapsed && !isMobileView" class="expand-sidebar-btn" @click="toggleSidebar" title="展開側邊欄">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><path d="M12 9l3 3-3 3"></path></svg>
-            <span class="btn-text">顯示篩選器</span>
-        </button>
         <TransitionGroup 
           name="list" 
           tag="div" 
@@ -471,11 +470,43 @@ const toggleSidebar = () => {
   display: flex;
   gap: 0;
   align-items: start;
+  padding-top: 60px; /* 為固定按鈕留出頂部空間 */
+  position: relative;
+}
+
+/* 全域切換按鈕：保持固定位置 */
+.global-sidebar-toggle {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 150;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid var(--vp-c-divider);
+    background: var(--vp-c-bg-alt);
+    color: var(--vp-c-text-2);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.global-sidebar-toggle:hover {
+    background: var(--vp-c-brand-soft);
+    color: var(--vp-c-brand-1);
+    transform: scale(1.05);
+}
+
+.glossary-app.sidebar-collapsed .global-sidebar-toggle {
+    color: var(--vp-c-brand-1);
 }
 
 .app-sidebar {
   position: sticky;
-  top: calc(var(--vp-nav-height, 60px) + 24px); 
+  top: 80px; 
   width: 280px;
   background: var(--vp-c-bg-soft);
   border-radius: 24px;
@@ -495,61 +526,6 @@ const toggleSidebar = () => {
   padding: 0;
   border: none;
   pointer-events: none;
-}
-
-/* 側邊欄標題行 */
-.sidebar-title-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.collapse-toggle-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
-    border: none;
-    background: var(--vp-c-bg-mute);
-    color: var(--vp-c-text-2);
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.collapse-toggle-btn:hover {
-    background: var(--vp-c-brand-soft);
-    color: var(--vp-c-brand-1);
-}
-
-/* 展開按鈕 */
-.expand-sidebar-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    margin-bottom: 32px;
-    background: var(--vp-c-bg-soft);
-    border: 1px solid var(--vp-c-divider);
-    border-radius: 12px;
-    color: var(--vp-c-brand-1);
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 600;
-    transition: all 0.2s;
-    animation: fadeIn 0.3s ease;
-}
-
-.expand-sidebar-btn:hover {
-    background: var(--vp-c-bg-mute);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateX(-10px); }
-    to { opacity: 1; transform: translateX(0); }
 }
 
 .app-content {
