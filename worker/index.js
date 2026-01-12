@@ -67,13 +67,7 @@ export default {
     const ip = request.headers.get("cf-connecting-ip") || "unknown";
     const ua = request.headers.get("user-agent") || "";
 
-    // 1. 防爬蟲：User-Agent 基本檢測
-    const botPattern = /bot|spider|crawl|headless|selenium|puppeteer|wget|curl|python|postman/i;
-    if (botPattern.test(ua) && !url.pathname.includes("/auth/")) {
-        return new Response("Security Check: Bot activity detected.", { status: 403 });
-    }
-
-    // 2. 速率限制 (Rate Limiting) - 所有請求每分鐘限制 40 次
+    // 1. 速率限制 (Rate Limiting) - 所有請求每分鐘限制 40 次
     const now = Date.now();
     const rateData = RATE_LIMIT_STORE.get(ip) || { count: 0, reset: now + 60000 };
     if (now > rateData.reset) {

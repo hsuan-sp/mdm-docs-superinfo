@@ -35,46 +35,13 @@ const handleCopy = (e: ClipboardEvent) => {
   }
 };
 
-// 反偵控偵測：Debug 陷阱
-// 這會讓打開開發者工具的使用者不斷被斷點擋住
-const startDebuggerTrap = () => {
-    setInterval(() => {
-        (function() {
-            (function a() {
-                try {
-                    (function b(i) {
-                        if (("" + i / i).length !== 1 || i % 20 === 0) {
-                            (function() {}).constructor("debugger")();
-                        } else {
-                            debugger;
-                        }
-                        b(++i);
-                    })(0);
-                } catch (e) {}
-            })();
-        })();
-    }, 2000);
-};
-
+// 基礎防護：攔截右鍵、快捷鍵與複製
 onMounted(() => {
   document.addEventListener('contextmenu', handleContextMenu);
   document.addEventListener('keydown', handleKeyDown);
   document.addEventListener('copy', handleCopy);
 
-  // 1. 基本檢測顯示
-  console.log('%c🛡️ 技術保護已啟動 (MDM Support Shield Active)', 'color: white; background: #ff3b30; padding: 4px 10px; border-radius: 4px;');
-  
-  // 2. 啟動 Debug 陷阱（選用，這對普通用戶無感，但對想打開 F12 的人很痛苦）
-  // 為了保險，我們只在檢測到視窗尺寸異常時啟動，或乾脆跑一個溫和版
-  const checkDevTools = () => {
-    const threshold = 160;
-    if (window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold) {
-        console.clear();
-        console.log('%c🔒 原創內容，嚴禁側錄', 'font-size: 30px; color: red;');
-    }
-  };
-
-  window.addEventListener('resize', checkDevTools);
+  console.log('%c🛡️ MDM Support Shield Active', 'color: #ff3b30; font-weight: bold;');
 });
 
 onUnmounted(() => {
