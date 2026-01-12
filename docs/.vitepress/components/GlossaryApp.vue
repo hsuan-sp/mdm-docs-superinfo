@@ -3,6 +3,7 @@ import { ref, computed, onMounted, nextTick, watch, onUnmounted } from "vue";
 import { glossaryData } from "../../data/glossary";
 import { useLayoutMode } from '../theme/composables/useLayoutMode';
 import { useAppFeatures } from '../theme/composables/useAppFeatures';
+import AppSidebar from './ui/AppSidebar.vue';
 
 const { isMobileView } = useLayoutMode();
 const { fontScale, isSidebarCollapsed, toggleSidebar } = useAppFeatures('mdm-glossary');
@@ -116,20 +117,24 @@ const getCategoryCount = (cat: string) => {
   <div class="glossary-app" :class="{ 'is-mobile-device': isMobileView, 'sidebar-collapsed': isSidebarCollapsed }" :style="{ '--app-scale': fontScale }">
     <div class="app-layout">
       <!-- Left Sidebar: Filters & Search (Desktop > 1200px) -->
-      <aside class="app-sidebar desktop-only">
-        <div class="sidebar-ctrls">
-            <button class="sidebar-toggle-btn" @click="toggleSidebar" title="收合側邊欄">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
-            </button>
-            <div class="search-box">
-               <span class="search-icon">
-                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-               </span>
-               <input v-model="searchQuery" type="text" placeholder="搜尋術語..." class="search-input" />
-            </div>
-        </div>
-
-        <div class="categories-wrapper">
+      <!-- Left Sidebar: Filters & Search (Desktop > 1200px) -->
+      <AppSidebar 
+        title="術語庫分類" 
+        :is-open="!isSidebarCollapsed" 
+        class="desktop-only"
+        @toggle="toggleSidebar"
+        @update:scale="val => fontScale = val"
+      >
+        <template #search>
+          <div class="search-box">
+             <span class="search-icon">
+               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+             </span>
+             <input v-model="searchQuery" type="text" placeholder="搜尋術語..." class="search-input" />
+          </div>
+        </template>
+        
+        <template #nav-items>
           <div class="categories-header">
             <span>分類</span>
             <button @click="toggleSort" class="sort-btn" :title="sortOrder === 'asc' ? 'A-Z' : 'Z-A'">
@@ -148,20 +153,8 @@ const getCategoryCount = (cat: string) => {
                <span class="cat-count" v-if="getCategoryCount(cat) > 0">{{ getCategoryCount(cat) }}</span>
             </button>
           </div>
-        </div>
-
-        <!-- Local Font Adjust -->
-        <div class="font-controls">
-          <div class="categories-header">
-            <span>字體大小調整</span>
-          </div>
-          <div class="btn-group">
-            <button @click="fontScale = 0.9" :class="{ active: fontScale === 0.9 }">小</button>
-            <button @click="fontScale = 1.0" :class="{ active: fontScale === 1.0 }">中</button>
-            <button @click="fontScale = 1.2" :class="{ active: fontScale === 1.2 }">大</button>
-          </div>
-        </div>
-      </aside>
+        </template>
+      </AppSidebar>
 
       <main class="app-content">
         <!-- 內容頁首：頂部控制行 -->
@@ -474,54 +467,7 @@ const getCategoryCount = (cat: string) => {
     flex-shrink: 0;
 }
 
-.app-sidebar {
-  position: sticky;
-  top: 100px; 
-  width: 280px;
-  height: calc(100vh - 140px);
-  background: var(--vp-c-bg-soft);
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border-radius: 20px;
-  padding: 24px;
-  border: 1px solid var(--vp-c-divider);
-  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-  overflow: hidden;
-}
 
-.glossary-app.sidebar-collapsed .app-sidebar {
-  width: 0;
-  margin-right: -40px;
-  opacity: 0;
-  padding: 0;
-  pointer-events: none;
-}
-
-.sidebar-ctrls {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 24px;
-}
-
-.sidebar-toggle-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    border: none;
-    background: var(--vp-c-bg-mute);
-    color: var(--vp-c-text-2);
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.sidebar-toggle-btn:hover {
-    background: var(--vp-c-brand-soft);
-    color: var(--vp-c-brand-1);
-}
 
 .app-content {
   flex: 1;

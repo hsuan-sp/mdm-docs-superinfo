@@ -5,6 +5,7 @@ import { useAppFeatures } from '../theme/composables/useAppFeatures';
 import { allQAData } from "../../data/all-data";
 import type { QAItem } from "../../types";
 import MarkdownIt from "markdown-it";
+import AppSidebar from './ui/AppSidebar.vue';
 
 const route = useRoute();
 
@@ -134,47 +135,39 @@ const switchModule = (source: string | "All") => {
   <div class="guide-app" :style="{ '--app-scale': fontScale }" :class="{ 'sidebar-collapsed': isSidebarCollapsed }">
     <div class="app-layout">
       <!-- Left Sidebar: Filters & Search (Desktop > 1200px) -->
-      <aside class="app-sidebar">
-        <div class="sidebar-top">
-            <div class="sidebar-ctrls">
-                <button class="sidebar-toggle-btn" @click="toggleSidebar" title="收合側邊欄">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
-                </button>
-                <div class="search-section">
-                    <input v-model="searchQuery" type="text" placeholder="搜尋..." class="search-input" />
-                </div>
+      <!-- Left Sidebar: Filters & Search (Desktop > 1200px) -->
+      <AppSidebar 
+        title="指南導覽" 
+        :is-open="!isSidebarCollapsed" 
+        class="desktop-only"
+        @toggle="toggleSidebar"
+        @update:scale="val => fontScale = val"
+      >
+        <template #search>
+            <div class="search-section">
+                <input v-model="searchQuery" type="text" placeholder="搜尋..." class="search-input" />
             </div>
-            <nav class="nav-menu">
-                <button 
-                    @click="switchModule('All')"
-                    :class="['nav-item', { active: activeSource === 'All' && !searchQuery }]"
-                >
-                    <span class="nav-text">全部題目</span>
-                    <span class="nav-count">{{ allQAData.reduce((t, m) => t + getChapterCount(m.source), 0) }}</span>
-                </button>
-                <div class="sidebar-divider"></div>
-                <button 
-                    v-for="module in allQAData" :key="module.source"
-                    @click="switchModule(module.source)"
-                    :class="['nav-item', { active: activeSource === module.source && !searchQuery }]"
-                >
-                    <span class="nav-text">{{ module.source }}</span>
-                    <span class="nav-count">{{ getChapterCount(module.source) }}</span>
-                </button>
-            </nav>
-        </div>
-
-        <div class="sidebar-bottom">
-            <div class="font-controls">
-                <span class="ctrl-label">字體大小調整</span>
-                <div class="btn-group">
-                    <button @click="fontScale = 0.9" :class="{active: fontScale === 0.9}">小</button>
-                    <button @click="fontScale = 1.0" :class="{active: fontScale === 1.0}">中</button>
-                    <button @click="fontScale = 1.2" :class="{active: fontScale === 1.2}">大</button>
-                </div>
-            </div>
-        </div>
-      </aside>
+        </template>
+        
+        <template #nav-items>
+            <button 
+                @click="switchModule('All')"
+                :class="['nav-item', { active: activeSource === 'All' && !searchQuery }]"
+            >
+                <span class="nav-text">全部題目</span>
+                <span class="nav-count">{{ allQAData.reduce((t, m) => t + getChapterCount(m.source), 0) }}</span>
+            </button>
+            <div class="sidebar-divider"></div>
+            <button 
+                v-for="module in allQAData" :key="module.source"
+                @click="switchModule(module.source)"
+                :class="['nav-item', { active: activeSource === module.source && !searchQuery }]"
+            >
+                <span class="nav-text">{{ module.source }}</span>
+                <span class="nav-count">{{ getChapterCount(module.source) }}</span>
+            </button>
+        </template>
+      </AppSidebar>
 
       <main class="app-content">
         <!-- 頂部標題與切換鈕行 -->
@@ -340,129 +333,10 @@ const switchModule = (source: string | "All") => {
     .app-layout { display: block; padding-top: 10px; } 
     .app-sidebar { display: none !important; } 
     .content-header { gap: 10px; margin-bottom: 20px; }
-    .title-text { font-size: 1.8em; }
-}
+
 
 /* 側邊欄視覺與固定邏輯 */
-.app-sidebar { 
-    position: sticky; 
-    top: 100px; /* 修正：確保在頂部導覽列下方 */
-    width: 280px;
-    height: calc(100vh - 140px); 
-    display: flex; 
-    flex-direction: column;
-    background: var(--vp-c-bg-soft);
-    backdrop-filter: blur(24px) saturate(180%);
-    -webkit-backdrop-filter: blur(24px) saturate(180%);
-    border-radius: 24px;
-    padding: 24px;
-    border: 1px solid var(--vp-c-divider);
-    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
-                opacity 0.4s,
-                margin 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-    overflow: hidden;
-    z-index: 10;
-}
 
-.guide-app.sidebar-collapsed .app-sidebar {
-    width: 0;
-    margin-right: -48px; /* 抵消 gap 確保真正居中 */
-    opacity: 0;
-    pointer-events: none;
-}
-
-.sidebar-ctrls {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 16px;
-}
-
-.sidebar-toggle-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    border: none;
-    background: var(--vp-c-bg-mute);
-    color: var(--vp-c-text-2);
-    cursor: pointer;
-    transition: all 0.2s;
-    flex-shrink: 0;
-}
-
-.sidebar-toggle-btn:hover {
-    background: var(--vp-c-brand-soft);
-    color: var(--vp-c-brand-1);
-}
-
-.sidebar-top { flex: 1; display: flex; flex-direction: column; min-height: 0; }
-.nav-menu { flex: 1; overflow-y: auto; margin-top: 8px; padding-right: 8px; }
-
-/* 滾動條樣式 */
-.nav-menu::-webkit-scrollbar { width: 4px; }
-.nav-menu::-webkit-scrollbar-thumb { background: var(--vp-c-divider); border-radius: 4px; }
-
-.sidebar-bottom { 
-    padding-top: 24px; 
-    margin-top: 32px;
-    border-top: 1px solid var(--vp-c-divider); 
-}
-
-.sidebar-divider {
-    height: 1px;
-    background: var(--vp-c-divider);
-    margin: 12px 0;
-    opacity: 0.6;
-}
-
-.search-input { 
-    width: 100%; 
-    padding: 10px 16px; 
-    border-radius: 10px; 
-    border: 1px solid var(--vp-c-divider); 
-    background: var(--vp-c-bg-soft); 
-    font-size: 0.9em;
-    color: var(--vp-c-text-1);
-    transition: border-color 0.2s;
-}
-.search-input:focus { border-color: var(--vp-c-brand-1); outline: none; }
-
-.nav-item { 
-    display: flex; justify-content: space-between; align-items: center;
-    width: 100%; text-align: left; padding: 10px 14px; border: none; 
-    background: transparent; cursor: pointer; border-radius: 10px; margin-bottom: 4px;
-    font-size: 0.9em; color: var(--vp-c-text-2); 
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.nav-item:hover { 
-    background: var(--vp-c-bg-mute); 
-    color: var(--vp-c-text-1); 
-    transform: translateX(4px) scale(1.02);
-}
-.nav-item.active { 
-    background: var(--vp-c-brand-soft); 
-    color: var(--vp-c-brand-1); 
-    font-weight: 700;
-    transform: scale(1.02);
-}
-
-.nav-text { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-right: 10px; }
-.nav-count { font-size: 11px; background: var(--vp-c-bg-alt); padding: 2px 8px; border-radius: 10px; border: 1px solid var(--vp-c-divider); transition: all 0.2s; }
-
-.nav-item.active .nav-count { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
-
-/* 側邊欄字體控制 */
-.font-controls { display: flex; flex-direction: column; gap: 8px; }
-.ctrl-label { font-size: 0.75em; color: var(--vp-c-text-3); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
-.btn-group { display: flex; gap: 2px; background: var(--vp-c-bg-soft); padding: 3px; border-radius: 8px; border: 1px solid var(--vp-c-divider); }
-.btn-group button { 
-    flex: 1; padding: 6px; border: none; background: transparent; border-radius: 6px; 
-    cursor: pointer; font-size: 0.85em; transition: 0.2s; color: var(--vp-c-text-2); font-weight: 600;
-}
-.btn-group button.active { background: var(--vp-c-bg); color: var(--vp-c-brand-1); box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
 
 /* 問答卡片 */
 .qa-item { 

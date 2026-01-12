@@ -6,7 +6,7 @@ defineProps<{
   isOpen: boolean;
 }>();
 
-const emit = defineEmits(['toggle', 'close']);
+const emit = defineEmits(['toggle', 'close', 'update:scale']);
 
 const fontScale = ref(1.0); // Manage locally or pass as prop if needed globally
 </script>
