@@ -67,7 +67,7 @@ export default {
     const ip = request.headers.get("cf-connecting-ip") || "unknown";
     const ua = request.headers.get("user-agent") || "";
 
-    // 1. 速率限制 (Rate Limiting) - 所有請求每分鐘限制 40 次
+    // 1. 速率限制 (Rate Limiting) - 所有請求每分鐘限制 100 次 (放寬以避免誤傷人類)
     const now = Date.now();
     const rateData = RATE_LIMIT_STORE.get(ip) || { count: 0, reset: now + 60000 };
     if (now > rateData.reset) {
@@ -78,9 +78,12 @@ export default {
     }
     RATE_LIMIT_STORE.set(ip, rateData);
 
-    // 嚴格限制：無論登入與否，超過頻率一律攔截 (防止已登入用戶自動化抓取)
-    if (rateData.count > 40) {
-        return new Response("Security Alert: Excessive requests detected.", { status: 429 });
+    // 嚴格限制：攔截機器人級別的超高速抓取 (每分鐘超過 100 次請求)
+    if (rateData.count > 100) {
+        return new Response("系統偵測到異常存取頻率，請稍等一分鐘後再繼續閱讀。", { 
+            status: 429,
+            headers: { "Content-Type": "text/plain; charset=utf-8" }
+        });
     }
     
     // 0. 極速健康檢查
