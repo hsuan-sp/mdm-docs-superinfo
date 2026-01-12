@@ -6,8 +6,9 @@
  * searching across the entire knowledge base.
  */
 
-import { QASection } from "../types";
-import { glossaryData, Term } from "./glossary";
+import type { QASection } from "../types";
+import { glossaryData } from "./glossary";
+import type { Term } from "./glossary";
 
 // Q&A Data Sources
 import { data as accountData } from "./01-account";

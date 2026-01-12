@@ -18,5 +18,4 @@ dist
 .vitepress/cache
 
 # Editor
-.vscode
 .idea

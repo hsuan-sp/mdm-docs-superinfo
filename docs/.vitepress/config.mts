@@ -9,6 +9,13 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/superinfo_favicon.jpeg' }]
   ],
   cleanUrls: true,
+  vite: {
+    resolve: {
+      alias: {
+        'punycode': 'punycode'
+      }
+    }
+  },
   themeConfig: {
     logo: '/superinfo_logo.png',
     // https://vitepress.dev/reference/default-theme-config

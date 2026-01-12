@@ -11,10 +11,17 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "punycode": "^2.3.1",
+    "vue": "^3.4.0"
+  },
   "devDependencies": {
-    "vitepress": "^1.0.0",
-    "markdown-it": "^13.0.0",
     "@types/markdown-it": "^13.0.0",
-    "@types/node": "^18.0.0"
+    "@types/node": "^20.0.0",
+    "@vue/tsconfig": "^0.5.0",
+    "markdown-it": "^13.0.0",
+    "typescript": "^5.3.0",
+    "vitepress": "^1.6.4",
+    "vue": "^3.4.0"
   }
 }

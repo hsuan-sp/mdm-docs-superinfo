@@ -1,4 +1,4 @@
-import { QASection } from "../types";
+import type { QASection } from "../types";
 
 export const educationQA: QASection[] = [
   {
