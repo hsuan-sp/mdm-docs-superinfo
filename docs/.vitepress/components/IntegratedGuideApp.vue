@@ -30,10 +30,22 @@ const isSidebarCollapsed = ref(false); // 側邊欄是否收合
 
 const handleHashChange = () => {
     const hash = window.location.hash.replace('#', '').toLowerCase();
-    // 直接從數據源比對鏈結標記（如果需要更精確的比對可以擴充路徑屬性）
-    const target = allQAData.find(m => m.source.toLowerCase().includes(hash));
-    if (target) {
-        activeSource.value = target.source;
+    // 建立映射表以支援英文 Hash
+    const hashMap: Record<string, string> = {
+        'account': '帳號與伺服器',
+        'enrollment': '裝置註冊',
+        'apps': 'App 管理',
+        'classroom': '課堂管理',
+        'digital': '數位精進',
+        'hardware': '硬體排除',
+        'mac': 'Mac 管理',
+        'education': '教育實戰'
+    };
+    
+    const targetSource = hashMap[hash] || allQAData.find(m => m.source.toLowerCase().includes(hash))?.source;
+    
+    if (targetSource) {
+        activeSource.value = targetSource;
         searchQuery.value = '';
     }
 };
@@ -115,6 +127,7 @@ const toggleSidebar = () => {
 <template>
   <div class="guide-app" :style="{ '--app-scale': fontScale }" :class="{ 'sidebar-collapsed': isSidebarCollapsed }">
     <div class="app-layout">
+      <!-- Left Sidebar: Filters & Search (Desktop > 1200px) -->
       <aside class="app-sidebar">
         <div class="sidebar-top">
             <div class="sidebar-ctrls">
@@ -219,9 +232,7 @@ const toggleSidebar = () => {
 .guide-app {
     --base-size: calc(16px * var(--app-scale));
     font-size: var(--base-size);
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px 40px;
+    width: 100%;
     color: var(--vp-c-text-1);
     line-height: 1.6;
 }
@@ -238,10 +249,13 @@ const toggleSidebar = () => {
 .app-layout { 
     display: flex; 
     gap: 48px; 
+    justify-content: center; /* 確保內容相對於容器中心展開 */
     align-items: start;
-    padding-top: 40px;
+    padding: 40px 24px;
     position: relative;
-    max-width: 1260px;
+    max-width: 1400px;
+    margin: 0 auto;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* 統一頁首樣式 */
@@ -305,7 +319,7 @@ const toggleSidebar = () => {
 
 .guide-app.sidebar-collapsed .app-sidebar {
     width: 0;
-    margin-right: -48px;
+    margin-right: -48px; /* 抵消 gap 確保真正居中 */
     opacity: 0;
     pointer-events: none;
 }

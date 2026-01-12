@@ -174,21 +174,16 @@ const toggleSidebar = () => {
       </aside>
 
       <main class="app-content">
-        <!-- 內容頁首：Hero Section 整合進內容區 -->
+        <!-- 內容頁首：頂部控制行 -->
         <header class="content-header">
             <button v-if="isSidebarCollapsed && !isMobileView" class="expand-toggle-btn" @click="toggleSidebar" title="展開篩選器">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><path d="M12 9l3 3-3 3"></path></svg>
             </button>
-            <div class="header-text-group">
-                <h1 class="hero-title">零知識術語表</h1>
-                <p class="subtitle">從專有名詞到白話文翻譯，讓您輕鬆讀懂裝置管理。</p>
+            <div class="view-status-bar">
+                <span class="status-label">{{ selectedCategory === 'All' ? '所有分類' : selectedCategory }}</span>
+                <span class="status-count">共 {{ filteredTerms.length }} 個術語</span>
             </div>
         </header>
-
-        <div class="view-status-bar">
-            <span class="status-label">{{ selectedCategory === 'All' ? '所有分類' : selectedCategory }}</span>
-            <span class="status-count">共 {{ filteredTerms.length }} 個項目</span>
-        </div>
         <TransitionGroup 
           name="list" 
           tag="div" 
@@ -407,13 +402,11 @@ const toggleSidebar = () => {
   border-color: var(--vp-c-brand-1);
 }
 
-/* Base Layout */
+/* 術語表獨立比例控制 */
 .glossary-app {
   --base-size: calc(16px * var(--app-scale, 1));
   font-size: var(--base-size);
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 0 40px 100px;
+  width: 100%;
 }
 
 /* Local Font Controls Styles */
@@ -434,60 +427,40 @@ const toggleSidebar = () => {
 .btn-group-mobile button.active { background: var(--vp-c-brand-1); color: white; }
 
 /* Header section refined */
-.glossary-header { display: none; } /* 移動到內容區 */
-
-.hero-title {
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: 850;
-  letter-spacing: -0.03em;
-  margin: 0 0 8px 0;
-  background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.subtitle {
-  font-size: 15px;
-  color: var(--vp-c-text-2);
-  margin: 0;
-  line-height: 1.5;
-}
+.glossary-header { display: none; } 
+.hero-title { display: none; }
+.subtitle { display: none; }
 
 /* 2-Column Layout */
 /* 2-Column Layout Refined */
 .app-layout {
   display: flex;
   gap: 40px;
+  justify-content: center; /* 居中展開 */
   align-items: start;
-  padding-top: 40px;
+  padding: 40px 24px 100px;
   position: relative;
-  max-width: 1400px;
+  max-width: 1600px;
+  margin: 0 auto;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.app-content {
-    flex: 1;
-    min-width: 0;
-}
-
-/* 內容區頁首細節 */
+/* 內容區頂部控制列 */
 .content-header {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+    height: 44px;
 }
-
-.header-text-group { flex: 1; }
 
 .view-status-bar {
     display: flex;
     gap: 12px;
-    margin-bottom: 24px;
     align-items: center;
-    font-size: 13px;
+    font-size: 14px;
     color: var(--vp-c-text-3);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .status-label {

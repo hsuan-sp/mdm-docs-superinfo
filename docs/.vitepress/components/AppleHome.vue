@@ -28,8 +28,8 @@ onMounted(() => {
 const navCards = [
   { 
     title: 'Identity', 
-    subtitle: '帳號管理',
-    desc: '管理式 Apple ID 與權限。', 
+    subtitle: '帳號與身分',
+    desc: '深入了解管理式 Apple ID、聯合驗證與權限委派。', 
     link: '/guide/#account',
     bg: '#F5F5F7',
     textColor: '#1d1d1f',
@@ -37,17 +37,17 @@ const navCards = [
   },
   { 
     title: 'Deployment', 
-    subtitle: '自動化部署',
-    desc: '從開箱到使用的零接觸體驗。', 
+    subtitle: '零接觸部署',
+    desc: '透過 Apple Configurator 與 ADE 達成自動化開箱即用。', 
     link: '/guide/#enrollment',
     bg: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     textColor: '#fff',
     icon: '📦'
   },
   { 
-    title: 'Apps', 
-    subtitle: '應用程式',
-    desc: 'VPP 批量採購與派發。', 
+    title: 'VPP Apps', 
+    subtitle: '軟體採購',
+    desc: '掌握 App 與圖書的批量授權派發與生命週期管理。', 
     link: '/guide/#apps',
     bg: '#F5F5F7',
     textColor: '#1d1d1f',
@@ -56,7 +56,7 @@ const navCards = [
   { 
     title: 'Classroom', 
     subtitle: '課堂教學',
-    desc: '賦能教師的數位教學工具。', 
+    desc: '賦能教師掌握即時畫面控管、文件傳送與數位互動。', 
     link: '/guide/#classroom',
     bg: 'linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)',
     textColor: '#1d1d1f',
@@ -64,26 +64,26 @@ const navCards = [
   },
   { 
     title: 'Education', 
-    subtitle: '精進方案',
-    desc: '教育部專案規範專區。', 
+    subtitle: '方案規範',
+    desc: '接軌教育部專案規範，優化校園數位學習環境。', 
     link: '/guide/#digital',
     bg: '#F5F5F7',
     textColor: '#1d1d1f',
     icon: '🎓'
   },
   { 
-    title: 'Support', 
-    subtitle: '硬體維護',
-    desc: '保固查詢與報修流程。', 
+    title: 'Service', 
+    subtitle: '維護報修',
+    desc: '了解硬體保固查詢、維修流程與備機管理策略。', 
     link: '/guide/#hardware',
     bg: '#F5F5F7',
     textColor: '#1d1d1f',
     icon: '🔧'
   },
   { 
-    title: 'Mac', 
+    title: 'macOS', 
     subtitle: '電腦管理',
-    desc: 'macOS 專屬管理策略。', 
+    desc: '針對 Mac 的專屬組態描述檔與安全性原則管理。', 
     link: '/guide/#mac',
     bg: 'linear-gradient(135deg, #434343 0%, #000000 100%)',
     textColor: '#f5f5f7',
@@ -91,12 +91,21 @@ const navCards = [
   },
   { 
     title: 'Scenarios', 
-    subtitle: '校園實戰',
-    desc: '真實情境 QA 問答集。', 
+    subtitle: '情境實戰',
+    desc: '集結第一線網管與教師的高頻率常見問題答集。', 
     link: '/guide/#education',
-    bg: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+    bg: '#F5F5F7',
     textColor: '#1d1d1f',
     icon: '🏫'
+  },
+  { 
+    title: 'Glossary', 
+    subtitle: '零知識術語表',
+    desc: '從專有名詞到白話文翻譯，讓您輕鬆讀懂裝置管理。', 
+    link: '/glossary',
+    bg: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+    textColor: '#1d1d1f',
+    icon: '📖'
   }
 ]
 </script>
