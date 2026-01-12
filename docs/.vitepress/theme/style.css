@@ -13,6 +13,9 @@
   --vp-c-text-1: #1d1d1f; /* Apple Black */
   --vp-c-text-2: #86868b; /* Apple Gray */
 
+  /* 字體縮放變數 */
+  --kb-font-size-scale: 1;
+
   --vp-font-family-base: "SF Pro Text", "SF Pro Icons", "Helvetica Neue",
     "Helvetica", "Arial", "PingFang TC", "Microsoft JhengHei", "Noto Sans TC",
     sans-serif;
@@ -64,6 +67,14 @@ body {
   padding: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  /* 應用字體縮放 */
+  font-size: calc(16px * var(--kb-font-size-scale));
+}
+
+/* 針對內容區塊進行更精確的控制 */
+.vp-doc p, .vp-doc li, .vp-doc div {
+  font-size: calc(1rem * var(--kb-font-size-scale));
+  line-height: 1.7;
 }
 
 /* HIDE Default VitePress "Return to Top" link/text */

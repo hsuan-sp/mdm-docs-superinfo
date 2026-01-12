@@ -11,14 +11,13 @@ const user = ref<string | null>(null);
 const isGuest = ref(false);
 const isMenuOpen = ref(false);
 const expandedNav = ref<number | null>(null);
+const fontSizeScale = ref(1.0);
 
 const handleLinkClick = (e: Event, link: string) => {
     isMenuOpen.value = false;
     if (link.startsWith('http')) {
-        // External link, let default behavior happen (target blank usually in config, or current)
         return; 
     }
-    // Internal SPA navigation
     e.preventDefault();
     router.go(link);
 };
@@ -27,9 +26,21 @@ const toggleNav = (index: any) => {
     expandedNav.value = expandedNav.value === index ? null : index;
 };
 
+// 套用字體設定
+const applyFontSize = (scale: number) => {
+  document.documentElement.style.setProperty('--kb-font-size-scale', scale.toString());
+  localStorage.setItem('mdm-font-scale', scale.toString());
+  fontSizeScale.value = scale;
+};
+
 // Ensure user is always set for consistent UI
 onMounted(async () => {
+  // 載入字體設定
+  const savedScale = localStorage.getItem('mdm-font-scale');
+  if (savedScale) applyFontSize(parseFloat(savedScale));
+
   try {
+// ... (後續原有的 Auth 邏輯)
     const res = await fetch('/auth/me');
     if (res.ok) {
         const data = await res.json();
@@ -69,6 +80,15 @@ const logout = () => {
     <!-- Desktop Horizontal View -->
     <div class="desktop-actions">
 
+
+        <!-- Font Size Adjust -->
+        <div class="font-adjust">
+            <button @click="applyFontSize(0.85)" :class="{ active: fontSizeScale === 0.85 }" class="font-btn small" title="縮小字體">A-</button>
+            <button @click="applyFontSize(1.0)" :class="{ active: fontSizeScale === 1.0 }" class="font-btn" title="標準字體">A</button>
+            <button @click="applyFontSize(1.2)" :class="{ active: fontSizeScale === 1.2 }" class="font-btn large" title="加大字體">A+</button>
+        </div>
+
+        <div class="divider"></div>
 
         <!-- Dark Mode Toggle -->
         <button @click="toggleDarkMode" class="action-btn" :title="isDark ? '切換至淡色模式' : '切換至深色模式'">
@@ -145,15 +165,25 @@ const logout = () => {
 
                         <!-- Settings Grid (Compact Row) -->
                         <div class="settings-grid">
-
-
+                            <!-- Dark Mode -->
                             <div class="menu-item compact" @click="toggleDarkMode">
                                 <div class="compact-icon">
                                     <svg v-if="isDark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                                     <svg v-else width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                                 </div>
-                                <div class="compact-label">外觀模式</div>
+                                <div class="compact-label">主題模式</div>
                                 <div class="compact-status">{{ isDark ? '深色' : '淡色' }}</div>
+                            </div>
+
+                            <!-- Font Size -->
+                            <div class="menu-item compact no-hover">
+                                <div class="compact-icon font-icon-label" style="font-weight: 800; font-size: 18px;">A</div>
+                                <div class="compact-label">字體大小</div>
+                                <div class="font-controls-mobile">
+                                    <button @click="applyFontSize(0.85)" :class="{ active: fontSizeScale === 0.85 }">小</button>
+                                    <button @click="applyFontSize(1.0)" :class="{ active: fontSizeScale === 1.0 }">中</button>
+                                    <button @click="applyFontSize(1.2)" :class="{ active: fontSizeScale === 1.2 }">大</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -206,6 +236,34 @@ const logout = () => {
     transition: all 0.2s;
 }
 .action-btn:hover { color: var(--vp-c-brand); background: var(--vp-c-bg-mute); }
+
+/* Font Adjustment Styles */
+.font-adjust {
+    display: flex;
+    align-items: center;
+    background: var(--vp-c-bg-mute);
+    border-radius: 8px;
+    padding: 2px;
+}
+.font-btn {
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--vp-c-text-2);
+    transition: all 0.2s;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.font-btn:hover { color: var(--vp-c-brand); }
+.font-btn.active {
+    background: var(--vp-c-bg-alt);
+    color: var(--vp-c-brand);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.font-btn.small { font-size: 11px; }
+.font-btn.large { font-size: 15px; }
 
 .divider {
     width: 1px;
@@ -474,6 +532,32 @@ const logout = () => {
 .compact-status {
     font-size: 11px;
     color: var(--vp-c-text-3);
+}
+
+.no-hover:hover { transform: none !important; background: rgba(0,0,0,0.03) !important; cursor: default !important; }
+.dark .no-hover:hover { background: rgba(255,255,255,0.05) !important; }
+
+.font-controls-mobile {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    margin-top: 4px;
+}
+.font-controls-mobile button {
+    flex: 1;
+    padding: 8px;
+    background: rgba(0,0,0,0.05);
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--vp-c-text-2);
+    border: none;
+}
+.dark .font-controls-mobile button { background: rgba(255,255,255,0.1); }
+
+.font-controls-mobile button.active {
+    background: var(--vp-c-brand);
+    color: white;
 }
 
 
