@@ -4,6 +4,9 @@ const SUPABASE_CONFIG = {
   ANON_KEY: "your-anon-key",
 };
 
+// 速率限制存儲 (Worker 單一 Isolate 內共享)
+const RATE_LIMIT_STORE = new Map();
+
 // 驗證 Token
 async function verifyUserWithSupabase(token, url, anonKey) {
   try {
@@ -20,7 +23,6 @@ async function logLogin(user, request, actionType, SB_URL, SB_SERVICE) {
   const country = request.headers.get("cf-ipcountry") || "unknown";
   const ua = request.headers.get("user-agent") || "unknown";
   
-  // 核心檢查：如果沒有 SERVICE_ROLE_KEY，寫入一定會失敗
   if (!SB_SERVICE) {
     console.error("[Log Error] Missing SERVICE_ROLE_KEY");
     return;
@@ -31,7 +33,7 @@ async function logLogin(user, request, actionType, SB_URL, SB_SERVICE) {
       method: "POST",
       headers: { 
         "Content-Type": "application/json", 
-        "apikey": SB_SERVICE, // 關鍵：寫入時 apikey 也要用 Service Key
+        "apikey": SB_SERVICE,
         "Authorization": `Bearer ${SB_SERVICE}`, 
         "Prefer": "return=minimal"
       },
@@ -62,6 +64,30 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const cookie = request.headers.get("Cookie") || "";
+    const ip = request.headers.get("cf-connecting-ip") || "unknown";
+    const ua = request.headers.get("user-agent") || "";
+
+    // 1. 防爬蟲：User-Agent 基本檢測
+    const botPattern = /bot|spider|crawl|headless|selenium|puppeteer|wget|curl|python|postman/i;
+    if (botPattern.test(ua) && !url.pathname.includes("/auth/")) {
+        return new Response("Security Check: Bot activity detected.", { status: 403 });
+    }
+
+    // 2. 速率限制 (Rate Limiting) - 所有請求每分鐘限制 40 次
+    const now = Date.now();
+    const rateData = RATE_LIMIT_STORE.get(ip) || { count: 0, reset: now + 60000 };
+    if (now > rateData.reset) {
+        rateData.count = 1;
+        rateData.reset = now + 60000;
+    } else {
+        rateData.count++;
+    }
+    RATE_LIMIT_STORE.set(ip, rateData);
+
+    // 嚴格限制：無論登入與否，超過頻率一律攔截 (防止已登入用戶自動化抓取)
+    if (rateData.count > 40) {
+        return new Response("Security Alert: Excessive requests detected.", { status: 429 });
+    }
     
     // 0. 極速健康檢查
     if (url.pathname === "/auth/health") {
@@ -111,12 +137,14 @@ export default {
       }
 
       if (access_token && user) {
-        // 重要：這裏改傳 SB_SERVICE 確保 logLogin 有最高權限
         ctx.waitUntil(logLogin(user, request, url.pathname === "/auth/session" ? "auto" : "manual", SB_URL, SB_SERVICE));
         
         return new Response(JSON.stringify({ success: true }), {
           status: 200,
-          headers: { "Set-Cookie": `sb-access-token=${access_token}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=31536000` }
+          headers: { 
+            "Set-Cookie": `sb-access-token=${access_token}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=31536000`,
+            "Content-Type": "application/json"
+          }
         });
       }
       return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401 });
@@ -140,7 +168,7 @@ export default {
         });
     }
 
-    // 靜態資源管理
+    // 靜態資源管理 & 安全過濾
     const tokenMatch = cookie.match(/sb-access-token=([^;]+)/);
     const isAuth = tokenMatch ? !!(await verifyUserWithSupabase(tokenMatch[1], SB_URL, SB_ANON)) : false;
 
@@ -148,11 +176,28 @@ export default {
     const isPublic = url.pathname.match(/\.(css|js|png|jpg|jpeg|gif|ico|svg|woff2?|json)$/) || url.pathname === "/login.html";
     if (!isAuth && !isPublic && url.pathname !== "/login") return Response.redirect(`${url.origin}/login`, 302);
 
+    let response;
     if (url.pathname === "/login") {
       const res = await env.ASSETS.fetch(new Request(new URL("/login.html", request.url)));
-      return new Response(res.body, { headers: { "Content-Type": "text/html; charset=utf-8" } });
+      response = new Response(res.body, { headers: { "Content-Type": "text/html; charset=utf-8" } });
+    } else {
+      response = await env.ASSETS.fetch(request);
     }
 
-    return await env.ASSETS.fetch(request);
+    // 3. 安全標頭注入 (Security Headers)
+    const newHeaders = new Headers(response.headers);
+    newHeaders.set("X-Content-Type-Options", "nosniff");
+    newHeaders.set("X-Frame-Options", "SAMEORIGIN");
+    newHeaders.set("X-XSS-Protection", "1; mode=block");
+    newHeaders.set("Referrer-Policy", "strict-origin-when-cross-origin");
+    // 設定 CSP 防止未經授權的腳本執行
+    newHeaders.set("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://klcskeeqkwkakgzrewtn.supabase.co; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://klcskeeqkwkakgzrewtn.supabase.co;");
+
+    return new Response(response.body, {
+        status: response.status,
+        statusText: response.statusText,
+        headers: newHeaders
+    });
   },
 };
+

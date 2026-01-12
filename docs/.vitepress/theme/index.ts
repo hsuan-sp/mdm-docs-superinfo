@@ -9,6 +9,7 @@ import BackToTop from '../components/BackToTop.vue'
 import GlobalFooter from '../components/GlobalFooter.vue'
 
 import UserCenter from './components/UserCenter.vue'
+import SecurityGuard from './components/SecurityGuard.vue'
 
 import IntegratedGuideApp from '../components/IntegratedGuideApp.vue'
 
@@ -16,7 +17,7 @@ export default {
   extends: Theme,
   Layout: () => {
     return h(Theme.Layout, null, {
-      'nav-bar-content-after': () => h(UserCenter),
+      'nav-bar-content-after': () => [h(UserCenter), h(SecurityGuard)],
       'layout-bottom': () => [h(GlobalFooter), h(BackToTop)]
     })
   },
