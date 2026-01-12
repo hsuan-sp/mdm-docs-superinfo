@@ -160,9 +160,9 @@ const switchModule = (source: string | "All") => {
 
       <main class="app-content">
         <!-- 頂部標題與切換鈕行 -->
-        <header class="content-header">
-
-          <h2 class="title-text">{{ searchQuery ? '搜尋結果：' + searchQuery : currentModule?.source }}</h2>
+        <!-- 頂部標題與切換鈕行 (僅搜尋時顯示) -->
+        <header class="content-header" v-if="searchQuery">
+          <h2 class="title-text">搜尋結果：{{ searchQuery }}</h2>
         </header>
 
         <!-- 搜尋模式 -->
