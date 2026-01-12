@@ -133,13 +133,13 @@ const toggleSidebar = () => {
     <div class="app-layout">
       <!-- Left Sidebar: Filters & Search (Desktop > 1200px) -->
       <aside class="app-sidebar desktop-only">
-        <!-- 收合按鈕 -->
-        <button class="collapse-toggle" @click="toggleSidebar" :title="isSidebarCollapsed ? '展開側邊欄' : '收合側邊欄'">
-          <svg v-if="isSidebarCollapsed" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
-          <svg v-else width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg>
-        </button>
         <div class="sidebar-header">
-           <h2>篩選與搜尋</h2>
+           <div class="sidebar-title-row">
+                <h2>篩選與搜尋</h2>
+                <button class="collapse-toggle-btn" @click="toggleSidebar" title="收合側邊欄">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                </button>
+           </div>
         </div>
         
         <div class="search-box">
@@ -188,8 +188,12 @@ const toggleSidebar = () => {
         </div>
       </aside>
 
-      <!-- Right Content: Grid -->
       <main class="app-content">
+        <!-- 展開按鈕 (僅在側邊欄收合時顯示) -->
+        <button v-if="isSidebarCollapsed && !isMobileView" class="expand-sidebar-btn" @click="toggleSidebar" title="展開側邊欄">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><path d="M12 9l3 3-3 3"></path></svg>
+            <span class="btn-text">顯示篩選器</span>
+        </button>
         <TransitionGroup 
           name="list" 
           tag="div" 
@@ -464,68 +468,92 @@ const toggleSidebar = () => {
 
 /* 2-Column Layout */
 .app-layout {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 48px;
+  display: flex;
+  gap: 0;
   align-items: start;
-  transition: grid-template-columns 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.glossary-app.sidebar-collapsed .app-layout {
-  grid-template-columns: 20px 1fr;
-  gap: 20px;
 }
 
 .app-sidebar {
   position: sticky;
   top: calc(var(--vp-nav-height, 60px) + 24px); 
+  width: 280px;
   background: var(--vp-c-bg-soft);
   border-radius: 24px;
   padding: 24px;
   border: 1px solid var(--vp-c-divider);
-  transition: transform 0.4s, opacity 0.3s;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              margin-right 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s;
+  overflow: hidden;
+  margin-right: 48px;
 }
 
 .glossary-app.sidebar-collapsed .app-sidebar {
-  transform: translateX(-260px);
-  opacity: 0.2;
+  width: 0;
+  margin-right: 0;
+  opacity: 0;
+  padding: 0;
+  border: none;
+  pointer-events: none;
 }
 
-.glossary-app.sidebar-collapsed .app-sidebar:hover {
-  opacity: 1;
+/* 側邊欄標題行 */
+.sidebar-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
-/* 收合按鈕 */
-.collapse-toggle {
-    position: absolute;
-    right: -12px;
-    top: 20px;
-    width: 24px;
-    height: 24px;
-    background: var(--vp-c-bg-alt);
-    border: 1px solid var(--vp-c-divider);
-    border-radius: 50%;
+.collapse-toggle-btn {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: none;
+    background: var(--vp-c-bg-mute);
+    color: var(--vp-c-text-2);
     cursor: pointer;
-    z-index: 1000;
-    color: var(--vp-c-text-3);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: all 0.3s;
+    transition: all 0.2s;
 }
 
-.collapse-toggle:hover {
+.collapse-toggle-btn:hover {
+    background: var(--vp-c-brand-soft);
     color: var(--vp-c-brand-1);
-    transform: scale(1.1);
-    background: var(--vp-c-bg);
 }
 
-.glossary-app.sidebar-collapsed .collapse-toggle {
-    right: -32px;
+/* 展開按鈕 */
+.expand-sidebar-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    margin-bottom: 32px;
+    background: var(--vp-c-bg-soft);
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 12px;
+    color: var(--vp-c-brand-1);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s;
+    animation: fadeIn 0.3s ease;
+}
+
+.expand-sidebar-btn:hover {
+    background: var(--vp-c-bg-mute);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
 .app-content {
+  flex: 1;
   min-width: 0; 
 }
 
@@ -789,8 +817,9 @@ const toggleSidebar = () => {
 
 /* Responsive */
 @media (max-width: 1200px) {
-  .app-layout { grid-template-columns: 1fr; }
-  .app-sidebar { display: none; }
+  .app-layout { display: block; }
+  .app-sidebar { display: none !important; }
+  .expand-sidebar-btn { display: none !important; }
   .mobile-floating-btn { display: flex; }
   .glossary-app { padding: 0 24px 100px; }
   .terms-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }

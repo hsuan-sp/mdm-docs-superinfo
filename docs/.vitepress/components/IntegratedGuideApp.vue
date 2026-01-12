@@ -115,17 +115,16 @@ const toggleSidebar = () => {
 <template>
   <div class="guide-app" :style="{ '--app-scale': fontScale }" :class="{ 'sidebar-collapsed': isSidebarCollapsed }">
     <div class="app-layout">
-      <!-- 重新設計的側邊欄：加入統計數字 -->
       <aside class="app-sidebar">
-        <!-- 收合按鈕 -->
-        <button class="collapse-toggle" @click="toggleSidebar" :title="isSidebarCollapsed ? '展開側邊欄' : '收合側邊欄'">
-          <svg v-if="isSidebarCollapsed" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
-          <svg v-else width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg>
-        </button>
-        <div class="sidebar-top">
+        <div class="sidebar-header-box">
+            <button class="collapse-toggle-btn" @click="toggleSidebar" title="收合側邊欄">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+            </button>
             <div class="search-section">
-                <input v-model="searchQuery" type="text" placeholder="🔍 搜尋問答..." class="search-input" />
+                <input v-model="searchQuery" type="text" placeholder="搜尋..." class="search-input" />
             </div>
+        </div>
+        <div class="sidebar-top">
             <nav class="nav-menu">
                 <button 
                     v-for="module in allQAData" :key="module.source"
@@ -150,8 +149,12 @@ const toggleSidebar = () => {
         </div>
       </aside>
 
-      <!-- 主要内容 -->
       <main class="app-content">
+        <!-- 展開按鈕 (僅在側邊欄收合時顯示) -->
+        <button v-if="isSidebarCollapsed" class="expand-sidebar-btn" @click="toggleSidebar" title="展開側邊欄">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><path d="M12 9l3 3-3 3"></path></svg>
+            <span class="btn-text">顯示章節</span>
+        </button>
         <!-- 搜尋模式 -->
         <div v-if="searchQuery" class="result-container">
             <h2 class="title-text">搜尋結果：{{ searchQuery }}</h2>
@@ -222,74 +225,108 @@ const toggleSidebar = () => {
     line-height: 1.6;
 }
 
+/* 主要内容區域 */
+.app-content {
+    flex: 1;
+    min-width: 0;
+}
+
 /* 佈局：電腦版固定側邊欄 */
 .app-layout { 
-    display: grid; 
-    grid-template-columns: 260px 1fr; 
-    gap: 40px; 
+    display: flex; 
+    gap: 0; 
     align-items: start;
     padding-top: 20px;
-    transition: grid-template-columns 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 }
 
 .guide-app.sidebar-collapsed .app-layout {
-    grid-template-columns: 20px 1fr;
-    gap: 20px;
+    gap: 0;
 }
 
 @media (max-width: 900px) { 
-    .app-layout { grid-template-columns: 1fr !important; gap: 20px; } 
+    .app-layout { display: block; } 
     .app-sidebar { display: none !important; } 
-    .guide-app.sidebar-collapsed .app-layout { grid-template-columns: 1fr !important; }
+    .expand-sidebar-btn { display: none !important; }
 }
 
 /* 側邊欄視覺與固定邏輯 */
 .app-sidebar { 
     position: sticky; 
     top: 80px; 
+    width: 280px;
     height: calc(100vh - 120px); 
     display: flex; 
     flex-direction: column;
-    transition: transform 0.4s, opacity 0.3s;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                margin-right 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s;
+    overflow: hidden;
+    background: var(--vp-c-bg); /* 確保收合時不會看到後面的東西 */
+    padding-right: 20px;
 }
 
 .guide-app.sidebar-collapsed .app-sidebar {
-    transform: translateX(-240px);
-    opacity: 0.2;
+    width: 0;
+    margin-right: 0;
+    opacity: 0;
+    pointer-events: none;
 }
 
-.guide-app.sidebar-collapsed .app-sidebar:hover {
-    opacity: 1;
+/* 側邊欄頂部控制區 */
+.sidebar-header-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
 }
 
-/* 收合按鈕 */
-.collapse-toggle {
-    position: absolute;
-    right: -12px;
-    top: 10px;
-    width: 24px;
-    height: 24px;
-    background: var(--vp-c-bg-alt);
-    border: 1px solid var(--vp-c-divider);
-    border-radius: 50%;
+.collapse-toggle-btn {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: none;
+    background: var(--vp-c-bg-mute);
+    color: var(--vp-c-text-2);
     cursor: pointer;
-    z-index: 1000;
-    color: var(--vp-c-text-3);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: all 0.3s;
+    transition: all 0.2s;
+    flex-shrink: 0;
 }
 
-.collapse-toggle:hover {
+.collapse-toggle-btn:hover {
+    background: var(--vp-c-brand-soft);
     color: var(--vp-c-brand-1);
-    transform: scale(1.1);
-    background: var(--vp-c-bg);
 }
 
-.guide-app.sidebar-collapsed .collapse-toggle {
-    right: -32px;
+/* 展開按鈕 (內容區頂部) */
+.expand-sidebar-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    margin-bottom: 24px;
+    background: var(--vp-c-bg-mute);
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 12px;
+    color: var(--vp-c-brand-1);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s;
+    animation: fadeIn 0.3s ease;
+}
+
+.expand-sidebar-btn:hover {
+    background: var(--vp-c-bg-soft);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
 .sidebar-top { flex: 1; display: flex; flex-direction: column; min-height: 0; }
