@@ -8,7 +8,9 @@ import { withBase } from 'vitepress'
     <div class="footer-promo">
       <h2 class="company-name">極電資訊有限公司</h2>
       <p class="service-badges">Apple 授權教育經銷商｜Apple 校園體驗中心｜軟硬體專業諮詢</p>
-      <p class="slogan">致力於給您最好的服務</p>
+      <a href="https://www.superinfo.com.tw" target="_blank" class="slogan-link" title="前往極電資訊官方網站">
+        <p class="slogan">致力於給您最好的服務</p>
+      </a>
     </div>
 
     <div class="divider" role="presentation"></div>
@@ -67,19 +69,29 @@ import { withBase } from 'vitepress'
   transition: color 0.3s ease;
 }
 
+.slogan-link {
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .slogan {
   font-size: 16px;
   color: var(--vp-c-brand-1);
   font-weight: 600;
   opacity: 0.95;
   margin: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  display: inline-block;
+  transition: all 0.3s ease;
 }
 
-.slogan:hover {
+.slogan-link:hover .slogan {
   opacity: 1;
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  text-shadow: 0 4px 12px rgba(0, 113, 227, 0.2);
+}
+
+.slogan-link:hover {
+  transform: scale(1.02);
 }
 
 /* Divider */

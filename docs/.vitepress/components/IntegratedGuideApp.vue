@@ -380,10 +380,20 @@ const toggleSidebar = () => {
     display: flex; justify-content: space-between; align-items: center;
     width: 100%; text-align: left; padding: 10px 14px; border: none; 
     background: transparent; cursor: pointer; border-radius: 10px; margin-bottom: 4px;
-    font-size: 0.9em; color: var(--vp-c-text-2); transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 0.9em; color: var(--vp-c-text-2); 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-item:hover { background: var(--vp-c-bg-mute); color: var(--vp-c-text-1); transform: translateX(4px); }
-.nav-item.active { background: var(--vp-c-brand-soft); color: var(--vp-c-brand-1); font-weight: 700; }
+.nav-item:hover { 
+    background: var(--vp-c-bg-mute); 
+    color: var(--vp-c-text-1); 
+    transform: translateX(4px) scale(1.02);
+}
+.nav-item.active { 
+    background: var(--vp-c-brand-soft); 
+    color: var(--vp-c-brand-1); 
+    font-weight: 700;
+    transform: scale(1.02);
+}
 
 .nav-text { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-right: 10px; }
 .nav-count { font-size: 11px; background: var(--vp-c-bg-alt); padding: 2px 8px; border-radius: 10px; border: 1px solid var(--vp-c-divider); transition: all 0.2s; }
@@ -401,9 +411,35 @@ const toggleSidebar = () => {
 .btn-group button.active { background: var(--vp-c-bg); color: var(--vp-c-brand-1); box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
 
 /* 問答卡片 */
-.qa-item { border: 1px solid var(--vp-c-divider); border-radius: 16px; margin-bottom: 16px; overflow: hidden; background: var(--vp-c-bg-alt); transition: all 0.3s; }
-.qa-item.open { border-color: var(--vp-c-brand-1); box-shadow: 0 4px 20px rgba(0,0,0,0.06); transform: translateY(-2px); }
-.qa-trigger { padding: 20px 24px; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.qa-item { 
+    border: 1px solid var(--vp-c-divider); 
+    border-radius: 16px; 
+    margin-bottom: 16px; 
+    overflow: hidden; 
+    background: var(--vp-c-bg-alt); 
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.qa-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+.qa-item.open { 
+    border-color: var(--vp-c-brand-1); 
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08); 
+    transform: translateY(-2px); 
+}
+.qa-trigger { 
+    padding: 20px 24px; 
+    cursor: pointer; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 16px; 
+    transition: background-color 0.2s ease;
+}
+.qa-trigger:hover {
+    background-color: var(--vp-c-bg-soft);
+}
 .q-main { display: flex; align-items: flex-start; gap: 12px; flex: 1; }
 .q-text { font-size: 1.15em; font-weight: 700; line-height: 1.45; color: var(--vp-c-text-1); }
 .imp-tag { font-size: 0.75em; background: #ff3b30; color: white; padding: 2px 8px; border-radius: 6px; flex-shrink: 0; font-weight: 800; margin-top: 2px; }

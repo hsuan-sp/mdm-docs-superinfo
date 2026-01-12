@@ -24,15 +24,12 @@ const handleKeyDown = (e: KeyboardEvent) => {
 };
 
 const handleCopy = (e: ClipboardEvent) => {
-  const selection = window.getSelection();
-  if (!selection || selection.toString().length < 10) return;
-
-  const watermark = `\n\n----------------------------\n🔒 本站原創內容受技術保護，禁止側錄抓取。\n原文連結：${window.location.href}\n----------------------------`;
-  
+  e.preventDefault();
+  const msg = '🔒 本站內容受技術保護，禁止複製或側錄。';
   if (e.clipboardData) {
-    e.clipboardData.setData('text/plain', selection.toString() + watermark);
-    e.preventDefault();
+    e.clipboardData.setData('text/plain', msg);
   }
+  console.error('🛡️ 複製操作已被攔截');
 };
 
 // 基礎防護：攔截右鍵、快捷鍵與複製
@@ -40,6 +37,10 @@ onMounted(() => {
   document.addEventListener('contextmenu', handleContextMenu);
   document.addEventListener('keydown', handleKeyDown);
   document.addEventListener('copy', handleCopy);
+  
+  // 強制 CSS 禁止選擇 (如果需要更嚴格)
+  document.body.style.userSelect = 'none';
+  document.body.style.webkitUserSelect = 'none';
 
   console.log('%c🛡️ MDM Support Shield Active', 'color: #ff3b30; font-weight: bold;');
 });
@@ -48,6 +49,8 @@ onUnmounted(() => {
   document.removeEventListener('contextmenu', handleContextMenu);
   document.removeEventListener('keydown', handleKeyDown);
   document.removeEventListener('copy', handleCopy);
+  document.body.style.userSelect = 'auto';
+  document.body.style.webkitUserSelect = 'auto';
 });
 </script>
 

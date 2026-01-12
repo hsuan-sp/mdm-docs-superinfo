@@ -561,7 +561,7 @@ const toggleSidebar = () => {
     font-size: 14px; 
     color: var(--vp-c-text-2);
     cursor: pointer; 
-    transition: all 0.2s; 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
     width: 100%;
     border: none;
     background: transparent;
@@ -570,12 +570,14 @@ const toggleSidebar = () => {
 .cat-item:hover { 
   background: var(--vp-c-bg-mute); 
   color: var(--vp-c-text-1); 
+  transform: translateX(4px) scale(1.02);
 }
 
 .cat-item.active { 
   background: var(--vp-c-brand-soft); 
   color: var(--vp-c-brand-1); 
   font-weight: 600; 
+  transform: scale(1.02);
 }
 
 .cat-count {
