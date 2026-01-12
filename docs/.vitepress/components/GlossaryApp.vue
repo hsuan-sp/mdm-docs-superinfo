@@ -10,6 +10,7 @@ const searchQuery = ref("");
 const selectedCategory = ref<CategoryType | "All">("All");
 const sortOrder = ref<'asc' | 'desc'>('asc'); // 新增排序狀態
 const isControlsExpanded = ref(false); // 控制搜尋工具的展開/收起，預設收起
+const fontScale = ref(1.0); // 術語表獨立的字體比例
 
 const categories = [
   "All",
@@ -71,8 +72,16 @@ const toggleControls = () => {
   isControlsExpanded.value = !isControlsExpanded.value;
 };
 
-// Instant animation on scroll
+// Persistence
+import { watch } from 'vue';
+watch(fontScale, (val) => {
+  localStorage.setItem('mdm-glossary-font-scale', val.toString());
+});
+
 onMounted(async () => {
+  const saved = localStorage.getItem('mdm-glossary-font-scale');
+  if (saved) fontScale.value = parseFloat(saved);
+
   await nextTick();
   
   const observer = new IntersectionObserver(
@@ -105,7 +114,7 @@ const getCategoryCount = (cat: string) => {
 </script>
 
 <template>
-  <div class="glossary-app" :class="{ 'is-mobile-device': isMobileView }">
+  <div class="glossary-app" :class="{ 'is-mobile-device': isMobileView }" :style="{ '--app-scale': fontScale }">
     <!-- Header Section -->
     <header class="glossary-header">
       <h1>零知識術語表</h1>
@@ -149,6 +158,18 @@ const getCategoryCount = (cat: string) => {
                {{ cat === 'All' ? '全部顯示' : cat }}
                <span class="cat-count" v-if="getCategoryCount(cat) > 0">{{ getCategoryCount(cat) }}</span>
             </button>
+          </div>
+        </div>
+
+        <!-- Local Font Adjust -->
+        <div class="font-controls">
+          <div class="categories-header">
+            <span>字體大小調整</span>
+          </div>
+          <div class="btn-group">
+            <button @click="fontScale = 0.9" :class="{ active: fontScale === 0.9 }">小</button>
+            <button @click="fontScale = 1.0" :class="{ active: fontScale === 1.0 }">中</button>
+            <button @click="fontScale = 1.2" :class="{ active: fontScale === 1.2 }">大</button>
           </div>
         </div>
       </aside>
@@ -244,6 +265,16 @@ const getCategoryCount = (cat: string) => {
                     {{ cat === 'All' ? '全部' : cat }}
                   </button>
               </div>
+            </div>
+
+            <!-- Mobile Font Adjust -->
+            <div class="font-controls-mobile">
+                <div class="categories-header"><span>字體大小調整</span></div>
+                <div class="btn-group-mobile">
+                    <button @click="fontScale = 0.9" :class="{ active: fontScale === 0.9 }">小</button>
+                    <button @click="fontScale = 1.0" :class="{ active: fontScale === 1.0 }">中</button>
+                    <button @click="fontScale = 1.2" :class="{ active: fontScale === 1.2 }">大</button>
+                </div>
             </div>
         </div>
       </aside>
@@ -365,10 +396,29 @@ const getCategoryCount = (cat: string) => {
 
 /* Base Layout */
 .glossary-app {
+  --base-size: calc(16px * var(--app-scale, 1));
+  font-size: var(--base-size);
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 40px 100px;
 }
+
+/* Local Font Controls Styles */
+.font-controls { margin-top: 32px; }
+.btn-group { display: flex; gap: 4px; background: var(--vp-c-bg-mute); padding: 4px; border-radius: 12px; }
+.btn-group button { 
+    flex: 1; padding: 8px; border: none; background: transparent; border-radius: 8px; 
+    cursor: pointer; font-size: 14px; transition: 0.2s; color: var(--vp-c-text-2); font-weight: 600;
+}
+.btn-group button.active { background: var(--vp-c-bg-alt); color: var(--vp-c-brand-1); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+
+.font-controls-mobile { margin-top: 32px; }
+.btn-group-mobile { display: flex; gap: 8px; }
+.btn-group-mobile button {
+    flex: 1; padding: 12px; background: var(--vp-c-bg-mute); border: none; border-radius: 12px;
+    font-size: 15px; font-weight: 600; color: var(--vp-c-text-2); cursor: pointer;
+}
+.btn-group-mobile button.active { background: var(--vp-c-brand-1); color: white; }
 
 /* Header */
 .glossary-header {

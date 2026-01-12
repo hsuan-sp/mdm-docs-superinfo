@@ -91,6 +91,16 @@ const switchModule = (source: string) => {
   isSidebarOpen.value = false;
   openItems.value.clear();
 };
+
+// Persistence
+watch(fontScale, (val) => {
+  localStorage.setItem('mdm-qa-font-scale', val.toString());
+});
+
+onMounted(() => {
+  const saved = localStorage.getItem('mdm-qa-font-scale');
+  if (saved) fontScale.value = parseFloat(saved);
+});
 </script>
 
 <template>
