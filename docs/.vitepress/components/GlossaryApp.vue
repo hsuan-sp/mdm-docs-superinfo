@@ -204,47 +204,53 @@ const getCategoryCount = (cat: string) => {
       <span class="label">篩選與搜尋</span>
     </button>
 
-    <!-- Mobile Drawer Overlay -->
-    <div class="mobile-drawer-overlay" :class="{ open: isControlsExpanded }" @click="isControlsExpanded = false">
-      <aside class="mobile-drawer" @click.stop role="dialog" aria-label="篩選與搜尋">
-        <div class="drawer-header">
-          <h3>篩選與搜尋</h3>
-          <button class="close-btn" @click="isControlsExpanded = false" aria-label="關閉">✕</button>
+    <!-- Mobile Drawer (Premium Bottom Sheet) -->
+    <Teleport to="body">
+      <Transition name="slide-up">
+        <div v-if="isControlsExpanded" class="mobile-drawer-overlay" @click="isControlsExpanded = false">
+          <aside class="mobile-drawer" @click.stop role="dialog" aria-label="篩選與搜尋">
+            <div class="drawer-handle"></div>
+            <div class="drawer-header">
+              <h3>篩選與搜尋</h3>
+              <button class="close-btn" @click="isControlsExpanded = false" aria-label="關閉">✕</button>
+            </div>
+
+            <div class="drawer-content">
+              <div class="search-box">
+                <span class="search-icon" aria-hidden="true">🔍</span>
+                <input v-model="searchQuery" type="text" placeholder="搜尋術語..." class="search-input" aria-label="搜尋術語" />
+              </div>
+
+              <div class="categories-wrapper">
+                <div class="categories-header">
+                  <span>分類選擇</span>
+                  <button @click="toggleSort" class="sort-btn">
+                    {{ sortOrder === 'asc' ? '排序 A-Z' : '排序 Z-A' }}
+                  </button>
+                </div>
+                <div class="categories-chips">
+                  <button v-for="cat in categories" :key="cat"
+                    @click="selectedCategory = cat; isControlsExpanded = false"
+                    :class="['cat-chip', { active: selectedCategory === cat }]">
+                    {{ cat === 'All' ? '全部' : cat }}
+                  </button>
+                </div>
+              </div>
+
+              <!-- Mobile Font Adjust -->
+              <div class="font-controls-mobile">
+                <div class="categories-header"><span>字體大小調整</span></div>
+                <div class="btn-group-mobile">
+                  <button @click="fontScale = 0.9" :class="{ active: fontScale === 0.9 }">小</button>
+                  <button @click="fontScale = 1.0" :class="{ active: fontScale === 1.0 }">中</button>
+                  <button @click="fontScale = 1.2" :class="{ active: fontScale === 1.2 }">大</button>
+                </div>
+              </div>
+            </div>
+          </aside>
         </div>
-
-        <div class="drawer-content">
-          <div class="search-box">
-            <span class="search-icon" aria-hidden="true">🔍</span>
-            <input v-model="searchQuery" type="text" placeholder="搜尋術語..." class="search-input" aria-label="搜尋術語" />
-          </div>
-
-          <div class="categories-wrapper">
-            <div class="categories-header">
-              <span>分類選擇</span>
-              <button @click="toggleSort" class="sort-btn">
-                {{ sortOrder === 'asc' ? '排序 A-Z' : '排序 Z-A' }}
-              </button>
-            </div>
-            <div class="categories-chips">
-              <button v-for="cat in categories" :key="cat" @click="selectedCategory = cat; isControlsExpanded = false"
-                :class="['cat-chip', { active: selectedCategory === cat }]">
-                {{ cat === 'All' ? '全部' : cat }}
-              </button>
-            </div>
-          </div>
-
-          <!-- Mobile Font Adjust -->
-          <div class="font-controls-mobile">
-            <div class="categories-header"><span>字體大小調整</span></div>
-            <div class="btn-group-mobile">
-              <button @click="fontScale = 0.9" :class="{ active: fontScale === 0.9 }">小</button>
-              <button @click="fontScale = 1.0" :class="{ active: fontScale === 1.0 }">中</button>
-              <button @click="fontScale = 1.2" :class="{ active: fontScale === 1.2 }">大</button>
-            </div>
-          </div>
-        </div>
-      </aside>
-    </div>
+      </Transition>
+    </Teleport>
   </div>
 </template>
 
@@ -276,22 +282,14 @@ const getCategoryCount = (cat: string) => {
   box-shadow: 0 12px 24px rgba(0, 113, 227, 0.4);
 }
 
-/* Liquid Glass Drawer */
+/* Liquid Glass Drawer (Bottom Sheet) */
 .mobile-drawer-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  z-index: 1000;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-}
-
-.mobile-drawer-overlay.open {
-  opacity: 1;
-  pointer-events: auto;
+  z-index: 2000;
 }
 
 .mobile-drawer {
@@ -299,17 +297,27 @@ const getCategoryCount = (cat: string) => {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--vp-c-bg);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
   border-radius: 32px 32px 0 0;
-  padding: 32px;
-  padding-bottom: calc(32px + env(safe-area-inset-bottom));
-  transform: translateY(100%);
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding: 24px 24px calc(24px + env(safe-area-inset-bottom));
   box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
+  max-height: 85vh;
+  overflow-y: auto;
 }
 
-.mobile-drawer-overlay.open .mobile-drawer {
-  transform: translateY(0);
+.dark .mobile-drawer {
+  background: rgba(28, 28, 30, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.drawer-handle {
+  width: 40px;
+  height: 5px;
+  background: var(--vp-c-divider);
+  border-radius: 10px;
+  margin: 0 auto 20px;
 }
 
 .drawer-header {
@@ -320,22 +328,22 @@ const getCategoryCount = (cat: string) => {
 }
 
 .drawer-header h3 {
-  font-size: 22px;
-  font-weight: 800;
+  font-size: 1.2rem;
+  font-weight: 700;
   margin: 0;
 }
 
 .close-btn {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: var(--vp-c-bg-mute);
   border: none;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  color: var(--vp-c-text-1);
+  font-size: 14px;
 }
 
 .categories-chips {

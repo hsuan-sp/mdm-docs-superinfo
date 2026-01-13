@@ -233,20 +233,42 @@ const switchModule = (source: string | "All") => {
       </main>
     </div>
 
-    <!-- 行動版選單 -->
-    <button class="mobile-menu-btn" @click="isSidebarOpen = !isSidebarOpen">
-      {{ isSidebarOpen ? '關閉' : '章節選單' }}
+    <!-- 行動版選單 (Premium Bottom Sheet) -->
+    <button class="mobile-menu-btn" @click="isSidebarOpen = true">
+      章節選單
     </button>
-    <div v-if="isSidebarOpen" class="mobile-nav-overlay" @click="isSidebarOpen = false">
-      <div class="mobile-nav-content" @click.stop>
-        <div class="mobile-search"><input v-model="searchQuery" type="text" placeholder="搜尋..." /></div>
-        <div v-for="m in allQAData" :key="m.source" @click="switchModule(m.source)" class="m-nav-item"
-          :class="{ active: activeSource === m.source }">
-          <span class="nav-text">{{ m.source }}</span>
-          <span class="nav-count">{{ getChapterCount(m.source) }}</span>
+
+    <Teleport to="body">
+      <Transition name="slide-up">
+        <div v-if="isSidebarOpen" class="mobile-nav-overlay" @click="isSidebarOpen = false">
+          <div class="mobile-nav-content" @click.stop>
+            <div class="drawer-handle"></div>
+            <div class="drawer-header">
+              <h3>章節選單</h3>
+              <button class="close-btn" @click="isSidebarOpen = false">✕</button>
+            </div>
+
+            <div class="mobile-search">
+              <input v-model="searchQuery" type="text" placeholder="搜尋..." />
+            </div>
+
+            <div class="mobile-nav-scroll">
+              <div @click="switchModule('All')" class="m-nav-item"
+                :class="{ active: activeSource === 'All' && !searchQuery }">
+                <span class="nav-text">全部題目</span>
+                <span class="nav-count">{{allQAData.reduce((t, m) => t + getChapterCount(m.source), 0)}}</span>
+              </div>
+
+              <div v-for="m in allQAData" :key="m.source" @click="switchModule(m.source)" class="m-nav-item"
+                :class="{ active: activeSource === m.source && !searchQuery }">
+                <span class="nav-text">{{ m.source }}</span>
+                <span class="nav-count">{{ getChapterCount(m.source) }}</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </Transition>
+    </Teleport>
   </div>
 </template>
 
@@ -467,45 +489,138 @@ const switchModule = (source: string | "All") => {
   }
 }
 
+/* 行動版選單 (Premium Bottom Sheet) */
 .mobile-nav-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 99;
-  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .mobile-nav-content {
-  width: 80%;
-  max-width: 300px;
-  height: 100%;
-  background: var(--vp-c-bg);
-  padding: 40px 20px;
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 32px 32px 0 0;
+  padding: 24px 24px calc(24px + env(safe-area-inset-bottom));
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dark .mobile-nav-content {
+  background: rgba(28, 28, 30, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.drawer-handle {
+  width: 40px;
+  height: 5px;
+  background: var(--vp-c-divider);
+  border-radius: 10px;
+  margin: 0 auto 20px;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.drawer-header h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
 }
 
 .mobile-search input {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 30px;
-  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  border-radius: 16px;
   border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  font-size: 16px;
+}
+
+.mobile-nav-scroll {
+  overflow-y: auto;
+  flex: 1;
 }
 
 .m-nav-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
-  border-bottom: 1px solid var(--vp-c-divider);
+  padding: 18px;
+  border-radius: 16px;
+  margin-bottom: 8px;
+  background: rgba(0, 0, 0, 0.03);
+  transition: all 0.2s;
+}
+
+.dark .m-nav-item {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .m-nav-item.active {
-  color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-1);
+  color: white;
   font-weight: 700;
-  background: var(--vp-c-brand-soft);
 }
 
-.m-nav-item .nav-count {
-  font-size: 12px;
+.m-nav-item.active .nav-count {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.nav-count {
+  font-size: 11px;
+  padding: 2px 8px;
+  background: var(--vp-c-divider);
+  border-radius: 10px;
+}
+
+/* Slide Up Transition for Teleport */
+:global(.slide-up-enter-active),
+:global(.slide-up-leave-active) {
+  transition: opacity 0.3s ease;
+}
+
+:global(.slide-up-enter-from),
+:global(.slide-up-leave-to) {
+  opacity: 0;
+}
+
+:global(.slide-up-enter-active .mobile-nav-content),
+:global(.slide-up-leave-active .mobile-nav-content) {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+:global(.slide-up-enter-from .mobile-nav-content),
+:global(.slide-up-leave-to .mobile-nav-content) {
+  transform: translateY(100%);
 }
 </style>
