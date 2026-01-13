@@ -213,8 +213,10 @@ const switchModule = (source: string | "All") => {
               <h3 class="group-label">{{ group.source }}</h3>
               <div v-for="item in group.items" :key="item.id" class="qa-item" :class="{ open: openItems.has(item.id) }">
                 <div class="qa-trigger" @click="toggleItem(item.id)">
-                  <span v-if="item.important" class="imp-tag">重要</span>
-                  <span class="q-text">{{ item.question }}</span>
+                  <div class="q-main">
+                    <span v-if="item.important" class="imp-tag">重要</span>
+                    <span class="q-text">{{ item.question }}</span>
+                  </div>
                   <span class="arrow">▼</span>
                 </div>
                 <div v-if="openItems.has(item.id)" class="qa-content">
