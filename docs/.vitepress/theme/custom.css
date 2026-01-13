@@ -136,6 +136,7 @@ body.is-home::before {
 }
 
 /* 2. App Pages: Professional Geometric Pattern */
+/* 2. App Pages: Professional Geometric Pattern */
 body.is-app::before {
   content: "";
   position: fixed;
@@ -144,18 +145,21 @@ body.is-app::before {
   pointer-events: none;
   background-color: var(--vp-c-bg);
   background-image: 
-    linear-gradient(rgba(0,122,255,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,122,255,0.04) 1px, transparent 1px);
+    /* Increased visibility: 0.04 -> 0.08 */
+    linear-gradient(rgba(0,122,255,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,122,255,0.08) 1px, transparent 1px);
   background-size: 40px 40px;
   background-position: center center;
-  opacity: 0.8;
+  /* Make it crisp */
+  opacity: 1;
 }
 
 .dark body.is-app::before {
-  opacity: 0.3;
+  opacity: 1;
   background-image: 
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    /* Increased visibility: 0.03 -> 0.06 */
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
 }
 
 .VPButton {
