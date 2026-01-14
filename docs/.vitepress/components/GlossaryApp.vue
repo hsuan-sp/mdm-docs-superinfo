@@ -197,30 +197,26 @@ const clearSearch = () => {
         <TransitionGroup name="list" tag="div" class="terms-grid">
           <article v-for="(item, index) in filteredTerms" :key="item.term" class="term-card"
             :style="{ '--delay': (index as any) % 10 }">
-            <div class="term-lift-layer">
-              <div class="term-bob-layer">
-                <div class="term-card-content">
-                  <div class="card-main">
-                    <header class="card-header">
-                      <h3 class="term-title">{{ item.term }}</h3>
-                      <div class="term-badges">
-                        <span v-for="cat in (Array.isArray(item.category) ? item.category : [item.category])" :key="cat"
-                          :class="['badge', getCategoryColor(cat)]">
-                          {{ cat }}
-                        </span>
-                      </div>
-                    </header>
-                    <div class="term-definition markdown-body" v-html="renderMarkdown(item.definition)"></div>
+            <div class="term-card-content">
+              <div class="card-main">
+                <header class="card-header">
+                  <h3 class="term-title">{{ item.term }}</h3>
+                  <div class="term-badges">
+                    <span v-for="cat in (Array.isArray(item.category) ? item.category : [item.category])" :key="cat"
+                      :class="['badge', getCategoryColor(cat)]">
+                      {{ cat }}
+                    </span>
                   </div>
-                  <section v-if="item.analogy" class="analogy-wrapper">
-                    <div class="analogy-icon" aria-hidden="true">💡</div>
-                    <div class="analogy-content">
-                      <span class="analogy-label">白話文 / 比喻</span>
-                      <div class="analogy-text markdown-body" v-html="renderMarkdown(item.analogy)"></div>
-                    </div>
-                  </section>
-                </div>
+                </header>
+                <div class="term-definition markdown-body" v-html="renderMarkdown(item.definition)"></div>
               </div>
+              <section v-if="item.analogy" class="analogy-wrapper">
+                <div class="analogy-icon" aria-hidden="true">💡</div>
+                <div class="analogy-content">
+                  <span class="analogy-label">白話文 / 比喻</span>
+                  <div class="analogy-text markdown-body" v-html="renderMarkdown(item.analogy)"></div>
+                </div>
+              </section>
             </div>
           </article>
         </TransitionGroup>
@@ -566,71 +562,38 @@ const clearSearch = () => {
   height: 100%;
 }
 
-.term-lift-layer {
-  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  height: 100%;
-  will-change: transform;
-}
-
-.term-bob-layer {
-  animation: term-idle-bob 10s ease-in-out infinite;
-  animation-delay: calc(var(--delay, 0) * 0.3s);
-  height: 100%;
-  will-change: transform;
-}
-
 .term-card-content {
   background: var(--vp-c-bg-elv, #ffffff);
-  border-radius: 24px;
+  border-radius: 20px;
   border: 1px solid var(--vp-c-divider);
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  animation: glossary-intro 1s cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-delay: calc(var(--delay, 0) * 0.15s);
-}
-
-@keyframes term-idle-bob {
-
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-  }
-
-  33% {
-    transform: translate3d(0, -8px, 0) rotate(0.4deg);
-  }
-
-  66% {
-    transform: translate3d(0, -4px, 0) rotate(-0.3deg);
-  }
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s ease;
+  animation: glossary-intro 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--delay, 0) * 0.05s);
 }
 
 @keyframes glossary-intro {
   from {
     opacity: 0;
-    transform: translateY(20px) scale(0.98);
+    transform: translateY(15px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
 
-.term-card:hover .term-lift-layer {
-  transform: translate3d(0, -20px, 0) scale(1.05);
-}
-
 .term-card:hover .term-card-content {
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   border-color: var(--vp-c-brand-soft);
-}
-
-.term-card:hover .term-bob-layer {
-  animation-play-state: paused;
 }
 
 .card-main {

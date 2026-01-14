@@ -418,79 +418,43 @@ const switchModule = (source: string | "All") => {
 
 /* 問答卡片 */
 .qa-item {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   width: 100%;
-}
-
-.qa-lift-layer {
-  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform;
-}
-
-.qa-bob-layer {
-  animation: qa-idle-bob 10s ease-in-out infinite;
-  animation-delay: calc(var(--item-index, 0) * 0.3s);
-  will-change: transform;
 }
 
 .qa-card-content {
   border: 1px solid var(--vp-c-divider);
-  border-radius: 24px;
+  border-radius: 20px;
   overflow: hidden;
   background: var(--vp-c-bg-elv, #ffffff);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  animation: qa-intro 1s cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-delay: calc(var(--item-index, 0) * 0.15s);
-}
-
-@keyframes qa-idle-bob {
-
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-  }
-
-  33% {
-    transform: translate3d(0, -6px, 0) rotate(0.4deg);
-  }
-
-  66% {
-    transform: translate3d(0, -3px, 0) rotate(-0.3deg);
-  }
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: qa-intro 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--item-index, 0) * 0.05s);
 }
 
 @keyframes qa-intro {
   from {
     opacity: 0;
-    transform: translateY(20px) scale(0.98);
+    transform: translateY(15px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
 
-.qa-item:hover .qa-lift-layer {
-  transform: translate3d(0, -20px, 0) scale(1.02);
-}
-
 .qa-item:hover .qa-card-content {
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   border-color: var(--vp-c-brand-soft);
-}
-
-.qa-item:hover .qa-bob-layer {
-  animation-play-state: paused;
 }
 
 .qa-item.open .qa-card-content {
   border-color: var(--vp-c-brand-1);
-  box-shadow: 0 20px 60px rgba(0, 122, 255, 0.15);
-}
-
-.qa-item.open .qa-lift-layer {
-  transform: translate3d(0, -6px, 0) scale(1.01);
+  box-shadow: 0 12px 30px rgba(0, 122, 255, 0.1);
 }
 
 .qa-trigger {

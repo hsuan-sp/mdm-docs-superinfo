@@ -502,15 +502,11 @@ const navCards = [
 
   0%,
   100% {
-    transform: translate3d(0, 0, 0) scale(1.1) rotate(0deg);
+    transform: translateY(0) scale(1.1);
   }
 
-  33% {
-    transform: translate3d(0, -6px, 0) scale(1.1) rotate(1deg);
-  }
-
-  66% {
-    transform: translate3d(0, -3px, 0) scale(1.1) rotate(-1deg);
+  50% {
+    transform: translateY(-8px) scale(1.1);
   }
 }
 
