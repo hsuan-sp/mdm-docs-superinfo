@@ -10,6 +10,8 @@ import GlobalFooter from '../components/GlobalFooter.vue'
 
 import UserCenter from './components/UserCenter.vue'
 import SecurityGuard from './components/SecurityGuard.vue'
+import MobileDrawer from './components/MobileDrawer.vue'
+import EmptyState from './components/EmptyState.vue'
 
 import IntegratedGuideApp from '../components/IntegratedGuideApp.vue'
 
@@ -23,9 +25,10 @@ export default {
   },
   enhanceApp({ app, router, siteData }: EnhanceAppContext) {
     app.component('GlossaryApp', GlossaryApp)
-
     app.component('IntegratedGuideApp', IntegratedGuideApp)
     app.component('AppleHome', AppleHome)
     app.component('GlobalFooter', GlobalFooter)
+    app.component('MobileDrawer', MobileDrawer)
+    app.component('EmptyState', EmptyState)
   }
 }

@@ -3,7 +3,10 @@ import { ref, computed, onMounted, nextTick } from "vue";
 import { glossaryData } from "../../data/glossary";
 import { useLayoutMode } from '../theme/composables/useLayoutMode';
 import { useAppFeatures } from '../theme/composables/useAppFeatures';
+import { useKeyboardShortcuts } from '../theme/composables/useKeyboardShortcuts';
 import AppSidebar from './AppSidebar.vue';
+import MobileDrawer from '../theme/components/MobileDrawer.vue';
+import EmptyState from '../theme/components/EmptyState.vue';
 
 const { isMobileView } = useLayoutMode();
 const { fontScale, isSidebarCollapsed, toggleSidebar } = useAppFeatures('mdm-glossary');
@@ -73,23 +76,21 @@ const toggleSort = () => {
 };
 
 // Keyboard shortcuts
-const handleKeyDown = (e: KeyboardEvent) => {
-  if (e.key === '/' && (e.target as HTMLElement).tagName !== 'INPUT') {
-    e.preventDefault();
+useKeyboardShortcuts({
+  onSearchFocus: () => {
     const searchInput = document.querySelector('.search-input') as HTMLInputElement;
     searchInput?.focus();
-  }
-  if (e.key === 'Escape') {
+  },
+  onEscape: () => {
     if (searchQuery.value) {
       searchQuery.value = '';
     } else if (isControlsExpanded.value) {
       isControlsExpanded.value = false;
     }
   }
-};
+});
 
 onMounted(async () => {
-  window.addEventListener('keydown', handleKeyDown);
   await nextTick();
 
   const observer = new IntersectionObserver(
@@ -108,12 +109,6 @@ onMounted(async () => {
   });
 });
 
-import { onUnmounted } from 'vue';
-onUnmounted(() => {
-  window.removeEventListener('keydown', handleKeyDown);
-});
-
-
 
 // Helper to count items per category
 const getCategoryCount = (cat: string) => {
@@ -125,7 +120,10 @@ const getCategoryCount = (cat: string) => {
   ).length;
 };
 
-
+const clearSearch = () => {
+  searchQuery.value = '';
+  selectedCategory.value = 'All';
+};
 
 
 </script>
@@ -206,11 +204,13 @@ const getCategoryCount = (cat: string) => {
         </TransitionGroup>
 
         <!-- Empty State -->
-        <div v-if="filteredTerms.length === 0" class="empty-state">
-          <div class="empty-emoji">🧐</div>
-          <p>沒有找到符合「{{ searchQuery }}」的術語</p>
-          <button @click="searchQuery = ''; selectedCategory = 'All'" class="reset-btn">清除搜尋條件</button>
-        </div>
+        <EmptyState 
+          v-if="filteredTerms.length === 0" 
+          icon="🧐"
+          :description="`沒有找到符合「${searchQuery}」的術語`"
+          action-text="清除搜尋條件"
+          @clear="clearSearch"
+        />
       </main>
     </div>
 
@@ -221,53 +221,39 @@ const getCategoryCount = (cat: string) => {
       <span class="label">篩選與搜尋</span>
     </button>
 
-    <!-- Mobile Drawer (Premium Bottom Sheet) -->
-    <Teleport to="body">
-      <Transition name="slide-up">
-        <div v-if="isControlsExpanded" class="mobile-drawer-overlay" @click="isControlsExpanded = false">
-          <aside class="mobile-drawer" @click.stop role="dialog" aria-label="篩選與搜尋">
-            <div class="drawer-handle"></div>
-            <div class="drawer-header">
-              <h3>篩選與搜尋</h3>
-              <button class="close-btn" @click="isControlsExpanded = false" aria-label="關閉">✕</button>
-            </div>
+    <!-- Mobile Drawer (Using Shared Component) -->
+    <MobileDrawer :is-open="isControlsExpanded" title="篩選與搜尋" @close="isControlsExpanded = false">
+      <div class="search-box">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input v-model="searchQuery" type="text" placeholder="搜尋術語..." class="search-input" aria-label="搜尋術語" />
+      </div>
 
-            <div class="drawer-content">
-              <div class="search-box">
-                <span class="search-icon" aria-hidden="true">🔍</span>
-                <input v-model="searchQuery" type="text" placeholder="搜尋術語..." class="search-input" aria-label="搜尋術語" />
-              </div>
-
-              <div class="categories-wrapper">
-                <div class="categories-header">
-                  <span>分類選擇</span>
-                  <button @click="toggleSort" class="sort-btn">
-                    {{ sortOrder === 'asc' ? '排序 A-Z' : '排序 Z-A' }}
-                  </button>
-                </div>
-                <div class="categories-chips">
-                  <button v-for="cat in categories" :key="cat"
-                    @click="selectedCategory = cat; isControlsExpanded = false"
-                    :class="['cat-chip', { active: selectedCategory === cat }]">
-                    {{ cat === 'All' ? '全部' : cat }}
-                  </button>
-                </div>
-              </div>
-
-              <!-- Mobile Font Adjust -->
-              <div class="font-controls-mobile">
-                <div class="categories-header"><span>字體大小調整</span></div>
-                <div class="btn-group-mobile">
-                  <button @click="fontScale = 0.9" :class="{ active: fontScale === 0.9 }">小</button>
-                  <button @click="fontScale = 1.0" :class="{ active: fontScale === 1.0 }">中</button>
-                  <button @click="fontScale = 1.2" :class="{ active: fontScale === 1.2 }">大</button>
-                </div>
-              </div>
-            </div>
-          </aside>
+      <div class="categories-wrapper">
+        <div class="categories-header">
+          <span>分類選擇</span>
+          <button @click="toggleSort" class="sort-btn">
+            {{ sortOrder === 'asc' ? '排序 A-Z' : '排序 Z-A' }}
+          </button>
         </div>
-      </Transition>
-    </Teleport>
+        <div class="categories-chips">
+          <button v-for="cat in categories" :key="cat"
+            @click="selectedCategory = cat; isControlsExpanded = false"
+            :class="['cat-chip', { active: selectedCategory === cat }]">
+            {{ cat === 'All' ? '全部' : cat }}
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Font Adjust -->
+      <div class="font-controls-mobile">
+        <div class="categories-header"><span>字體大小調整</span></div>
+        <div class="btn-group-mobile">
+          <button @click="fontScale = 0.9" :class="{ active: fontScale === 0.9 }">小</button>
+          <button @click="fontScale = 1.0" :class="{ active: fontScale === 1.0 }">中</button>
+          <button @click="fontScale = 1.2" :class="{ active: fontScale === 1.2 }">大</button>
+        </div>
+      </div>
+    </MobileDrawer>
   </div>
 </template>
 
@@ -299,90 +285,10 @@ const getCategoryCount = (cat: string) => {
   box-shadow: 0 12px 24px rgba(0, 113, 227, 0.4);
 }
 
-/* Liquid Glass Drawer (Bottom Sheet) */
-.mobile-drawer-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  z-index: 2000;
-}
-
-.mobile-drawer {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(30px) saturate(180%);
-  -webkit-backdrop-filter: blur(30px) saturate(180%);
-  border-radius: 32px 32px 0 0;
-  padding: 24px 24px calc(24px + env(safe-area-inset-bottom));
-  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
-  max-height: 85vh;
-  overflow-y: auto;
-}
-
-.dark .mobile-drawer {
-  background: rgba(28, 28, 30, 0.95);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.drawer-handle {
-  width: 40px;
-  height: 5px;
-  background: var(--vp-c-divider);
-  border-radius: 10px;
-  margin: 0 auto 20px;
-}
-
-.drawer-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.drawer-header h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin: 0;
-}
-
-.close-btn {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: none;
-  background: var(--vp-c-bg-soft);
-  color: var(--vp-c-text-1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-}
-
 .categories-chips {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-}
-
-.cat-chip {
-  padding: 8px 16px;
-  border-radius: 20px;
-  background: var(--vp-c-bg-alt);
-  border: 1px solid var(--vp-c-divider);
-  font-size: 14px;
-  color: var(--vp-c-text-2);
-  transition: all 0.2s;
-}
-
-.cat-chip.active {
-  background: var(--vp-c-brand-1);
-  color: white;
-  border-color: var(--vp-c-brand-1);
 }
 
 /* 術語表獨立比例控制 */
@@ -503,9 +409,6 @@ const getCategoryCount = (cat: string) => {
   padding: 2px 10px;
   border-radius: 6px;
 }
-
-
-
 
 
 .app-content {
@@ -797,31 +700,6 @@ const getCategoryCount = (cat: string) => {
   color: #fff;
 }
 
-/* Empty State */
-.empty-state {
-  text-align: center;
-  padding: 100px 40px;
-  background: var(--vp-c-bg-soft);
-  border-radius: 32px;
-  border: 2px dashed var(--vp-c-divider);
-}
-
-.empty-emoji {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.reset-btn {
-  margin-top: 24px;
-  padding: 10px 24px;
-  border-radius: 20px;
-  background: var(--vp-c-brand-1);
-  color: white;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-}
-
 /* Responsive */
 @media (max-width: 1200px) {
   .app-layout {
@@ -867,5 +745,21 @@ const getCategoryCount = (cat: string) => {
   .list-leave-active {
     transition: none !important;
   }
+}
+
+.cat-chip {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: var(--vp-c-bg-alt);
+  border: 1px solid var(--vp-c-divider);
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+  transition: all 0.2s;
+}
+
+.cat-chip.active {
+  background: var(--vp-c-brand-1);
+  color: white;
+  border-color: var(--vp-c-brand-1);
 }
 </style>

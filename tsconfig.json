@@ -39,6 +39,7 @@
     "docs/**/*.vue",
     "docs/.vitepress/**/*.ts",
     "docs/.vitepress/**/*.mts",
+    "docs/.vitepress/**/*.d.ts",
     "docs/.vitepress/**/*.vue"
   ],
   "exclude": ["node_modules", "dist"]

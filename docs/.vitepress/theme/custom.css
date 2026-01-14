@@ -79,7 +79,7 @@
   .VPDoc {
     padding: 0 !important;
   }
-  
+
   .VPContent.has-sidebar {
     padding-right: 0 !important;
     padding-left: var(--vp-sidebar-width) !important;
@@ -96,16 +96,35 @@
 }
 
 /* targeted Smooth Transitions - Elastic & Silky */
-a, button, input, select, textarea, .nav-item, .cat-item, .qa-item, .card, 
-.VPButton, .nav-text, .search-box, .app-sidebar, .term-card {
+a,
+button,
+input,
+select,
+textarea,
+.nav-item,
+.cat-item,
+.qa-item,
+.card,
+.VPButton,
+.nav-text,
+.search-box,
+.app-sidebar,
+.term-card {
   transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-a:hover, button:hover, .nav-item:hover, .cat-item:hover, .qa-item:hover {
+a:hover,
+button:hover,
+.nav-item:hover,
+.cat-item:hover,
+.qa-item:hover {
   transform: translateY(-1px);
 }
 
-a:active, button:active, .nav-item:active, .cat-item:active {
+a:active,
+button:active,
+.nav-item:active,
+.cat-item:active {
   transform: scale(0.97);
 }
 
@@ -120,7 +139,7 @@ body.is-home::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url('/mdm_hero_premium.png');
+  background-image: url("/mdm_hero_premium.png");
   background-size: cover;
   background-position: center;
   opacity: 0.6;
@@ -145,9 +164,11 @@ body.is-app::before {
   pointer-events: none;
   background-color: var(--vp-c-bg);
   background-image: 
-    /* Increased visibility: 0.04 -> 0.08 */
-    linear-gradient(rgba(0,122,255,0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,122,255,0.08) 1px, transparent 1px);
+    /* Increased visibility: 0.04 -> 0.08 */ linear-gradient(
+      rgba(0, 122, 255, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(0, 122, 255, 0.08) 1px, transparent 1px);
   background-size: 40px 40px;
   background-position: center center;
   /* Make it crisp */
@@ -157,9 +178,11 @@ body.is-app::before {
 .dark body.is-app::before {
   opacity: 1;
   background-image: 
-    /* Increased visibility: 0.03 -> 0.06 */
-    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+    /* Increased visibility: 0.03 -> 0.06 */ linear-gradient(
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
 }
 
 .VPButton {
@@ -175,8 +198,122 @@ body.is-app::before {
   :root {
     --vp-screen-padding: 16px;
   }
-  
+
   .VPDoc .container {
     padding: 0 var(--vp-screen-padding) !important;
   }
+}
+
+/* --- Shared UI Components --- */
+
+/* 1. Badge / Tag System */
+.badge,
+.tag {
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  line-height: 1.4;
+}
+
+/* Badge Color System */
+.badge-core {
+  background: rgba(0, 113, 227, 0.1);
+  color: #0071e3;
+}
+.badge-enrollment {
+  background: rgba(52, 199, 89, 0.1);
+  color: #28cd41;
+}
+.badge-apple {
+  background: rgba(0, 0, 0, 0.05);
+  color: #1d1d1f;
+}
+.badge-security {
+  background: rgba(255, 59, 48, 0.1);
+  color: #ff3b30;
+}
+.badge-network {
+  background: rgba(88, 86, 214, 0.1);
+  color: #5856d6;
+}
+.badge-hardware {
+  background: rgba(255, 149, 0, 0.1);
+  color: #ff9500;
+}
+.badge-apps {
+  background: rgba(255, 45, 85, 0.1);
+  color: #ff2d55;
+}
+.badge-other {
+  background: rgba(142, 142, 147, 0.1);
+  color: #8e8e93;
+}
+.badge-education {
+  background: rgba(255, 204, 0, 0.1);
+  color: #cca300;
+}
+.badge-macos {
+  background: rgba(175, 82, 222, 0.1);
+  color: #af52de;
+}
+.badge-jamf {
+  background: rgba(0, 0, 0, 0.1);
+  color: #1d1d1f;
+}
+
+.dark .badge-apple,
+.dark .badge-jamf {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* 2. Global Search Input Style */
+.search-input {
+  width: 100%;
+  padding: 12px 16px 12px 40px;
+  border-radius: 12px;
+  font-size: 14px;
+  transition: all 0.2s;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+}
+
+.search-input:focus {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.1);
+  outline: none;
+}
+
+/* 3. Empty Results Generic */
+.empty-results {
+  text-align: center;
+  padding: 80px 24px;
+  background: var(--vp-c-bg-alt);
+  border-radius: 24px;
+  border: 1px dashed var(--vp-c-divider);
+  margin-top: 40px;
+}
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* 4. Common Card Styles */
+.card-base {
+  background: var(--vp-c-bg);
+  border-radius: 24px;
+  border: 1px solid var(--vp-c-divider);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+}
+
+.card-base:hover {
+  border-color: var(--vp-c-brand-soft);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }

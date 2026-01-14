@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from "vue";
 import { useAppFeatures } from '../theme/composables/useAppFeatures';
+import { useKeyboardShortcuts } from '../theme/composables/useKeyboardShortcuts';
 import { allQAData } from "../../data/all-data";
 import type { QAItem } from "../../types";
 import MarkdownIt from "markdown-it";
 import AppSidebar from './AppSidebar.vue';
+import MobileDrawer from '../theme/components/MobileDrawer.vue';
+import EmptyState from '../theme/components/EmptyState.vue';
 
 const md = new MarkdownIt({
   html: true,
@@ -135,31 +138,28 @@ const renderMarkdown = (text: string) => {
 };
 
 // Keyboard shortcuts
-const handleKeyDown = (e: KeyboardEvent) => {
-  if (e.key === '/' && (e.target as HTMLElement).tagName !== 'INPUT') {
-    e.preventDefault();
+useKeyboardShortcuts({
+  onSearchFocus: () => {
     const searchInput = document.querySelector('.search-input') as HTMLInputElement;
     searchInput?.focus();
-  }
-  if (e.key === 'Escape') {
+  },
+  onEscape: () => {
     if (searchQuery.value) {
       searchQuery.value = '';
     } else if (isSidebarOpen.value) {
       isSidebarOpen.value = false;
     }
   }
-};
+});
 
 onMounted(() => {
   handleHashChange();
   window.addEventListener('hashchange', handleHashChange);
-  window.addEventListener('keydown', handleKeyDown);
   // Body class added by useAppFeatures
 });
 
 onUnmounted(() => {
   window.removeEventListener('hashchange', handleHashChange);
-  window.removeEventListener('keydown', handleKeyDown);
 });
 
 const switchModule = (source: string | "All") => {
@@ -226,12 +226,11 @@ const switchModule = (source: string | "All") => {
               </div>
             </div>
           </div>
-          <div v-else class="empty-results">
-            <div class="empty-icon">🔍</div>
-            <h3>找不到相關結果</h3>
-            <p>請嘗試使用不同的關鍵字，或者檢查拼字是否正確。</p>
-            <button @click="searchQuery = ''" class="clear-btn">清除搜尋</button>
-          </div>
+          <EmptyState 
+            v-else 
+            @clear="searchQuery = ''" 
+            action-text="清除搜尋"
+          />
         </div>
 
         <!-- 模組瀏覽模式 -->
@@ -289,37 +288,25 @@ const switchModule = (source: string | "All") => {
       章節選單
     </button>
 
-    <Teleport to="body">
-      <Transition name="slide-up">
-        <div v-if="isSidebarOpen" class="mobile-nav-overlay" @click="isSidebarOpen = false">
-          <div class="mobile-nav-content" @click.stop>
-            <div class="drawer-handle"></div>
-            <div class="drawer-header">
-              <h3>章節選單</h3>
-              <button class="close-btn" @click="isSidebarOpen = false">✕</button>
-            </div>
+    <MobileDrawer :is-open="isSidebarOpen" title="章節選單" @close="isSidebarOpen = false">
+      <div class="mobile-search">
+        <input v-model="searchQuery" type="text" placeholder="搜尋..." class="search-input" />
+      </div>
 
-            <div class="mobile-search">
-              <input v-model="searchQuery" type="text" placeholder="搜尋..." />
-            </div>
-
-            <div class="mobile-nav-scroll">
-              <div @click="switchModule('All')" class="m-nav-item"
-                :class="{ active: activeSource === 'All' && !searchQuery }">
-                <span class="nav-text">全部題目</span>
-                <span class="nav-count">{{allQAData.reduce((t, m) => t + getChapterCount(m.source), 0)}}</span>
-              </div>
-
-              <div v-for="m in allQAData" :key="m.source" @click="switchModule(m.source)" class="m-nav-item"
-                :class="{ active: activeSource === m.source && !searchQuery }">
-                <span class="nav-text">{{ m.source }}</span>
-                <span class="nav-count">{{ getChapterCount(m.source) }}</span>
-              </div>
-            </div>
-          </div>
+      <div class="mobile-nav-scroll">
+        <div @click="switchModule('All')" class="m-nav-item"
+          :class="{ active: activeSource === 'All' && !searchQuery }">
+          <span class="nav-text">全部題目</span>
+          <span class="nav-count">{{allQAData.reduce((t, m) => t + getChapterCount(m.source), 0)}}</span>
         </div>
-      </Transition>
-    </Teleport>
+
+        <div v-for="m in allQAData" :key="m.source" @click="switchModule(m.source)" class="m-nav-item"
+          :class="{ active: activeSource === m.source && !searchQuery }">
+          <span class="nav-text">{{ m.source }}</span>
+          <span class="nav-count">{{ getChapterCount(m.source) }}</span>
+        </div>
+      </div>
+    </MobileDrawer>
   </div>
 </template>
 
@@ -540,72 +527,6 @@ const switchModule = (source: string | "All") => {
   }
 }
 
-/* 行動版選單 (Premium Bottom Sheet) */
-.mobile-nav-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 2000;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.mobile-nav-content {
-  width: 100%;
-  max-width: 600px;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-radius: 32px 32px 0 0;
-  padding: 24px 24px calc(24px + env(safe-area-inset-bottom));
-  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
-  max-height: 85vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.dark .mobile-nav-content {
-  background: rgba(28, 28, 30, 0.95);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.drawer-handle {
-  width: 40px;
-  height: 5px;
-  background: var(--vp-c-divider);
-  border-radius: 10px;
-  margin: 0 auto 20px;
-}
-
-.drawer-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.drawer-header h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin: 0;
-}
-
-.close-btn {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: none;
-  background: var(--vp-c-bg-soft);
-  color: var(--vp-c-text-1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-}
-
 .mobile-search input {
   width: 100%;
   padding: 14px 18px;
@@ -652,68 +573,5 @@ const switchModule = (source: string | "All") => {
   padding: 2px 8px;
   background: var(--vp-c-divider);
   border-radius: 10px;
-}
-
-/* Slide Up Transition for Teleport */
-:global(.slide-up-enter-active),
-:global(.slide-up-leave-active) {
-  transition: opacity 0.3s ease;
-}
-
-:global(.slide-up-enter-from),
-:global(.slide-up-leave-to) {
-  opacity: 0;
-}
-
-:global(.slide-up-enter-active .mobile-nav-content),
-:global(.slide-up-leave-active .mobile-nav-content) {
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-:global(.slide-up-enter-from .mobile-nav-content),
-:global(.slide-up-leave-to .mobile-nav-content) {
-  transform: translateY(100%);
-}
-
-/* Empty Results */
-.empty-results {
-  text-align: center;
-  padding: 80px 24px;
-  background: var(--vp-c-bg-alt);
-  border-radius: 24px;
-  border: 1px dashed var(--vp-c-divider);
-  margin-top: 40px;
-}
-
-.empty-icon {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.empty-results h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.empty-results p {
-  color: var(--vp-c-text-3);
-  margin-bottom: 24px;
-}
-
-.clear-btn {
-  padding: 10px 24px;
-  background: var(--vp-c-brand-1);
-  color: white;
-  border-radius: 99px;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.clear-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3);
 }
 </style>
