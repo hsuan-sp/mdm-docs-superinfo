@@ -483,9 +483,10 @@ const navCards = [
 .card-icon {
   font-size: 48px;
   margin-bottom: 20px;
-  display: block;
+  display: inline-block;
   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
   transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1.2);
+  will-change: transform;
 }
 
 .card:hover .card-icon {
@@ -496,11 +497,11 @@ const navCards = [
 
 @keyframes silky-float {
   0%, 100% { 
-    transform: scale(1.1) translateY(0); 
+    transform: scale(1.1) translate3d(0, 0, 0); 
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
   }
   50% { 
-    transform: scale(1.15) translateY(-8px); 
+    transform: scale(1.15) translate3d(0, -10px, 0); 
     filter: drop-shadow(0 8px 16px rgba(0,0,0,0.15));
   }
 }

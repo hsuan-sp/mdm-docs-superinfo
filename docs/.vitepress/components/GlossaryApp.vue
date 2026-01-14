@@ -573,16 +573,16 @@ const clearSearch = () => {
 }
 
 @keyframes idle-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  33% { transform: translate3d(3px, -8px, 0) rotate(0.4deg); }
+  66% { transform: translate3d(-2px, -14px, 0) rotate(-0.4deg); }
 }
 
 .term-card:hover {
   border-color: var(--vp-c-brand-soft);
-  transform: translateY(-15px) scale(1.03);
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.12);
+  transform: translate3d(0, -18px, 0) scale(1.03);
+  box-shadow: 0 45px 90px rgba(0, 0, 0, 0.12);
   z-index: 10;
-  animation-play-state: paused;
 }
 
 .card-main {

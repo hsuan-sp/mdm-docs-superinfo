@@ -412,8 +412,9 @@ const switchModule = (source: string | "All") => {
 }
 
 @keyframes idle-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  33% { transform: translate3d(2px, -8px, 0) rotate(0.5deg); }
+  66% { transform: translate3d(-1px, -12px, 0) rotate(-0.5deg); }
 }
 
 @keyframes slide-in {
@@ -422,18 +423,16 @@ const switchModule = (source: string | "All") => {
 }
 
 .qa-item:hover {
-  transform: translateY(-12px) scale(1.02);
+  transform: translate3d(0, -15px, 0) scale(1.02);
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.12);
   border-color: var(--vp-c-brand-soft);
   z-index: 10;
-  animation-play-state: paused;
 }
 
 .qa-item.open {
   border-color: var(--vp-c-brand-1);
   box-shadow: 0 20px 50px rgba(0, 122, 255, 0.15);
-  transform: translateY(-6px) scale(1.01);
-  animation-play-state: paused;
+  transform: translate3d(0, -8px, 0) scale(1.01);
 }
 
 .qa-trigger {
