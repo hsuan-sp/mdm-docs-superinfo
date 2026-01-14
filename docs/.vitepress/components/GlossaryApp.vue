@@ -1,14 +1,9 @@
 <script setup lang="ts">
-import { ref, computed, watch, onMounted, onUnmounted, nextTick } from "vue";
-import * as loaderData from "../../data/all-data.data"; // Namespace import
+import { ref, computed, onMounted, nextTick } from "vue";
+import * as loaderData from "../../data/all-data.data";
 const data: any = loaderData;
-// Handle both default export and named export possibilities
-// Fix: VitePress data loaders export 'data' as a named export in the virtual module
-// We check data.data (standard), data.default (fallback), and data (direct)
 const rawData = data.data || data.default || data;
 const glossaryData = rawData.glossaryData || [];
-console.log('GlossaryApp Loaded Data Length:', glossaryData.length);
-import type { Term } from "../../types";
 import { useLayoutMode } from '../theme/composables/useLayoutMode';
 import { useAppFeatures } from '../theme/composables/useAppFeatures';
 import { useKeyboardShortcuts } from '../theme/composables/useKeyboardShortcuts';
@@ -58,7 +53,7 @@ const categories = [
 ] as const;
 
 const filteredTerms = computed(() => {
-  let filtered = glossaryData.filter((item) => {
+  let filtered = glossaryData.filter((item: any) => {
     const queries = searchQuery.value.trim().toLowerCase().split(/\s+/);
 
     const matchesSearch = queries.every(q => {
@@ -67,7 +62,6 @@ const filteredTerms = computed(() => {
         item.analogy.toLowerCase().includes(q);
     });
 
-    // 修復: 處理category為數組的情況
     const currentCategory = selectedCategory.value;
     const matchesCategory =
       currentCategory === "All" ||
@@ -78,8 +72,7 @@ const filteredTerms = computed(() => {
     return matchesSearch && matchesCategory;
   });
 
-  // 應用排序
-  return filtered.sort((a, b) => {
+  return filtered.sort((a: any, b: any) => {
     const termA = a.term.replace(/\s*\([^)]*\)/g, '').toUpperCase();
     const termB = b.term.replace(/\s*\([^)]*\)/g, '').toUpperCase();
 
@@ -138,7 +131,7 @@ onMounted(async () => {
 // Helper to count items per category
 const getCategoryCount = (cat: string) => {
   if (cat === 'All') return glossaryData.length;
-  return glossaryData.filter(item =>
+  return glossaryData.filter((item: any) =>
     Array.isArray(item.category)
       ? item.category.includes(cat as any)
       : item.category === cat
@@ -203,7 +196,7 @@ const clearSearch = () => {
         </header>
         <TransitionGroup name="list" tag="div" class="terms-grid">
           <article v-for="(item, index) in filteredTerms" :key="item.term" class="term-card"
-            :style="{ '--delay': index % 10 }">
+            :style="{ '--delay': (index as any) % 10 }">
             <div class="card-main">
               <header class="card-header">
                 <h3 class="term-title">{{ item.term }}</h3>
@@ -622,6 +615,16 @@ const clearSearch = () => {
 .analogy-icon {
   font-size: 20px;
   flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.term-card:hover .analogy-icon {
+  animation: silky-float 3s ease-in-out infinite;
+}
+
+@keyframes silky-float {
+  0%, 100% { transform: translateY(0) scale(1.1); }
+  50% { transform: translateY(-6px) scale(1.25); }
 }
 
 .analogy-label {

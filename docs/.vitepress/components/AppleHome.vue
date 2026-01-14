@@ -489,13 +489,20 @@ const navCards = [
 }
 
 .card:hover .card-icon {
-  animation: icon-float 2s ease-in-out infinite;
+  animation: silky-float 3s ease-in-out infinite;
   transform: scale(1.1) translateY(-10px);
+  will-change: transform;
 }
 
-@keyframes icon-float {
-  0%, 100% { transform: scale(1.1) translateY(-10px); }
-  50% { transform: scale(1.1) translateY(-15px); }
+@keyframes silky-float {
+  0%, 100% { 
+    transform: scale(1.1) translateY(-10px); 
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+  }
+  50% { 
+    transform: scale(1.12) translateY(-14px); 
+    filter: drop-shadow(0 8px 16px rgba(0,0,0,0.15));
+  }
 }
 
 .card-text {
