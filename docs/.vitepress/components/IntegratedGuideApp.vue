@@ -48,7 +48,7 @@ const handleHashChange = () => {
     'education': '教育實戰'
   };
 
-  const targetSource = hashMap[hash] || allQAData.find(m => m.source.toLowerCase().includes(hash))?.source;
+  const targetSource = hashMap[hash] || (allQAData as any[]).find((m: any) => m.source.toLowerCase().includes(hash))?.source;
 
   if (targetSource) {
     activeSource.value = targetSource;
@@ -64,9 +64,9 @@ const searchResults = computed(() => {
   const queries = searchQuery.value.trim().toLowerCase().split(/\s+/);
   const results: { source: string, items: (QAItem & { relevance: number })[] }[] = [];
 
-  allQAData.forEach(file => {
+  allQAData.forEach((file: any) => {
     const matches: (QAItem & { relevance: number })[] = [];
-    file.sections.forEach(s => s.items.forEach(i => {
+    file.sections.forEach((s: any) => s.items.forEach((i: any) => {
       let relevance = 0;
       const tags = i.tags.join(' ').toLowerCase();
 
@@ -107,7 +107,7 @@ const searchResults = computed(() => {
 
 const currentModule = computed(() => {
   if (activeSource.value === 'All') return null;
-  return allQAData.find(d => d.source === activeSource.value);
+  return (allQAData as any[]).find((d: any) => d.source === activeSource.value);
 });
 
 // For "All" mode
@@ -119,7 +119,11 @@ const openItems = ref(new Set<string>());
 
 const toggleItem = (id: string) => {
   const next = new Set(openItems.value);
-  next.has(id) ? next.delete(id) : next.add(id);
+  if (next.has(id)) {
+    next.delete(id);
+  } else {
+    next.add(id);
+  }
   openItems.value = next;
 };
 
@@ -128,16 +132,16 @@ const renderMarkdown = (text: string) => {
   const lines = text.split('\n');
 
   // Find minimum indentation of non-empty lines
-  const nonEmptyLines = lines.filter(l => l.trim());
+  const nonEmptyLines = lines.filter((l: string) => l.trim());
   const minIndent = nonEmptyLines.length > 0
-    ? nonEmptyLines.reduce((min, line) => {
+    ? nonEmptyLines.reduce((min: number, line: string) => {
       const match = line.match(/^\s*/);
       return Math.min(min, match ? match[0].length : min);
     }, Infinity)
     : 0;
 
   // Remove common indentation and trim
-  let cleaned = lines.map(line => line.slice(minIndent)).join('\n').trim();
+  let cleaned = lines.map((line: string) => line.slice(minIndent)).join('\n').trim();
 
   // Premium Typography Optimization:
   // 1. Ensure lists have empty lines before them for correct MD parsing
@@ -200,7 +204,7 @@ const switchModule = (source: string | "All") => {
           <button @click="switchModule('All')"
             :class="['nav-item', { active: activeSource === 'All' && !searchQuery }]">
             <span class="nav-text">全部題目</span>
-            <span class="nav-count">{{allQAData.reduce((t, m) => t + getChapterCount(m.source), 0)}}</span>
+            <span class="nav-count">{{(allQAData as any[]).reduce((t: any, m: any) => t + getChapterCount(m.source), 0)}}</span>
           </button>
           <div class="sidebar-divider"></div>
           <button v-for="module in allQAData" :key="module.source" @click="switchModule(module.source)"
@@ -305,7 +309,7 @@ const switchModule = (source: string | "All") => {
         <div @click="switchModule('All')" class="m-nav-item"
           :class="{ active: activeSource === 'All' && !searchQuery }">
           <span class="nav-text">全部題目</span>
-          <span class="nav-count">{{allQAData.reduce((t, m) => t + getChapterCount(m.source), 0)}}</span>
+          <span class="nav-count">{{(allQAData as any[]).reduce((t: any, m: any) => t + getChapterCount(m.source), 0)}}</span>
         </div>
 
         <div v-for="m in allQAData" :key="m.source" @click="switchModule(m.source)" class="m-nav-item"
@@ -394,31 +398,41 @@ const switchModule = (source: string | "All") => {
 /* 問答卡片 */
 .qa-item {
   border: 1px solid var(--vp-c-divider);
-  border-radius: 16px;
-  margin-bottom: 16px;
+  border-radius: 20px;
+  margin-bottom: 24px;
   overflow: hidden;
-  background: var(--vp-c-bg-alt);
-  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  background: var(--vp-c-bg);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  width: 100%;
+  animation: slide-in 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  animation-fill-mode: both;
+}
+
+@keyframes slide-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .qa-item:hover {
-  transform: translateY(-4px) scale(1.01);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: var(--vp-c-brand-soft);
 }
 
 .qa-item.open {
   border-color: var(--vp-c-brand-1);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
+  box-shadow: 0 16px 48px rgba(0, 122, 255, 0.12);
+  transform: scale(1.005);
 }
 
 .qa-trigger {
-  padding: 20px 24px;
+  padding: 24px 32px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 16px;
+  align-items: center;
+  gap: 20px;
   transition: background-color 0.3s ease;
 }
 
@@ -464,7 +478,7 @@ const switchModule = (source: string | "All") => {
 
 /* 內容樣式 */
 .qa-content {
-  padding: 0 24px 32px;
+  padding: 0 32px 32px;
   border-top: 1px solid var(--vp-c-divider);
   background: var(--vp-c-bg-soft);
 }

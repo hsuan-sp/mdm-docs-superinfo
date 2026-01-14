@@ -58,6 +58,13 @@ onUnmounted(() => {
   /* Lower than UserCenter drawer */
   box-shadow: 0 4px 12px rgba(0, 113, 227, 0.4);
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: pulse-border 3s infinite;
+}
+
+@keyframes pulse-border {
+  0% { box-shadow: 0 0 0 0 rgba(0, 113, 227, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(0, 113, 227, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 113, 227, 0); }
 }
 
 @media (max-width: 640px) {

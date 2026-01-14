@@ -110,7 +110,7 @@ textarea,
 .search-box,
 .app-sidebar,
 .term-card {
-  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 a:hover,
@@ -125,7 +125,34 @@ a:active,
 button:active,
 .nav-item:active,
 .cat-item:active {
-  transform: scale(0.97);
+  transform: scale(0.96);
+}
+
+/* Premium Button Shine effect on hover */
+.VPButton.brand {
+  position: relative;
+  overflow: hidden;
+}
+
+.VPButton.brand::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: 0.6s;
+}
+
+.VPButton.brand:hover::after {
+  left: 100%;
 }
 
 body {
