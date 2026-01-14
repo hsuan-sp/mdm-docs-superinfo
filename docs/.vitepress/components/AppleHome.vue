@@ -488,25 +488,25 @@ const navCards = [
   margin-bottom: 20px;
   display: block;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
-  /* Ensure no transition conflicts with hover animation */
-  transition: transform 0.3s ease-out;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: center center;
+  backface-visibility: hidden;
 }
 
 .card:hover .card-icon {
   animation: silky-float 2.5s ease-in-out infinite;
-  transition: none;
-  /* Disable transition during animation */
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @keyframes silky-float {
 
   0%,
   100% {
-    transform: scale(1.1) translateY(0);
+    transform: translate3d(0, 0, 0) scale(1.1);
   }
 
   50% {
-    transform: scale(1.1) translateY(-12px);
+    transform: translate3d(0, -12px, 0) scale(1.1);
   }
 }
 

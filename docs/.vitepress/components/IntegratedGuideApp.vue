@@ -230,17 +230,21 @@ const switchModule = (source: string | "All") => {
               <h3 class="group-label">{{ group.source }}</h3>
               <div v-for="(item, idx) in group.items" :key="item.id" class="qa-item"
                 :class="{ open: openItems.has(item.id) }" :style="{ '--item-index': idx }">
-                <div class="qa-card-floating-wrapper">
-                  <div class="qa-trigger" @click="toggleItem(item.id)">
-                    <div class="q-main">
-                      <span v-if="item.important" class="imp-tag">重要</span>
-                      <span class="q-text">{{ item.question }}</span>
+                <div class="qa-lift-layer">
+                  <div class="qa-bob-layer">
+                    <div class="qa-card-content">
+                      <div class="qa-trigger" @click="toggleItem(item.id)">
+                        <div class="q-main">
+                          <span v-if="item.important" class="imp-tag">重要</span>
+                          <span class="q-text">{{ item.question }}</span>
+                        </div>
+                        <span class="arrow">▼</span>
+                      </div>
+                      <div v-if="openItems.has(item.id)" class="qa-content">
+                        <div class="markdown-body" v-html="renderMarkdown(item.answer)"></div>
+                        <div class="tags"><span v-for="t in item.tags" :key="t" class="tag">#{{ t }}</span></div>
+                      </div>
                     </div>
-                    <span class="arrow">▼</span>
-                  </div>
-                  <div v-if="openItems.has(item.id)" class="qa-content">
-                    <div class="markdown-body" v-html="renderMarkdown(item.answer)"></div>
-                    <div class="tags"><span v-for="t in item.tags" :key="t" class="tag">#{{ t }}</span></div>
                   </div>
                 </div>
               </div>
@@ -257,17 +261,21 @@ const switchModule = (source: string | "All") => {
               <h3 class="section-label">{{ section.title }}</h3>
               <div v-for="(item, idx) in section.items" :key="item.id" class="qa-item"
                 :class="{ open: openItems.has(item.id) }" :style="{ '--item-index': idx }">
-                <div class="qa-card-floating-wrapper">
-                  <div class="qa-trigger" @click="toggleItem(item.id)">
-                    <div class="q-main">
-                      <span v-if="item.important" class="imp-tag">重要</span>
-                      <span class="q-text">{{ item.question }}</span>
+                <div class="qa-lift-layer">
+                  <div class="qa-bob-layer">
+                    <div class="qa-card-content">
+                      <div class="qa-trigger" @click="toggleItem(item.id)">
+                        <div class="q-main">
+                          <span v-if="item.important" class="imp-tag">重要</span>
+                          <span class="q-text">{{ item.question }}</span>
+                        </div>
+                        <span class="arrow">▼</span>
+                      </div>
+                      <div v-if="openItems.has(item.id)" class="qa-content">
+                        <div class="markdown-body" v-html="renderMarkdown(item.answer)"></div>
+                        <div class="tags"><span v-for="t in item.tags" :key="t" class="tag">#{{ t }}</span></div>
+                      </div>
                     </div>
-                    <span class="arrow">▼</span>
-                  </div>
-                  <div v-if="openItems.has(item.id)" class="qa-content">
-                    <div class="markdown-body" v-html="renderMarkdown(item.answer)"></div>
-                    <div class="tags"><span v-for="t in item.tags" :key="t" class="tag">#{{ t }}</span></div>
                   </div>
                 </div>
               </div>
@@ -282,17 +290,21 @@ const switchModule = (source: string | "All") => {
                 <h3 class="section-label">{{ section.title }}</h3>
                 <div v-for="(item, idx) in section.items" :key="item.id" class="qa-item"
                   :class="{ open: openItems.has(item.id) }" :style="{ '--item-index': idx }">
-                  <div class="qa-card-floating-wrapper">
-                    <div class="qa-trigger" @click="toggleItem(item.id)">
-                      <div class="q-main">
-                        <span v-if="item.important" class="imp-tag">重要</span>
-                        <span class="q-text">{{ item.question }}</span>
+                  <div class="qa-lift-layer">
+                    <div class="qa-bob-layer">
+                      <div class="qa-card-content">
+                        <div class="qa-trigger" @click="toggleItem(item.id)">
+                          <div class="q-main">
+                            <span v-if="item.important" class="imp-tag">重要</span>
+                            <span class="q-text">{{ item.question }}</span>
+                          </div>
+                          <span class="arrow">▼</span>
+                        </div>
+                        <div v-if="openItems.has(item.id)" class="qa-content">
+                          <div class="markdown-body" v-html="renderMarkdown(item.answer)"></div>
+                          <div class="tags"><span v-for="t in item.tags" :key="t" class="tag">#{{ t }}</span></div>
+                        </div>
                       </div>
-                      <span class="arrow">▼</span>
-                    </div>
-                    <div v-if="openItems.has(item.id)" class="qa-content">
-                      <div class="markdown-body" v-html="renderMarkdown(item.answer)"></div>
-                      <div class="tags"><span v-for="t in item.tags" :key="t" class="tag">#{{ t }}</span></div>
                     </div>
                   </div>
                 </div>
@@ -410,22 +422,43 @@ const switchModule = (source: string | "All") => {
   width: 100%;
 }
 
-.qa-card-floating-wrapper {
+.qa-lift-layer {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.qa-bob-layer {
+  animation: qa-idle-bob 6s ease-in-out infinite;
+  animation-delay: calc(var(--item-index, 0) * 0.2s);
+  will-change: transform;
+}
+
+.qa-card-content {
   border: 1px solid var(--vp-c-divider);
   border-radius: 24px;
   overflow: hidden;
   background: var(--vp-c-bg-elv, #ffffff);
-  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  animation: qa-intro 0.8s cubic-bezier(0.16, 1, 0.3, 1) both,
-    idle-float 5s ease-in-out infinite 0.8s;
-  animation-delay: calc(var(--item-index, 0) * 0.1s), calc(var(--item-index, 0) * 0.1s + 0.8s);
+  animation: qa-intro 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--item-index, 0) * 0.1s);
+}
+
+@keyframes qa-idle-bob {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -12px, 0);
+  }
 }
 
 @keyframes qa-intro {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
 
   to {
@@ -434,31 +467,26 @@ const switchModule = (source: string | "All") => {
   }
 }
 
-@keyframes idle-float {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-12px);
-  }
+.qa-item:hover .qa-lift-layer {
+  transform: translate3d(0, -20px, 0) scale(1.02);
 }
 
-.qa-item:hover .qa-card-floating-wrapper {
-  transform: translateY(-20px) scale(1.03);
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.15);
+.qa-item:hover .qa-card-content {
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.12);
   border-color: var(--vp-c-brand-soft);
-  z-index: 10;
-  animation-play-state: paused !important;
 }
 
-.qa-item.open .qa-card-floating-wrapper {
+.qa-item:hover .qa-bob-layer {
+  animation-play-state: paused;
+}
+
+.qa-item.open .qa-card-content {
   border-color: var(--vp-c-brand-1);
-  box-shadow: 0 20px 60px rgba(0, 122, 255, 0.18);
-  transform: translateY(-8px) scale(1.01);
-  animation-play-state: paused !important;
+  box-shadow: 0 20px 60px rgba(0, 122, 255, 0.15);
+}
+
+.qa-item.open .qa-lift-layer {
+  transform: translate3d(0, -6px, 0) scale(1.01);
 }
 
 .qa-trigger {
