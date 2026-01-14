@@ -4,9 +4,10 @@
   "description": "Professional MDM FAQ & Support Documentation",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "preview": "vitepress preview docs"
+    "docs:dev": "node scripts/generate_maintenance_index.mjs && vitepress dev docs",
+    "build": "vitepress build docs && node scripts/generate_maintenance_index.mjs",
+    "preview": "vitepress preview docs",
+    "update-index": "node scripts/generate_maintenance_index.mjs"
   },
   "keywords": [],
   "author": "",
