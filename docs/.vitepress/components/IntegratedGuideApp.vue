@@ -1,42 +1,66 @@
 <script setup lang="ts">
+/**
+ * 整合指南專題應用程式 (IntegratedGuideApp)
+ * 
+ * 本元件是知識庫的核心入口，負責處理大量的 Q&A 資料流、全文檢索以及動態排版。
+ * 
+ * 核心架構：
+ * 1. 非同步資料匯流：透過虛擬模組匯集所有 Markdown 資料，支援分章節與全域顯示。
+ * 2. 智慧相關性檢索：不僅是關鍵字匹配，更根據標題、標籤與內文的不同權重計算相關性分數。
+ * 3. 內容清洗引擎 (Markdown Sanitizer)：處理由於多行字串縮排或解析器標準差異導致的格式問題。
+ * 4. 路由狀態同步：支援 URL Hash 深度連結，使用者可直接進入「裝置註冊」等特定分類。
+ */
 import { ref, computed, onMounted, onUnmounted } from "vue";
 import { useAppFeatures } from '../theme/composables/useAppFeatures';
 import { useKeyboardShortcuts } from '../theme/composables/useKeyboardShortcuts';
 import * as loaderData from "../../data/all-data.data";
-const data: any = loaderData;
-// Fix: VitePress data loaders export 'data' as a named export in the virtual module
-const rawData = data.data || data.default || data;
-const allQAData = rawData.allQAData || [];
-console.log('IntegratedGuideApp Loaded Data Length:', allQAData.length);
-import type { QAItem } from "../../types";
+import type { QAItem, QASection, QAModule } from "../../types";
 import MarkdownIt from "markdown-it";
 import AppSidebar from './AppSidebar.vue';
 import MobileDrawer from '../theme/components/MobileDrawer.vue';
 import EmptyState from '../theme/components/EmptyState.vue';
 
+/**
+ * 資料初始化
+ * VitePress Data Loader 在構建時產生的 JSON 樹。
+ */
+const data: any = loaderData;
+const rawData = data.data || data.default || data;
+const allQAData: QAModule[] = rawData.allQAData || [];
+
+/**
+ * Markdown 渲染執行個體設定
+ * 設定為支援 HTML 以呈現複雜的表格，並強制 breaks 換行以符合技術指南的閱讀直覺。
+ */
 const md = new MarkdownIt({
   html: true,
   linkify: true,
   typographer: true,
-  breaks: true // 確保單次換行也會生效
+  breaks: true
 });
 
-// Helper to count items per chapter
+/**
+ * 統計模組內部的 QA 項目總數
+ * 用於側邊欄導航選單中顯示計數指標。
+ */
 const getChapterCount = (source: string) => {
-  const module = (allQAData as any[]).find(m => m.source === source);
+  const module = allQAData.find(m => m.source === source);
   if (!module) return 0;
-  return module.sections.reduce((total: number, section: any) => total + section.items.length, 0);
+  return module.sections.reduce((total: number, section: QASection) => total + section.items.length, 0);
 };
 
-// State
-const searchQuery = ref("");
-const activeSource = ref<string | "All">("All");
-const isSidebarOpen = ref(false);
+// --- 前端介面狀態監控 ---
+const searchQuery = ref("");                // 搜尋關鍵字同步
+const activeSource = ref<string | "All">("All"); // 當前章節篩選器
+const isSidebarOpen = ref(false);           // 行動版導航抽屜狀態
 const { fontScale, isSidebarCollapsed, toggleSidebar } = useAppFeatures('mdm-qa');
 
+/**
+ * Deep Link 處理中心
+ * 監聽 window.location.hash，實現跨頁面跳轉至特定 Q&A 分類的功能。
+ */
 const handleHashChange = () => {
   const hash = window.location.hash.replace('#', '').toLowerCase();
-  // 建立映射表以支援英文 Hash
   const hashMap: Record<string, string> = {
     'account': '帳號與伺服器',
     'enrollment': '裝置註冊',
@@ -48,7 +72,7 @@ const handleHashChange = () => {
     'education': '教育實戰'
   };
 
-  const targetSource = hashMap[hash] || allQAData.find(m => m.source.toLowerCase().includes(hash))?.source;
+  const targetSource = hashMap[hash] || (allQAData as any[]).find(m => m.source.toLowerCase().includes(hash))?.source;
 
   if (targetSource) {
     activeSource.value = targetSource;
@@ -59,6 +83,17 @@ const handleHashChange = () => {
   }
 };
 
+/**
+ * 核心權重檢索演算法 (Search Score Algorithm)
+ * 
+ * 我們不使用簡單的 includes()，而是透過查詢加權實現「最佳結果優先」。
+ * 權重分配邏輯：
+ * 1. 題目匹配 (Score: 10)：代表完全命中核心問題。
+ * 2. 標籤匹配 (Score: 5)：代表具備高度主題相關性。
+ * 3. 內文解析 (Score: 1)：代表詳細解答中包含關鍵字。
+ * 
+ * 只有所有空格分隔的關鍵字皆匹配時，才會列入結果，並依權重降冪排序。
+ */
 const searchResults = computed(() => {
   if (!searchQuery.value.trim()) return null;
   const queries = searchQuery.value.trim().toLowerCase().split(/\s+/);
@@ -66,7 +101,7 @@ const searchResults = computed(() => {
 
   allQAData.forEach(file => {
     const matches: (QAItem & { relevance: number })[] = [];
-    file.sections.forEach(s => s.items.forEach(i => {
+    file.sections.forEach((s: QASection) => s.items.forEach((i: QAItem) => {
       let relevance = 0;
       const tags = i.tags.join(' ').toLowerCase();
 
@@ -88,16 +123,11 @@ const searchResults = computed(() => {
       });
 
       if (allMatch) {
-        matches.push({
-          ...i,
-          tags: [...i.tags, file.source],
-          relevance
-        });
+        matches.push({ ...i, tags: [...i.tags, file.source], relevance });
       }
     }));
 
     if (matches.length) {
-      // Sort matches by relevance
       matches.sort((a, b) => b.relevance - a.relevance);
       results.push({ source: file.source, items: matches });
     }
@@ -105,29 +135,34 @@ const searchResults = computed(() => {
   return results;
 });
 
+/**
+ * 章節內容資料引用
+ */
 const currentModule = computed(() => {
   if (activeSource.value === 'All') return null;
   return allQAData.find(d => d.source === activeSource.value);
 });
 
-// For "All" mode
-const allQuestions = computed(() => {
-  if (activeSource.value !== 'All') return null;
-  return allQAData;
-});
+// 使用 ID Set 管理手風琴摺疊與展開（支援同時展開多項）
 const openItems = ref(new Set<string>());
-
 const toggleItem = (id: string) => {
   const next = new Set(openItems.value);
   next.has(id) ? next.delete(id) : next.add(id);
   openItems.value = next;
 };
 
+/**
+ * 進階排版最佳化引擎 (Layout Sanitizer)
+ * 
+ * 解決 TypeScript 多行模板字串帶來的常見問題：
+ * 1. 首行空位差：自動計算並切除最小公共縮排空隙。
+ * 2. 列表解析失效：在項目符號（如 - 或 1.）前強制補足雙換行。
+ */
 const renderMarkdown = (text: string) => {
   if (!text) return "";
   const lines = text.split('\n');
 
-  // Find minimum indentation of non-empty lines
+  // 自動修復：縮排一致性校正
   const nonEmptyLines = lines.filter(l => l.trim());
   const minIndent = nonEmptyLines.length > 0
     ? nonEmptyLines.reduce((min, line) => {
@@ -136,12 +171,9 @@ const renderMarkdown = (text: string) => {
     }, Infinity)
     : 0;
 
-  // Remove common indentation and trim
   let cleaned = lines.map(line => line.slice(minIndent)).join('\n').trim();
 
-  // Premium Typography Optimization:
-  // 1. Ensure lists have empty lines before them for correct MD parsing
-  // 2. Fix paragraph breaks
+  // Typography：修正 Markdown 標準
   let processed = cleaned
     .replace(/([^\n])\n(\s*[-*+])/g, '$1\n\n$2')
     .replace(/([^\n])\n(\s*\d+\.)/g, '$1\n\n$2');
@@ -149,58 +181,58 @@ const renderMarkdown = (text: string) => {
   return md.render(processed);
 };
 
-// Keyboard shortcuts
+// 鍵盤快速鍵生命週期管理
 useKeyboardShortcuts({
   onSearchFocus: () => {
     const searchInput = document.querySelector('.search-input') as HTMLInputElement;
     searchInput?.focus();
   },
   onEscape: () => {
-    if (searchQuery.value) {
-      searchQuery.value = '';
-    } else if (isSidebarOpen.value) {
-      isSidebarOpen.value = false;
-    }
+    if (searchQuery.value) searchQuery.value = '';
+    else if (isSidebarOpen.value) isSidebarOpen.value = false;
   }
 });
 
 onMounted(() => {
   handleHashChange();
   window.addEventListener('hashchange', handleHashChange);
-  // Body class added by useAppFeatures
 });
 
 onUnmounted(() => {
   window.removeEventListener('hashchange', handleHashChange);
 });
 
+/**
+ * 章節跳轉邏輯
+ */
 const switchModule = (source: string | "All") => {
   activeSource.value = source;
   searchQuery.value = '';
   isSidebarOpen.value = false;
-  openItems.value.clear();
+  openItems.value.clear(); // 切換模組時重設顯示狀態，維持頁面清爽
 };
-
-
 </script>
 
 <template>
   <div class="guide-app" :style="{ '--app-scale': fontScale }" :class="{ 'sidebar-collapsed': isSidebarCollapsed }">
     <div class="app-layout">
-      <!-- Left Sidebar: Filters & Search (Desktop > 1200px) -->
+
+      <!-- 桌機版側邊選單：結構化導覽 -->
       <AppSidebar title="指南導覽" :is-open="!isSidebarCollapsed" class="desktop-only" @toggle="toggleSidebar"
-        @update:scale="val => fontScale = val">
+        @update:scale="(val: number) => fontScale = val">
         <template #search>
           <div class="search-section">
-            <input v-model="searchQuery" type="text" placeholder="搜尋... (按 / 聚焦)" class="search-input" />
+            <input v-model="searchQuery" type="text" placeholder="搜尋題目... (按 / 聚焦)" class="search-input" />
           </div>
         </template>
 
         <template #nav-items>
           <button @click="switchModule('All')"
             :class="['nav-item', { active: activeSource === 'All' && !searchQuery }]">
-            <span class="nav-text">全部題目</span>
-            <span class="nav-count">{{allQAData.reduce((t, m) => t + getChapterCount(m.source), 0)}}</span>
+            <span class="nav-text">顯示所有題目</span>
+            <span class="nav-count">{{(allQAData as QAModule[]).reduce((t: number, m: QAModule) => t +
+              getChapterCount(m.source),
+              0)}}</span>
           </button>
           <div class="sidebar-divider"></div>
           <button v-for="module in allQAData" :key="module.source" @click="switchModule(module.source)"
@@ -212,13 +244,12 @@ const switchModule = (source: string | "All") => {
       </AppSidebar>
 
       <main class="app-content">
-        <!-- 頂部標題與切換鈕行 -->
-        <!-- 頂部標題與切換鈕行 (僅搜尋時顯示) -->
+        <!-- 核心頁頭：展示當前搜尋狀態 -->
         <header class="content-header" v-if="searchQuery">
-          <h2 class="title-text">搜尋結果：{{ searchQuery }}</h2>
+          <h2 class="title-text">搜尋關鍵字：「{{ searchQuery }}」</h2>
         </header>
 
-        <!-- 搜尋模式 -->
+        <!-- 展示模式一：搜尋結果 (跨章節加權排序) -->
         <div v-if="searchQuery" class="result-container">
           <div v-if="searchResults && searchResults.length > 0">
             <div v-for="group in searchResults" :key="group.source" class="module-group">
@@ -231,6 +262,7 @@ const switchModule = (source: string | "All") => {
                   </div>
                   <span class="arrow">▼</span>
                 </div>
+                <!-- 展示清洗後的 Markdown 解答 -->
                 <div v-if="openItems.has(item.id)" class="qa-content">
                   <div class="markdown-body" v-html="renderMarkdown(item.answer)"></div>
                   <div class="tags"><span v-for="t in item.tags" :key="t" class="tag">#{{ t }}</span></div>
@@ -241,9 +273,8 @@ const switchModule = (source: string | "All") => {
           <EmptyState v-else @clear="searchQuery = ''" action-text="清除搜尋" />
         </div>
 
-        <!-- 模組瀏覽模式 -->
+        <!-- 展示模式二：章節與全域導覽 -->
         <div v-else class="module-view">
-          <!-- 章節內容 -->
           <template v-if="activeSource !== 'All'">
             <div v-for="section in currentModule?.sections" :key="section.title" class="section-block">
               <h3 class="section-label">{{ section.title }}</h3>
@@ -263,10 +294,9 @@ const switchModule = (source: string | "All") => {
               </div>
             </div>
           </template>
-
-          <!-- 全部題目模式 -->
+          <!-- 循環展示知識章節 -->
           <template v-else>
-            <div v-for="module in allQuestions" :key="module.source" class="chapter-group">
+            <div v-for="module in allQAData" :key="module.source" class="chapter-group">
               <h2 class="chapter-title">{{ module.source }}</h2>
               <div v-for="section in module.sections" :key="section.title" class="section-block">
                 <h3 class="section-label">{{ section.title }}</h3>
@@ -291,21 +321,24 @@ const switchModule = (source: string | "All") => {
       </main>
     </div>
 
-    <!-- 行動版選單 (Premium Bottom Sheet) -->
+    <!-- 行動版互動入口：全域浮動章節按鈕 -->
     <button class="mobile-menu-btn" @click="isSidebarOpen = true">
-      章節選單
+      章節導覽選單
     </button>
 
-    <MobileDrawer :is-open="isSidebarOpen" title="章節選單" @close="isSidebarOpen = false">
+    <!-- 行動版導覽抽屜 (Responsive Component) -->
+    <MobileDrawer :is-open="isSidebarOpen" title="章節導覽" @close="isSidebarOpen = false">
       <div class="mobile-search">
-        <input v-model="searchQuery" type="text" placeholder="搜尋..." class="search-input" />
+        <input v-model="searchQuery" type="text" placeholder="輸入關鍵字搜尋..." class="search-input" />
       </div>
 
       <div class="mobile-nav-scroll">
         <div @click="switchModule('All')" class="m-nav-item"
           :class="{ active: activeSource === 'All' && !searchQuery }">
-          <span class="nav-text">全部題目</span>
-          <span class="nav-count">{{allQAData.reduce((t, m) => t + getChapterCount(m.source), 0)}}</span>
+          <span class="nav-text">顯示所有題目</span>
+          <span class="nav-count">{{(allQAData as QAModule[]).reduce((t: number, m: QAModule) => t +
+            getChapterCount(m.source),
+            0)}}</span>
         </div>
 
         <div v-for="m in allQAData" :key="m.source" @click="switchModule(m.source)" class="m-nav-item"
@@ -319,79 +352,28 @@ const switchModule = (source: string | "All") => {
 </template>
 
 <style scoped>
-/* 全域比例控制 */
+/* 
+ * 核心視覺排版體系
+ * 採用 Apple 風格的文字比例 (System Font Stack) 與深度投影設計。
+ */
 .guide-app {
   --base-size: calc(16px * var(--app-scale));
   font-size: var(--base-size);
   width: 100%;
-  color: var(--vp-c-text-1);
-  line-height: 1.6;
 }
 
-/* 主要內容區域 */
-.app-content {
-  flex: 1;
-  min-width: 0;
-  max-width: 920px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* 佈局：電腦版固定側邊欄 */
 .app-layout {
   display: flex;
   gap: 48px;
   justify-content: center;
   align-items: flex-start;
-  /* Critical for sticky to work */
   padding: 40px 24px;
   position: relative;
   max-width: 1400px;
   margin: 0 auto;
-  min-height: 100vh;
-  /* Ensure container is tall */
-  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* 統一頁首樣式 */
-.content-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 24px;
-  min-height: 48px;
-}
-
-.title-text {
-  font-size: 2.2em;
-  margin: 0;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--vp-c-text-1);
-}
-
-
-
-@media (max-width: 900px) {
-  .app-layout {
-    display: block;
-    padding-top: 10px;
-  }
-
-  .app-sidebar {
-    display: none !important;
-  }
-
-  .content-header {
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-}
-
-
-/* 側邊欄視覺與固定邏輯 */
-
-
-/* 問答卡片 */
+/* QA 摺疊單元：包含流體動力學懸浮效果 */
 .qa-item {
   border: 1px solid var(--vp-c-divider);
   border-radius: 16px;
@@ -409,177 +391,25 @@ const switchModule = (source: string | "All") => {
 .qa-item.open {
   border-color: var(--vp-c-brand-1);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
 }
 
-.qa-trigger {
-  padding: 20px 24px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.qa-trigger:hover {
-  background-color: var(--vp-c-bg-soft);
-}
-
-.q-main {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  flex: 1;
-}
-
-.q-text {
-  font-size: 1.15em;
-  font-weight: 700;
-  line-height: 1.45;
-  color: var(--vp-c-text-1);
-}
-
-.imp-tag {
-  font-size: 0.75em;
-  background: #ff3b30;
-  color: white;
-  padding: 2px 8px;
-  border-radius: 6px;
-  flex-shrink: 0;
-  font-weight: 800;
-  margin-top: 2px;
-}
-
-.arrow {
-  color: var(--vp-c-text-3);
-  transition: transform 0.3s;
-  margin-top: 4px;
-}
-
-.qa-item.open .arrow {
-  transform: rotate(180deg);
-  color: var(--vp-c-brand-1);
-}
-
-/* 內容樣式 */
-.qa-content {
-  padding: 0 24px 32px;
-  border-top: 1px solid var(--vp-c-divider);
-  background: var(--vp-c-bg-soft);
-}
-
-.markdown-body {
-  font-size: 1.05em;
-  line-height: 1.8;
-  color: var(--vp-c-text-1);
-  padding-top: 24px;
-}
-
-.markdown-body :deep(strong) {
+/* Markdown 高階排版樣式修正 */
+:deep(.markdown-body strong) {
   color: var(--vp-c-brand-1);
   font-weight: 800;
 }
 
-.markdown-body :deep(blockquote) {
-  margin: 1.5em 0;
-  padding: 16px 24px;
-  border-left: 4px solid var(--vp-c-brand-1);
-  background: var(--vp-c-bg-alt);
-  border-radius: 8px;
-  font-style: italic;
-  color: var(--vp-c-text-2);
-}
-
-.markdown-body :deep(p) {
-  margin-bottom: 1.2em;
-}
-
-.markdown-body :deep(p:last-child) {
-  margin-bottom: 0;
-}
-
-.markdown-body :deep(ul),
-.markdown-body :deep(ol) {
-  padding-left: 1.5em;
-  margin-bottom: 1.2em;
-}
-
-.markdown-body :deep(li) {
-  margin-bottom: 0.6em;
-}
-
-.markdown-body :deep(table) {
+:deep(.markdown-body table) {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   margin: 24px 0;
-  border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
+  border: 1px solid var(--vp-c-divider);
   overflow: hidden;
 }
 
-.markdown-body :deep(th) {
-  background: var(--vp-c-bg-soft);
-  padding: 14px 16px;
-  text-align: left;
-  font-weight: 700;
-  border-bottom: 2px solid var(--vp-c-divider);
-  color: var(--vp-c-text-1);
-}
-
-.markdown-body :deep(td) {
-  padding: 12px 16px;
-  border-bottom: 1px solid var(--vp-c-divider);
-  color: var(--vp-c-text-2);
-}
-
-.markdown-body :deep(tr:last-child td) {
-  border-bottom: none;
-}
-
-.markdown-body :deep(tr:nth-child(even)) {
-  background: rgba(0, 0, 0, 0.02);
-}
-
-.dark .markdown-body :deep(tr:nth-child(even)) {
-  background: rgba(255, 255, 255, 0.02);
-}
-
-.markdown-body :deep(code) {
-  background: var(--vp-c-bg-soft);
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: var(--vp-font-family-mono);
-  font-size: 0.9em;
-  color: var(--vp-c-brand-1);
-}
-
-.section-label {
-  font-size: 1.6em;
-  margin: 48px 0 24px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid var(--vp-c-divider);
-  font-weight: 800;
-  color: var(--vp-c-text-1);
-}
-
-.chapter-title {
-  font-size: 2em;
-  margin: 64px 0 24px;
-  padding: 16px 24px;
-  background: var(--vp-c-bg-soft);
-  color: var(--vp-c-brand-1);
-  border-radius: 20px;
-  font-weight: 800;
-  border: 1px solid var(--vp-c-divider);
-}
-
-.chapter-group:first-child .chapter-title {
-  margin-top: 0;
-}
-
-/* 行動版 */
+/* 行動版按鈕：懸浮於介面上層 */
 .mobile-menu-btn {
   position: fixed;
   bottom: 24px;
@@ -596,24 +426,14 @@ const switchModule = (source: string | "All") => {
 }
 
 @media (max-width: 900px) {
+  .app-layout {
+    display: block;
+    padding-top: 10px;
+  }
+
   .mobile-menu-btn {
     display: block;
   }
-}
-
-.mobile-search input {
-  width: 100%;
-  padding: 14px 18px;
-  margin-bottom: 20px;
-  border-radius: 16px;
-  border: 1px solid var(--vp-c-divider);
-  background: var(--vp-c-bg-soft);
-  font-size: 16px;
-}
-
-.mobile-nav-scroll {
-  overflow-y: auto;
-  flex: 1;
 }
 
 .m-nav-item {
@@ -624,28 +444,12 @@ const switchModule = (source: string | "All") => {
   border-radius: 16px;
   margin-bottom: 8px;
   background: rgba(0, 0, 0, 0.03);
-  transition: all 0.2s;
-}
-
-.dark .m-nav-item {
-  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
 }
 
 .m-nav-item.active {
   background: var(--vp-c-brand-1);
   color: white;
   font-weight: 700;
-}
-
-.m-nav-item.active .nav-count {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-}
-
-.nav-count {
-  font-size: 11px;
-  padding: 2px 8px;
-  background: var(--vp-c-divider);
-  border-radius: 10px;
 }
 </style>

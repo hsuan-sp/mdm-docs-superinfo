@@ -1,16 +1,16 @@
 ---
 id: app-13
-title: "什麼是「受管理的應用程式配置 (Managed App Configuration)」？如何應用於大量部署？"
+title: "什麼是「受管理的應用程式設定 (Managed App Configuration)」？如何應用於大量部署？"
 category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: false
 tags: ["AppConfig","XML","變數代換","Jamf Pro"]
 ---
 
-# Q: 什麼是「受管理的應用程式配置 (Managed App Configuration)」？如何應用於大量部署？
+# Q: 什麼是「受管理的應用程式設定 (Managed App Configuration)」？如何應用於大量部署？
 
 # Answer
 
-**「受管理的應用程式配置」是利用 MDM 協定，將 XML 格式的設定檔注入至支援 AppConfig 標準的應用程式中，**
+**「受管理的應用程式設定」是利用 MDM 協定，將 XML 格式的設定檔注入至支援 AppConfig 標準的應用程式中，**
 **實現「免接觸設定 (Zero-touch Configuration)」。**
 
 這不只是單純的預填資料，而是能強制鎖定 App 的特定行為，防止使用者修改。

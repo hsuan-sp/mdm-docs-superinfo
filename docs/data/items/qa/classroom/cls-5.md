@@ -24,5 +24,5 @@ tags: ["故障排除","藍牙","本地網路權限","課堂連線"]
         需要在 Jamf Pro 或其他 MDM 後台重新生成憑證並派送。
 4.  **同一 Wi-Fi 網段**：
     *   雖然發現是靠藍牙，但資料傳輸依賴 Wi-Fi。
-        請確保全班連在同一個 SSID，且 AP 沒有開啟「用戶隔離 (Client Isolation)」。
+        請確保全班連在同一個 SSID，且 AP 沒有開啟「使用者隔離 (Client Isolation)」。
     

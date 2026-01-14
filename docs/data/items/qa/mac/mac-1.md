@@ -27,7 +27,7 @@ tags: ["AD","身分認證","Jamf Connect","Platform SSO","No-Bind"]
 
 **方案 A：平台單一登入 (Platform SSO) — 原生推薦**
 自 macOS 13 Ventura 起，Apple 與微軟/Google 合作推出的原生功能。
-*   **運作原理**：利用 MDM 配置 SSO 擴充功能，直接與 IdP (如 Microsoft Entra ID) 溝通。
+*   **運作原理**：利用 MDM 設定 SSO 擴充功能，直接與 IdP (如 Microsoft Entra ID) 溝通。
 *   **優勢**：
     *   **密碼同步**：Mac 本機密碼可與雲端 Entra ID 密碼保持同步。
     *   **Token 整合**：登入 Mac 後，Safari 與系統服務會自動登入 Microsoft 365 / Google Workspace。

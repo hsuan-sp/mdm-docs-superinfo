@@ -1,10 +1,16 @@
 <script setup>
+/**
+ * 全域頁尾元件 (GlobalFooter)
+ * 
+ * 負責展示公司品牌資訊、服務標章以及版權宣告。
+ * 採用簡潔、對稱的佈置，與 Apple 官網的資訊揭露層次保持一致。
+ */
 import { withBase } from 'vitepress'
 </script>
 
 <template>
   <footer class="global-footer" role="contentinfo">
-    <!-- Top Promo Section -->
+    <!-- 品牌推廣區塊 -->
     <div class="footer-promo">
       <h2 class="company-name">極電資訊有限公司</h2>
       <p class="service-badges">Apple 授權教育經銷商｜Apple 校園體驗中心｜軟硬體專業諮詢</p>
@@ -15,7 +21,7 @@ import { withBase } from 'vitepress'
 
     <div class="divider" role="presentation"></div>
 
-    <!-- Bottom Copyright Section -->
+    <!-- 底部版權宣告區塊 -->
     <div class="footer-copyright">
       <p>Copyright ©2026 極電資訊｜Apple 授權教育經銷商</p>
       <p>極電資訊有限公司 | 統一編號 23756990</p>
@@ -24,25 +30,25 @@ import { withBase } from 'vitepress'
 </template>
 
 <style scoped>
+/* 
+ * 靜態排版與視覺引導 
+ * 採用 VP 變數以實現跨主題模式的色調連貫性。
+ */
 .global-footer {
   background: var(--vp-c-bg-alt);
   padding: 80px 24px 60px;
   text-align: center;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
-  /* Softer border */
   margin-top: 80px;
 }
 
 :global(.dark) .global-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   background: var(--vp-c-bg);
-  /* Blend with background in dark mode */
 }
 
-/* Typography */
 .company-name {
   font-size: 20px;
-  /* Reduced from 28px for elegance */
   font-weight: 700;
   margin: 0 0 12px;
   color: var(--vp-c-text-1);
@@ -79,7 +85,6 @@ import { withBase } from 'vitepress'
   transform: translateY(-1px);
 }
 
-/* Subtle Divider */
 .divider {
   height: 1px;
   width: 60px;
@@ -87,7 +92,6 @@ import { withBase } from 'vitepress'
   margin: 40px auto;
 }
 
-/* Copyright */
 .footer-copyright p {
   font-size: 12px;
   color: var(--vp-c-text-3);
@@ -95,7 +99,6 @@ import { withBase } from 'vitepress'
   font-weight: 400;
 }
 
-/* Responsive */
 @media (min-width: 768px) {
   .global-footer {
     display: flex;

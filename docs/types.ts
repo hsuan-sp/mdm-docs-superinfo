@@ -18,3 +18,7 @@ export interface Term {
   category: string;
   tags: string[];
 }
+export interface QAModule {
+  source: string;
+  sections: QASection[];
+}

@@ -1,61 +1,86 @@
-<script setup>
-import { ref, onMounted } from 'vue'
+<script setup lang="ts">
+/**
+ * 登入狀態顯示元件 (LoginStatus)
+ * 
+ * 簡易的導覽列擴充元件，用於展示當前使用者的登入資訊或引進登入頁面。
+ */
+import { useAuth } from '../composables/useAuth';
 
-const user = ref(null)
-
-onMounted(async () => {
-  try {
-    const res = await fetch('/auth/me')
-    const data = await res.json()
-    if (data.email) {
-      user.value = data.email
-    }
-  } catch (e) {
-    // 忽略錯誤，可能是未登入
-  }
-})
-
-const logout = () => {
-    if(confirm('確定要登出系統嗎？')) {
-        location.href = '/auth/logout'
-    }
-}
+const { user, logout } = useAuth();
 </script>
 
 <template>
-  <div v-if="user" class="auth-box">
-    <span class="email">👤 {{ user.split('@')[0] }}</span>
-    <button @click="logout" class="logout-btn">登出</button>
+  <div class="login-status-nav">
+    <!-- 已登入狀態 -->
+    <template v-if="user">
+      <div class="user-pill">
+        <span class="user-email text-truncate">{{ user }}</span>
+        <button class="logout-btn" @click="logout" title="登出系統">退出</button>
+      </div>
+    </template>
+
+    <!-- 未登入狀態 -->
+    <template v-else>
+      <a href="/login.html" class="login-link">系統登入</a>
+    </template>
   </div>
 </template>
 
 <style scoped>
-.auth-box {
+/* 
+ * 導覽列小元件樣式 
+ * 確保在有限的高寬內保持文字可讀性。
+ */
+.login-status-nav {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-left: 16px;
-  padding-left: 16px;
-  border-left: 1px solid var(--vp-c-divider);
   font-size: 13px;
 }
-.email {
+
+.user-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 4px 4px 12px;
+  background: var(--vp-c-bg-alt);
+  border-radius: 100px;
+  border: 1px solid var(--vp-c-divider);
+}
+
+.user-email {
+  max-width: 120px;
   color: var(--vp-c-text-2);
-  display: none; /* 手機版預設隱藏 Email 以省空間 */
-}
-@media (min-width: 768px) {
-  .email { display: inline; }
-}
-.logout-btn {
-  color: var(--vp-c-brand);
   font-weight: 500;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
-  transition: opacity 0.2s;
 }
+
+.logout-btn {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  padding: 2px 10px;
+  border-radius: 90px;
+  border: none;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
 .logout-btn:hover {
-  opacity: 0.7;
+  background: var(--vp-c-brand-1);
+  color: white;
+}
+
+.login-link {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 4px 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.login-link:hover {
+  background: var(--vp-c-brand-soft);
 }
 </style>

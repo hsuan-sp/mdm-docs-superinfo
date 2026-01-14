@@ -22,7 +22,7 @@ tags: ["AirDrop","AirPlay","網路管理","mDNS Relay","投影故障排除"]
     *   **系統限制**：自 iOS 16.2 起，Apple 將「所有人」模式限制為每次 10 分鐘，
         逾時後會自動切回「僅限聯絡人」。
     *   **MDM 限制**：請確認 Jamf Pro 的限制描述檔中未禁用「AirDrop」。
-        若設備受監管（Supervised），管理員可強制開啟或關閉此功能。
+        若裝置受監管（Supervised），管理員可強制開啟或關閉此功能。
 3.  **無線頻道衝突**：若 iPad 開啟了「個人熱點」，系統會佔用無線網卡資源，
     導致 AirDrop 功能停用，務必先行關閉熱點。
 4.  **物理距離與干擾**：藍牙發現機制在電子訊號密集的電腦教室中易受干擾，
@@ -33,7 +33,7 @@ tags: ["AirDrop","AirPlay","網路管理","mDNS Relay","投影故障排除"]
     教師 iPad 若連線至教職員 SSID（如 `Staff-WiFi`），而 Apple TV 連線至教室載具專用網段，
     若兩者 VLAN 隔離且無跨網段路由，AirPlay 封包將無法到達。
 2.  **mDNS (Bonjour) 協定放行**：AirPlay 使用 **UDP 5353 埠** 進行服務廣播。
-    若學校防火牆或無線基地台 (AP) 啟用了 **「用戶隔離 (Client Isolation)」**，
+    若學校防火牆或無線基地台 (AP) 啟用了 **「使用者隔離 (Client Isolation)」**，
     會阻擋裝置間的橫向通訊。
 3.  **網管層級優化 (mDNS Relay)**：在多 VLAN 的校園架構下，
     建議網管人員在核心交換器或防火牆開啟 **mDNS Relay (或稱為 Bonjour Gateway)** 功能，

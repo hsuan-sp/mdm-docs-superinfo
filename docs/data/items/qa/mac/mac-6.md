@@ -23,7 +23,7 @@ tags: ["重置","EACS","抹除所有內容","電腦教室","Imaging"]
     *   **關鍵**：針對 Apple Silicon 與配備 T2 晶片的 Mac，此指令會觸發 **EACS (Erase All Content and Settings)**。
 
 2.  **執行過程 (數分鐘內)**：
-    *   系統會瞬間丟棄加密金鑰（Cryptographic Erase），數據幾秒內即無法讀取。
+    *   系統會瞬間丟棄加密金鑰（Cryptographic Erase），資料幾秒內即無法讀取。
     *   電腦重開機，回到「哈囉 (Hello)」畫面。
 
 3.  **自動部署 (Zero-Touch)**：

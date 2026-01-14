@@ -2,7 +2,7 @@
 
 > 此文件由腳本自動生成。用於讓維護人員（或 AI）快速確認目前已存在的內容，避免重複新增。
 
-最後更新時間：2026/1/14下午2:12:52
+最後更新時間：2026/1/14下午3:58:14
 
 ## 術語表 (Glossary)
 
@@ -49,7 +49,7 @@
 - **CDN (Content Delivery Network)** (`cdn-content-delivery-network.md`)
 - **Certificate Authority (CA)** (`certificate-authority-ca.md`)
 - **Certificate (憑證)** (`certificate-憑證.md`)
-- **Client Isolation (用戶隔離)** (`client-isolation-用戶隔離.md`)
+- **Client Isolation (使用者隔離)** (`client-isolation-使用者隔離.md`)
 - **Command History** (`command-history.md`)
 - **Compliance** (`compliance.md`)
 - **Composer** (`composer.md`)
@@ -244,7 +244,7 @@
 - [`enr-9`] Jamf Pro 指令一直顯示「擱置中 (Pending)」，但裝置明明有連網？
 - [`enr-10`] 在 Jamf Pro 修改了裝置名稱，為什麼 iPad 本機端仍顯示舊名字？
 - [`enr-11`] 已開啟「允許刪除 App」，為什麼學生長按仍無法「刪除」App？
-- [`enr-12`] 什麼是「共享 iPad (Shared iPad)」？如何讓多位學生共用同一台設備且保有個人資料？
+- [`enr-12`] 什麼是「共享 iPad (Shared iPad)」？如何讓多位學生共用同一台裝置且保有個人資料？
 - [`enr-13`] 如何防止學生自行移除 MDM 管理描述檔？
 - [`enr-14`] 如何讓 iPad 重置後自動連上 Wi-Fi 並完成註冊 (Return to Service)？
 - [`enr-15`] iPad 顯示「無法使用」或因密碼輸入錯誤太多次鎖死，該如何處理？
@@ -270,7 +270,7 @@
 - [`app-10`] 為什麼開啟 App 時，iPad 會跳出要求輸入 Apple 帳號密碼的對話框？
 - [`app-11`] 如何派送「電子書 (PDF/ePub)」教材到學生 iPad？
 - [`app-12`] 付費 App 的授權可以分給不同學校用嗎？(跨校 VPP)
-- [`app-13`] 什麼是「受管理的應用程式配置 (Managed App Configuration)」？如何應用於大量部署？
+- [`app-13`] 什麼是「受管理的應用程式設定 (Managed App Configuration)」？如何應用於大量部署？
 - [`app-14`] 【TestFlight】可以讓老師使用「管理式 Apple 帳號」測試校內開發的 Beta 版 App 嗎？
 - [`app-15`] 【App 更新策略】如何避免 App 在上課時間突然更新，導致斷線或頻寬塞車？
 - [`app-16`] 我可以統一排版學生 iPad 的桌面嗎？（例如：把數學 App 放在第一頁）
@@ -310,7 +310,7 @@
 ### 數位精進 (`qa/digital-learning`)
 
 - [`dl-1`] 升級 iPadOS 17 後，螢幕上的 VPN 圖示消失了，這樣正常嗎？
-- [`dl-2`] 在教育部系統看到某些裝置「未使用」或數據未上傳，如何排除？
+- [`dl-2`] 在教育部系統看到某些裝置「未使用」或資料未上傳，如何排除？
 - [`dl-3`] 裝置連線異常，如何執行「重置網路設定」？有什麼風險？
 - [`dl-4`] 如何建立「精進方案」專用的智慧型群組？
 - [`dl-5`] 學生刪除了 Jamf Trust App，會影響使用率計算嗎？該如何防範？
@@ -342,11 +342,11 @@
 - [`hw-8`] 可以用酒精清潔 iPad 螢幕嗎？有沒有損壞風險？
 - [`hw-9`] 連接聰穎鍵盤或巧控鍵盤 (Smart/Magic Keyboard) 但無反應，如何排除？
 - [`hw-10`] Apple Pencil 無法配對或寫不出來？
-- [`hw-11`] 我想知道 iPad 的電池健康度，但後台看不到數據，應如何評估電池是否老化？
+- [`hw-11`] 我想知道 iPad 的電池健康度，但後台看不到資料，應如何評估電池是否老化？
 - [`hw-12`] 聽說受潮會導致保固失效，哪裡可以看到 iPad 的受潮指示器 (LCI)？
 - [`hw-13`] 【效能與壽命】iPad 運行變得很卡，是因為電池老化的關係嗎？還是硬體不行了？
 - [`hw-14`] 【網路隱私】為什麼在學校 Wi-Fi 的防火牆或 DHCP Server 上，抓不到 iPad 的真實 MAC 位址？
-- [`hw-15`] macOS 設備管理：如何透過 MDM 控管外接磁碟 (USB/Thunderbolt) 的讀寫權限以防止資料外洩？
+- [`hw-15`] macOS 裝置管理：如何透過 MDM 控管外接磁碟 (USB/Thunderbolt) 的讀寫權限以防止資料外洩？
 - [`hw-16`] 【電池維護】Apple Pencil 放在筆槽裡超過三個月沒充電，會壞掉嗎？
 - [`hw-17`] 不用拆箱對序號，MDM 後台可以直接看到裝置的保固到期日嗎？
 - [`hw-18`] 【終極救援】iPad 卡在白蘋果、開機循環或更新失敗，如何透過「復原模式」與「DFU」刷機自救？
@@ -376,7 +376,7 @@
 
 ### 教育實戰 (`qa/qa-education`)
 
-- [`edu-01`] iPadOS 17 以上沒有顯示 VPN 圖示，這樣網路過濾或是使用率數據回傳還有在作用嗎？
+- [`edu-01`] iPadOS 17 以上沒有顯示 VPN 圖示，這樣網路過濾或是使用率資料回傳還有在作用嗎？
 - [`edu-02`] 「共用 iPad (Shared iPad)」跟一般個人 iPad 有什麼不同？適合什麼情境？
 - [`edu-03`] 老師的 iPad 跟學生的 iPad 在 MDM 設定上有什麼不同？
 - [`edu-04`] 班級輪替時（如走班、分組教學），如何快速整理平板給下一班使用？

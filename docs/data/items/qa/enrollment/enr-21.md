@@ -31,7 +31,7 @@ tags: ["Apple Configurator","手動加入 ASM","過渡期"]
 
 **重要限制提醒**：
 *   **Windows 平台限制**：Windows 版的 **「Apple 裝置 App」** 僅能執行回復與備份，
-    **無法** 將裝置手動加入 ASM 組織。若學校無 Mac 設備，建議與維修廠商或具備 Mac 的單位協作處理。
+    **無法** 將裝置手動加入 ASM 組織。若學校無 Mac 裝置，建議與維修廠商或具備 Mac 的單位協作處理。
 *   **釋出風險**：手動加入的裝置一旦從 ASM 中「釋出 (Release)」，
     只能再次透過 Apple Configurator 重新手動加入，無法自動找回。
     
