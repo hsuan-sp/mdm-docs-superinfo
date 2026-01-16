@@ -110,6 +110,9 @@ MDM 可透過「Restrictions」描述檔管理多工權限。
 **Jamf Pro 設定路徑**：
 - Blueprints > Restrictions > Multitasking
 - 取消勾選「Allow Multitasking」（注意：取消勾選=禁用）
+
+# 實務建議:
+建議國小低年級完全禁用多工，國中採臨時鎖定，高中全面開放並教育。
 ```
 
 ### 4.4 語言與風格規範

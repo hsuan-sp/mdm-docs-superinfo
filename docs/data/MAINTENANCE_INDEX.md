@@ -2,7 +2,7 @@
 
 > 此文件由腳本自動生成。用於讓維護人員（或 AI）快速確認目前已存在的內容，避免重複新增。
 
-最後更新時間：2026/1/15上午11:24:01
+最後更新時間：2026/1/15下午1:28:54
 
 ## 術語表 (Glossary)
 
@@ -256,6 +256,10 @@
 - [`acc-19`] 如何控管「管理式 Apple 帳號」是否能使用 Apple Intelligence 功能？
 - [`acc-20`] 管理式 Apple 帳號支援「多重身分驗證 (MFA)」嗎？如何管理？
 - [`acc-21`] 「moemdm」跟「Jamf Pro」是一樣的東西嗎？為什麼學校需要兩個帳號？
+- [`acc-22`] 如何在 ASM 中批次建立管理式 Apple 帳號？使用 SFTP 還是手動 CSV 匯入？
+- [`acc-23`] WWDC 2025 宣布的「防止個人 Apple 帳號登入組織裝置」功能如何設定？有什麼限制？
+- [`acc-24`] 管理式 Apple 帳號的 iCloud 儲存空間配額如何管理？學生作業滿了怎麼辦？
+- [`acc-25`] ABM/ASM 的新 API (2025-2026) 可以用來做什麼自動化工作？需要開發能力嗎？
 
 ### 裝置註冊 (`qa/enrollment`)
 
@@ -281,6 +285,10 @@
 - [`enr-20`] 【維修 SOP】廠商送回來的維修替換機，如何快速恢復原本的教學設定？
 - [`enr-21`] 購買的機器沒有出現在 ASM 中，可以用 Apple Configurator 手動加入嗎？
 - [`enr-22`] 【Wi-Fi 遷移】學校要更換新的無線網路 SSID，如何確保 iPad 不會集體失聯？
+- [`enr-23`] 什麼是「Zero-Wipe MDM Migration (零抹除 MDM 遷移)」？iOS 26 的新功能學校該用嗎？
+- [`enr-24`] 如何設定「Enforcement Deadline (強制執行截止日期)」確保裝置按時完成 MDM 註冊或系統更新？
+- [`enr-25`] PreStage 註冊時可以跳過哪些「設定輔助程式 (Setup Assistant)」步驟？教育場域的最佳實務為何？
+- [`enr-26`] iOS 26 的「Return to Service 改進」保留管理式 App 是什麼意思？實際操作流程為何？
 
 ### App 管理 (`qa/apps`)
 
@@ -306,6 +314,9 @@
 - [`app-20`] 新架構：什麼是「宣告式 App 管理 (Declarative App Management)」？
 - [`app-21`] 如何防止學生利用 iOS 18 的功能「隱藏」或「鎖定」管理式 App？
 - [`app-22`] 【番外篇-實務採購常見狀況】以 Procreate 與 Procreate Pocket 為例，這兩者有什麼差別？學校買錯了怎麼辦？
+- [`app-23`] 什麼是「Declarative App Management (宣告式 App 管理)」？與傳統 VPP App 指派有什麼不同？
+- [`app-24`] iOS 如何限制學生只能透過 Wi-Fi 下載 App,避免消耗行動數據?
+- [`app-25`] macOS Tahoe 的「宣告式 .pkg 部署」如何使用?與傳統 Jamf Policy 有何不同?
 
 ### 課堂管理 (`qa/classroom`)
 
@@ -332,6 +343,9 @@
 - [`cls-21`] 老師可以強制將學生的畫面投影到 Apple TV 或大螢幕嗎？
 - [`cls-22`] 學校網路有分「老師」與「學生」不同網段 (VLAN)，「課堂」App 還能通嗎？
 - [`cls-23`] 全班 iPad 發出音效擾亂課堂秩序，老師可以一鍵「全班靜音」嗎？
+- [`cls-24`] 如何防止學生使用 iPadOS 26 的「Window App(視窗化多工)」功能在課堂分心?
+- [`cls-25`] 「Apple Schoolwork」與「Apple Classroom」有什麼不同?老師該用哪一個?
+- [`cls-26`] iOS 26.2 的「AirDrop Codes」會影響學校的 AirDrop 管理政策嗎?學生會利用此功能繞過管控嗎?
 
 ### 數位精進 (`qa/digital-learning`)
 
@@ -355,6 +369,9 @@
 - [`dl-18`] 學生亂設螢幕密碼 (Passcode) 結果忘記了，一定要重置整台 iPad 嗎？
 - [`dl-19`] 老師反應「課堂 (Apple Classroom)」App 常常連不到學生畫面，或顯示離線，該怎麼檢查？
 - [`dl-20`] 【資產維護】精進方案合約將於 2026 年結案，若平板出現功能故障或死機應如何處理？
+- [`dl-21`] 大批行動載具面臨退役與汰換：2026 年起老舊裝置該如何處理？
+- [`dl-22`] iOS 26 的「Network Extension URL Filtering API」對大規模載具管理有什麼影響？架構改變了嗎？
+- [`dl-23`] iOS 26.3 的「Background Security Improvements」對學校 IT 管理有什麼意義？
 
 ### 硬體排除 (`qa/hardware`)
 
@@ -375,9 +392,9 @@
 - [`hw-15`] macOS 裝置管理：如何透過 MDM 控管外接磁碟 (USB/Thunderbolt) 的讀寫權限以防止資料外洩？
 - [`hw-16`] 【電池維護】Apple Pencil 放在筆槽裡超過三個月沒充電，會壞掉嗎？
 - [`hw-17`] 不用拆箱對序號，MDM 後台可以直接看到裝置的保固到期日嗎？
-- [`hw-18`] 【終極救援】iPad 卡在白蘋果、開機循環或更新失敗，如何透過「復原模式」與「DFU」刷機自救？
-- [`hw-19`] 儲存空間顯示「系統資料 (System Data)」佔用了十幾甚至數十 GB，導致無法更新或變慢，怎麼辦？
-- [`hw-20`] iPad 的 Touch ID 指紋辨識失靈，是按鍵壞了還是設定問題？
+- [`hw-18`] 如何啟用 iPad Pro 與 Mac 的 Wi-Fi 6E 160MHz 頻寬？為何我的裝置速度沒有提升？
+- [`hw-19`] 共用 iPad 如何避免 AirPods 配對混亂？iOS 26 的新功能有用嗎？
+- [`hw-20`] 學生反應螢幕看起來模糊（Liquid Glass 誤解）該如何處理？
 
 ### Mac 管理 (`qa/mac`)
 
@@ -399,6 +416,10 @@
 - [`mac-16`] 【Sequoia 新功能】如何管理或禁用「iPhone 鏡像輸出 (iPhone Mirroring)」？
 - [`mac-17`] 【硬體部署】學校電腦教室改用 Mac mini (M4) 有什麼優勢？
 - [`mac-18`] 【資產救援】Mac 送修回來或離職交接時被舊 Apple 帳號鎖住 (啟用鎖定)，怎麼辦？
+- [`mac-19`] 如何使用「Erase All Content and Settings」快速重置 Mac？與傳統重灌有何不同？
+- [`mac-20`] macOS Tahoe 的「FileVault Unlock over SSH」如何設定？有什麼安全風險？
+- [`mac-21`] macOS Tahoe 升級後，「App 隱私權限可見性」讓學生看到 MDM 設定的權限，該如何向學生解釋？
+- [`mac-22`] macOS Tahoe 是最後支援 Intel Mac 的版本，學校該如何規劃 Intel Mac 的汰換時程與預算？
 
 ### 教育實戰 (`qa/qa-education`)
 
@@ -425,4 +446,6 @@
 - [`edu-21`] 如何管理 iOS 18 新增的「訊息摘要 (Notification Summary)」功能？
 - [`edu-22`] iPadOS/iOS 16.2 及更高版本（如 26.2）對 AirDrop 的改動與教育場域應對建議
 - [`edu-23`] 如何使用 iPadOS 26.2 的「視窗 App (Window App)」多工處理功能提升教學效率？
+- [`edu-24`] iOS 26 的「Writing Tools (寫作工具)」在考試時該如何管理？哪些功能需要禁用？
+- [`edu-25`] 公有載具計畫結束後，學生帶回家的 iPad 還可以繼續用於學習嗎？系統升級到 iOS 26 會有問題嗎？
 
