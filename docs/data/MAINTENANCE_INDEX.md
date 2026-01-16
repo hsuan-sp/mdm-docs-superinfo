@@ -2,7 +2,7 @@
 
 > 此文件由腳本自動生成。用於讓維護人員（或 AI）快速確認目前已存在的內容，避免重複新增。
 
-最後更新時間：2026/1/15下午1:28:54
+最後更新時間：2026/1/16下午1:56:44
 
 ## 術語表 (Glossary)
 
@@ -259,7 +259,8 @@
 - [`acc-22`] 如何在 ASM 中批次建立管理式 Apple 帳號？使用 SFTP 還是手動 CSV 匯入？
 - [`acc-23`] WWDC 2025 宣布的「防止個人 Apple 帳號登入組織裝置」功能如何設定？有什麼限制？
 - [`acc-24`] 管理式 Apple 帳號的 iCloud 儲存空間配額如何管理？學生作業滿了怎麼辦？
-- [`acc-25`] ABM/ASM 的新 API (2025-2026) 可以用來做什麼自動化工作？需要開發能力嗎？
+- [`acc-25`] ABM/ASM 的 API 可以用來做什麼自動化工作？需要開發能力嗎？
+- [`acc-26`] 管理式 Apple 帳號的「iCloud+ 功能」（如隱藏電子郵件、私密轉送）在教育環境該如何管理？
 
 ### 裝置註冊 (`qa/enrollment`)
 
@@ -285,10 +286,11 @@
 - [`enr-20`] 【維修 SOP】廠商送回來的維修替換機，如何快速恢復原本的教學設定？
 - [`enr-21`] 購買的機器沒有出現在 ASM 中，可以用 Apple Configurator 手動加入嗎？
 - [`enr-22`] 【Wi-Fi 遷移】學校要更換新的無線網路 SSID，如何確保 iPad 不會集體失聯？
-- [`enr-23`] 什麼是「Zero-Wipe MDM Migration (零抹除 MDM 遷移)」？iOS 26 的新功能學校該用嗎？
-- [`enr-24`] 如何設定「Enforcement Deadline (強制執行截止日期)」確保裝置按時完成 MDM 註冊或系統更新？
-- [`enr-25`] PreStage 註冊時可以跳過哪些「設定輔助程式 (Setup Assistant)」步驟？教育場域的最佳實務為何？
-- [`enr-26`] iOS 26 的「Return to Service 改進」保留管理式 App 是什麼意思？實際操作流程為何？
+- [`enr-23`] 什麼是「零抹除 MDM 遷移」(Zero-Wipe MDM Migration)？iOS 26 新功能適合學校使用嗎？
+- [`enr-24`] 如何設定「強制執行截止日期」(Enforcement Deadline) 確保裝置按時完成 MDM 註冊或系統更新？
+- [`enr-25`] PreStage 註冊時可以跳過哪些「設定輔助程式」步驟？教育場域的建議設定為何？
+- [`enr-26`] iOS 26 的「Return to Service 保留 App」功能如何運作？實際效益為何？
+- [`enr-27`] iOS 26 的「零抹除 MDM 遷移」實戰：從教育部 Jamf Pro 轉移至校內自建 MDM 的完整流程
 
 ### App 管理 (`qa/apps`)
 
@@ -315,8 +317,9 @@
 - [`app-21`] 如何防止學生利用 iOS 18 的功能「隱藏」或「鎖定」管理式 App？
 - [`app-22`] 【番外篇-實務採購常見狀況】以 Procreate 與 Procreate Pocket 為例，這兩者有什麼差別？學校買錯了怎麼辦？
 - [`app-23`] 什麼是「Declarative App Management (宣告式 App 管理)」？與傳統 VPP App 指派有什麼不同？
-- [`app-24`] iOS 如何限制學生只能透過 Wi-Fi 下載 App,避免消耗行動數據?
-- [`app-25`] macOS Tahoe 的「宣告式 .pkg 部署」如何使用?與傳統 Jamf Policy 有何不同?
+- [`app-24`] iOS 26 如何限制學生只能透過 Wi-Fi 下載 App，避免消耗行動數據？
+- [`app-25`] macOS 26 的「宣告式 .pkg 部署」如何使用？與傳統 Jamf Policy 有何不同？
+- [`app-26`] 如何管理 2024-2025 年新推出的 AI 輔助教學 App（如 Writing Tools、Image Playground）？
 
 ### 課堂管理 (`qa/classroom`)
 
@@ -343,9 +346,10 @@
 - [`cls-21`] 老師可以強制將學生的畫面投影到 Apple TV 或大螢幕嗎？
 - [`cls-22`] 學校網路有分「老師」與「學生」不同網段 (VLAN)，「課堂」App 還能通嗎？
 - [`cls-23`] 全班 iPad 發出音效擾亂課堂秩序，老師可以一鍵「全班靜音」嗎？
-- [`cls-24`] 如何防止學生使用 iPadOS 26 的「Window App(視窗化多工)」功能在課堂分心?
-- [`cls-25`] 「Apple Schoolwork」與「Apple Classroom」有什麼不同?老師該用哪一個?
-- [`cls-26`] iOS 26.2 的「AirDrop Codes」會影響學校的 AirDrop 管理政策嗎?學生會利用此功能繞過管控嗎?
+- [`cls-24`] 如何防止學生使用 iPadOS 26 的「視窗 App」功能在課堂分心？
+- [`cls-25`] 「課業」與「課堂」有什麼不同？老師該用哪一個？
+- [`cls-26`] iOS 26.2 的「AirDrop 代碼」會影響學校的 AirDrop 管理政策嗎？學生會利用此功能繞過管控嗎？
+- [`cls-27`] iOS 26 的「音訊配件設定」如何解決共用 iPad 的 AirPods/Beats 配對混亂？
 
 ### 數位精進 (`qa/digital-learning`)
 
@@ -369,9 +373,11 @@
 - [`dl-18`] 學生亂設螢幕密碼 (Passcode) 結果忘記了，一定要重置整台 iPad 嗎？
 - [`dl-19`] 老師反應「課堂 (Apple Classroom)」App 常常連不到學生畫面，或顯示離線，該怎麼檢查？
 - [`dl-20`] 【資產維護】精進方案合約將於 2026 年結案，若平板出現功能故障或死機應如何處理？
-- [`dl-21`] 大批行動載具面臨退役與汰換：2026 年起老舊裝置該如何處理？
-- [`dl-22`] iOS 26 的「Network Extension URL Filtering API」對大規模載具管理有什麼影響？架構改變了嗎？
-- [`dl-23`] iOS 26.3 的「Background Security Improvements」對學校 IT 管理有什麼意義？
+- [`dl-21`] 精進方案範圍內的 iPad 在 2026 年如何持續管理？建議保留 MDM 嗎？
+- [`dl-22`] iOS 26 的 Network Extension URL Filtering API 對內容過濾服務有什麼影響？
+- [`dl-23`] iOS 26 的「背景安全性改進」會自動安裝嗎？建議開啟還是關閉？
+- [`dl-25`] 2024-2026 年採購的新款 iPad（M4/A17 Pro）在精進方案環境中的整合建議
+- [`dl-26`] 如何使用 iOS 26 的「背景安全性改進」確保精進方案載具的基礎安全防護？
 
 ### 硬體排除 (`qa/hardware`)
 
@@ -395,6 +401,10 @@
 - [`hw-18`] 如何啟用 iPad Pro 與 Mac 的 Wi-Fi 6E 160MHz 頻寬？為何我的裝置速度沒有提升？
 - [`hw-19`] 共用 iPad 如何避免 AirPods 配對混亂？iOS 26 的新功能有用嗎？
 - [`hw-20`] 學生反應螢幕看起來模糊（Liquid Glass 誤解）該如何處理？
+- [`hw-21`] 2024-2025 年新款 iPad 硬體規格差異：M4 iPad Pro、M2/M3 iPad Air、iPad mini 7 (A17 Pro) 在管理上有什麼不同？
+- [`hw-22`] 精進方案 iPad 9 (2021) 在 2026 年的續用建議：效能、系統支援與汰換時機評估
+- [`hw-23`] 如何使用 Apple Pencil Pro 的「尋找」(Find My) 功能追蹤校園遺失的觸控筆？
+- [`hw-24`] 學校同時擁有 Wi-Fi 6、Wi-Fi 6E、Wi-Fi 7 設備，如何規劃網路基礎設施升級？
 
 ### Mac 管理 (`qa/mac`)
 
@@ -416,10 +426,10 @@
 - [`mac-16`] 【Sequoia 新功能】如何管理或禁用「iPhone 鏡像輸出 (iPhone Mirroring)」？
 - [`mac-17`] 【硬體部署】學校電腦教室改用 Mac mini (M4) 有什麼優勢？
 - [`mac-18`] 【資產救援】Mac 送修回來或離職交接時被舊 Apple 帳號鎖住 (啟用鎖定)，怎麼辦？
-- [`mac-19`] 如何使用「Erase All Content and Settings」快速重置 Mac？與傳統重灌有何不同？
-- [`mac-20`] macOS Tahoe 的「FileVault Unlock over SSH」如何設定？有什麼安全風險？
-- [`mac-21`] macOS Tahoe 升級後，「App 隱私權限可見性」讓學生看到 MDM 設定的權限，該如何向學生解釋？
-- [`mac-22`] macOS Tahoe 是最後支援 Intel Mac 的版本，學校該如何規劃 Intel Mac 的汰換時程與預算？
+- [`mac-19`] 如何使用「清除所有內容和設定」快速重置 Mac？與傳統重灌有何不同？
+- [`mac-20`] macOS 26 的「透過 SSH 解鎖 FileVault」如何設定？有什麼安全考量？
+- [`mac-21`] macOS 26 升級後，學生可以看到 MDM 設定的隱私權限，如何處理詢問？
+- [`mac-22`] macOS 26 是最後支援 Intel Mac 的版本，現有 Intel Mac 可以用多久？
 
 ### 教育實戰 (`qa/qa-education`)
 
@@ -444,8 +454,8 @@
 - [`edu-19`] 新要求：教育部資安稽核要求符合 NIST 標準，MDM 該如何配合？
 - [`edu-20`] 【實務排錯】學生將 iPad 密碼設為跟 Apple 帳號 一樣，導致帳號被鎖定怎麼辦？
 - [`edu-21`] 如何管理 iOS 18 新增的「訊息摘要 (Notification Summary)」功能？
-- [`edu-22`] iPadOS/iOS 16.2 及更高版本（如 26.2）對 AirDrop 的改動與教育場域應對建議
+- [`edu-22`] iOS 26.2 的 AirDrop 代碼機制對課堂檔案分享的實務影響與應對方式
 - [`edu-23`] 如何使用 iPadOS 26.2 的「視窗 App (Window App)」多工處理功能提升教學效率？
-- [`edu-24`] iOS 26 的「Writing Tools (寫作工具)」在考試時該如何管理？哪些功能需要禁用？
-- [`edu-25`] 公有載具計畫結束後，學生帶回家的 iPad 還可以繼續用於學習嗎？系統升級到 iOS 26 會有問題嗎？
+- [`edu-24`] iOS 26 的「寫作工具」(Writing Tools) 在考試時該如何管理？哪些功能需要禁用？
+- [`edu-25`] 精進方案結束後，學生使用的 iPad 還可以繼續用於學習嗎？系統升級到 iOS 26 會有問題嗎？
 
