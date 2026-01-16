@@ -21,12 +21,11 @@ tags: ["PSSO","FileVault","macOS 15+","身分驗證"]
     系統解鎖磁碟後會自動透傳身分至桌面，無需再次登入。
 
 **技術需求**：
-*   **系統版本**：macOS 15 或更新版本。
-*   **IdP 支援**：您的身分提供者必須支援 Platform SSO 的最新協定（如 Entra ID 預覽版功能）。
+*   **系統版本**：macOS 15 或更新版本（建議升級至 **macOS 26 Tahoe** 以獲得最穩定體驗）。
+*   **IdP 支援**：您的身分提供者必須支援 Platform SSO 的最新協定（如 Microsoft Entra ID 已於 2025 年正式支援此功能）。
 *   **MDM 設定**：需在 Jamf Pro 的「單一登入延伸功能」描述檔中，
     將 `Shared Device Keys` 與 `FileVault` 相關設定開啟。
 
 **實際效益**：
 大幅減少師生因忘記本機密碼而導致無法解鎖電腦的報修案件，
-並確保 FileVault 密碼與組織密碼策略完全同步。
     

@@ -21,8 +21,8 @@ tags: ["聯合驗證","Google Workspace","Microsoft Entra ID","SSO"]
 *   **帳號自動化**：透過 SCIM 連接器，當您在 Google 或微軟端新增、修改或刪除帳號時，
     ASM 端的資料會即時同步，不需重複匯入 CSV。
 *   **身分驗證接軌**：密碼變更與安全性驗證（如 2FA）均由原身分提供者處理，ASM 直接信任其結果。
-*   **平台單一登入 (Platform SSO)**：macOS 15 (Sequoia) 以上版本支援進階的單一登入功能，
-    使用者在 Mac 登入畫面輸入組織帳號後，即可同時完成系統與所有 Apple 服務的授權。
+*   **平台單一登入 (Platform SSO)**：macOS 15 以上版本及目前的 **macOS 26 Tahoe** 支援進階的單一登入功能，
+    使用者在 Mac 登入畫面輸入組織帳號後，即可同時完成系統與所有 Apple 服務的授權，實現極佳的使用者體驗。
 
 **設定需求（需 IT 管理員操作）**：
 1.  **網域驗證**：在 ASM 中新增學校的 Email 網域（如 @school.edu.tw），

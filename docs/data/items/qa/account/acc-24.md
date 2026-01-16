@@ -15,7 +15,7 @@ tags: ["iCloud", "儲存空間", "配額", "管理式 Apple 帳號"]
 ## 儲存空間配額說明
 
 - **教育機構 (ASM)**：Apple 免費提供每位使用者（教職員與學生）**200GB** 的 iCloud 儲存空間。
-- **企業機構 (ABM)**：預設為 5GB；若訂閱 Apple Business Essentials 方案，可享 50GB 或 200GB（台灣尚未開放 ABE，故多數企業仍為 5GB）。
+- **企業機構 (ABM)**：預設為 5GB；若訂閱 Apple Business Essentials (ABE) 方案，可享 50GB 或 200GB。**註：截至 2026 年初，台灣地區尚未正式開放 ABE 方案，故多數企業及非教育單位之管理式帳號仍維持 5GB。**
 
 ## 學生空間滿額的處理策略
 
