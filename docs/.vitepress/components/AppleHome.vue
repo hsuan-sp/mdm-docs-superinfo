@@ -8,18 +8,18 @@ const router = useRouter()
 const t = computed(() => {
   return lang.value === 'zh-TW' ? {
     eyebrow: 'Superinfo Apple MDM Hub',
-    title: 'Empowering \nEducation.',
-    intro1: '專為台灣教育現場打造。',
-    intro2: '極致簡單的 Apple 裝置管理知識庫。',
+    title: '賦能教育科技',
+    intro1: 'MDM 術語庫 × 實戰問答集',
+    intro2: '台灣教育現場的專業技術指南',
     explore: '開始探索',
     searchGlossary: '查詢術語表',
     exploreThemes: '探索主題',
     mastery: '從基礎設定到進階管理，一切盡在掌握。'
   } : {
     eyebrow: 'Superinfo Apple MDM Hub',
-    title: 'Empowering \nEducation.',
-    intro1: 'Built for Taiwan\'s education landscape.',
-    intro2: 'The simplest Apple Device Management Knowledge Base.',
+    title: 'Empowering Education',
+    intro1: 'MDM Glossary × Expert Q&amp;A',
+    intro2: 'Professional MDM Guide\nfor Taiwan Education',
     explore: 'Get Started',
     searchGlossary: 'Search Glossary',
     exploreThemes: 'Explore Topics',
@@ -318,24 +318,30 @@ onUnmounted(() => {
 .primary-btn {
   background: var(--vp-c-brand-1);
   color: #fff;
-  padding: 16px 36px;
+  padding: 18px 42px;
+  /* 加大 */
   border-radius: 980px;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 19px;
+  /* 加大 */
+  font-weight: 700;
+  /* 更粗 */
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  box-shadow: 0 8px 24px rgba(0, 113, 227, 0.25);
+  box-shadow: 0 12px 32px rgba(0, 113, 227, 0.35);
+  /* 更明顯的陰影 */
   position: relative;
   overflow: hidden;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  text-decoration: none;
 }
 
 .primary-btn::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), transparent);
+  /* 更亮的光澤 */
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -345,8 +351,10 @@ onUnmounted(() => {
 }
 
 .primary-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 40px rgba(0, 113, 227, 0.35);
+  transform: translateY(-4px) scale(1.02);
+  /* 更明顯的抬升 + 微放大 */
+  box-shadow: 0 20px 48px rgba(0, 113, 227, 0.45);
+  /* 更強烈的懸浮感 */
 }
 
 .primary-btn:focus-visible {
@@ -355,27 +363,36 @@ onUnmounted(() => {
 }
 
 .primary-btn:active {
-  transform: translateY(-1px);
+  transform: translateY(-1px) scale(0.98);
+  /* 按下回彈 */
 }
 
 .btn-icon {
   display: inline-block;
   transition: transform 0.3s;
+  font-size: 1.1em;
 }
 
 .primary-btn:hover .btn-icon {
-  transform: translateX(4px);
+  transform: translateX(6px);
+  /* 更明顯的箭頭移動 */
 }
 
 .text-link {
-  color: var(--vp-c-brand-1);
-  font-size: 17px;
-  font-weight: 600;
+  color: var(--vp-c-text-2);
+  /* 改為次要文字顏色 */
+  font-size: 16px;
+  /* 稍小 */
+  font-weight: 500;
+  /* 更細 */
   transition: all 0.2s;
   position: relative;
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  text-decoration: none;
+  opacity: 0.85;
+  /* 降低視覺權重 */
 }
 
 .text-link::after {
@@ -384,7 +401,8 @@ onUnmounted(() => {
   bottom: -2px;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 1px;
+  /* 更細的下劃線 */
   background: var(--vp-c-brand-1);
   transition: width 0.3s ease;
 }
@@ -394,7 +412,9 @@ onUnmounted(() => {
 }
 
 .text-link:hover {
-  color: var(--vp-c-brand-2);
+  color: var(--vp-c-brand-1);
+  /* hover 時才變品牌色 */
+  opacity: 1;
 }
 
 .text-link:focus-visible {
