@@ -10,21 +10,20 @@ tags: ["Apple Intelligence","寫作工具","數學備忘錄","防弊","iOS 18"]
 
 # Answer
 
-**針對 iOS 18.1+ 裝置，管理員可透過「限制描述檔」精確關閉 AI 輔助功能。**
+**針對 iOS 26+ 裝置，管理員應優先透過「宣告式裝置管理 (DDM)」進行即時控管。**
 
-**風險功能**：
-*   **寫作工具 (Writing Tools)**：可幫學生重寫文章、摘要重點。
-*   **數學備忘錄 (Math Notes)**：在計算機或備忘錄手寫算式，系統自動算出答案。
+**風險功能與控管方式**：
+*   **寫作工具 (Writing Tools)**：透過 DDM 的 **Restrictions** 宣告停用 `allowWritingTools`。
+*   **數學備忘錄 (Math Notes)**：停用 `allowMathNotes`。
+*   **Genmoji 與影像遊樂場**：停用 `allowGenmoji` 與 `allowImagePlayground`。
 
 **設定路徑 (Jamf Pro)**：
-1.  建立或編輯 **「限制 (Restrictions)」** 描述檔。
-2.  在 iOS 18 相關設定中，取消勾選（即禁用的意思）：
-    *   **「允許寫作工具 (Allow Writing Tools)」**
-    *   **「允許數學備忘錄 (Allow Math Notes)」**
-    *   **「允許 Genmoji」**
-3.  **考試模式**：若只需暫時關閉，老師可透過 **Jamf Teacher** 的「App 限制」功能，
-    在上課期間鎖定這些功能（需 Jamf Teacher 版本支援），或直接使用「單一 App 模式」鎖定考試軟體。
+1.  進入 **Blueprints** 或 **Declarations**。
+2.  新增 **Restrictions** 宣告。
+3.  針對上述 AI 功能進行封鎖，DDM 具備「即時生效」特性，適合考試前快速派送。
+4.  **未納管裝置**：若學生使用個人裝置，管理員可在 **ASM (Apple 校務管理)** 的「服務存取」中，針對租戶層級關閉管理式 Apple 帳號的 Apple Intelligence 權限。
 
-*   *硬體提醒：Apple Intelligence 僅支援配備 M 系列晶片或 A17 Pro 以上的 iPad/iPhone。*
-    *一般入門款 iPad (如第 9/10 代) 硬體本身即不支援寫作工具，無需擔心。*
+**硬體門檻校對**：
+*   Apple Intelligence 僅支援配備 **M 系列晶片** 或 **A17 Pro 以上** 的裝置。
+*   *備註：目前的入門款 iPad (如第 10 代、第 11 代，搭載 A14/A16 晶片) 硬體本身即不支援上述 AI 功能，管理員可將重點放在配備 M 系列晶片的 iPad Air 與 iPad Pro。*
     
