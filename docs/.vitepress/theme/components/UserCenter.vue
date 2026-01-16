@@ -38,6 +38,24 @@ const toggleDarkMode = () => {
     const newValue = html.classList.contains('dark');
     localStorage.setItem('vitepress-theme-appearance', newValue ? 'dark' : 'light');
 };
+
+const { lang } = useData();
+const switchLanguage = () => {
+    const currentPath = window.location.pathname;
+    let targetPath = '';
+
+    if (lang.value === 'zh-TW') {
+        // Switch to English
+        targetPath = currentPath.startsWith('/mdm-support-site/')
+            ? currentPath.replace('/mdm-support-site/', '/mdm-support-site/en/')
+            : '/en' + currentPath;
+    } else {
+        // Switch to Chinese
+        targetPath = currentPath.replace('/en/', '/');
+    }
+
+    router.go(targetPath);
+};
 </script>
 
 <template>
@@ -45,6 +63,17 @@ const toggleDarkMode = () => {
         <!-- Desktop Horizontal View -->
         <div class="desktop-actions">
 
+
+            <div class="divider"></div>
+
+            <!-- Language Switch -->
+            <button @click="switchLanguage" class="action-btn" :title="lang === 'zh-TW' ? 'Switch to English' : '切換至中文'">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+            </button>
 
             <div class="divider"></div>
 
@@ -173,6 +202,19 @@ const toggleDarkMode = () => {
                                     <div class="compact-status">{{ isDark ? '深色' : '淡色' }}</div>
                                 </div>
 
+                                <!-- Language Switch -->
+                                <div class="menu-item compact" @click="switchLanguage">
+                                    <div class="compact-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="compact-label">語言 / Lang</div>
+                                    <div class="compact-status">{{ lang === 'zh-TW' ? 'English' : '中文' }}</div>
+                                </div>
                             </div>
                         </div>
 
