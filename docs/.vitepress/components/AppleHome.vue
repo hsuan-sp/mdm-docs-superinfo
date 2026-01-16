@@ -5,6 +5,9 @@ import { onMounted, onUnmounted, computed } from 'vue'
 const { lang } = useData()
 const router = useRouter()
 
+// Language-aware base path
+const langBase = computed(() => lang.value === 'en-US' ? '/en' : '')
+
 const t = computed(() => {
   return lang.value === 'zh-TW' ? {
     eyebrow: 'Superinfo Apple MDM Hub',
@@ -32,7 +35,7 @@ const navCards = computed(() => [
     title: 'Identity',
     subtitle: lang.value === 'zh-TW' ? '帳號與身分' : 'Account & Identity',
     desc: lang.value === 'zh-TW' ? '深入了解管理式 Apple ID、聯合驗證與權限委派。' : 'Learn about Managed Apple IDs, Federated Authentication, and roles.',
-    link: '/guide/#account',
+    link: `${langBase.value}/guide/#account`,
     bg: '#F5F5F7',
     textColor: '#1d1d1f',
     icon: '👤'
@@ -41,7 +44,7 @@ const navCards = computed(() => [
     title: 'Deployment',
     subtitle: lang.value === 'zh-TW' ? '零接觸部署' : 'Zero-Touch Deployment',
     desc: lang.value === 'zh-TW' ? '透過 Apple Configurator 與 ADE 達成自動化開箱即用。' : 'Achieve out-of-the-box automation with Apple Configurator and ADE.',
-    link: '/guide/#enrollment',
+    link: `${langBase.value}/guide/#enrollment`,
     bg: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     textColor: '#fff',
     icon: '📦'
@@ -50,7 +53,7 @@ const navCards = computed(() => [
     title: 'VPP Apps',
     subtitle: lang.value === 'zh-TW' ? '軟體採購' : 'Software Procurement',
     desc: lang.value === 'zh-TW' ? '掌握 App 與圖書的批量授權派發與生命週期管理。' : 'Master bulk licensing and lifecycle management for apps and books.',
-    link: '/guide/#apps',
+    link: `${langBase.value}/guide/#apps`,
     bg: '#F5F5F7',
     textColor: '#1d1d1f',
     icon: '📱'
@@ -59,7 +62,7 @@ const navCards = computed(() => [
     title: 'Classroom',
     subtitle: lang.value === 'zh-TW' ? '課堂教學' : 'Classroom Instruction',
     desc: lang.value === 'zh-TW' ? '賦能教師掌握即時畫面控管、文件傳送與數位互動。' : 'Empower teachers with screen monitoring, file sharing, and interaction.',
-    link: '/guide/#classroom',
+    link: `${langBase.value}/guide/#classroom`,
     bg: 'linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)',
     textColor: '#1d1d1f',
     icon: '🍎'
@@ -68,7 +71,7 @@ const navCards = computed(() => [
     title: 'Education',
     subtitle: lang.value === 'zh-TW' ? '方案規範' : 'Project Compliance',
     desc: lang.value === 'zh-TW' ? '接軌教育部專案規範，優化校園數位學習環境。' : 'Align with MOE technical requirements to optimize digital learning.',
-    link: '/guide/#digital',
+    link: `${langBase.value}/guide/#digital`,
     bg: '#F5F5F7',
     textColor: '#1d1d1f',
     icon: '🎓'
@@ -77,7 +80,7 @@ const navCards = computed(() => [
     title: 'Service',
     subtitle: lang.value === 'zh-TW' ? '維護報修' : 'Maintenance & Repair',
     desc: lang.value === 'zh-TW' ? '了解硬體保固查詢、維修流程與備機管理策略。' : 'Hardware warranty checks, repair flows, and loaner management.',
-    link: '/guide/#hardware',
+    link: `${langBase.value}/guide/#hardware`,
     bg: '#F5F5F7',
     textColor: '#1d1d1f',
     icon: '🔧'
@@ -86,7 +89,7 @@ const navCards = computed(() => [
     title: 'macOS',
     subtitle: lang.value === 'zh-TW' ? '電腦管理' : 'Mac Management',
     desc: lang.value === 'zh-TW' ? '針對 Mac 的專屬組態描述檔與安全性原則管理。' : 'Configuration profiles and security policy management for Mac.',
-    link: '/guide/#mac',
+    link: `${langBase.value}/guide/#mac`,
     bg: 'linear-gradient(135deg, #434343 0%, #000000 100%)',
     textColor: '#f5f5f7',
     icon: '💻'
@@ -95,7 +98,7 @@ const navCards = computed(() => [
     title: 'Scenarios',
     subtitle: lang.value === 'zh-TW' ? '情境實戰' : 'Practical Q&A',
     desc: lang.value === 'zh-TW' ? '集結第一線網管與教師的高頻率常見問題答集。' : 'Frequently asked questions from on-site IT admins and teachers.',
-    link: '/guide/#education',
+    link: `${langBase.value}/guide/#education`,
     bg: '#F5F5F7',
     textColor: '#1d1d1f',
     icon: '🏫'
@@ -104,7 +107,7 @@ const navCards = computed(() => [
     title: 'Glossary',
     subtitle: lang.value === 'zh-TW' ? '零知識術語表' : 'Glossary',
     desc: lang.value === 'zh-TW' ? '從專有名詞到白話文翻譯，讓您輕鬆讀懂裝置管理。' : 'From technical terms to plain English, master the MDM lingo.',
-    link: '/glossary',
+    link: `${langBase.value}/glossary`,
     bg: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
     textColor: '#1d1d1f',
     icon: '📖'
@@ -151,11 +154,11 @@ onUnmounted(() => {
           {{ t.intro2 }}
         </p>
         <div class="hero-links">
-          <a :href="withBase('/guide/')" class="primary-btn">
+          <a :href="withBase(langBase + '/guide/')" class="primary-btn">
             {{ t.explore }}
             <span class="btn-icon" aria-hidden="true">→</span>
           </a>
-          <a :href="withBase('/glossary')" class="text-link">
+          <a :href="withBase(langBase + '/glossary')" class="text-link">
             {{ t.searchGlossary }}
             <span aria-hidden="true">›</span>
           </a>
