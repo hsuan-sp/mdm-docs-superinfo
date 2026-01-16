@@ -18,7 +18,7 @@ const t = computed(() => {
   } : {
     eyebrow: 'Superinfo Apple MDM Hub',
     title: 'Empowering Education',
-    intro1: 'MDM Glossary × Expert Q&amp;A',
+    intro1: 'MDM Glossary × Expert Q&A',
     intro2: 'Professional MDM Guide\nfor Taiwan Education',
     explore: 'Get Started',
     searchGlossary: 'Search Glossary',
@@ -93,7 +93,7 @@ const navCards = computed(() => [
   },
   {
     title: 'Scenarios',
-    subtitle: lang.value === 'zh-TW' ? '情境實戰' : 'Battle-Tested Q&A',
+    subtitle: lang.value === 'zh-TW' ? '情境實戰' : 'Practical Q&A',
     desc: lang.value === 'zh-TW' ? '集結第一線網管與教師的高頻率常見問題答集。' : 'Frequently asked questions from on-site IT admins and teachers.',
     link: '/guide/#education',
     bg: '#F5F5F7',

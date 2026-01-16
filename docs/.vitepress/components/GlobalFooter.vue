@@ -14,7 +14,7 @@ const t = computed(() => {
   } : {
     company: 'Superinfo Computer Co., Ltd.',
     badges: 'Apple Authorized Education Specialist｜Apple Campus Experience Center｜Hardware & Software Advisory',
-    slogan: 'Dedicated to providing you with the best service',
+    slogan: 'Committed to excellence in service',
     copyright: 'Copyright © 2026 Superinfo｜Apple Authorized Education Specialist',
     info: 'Superinfo Computer Co., Ltd. | Tax ID 23756990'
   }
@@ -27,7 +27,8 @@ const t = computed(() => {
     <div class="footer-promo">
       <h2 class="company-name">{{ t.company }}</h2>
       <p class="service-badges">{{ t.badges }}</p>
-      <a href="https://www.superinfo.com.tw" target="_blank" class="slogan-link" title="Visit Superinfo Official Website">
+      <a href="https://www.superinfo.com.tw" target="_blank" class="slogan-link"
+        title="Visit Superinfo Official Website">
         <p class="slogan">{{ t.slogan }}</p>
       </a>
     </div>
