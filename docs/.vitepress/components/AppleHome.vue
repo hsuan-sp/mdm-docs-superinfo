@@ -30,7 +30,8 @@ const t = computed(() => {
 
 // Navigation cards data
 const navCards = computed(() => {
-  const base = localePath?.value || '/'
+  const isEn = lang.value === 'en-US'
+  const base = isEn ? '/en/' : '/'
   const isZh = lang.value === 'zh-TW'
 
   return [
