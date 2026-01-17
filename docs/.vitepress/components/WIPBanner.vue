@@ -24,26 +24,27 @@ const showBanner = computed(() => lang.value === 'en-US')
 
 <style scoped>
 .wip-banner {
-    position: sticky;
-    top: var(--vp-nav-height);
-    z-index: 999;
-    background: linear-gradient(135deg, #ff9500 0%, #ffcc00 100%);
+    position: relative;
+    z-index: 1000;
+    background: linear-gradient(90deg, #ff9500 0%, #ffcc00 100%);
     color: #1d1d1f;
-    padding: 16px 24px;
-    box-shadow: 0 4px 16px rgba(255, 149, 0, 0.4);
-    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+    padding: 8px 24px;
+    /* Tighter padding for top bar look */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .wip-content {
-    max-width: 1200px;
+    max-width: var(--vp-layout-max-width);
     margin: 0 auto;
     display: flex;
     align-items: center;
-    gap: 16px;
+    justify-content: center;
+    /* Center for announcement look */
+    gap: 12px;
 }
 
 .wip-icon {
-    font-size: 28px;
+    font-size: 20px;
     flex-shrink: 0;
     animation: pulse 2s ease-in-out infinite;
 }
@@ -56,28 +57,31 @@ const showBanner = computed(() => lang.value === 'en-US')
     }
 
     50% {
-        transform: scale(1.15);
+        transform: scale(1.1);
     }
 }
 
 .wip-text {
     display: flex;
-    flex-direction: column;
-    gap: 4px;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
 }
 
 .wip-text strong {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 800;
-    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     color: #000;
 }
 
 .wip-text span {
-    font-size: 14px;
-    opacity: 0.9;
+    font-size: 13px;
     font-weight: 600;
-    color: #1d1d1f;
+    color: rgba(0, 0, 0, 0.8);
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.2);
+    /* Stylized underline */
 }
 
 /* Transitions */

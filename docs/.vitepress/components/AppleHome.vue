@@ -75,7 +75,7 @@ const navCards = computed(() => {
       title: 'Education',
       subtitle: isZh ? '方案規範' : 'Project Compliance',
       desc: isZh ? '接軌教育部專案規範，優化校園數位學習環境。' : 'Align with MOE technical requirements to optimize digital learning.',
-      link: `${base}guide/#digital`,
+      link: `${base}guide/#digital-learning`,
       bg: '#F5F5F7',
       textColor: '#1d1d1f',
       icon: '🎓'
@@ -102,7 +102,7 @@ const navCards = computed(() => {
       title: 'Scenarios',
       subtitle: isZh ? '情境實戰' : 'Practical Q&A',
       desc: isZh ? '集結第一線網管與教師的高頻率常見問題答集。' : 'Frequently asked questions from on-site IT admins and teachers.',
-      link: `${base}guide/#education`,
+      link: `${base}guide/#qa-education`,
       bg: '#F5F5F7',
       textColor: '#1d1d1f',
       icon: '🏫'

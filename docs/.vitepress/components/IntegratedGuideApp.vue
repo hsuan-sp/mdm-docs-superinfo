@@ -42,10 +42,10 @@ const t = computed(() => {
         'enrollment': '裝置註冊',
         'apps': 'App 管理',
         'classroom': '課堂管理',
-        'digital': '數位精進',
+        'digital-learning': '數位精進',
         'hardware': '硬體排除',
         'mac': 'Mac 管理',
-        'education': '教育實戰'
+        'qa-education': '教育實戰'
       }
     },
     'en-US': {
@@ -64,14 +64,14 @@ const t = computed(() => {
       fontMedium: "M",
       fontLarge: "L",
       hashMap: {
-        'account': 'Account & Server',
-        'enrollment': 'Enrollment',
-        'apps': 'App Management',
-        'classroom': 'Apple Classroom',
-        'digital': 'Digital Learning',
-        'hardware': 'Hardware Tuning',
-        'mac': 'Mac Management',
-        'education': 'Education Q&A'
+        'account': 'Account & Server Management',
+        'enrollment': 'Enrollment & Device Setup',
+        'apps': 'App & Content Distribution',
+        'classroom': 'Apple Classroom & Teaching Tools',
+        'digital-learning': 'Campus Digital Initiatives',
+        'hardware': 'Hardware & Maintenance',
+        'mac': 'Advanced Mac Management',
+        'qa-education': 'Education Scenarios & FAQ'
       }
     }
   };
