@@ -1,5 +1,5 @@
 <script setup>
-import { useData, useRouter, withBase } from 'vitepress'
+import { useData, useRouter } from 'vitepress'
 import { onMounted, onUnmounted, computed } from 'vue'
 
 const { lang } = useData()
@@ -114,6 +114,11 @@ const navCards = computed(() => [
   }
 ])
 
+const handleCardClick = (e, link) => {
+  e.preventDefault()
+  router.go(link)
+}
+
 onMounted(() => {
   document.body.classList.add('is-home')
 
@@ -154,11 +159,12 @@ onUnmounted(() => {
           {{ t.intro2 }}
         </p>
         <div class="hero-links">
-          <a :href="withBase(langBase + '/guide/')" class="primary-btn">
+          <a :href="langBase + '/guide/'" class="primary-btn" @click="(e) => handleCardClick(e, langBase + '/guide/')">
             {{ t.explore }}
             <span class="btn-icon" aria-hidden="true">→</span>
           </a>
-          <a :href="withBase(langBase + '/glossary')" class="text-link">
+          <a :href="langBase + '/glossary'" class="text-link"
+            @click="(e) => handleCardClick(e, langBase + '/glossary')">
             {{ t.searchGlossary }}
             <span aria-hidden="true">›</span>
           </a>
@@ -174,8 +180,10 @@ onUnmounted(() => {
       </div>
 
       <div class="cards-grid">
-        <a v-for="card in navCards" :key="card.link" :href="withBase(card.link)" class="card fade-in-on-scroll"
-          :style="{ background: card.bg, color: card.textColor }" :aria-label="`前往 ${card.subtitle}`">
+        <a v-for="card in navCards" :key="card.link" :href="card.link" class="card fade-in-on-scroll"
+          :style="{ background: card.bg, color: card.textColor }"
+          :aria-label="(lang === 'zh-TW' ? '前往 ' : 'Go to ') + card.subtitle"
+          @click="(e) => handleCardClick(e, card.link)">
           <div class="card-icon" aria-hidden="true">{{ card.icon }}</div>
           <div class="card-text">
             <span class="card-subtitle">{{ card.subtitle }}</span>

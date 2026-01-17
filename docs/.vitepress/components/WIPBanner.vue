@@ -1,7 +1,12 @@
+<script setup>
+import { computed } from 'vue'
 import { useData } from 'vitepress'
 
 const { lang } = useData()
 
+// Show banner only for English version
+const showBanner = computed(() => lang.value === 'en-US')
+</script>
 
 <template>
     <Transition name="slide-down">
@@ -21,12 +26,12 @@ const { lang } = useData()
 .wip-banner {
     position: sticky;
     top: var(--vp-nav-height);
-    z-index: 99;
-    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    z-index: 999;
+    background: linear-gradient(135deg, #ff9500 0%, #ffcc00 100%);
     color: #1d1d1f;
-    padding: 12px 24px;
-    box-shadow: 0 2px 12px rgba(255, 193, 7, 0.3);
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 16px 24px;
+    box-shadow: 0 4px 16px rgba(255, 149, 0, 0.4);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .wip-content {
@@ -38,7 +43,7 @@ const { lang } = useData()
 }
 
 .wip-icon {
-    font-size: 24px;
+    font-size: 28px;
     flex-shrink: 0;
     animation: pulse 2s ease-in-out infinite;
 }
@@ -51,26 +56,28 @@ const { lang } = useData()
     }
 
     50% {
-        transform: scale(1.1);
+        transform: scale(1.15);
     }
 }
 
 .wip-text {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 4px;
 }
 
 .wip-text strong {
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 17px;
+    font-weight: 800;
     letter-spacing: -0.01em;
+    color: #000;
 }
 
 .wip-text span {
-    font-size: 13px;
-    opacity: 0.85;
-    font-weight: 500;
+    font-size: 14px;
+    opacity: 0.9;
+    font-weight: 600;
+    color: #1d1d1f;
 }
 
 /* Transitions */
@@ -91,19 +98,19 @@ const { lang } = useData()
 
 @media (max-width: 768px) {
     .wip-banner {
-        padding: 10px 16px;
+        padding: 14px 20px;
     }
 
     .wip-icon {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .wip-text strong {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .wip-text span {
-        font-size: 12px;
+        font-size: 13px;
     }
 }
 </style>

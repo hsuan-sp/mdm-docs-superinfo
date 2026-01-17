@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 import { useLayoutMode } from '../composables/useLayoutMode';
 import { useData, useRouter } from 'vitepress';
 
@@ -40,21 +40,58 @@ const toggleDarkMode = () => {
 };
 
 const { lang } = useData();
+const t = computed(() => {
+    return lang.value === 'zh-TW' ? {
+        logout: '登出',
+        logoutAccount: '登出帳號',
+        openMenu: '開啟選單',
+        closeMenu: '關閉選單',
+        themeMode: '主題模式',
+        dark: '深色',
+        light: '淡色',
+        currentlyLoggedIn: '目前登入',
+        language: '語言 / Lang',
+        chinese: '中文',
+        english: 'English'
+    } : {
+        logout: 'Logout',
+        logoutAccount: 'Sign Out',
+        openMenu: 'Open Menu',
+        closeMenu: 'Close Menu',
+        themeMode: 'Theme',
+        dark: 'Dark',
+        light: 'Light',
+        currentlyLoggedIn: 'Current User',
+        language: 'Language',
+        chinese: 'Chinese',
+        english: 'English'
+    };
+});
+
 const switchLanguage = () => {
     const currentPath = window.location.pathname;
     let targetPath = '';
 
     if (lang.value === 'zh-TW') {
-        // Switch to English
-        targetPath = currentPath.startsWith('/mdm-support-site/')
-            ? currentPath.replace('/mdm-support-site/', '/mdm-support-site/en/')
-            : '/en' + currentPath;
+        // Switch to English: add /en prefix
+        if (currentPath === '/') {
+            targetPath = '/en/';
+        } else if (currentPath.startsWith('/')) {
+            targetPath = '/en' + currentPath;
+        }
     } else {
-        // Switch to Chinese
-        targetPath = currentPath.replace('/en/', '/');
+        // Switch to Chinese: remove /en prefix
+        if (currentPath === '/en/' || currentPath === '/en') {
+            targetPath = '/';
+        } else if (currentPath.startsWith('/en/')) {
+            targetPath = currentPath.replace('/en/', '/');
+        } else {
+            targetPath = currentPath.replace('/en', '/');
+        }
     }
 
-    router.go(targetPath);
+    // Use window.location for full page reload to ensure proper language context
+    window.location.href = targetPath;
 };
 </script>
 
@@ -66,12 +103,12 @@ const switchLanguage = () => {
                 <div class="user-badge">
                     <span class="username">{{ username }}</span>
                 </div>
-                <button v-if="!isGuest" @click="logout" class="logout-link">登出</button>
+                <button v-if="!isGuest" @click="logout" class="logout-link">{{ t.logout }}</button>
             </div>
         </div>
 
         <!-- Mobile Menu Trigger - Hamburger Icon -->
-        <button class="mobile-menu-trigger" @click="isMenuOpen = !isMenuOpen" aria-label="開啟選單">
+        <button class="mobile-menu-trigger" @click="isMenuOpen = !isMenuOpen" :aria-label="t.openMenu">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -163,22 +200,24 @@ const switchLanguage = () => {
                                             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                                         </svg>
                                     </div>
-                                    <div class="compact-label">主題模式</div>
-                                    <div class="compact-status">{{ isDark ? '深色' : '淡色' }}</div>
+                                    <div class="compact-label">{{ t.themeMode }}</div>
+                                    <div class="compact-status">{{ isDark ? t.dark : t.light }}</div>
                                 </div>
 
                                 <!-- Language Switch -->
                                 <div class="menu-item compact" @click="switchLanguage">
                                     <div class="compact-icon">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="2">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
                                             <circle cx="12" cy="12" r="10"></circle>
                                             <line x1="2" y1="12" x2="22" y2="12"></line>
-                                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0
+                                                1-4-10 15.3 15.3 0 0 1 4-10z">
+                                            </path>
                                         </svg>
                                     </div>
-                                    <div class="compact-label">語言 / Lang</div>
-                                    <div class="compact-status">{{ lang === 'zh-TW' ? 'English' : '中文' }}</div>
+                                    <div class="compact-label">{{ t.language }}</div>
+                                    <div class="compact-status">{{ lang === 'zh-TW' ? t.english : t.chinese }}</div>
                                 </div>
                             </div>
                         </div>
@@ -186,12 +225,13 @@ const switchLanguage = () => {
                         <div class="dropdown-footer">
                             <!-- User Info moved to Footer -->
                             <div class="user-detail-footer">
-                                <div class="current-user-label">目前登入</div>
+                                <div class="current-user-label">{{ t.currentlyLoggedIn }}</div>
                                 <div class="name">{{ username }}</div>
                             </div>
 
-                            <button v-if="!isGuest" class="logout-btn-full" @click="logout">登出帳號</button>
-                            <button class="close-btn" @click="isMenuOpen = false">關閉選單</button>
+                            <button v-if="!isGuest" class="logout-btn-full" @click="logout">{{ t.logoutAccount
+                            }}</button>
+                            <button class="close-btn" @click="isMenuOpen = false">{{ t.closeMenu }}</button>
                         </div>
                     </div>
                 </div>
@@ -277,7 +317,8 @@ const switchLanguage = () => {
     content: '';
     width: 6px;
     height: 6px;
-    background: #10b981; /* Green dot for guest/online */
+    background: #10b981;
+    /* Green dot for guest/online */
     border-radius: 50%;
 }
 
