@@ -19,7 +19,7 @@ const handleLinkClick = (e: Event, link: string) => {
         return;
     }
     e.preventDefault();
-    router.go(link);
+    router.go(withBase(link));
 };
 
 const toggleNav = (index: any) => {
@@ -229,7 +229,7 @@ const switchLanguage = () => {
                             </div>
 
                             <button v-if="!isGuest" class="logout-btn-full" @click="logout">{{ t.logoutAccount
-                                }}</button>
+                            }}</button>
                             <button class="close-btn" @click="isMenuOpen = false">{{ t.closeMenu }}</button>
                         </div>
                     </div>

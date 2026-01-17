@@ -50,7 +50,7 @@ onMounted(() => {
     if (!isChinese && !isEnPath && !hasRedirected) {
       sessionStorage.setItem('lang-redirect-checked', 'true');
 
-      const base = site.value.base || '/';
+      const base = site.value?.base || '/';
       const cleanPath = currentPath.startsWith(base)
         ? currentPath.slice(base.length)
         : currentPath;
