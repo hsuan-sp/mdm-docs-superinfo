@@ -21,6 +21,6 @@ macOS Tahoe 是最後支援 Intel Mac 的版本。支援的最後一批 Intel Ma
 
 ## 實務建議
 
-- 2026 年：盤點 Intel Mac 清單
-- 2027 年：開始逐步汰換高使用率裝置
-- 2028-2029 年：完全轉換至 Apple Silicon
+* 2026 年：盤點 Intel Mac 清單
+* 2027 年：開始逐步汰換高使用率裝置
+* 2028-2029 年：完全轉換至 Apple Silicon

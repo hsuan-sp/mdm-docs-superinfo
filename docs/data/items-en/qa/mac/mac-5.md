@@ -18,9 +18,9 @@ Unlike iPads, Mac updates often require a lengthy restart, which leads students 
 * **The Logic**: You set an **"Enforcement Deadline."**
 * **The Experience**:
 
-    1. In the days leading up to the deadline, the system gently notifies the student.
-    2. As the deadline approaches, the notifications become more persistent.
-    3. **Once the deadline is reached**, the Mac will automatically download the update and force a restart. The student cannot postpone it further.
+1. In the days leading up to the deadline, the system gently notifies the student.
+2. As the deadline approaches, the notifications become more persistent.
+3. **Once the deadline is reached**, the Mac will automatically download the update and force a restart. The student cannot postpone it further.
 
 * **Configuration**: This is set in Jamf Pro under **Configuration Profiles > Software Update**, where you define the target version and the specific cut-off date and time.
 

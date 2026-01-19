@@ -22,6 +22,7 @@ tags: ["EACS", "ADE 故障排除", "網路認證", "Terminal 指令", "復原模
 ## 技巧 1：強制同步系統時間 (終端機命令)
 
 在 Setup Assistant 畫面，按下 **Command + Option + T** 開啟終端機（或從選單進入）：
+
 ```bash
 
 sntp -sS time.apple.com

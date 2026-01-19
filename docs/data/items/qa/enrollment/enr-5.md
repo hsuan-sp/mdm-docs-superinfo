@@ -25,6 +25,7 @@ tags: ["帳號驅動註冊","服務偵測",".well-known","BYOD"]
 3. 伺服器需回傳一個 JSON 檔案，其中包含 MDM 伺服器的 URL。
 
 **實作需求**：
+
 * **網頁伺服器**：學校官網的主機必須託管該 JSON 檔案。
 * **Content-Type**：回傳的標頭必須設為 `application/json`。
 * **SSL 憑證**：伺服器必須具備有效的 HTTPS 憑證。

@@ -20,6 +20,6 @@ Apple 自 2026 年底起強制使用的軟體更新管理方式。傳統 MDM 遠
 
 ## 技術優勢
 
-- 裝置自主評估更新時機（電量、網路、使用狀況）
-- Real-time 狀態回報（Status Channel）
-- 支援 Apple TV、Apple Vision Pro
+* 裝置自主評估更新時機（電量、網路、使用狀況）
+* Real-time 狀態回報（Status Channel）
+* 支援 Apple TV、Apple Vision Pro

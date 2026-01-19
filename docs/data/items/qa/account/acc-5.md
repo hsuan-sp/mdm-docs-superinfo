@@ -15,6 +15,7 @@ tags: ["聯合驗證","Google Workspace","Microsoft Entra ID","SSO"]
 讓學校可以將 Google Workspace 或 Microsoft Entra ID 的帳號系統與「管理式 Apple 帳號」串接。
 
 **優點**：
+
 * **免背新密碼**：師生只需記住原有的 Google/Microsoft 帳號密碼，
 
  即可登入 iCloud、課堂 App、共用 iPad 及 macOS。
@@ -47,6 +48,7 @@ tags: ["聯合驗證","Google Workspace","Microsoft Entra ID","SSO"]
  Apple 會提供 60 天的寬限期供使用者變更個人帳號的 Email。
 
 **注意事項**：
+
 * **單一來源**：每個網域僅能關聯一個身分提供者（Google 或 Microsoft 擇一）。
 * **網路依賴**：由於密碼是向 Google/Microsoft 驗證，
 

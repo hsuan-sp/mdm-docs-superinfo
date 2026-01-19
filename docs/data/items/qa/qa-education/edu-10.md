@@ -39,6 +39,7 @@ tags: ["App Store","Self Service","限制"]
 5. 安裝完成後，App 會出現在主畫面。
 
 **Self Service 的優點**：
+
 * **無需密碼**：透過 VPP 授權自動處理。
 * **經過審核**：只有學校核准的 App 才會出現。
 * **即時更新**：管理員可隨時新增或移除 App。
@@ -51,6 +52,7 @@ tags: ["App Store","Self Service","限制"]
 3. **管理員加入 Self Service**：經審核後，該 App 會出現在 Self Service 供安裝。
 
 **實務建議：常見問題**
+
 * **Self Service 打不開**：確認裝置已連網，嘗試重啟 iPad。
 * **安裝按鈕是灰色的**：可能授權數量不足或 App 正在背景處理，稍後再試。
 * **找不到 Self Service App**：它可能被收進某個資料夾中，或在第二頁。

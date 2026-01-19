@@ -16,5 +16,6 @@ tags: ["DoH", "DoT", "DNS 加密", "隱私", "Jamf Safe Internet"]
 Jamf Safe Internet 使用 Jamf DNS over HTTPS gateway 實現內容過濾，兼顧隱私與安全。但學生若自行安裝第三方 DoH App（如 Cloudflare 1.1.1.1），可能繞過學校過濾。
 
 **應對策略**：
-- 使用 Network Extension URL Filtering API（iOS 26 新功能）
-- 限制 VPN/DNS App 的安裝
+
+* 使用 Network Extension URL Filtering API（iOS 26 新功能）
+* 限制 VPN/DNS App 的安裝

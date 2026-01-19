@@ -19,11 +19,11 @@ tags: ["iOS 18","隱藏 App","鎖定 App","限制描述檔","受監管"]
 
 1. **不允許鎖定 App (allowLockedApps)**：
 
- * 禁止使用者對任何 App 啟用 Face ID/Touch ID 驗證鎖定。**註：若停用此項，系統會自動併同停用隱藏 App 的功能。**
+* 禁止使用者對任何 App 啟用 Face ID/Touch ID 驗證鎖定。**註：若停用此項，系統會自動併同停用隱藏 App 的功能。**
 
 2. **不允許隱藏 App (allowHiddenApps)**：
 
- * 禁止使用者將 App 移入「隱藏」資料夾。
+* 禁止使用者將 App 移入「隱藏」資料夾。
 
 **技術細節**：
 

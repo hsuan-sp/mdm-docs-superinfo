@@ -13,9 +13,9 @@ iOS 26、iPadOS 26、macOS Tahoe 的 DDM App 管理機制。可部署 App Store 
 
 ## MDM 相關
 
-- **Required Apps（必要 App）**：自動安裝，使用者無法移除
-- **Optional Apps（選用 App）**：使用者可選擇安裝
-- **Per-App Update Control**：可針對個別 App 設定是否自動更新
+* **Required Apps（必要 App）**：自動安裝，使用者無法移除
+* **Optional Apps（選用 App）**：使用者可選擇安裝
+* **Per-App Update Control**：可針對個別 App 設定是否自動更新
 
 **Jamf Pro 設定路徑**：
 Blueprints > App Management > Declarative App Configuration

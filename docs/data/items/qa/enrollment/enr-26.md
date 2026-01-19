@@ -64,9 +64,9 @@ tags: ["Return to Service", "iOS 26", "共享 iPad", "App 保留", "快速部署
 3. 選擇 **Return to Service** 指令
 4. 設定以下選項：
 
- * ✅ **Clear Activation Lock**（清除啟用鎖定）
- * ✅ **Retain Wi-Fi Profile**（保留 Wi-Fi 設定）
- * ✅ **Preserve Managed Apps**（保留受管理的 App，iOS 26 新選項）
+* ✅ **Clear Activation Lock**（清除啟用鎖定）
+* ✅ **Retain Wi-Fi Profile**（保留 Wi-Fi 設定）
+* ✅ **Preserve Managed Apps**（保留受管理的 App，iOS 26 新選項）
 
 5. 執行指令
 
@@ -135,6 +135,7 @@ tags: ["Return to Service", "iOS 26", "共享 iPad", "App 保留", "快速部署
 *假設學校有部署快取伺服器（Content Caching），時間可能可縮短至 30-60 分鐘
 
 **核心優勢**：
+
 * 大幅減少網路頻寬壓力
 * 可在課間休息時間快速完成
 * 不影響其他教學活動的網路使用

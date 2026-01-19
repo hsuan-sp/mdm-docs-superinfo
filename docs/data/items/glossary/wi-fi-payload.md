@@ -4,7 +4,7 @@ category: ["Network"]
 ---
 ## 術語定義
 
-Wi-Fi 設定單元。Configuration Profile 中的一種 Payload 類型。它可以預先設定 Wi-Fi 的 SSID、密碼、加密方式（WPA2/WPA3）、是否自動連線，甚至可以設定 802.1x 憑證認證，讓裝置開機就自動連上企業網路。
+Wi-Fi 設定單元。Configuration Profile 中的一種 Payload 類型。它可以預先設定 Wi-Fi 的 SSID、密碼、加密方式（WPA 2/WPA 3）、是否自動連線，甚至可以設定 802.1x 憑證認證，讓裝置開機就自動連上企業網路。
 
 ## 白話文比喻
 

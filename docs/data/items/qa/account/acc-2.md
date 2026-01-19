@@ -16,6 +16,7 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 所有 MDM 指令都必須透過此憑證簽章才能被 Apple 伺服器轉發至裝置。
 
 **過期後果**：
+
 * **所有受管裝置將無法接收任何遠端指令**：
 
  包括派送 App、推送設定描述檔、發送清除密碼指令、鎖定裝置等——一律全部失效。
@@ -45,7 +46,7 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
  前往 [identity.apple.com/pushcert](https://identity.apple.com/pushcert)，
  使用**最初建立該憑證的同一個 Apple 帳號** 登入。
 
- * ⚠️ **嚴重警告**：若使用不同的 Apple 帳號登入並建立新憑證，
+* ⚠️ **嚴重警告**：若使用不同的 Apple 帳號登入並建立新憑證，
 
  Apple 會將其視為「全新的 MDM 服務」，所有裝置將與 Jamf Pro 斷開連結！
  （若及時換回憑證還能救回，否則將無法控制裝置）
@@ -54,6 +55,7 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 6. **回到 Jamf Pro 上傳新憑證**：完成上傳後，憑證將同步更新，有效期將向後延長一年。
 
 **實務建議**：
+
 * 在組織共用的行事曆中設定每年提前 60 天或更久的的續約提醒。
 * 將負責憑證的 Apple 帳號密碼與雙重認證備援方法、或**硬體安全金鑰**，
 

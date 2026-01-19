@@ -16,8 +16,9 @@ iPadOS 26 引入的視窗化多工系統，允許 iPad 像 Mac 一樣以視窗�
 教育場域需考慮是否限制此功能，避免低年級學生操作混亂或上課分心。MDM 可透過「Restrictions」描述檔管理多工權限。
 
 **Jamf Pro 設定路徑**：
-- Restrictions > Functionality > 取消勾選 "Allow Multitasking" (若需完全禁用)。
-- 或透過 DDM 設定更精細的 App 視窗規則。
+
+* Restrictions > Functionality > 取消勾選 "Allow Multitasking" (若需完全禁用)。
+* 或透過 DDM 設定更精細的 App 視窗規則。
 
 ## 風險提示
 

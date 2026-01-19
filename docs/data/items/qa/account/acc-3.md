@@ -35,6 +35,7 @@ tags: ["密碼重置","ASM","管理式 Apple 帳號"]
  這份檔案會列出該批學生的姓名及其對應的 **暫時密碼**，方便列印發放。
 
 **注意事項**：
+
 * **聯合驗證 (Federated Authentication)**：若學校啟用了與 Google 或 Microsoft 的聯合驗證，
 
  密碼權限在該平台端。請直接在 Google 管理主控台或 Microsoft 管理中心重置密碼，ASM 端的按鈕將失效。

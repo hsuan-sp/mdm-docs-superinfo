@@ -22,9 +22,9 @@ tags: ["Office","Microsoft 365","Serializer","大量授權","Jamf App Installers
 1. **安裝主程式**：透過 Jamf Pro 的 **「App Installers」** 派送 Microsoft Office 365。
 2. **啟用授權 (關鍵)**：
 
- * 前往微軟大量授權中心 (VLSC) 下載 **「Volume License Serializer (VL Serializer)」** 的 .pkg 檔。
- * 將此 .pkg 上傳至 Jamf Pro 並建立 **「政策 (Policy)」** 安裝。
- * **效果**：安裝後，Office 會認證「這台電腦」的授權，
+* 前往微軟大量授權中心 (VLSC) 下載 **「Volume License Serializer (VL Serializer)」** 的 .pkg 檔。
+* 將此 .pkg 上傳至 Jamf Pro 並建立 **「政策 (Policy)」** 安裝。
+* **效果**：安裝後，Office 會認證「這台電腦」的授權，
 
  任何使用者開啟 Word 都不需登入即可使用。
 
@@ -35,9 +35,9 @@ tags: ["Office","Microsoft 365","Serializer","大量授權","Jamf App Installers
 1. **安裝主程式**：同樣透過 **「App Installers」** 派送，確保軟體永遠保持最新。
 2. **啟用授權**：
 
- * 不需安裝 Serializer。
- * 使用者首次開啟 App 時，輸入學校提供的 Microsoft 365 帳號密碼登入即可啟用。
- * **優點**：可存取 OneDrive 與個人雲端紀錄。
+* 不需安裝 Serializer。
+* 使用者首次開啟 App 時，輸入學校提供的 Microsoft 365 帳號密碼登入即可啟用。
+* **優點**：可存取 OneDrive 與個人雲端紀錄。
 
 **部署 SOP (Jamf Pro)：**
 

@@ -39,8 +39,8 @@ macOS 26 支援更強大的註冊機制。
 1. **ASM/ADE 綁定**：確保序號已入庫並指向校內 Jamf。
 2. **開箱啟動**：
 
- * **方法 A (有線網路)**：透過 Thunderbolt 轉 Ethernet 同時啟動 10 台。
- * **方法 B (無線網路)**：配合 WPA3 預導向 (Managed Wi-Fi) 靜默連線。
+* **方法 A (有線網路)**：透過 Thunderbolt 轉 Ethernet 同時啟動 10 台。
+* **方法 B (無線網路)**：配合 WPA 3 預導向 (Managed Wi-Fi) 靜默連線。
 
 3. **監控 DDM 頻道**：在 Jamf Pro 回報頁面，即時觀察軟體安裝進度。
 

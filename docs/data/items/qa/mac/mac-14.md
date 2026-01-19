@@ -23,17 +23,17 @@ Jamf Pro 內建了印表機對應介面，適合標準的網路印表機。
 
 1. **新增印表機**：
 
- * 前往 **「設定」** > **「電腦管理」** > **「印表機」**。
- * 點選 **「+ 新增」**，輸入 IP 位址與顯示名稱。
- * **關鍵設定**：在「驅動程式」欄位，若印表機支援 AirPrint，可選擇 **「Generic PCL Laser Printer」**
+* 前往 **「設定」** > **「電腦管理」** > **「印表機」**。
+* 點選 **「+ 新增」**，輸入 IP 位址與顯示名稱。
+* **關鍵設定**：在「驅動程式」欄位，若印表機支援 AirPrint，可選擇 **「Generic PCL Laser Printer」**
 
  或 **「Generic PostScript Printer」**，通常無需額外安裝廠商驅動。
 
 2. **建立派送政策**：
 
- * 前往 **「電腦」** > **「政策」** > **「+ 新增」**。
- * 在 **「印表機」** 承載資料中，點選「安裝」剛才建立的印表機。
- * **觸發程序**：建議設為 **「自助服務 (Self Service)」**，
+* 前往 **「電腦」** > **「政策」** > **「+ 新增」**。
+* 在 **「印表機」** 承載資料中，點選「安裝」剛才建立的印表機。
+* **觸發程序**：建議設為 **「自助服務 (Self Service)」**，
 
  讓老師根據自己所在的辦公室位置點選安裝。
 
@@ -75,10 +75,11 @@ echo "Printer $DISPLAY_NAME installed successfully."
 2. **安裝驅動**：建立一個政策先安裝該 `.pkg`。
 3. **對應 PPD**：
 
- * 在執行 `lpadmin` 腳本時，需指定 PPD 檔案在本機的路徑 (通常在 `/Library/Printers/PPDs/...`)。
- * 語法：`-P "/Library/Printers/PPDs/Contents/Resources/HP_LaserJet_v10.gz"`
+* 在執行 `lpadmin` 腳本時，需指定 PPD 檔案在本機的路徑 (通常在 `/Library/Printers/PPDs/...`)。
+* 語法：`-P "/Library/Printers/PPDs/Contents/Resources/HP_LaserJet_v10.gz"`
 
 **實務建議：最佳實踐 - 自助服務 (Self Service)**
+
 * **痛點**：學校印表機眾多，全校派送會導致老師的選單出現數十台印表機，造成混亂。
 * **解法**：將每台印表機做成一個 **「自助服務」** 項目，並附上位置說明
 

@@ -36,6 +36,7 @@ Apple 強制要求所有 macOS 軟體必須經過 **「公證 (Notarization)」*
 **管理員端的解決方案 (Jamf Pro)：**
 
 **策略一：透過 Policy 派送 (推薦)**
+
 * **原理**：當軟體透過 Jamf Pro 的政策 (Policy) 安裝時，是由 Jamf Binary 以 Root 權限寫入，
 
  通常**不會**被標記「網路隔離屬性 (com.apple.quarantine)」。
@@ -45,6 +46,7 @@ Apple 強制要求所有 macOS 軟體必須經過 **「公證 (Notarization)」*
 **策略二：移除隔離屬性 (進階排錯)**
 
 若軟體是透過腳本下載或複製進去的，可能會帶有隔離標籤。可透過 Jamf 腳本執行以下指令移除：
+
 ```bash
 
 ## 移除指定 App 的隔離屬性 (慎用)

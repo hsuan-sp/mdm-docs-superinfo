@@ -24,9 +24,11 @@ tags: ["macOS 26", "Package", "DDM", ".pkg", "Jamf Policy"]
 ## 適用條件與限制
 
 **macOS 版本需求：**
+
 * macOS 26 (Tahoe) 或更新版本
 
 **.pkg 檔案要求：**
+
 * 必須由 **Apple Developer ID Installer certificate** 正確簽署
 * 必須為標準的 Distribution Package 格式
 * 安裝路徑需符合 macOS 安全性要求（通常為 `/Applications` 資料夾）
@@ -34,12 +36,14 @@ tags: ["macOS 26", "Package", "DDM", ".pkg", "Jamf Policy"]
 ## 何時該用哪一個？
 
 **優先使用 DDM Package：**
+
 * 標準軟體安裝（如 Microsoft Office、Google Chrome、Adobe Acrobat）
 * 需要即時確認安裝成功率的關鍵軟體
 * macOS 26 以上的新電腦
 * 希望減少對 Jamf binary 依賴的環境
 
 **繼續使用 Jamf Policy：**
+
 * 複雜的安裝流程（如：安裝後需執行 script 修改設定、需互動視窗）
 * 非標準 .pkg 格式的軟體（如拖曳式 .dmg、需要特殊處理的安裝檔）
 * 舊版 macOS 裝置

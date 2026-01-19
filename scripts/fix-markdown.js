@@ -21,10 +21,7 @@ const __dirname = path.dirname(__filename);
 
 // 目標目錄
 const DIRECTORIES = [
-  path.join(__dirname, '../docs/data/items/qa'),
-  path.join(__dirname, '../docs/data/items/glossary'),
-  path.join(__dirname, '../docs/data/items-en/qa'),
-  path.join(__dirname, '../docs/data/items-en/glossary'),
+  path.join(__dirname, '../docs/data'),
 ];
 
 // 專有名詞映射表 (大小寫敏感)
@@ -113,7 +110,11 @@ function getAllMarkdownFiles(dir) {
     for (const entry of entries) {
       const fullPath = path.join(currentDir, entry.name);
       if (entry.isDirectory()) traverse(fullPath);
-      else if (entry.isFile() && entry.name.endsWith('.md')) files.push(fullPath);
+      else if (entry.isFile() && entry.name.endsWith('.md')) {
+        // 排除自動生成的索引檔案
+        if (entry.name.includes('MAINTENANCE_INDEX')) continue;
+        files.push(fullPath);
+      }
     }
   }
   traverse(dir);
@@ -135,6 +136,11 @@ function optimizeSpacing(text, lang) {
   // 中文與數字之間加空格
   result = result.replace(/([\u4e00-\u9fa5])(\d)/g, '$1 $2');
   result = result.replace(/(\d)([\u4e00-\u9fa5])/g, '$1 $2');
+  // 英文與數字之間加空格 (例如 iPad 10, iOS 18)
+  // 為避免破壞 A14, M1 等簡短技術代碼，僅針對 3 字元以上的英文字詞處理
+  result = result.replace(/([a-zA-Z]{3,})(\d+)/g, '$1 $2');
+  result = result.replace(/(\d+)([a-zA-Z]{3,})/g, '$1 $2');
+
   // 清理連續空格
   result = result.replace(/ +/g, ' ');
   return result;
@@ -159,12 +165,16 @@ function processFile(filePath) {
     const rawContent = fs.readFileSync(filePath, 'utf-8');
     
     // 檢查 Frontmatter
-    if (!rawContent.startsWith('---')) return false;
-    const parts = rawContent.split('---');
-    if (parts.length < 3) return false;
+    let frontmatter = null;
+    let content = rawContent;
 
-    const frontmatter = parts[1];
-    let content = parts.slice(2).join('---');
+    if (rawContent.startsWith('---')) {
+      const parts = rawContent.split('---');
+      if (parts.length >= 3) {
+        frontmatter = parts[1];
+        content = parts.slice(2).join('---');
+      }
+    }
     const lang = getLanguage(filePath);
 
     // 移除開頭多餘空行
@@ -183,7 +193,7 @@ function processFile(filePath) {
         inCodeBlock = !inCodeBlock;
         
         // MD031: 代碼塊前加空行
-        if (!inCodeBlock /* 進入時 */ && prevLine && prevLine.trim() !== '' && !prevLine.trim().startsWith('```')) {
+        if (inCodeBlock /* 進入時 */ && prevLine && prevLine.trim() !== '' && !prevLine.trim().startsWith('```')) {
           processedLines.push('');
         }
         
@@ -197,6 +207,9 @@ function processFile(filePath) {
 
       if (inCodeBlock) {
         processedLines.push(line);
+        if (!inCodeBlock /* 退出時 */) {
+          processedLines.push('');
+        }
         continue;
       }
 
@@ -231,15 +244,37 @@ function processFile(filePath) {
         continue;
       }
 
-      // C. 列表處理
-      // MD030: 修正列表標記後的空格 (統一為 1 個)
-      if (line.match(/^(\s*)([-*+]|\d+\.)\s{2,}/)) {
-         line = line.replace(/^(\s*)([-*+]|\d+\.)\s+/, '$1$2 ');
-      }
+      // C. 列表處理 (MD004, MD007, MD030, MD032)
+      const listMatch = line.match(/^(\s*)([*+-]|\d+\.) /);
+      const isListItem = !!listMatch;
 
-      // MD007: 修正無序列表縮排 (4空格 -> 2空格)
-      if (line.match(/^    [-*+] /)) {
-        line = line.replace(/^    ([-*+] )/, '  $1');
+      if (isListItem && !inCodeBlock) {
+        // MD032: 列表前確保有空行 (如果前面不是列表、空行或標題)
+        if (prevLine !== null && prevLine.trim() !== '' && 
+            !prevLine.match(/^(\s*)([*+-]|\d+\.) /) && 
+            !prevLine.match(/^#{1,6} /)) {
+          processedLines.push('');
+        }
+
+        // MD004: 統一使用星號 * 作為無序列表標記
+        if (line.match(/^(\s*)[-+] /)) {
+          line = line.replace(/^(\s*)[-+] /, '$1* ');
+        }
+
+        // MD030: 修正列表標記後的空格 (統一為 1 個)
+        if (line.match(/^(\s*)([*+]|\d+\.)\s{2,}/)) {
+           line = line.replace(/^(\s*)([*+]|\d+\.)\s+/, '$1$2 ');
+        }
+
+        // MD007: 修正縮排
+        if (line.match(/^[ ]{1,3}([*+]|\d+\.) /)) {
+          // 如果縮排是 1~3 個空格，通常是手誤，統一改為 0 縮排
+          // 除非是在巢狀情境下 (但 2 空格才是標準，1/3 都是異常)
+          line = line.replace(/^[ ]+/, '');
+        } else if (line.match(/^    ([*+]|\d+\.) /)) {
+          // 4 個空格 -> 2 個 (統一巢狀為 2)
+          line = line.replace(/^    /, '  ');
+        }
       }
 
       // MD032: 列表前後的空行 (略微複雜，這裡主要靠最後的空行清理，或者依賴標題前後的空行規則)
@@ -274,7 +309,9 @@ function processFile(filePath) {
     // 3. 確保檔案結尾單換行
     newMarkdown = newMarkdown.replace(/\s+$/, '') + '\n';
 
-    const finalContent = `---${frontmatter}---${newMarkdown}`;
+    const finalContent = frontmatter !== null 
+      ? `---${frontmatter}---${newMarkdown}` 
+      : newMarkdown;
 
     if (finalContent !== rawContent) {
       fs.writeFileSync(filePath, finalContent, 'utf-8');

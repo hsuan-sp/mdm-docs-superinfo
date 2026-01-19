@@ -35,7 +35,7 @@ function generateIndex({ itemsDir, outputFile, lang, title, intro, glossaryTitle
         files.forEach(file => {
             const content = fs.readFileSync(path.join(glossaryDir, file), 'utf-8');
             const data = parseFrontmatter(content);
-            output += `- **${data.term || file}** (\`${file}\`)\n`;
+            output += `* **${data.term || file}** (\`${file}\`)\n`;
         });
     }
     output += `\n---\n\n`;
@@ -55,7 +55,7 @@ function generateIndex({ itemsDir, outputFile, lang, title, intro, glossaryTitle
                 try {
                     const content = fs.readFileSync(path.join(categoryDir, file), 'utf-8');
                     const data = parseFrontmatter(content);
-                    output += `- [\`${data.id || 'N/A'}\`] ${data.title || file}\n`;
+                    output += `* [\`${data.id || 'N/A'}\`] ${data.title || file}\n`;
                 } catch (e) {
                     output += `- [\`ERROR\`] ${file}\n`;
                 }

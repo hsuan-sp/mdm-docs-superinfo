@@ -34,13 +34,13 @@ tags: ["DDM", "App 管理", "宣告式", "自動更新", "iOS 26"]
 2. 建立 **App Declaration**
 3. 設定 **Installation Behavior**：
 
- * **Required (必要)**：強制安裝，且使用者無法移除。若使用者刪除，裝置會自動重裝
- * **Optional (選用)**：出現在 Self Service 供下載，使用者可移除
+* **Required (必要)**：強制安裝，且使用者無法移除。若使用者刪除，裝置會自動重裝
+* **Optional (選用)**：出現在 Self Service 供下載，使用者可移除
 
 4. 設定 **Update Behavior**：
 
- * **Automatic**：永遠保持最新
- * **Follow User Preference**：依循使用者在 App Store 的自動更新設定
+* **Automatic**：永遠保持最新
+* **Follow User Preference**：依循使用者在 App Store 的自動更新設定
 
 ## 部署建議
 

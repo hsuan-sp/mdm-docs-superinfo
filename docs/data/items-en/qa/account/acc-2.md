@@ -24,7 +24,7 @@ The **Apple Push Notification service (APNs)** certificate is the "digital ID ca
 2. **Apple Portal**: Go to the [Apple Push Certificates Portal](https://identity.apple.com/pushcert).
 3. **Crucial Step**: Log in with the **EXACT SAME Apple ID** used to create the original certificate.
 
-  * *Warning: If you use a different ID, you will create a new certificate rather than a renewal, which will break the connection to your existing iPads.*
+* *Warning: If you use a different ID, you will create a new certificate rather than a renewal, which will break the connection to your existing iPads.*
 
 4. **Renew**: Find the certificate that matches your Jamf server, click **"Renew,"** and upload the CSR from Step 1.
 5. **Download & Upload**: Download the new `.pem` certificate from Apple and upload it back into Jamf Pro.

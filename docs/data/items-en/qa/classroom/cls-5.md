@@ -15,17 +15,17 @@ tags: ["Troubleshooting","Bluetooth","Local Network Permissions"]
 
 1. **Check 'Local Network' Privacy (Most Common)**:
 
-  * On both teacher and student iPads, go to **Settings > Privacy & Security > Local Network**.
-  * Ensure the toggle for **Classroom** is turned **ON**. If this is off, the app is blocked from "seeing" other devices on the same Wi-Fi.
+* On both teacher and student iPads, go to **Settings > Privacy & Security > Local Network**.
+* Ensure the toggle for **Classroom** is turned **ON**. If this is off, the app is blocked from "seeing" other devices on the same Wi-Fi.
 
 2. **Reset the Bluetooth Stack**:
 
-  * Toggle Bluetooth OFF and ON for both the teacher and several students. If this fails, a device restart is the next step.
+* Toggle Bluetooth OFF and ON for both the teacher and several students. If this fails, a device restart is the next step.
 
 3. **Education Profile Status**:
 
-  * If the entire class is showing as offline, the **"Education Configuration Profile"** issued by your MDM (Jamf Pro) may have expired or been revoked. Contact the ICT department to re-push the education settings.
+* If the entire class is showing as offline, the **"Education Configuration Profile"** issued by your MDM (Jamf Pro) may have expired or been revoked. Contact the ICT department to re-push the education settings.
 
 4. **Wi-Fi Segmentation**:
 
-  * While devices are discovered via Bluetooth, data is exchanged over Wi-Fi. Ensure everyone is on the same **SSID** and that "Client Isolation" is disabled on your campus wireless access points.
+* While devices are discovered via Bluetooth, data is exchanged over Wi-Fi. Ensure everyone is on the same **SSID** and that "Client Isolation" is disabled on your campus wireless access points.

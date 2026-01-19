@@ -18,8 +18,8 @@ tags: ["Apple Configurator","手動加入 ASM","過渡期"]
 
 1. **硬體需求**：
 
- * 需要一台 Mac，並安裝最新版的 **Apple Configurator**。
- * 或者是使用 iPhone 下載 **Apple Configurator App**（此方法適用於將 Mac 加入 ASM）。
+* 需要一台 Mac，並安裝最新版的 **Apple Configurator**。
+* 或者是使用 iPhone 下載 **Apple Configurator App**（此方法適用於將 Mac 加入 ASM）。
 
 2. **帳號權限**：操作者需具備 ASM 的「裝置註冊經理」或「管理員」等權限。
 3. **裝置狀態**：iPad 必須處於 **「設定輔助程式 (Setup Assistant)」** 階段（即哈囉畫面）。
@@ -36,8 +36,10 @@ tags: ["Apple Configurator","手動加入 ASM","過渡期"]
  屆時將具備不可移除的 MDM 權限，與正規採購管道的裝置無異。
 
 **重要限制提醒**：
+
 * **Windows 平台限制**：Windows 版的 **「Apple 裝置 App」** 僅能執行回復與備份，
  **無法** 將裝置手動加入 ASM 組織。若學校無 Mac 裝置，建議與維修廠商或具備 Mac 的單位協作處理。
+
 * **釋出風險**：手動加入的裝置一旦從 ASM 中「釋出 (Release)」，
 
  只能再次透過 Apple Configurator 重新手動加入，無法自動找回。

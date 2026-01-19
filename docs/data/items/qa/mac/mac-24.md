@@ -24,7 +24,7 @@ tags: ["Safari", "干擾控制", "考試防弊", "macOS 26", "教學端管理"]
 
 * **路徑**：`com.apple.Safari` 網域下的進階設定。
 * **設定**：
- * `AllowDistractionControl` = `false`
+* `AllowDistractionControl` = `false`
 * **效果**：Safari 目錄下的「干擾控制」功能將變為灰色不可選取，學生無法針對特定測驗頁面發動隱藏指令。
 
 ## 2. 測驗模式 (Assessment Mode / AAC)
