@@ -17,7 +17,6 @@ import { useKeyboardShortcuts } from '../theme/composables/useKeyboardShortcuts'
 import AppSidebar from './AppSidebar.vue';
 import MobileDrawer from '../theme/components/MobileDrawer.vue';
 import EmptyState from '../theme/components/EmptyState.vue';
-import MarkdownIt from "markdown-it";
 
 // UI Translations
 const t = computed(() => {
@@ -99,21 +98,6 @@ const t = computed(() => {
   };
   return translations[lang.value as keyof typeof translations] || translations['zh-TW'];
 });
-
-const md = new MarkdownIt({
-  html: true,
-  linkify: true,
-  typographer: true,
-  breaks: true
-});
-
-const renderMarkdown = (text: string) => {
-  if (!text) return "";
-  const processed = text
-    .replace(/([^\n])\n(\s*[-*+])/g, '$1\n\n$2')
-    .replace(/([^\n])\n(\s*\d+\.)/g, '$1\n\n$2');
-  return md.render(processed);
-};
 
 const { isMobileView } = useLayoutMode();
 const { fontScale, isSidebarCollapsed, toggleSidebar } = useAppFeatures('mdm-glossary');
@@ -309,13 +293,13 @@ const getCategoryChipName = (cat: string) => {
                     </span>
                   </div>
                 </header>
-                <div class="term-definition markdown-body" v-html="renderMarkdown(item.definition)"></div>
+                <div class="term-definition markdown-body" v-html="item.definition"></div>
               </div>
               <section v-if="item.analogy" class="analogy-wrapper">
                 <div class="analogy-icon" aria-hidden="true">💡</div>
                 <div class="analogy-content">
                   <span class="analogy-label">{{ t.analogyLabel }}</span>
-                  <div class="analogy-text markdown-body" v-html="renderMarkdown(item.analogy)"></div>
+                  <div class="analogy-text markdown-body" v-html="item.analogy"></div>
                 </div>
               </section>
             </div>

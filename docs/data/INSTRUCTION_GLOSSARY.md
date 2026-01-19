@@ -22,6 +22,7 @@
   ```bash
   npm run update-index
   ```
+
  *(註：此指令會調用 `scripts/generate_maintenance_index.mjs` 並更新 `MAINTENANCE_INDEX.md`，啟動 `npm run docs:dev` 時也會自動執行)*
 
 ---
@@ -89,9 +90,9 @@ tags: ["標籤1", "標籤2", "標籤3"]
 **優秀比喻的特徵**：
 
 1. **生活化**：使用台灣日常生活情境（便利商店、捷運、圖書館、學校）
-2. **精確對應**：比喻與技術概念有明確對應關係
-3. **易於理解**：國高中生即可理解
-4. **文化適切**：符合台灣文化與教育情境
+1. **精確對應**：比喻與技術概念有明確對應關係
+1. **易於理解**：國高中生即可理解
+1. **文化適切**：符合台灣文化與教育情境
 
 **比喻範例**：
 
@@ -104,10 +105,10 @@ tags: ["標籤1", "標籤2", "標籤3"]
 若術語與 MDM 管理相關，必須包含：
 
 1. **管理方式**：如何透過 MDM 設定或管控
-2. **設定路徑**：在 Jamf Pro 或其他 MDM 的具體路徑
-3. **管理考量**：教育場域的特殊考量或建議
-4. **限制條件**：硬體、系統版本、授權等限制
-5. **常見問題**：該術語相關的常見管理疑問
+1. **設定路徑**：在 Jamf Pro 或其他 MDM 的具體路徑
+1. **管理考量**：教育場域的特殊考量或建議
+1. **限制條件**：硬體、系統版本、授權等限制
+1. **常見問題**：該術語相關的常見管理疑問
 
 **範例**：
 
@@ -162,10 +163,10 @@ MDM 可透過「Restrictions」描述檔管理多工權限。
 **標籤 (Tags) 策略**（建議 3-6 個）：
 
 1. **系統版本**：`iOS 26`, `macOS Tahoe`, `系統版本 26`
-2. **功能領域**：`DDM`, `Apple Intelligence`, `零抹除遷移`
-3. **使用情境**：`考試防弊`, `精進方案`, `維修 SOP`
-4. **技術分類**：`安全性`, `隱私`, `VPN`, `網路過濾`
-5. **對象角色**：`管理員`, `老師`, `學生`, `IT`
+1. **功能領域**：`DDM`, `Apple Intelligence`, `零抹除遷移`
+1. **使用情境**：`考試防弊`, `精進方案`, `維修 SOP`
+1. **技術分類**：`安全性`, `隱私`, `VPN`, `網路過濾`
+1. **對象角色**：`管理員`, `老師`, `學生`, `IT`
 
 ---
 
@@ -262,24 +263,24 @@ Liquid Glass 是 Apple 於 2025 年（系統版本 26）推出的全新視覺設
 **每次撰寫新術語前，請先查證以下資源**：
 
 1. **Apple Platform Deployment Guide**（最權威）
-* 網址：https://support.apple.com/guide/deployment/welcome/web
-* 更新頻率：每次 macOS/iOS 重大更新後
-* 查看：「What's New」章節
-* 確認最新系統版本號
+ * 網址：https://support.apple.com/guide/deployment/welcome/web
+ * 更新頻率：每次 macOS/iOS 重大更新後
+ * 查看：「What's New」章節
+ * 確認最新系統版本號
 
-2. **Apple Developer Release Notes**
-* iOS：https://developer.apple.com/documentation/iOS-iPadOS-release-notes
-* macOS：https://developer.apple.com/documentation/macOS-release-notes
-* 查看：Beta 版本功能預告
+1. **Apple Developer Release Notes**
+ * iOS：https://developer.apple.com/documentation/iOS-iPadOS-release-notes
+ * macOS：https://developer.apple.com/documentation/macOS-release-notes
+ * 查看：Beta 版本功能預告
 
-3. **Jamf Pro 官方繁中文件**
-* 網址：https://learn.Jamf.com/zh-TW/
-* 搜尋：版本號 + 功能名稱
-* 確認：Jamf Pro 是否已支援該功能
+1. **Jamf Pro 官方繁中文件**
+ * 網址：https://learn.Jamf.com/zh-TW/
+ * 搜尋：版本號 + 功能名稱
+ * 確認：Jamf Pro 是否已支援該功能
 
-4. **Apple School Manager / Business Manager 更新日誌**
-* 網址：https://support.apple.com/guide/apple-school-manager/whats-new/web
-* 查看：ASM 新功能與 API 變更
+1. **Apple School Manager / Business Manager 更新日誌**
+ * 網址：https://support.apple.com/guide/apple-school-manager/whats-new/web
+ * 查看：ASM 新功能與 API 變更
 
 ## 9.3 版本號查證流程
 
@@ -333,9 +334,9 @@ FileVault 是 macOS 的全磁碟加密功能。macOS Tahoe 26 新增透過 SSH �
 若發現不同來源資訊衝突：
 
 1. **優先順序**：Apple 官方 > Jamf 官方 > 第三方技術部落格
-2. **標註不確定性**：「根據 Apple 官方文件（2025.12），此功能...」
-3. **避免臆測**：若無法確認，寧可不寫或標註「待確認」
-4. **尋求協助**：在 MAINTENANCE_INDEX.md 旁建立「待查證清單」
+1. **標註不確定性**：「根據 Apple 官方文件（2025.12），此功能...」
+1. **避免臆測**：若無法確認，寧可不寫或標註「待確認」
+1. **尋求協助**：在 MAINTENANCE_INDEX.md 旁建立「待查證清單」
 
 ---
 

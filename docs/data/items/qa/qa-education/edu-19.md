@@ -16,11 +16,11 @@ tags: ["資安稽核","NIST","規範"]
 * **2026 規範**：不再強制單純的定期更換，而是強調「防猜測」與「MFA 多因素驗證」。
 * **MDM 設定**：強制 6 位數以上密碼，並搭配 **Managed Apple Accounts** 的雙重認證。
 
-2. **裝置與 App 認證 (Managed App Attestation)**：
+1. **裝置與 App 認證 (Managed App Attestation)**：
 
 * **技術**：利用 iOS 26 的硬體金鑰保護，確保 App 是從受管管道安裝，未被中間人攔截。
 
-3. **弱點管理 (Vulnerability Management)**：
+1. **弱點管理 (Vulnerability Management)**：
 
 * **宣告式更新 (DDM)**：設定強制更新期限，確保全校裝置在安全性更新釋出後 48 小時內完成 Patch。
 

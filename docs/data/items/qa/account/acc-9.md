@@ -45,9 +45,9 @@ tags: ["連線問題","APNs","網路","故障排除"]
 * **清除擱置指令**：
 
 1. 在 Jamf Pro 中開啟該裝置紀錄。
-2. 點選 **「歷程記錄 (History)」>「管理指令 (Management Commands)」**。
-3. 若有大量「擱置中 (Pending)」或「失敗 (Failed)」的指令，請點選 **「取消所有擱置與失敗的指令」**。
-4. 重新點選右上角的 **「更新資產 (Update Inventory)」** 觸發同步。
+1. 點選 **「歷程記錄 (History)」>「管理指令 (Management Commands)」**。
+1. 若有大量「擱置中 (Pending)」或「失敗 (Failed)」的指令，請點選 **「取消所有擱置與失敗的指令」**。
+1. 重新點選右上角的 **「更新資產 (Update Inventory)」** 觸發同步。
 
 **進階排查：**
 

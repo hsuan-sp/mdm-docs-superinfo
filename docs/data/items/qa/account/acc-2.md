@@ -36,12 +36,12 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 
  若您看到有相關警告請立即聯絡我們處理！（若當初是貴校自行更新的請參考以下指南）
 
-2. **登入 Jamf Pro**：
+1. **登入 Jamf Pro**：
 
  前往 **「設定 (Settings)」>「全域管理 (Global Management)」>「推播憑證 (Push Certificates)」**。
 
-3. **點選「續約 (Renew)」**，系統會產生一個 **憑證簽署請求 (CSR)** 檔案供您下載。
-4. **登入 Apple 推播憑證入口網站**：
+1. **點選「續約 (Renew)」**，系統會產生一個 **憑證簽署請求 (CSR)** 檔案供您下載。
+1. **登入 Apple 推播憑證入口網站**：
 
  前往 [identity.apple.com/pushcert](https://identity.apple.com/pushcert)，
  使用**最初建立該憑證的同一個 Apple 帳號** 登入。
@@ -51,8 +51,8 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
  Apple 會將其視為「全新的 MDM 服務」，所有裝置將與 Jamf Pro 斷開連結！
  （若及時換回憑證還能救回，否則將無法控制裝置）
 
-5. **找到對應的憑證點選「Renew」**：上傳 CSR 檔案，下載新的 .pem 憑證檔。
-6. **回到 Jamf Pro 上傳新憑證**：完成上傳後，憑證將同步更新，有效期將向後延長一年。
+1. **找到對應的憑證點選「Renew」**：上傳 CSR 檔案，下載新的 .pem 憑證檔。
+1. **回到 Jamf Pro 上傳新憑證**：完成上傳後，憑證將同步更新，有效期將向後延長一年。
 
 **實務建議**：
 

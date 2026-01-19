@@ -6,6 +6,27 @@
 /**
  * Q&A 章節顯示順序定義
  */
+import MarkdownIt from "markdown-it";
+
+const md = new MarkdownIt({
+    html: true,
+    linkify: true,
+    typographer: true,
+    breaks: true
+});
+
+/**
+ * 預渲染 Markdown 到 HTML
+ */
+function renderMarkdown(text: string) {
+    if (!text) return "";
+    // 修正 VitePress 資料傳遞中常見的清單換行遺失問題
+    const processed = text
+        .replace(/([^\n])\n(\s*[-*+])/g, '$1\n\n$2')
+        .replace(/([^\n])\n(\s*\d+\.)/g, '$1\n\n$2');
+    return md.render(processed);
+}
+
 const QA_ORDER = [
     'account',
     'enrollment',
@@ -111,7 +132,7 @@ export default {
                     items.push({
                         id: String(data.id || ''),
                         question: String(data.title || ''),
-                        answer: content.trim(),
+                        answer: renderMarkdown(content.trim()),
                         important: Boolean(data.important),
                         tags: Array.isArray(data.tags) ? data.tags : (data.tags ? [data.tags] : []),
                         category: data.category
@@ -151,8 +172,8 @@ export default {
 
                 terms.push({
                     term: String(data.term || ''),
-                    definition,
-                    analogy,
+                    definition: renderMarkdown(definition),
+                    analogy: renderMarkdown(analogy),
                     category: data.category || [],
                     tags: Array.isArray(data.tags) ? data.tags : (data.tags ? [data.tags] : [])
                 });

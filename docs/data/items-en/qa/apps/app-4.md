@@ -17,11 +17,11 @@ tags: ["VPP","ASM","Location Tokens","Inventory Management"]
 
 * If your school has multiple "Locations" in ASM (e.g., "Primary Campus" vs. "Secondary Campus"), you must purchase the apps for the *exact same* location that is linked to your Jamf Pro server. Licenses bought for Location A cannot be used by a server linked to Location B.
 
-2. **Sync Lag**:
+1. **Sync Lag**:
 
 * After hitting "Get" in ASM, the licenses don't appear in Jamf Pro instantly. There is usually a **2-10 minute synchronization delay** between Apple’s servers and your MDM dashboard.
 
-3. **Purchase Quantity**:
+1. **Purchase Quantity**:
 
 * Since the licenses are free, we recommend "purchasing" a quantity that far exceeds your current needs (e.g., if you have 500 iPads, buy 2,000 licenses). This prevents deployment failures if you add more devices later.
 

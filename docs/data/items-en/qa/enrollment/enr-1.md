@@ -21,15 +21,15 @@ This automated process—known as **Automated Device Enrollment (ADE)**—relies
 * Search for the serial number under **"Devices."**
 * Check the **"MDM Server"** field. If it’s blank, you need to manually assign it to your Jamf Pro server.
 
-2. **Check with your Reseller**:
+1. **Check with your Reseller**:
 
 * If the serial number is not found in ASM at all, your authorized Apple reseller hasn't uploaded the purchase record yet. Large orders during the back-to-school season can occasionally cause a delay of a few business days. Contact your vendor with the Purchase Order (PO) number to expedite the sync.
 
-3. **Audit Jamf Pro PreStage Scope**:
+1. **Audit Jamf Pro PreStage Scope**:
 
 * Ensure the device is included in the **"Scope"** of your active PreStage Enrollment profile in Jamf Pro. We recommend setting your primary PreStage as the **"Default"** so new assignments are captured automatically.
 
-4. **Network Requirements**:
+1. **Network Requirements**:
 
 * The device must be on a Wi-Fi network that allows traffic to Apple’s activation servers (and doesn't block APNs) to trigger the setup.
 

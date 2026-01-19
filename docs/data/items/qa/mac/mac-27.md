@@ -20,12 +20,12 @@ tags: ["節能政策", "DDM", "自動更新", "能源管理", "macOS 26"]
 * **平日授課**：設定 20 分鐘閒置即喚醒，確保師生開機即用。
 * **夜間保護**：設定在 18:00 後進入深層睡眠 (Power Nap)。
 
-2. **更新優先喚醒 (Update-Initiated Wake)**：
+1. **更新優先喚醒 (Update-Initiated Wake)**：
 
 * **設定**：啟用 DDM 中的 `Allow Wake for Managed Activity`。
 * **效果**：即使 Mac 處於睡眠狀態，當 Jamf Pro 推送 **安全性更新 (Rapid Security Response)** 或 **DDM 軟體配給** 時，Mac 會自動短暫喚醒、完成安裝後再度進入深度睡眠。
 
-3. **節能回報 (Energy Status Channel)**：
+1. **節能回報 (Energy Status Channel)**：
 
 * 您可以透過 DDM 狀態頻道監控全校電腦的「電池循環次數」或「處於高效能模式的時數」，作為未來報廢汰換的量化依據。
 

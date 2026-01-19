@@ -24,15 +24,15 @@ tags: ["Writing Tools", "Apple Intelligence", "考試防弊", "iOS 26", "AI"]
 建議在 Jamf Pro 或其他 MDM 中建立專用的考試描述檔：
 
 1. 建立 **Configuration Profile**，命名為「考試限制模式」
-2. 前往 **Restrictions (限制)** > **Intelligence** 或 **Siri** 相關分類
-3. 啟用以下限制（設為 Restrict 或取消 Allow）：
+1. 前往 **Restrictions (限制)** > **Intelligence** 或 **Siri** 相關分類
+1. 啟用以下限制（設為 Restrict 或取消 Allow）：
 
 * **Allow Writing Tools (允許寫作工具)**
 * **Allow Image Playground (允許影像樂園)**
 * **Allow Genmoji**
 * **Allow Math Notes (允許數學筆記)**（防止數學作弊）
 
-4. **部署策略**：在考試前派送至目標裝置群組，考完試後移除
+1. **部署策略**：在考試前派送至目標裝置群組，考完試後移除
 
 ## 方案 B：單一 App 模式（最嚴格）
 

@@ -16,14 +16,14 @@ tags: ["管理式 Apple 帳號", "資料外洩", "iOS 26", "組織裝置", "WWDC
 此功能為組織層級的安全性原則，需由**「管理者」**職務在管理後台開啟：
 
 1. 登入 **Apple School Manager (ASM)** 或 **Apple Business Manager (ABM)**
-2. 前往 **「權限管理」(Access Management)**
-3. 選取 **「Apple 服務」(Apple Services)**
-4. 找到 **「Apple Account on Organization Devices」** 選項
+1. 前往 **「權限管理」(Access Management)**
+1. 選取 **「Apple 服務」(Apple Services)**
+1. 找到 **「Apple Account on Organization Devices」** 選項
 
  *（中文暫譯：「組織裝置上的 Apple 帳號」，實際名稱請以介面顯示為準）*
 
-5. 啟用 **「僅限管理式 Apple 帳號登入」** 相關選項
-6. 儲存設定
+1. 啟用 **「僅限管理式 Apple 帳號登入」** 相關選項
+1. 儲存設定
 
 設定完成後，將自動套用至組織內所有符合條件的裝置。
 

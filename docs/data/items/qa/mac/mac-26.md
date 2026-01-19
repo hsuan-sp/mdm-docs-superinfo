@@ -34,12 +34,12 @@ tags: ["混合環境", "Intel Mac", "Apple Silicon", "Smart Group", "部署策�
 ## 二、 部署策略建議
 
 1. **優先使用 Universal 二進位檔**：如果廠商提供 Universal 版（如 Chrome、Office），請直接上傳該版本，Jamf 會自動適配。
-2. **區分 PKG 派送**：
+1. **區分 PKG 派送**：
 
 * 針對專業軟體（如 Adobe 系列、特定實驗軟體），請分別製作 `Soft_v1.0_AppleSilicon.pkg` 與 `Soft_v1.0_Intel.pkg`。
 * 在政策中，將前者派送給 Apple Silicon 群組，後者派送給 Intel 群組。
 
-3. **App Store Apps (VPP)**：Apple 伺服器會自動偵測架構下載正確版本，這是最省心的做法，建議優先採用。
+1. **App Store Apps (VPP)**：Apple 伺服器會自動偵測架構下載正確版本，這是最省心的做法，建議優先採用。
 
 ## 三、 實務營運建議
 

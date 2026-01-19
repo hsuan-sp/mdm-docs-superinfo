@@ -14,7 +14,6 @@ const langData = computed(() => lang.value === 'en-US' ? rawData.en : rawData.zh
 const allQAData = computed(() => langData.value?.allQAData || []);
 
 import type { QAItem } from "../../types";
-import MarkdownIt from "markdown-it";
 import AppSidebar from './AppSidebar.vue';
 import MobileDrawer from '../theme/components/MobileDrawer.vue';
 import EmptyState from '../theme/components/EmptyState.vue';
@@ -76,13 +75,6 @@ const t = computed(() => {
     }
   };
   return translations[lang.value as keyof typeof translations] || translations['zh-TW'];
-});
-
-const md = new MarkdownIt({
-  html: true,
-  linkify: true,
-  typographer: true,
-  breaks: true
 });
 
 const getChapterCount = (source: string) => {
@@ -180,24 +172,6 @@ const toggleItem = (id: string) => {
   openItems.value = next;
 };
 
-const renderMarkdown = (text: string) => {
-  if (!text) return "";
-  const lines = text.split('\n');
-  const nonEmptyLines = lines.filter((l: string) => l.trim());
-  const minIndent = nonEmptyLines.length > 0
-    ? nonEmptyLines.reduce((min: number, line: string) => {
-      const match = line.match(/^\s*/);
-      return Math.min(min, match ? match[0].length : min);
-    }, Infinity)
-    : 0;
-
-  let cleaned = lines.map((line: string) => line.slice(minIndent)).join('\n').trim();
-  let processed = cleaned
-    .replace(/([^\n])\n(\s*[-*+])/g, '$1\n\n$2')
-    .replace(/([^\n])\n(\s*\d+\.)/g, '$1\n\n$2');
-  return md.render(processed);
-};
-
 useKeyboardShortcuts({
   onSearchFocus: () => {
     const searchInput = document.querySelector('.search-input') as HTMLInputElement;
@@ -287,7 +261,7 @@ const switchModule = (source: string | "All") => {
                         <span class="arrow">▼</span>
                       </div>
                       <div v-if="openItems.has(item.id)" class="qa-content">
-                        <div class="markdown-body" v-html="renderMarkdown(item.answer)"></div>
+                        <div class="markdown-body" v-html="item.answer"></div>
                         <div class="tags"><span v-for="t in item.tags" :key="t" class="tag">#{{ t }}</span></div>
                       </div>
                     </div>
@@ -316,7 +290,7 @@ const switchModule = (source: string | "All") => {
                         <span class="arrow">▼</span>
                       </div>
                       <div v-if="openItems.has(item.id)" class="qa-content">
-                        <div class="markdown-body" v-html="renderMarkdown(item.answer)"></div>
+                        <div class="markdown-body" v-html="item.answer"></div>
                         <div class="tags"><span v-for="t in item.tags" :key="t" class="tag">#{{ t }}</span></div>
                       </div>
                     </div>
@@ -344,7 +318,7 @@ const switchModule = (source: string | "All") => {
                           <span class="arrow">▼</span>
                         </div>
                         <div v-if="openItems.has(item.id)" class="qa-content">
-                          <div class="markdown-body" v-html="renderMarkdown(item.answer)"></div>
+                          <div class="markdown-body" v-html="item.answer"></div>
                           <div class="tags"><span v-for="t in item.tags" :key="t" class="tag">#{{ t }}</span></div>
                         </div>
                       </div>

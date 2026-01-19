@@ -16,8 +16,8 @@ In alignement with the latest digital learning policies, the **Jamf Trust** agen
 ## Key Changes:
 
 1. **Icon Removal**: Because the system no longer creates a global VPN tunnel, the "VPN" label is no longer displayed in the status bar. This does **not** mean the device is unprotected.
-2. **Improved Performance**: This new architecture significantly reduces battery drain and resolves common issues such as network lag during classroom app updates.
-3. **Local Network Compatibility**: By moving away from a traditional VPN tunnel, devices can communicate more efficiently with local campus caching servers, ensuring that heavy educational content (like video lessons) loads faster.
+1. **Improved Performance**: This new architecture significantly reduces battery drain and resolves common issues such as network lag during classroom app updates.
+1. **Local Network Compatibility**: By moving away from a traditional VPN tunnel, devices can communicate more efficiently with local campus caching servers, ensuring that heavy educational content (like video lessons) loads faster.
 
 ## How to Verify Protection is Active:
 

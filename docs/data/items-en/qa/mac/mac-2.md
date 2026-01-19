@@ -19,13 +19,13 @@ Granting permanent Admin rights to students or teachers is a major security risk
 
 * All school-issued Macs should be set up with "Standard User" accounts. This prevents users from altering core system settings or installing system-wide software without oversight.
 
-2. **Native LAPS (Local Administrator Password Solution)**:
+1. **Native LAPS (Local Administrator Password Solution)**:
 
 * As of **macOS 26**, Apple includes a native LAPS protocol.
 * **How it works**: Jamf Pro creates a hidden admin account on every Mac. The password for this account is a long, random string that **rotates automatically** every few days.
 * **Operational use**: If a technician needs to fix a Mac, they look up the *current* random password in the Jamf dashboard. Once used, the password is refreshed, ensuring the old one can never be used again.
 
-3. **Self-Service Elevation (Privileges App)**:
+1. **Self-Service Elevation (Privileges App)**:
 
 * For staff members who occasionally need to install a printer driver or specialized software:
 * **Tool**: Deploy the **Privileges** app (or Jamf’s equivalent).

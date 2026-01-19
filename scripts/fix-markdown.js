@@ -199,17 +199,15 @@ function processFile(filePath) {
         
         processedLines.push(line);
         
-        // MD031: 代碼塊後加空行 (在下一次循環檢查下一行太慢，我們在這裡預判並非完美，依賴後續的空行清理)
-        // 這裡我們暫時只處理進入代碼塊前的空行。退出後的空行由"下一行處理邏輯"負責(比較難判斷)，
-        // 或者簡單地在退出代碼塊後強制加空行(如果不也就是最後一行)
+        // MD031: 代碼塊後加空行 (由下一個非空行觸發，或者在這裡主動墊一個)
+        if (!inCodeBlock /* 退出時 */) {
+          processedLines.push('');
+        }
         continue;
       }
 
       if (inCodeBlock) {
         processedLines.push(line);
-        if (!inCodeBlock /* 退出時 */) {
-          processedLines.push('');
-        }
         continue;
       }
 
@@ -244,15 +242,18 @@ function processFile(filePath) {
         continue;
       }
 
-      // C. 列表處理 (MD004, MD007, MD030, MD032)
-      const listMatch = line.match(/^(\s*)([*+-]|\d+\.) /);
+      // C. 列表處理 (MD004, MD007, MD030, MD032, MD029)
+      const listMatch = line.match(/^(\s*)([*+-]|(\d+)\.) /);
       const isListItem = !!listMatch;
+      const isOrdered = listMatch && listMatch[3];
 
       if (isListItem && !inCodeBlock) {
         // MD032: 列表前確保有空行 (如果前面不是列表、空行或標題)
-        if (prevLine !== null && prevLine.trim() !== '' && 
-            !prevLine.match(/^(\s*)([*+-]|\d+\.) /) && 
-            !prevLine.match(/^#{1,6} /)) {
+        const isPrevLineList = prevLine && prevLine.match(/^(\s*)([*+-]|\d+\.) /);
+        const isPrevLineHeader = prevLine && prevLine.match(/^#{1,6} /);
+        const isPrevLineEmpty = !prevLine || prevLine.trim() === '';
+
+        if (!isPrevLineList && !isPrevLineHeader && !isPrevLineEmpty) {
           processedLines.push('');
         }
 
@@ -266,18 +267,36 @@ function processFile(filePath) {
            line = line.replace(/^(\s*)([*+]|\d+\.)\s+/, '$1$2 ');
         }
 
-        // MD007: 修正縮排
-        if (line.match(/^[ ]{1,3}([*+]|\d+\.) /)) {
-          // 如果縮排是 1~3 個空格，通常是手誤，統一改為 0 縮排
-          // 除非是在巢狀情境下 (但 2 空格才是標準，1/3 都是異常)
+        // MD007: 修正縮排 (保留 2 空格的標準巢狀，僅移除 1 或 3 空格的異常縮排)
+        if (line.match(/^[ ]{1}([*+]|\d+\.) /) || line.match(/^[ ]{3}([*+]|\d+\.) /)) {
           line = line.replace(/^[ ]+/, '');
         } else if (line.match(/^    ([*+]|\d+\.) /)) {
-          // 4 個空格 -> 2 個 (統一巢狀為 2)
           line = line.replace(/^    /, '  ');
+        }
+
+        // MD029: 統一有序列表為 1. (目前專案傾向於使用 1. 1. 1. 以應對頻繁變動)
+        if (isOrdered) {
+          line = line.replace(/^\s*\d+\./, (match) => {
+             const indent = match.match(/^\s*/)[0];
+             return `${indent}1.`;
+          });
+        }
+
+        // 優化：自動縮排無序列表 (如果是緊跟在有序列表或已縮排列表之後)
+        const isPrevLineOrdered = prevLine && prevLine.match(/^\s*\d+\./);
+        const isPrevLineIndented = prevLine && prevLine.match(/^ +[*+-] /);
+        
+        if (!isOrdered && (isPrevLineOrdered || isPrevLineIndented) && !line.match(/^\s+/)) {
+           line = '  ' + line;
         }
       }
 
-      // MD032: 列表前後的空行 (略微複雜，這裡主要靠最後的空行清理，或者依賴標題前後的空行規則)
+      // D. 處理列表後的空行 (MD032)
+      // 如果這一行不是列表也不是空行或標題，但上一行是列表，則需要空行
+      const isPrevLineListItem = prevLine && prevLine.match(/^(\s*)([*+-]|\d+\.) /);
+      if (isPrevLineListItem && !isListItem && line.trim() !== '' && !line.match(/^#{1,6} /)) {
+        processedLines.push('');
+      }
       
       // D. 일반 文本排版優化
       // 排除 HTML 標籤行、鏈接定義等

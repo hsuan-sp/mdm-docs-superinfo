@@ -22,8 +22,8 @@ By linking Apple School Manager (ASM) with your Google Workspace or Microsoft En
 ## Technical Requirements:
 
 1. **Domain Verification**: You must prove ownership of your school's email domain (e.g., `@tes.tp.edu.tw`) within ASM by adding a specific TXT record to your DNS settings.
-2. **IdP Connection**: An administrator must authorize the link within the ASM **Preferences > Directory Sync** section.
-3. **Conflict Resolution**: If staff members have previously used their school email to create *personal* Apple IDs, Apple will provide a 60-day window for them to change their personal email address to a private one before the school "takes over" that domain.
+1. **IdP Connection**: An administrator must authorize the link within the ASM **Preferences > Directory Sync** section.
+1. **Conflict Resolution**: If staff members have previously used their school email to create *personal* Apple IDs, Apple will provide a 60-day window for them to change their personal email address to a private one before the school "takes over" that domain.
 
 ## Operational Note:
 

@@ -29,7 +29,7 @@ Jamf Pro 內建了印表機對應介面，適合標準的網路印表機。
 
  或 **「Generic PostScript Printer」**，通常無需額外安裝廠商驅動。
 
-2. **建立派送政策**：
+1. **建立派送政策**：
 
 * 前往 **「電腦」** > **「政策」** > **「+ 新增」**。
 * 在 **「印表機」** 承載資料中，點選「安裝」剛才建立的印表機。
@@ -72,8 +72,8 @@ echo "Printer $DISPLAY_NAME installed successfully."
 若印表機太舊不支援 AirPrint，必須安裝廠商驅動：
 
 1. **打包驅動**：下載廠商的 `.pkg` 驅動程式，上傳至 Jamf Pro。
-2. **安裝驅動**：建立一個政策先安裝該 `.pkg`。
-3. **對應 PPD**：
+1. **安裝驅動**：建立一個政策先安裝該 `.pkg`。
+1. **對應 PPD**：
 
 * 在執行 `lpadmin` 腳本時，需指定 PPD 檔案在本機的路徑 (通常在 `/Library/Printers/PPDs/...`)。
 * 語法：`-P "/Library/Printers/PPDs/Contents/Resources/HP_LaserJet_v10.gz"`
