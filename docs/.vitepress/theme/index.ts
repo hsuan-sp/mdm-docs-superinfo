@@ -34,7 +34,7 @@ export default {
       'nav-bar-content-after': () => [h(UserCenter), h(SecurityGuard)],
       // 在頁面最底層掛載全域頁尾與返回頂部按鈕
       'layout-bottom': () => [h(GlobalFooter), h(BackToTop)],
-      // WIP 提示橫幅 (顯示於頁面最頂端)
+      // WIP 提示橫幅 (顯示於頁面最頂端，收合後會透過 Teleport 嵌入 Topbar)
       'layout-top': () => h(WIPBanner)
     })
   },
@@ -42,7 +42,7 @@ export default {
    * 應用程式增強擴充 (Enhance App)
    * 註冊全域元件，使其能在 Markdown 檔案中直接調用。
    */
-  enhanceApp({ app, router, siteData }: EnhanceAppContext) {
+  enhanceApp({ app }: EnhanceAppContext) {
     app.component('GlossaryApp', GlossaryApp)
     app.component('IntegratedGuideApp', IntegratedGuideApp)
     app.component('AppleHome', AppleHome)

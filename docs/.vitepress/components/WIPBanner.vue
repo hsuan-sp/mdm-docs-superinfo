@@ -6,7 +6,13 @@ const { lang } = useData()
 
 // Show banner only for English version
 const showBanner = computed(() => lang.value === 'en-US')
-const isCollapsed = ref(false)
+const isCollapsed = ref(true) // Start collapsed as requested by user's preference for non-intrusive UI
+const isMounted = ref(false)
+
+import { onMounted } from 'vue'
+onMounted(() => {
+    isMounted.value = true
+})
 
 const toggleCollapse = () => {
     isCollapsed.value = !isCollapsed.value
@@ -14,10 +20,10 @@ const toggleCollapse = () => {
 </script>
 
 <template>
-    <div v-if="showBanner" class="wip-wrapper" :class="{ 'is-minimized': isCollapsed }">
-        <Transition name="morph" mode="out-in">
-            <!-- Expanded Banner -->
-            <div v-if="!isCollapsed" class="wip-banner" role="alert" key="expanded">
+    <div v-if="showBanner" class="wip-wrapper">
+        <!-- Expanded Banner: Stays in layout-top (document flow) -->
+        <Transition name="fade-top">
+            <div v-if="!isCollapsed" class="wip-banner" role="alert">
                 <div class="wip-content">
                     <div class="wip-icon">🚧</div>
                     <div class="wip-text">
@@ -32,29 +38,33 @@ const toggleCollapse = () => {
                     </button>
                 </div>
             </div>
+        </Transition>
 
-            <!-- Minimized Floating Button -->
-            <button v-else class="wip-fab" @click="toggleCollapse" aria-label="Expand notice" key="collapsed">
-                <span class="fab-icon">🚧</span>
-                <span class="fab-label">WIP</span>
-                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Minimized Badge: Teleported into the Topbar -->
+        <Teleport to=".VPNavBarTitle" v-if="isMounted && isCollapsed">
+            <button class="wip-navbar-badge" @click.stop="toggleCollapse" aria-label="Expand notice">
+                <span class="badge-icon">🚧</span>
+                <span class="badge-label">WIP</span>
+                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
                     <path d="m6 9 6 6 6-6" />
                 </svg>
             </button>
-        </Transition>
+        </Teleport>
     </div>
 </template>
 
 <style scoped>
-/* Main Banner Styles */
+/* Main Banner Styles - Natural flow at top */
 .wip-banner {
+    width: 100%;
     background: linear-gradient(90deg, #ff9500 0%, #ffcc00 100%);
     color: #1d1d1f;
     padding: 8px 24px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: relative;
-    z-index: 1000;
 }
 
 .wip-content {
@@ -67,39 +77,38 @@ const toggleCollapse = () => {
     position: relative;
 }
 
-/* FAB (Floating Button) Styles */
-.wip-fab {
-    position: fixed;
-    top: 72px;
-    left: 20px;
-    z-index: 1001;
-    background: linear-gradient(135deg, #ff9500 0%, #ffcc00 100%);
-    color: #1d1d1f;
-    padding: 8px 14px;
-    border-radius: 20px;
-    border: 2.5px solid #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    display: flex;
+/* Navbar Badge Styles - Small and subtle for top bar */
+.wip-navbar-badge {
+    display: inline-flex;
     align-items: center;
     gap: 6px;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.wip-fab:hover {
-    transform: scale(1.05) translateX(2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-}
-
-.fab-icon {
-    font-size: 16px;
-}
-
-.fab-label {
-    font-size: 11px;
+    background: linear-gradient(135deg, #ff9500 0%, #ffcc00 100%);
+    color: #1d1d1f;
+    padding: 4px 10px;
+    border-radius: 980px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    font-size: 10px;
     font-weight: 800;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 2px 4px rgba(0,0,0,0.05),
+        inset 0 1px 0 rgba(255,255,255,0.25);
+    white-space: nowrap;
+    align-self: center;
+    border: 1px solid rgba(0,0,0,0.05); /* Added minor definition */
+}
+
+.wip-navbar-badge:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 149, 0, 0.3);
+    filter: brightness(1.05);
+}
+
+.badge-icon {
+    font-size: 12px;
 }
 
 .collapse-btn {
@@ -130,15 +139,8 @@ const toggleCollapse = () => {
 }
 
 @keyframes pulse {
-
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
 }
 
 .wip-text {
@@ -163,20 +165,27 @@ const toggleCollapse = () => {
     border-bottom: 1.5px solid rgba(0, 0, 0, 0.15);
 }
 
-/* Morphing Transition */
-.morph-enter-active,
-.morph-leave-active {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+/* New Transitions */
+.fade-top-enter-active,
+.fade-top-leave-active {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
 }
 
-.morph-enter-from {
+.fade-top-enter-from,
+.fade-top-leave-to {
+    transform: translateY(-100%);
     opacity: 0;
-    transform: translateY(-20px) scale(0.9);
 }
 
-.morph-leave-to {
+.fade-in-enter-active,
+.fade-in-leave-active {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.fade-in-enter-from,
+.fade-in-leave-to {
     opacity: 0;
-    transform: translateY(-20px) scale(0.9);
+    transform: scale(0.9);
 }
 
 @media (max-width: 768px) {
@@ -184,11 +193,9 @@ const toggleCollapse = () => {
         padding: 10px 20px;
     }
 
-    .wip-fab {
-        top: auto;
-        bottom: 80px;
-        left: 20px;
-        padding: 6px 12px;
+    .wip-navbar-badge {
+        margin-left: 8px;
+        padding: 3px 8px;
     }
 
     .wip-text {
