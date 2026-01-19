@@ -1,12 +1,12 @@
 ---
 term: "AirDrop"
-category: ["Core", "Network"]
+category: ["Core"]
 ---
 
-## Term Definition
+## Definition
 
-AirDrop is a wireless file-sharing protocol that uses Bluetooth and Wi-Fi to send documents, photos, and links between Apple devices. In a school setting,teachers can use Apple Classroom to manage or restrict AirDrop visibility.
+AirDrop is Apple’s proprietary peer-to-peer wireless file-sharing service. It uses Bluetooth to discover nearby devices and creates a high-speed Wi-Fi Direct connection to transfer files. While convenient for collaboration, it can be a security risk. In a school setting, MDM can be used to restrict AirDrop to "Managed Contacts Only" or disable it entirely to prevent unauthorized file transfers.
 
-## Analogy
+## Plain English
 
-AirDrop is like **"Passing a Note in Class (Digitally)."** If a teacher wants to share a PDF worksheet with everyone in the room, they don't need to send 30 emails. They can just "beam" it through the air. It’s a fast, cable-free way to collaborate and move resources around the classroom instantly.
+This is "Wireless Hand-to-Hand" file transfer. You don't need a cable or a USB drive; if two devices are close enough, you can "throw" a file from one to the other instantly. It’s perfect for sharing a project with a classmate, but if not managed, it could lead to students accidentally sharing distracting or private files with people nearby.

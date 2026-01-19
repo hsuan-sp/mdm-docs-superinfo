@@ -258,8 +258,8 @@ function processFile(filePath) {
 
         listPart = listPart.replace(/^(\s*)([*+]|\d+\.)\s+/, '$1$2 ');
 
-        if (indent.length === 1 || indent.length === 3) {
-          const newIndent = (indent.length === 3) ? '  ' : '';
+        if (indent.length === 1 || indent.length === 3 || indent.length === 4) {
+          const newIndent = (indent.length >= 3) ? '  ' : '';
           listPart = listPart.replace(/^\s+/, newIndent);
           indent = newIndent;
         }

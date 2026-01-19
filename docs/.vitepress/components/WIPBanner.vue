@@ -14,8 +14,8 @@ const showBanner = computed(() => lang.value === 'en-US')
             <div class="wip-content">
                 <div class="wip-icon">🚧</div>
                 <div class="wip-text">
-                    <strong>Work in Progress</strong>
-                    <span>English content is currently being translated. Some pages may be incomplete.</span>
+                    <strong>Translation Complete</strong>
+                    <span>English content is fully translated but is currently pending review and verification.</span>
                 </div>
             </div>
         </div>

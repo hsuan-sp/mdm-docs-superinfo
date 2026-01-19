@@ -3,10 +3,10 @@ term: "SIP (System Integrity Protection)"
 category: ["Security"]
 ---
 
-## Term Definition
+## Definition
 
-System Integrity Protection (SIP) is a security architecture in macOS that prevents even root-level users from modifying protected parts of the operating system. This ensures the foundational system files remain untampered with.
+System Integrity Protection (SIP) is a core security technology in macOS designed to protect the most vital parts of the operating system from unauthorized modification. It works by preventing even the most powerful users (such as those with "root" or local admin access) from changing system-critical files and folders. This ensures that even if a piece of malware manages to gain administrative control of a Mac, it cannot damage the foundation of the OS itself.
 
-## Analogy
+## Plain English
 
-SIP is like a **"Bulletproof Display Case"** for the school’s most important records. Even if a student or a malicious program gets "Janitor Access" (Root access) to the building, they still can't touch the important documents behind the glass. This keeps the Mac’s "brain" safe from being accidentally or intentionally broken.
+Think of this as a "Bulletproof Glass Shield" for the computer’s heart. Even if you are the owner of the house (the administrator) and you are holding a hammer, the system puts its most important "brain parts" behind this unbreakable glass where no one can touch them. This makes it almost impossible for a virus or even an accidental mistake to "break" the core parts of your Mac.

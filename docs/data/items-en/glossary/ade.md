@@ -3,10 +3,10 @@ term: "ADE (Automated Device Enrollment)"
 category: ["Enrollment"]
 ---
 
-## Term Definition
+## Definition
 
-Automated Device Enrollment (ADE) is an Apple service that automatically links a new device to the school's management system the moment it is powered on. Because the device is registered with the school at the point of purchase, it will automatically download its management profile during the initial setup, even if it is erased.
+Automated Device Enrollment (ADE) is the industry-standard method for deploying Apple devices (formerly known as DEP). When a school purchases devices through an authorized reseller, the serial numbers are automatically added to the school's Apple School Manager (ASM) account. As soon as the device is turned on and connected to Wi-Fi, it automatically downloads and installs the school's MDM profile. This process is mandatory and cannot be skipped by the user, enabling true "Zero-Touch" deployment.
 
-## Analogy
+## Plain English
 
-ADE is like an **"Invisible Property Tag"** that is attached to the serial number at the factory. When a student unboxes a new school iPad, they don't need to bring it to IT. As soon as it connects to Wi-Fi, it recognizes that it belongs to the school "membership" and automatically sets itself up, skipping the manual paperwork.
+This is the device's "Factory-Level Identity." It's as if every school iPad was born with the school's stamp on its forehead. No matter who holds the device or how many times it's reset, the moment it touches the internet, it "calls home" to the school’s management system and sets itself up according to the school's rules automatically.

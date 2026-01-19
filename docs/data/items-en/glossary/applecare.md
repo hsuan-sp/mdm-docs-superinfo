@@ -1,12 +1,12 @@
 ---
-term: "AppleCare"
-category: ["Hardware", "Apple"]
+term: "AppleCare+"
+category: ["Hardware"]
 ---
 
-## Term Definition
+## Definition
 
-AppleCare is Apple's specialized service and support plan. For schools, AppleCare for Enterprise or Education provides accidental damage protection, on-site service, and technical support for IT teams.
+AppleCare+ is an extended warranty and insurance plan for Apple hardware. In addition to extending the standard warranty period, it covers hardware repairs for "accidental damage" (such as a cracked screen or liquid spill) for a small deductible. For international schools like TES, purchasing AppleCare+ for a device fleet is a vital strategy for predictable budgeting and maintaining the long-term health of student-facing hardware.
 
-## Analogy
+## Plain English
 
-AppleCare is like the **"Campus Maintenance Warranty."** If a student accidentally drops their iPad during a science field trip or a teacher spills coffee on their Mac, the school doesn't have to pay for a full replacement. It’s a safety net that ensures the school’s technology assets are quickly repaired and returned to the classroom.
+Think of this as "Original Equipment Insurance." While everything comes with a basic 1-year guarantee, AppleCare+ goes further. If an iPad is accidentally dropped in the hallway and the screen shatters, the school doesn't have to buy a whole new device. Instead, they pay a very small "Processing Fee" and Apple fixes the screen or replaces the iPad with a fresh one.

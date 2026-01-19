@@ -1,12 +1,12 @@
 ---
 term: "Content Caching"
-category: ["Network", "Core"]
+category: ["Network"]
 ---
 
-## Term Definition
+## Definition
 
-Content Caching is a macOS service that speeds up the download of Apple-distributed software (like OS updates and apps) by saving copies of those files on a local server. When a second student downloads the same app, it comes from the school’s local network rather than the internet.
+Content Caching is a built-in macOS service that accelerates the download of Apple-distributed software and data. A Mac with Content Caching enabled locally stores (caches) software updates, apps, and iCloud data that have already been downloaded by one device on the network. When other devices in the same school network need the same content, they pull it directly from the local Mac rather than Apple's servers, saving bandwidth and significantly speeding up the update process.
 
-## Analogy
+## Plain English
 
-Content Caching is like having a **"Campus Library"** instead of ordering every book from overseas. When the first student "orders" a new iPad update, a copy is kept on the school’s shelf. When the next 50 students want that same update, they just get it from the library down the hall, saving the school’s internet "highway" from getting jammed.
+Think of this as the school's "Shared Resource Library." Instead of every student having to personally travel to the main city library (Apple's servers) to get a book (an update), one person goes to get it and puts a photocopy on the school’s front desk. Now, every other student can just grab a copy from the desk, saving everyone time and energy.

@@ -2,10 +2,10 @@
 wip: true
 ---
 
-# English Version - Work in Progress
+# English Version - Translation Complete
 
-This is a placeholder file. The English version is currently under development.
+The English version of this site has been fully translated but is **currently undergoing final review and verification**.
 
-**當英文內容全部完成後，刪除此檔案即可移除 WIP 提示。**
+**英文版內容已翻譯完成，目前正進行最後的校對與檢查。**
 
-When all English content is ready, simply delete this file to remove the WIP notice.
+When the review process is finished, this file will be deleted to remove the WIP notice.

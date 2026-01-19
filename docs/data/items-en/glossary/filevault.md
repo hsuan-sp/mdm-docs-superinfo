@@ -1,12 +1,12 @@
 ---
 term: "FileVault"
-category: ["Security", "macOS"]
+category: ["Security"]
 ---
 
-## Term Definition
+## Definition
 
-FileVault is a full-disk encryption feature for macOS. It ensures that all data on the startup disk is encrypted and can only be accessed by authorized users. For school-managed Macs, the "Recovery Key" is securely stored in the MDM server.
+FileVault is the built-in full-disk encryption (FDE) technology for macOS. When enabled, it uses high-level XTS-AES-128 encryption to secure all data on the Mac’s startup disk. This ensures that if a laptop is lost or stolen, the data cannot be accessed without the user's login password or a secure **Recovery Key**. For schools, enforcing FileVault via MDM is a fundamental requirement for data privacy compliance.
 
-## Analogy
+## Plain English
 
-FileVault is like **"Scrambling the School’s Filing Cabinet."** Even if a thief physically steals the hard drive out of a teacher's laptop, they cannot read any of the files because the data is written in a secret code. Only the person with the "Decipher Key" (the user’s login or the IT department’s recovery key) can turn that gibberish back into readable documents.
+Think of this as a "Digital Vault" for the entire computer. On a standard computer, a thief could simply pull out the hard drive to read your files. With FileVault turned on, the entire drive is scrambled into a code that only your password can unlock. Without that password, the hard drive is nothing more than a useless piece of scrap metal to anyone who finds it.

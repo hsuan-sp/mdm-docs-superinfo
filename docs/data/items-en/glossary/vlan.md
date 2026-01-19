@@ -1,12 +1,12 @@
 ---
-term: "VLAN (Virtual LAN)"
+term: "VLAN"
 category: ["Network"]
 ---
 
-## Term Definition
+## Definition
 
-A Virtual LAN (VLAN) is a networking technique that segments a physical campus network into smaller, logical groups. This is often used to isolate student devices from teacher devices or administrative servers for security and performance reasons.
+A Virtual Local Area Network (VLAN) is a logical subnetwork within a physical network. Schools often use VLANs to separate different types of traffic—such as "Academic Network," "Administrative Network," and "Guest Wi-Fi"—onto their own isolated channels. This prevents "broadcast noise" from slowing down the network and ensures that guests cannot access sensitive school servers.
 
-## Analogy
+## Plain English
 
-A VLAN is like having **"Separate Hallways"** in the school building. Even though everyone is in the same building (the network), students walk down one hallway and teachers walk down another. This prevents groups from bumping into each other and ensures that students don't accidentally wander into the staff room where private records are kept.
+Think of this as "Invisible Walls" inside your network cable. Even though everyone is using the same physical "Internet Pipe," the VLANs act like dividers that slice the pipe into several smaller, private tunnels. Water in Tunnel A (the guest Wi-Fi) can never leak into Tunnel B (the school's private exam server), keeping everything organized and secure.

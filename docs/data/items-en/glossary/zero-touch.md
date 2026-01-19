@@ -1,12 +1,12 @@
 ---
 term: "Zero-Touch Deployment"
-category: ["Core", "Enrollment"]
+category: ["Enrollment"]
 ---
 
-## Term Definition
+## Definition
 
-Zero-Touch Deployment is a process where devices are shipped directly to teachers or students and automatically configured over-the-air. IT never has to physically touch the box, as ADE and MDM handle the setup remotely.
+Zero-Touch Deployment is the ultimate goal of modern IT management. It refers to a process where an Apple device is shipped directly to a student or staff member without ever being physically handled by the school’s IT department. As soon as the user opens the box and connects to Wi-Fi, the device recognizes its relationship with the school, enrolls itself in MDM, and automatically downloads all required apps and settings.
 
-## Analogy
+## Plain English
 
-Zero-Touch is the **"Unbox and Play"** experience. Imagine buying a new lego set that builds itself the moment you open the lid. For the school, it means a new laptop can be delivered directly to a teacher’s home during the summer; the moment they log in, all their school apps and settings appear magically, without a single trip to the IT office.
+Think of this as "Instant School iPad Magic." The school's IT team doesn't even have to open the box. They can send a brand-new iPad straight to your home. The moment you turn it on and connect to your home Wi-Fi, the iPad "realizes" it belongs to the school and automatically begins setting itself up with your email, textbooks, and apps—all by itself!

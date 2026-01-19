@@ -1,12 +1,12 @@
 ---
 term: "Apple Silicon"
-category: ["Hardware", "Apple"]
+category: ["Hardware"]
 ---
 
-## Term Definition
+## Definition
 
-Apple Silicon refers to the custom-designed chips (like the M1, M2, M3, and M4 series) used in modern Macs and iPads. These chips integrate the CPU, GPU, and memory, providing industry-leading performance and battery life for classroom tasks.
+Apple Silicon refers to the family of high-performance chips (M1, M2, M3, M4, etc.) designed by Apple for the Mac and iPad. These chips introduce advanced hardware-level security, such as the **Volume Owner** concept. This requires physical user authentication (such as a local admin password or Touch ID) to perform certain management tasks, like installing OS updates or changing security levels. This represents a significant shift from older Intel Macs where MDM could perform these tasks purely through high-level administrative permissions.
 
-## Analogy
+## Plain English
 
-Apple Silicon is like the **"Custom Engine"** in a high-performance school bus. It’s designed specifically by the same people who built the bus (the software), so it’s incredibly efficient. It allows students to work on heavy video projects or complex simulations all day without needing to stay plugged into a wall outlet.
+This is the "High-Performance Engine" inside modern Apple computers. While it's incredibly fast, it's also much more secure. Think of it like a car that requires both a key and a Fingerprint Scan to start the engine. While it makes the computer almost impossible for a thief to use, it also means the school’s IT team has to use slightly different methods to keep everything updated and secure.

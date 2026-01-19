@@ -3,10 +3,10 @@ term: "ASM (Apple School Manager)"
 category: ["Apple"]
 ---
 
-## Term Definition
+## Definition
 
-Apple School Manager (ASM) is a web-based portal used by the school’s IT department. It serves as the "Hub" for managing student accounts, purchasing app licenses in bulk, and assigning hardware to management servers. It bridges the gap between the school’s administrative records and their Apple devices.
+Apple School Manager (ASM) is the central web portal for education administrators to manage people, devices, and content. It acts as the "Education Version" of Apple Business Manager. ASM allows schools to link their **Student Information System (SIS)** to automatically create classes and **Managed Apple Accounts**. It is the essential foundation for zero-touch deployment and providing a secure, high-quality digital learning environment.
 
-## Analogy
+## Plain English
 
-ASM is the **"Digital Registrar’s Office."** It is where the school creates "birth certificates" for campus accounts and "title deeds" for iPads. Without this portal, the school wouldn't have a way to prove they own their hardware or distribute paid curriculum software officially to student devices.
+ASM is the school's "Digital Registrar's Office." It's the headquarters where the school registers every iPad, buys every educational app, and creates IDs for every student and teacher. It makes sure that when a teacher walks into a room, their iPad already "knows" exactly which students are in their class and which books they need.
