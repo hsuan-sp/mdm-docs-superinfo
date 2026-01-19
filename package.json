@@ -7,7 +7,8 @@
     "docs:dev": "node scripts/generate_maintenance_index.mjs && vitepress dev docs",
     "build": "vitepress build docs && node scripts/generate_maintenance_index.mjs",
     "preview": "vitepress preview docs",
-    "update-index": "node scripts/generate_maintenance_index.mjs"
+    "update-index": "node scripts/generate_maintenance_index.mjs",
+    "fix-markdown": "node scripts/fix-markdown.js"
   },
   "keywords": [],
   "author": "",

@@ -19,27 +19,26 @@ HELP_TEXT = """
 
 ## 📂 核心架構
 此工具已升級為支援「原子化」Markdown 存儲架構：
-- **術語表**: 儲存於 `docs/data/items/glossary/*.md`
-- **問答集**: 依類別儲存於 `docs/data/items/qa/[類別]/*.md`
+- **術語表**: `docs/data/items[ -en]/glossary/*.md`
+- **問答集**: `docs/data/items[ -en]/qa/[類別]/*.md`
 
 ## ✨ 核心功能
-1. **目錄管理**: 左側選單可切換不同資料夾。
+1. **目錄管理**: 左側選單可切換中英文不同資料夾。
 2. **自動解析**: 自動讀取 Markdown 的 Frontmatter (---) 與內文。
-3. **智慧儲存**: 儲存時會自動生成正確的 YAML 標頭。
+3. **智慧儲存**: 儲存時會自動生成二級標題 (##) 格式，並呼叫排版優化腳本。
 4. **維護索引**: 儲存變更後會自動呼叫腳本更新 `MAINTENANCE_INDEX.md`。
 
 ## 🛠️ 操作指南
-- **新增**: 清空編輯區，填寫完點擊「儲存變更」。
+- **新增**: 清空編輯區，會自動帶入標準模板 (使用 ## 標題)。
 - **編輯**: 雙擊左側列表項目載入內容。
-- **刪除**: 點擊刪除後會直接刪除對應的實體檔案。
-- **複製**: 快速產生副本，檔案名稱會帶有 `copy` 字樣。
+- **儲存**: 點擊儲存會自動將 # 標題轉換為 ##，並優化中英文間距。
 
 ## 🛡️ 安全機制
-- **自動備份**: 每當儲存時，原檔案會備份到 `backup/` 目錄下（若目錄存在）。
+- **自動排版**: 整合 `scripts/fix-markdown.js` 確保所有檔案符合 2026 最新規範。
 - **ID 檢查**: QA 項目必須具備唯一的 ID。
 
 ---
-*版本: v2.0 | 首席架構師思維實作 | 2026-01-14*
+*版本: v2.1 | 首席架構師思維實作 | 2026-01-19*
 """
 
 class ContentManager:
@@ -51,9 +50,11 @@ class ContentManager:
         # 路徑設定
         self.project_root = Path(__file__).parent.parent
         self.items_root = self.project_root / "docs" / "data" / "items"
+        self.items_en_root = self.project_root / "docs" / "data" / "items-en"
         
         # 資料夾映射
         self.sources = {
+            "--- 🇹🇼 中文內容 ---": None,
             "📖 術語表 (Glossary)": self.items_root / "glossary",
             "👤 01 - 帳號與伺服器": self.items_root / "qa" / "account",
             "📦 02 - 裝置註冊": self.items_root / "qa" / "enrollment",
@@ -62,7 +63,17 @@ class ContentManager:
             "🎓 05 - 數位精進": self.items_root / "qa" / "digital-learning",
             "🔧 06 - 硬體排除": self.items_root / "qa" / "hardware",
             "💻 07 - Mac 管理": self.items_root / "qa" / "mac",
-            "🍎 08 - 教育實戰": self.items_root / "qa" / "qa-education"
+            "🍎 08 - 教育實戰": self.items_root / "qa" / "qa-education",
+            "--- 🇺🇸 English Content ---": None,
+            "📖 Glossary (EN)": self.items_en_root / "glossary",
+            "👤 01 - Account (EN)": self.items_en_root / "qa" / "account",
+            "📦 02 - Enrollment (EN)": self.items_en_root / "qa" / "enrollment",
+            "📱 03 - Apps (EN)": self.items_en_root / "qa" / "apps",
+            "🏫 04 - Classroom (EN)": self.items_en_root / "qa" / "classroom",
+            "🎓 05 - Digital Learning (EN)": self.items_en_root / "qa" / "digital-learning",
+            "🔧 06 - Hardware (EN)": self.items_en_root / "qa" / "hardware",
+            "💻 07 - Mac (EN)": self.items_en_root / "qa" / "mac",
+            "🍎 08 - Education (EN)": self.items_en_root / "qa" / "qa-education"
         }
         
         self.current_dir = None
@@ -194,8 +205,12 @@ class ContentManager:
 
     def on_source_selected(self, event=None):
         selected = self.source_combo.get()
+        if not self.sources[selected]:
+            return
+            
         self.current_dir = self.sources[selected]
         self.is_glossary = "Glossary" in selected
+        self.is_en = "(EN)" in selected or "English" in selected
         
         self.load_dir_items()
         self.update_list()
@@ -362,6 +377,9 @@ class ContentManager:
             yaml_lines.append(f"{k}: {val}")
         yaml_lines.append("---")
         
+        # 自動轉換 H1 為 H2
+        content = re.sub(r'^# (?!#)', '## ', content, flags=re.MULTILINE)
+        
         file_content = "\n".join(yaml_lines) + "\n\n" + content
         
         # Determine path
@@ -383,16 +401,31 @@ class ContentManager:
             messagebox.showerror("錯誤", f"儲存失敗: {e}")
 
     def update_index(self):
-        """執行更新索引的 NodeJS 腳本"""
+        """執行更新索引與格式修正的 NodeJS 腳本"""
         try:
+            # 1. 修正格式與排版
+            subprocess.run(["npm", "run", "fix-markdown"], cwd=str(self.project_root), check=True)
+            # 2. 更新維護索引
             subprocess.run(["npm", "run", "update-index"], cwd=str(self.project_root), check=True)
         except Exception as e:
-            print(f"Index update failed: {e}")
+            print(f"Update tools failed: {e}")
 
     def add_new(self):
         self.clear_editor()
+        if self.is_glossary:
+            if self.is_en:
+                template = "## Term Definition\n\n## Analogy\n"
+            else:
+                template = "## 術語定義\n\n## 白話文比喻\n"
+        else:
+            if self.is_en:
+                template = "## Q: [Question Title Here]\n\n## Answer\n\n**Core summary**\n\nDetails here..."
+            else:
+                template = "## Q: [問題標題]\n\n## Answer\n\n**一句話總結核心答案**\n\n詳細說明內容..."
+                
+        self.content_text.insert('1.0', template)
         self.item_listbox.selection_clear(0, tk.END)
-        self.status_label.config(text="✨ 新增模式：填寫完成後點擊儲存")
+        self.status_label.config(text="✨ 新增模式 (已帶入標準模板)：填寫完成後點擊儲存")
 
     def delete_item(self):
         selection = self.item_listbox.curselection()
