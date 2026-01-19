@@ -20,4 +20,4 @@ tags: ["Passcode Policy","Security","Compliance"]
 
 ## Practical Advice:
 
-Choose a passcode that is easy to remember but hard for others to guess. If you forget your passcode, you must contact the IT office to have the device cleared via MDM.
+Choose a passcode that is easy to remember but hard for others to guess. If you forget your passcode, you must contact the ICT Support Team to have the device cleared via MDM.

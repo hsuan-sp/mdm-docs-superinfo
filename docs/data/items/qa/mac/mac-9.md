@@ -73,7 +73,7 @@ Jamf Pro 的強大之處在於其專屬的二進位檔案 (Binary)，配合 **�
 ## 設定變數
 
 HELPER="/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper"
-TITLE="學校資訊組公告"
+TITLE="學校ICT 資訊支援團隊公告"
 HEADING="軟體更新通知"
 DESC="您的電腦將在 10 分鐘後進行安全性更新，請儲存手邊的工作並連接電源。"
 

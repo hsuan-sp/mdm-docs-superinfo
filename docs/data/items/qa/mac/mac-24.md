@@ -19,7 +19,7 @@ tags: ["Safari", "干擾控制", "考試防弊", "macOS 26", "教學端管理"]
 
 ## 二、 MDM 管控方案 (SOP)
 
-資訊組長應在大型測驗或檢定期間，透過 Jamf Pro 執行以下設定：
+ICT 資訊支援團隊長應在大型測驗或檢定期間，透過 Jamf Pro 執行以下設定：
 
 ## 1. 透過 Configuration Profile 鎖定 (推薦)
 

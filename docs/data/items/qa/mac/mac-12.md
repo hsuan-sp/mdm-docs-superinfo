@@ -21,4 +21,4 @@ Mac 的復原模式功能強大，若未加鎖，任何人只要接觸實體機�
 | 架構類型 | 保護機制 | 部署方式 |
 | :--- | :--- | :--- |
 | **Apple Silicon (M1-M5)** | **復原鎖定 (Recovery Lock)** | 僅能透過 **MDM 遠端指令** 設定 |
-| **Intel Mac** | **韌體密碼 (Firmware Password)** | 透過 **組態設定檔** 或指令設定 |
+| **Intel Mac** | **韌體密碼 (Firmware Password)** | 透過 **設定描述檔** 或指令設定 |

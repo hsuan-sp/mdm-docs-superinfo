@@ -1,12 +1,12 @@
 ---
 id: edu-24
-title: "iOS 26 的「寫作工具」(Writing Tools) 在考試時該如何管理？哪些功能需要禁用？"
+title: "iOS 26 的「寫作工具」(Writing Tools) 在正式評量或正式評量或正式評量或正式評量或考試時該如何管理？哪些功能需要禁用？"
 category: "第八部分：教育場景與教學應用 (Education Scenarios)"
 important: true
 tags: ["Writing Tools", "Apple Intelligence", "考試防弊", "iOS 26", "AI"]
 ---
 
-## Q: iOS 26 的「寫作工具」(Writing Tools) 在考試時該如何管理？哪些功能需要禁用？
+## Q: iOS 26 的「寫作工具」(Writing Tools) 在正式評量或正式評量或正式評量或正式評量或考試時該如何管理？哪些功能需要禁用？
 
 ## Answer
 

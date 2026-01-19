@@ -30,4 +30,4 @@ While Apple optimized account recovery in OS 26, the primary control for student
 
 ## Practical Advice:
 
-If your accounts are not federated, students **must contact the IT office** if they forget their password. We recommend that administrators use the batch selection feature at the start of the semester to generate PDFs or CSVs containing temporary passwords for distribution.
+If your accounts are not federated, students **must contact the ICT Support Team** if they forget their password. We recommend that administrators use the batch selection feature at the start of the semester to generate PDFs or CSVs containing temporary passwords for distribution.

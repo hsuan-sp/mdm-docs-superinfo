@@ -35,6 +35,6 @@ tags: ["Performance","Troubleshooting","Maintenance"]
 
 * Ensure the device is running the latest allowed version of iPadOS. Apple regularly releases patches that optimize performance for older hardware.
 
-## When to Contact IT:
+## When to contact the ICT Support Team:
 
-If the device is still slow after a reboot and a storage cleanup, or if the screen is behaving erratically (ghost touching), it may have a failing digitizer or battery. At this point, the device should be sent to the ICT office for a hardware diagnostic.
+If the device is still slow after a reboot and a storage cleanup, or if the screen is behaving erratically (ghost touching), it may have a failing digitizer or battery. At this point, the device should be sent to the ICT Support Team for a hardware diagnostic.

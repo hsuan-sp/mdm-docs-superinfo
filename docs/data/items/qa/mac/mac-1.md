@@ -37,7 +37,7 @@ tags: ["AD","身分認證","Jamf Connect","Platform SSO","No-Bind"]
 * **2026 年新功能：精簡設定 (Simplified Setup)**：
 * 管理員可直接在開箱時的「設定輔助程式」階段強制透過 IdP 驗證。
 * 使用者輸入 Entra ID (Azure AD) 或 Google 帳號後，直接自動建立對應的本機帳戶。
-* 這實現了真正的「零接觸部署」，資訊組長不再需要預設一組臨時密碼。
+* 這實現了真正的「零接觸部署」，ICT 資訊支援團隊長不再需要預設一組臨時密碼。
 * **優勢**：
 * **密碼同步**：Mac 本機密碼與雲端強標准同步，符合資安稽核。
 * **無密碼體驗**：macOS 26 甚至支援透過 iPhone 的 FaceID/Touch ID 直接授權 Mac 登入。
@@ -55,4 +55,4 @@ tags: ["AD","身分認證","Jamf Connect","Platform SSO","No-Bind"]
 **實務建議：遷移策略**
 
 若貴校仍有大量 Mac 綁定 AD，請優先計畫「解除綁定 (Unbind)」專案，
-並導入 Platform SSO，這能大幅減少資訊組長處理「密碼不同步」工單的數量。
+並導入 Platform SSO，這能大幅減少ICT 資訊支援團隊長處理「密碼不同步」工單的數量。

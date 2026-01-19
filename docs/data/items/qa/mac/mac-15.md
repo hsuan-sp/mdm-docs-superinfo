@@ -50,7 +50,7 @@ tags: ["Office","Microsoft 365","Serializer","大量授權","Jamf App Installers
 
  並派送給教室群組。
 
-1. **設定 MAU (Microsoft AutoUpdate)**：建立組態設定檔，強制設定 MAU 的更新期限 (Deadline)，
+1. **設定 MAU (Microsoft AutoUpdate)**：建立設定描述檔，強制設定 MAU 的更新期限 (Deadline)，
 
  確保漏洞被修補。
 

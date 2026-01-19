@@ -29,7 +29,7 @@ tags: ["MDM 遷移", "Zero-Wipe", "系統維護", "2026 新技術"]
 1. 宣告式管理 (DDM)：兩邊的 MDM 伺服器皆需支援 DDM 的遷移 Payload。
 1. 一致的 IdP：建議維持相同的 Managed Apple Accounts 登入體系，確保身分銜接順暢。
 
-## 資訊組長的遷移 SOP (2026 版)
+## ICT 資訊支援團隊長的遷移 SOP (2026 版)
 
 1. **ASM 指派變更**：在 Apple School Manager 後台，將裝置序號的 MDM 伺服器指派為「新廠商」。
 1. **派發遷移描述檔**：由舊的 MDM 發送最後一條指令：`MigrationPayload`，其中包含新 MDM 的註冊聯絡資訊。
