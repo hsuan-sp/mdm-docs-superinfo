@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 important: true
 tags: ["APNs","憑證","災難預防"]
 ---
+
 ## Q: 推播憑證 (APNs Certificate) 過期會發生什麼事？如何續約？
 
 ## Answer

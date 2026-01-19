@@ -2,6 +2,7 @@
 term: "ARD (Apple Remote Desktop)"
 category: ["Core"]
 ---
+
 ## 術語定義
 
 Apple Remote Desktop (ARD) 是一套 Mac 專用的進階遠端管理軟體。雖然 MDM 負責大方向的設定，但 ARD 擅長處理「即時性」的任務，例如即時監控全班螢幕、接管滑鼠鍵盤協助故障排除，或是透過區域網路快速傳送大型檔案。

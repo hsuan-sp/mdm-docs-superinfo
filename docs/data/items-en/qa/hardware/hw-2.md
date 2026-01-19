@@ -5,6 +5,7 @@ category: "Section 6: Hardware & Maintenance"
 important: false
 tags: ["Charging Issues","Diagnostics","Hardware Maintenance"]
 ---
+
 ## Q: An iPad isn't charging inside the cart. Is the device broken or the cart?
 
 ## Answer

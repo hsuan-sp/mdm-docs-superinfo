@@ -5,6 +5,7 @@ category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["課堂管理","SOP","交接"]
 ---
+
 ## Q: 班級輪替時（如走班、分組教學），如何快速整理平板給下一班使用？
 
 ## Answer

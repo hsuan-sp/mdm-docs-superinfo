@@ -2,6 +2,7 @@
 term: "Jamf Now"
 category: ["Jamf"]
 ---
+
 ## 術語定義
 
 Jamf Now。Jamf 推出的簡化版雲端 MDM 解決方案,專為小型企業(50 台裝置以下)設計。提供基本的裝置管理、App 派送與安全設定功能,但不包含 Jamf Pro 的進階功能如 Policy、Script、Extension Attribute 等。定價較低,介面更友善。

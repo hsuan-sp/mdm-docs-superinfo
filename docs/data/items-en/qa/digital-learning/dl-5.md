@@ -5,6 +5,7 @@ category: "Section 5: Campus Digital Initiatives & Compliance"
 important: false
 tags: ["Compliance","Security","Restrictions","Jamf Trust"]
 ---
+
 ## Q: Students are deleting the Jamf Trust app. How does this affect compliance, and how do we prevent it?"
 
 ## Answer

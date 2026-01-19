@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 important: false
 tags: ["VPP","MDM 遷移","授權回收"]
 ---
+
 ## Q: 更換 MDM 廠商時，VPP App 授權如何平順轉移？需要重新購買嗎？
 
 ## Answer

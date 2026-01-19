@@ -2,6 +2,7 @@
 term: "AirPlay"
 category: ["Core"]
 ---
+
 ## 術語定義
 
 AirPlay 是 Apple 的無線影音串流協定，可將畫面鏡像輸出到 Apple TV 或支援的螢幕。在教育與企業環境，MDM 可預先設定 AirPlay 權限（如特定會議室密碼），或指定只有受管裝置能進行投影，防止未授權人員佔用螢幕。

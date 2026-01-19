@@ -5,6 +5,7 @@ category: "第七部分：Mac 電腦進階管理 (Mac Management)"
 important: false
 tags: ["防篡改","Recovery Lock","韌體密碼","資安","遠端指令"]
 ---
+
 ## Q: 如何防止學生進入 Recovery Mode (復原模式) 格式化電腦？
 
 ## Answer

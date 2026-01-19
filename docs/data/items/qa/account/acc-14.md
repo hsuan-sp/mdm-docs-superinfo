@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 important: true
 tags: ["ADE","Server Token","自動裝置註冊"]
 ---
+
 ## Q: ASM 中新採購的裝置無法同步到 Jamf Pro？（ADE 伺服器代號續約）
 
 ## Answer

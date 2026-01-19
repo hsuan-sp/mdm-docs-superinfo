@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: false
 tags: ["行動數據", "Wi-Fi", "App 下載", "流量管理", "iOS 26"]
 ---
+
 ## Q: iOS 26 如何限制學生只能透過 Wi-Fi 下載 App，避免消耗行動數據？
 
 ## Answer

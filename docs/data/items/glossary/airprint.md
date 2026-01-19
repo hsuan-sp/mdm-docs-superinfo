@@ -2,6 +2,7 @@
 term: "AirPrint"
 category: ["Core"]
 ---
+
 ## 術語定義
 
 AirPrint 是 Apple 的免驅動程式列印技術。只要印表機支援 AirPrint 並在同一網段，裝置即可直接列印。MDM 可透過 AirPrint Payload 預先將公司印表機清單推送到員工裝置，讓其自動出現在列印選項中。

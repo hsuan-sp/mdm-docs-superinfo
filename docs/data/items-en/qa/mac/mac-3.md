@@ -5,6 +5,7 @@ category: "Section 7: Advanced Mac Management"
 important: false
 tags: ["Software Distribution","App Installers","PKG","Auto-Update"]
 ---
+
 ## Q: How do we distribute non-App Store software like Chrome, Adobe CC, or Office?
 
 ## Answer

@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: false
 tags: ["Web Clip","Safari","設定描述檔","教學工具"]
 ---
+
 ## Q: 可以派送網頁捷徑 (Web Clip) 到學生桌面上嗎？這算 App 嗎？
 
 ## Answer

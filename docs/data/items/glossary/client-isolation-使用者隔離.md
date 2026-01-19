@@ -2,6 +2,7 @@
 term: "Client Isolation (使用者隔離)"
 category: ["Network"]
 ---
+
 ## 術語定義
 
 Client Isolation（使用者隔離）是無線基地台 (AP) 的一項安全設定，禁止連上同一 Wi-Fi 的裝置互相通訊。雖然這能防止病毒在內網傳播，但也會直接導致 AirPlay、AirDrop 和其他依賴點對點連線的 Apple 課堂功能失效。

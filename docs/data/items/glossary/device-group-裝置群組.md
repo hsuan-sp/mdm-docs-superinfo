@@ -2,6 +2,7 @@
 term: "Device Group (裝置群組)"
 category: ["Core"]
 ---
+
 ## 術語定義
 
 Device Group（裝置群組）是 MDM 中用來分類管理裝置的容器。可分為「靜態群組 (Static)」：手動選擇裝置加入；以及「智慧型群組 (Smart)」：依據條件（如 iOS 版本、電量、部門）自動篩選裝置。群組是所有管理政策 (Policy) 與設定檔 (Profile) 的派發目標。

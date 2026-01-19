@@ -5,6 +5,7 @@ category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["混合環境", "Intel Mac", "Apple Silicon", "Smart Group", "部署策略"]
 ---
+
 ## Q: 【新舊互通】2026 混合環境管理：如何設定 Smart Group 正確區分 Intel 與 Apple Silicon 的軟體包？
 
 ## Answer

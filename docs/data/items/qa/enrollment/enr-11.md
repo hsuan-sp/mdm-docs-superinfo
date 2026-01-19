@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["App 管理","限制描述檔","螢幕使用時間","排錯"]
 ---
+
 ## Q: 已開啟「允許刪除 App」，為什麼學生長按仍無法「刪除」App？
 
 ## Answer

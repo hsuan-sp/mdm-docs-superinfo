@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: false
 tags: ["VPP 位置","資源共享","跨校管理","ASM"]
 ---
+
 ## Q: 付費 App 的授權可以分給不同學校用嗎？(跨校 VPP)
 
 ## Answer

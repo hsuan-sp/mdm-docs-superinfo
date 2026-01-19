@@ -2,6 +2,7 @@
 term: "Supervision"
 category: ["Enrollment", "Security"]
 ---
+
 ## Term Definition
 
 Supervision is a special mode for school-owned Apple devices that provides advanced management capabilities. It allows the school to enforce stricter controls, such as silent app installation, "Single App Mode" (Kiosk mode), and preventing the removal of the management profile.

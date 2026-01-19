@@ -5,6 +5,7 @@ category: "Section 3: App Management & Distribution"
 important: true
 tags: ["VPP","Device-based Assignment","Apple ID","Managed Apple Account"]
 ---
+
 ## Q: Can we install apps on iPads without signing into an Apple ID?
 
 ## Answer

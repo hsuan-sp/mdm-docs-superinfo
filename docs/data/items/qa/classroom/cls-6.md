@@ -5,6 +5,7 @@ category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["課堂班級","ASM","限制描述檔","防止退出"]
 ---
+
 ## Q: 學生可以自行退出或移除老師建立的「課堂」班級嗎？
 
 ## Answer

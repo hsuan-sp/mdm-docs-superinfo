@@ -5,6 +5,7 @@ category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["節能政策", "DDM", "自動更新", "能源管理", "macOS 26"]
 ---
+
 ## Q: 【自動化維管】利用 macOS 26 DDM 設定「智慧能源管理」：兼顧校園節能與凌晨自動更新。
 
 ## Answer

@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["註冊卡住","故障排除","自動裝置註冊","DDM"]
 ---
+
 ## Q: 開機卡在「正在擷取遠端管理設定」轉圈圈很久，該如何排查？
 
 ## Answer

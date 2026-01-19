@@ -5,6 +5,7 @@ category: "第七部分：Mac 電腦進階管理 (Mac Management)"
 important: true
 tags: ["軟體更新", "DDM", "macOS 26", "宣告式更新", "資訊組長實務"]
 ---
+
 ## Q: 如何制定 2026 年的 macOS 軟體更新策略？DDM 宣告式更新與傳統更新有何不同？
 
 ## Answer

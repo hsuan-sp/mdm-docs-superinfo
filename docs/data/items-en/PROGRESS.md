@@ -9,14 +9,14 @@ Continuing the English translation for the Taipei European School (TES) context.
 
 * **Glossary / 術語表**: 30+ items translated with TES-specific analogies. (28+ terms done)
 * **Q&A Sections / 常見問答**: First 5 questions of ALL 8 chapters translated. (Total 40 items)
-* 01. Account & Server Management / 1. 帳號與伺服器管理 (5/5)
-* 02. Enrollment & Reset / 2. 裝置註冊與重置 (5/5)
-* 03. App Management / 3. App 管理 (5/5)
-* 04. Apple Classroom / 4. 課堂管理 (5/5)
-* 05. Digital Learning / 5. 數位精進方案 (5/5)
-* 06. Hardware Tuning / 6. 硬體排除 (5/5)
-* 07. Mac Management / 7. Mac 管理 (5/5)
-* 08. Education Q&A / 8. 教育實戰 (5/5)
+* **01.** Account & Server Management / 1. 帳號與伺服器管理 (5/5)
+* **02.** Enrollment & Reset / 2. 裝置註冊與重置 (5/5)
+* **03.** App Management / 3. App 管理 (5/5)
+* **04.** Apple Classroom / 4. 課堂管理 (5/5)
+* **05.** Digital Learning / 5. 數位精進方案 (5/5)
+* **06.** Hardware Tuning / 6. 硬體排除 (5/5)
+* **07.** Mac Management / 7. Mac 管理 (5/5)
+* **08.** Education Q&A / 8. 教育實戰 (5/5)
 
 ## Technical Adjustments / 技術調整
 

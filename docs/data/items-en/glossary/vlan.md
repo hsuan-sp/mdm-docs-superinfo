@@ -2,6 +2,7 @@
 term: "VLAN (Virtual LAN)"
 category: ["Network"]
 ---
+
 ## Term Definition
 
 A Virtual LAN (VLAN) is a networking technique that segments a physical campus network into smaller, logical groups. This is often used to isolate student devices from teacher devices or administrative servers for security and performance reasons.

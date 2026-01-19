@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 important: false
 tags: ["網域變更","帳號管理","重大異動"]
 ---
+
 ## Q: 學校的 Email 網域更換了（例如從 .edu.tw 改為 .xh.edu.tw），該怎麼更改管理式 Apple 帳號？
 
 ## Answer

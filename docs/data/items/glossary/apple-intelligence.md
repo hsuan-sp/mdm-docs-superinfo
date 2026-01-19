@@ -3,6 +3,7 @@ term: "Apple Intelligence (Apple 智慧)"
 category: ["Core"]
 tags: ["Apple Intelligence", "AI", "寫作工具", "Image Playground", "Genmoji", "考試防弊"]
 ---
+
 ## 術語定義
 
 Apple 於 2025 年（系統版本 26）推出的裝置端大型語言模型 (LLM) 系統。支援寫作工具 (Writing Tools)、郵件摘要、Genmoji、Image Playground 等 AI 功能。僅限配備 M 系列晶片或 A17 Pro 以上的裝置。

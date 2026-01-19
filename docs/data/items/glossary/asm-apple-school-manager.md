@@ -2,6 +2,7 @@
 term: "ASM (Apple School Manager)"
 category: ["Apple"]
 ---
+
 ## 術語定義
 
 Apple School Manager (ASM) 是教育機構專用的 Apple 裝置管理入口（教育版的 ABM）。它除了管理裝置與 App 授權外，還能與學校的「學生資訊系統 (SIS)」連結，自動建立以課程為單位的「管理式 Apple 帳號」與班級名單，是推動數位教學的基礎與核心。

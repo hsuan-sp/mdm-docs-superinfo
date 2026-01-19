@@ -2,6 +2,7 @@
 term: "LAPS (Local Administrator Password Solution)"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 本機管理員密碼解決方案。這是一種資安機制，確保每台電腦的本機管理員帳號 (Local Admin) 使用「隨機、唯一且定期輪替」的密碼，並將密碼儲存在 MDM 或目錄服務中。這能防止駭客猜到一組通用密碼後，橫向感染所有電腦。

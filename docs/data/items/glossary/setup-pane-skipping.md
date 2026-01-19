@@ -3,6 +3,7 @@ term: "Setup Pane Skipping (跳過設定輔助程式面板)"
 category: ["Mac"]
 tags: ["Setup Assistant", "設定輔助程式", "跳過", "部署加速"]
 ---
+
 ## 術語定義
 
 macOS Tahoe 的 DDM 功能。MDM 可透過宣告式設定跳過「OS Showcase (系統功能展示)」與「Update Completed (更新完成)」等設定面板，加速部署流程。

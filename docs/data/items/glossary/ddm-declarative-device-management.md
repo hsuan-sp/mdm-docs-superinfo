@@ -2,6 +2,7 @@
 term: "DDM (Declarative Device Management)"
 category: ["Core"]
 ---
+
 ## 術語定義
 
 Declarative Device Management (DDM) 是 Apple 推出的新一代 MDM 架構。不同於傳統 MDM 由伺服器持續輪詢指令，DDM 允許裝置依據收到的「宣告 (Declaration)」自主監控狀態並執行動作，並在狀態改變時透過 Status Channel 主動回報。這進化了裝置的自主性，大幅減輕伺服器負擔並提升反應速度。

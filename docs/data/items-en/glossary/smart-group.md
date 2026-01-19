@@ -2,6 +2,7 @@
 term: "Smart Group"
 category: ["Core", "Jamf"]
 ---
+
 ## Term Definition
 
 A Smart Group is a dynamic category in Jamf that automatically populates devices based on specific criteria (e.g., "iPads with low battery" or "Macs missing a specific update"). As device attributes change, they automatically join or leave the group.

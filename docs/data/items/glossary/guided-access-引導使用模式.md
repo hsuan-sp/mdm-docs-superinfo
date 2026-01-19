@@ -2,6 +2,7 @@
 term: "Guided Access（引導使用模式）"
 category: ["Education","Apple"]
 ---
+
 ## 術語定義
 
 Guided Access（引導使用模式）是 iOS/iPadOS 內建的單一 App 鎖定功能。啟用後，裝置會鎖定在當前 App，無法推出或切換其他應用。老師可用於考試場景，家長可用於限制孩子只能用特定 App。該功能會在設定的密碼輸入後方可解除。

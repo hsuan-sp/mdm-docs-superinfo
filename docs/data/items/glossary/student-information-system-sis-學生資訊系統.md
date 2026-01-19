@@ -2,6 +2,7 @@
 term: "Student Information System（SIS，學生資訊系統）"
 category: ["Education","Other"]
 ---
+
 ## 術語定義
 
 Student Information System (SIS) 是學校用來儲存及管理學生基本資料、出席、成績、課表與親師聯繫資訊的大型資料庫。Apple School Manager 可與主流 SIS 系統接軌，自動同步全校的師生帳號與班級資料，省去手動建立上千個 Apple ID 的繁瑣程序。

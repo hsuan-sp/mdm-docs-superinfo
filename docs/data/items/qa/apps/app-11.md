@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: false
 tags: ["電子書","教材派送","PDF","限制"]
 ---
+
 ## Q: 如何派送「電子書 (PDF/ePub)」教材到學生 iPad？
 
 ## Answer

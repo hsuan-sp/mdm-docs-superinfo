@@ -2,6 +2,7 @@
 term: "Jamf Protect"
 category: ["Jamf","Security","macOS"]
 ---
+
 ## 術語定義
 
 Jamf Protect 是專為 Mac 設計的端點偵測與回應 (EDR) 解決方案。它利用 Apple 原生的 Endpoint Security Framework 來監控惡意行為，提供即時威脅偵測、惡意軟體防護與自動化回應。與 Jamf Pro 深度整合，可在發現威脅時自動隔離裝置或執行修復，且不會像傳統防毒軟體那樣拖慢系統效能。

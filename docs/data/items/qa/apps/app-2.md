@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: true
 tags: ["VPP","裝置型分派","Apple 帳號","管理式 Apple 帳號"]
 ---
+
 ## Q: 不用登入 Apple 帳號也可以在 iPad 上安裝 App 嗎？
 
 ## Answer

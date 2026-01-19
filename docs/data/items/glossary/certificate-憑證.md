@@ -2,6 +2,7 @@
 term: "Certificate (憑證)"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 Certificate（數位憑證）是用於網路身分驗證與加密通訊的電子文件。在 MDM 環境中，憑證用於證明裝置身分（S/MIME）、建立加密連線（TLS）、或簽署 App 程式碼。若憑證過期，裝置將無法連上 Wi-Fi 或與 MDM 伺服器通訊。

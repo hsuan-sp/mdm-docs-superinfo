@@ -2,6 +2,7 @@
 term: "Gatekeeper"
 category: ["Security", "macOS"]
 ---
+
 ## Term Definition
 
 Gatekeeper is a macOS technology that ensures only trusted software runs on the computer. It verifies that applications have been "Notarized" by Apple or come from the App Store, protecting the system from malware or unauthorized software.

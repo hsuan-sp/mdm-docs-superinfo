@@ -2,6 +2,7 @@
 term: "Managed Classes（管理化班級）"
 category: ["Education","Jamf"]
 ---
+
 ## 術語定義
 
 Managed Classes（管理化班級）是在 MDM（如 Jamf School）或 Apple School Manager (ASM) 中建立的教學群組。它包含了學生選課、任課老師、上課時間以及所需的 App 清單。這些資訊會自動同步到 Apple「課堂」App 中，讓老師能即時監控並管理該班級所有學生的 iPad。

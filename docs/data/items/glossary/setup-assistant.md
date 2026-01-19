@@ -2,6 +2,7 @@
 term: "Setup Assistant"
 category: ["Enrollment"]
 ---
+
 ## 術語定義
 
 設定輔助程式。Apple 裝置第一次開機時出現的引導畫面（Hello/哈囉畫面開始）。它會逐步詢問語言、Wi-Fi、Apple 帳號、定位服務等設定。透過 ADE + PreStage，IT 可以跳過大部分畫面，讓裝置直接進入可用狀態。

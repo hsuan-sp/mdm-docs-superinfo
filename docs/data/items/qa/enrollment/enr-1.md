@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["ADE","ASM","註冊失敗","自動裝置註冊"]
 ---
+
 ## Q: 新買的 iPad 開機後沒有出現「遠端管理」畫面，該如何確認？
 
 ## Answer

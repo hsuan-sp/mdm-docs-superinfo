@@ -5,6 +5,7 @@ category: "第四部分：課堂管理與互動教學 (Classroom Management)"
 important: false
 tags: ["AirPods","音訊配件","共用 iPad","iOS 26","耳機管理"]
 ---
+
 ## Q: iOS 26 的「音訊配件設定」如何解決共用 iPad 的 AirPods/Beats 配對混亂？
 
 ## Answer

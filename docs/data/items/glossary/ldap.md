@@ -2,6 +2,7 @@
 term: "LDAP"
 category: ["Apple"]
 ---
+
 ## 術語定義
 
 Lightweight Directory Access Protocol (LDAP) 是一種網路協定，用於讀取企業內部的目錄服務資料庫（如 AD）。MDM 透過 LDAP 與企業伺服器溝通，以取得員工名單、部門架構與群組資訊，進而將管理政策精確地派發給特定部門的人員。

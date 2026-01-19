@@ -2,6 +2,7 @@
 term: "Status Channel"
 category: ["Core"]
 ---
+
 ## 術語定義
 
 Status Channel（狀態通道）。DDM 的核心機制之一。裝置會主動透過此通道向 MDM 伺服器回報狀態變化（如 App 安裝成功、電池低於 20%），無需伺服器輪詢，實現即時監控。

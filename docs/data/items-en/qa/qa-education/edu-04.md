@@ -5,6 +5,7 @@ category: "Section 8: Education Scenarios & FAQ"
 important: false
 tags: ["Classroom Management","SOP","Handoff","RTS"]
 ---
+
 ## Q: How do we quickly reset iPads between different classes or rotating groups?
 
 ## Answer

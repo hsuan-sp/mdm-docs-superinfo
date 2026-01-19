@@ -5,6 +5,7 @@ category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: true
 tags: ["網路架構","VLAN","Bonjour","mDNS"]
 ---
+
 ## Q: 學校網路有分「老師」與「學生」不同網段 (VLAN)，「課堂」App 還能通嗎？
 
 ## Answer

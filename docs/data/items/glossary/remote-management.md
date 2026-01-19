@@ -2,6 +2,7 @@
 term: "Remote Management"
 category: ["Core","Jamf"]
 ---
+
 ## 術語定義
 
 Remote Management 指透過 MDM 對裝置進行遠端設定與監控的過程。在 Apple 裝置上，這通常特指「裝置本身已開啟接受 MDM 管理的權限」。在「設定輔助程式」中看到的「遠端管理」畫面，就是確認裝置即將被納入 MDM 體系的關鍵步驟。

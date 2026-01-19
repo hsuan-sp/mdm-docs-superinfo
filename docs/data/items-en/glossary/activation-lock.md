@@ -2,6 +2,7 @@
 term: "Activation Lock"
 category: ["Security", "Apple"]
 ---
+
 ## Term Definition
 
 Activation Lock is a security feature designed to prevent anyone else from using an iPad, Mac, or iPhone if it's ever lost or stolen. It requires the user’s Managed Apple Account or a school-managed "Bypass Code" to erase or reactivate the device.

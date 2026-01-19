@@ -2,6 +2,7 @@
 term: "User Approved MDM（使用者核准的 MDM）"
 category: ["Enrollment","macOS"]
 ---
+
 ## 術語定義
 
 User Approved MDM（使用者核准的 MDM）是 macOS 的一項安全性要求。當裝置不是透過自動註冊 (ADE) 加入 MDM 時，使用者必須在下載描述檔後，手動前往「系統設定」點選核准。只有獲得核准的 MDM 才能管理關鍵資安設定（如安裝核心延伸功能、核心軟體更新或安全性原則）。

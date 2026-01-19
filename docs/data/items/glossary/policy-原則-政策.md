@@ -2,6 +2,7 @@
 term: "Policy (原則/政策)"
 category: ["Core"]
 ---
+
 ## 術語定義
 
 Policy（政策）是 Jamf Pro 用來執行管理任務的邏輯單元。一個 Policy 包含「觸發時機 (Trigger)」、「執行頻率 (Frequency)」與「執行內容 (Payload)」。例如：「每週一次 (頻率) 當使用者登入時 (時機)，執行軟體更新 (內容)」。

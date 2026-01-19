@@ -5,6 +5,7 @@ category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: true
 tags: ["MDM 遷移", "Zero-Wipe", "系統維護", "2026 新技術"]
 ---
+
 ## Q: 學校如果想更換 MDM 廠商，一定要把 iPad 全部重灌 (Wipe) 嗎？
 
 ## Answer

@@ -2,6 +2,7 @@
 term: "Passkeys"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 通行密鑰。這是 FIDO 聯盟與 Apple 推動的「無密碼」登入標準。它利用裝置的生物辨識（FaceID/TouchID）與公開金鑰加密技術來取代傳統密碼。企業正逐步導入 Passkeys 以消除釣魚攻擊與密碼外洩風險。

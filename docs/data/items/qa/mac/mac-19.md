@@ -5,6 +5,7 @@ category: "第七部分：Mac 電腦進階管理 (Mac Management)"
 important: false
 tags: ["部署策略", "ADE", "離線安裝", "內容快取", "macOS 26"]
 ---
+
 ## Q: 2026 年 macOS 部署與離線安裝進階策略：如何應對大規模新機註冊？
 
 ## Answer

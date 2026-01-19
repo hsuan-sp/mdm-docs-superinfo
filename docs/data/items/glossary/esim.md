@@ -2,6 +2,7 @@
 term: "eSIM"
 category: ["Hardware"]
 ---
+
 ## 術語定義
 
 eSIM（嵌入式 SIM 卡）是直接焊接在裝置電路板上的數位 SIM 卡。企業可透過 MDM 將電信資費方案（Carrier Plan）無線推送到 iPad 或 iPhone 上，無需採購與插拔實體 SIM 卡，大幅簡化行動網路版裝置的部署流程。

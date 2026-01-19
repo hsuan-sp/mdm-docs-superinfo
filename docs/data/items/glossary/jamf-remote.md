@@ -2,6 +2,7 @@
 term: "Jamf Remote"
 category: ["Jamf","macOS"]
 ---
+
 ## 術語定義
 
 Jamf Remote (Jamf Remote Assist)。Jamf Pro 內建的瀏覽器端遠端桌面工具。IT 可透過網頁直接連線到 Mac 進行螢幕分享、終端機操作、檔案傳輸與故障排除,無需安裝第三方遠端控制軟體。支援 attended(使用者需同意)和 unattended(無人值守)兩種連線模式。

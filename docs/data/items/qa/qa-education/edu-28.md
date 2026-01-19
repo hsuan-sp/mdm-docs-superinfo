@@ -5,6 +5,7 @@ category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["裝置退休", "ESG", "資料清理", "資產管理"]
 ---
+
 ## Q: 學校 iPad/Mac 到達使用年限後，MDM 管理員應如何處理「退休」流程？
 
 ## Answer

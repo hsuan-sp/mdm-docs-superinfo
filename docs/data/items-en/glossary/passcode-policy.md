@@ -2,6 +2,7 @@
 term: "Passcode Policy"
 category: ["Security", "Core"]
 ---
+
 ## Term Definition
 
 A Passcode Policy is a set of rules enforced by the school to ensure devices are protected by a strong password. This can include requirements for minimum length, complexity (alphanumeric), and how often the password must be changed.

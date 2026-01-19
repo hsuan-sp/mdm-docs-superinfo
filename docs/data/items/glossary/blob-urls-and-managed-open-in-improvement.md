@@ -3,6 +3,7 @@ term: "Blob URLs and Managed Open-In Improvement (Blob URL 與管理式 Open-In 
 category: ["Security"]
 tags: ["Blob URL", "Managed Open In", "資料外洩防護", "檔案分享限制"]
 ---
+
 ## 術語定義
 
 iOS 26 的安全性改進。Blob URL（瀏覽器產生的臨時檔案連結）現在會遵守 Managed Open-In 限制，防止使用者透過壓縮或 Blob URL 繞過資料外洩防護。

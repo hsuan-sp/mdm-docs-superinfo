@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["MDM 遷移", "零抹除", "iOS 26", "macOS 26", "風險評估"]
 ---
+
 ## Q: 什麼是「零抹除 MDM 遷移」(Zero-Wipe MDM Migration)？iOS 26 新功能適合學校使用嗎？
 
 ## Answer

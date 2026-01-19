@@ -2,6 +2,7 @@
 term: "Gatekeeper"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 Gatekeeper 是 macOS 的安全防護機制，預設會阻擋未經 Apple 公證 (Notarized) 的軟體執行，以防止惡意程式入侵。IT 人員可透過 MDM 暫時放寬限制，或將內部開發的 App 加入信任清單，避免員工在安裝合規軟體時被系統阻擋。

@@ -2,6 +2,7 @@
 term: "Shared iPad (共用 iPad)"
 category: ["Education","Enrollment"]
 ---
+
 ## 術語定義
 
 Shared iPad（共享 iPad）模式允許一台 iPad 供多位學生輪流登入使用。學生輸入自己的管理式 Apple 帳號後，iPad 會從雲端拉取該學生的作業與資料，並呈現專屬的個人化桌面。登出後，資料會同步回雲端並從本機清除（或暫存），讓下一位學生使用。

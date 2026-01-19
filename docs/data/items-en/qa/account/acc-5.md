@@ -5,6 +5,7 @@ category: "Section 1: Account & Server Management"
 important: false
 tags: ["Federation","Google Workspace","Entra ID","SSO"]
 ---
+
 ## Q: My school uses Google Workspace / Microsoft 365. Can we use these IDs to sign into Apple services?
 
 ## Answer

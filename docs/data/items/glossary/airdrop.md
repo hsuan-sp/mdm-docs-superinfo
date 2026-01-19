@@ -2,6 +2,7 @@
 term: "AirDrop"
 category: ["Core"]
 ---
+
 ## 術語定義
 
 AirDrop 是 Apple 裝置間的近距離無線傳檔技術。利用藍牙發現周邊裝置，再透過 Wi-Fi Direct 點對點高速傳輸。雖然方便，但也可能成為資料外洩管道。企業可透過 MDM 限制 AirDrop 僅限於「管理式聯絡人」或完全停用。

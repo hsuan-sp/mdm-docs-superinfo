@@ -2,6 +2,7 @@
 term: "Touch ID"
 category: ["Hardware"]
 ---
+
 ## 術語定義
 
 Touch ID。Apple 的電容式指紋辨識感測器,整合於 Home 鍵或電源鍵。用於裝置解鎖、Apple Pay 與 App 授權驗證。MDM 可設定某些敏感 App 必須使用 Touch ID 才能開啟。

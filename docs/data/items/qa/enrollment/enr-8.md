@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["故障排除","網路","宣告式管理","描述檔"]
 ---
+
 ## Q: 註冊時出現「設定描述檔安裝失敗 (Profile Installation Failed)」？
 
 ## Answer

@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["帳號驅動註冊","服務偵測",".well-known","BYOD"]
 ---
+
 ## Q: 如何在學校網域環境下，順利進行「帳號驅動註冊」的服務偵測？
 
 ## Answer

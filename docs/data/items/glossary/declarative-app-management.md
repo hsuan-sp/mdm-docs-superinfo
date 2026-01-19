@@ -3,6 +3,7 @@ term: "Declarative App Management (宣告式 App 管理)"
 category: ["DDM"]
 tags: ["DDM", "App 管理", "必要 App", "選用 App", "自動更新"]
 ---
+
 ## 術語定義
 
 iOS 26、iPadOS 26、macOS Tahoe 的 DDM App 管理機制。可部署 App Store App、Custom App、.pkg 套件。支援定義每個 App 的更新行為（強制更新、禁用自動更新、釘選版本），並提供即時安裝狀態回報。

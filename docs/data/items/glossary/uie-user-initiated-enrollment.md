@@ -2,6 +2,7 @@
 term: "UIE (User-Initiated Enrollment)"
 category: ["Enrollment"]
 ---
+
 ## 術語定義
 
 使用者自行啟動註冊。這是透過網頁連結或 QR Code 讓使用者主動下載 MDM 描述檔的註冊方式。缺點是無法達到完整的監管狀態，且使用者可以隨時移除描述檔，因此不適合企業用的公配載具。

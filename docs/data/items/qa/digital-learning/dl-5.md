@@ -5,6 +5,7 @@ category: "第五部分：數位學習精進方案專區 (MOE Digital Learning P
 important: false
 tags: ["資料回報","安全性","Jamf Trust","限制描述檔"]
 ---
+
 ## Q: 學生刪除了 Jamf Trust App，會影響使用率計算嗎？該如何防範？
 
 ## Answer

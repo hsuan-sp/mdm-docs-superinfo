@@ -2,6 +2,7 @@
 term: "Secure Token"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 Secure Token（安全權標）是 macOS 上授予使用者「啟用 FileVault 加密」權限的數位憑證。在現代 macOS 中，必須擁有 Secure Token 的使用者帳號，才能解鎖被 FileVault 加密的硬碟。通常建立的第一個使用者會自動獲得此權限。

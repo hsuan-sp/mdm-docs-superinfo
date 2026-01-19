@@ -5,6 +5,7 @@ category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["藍牙","Wi-Fi","限制描述檔","課堂管理","部署風險"]
 ---
+
 ## Q: 學生上課故意關閉 Wi-Fi 或藍牙來躲避「課堂」監控，該怎麼辦？
 
 ## Answer

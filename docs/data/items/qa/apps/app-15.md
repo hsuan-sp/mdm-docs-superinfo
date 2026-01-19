@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: false
 tags: ["App 更新","課堂管理","更新策略","頻寬控管"]
 ---
+
 ## Q: 【App 更新策略】如何避免 App 在上課時間突然更新，導致斷線或頻寬塞車？
 
 ## Answer

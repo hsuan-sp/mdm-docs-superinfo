@@ -5,6 +5,7 @@ category: "Section 4: Classroom Management & Instructional Tools"
 important: true
 tags: ["App Lock","Single App Mode","Focus","Compliance"]
 ---
+
 ## Q: Can I restrict students to using only one specific app during my lesson?
 
 ## Answer

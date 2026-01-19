@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 important: false
 tags: ["VPP","Token","大量採購"]
 ---
+
 ## Q: Jamf Pro 顯示「VPP Token」即將過期，如何更新？
 
 ## Answer

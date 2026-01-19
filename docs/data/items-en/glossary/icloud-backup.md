@@ -2,6 +2,7 @@
 term: "iCloud Backup"
 category: ["Cloud", "Apple"]
 ---
+
 ## Term Definition
 
 iCloud Backup automatically saves a copy of the student's device data (like app data and settings) to Apple's secure cloud storage. For Managed Apple Accounts, students receive 200GB of storage.

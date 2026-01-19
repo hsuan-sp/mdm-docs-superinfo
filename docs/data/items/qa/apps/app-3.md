@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: false
 tags: ["Self Service","App Store","限制描述檔","自主學習"]
 ---
+
 ## Q: 如果隱藏了 App Store，學生要如何獲取教學所需的 App？
 
 ## Answer

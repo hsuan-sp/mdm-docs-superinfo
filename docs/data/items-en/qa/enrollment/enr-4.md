@@ -5,6 +5,7 @@ category: "Section 2: Device Enrollment & Deployment"
 important: false
 tags: ["BYOD","Privacy","Partitioning","Account-Driven"]
 ---
+
 ## Q: What is the difference between 'User Enrollment' and standard Device Enrollment?
 
 ## Answer

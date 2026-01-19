@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["Wi-Fi 遷移","SSID","災難預防","網路設定"]
 ---
+
 ## Q: 【Wi-Fi 遷移】學校要更換新的無線網路 SSID，如何確保 iPad 不會集體失聯？
 
 ## Answer

@@ -5,6 +5,7 @@ category: "第七部分：Mac 電腦進階管理 (Mac Management)"
 important: false
 tags: ["Mac mini","M4","電腦教室","自動部署","ADE"]
 ---
+
 ## Q: 【硬體部署】學校電腦教室改用 Mac mini (M4) 有什麼優勢？
 
 ## Answer

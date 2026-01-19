@@ -2,6 +2,7 @@
 term: "ADE (Automated Device Enrollment)"
 category: ["Enrollment"]
 ---
+
 ## 術語定義
 
 Automated Device Enrollment (ADE) 是 Apple 企業管理的部署標準（前身為 DEP）。新購裝置的序號會直接由經銷商加入企業的 ABM 帳戶。裝置一開機連網，就會自動下載 MDM 設定檔並強制註冊，使用者無法跳過。這是實現「零接觸部署 (Zero-Touch)」的唯一途徑。

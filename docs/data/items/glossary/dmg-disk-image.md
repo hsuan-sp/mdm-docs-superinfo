@@ -2,6 +2,7 @@
 term: "DMG (Disk Image)"
 category: ["macOS"]
 ---
+
 ## 術語定義
 
 DMG (Disk Image) 是 macOS 特有的磁碟映像檔格式。雙擊開啟後，會在桌面上掛載成一個虛擬的磁碟機，裡面通常包含應用程式。使用者只需將 App 拖曳到「應用程式」資料夾即可完成安裝。這是 macOS 最常見的軟體分發方式。

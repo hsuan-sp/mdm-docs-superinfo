@@ -5,6 +5,7 @@ category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["Shared iPad","多帳號","部署模式","共用 iPad"]
 ---
+
 ## Q: 「共用 iPad (Shared iPad)」跟一般個人 iPad 有什麼不同？適合什麼情境？
 
 ## Answer

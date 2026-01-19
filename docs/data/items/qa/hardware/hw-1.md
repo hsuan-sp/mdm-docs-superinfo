@@ -5,6 +5,7 @@ category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: true
 tags: ["硬體管理","Lightning","USB-C","Apple Pencil","轉接器","充電車"]
 ---
+
 ## Q: 學校同時有 iPad 9 (Lightning) 以前的載具，與 iPad 10 (USB-C) 以後的載具，配件或 Apple Pencil 如何相容？
 
 ## Answer

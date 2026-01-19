@@ -2,6 +2,7 @@
 term: "AppleCare"
 category: ["Hardware", "Apple"]
 ---
+
 ## Term Definition
 
 AppleCare is Apple's specialized service and support plan. For schools, AppleCare for Enterprise or Education provides accidental damage protection, on-site service, and technical support for IT teams.

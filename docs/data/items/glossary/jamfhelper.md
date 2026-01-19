@@ -2,6 +2,7 @@
 term: "jamfHelper"
 category: ["macOS","Jamf"]
 ---
+
 ## 術語定義
 
 jamfHelper。Jamf 內建的輕量級對話框工具。IT 可透過腳本呼叫它顯示訊息視窗、按鈕選項或進度條，用於通知使用者軟體更新、收集使用者輸入或顯示政策執行狀態。

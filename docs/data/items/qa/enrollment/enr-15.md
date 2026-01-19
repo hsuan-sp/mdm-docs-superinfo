@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["密碼鎖死","還原","Apple Configurator","Apple 裝置 App","DFU"]
 ---
+
 ## Q: iPad 顯示「無法使用」或因密碼輸入錯誤太多次鎖死，該如何處理？
 
 ## Answer

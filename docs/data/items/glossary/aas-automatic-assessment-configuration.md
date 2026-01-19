@@ -2,6 +2,7 @@
 term: "AAS (Automatic Assessment Configuration)"
 category: ["Education"]
 ---
+
 ## 術語定義
 
 Automatic Assessment Configuration（自動評量設定）是 iOS/iPadOS 專為高風險標準化測驗設計的鎖定模式。當考生開啟支援此功能的測驗 App 時，系統會自動停用字典、拼字檢查、截圖、錄影及所有推播通知。測驗結束後，裝置會自動解除鎖定並恢復原狀，無需 IT 人員逐台解鎖。

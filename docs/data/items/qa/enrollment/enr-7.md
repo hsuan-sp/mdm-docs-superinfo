@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["PreStage 註冊","App 派送","自動裝置註冊","DDM","故障排除"]
 ---
+
 ## Q: 在 PreStage 註冊期間，為什麼「初次安裝 App」會卡在設定輔助程式畫面？
 
 ## Answer

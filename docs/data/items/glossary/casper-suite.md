@@ -2,6 +2,7 @@
 term: "Casper Suite"
 category: ["Jamf"]
 ---
+
 ## 術語定義
 
 Casper Suite。Jamf Pro 的前身品牌名稱(2002-2015)。早期 Jamf 的管理工具稱為 Casper,後來更名為 Jamf Pro。有些舊文件或討論串仍會使用 Casper 這個稱呼,但指的就是現在的 Jamf Pro。

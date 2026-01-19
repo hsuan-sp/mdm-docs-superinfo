@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 important: true
 tags: ["管理式 Apple 帳號", "資料外洩", "iOS 26", "組織裝置", "WWDC 2025"]
 ---
+
 ## Q: WWDC 2025 宣布的「防止個人 Apple 帳號登入組織裝置」功能如何設定？有什麼限制？
 
 ## Answer

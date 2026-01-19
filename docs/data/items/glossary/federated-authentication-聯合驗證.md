@@ -2,6 +2,7 @@
 term: "Federated Authentication (聯合驗證)"
 category: ["Apple"]
 ---
+
 ## 術語定義
 
 Federated Authentication（聯合驗證）是一種身分整合機制。它將 Apple Business Manager 與企業的 Identity Provider (IdP)（如 Google Workspace 或 Microsoft Entra ID）連結。設定後，員工可以直接使用原本的公司帳號密碼登入「管理式 Apple 帳號」，無需另外記憶一組 Apple ID 密碼。

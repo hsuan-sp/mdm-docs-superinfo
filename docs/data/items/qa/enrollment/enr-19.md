@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["Mac 安全","啟用鎖定","Apple 晶片","Apple Configurator","維修風險"]
 ---
+
 ## Q: 【Mac 啟用鎖定】Mac 電腦維修回來後被鎖住，該如何徹底解決？
 
 ## Answer

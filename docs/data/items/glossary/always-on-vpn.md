@@ -2,6 +2,7 @@
 term: "Always-on VPN"
 category: ["Network"]
 ---
+
 ## 術語定義
 
 Always-on VPN（全時 VPN）是一種強制性的網路安全策略。裝置偵測到網路連線時，會自動在背景建立 VPN 加密通道連回企業內網。若連線失敗，甚至可設定切斷所有網路流量（Lockdown），確保資料絕不會在未加密的公用網路上傳輸。

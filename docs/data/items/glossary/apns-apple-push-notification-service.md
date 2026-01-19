@@ -2,6 +2,7 @@
 term: "APNs (Apple Push Notification service)"
 category: ["Apple"]
 ---
+
 ## 術語定義
 
 Apple Push Notification service (APNs) 是 MDM 傳送指令的傳令兵。MDM 伺服器無法直接控制裝置，必須發送訊號給 Apple 的 APNs 伺服器，再由 APNs「喚醒」裝置向 MDM 報到並領取任務。若 APNs 連線中斷，MDM 將完全無法管理裝置。

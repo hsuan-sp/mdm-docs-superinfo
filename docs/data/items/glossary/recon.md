@@ -2,6 +2,7 @@
 term: "Recon"
 category: ["Jamf","macOS"]
 ---
+
 ## 術語定義
 
 Recon。`Jamf recon`指令的簡稱,是 Jamf binary 最常用的指令之一。執行後會立即收集 Mac 的最新清單資訊(硬體規格、已安裝軟體、使用者資料、Extension Attribute 等)並回傳至 Jamf Pro 伺服器。故障排除時的第一步驟。

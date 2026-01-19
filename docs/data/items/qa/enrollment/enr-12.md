@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["共享 iPad","管理式 Apple 帳號","PreStage 註冊","多人使用"]
 ---
+
 ## Q: 什麼是「共享 iPad (Shared iPad)」？如何讓多位學生共用同一台裝置且保有個人資料？
 
 ## Answer

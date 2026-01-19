@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: false
 tags: ["App 更新","裝置型分派","自動更新","DDM"]
 ---
+
 ## Q: 更新 App 時，需要學生的 Apple 帳號密碼嗎？如何實現靜默更新？
 
 ## Answer

@@ -5,6 +5,7 @@ category: "第七部分：Mac 電腦進階管理 (Mac Management)"
 important: false
 tags: ["軟體派送","App Installers","PKG","自動更新"]
 ---
+
 ## Q: 如何派送非 App Store 的軟體（如 Chrome, Adobe, Office）？
 
 ## Answer

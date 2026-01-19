@@ -5,6 +5,7 @@ category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["網頁導航","Safari","網站過濾","故障排除"]
 ---
+
 ## Q: 為什麼老師發送網頁導航，學生的 iPad 卻沒反應或卡住？
 
 ## Answer

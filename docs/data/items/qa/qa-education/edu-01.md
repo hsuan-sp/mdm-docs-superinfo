@@ -5,6 +5,7 @@ category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: true
 tags: ["精進方案","VPN","Jamf Trust","網路過濾","使用率資料回傳"]
 ---
+
 ## Q: iPadOS 17 以上沒有顯示 VPN 圖示，這樣網路過濾或是使用率資料回傳還有在作用嗎？
 
 ## Answer

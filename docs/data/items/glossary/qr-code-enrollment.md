@@ -2,6 +2,7 @@
 term: "QR Code Enrollment"
 category: ["Enrollment"]
 ---
+
 ## 術語定義
 
 QR Code Enrollment（QR Code 註冊）。透過掃描 QR Code 快速完成 MDM 註冊的方式。QR Code 內含 MDM 伺服器網址與憑證，裝置掃描後自動下載描述檔並註冊，簡化手動輸入流程。

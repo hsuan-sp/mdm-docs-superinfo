@@ -5,6 +5,7 @@ category: "Section 2: Device Enrollment & Deployment"
 important: true
 tags: ["Supervised","Management Levels","ADE"]
 ---
+
 ## Q: What is 'Supervised Mode'? Why is it essential for school-owned devices?
 
 ## Answer

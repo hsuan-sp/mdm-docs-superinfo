@@ -5,6 +5,7 @@ category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["Platform SSO", "無密碼", "資安規範", "教育部要求", "身分驗證"]
 ---
+
 ## Q: 【資安稽核】如何利用 PSSO 實現「開機即登入」，並自動滿足教育部對資安強密碼之要求？
 
 ## Answer

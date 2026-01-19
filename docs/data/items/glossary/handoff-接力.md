@@ -2,6 +2,7 @@
 term: "Handoff（接力）"
 category: ["Apple"]
 ---
+
 ## 術語定義
 
 Handoff（接力）是 Continuity 的核心功能之一，讓使用者可在一台裝置上開始工作，然後無縫蠍接到另一台裝置繼續。例如在 iPhone 上寫到一半的 Email，可在 Mac 的 Dock 上看到圖示，點擊即可繼續編輯。需在同一 Apple ID 且藍芽/Wi-Fi 開啟。

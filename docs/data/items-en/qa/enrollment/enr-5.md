@@ -5,6 +5,7 @@ category: "Section 2: Device Enrollment & Deployment"
 important: false
 tags: ["Account-Driven","Service Discovery",".well-known","Technical Setup"]
 ---
+
 ## Q: How do we set up 'Service Discovery' for Account-Driven Enrollment on the campus network?
 
 ## Answer

@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: false
 tags: ["TestFlight","App Store Connect","管理式 Apple 帳號","服務存取"]
 ---
+
 ## Q: 【TestFlight】可以讓老師使用「管理式 Apple 帳號」測試校內開發的 Beta 版 App 嗎？
 
 ## Answer

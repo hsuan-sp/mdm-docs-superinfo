@@ -2,6 +2,7 @@
 term: "PreStage Enrollment"
 category: ["Enrollment", "Jamf"]
 ---
+
 ## Term Definition
 
 PreStage Enrollment is a Jamf Pro feature used to customize the initial setup experience for Apple devices. It allows IT to determine which setup screens a student sees (like Siri, Apple Pay, or Touch ID) and ensures the device is automatically organized into the correct department or grade level.

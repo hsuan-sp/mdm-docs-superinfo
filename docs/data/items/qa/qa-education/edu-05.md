@@ -5,6 +5,7 @@ category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["效能","故障排除","變慢"]
 ---
+
 ## Q: 覺得平板變慢、卡卡的，是不是壞掉了？該怎麼處理？
 
 ## Answer

@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["維修","裝置替換","ADE","自動裝置註冊"]
 ---
+
 ## Q: 【維修 SOP】廠商送回來的維修替換機，如何快速恢復原本的教學設定？
 
 ## Answer

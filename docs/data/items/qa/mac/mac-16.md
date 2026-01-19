@@ -5,6 +5,7 @@ category: "第七部分：Mac 電腦進階管理 (Mac Management)"
 important: false
 tags: ["macOS 15","iPhone Mirroring","隱私","限制","DLP"]
 ---
+
 ## Q: 【Sequoia 新功能】如何管理或禁用「iPhone 鏡像輸出 (iPhone Mirroring)」？
 
 ## Answer

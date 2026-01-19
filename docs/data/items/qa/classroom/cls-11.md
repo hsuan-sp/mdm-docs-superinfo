@@ -5,6 +5,7 @@ category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: true
 tags: ["MAC 位址","專用 Wi-Fi 位址","隱私功能","網路管理"]
 ---
+
 ## Q: 為什麼 iPadOS 17 以後，網管反應抓不到裝置的真實 MAC 位址？(專用 Wi-Fi 位址)
 
 ## Answer

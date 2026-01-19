@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["BYOD","隱私","註冊模式","帳號驅動"]
 ---
+
 ## Q: 「使用者註冊 (User Enrollment)」與一般的裝置註冊有何不同？
 
 ## Answer

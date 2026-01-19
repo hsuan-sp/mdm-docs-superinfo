@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: false
 tags: ["macOS 26", "Package", "DDM", ".pkg", "Jamf Policy"]
 ---
+
 ## Q: macOS 26 的「宣告式 .pkg 部署」如何使用？與傳統 Jamf Policy 有何不同？
 
 ## Answer

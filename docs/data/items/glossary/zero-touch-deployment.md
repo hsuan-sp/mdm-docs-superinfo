@@ -2,6 +2,7 @@
 term: "Zero-Touch Deployment"
 category: ["Enrollment"]
 ---
+
 ## 術語定義
 
 Zero Touch Deployment（零接觸部署）是指完全無需 IT 人員手動設定，新裝置從拆封那一刻起，只要連上網路，就會自動依據 ABM 與 MDM 的設定完成所有設定。這是現代化 IT 管理的最高境界。

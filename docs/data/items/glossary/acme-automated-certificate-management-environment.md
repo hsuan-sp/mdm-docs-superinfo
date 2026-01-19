@@ -2,6 +2,7 @@
 term: "ACME (Automated Certificate Management Environment)"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 Automated Certificate Management Environment (ACME) 是一種自動化憑證管理協定。它能讓裝置自動向憑證中心申請、驗證並更新數位憑證，無需人工介入。在 MDM 中，ACME 正逐漸取代舊有的 SCEP 協定，用來確保裝置的身分憑證永遠有效。

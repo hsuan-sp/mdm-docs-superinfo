@@ -5,6 +5,7 @@ category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: true
 tags: ["電池保養","長期存放","深度放電","暑假作業","鋰離子電池"]
 ---
+
 ## Q: 寒暑假長期不使用，平板該如何保存電池才不會損壞？
 
 ## Answer

@@ -2,6 +2,7 @@
 term: "Accessibility Features（輔助使用功能）"
 category: ["Apple"]
 ---
+
 ## 術語定義
 
 Accessibility Features（輔助使用功能）是 Apple 內建於 iOS/iPadOS/macOS 的無障礙工具集，包含 VoiceOver（語音朗讀）、放大鏡、語音控制、切換控制等。這些功能讓視障、聽障或肢體障礙使用者也能順暢操作裝置。MDM 可預先啟用或鎖定特定輔助功能設定。

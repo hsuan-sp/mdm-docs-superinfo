@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: true
 tags: ["故障排除","App 安裝","VPP","DDM"]
 ---
+
 ## Q: iPad 上的 App 一直顯示「等待中 (Waiting)」或無法安裝，如何排除？
 
 ## Answer

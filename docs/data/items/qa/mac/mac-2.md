@@ -5,6 +5,7 @@ category: "第七部分：Mac 電腦進階管理 (Mac Management)"
 important: false
 tags: ["帳號權限","LAPS","資安","Privileges","最小權限原則"]
 ---
+
 ## Q: 如何管理 Mac 的本機管理者權限 (Local Admin)？
 
 ## Answer

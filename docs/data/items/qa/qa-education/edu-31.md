@@ -5,6 +5,7 @@ category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: true
 tags: ["教育部版", "自購版", "權限差異", "功能銜接", "資訊組長"]
 ---
+
 ## Q: 「教育部版 Jamf Pro」與「校方自購版」有什麼不同？可以互通嗎？
 
 ## Answer

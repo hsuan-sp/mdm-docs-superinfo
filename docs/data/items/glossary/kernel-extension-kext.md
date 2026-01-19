@@ -2,6 +2,7 @@
 term: "Kernel Extension (Kext)"
 category: ["Core"]
 ---
+
 ## 術語定義
 
 Kernel Extension (Kext) 是 macOS 的核心擴充功能（類似 Windows 的驅動程式）。因為 Kext 權限極高，若有漏洞會造成嚴重資安風險，因此 Apple 正逐步用較安全的 System Extension 取代它。現在安裝 Kext 需要在復原模式下降低安全性才能執行。

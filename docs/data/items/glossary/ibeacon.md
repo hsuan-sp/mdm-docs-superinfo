@@ -2,6 +2,7 @@
 term: "iBeacon"
 category: ["Hardware"]
 ---
+
 ## 術語定義
 
 iBeacon 是 Apple 的藍牙低功耗 (BLE) 定位技術。學校可在教室佈署 iBeacon 發射器，當學生的 iPad 偵測到特定訊號時，MDM 就能判斷裝置位置並自動觸發動作，例如：「進入圖書館自動靜音」或「進入教室自動開啟課本 App」。

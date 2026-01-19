@@ -5,6 +5,7 @@ category: "Section 8: Education Scenarios & FAQ"
 important: true
 tags: ["MOE Project","VPN","Jamf Trust","Content Filtering","Compliance"]
 ---
+
 ## Q: The VPN icon is missing on iPadOS. Are network filtering and usage reporting still working?
 
 ## Answer

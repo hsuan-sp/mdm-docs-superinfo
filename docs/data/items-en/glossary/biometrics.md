@@ -2,6 +2,7 @@
 term: "Face ID / Touch ID"
 category: ["Security", "Hardware"]
 ---
+
 ## Term Definition
 
 Face ID and Touch ID are biometric authentication technologies. They allow students and staff to securely unlock their devices or authorize app installations using their face or fingerprint, tied to the Secure Enclave on the chip.

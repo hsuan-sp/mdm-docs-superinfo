@@ -5,6 +5,7 @@ category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["Apple Pencil","藍牙","硬體相容性","故障排除"]
 ---
+
 ## Q: 【實務排錯】Apple Pencil 無法配對或寫不出字，該如何排除？
 
 ## Answer

@@ -5,6 +5,7 @@ category: "第七部分：Mac 電腦進階管理 (Mac Management)"
 important: false
 tags: ["重置","EACS","抹除所有內容","電腦教室","Imaging"]
 ---
+
 ## Q: Mac 電腦教室如何像還原卡一樣，快速清除重置 (Wipe)？
 
 ## Answer

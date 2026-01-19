@@ -2,6 +2,7 @@
 term: "Certificate Authority (CA)"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 Certificate Authority (CA) 是負責簽發與管理數位憑證的可信第三方機構。裝置必須先安裝並信任 CA 的「根憑證 (Root Certificate)」，才會信任由該 CA 簽發的所有子憑證。企業通常會架設內部 CA 來發放 Wi-Fi 或 VPN 憑證。

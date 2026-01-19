@@ -2,6 +2,7 @@
 term: "Configuration Profile"
 category: ["Core"]
 ---
+
 ## Term Definition
 
 A Configuration Profile is a digital file containing a set of instructions for the device. These files define settings such as Wi-Fi passwords, email accounts, app restrictions (e.g., disabling the camera), and security requirements (e.g., forcing a passcode).

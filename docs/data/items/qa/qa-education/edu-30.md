@@ -5,6 +5,7 @@ category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: true
 tags: ["斷網維運", "備援方案", "離線使用", "網路不穩"]
 ---
+
 ## Q: 學校 Wi-Fi 斷網或不穩定時，MDM 管理的 iPad 還能上課嗎？備援方案為何？
 
 ## Answer

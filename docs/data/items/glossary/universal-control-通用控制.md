@@ -2,6 +2,7 @@
 term: "Universal Control（通用控制）"
 category: ["Apple","macOS"]
 ---
+
 ## 術語定義
 
 Universal Control（通用控制）是 Apple 的一項接續互通技術。它允許使用者只需使用一組滑鼠與鍵盤，即可無縫操控放置在旁邊的多台 Mac 或 iPad。指標能跨越螢幕邊界，檔案也能直接跨裝置拖放。MDM 可管理此功能，以符合特定的資安隔離需求。

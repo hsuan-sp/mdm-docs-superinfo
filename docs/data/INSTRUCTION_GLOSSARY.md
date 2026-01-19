@@ -263,24 +263,28 @@ Liquid Glass 是 Apple 於 2025 年（系統版本 26）推出的全新視覺設
 **每次撰寫新術語前，請先查證以下資源**：
 
 1. **Apple Platform Deployment Guide**（最權威）
- * 網址：https://support.apple.com/guide/deployment/welcome/web
- * 更新頻率：每次 macOS/iOS 重大更新後
- * 查看：「What's New」章節
- * 確認最新系統版本號
+
+* 網址：https://support.apple.com/guide/deployment/welcome/web
+* 更新頻率：每次 macOS/iOS 重大更新後
+* 查看：「What's New」章節
+* 確認最新系統版本號
 
 1. **Apple Developer Release Notes**
- * iOS：https://developer.apple.com/documentation/iOS-iPadOS-release-notes
- * macOS：https://developer.apple.com/documentation/macOS-release-notes
- * 查看：Beta 版本功能預告
+
+* iOS：https://developer.apple.com/documentation/iOS-iPadOS-release-notes
+* macOS：https://developer.apple.com/documentation/macOS-release-notes
+* 查看：Beta 版本功能預告
 
 1. **Jamf Pro 官方繁中文件**
- * 網址：https://learn.Jamf.com/zh-TW/
- * 搜尋：版本號 + 功能名稱
- * 確認：Jamf Pro 是否已支援該功能
+
+* 網址：https://learn.Jamf.com/zh-TW/
+* 搜尋：版本號 + 功能名稱
+* 確認：Jamf Pro 是否已支援該功能
 
 1. **Apple School Manager / Business Manager 更新日誌**
- * 網址：https://support.apple.com/guide/apple-school-manager/whats-new/web
- * 查看：ASM 新功能與 API 變更
+
+* 網址：https://support.apple.com/guide/apple-school-manager/whats-new/web
+* 查看：ASM 新功能與 API 變更
 
 ## 9.3 版本號查證流程
 

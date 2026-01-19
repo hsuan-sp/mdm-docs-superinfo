@@ -2,6 +2,7 @@
 term: "Private Relay (私密轉送)"
 category: ["Security","Apple"]
 ---
+
 ## 術語定義
 
 iCloud Private Relay（私密轉送）是 Apple 提供給 iCloud+ 使用者的隱私服務。它會將 Safari 的瀏覽流量加密並經過兩次轉送，隱藏使用者的真實 IP。這可能會導致企業網管無法識別流量來源，因此大多數學校網路會阻擋此功能。

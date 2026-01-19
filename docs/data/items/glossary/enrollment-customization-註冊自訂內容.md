@@ -2,6 +2,7 @@
 term: "Enrollment Customization (註冊自訂內容)"
 category: ["Enrollment","Apple"]
 ---
+
 ## 術語定義
 
 Enrollment Customization 是在自動裝置註冊 (ADE) 過程中顯示的自訂介面。它可包含歡迎畫面、使用合約、或整合第三方身分驗證 (現代化認證)。這讓組織能在裝置設定初期就傳達品牌訊息與法律規範，並確保使用者身分正確。

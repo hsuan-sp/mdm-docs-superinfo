@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["手動註冊","帳號驅動註冊","受監管","Apple Configurator"]
 ---
+
 ## Q: 可以手動安裝描述檔來註冊嗎？手動與自動註冊有何差別？
 
 ## Answer

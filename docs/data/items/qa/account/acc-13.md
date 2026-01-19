@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 important: false
 tags: ["密碼重置","ASM","管理員操作"]
 ---
+
 ## Q: 【自助重設】忘記管理式 Apple 帳號密碼，可以自己重置嗎？
 
 ## Answer

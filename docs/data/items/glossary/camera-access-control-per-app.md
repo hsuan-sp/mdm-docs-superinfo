@@ -3,6 +3,7 @@ term: "Camera Access Control per App (個別 App 相機存取控制)"
 category: ["Privacy"]
 tags: ["相機權限", "隱私", "allowedCameraRestrictionBundleIDs", "個別 App"]
 ---
+
 ## 術語定義
 
 iOS 26/iPadOS 26 新增的 MDM 金鑰 `allowedCameraRestrictionBundleIDs`，可針對個別 App 授予或拒絕相機存取權限，比全域相機限制更精細。

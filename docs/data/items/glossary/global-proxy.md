@@ -2,6 +2,7 @@
 term: "Global Proxy"
 category: ["Network"]
 ---
+
 ## 術語定義
 
 Global HTTP Proxy（全域 HTTP 代理）是強制全機流量轉導的設定。啟用後，裝置所有上網流量（HTTP/HTTPS）都會先經過指定的代理伺服器 (Proxy Server) 過濾與紀錄。這通常用於校園網路的內容過濾（如過濾色情網站），但也可能導致部分 App 無法連線。

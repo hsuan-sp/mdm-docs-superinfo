@@ -5,6 +5,7 @@ category: "第五部分：數位學習精進方案專區 (MOE Digital Learning P
 important: false
 tags: ["iCloud","私密轉送","精進方案","政策解惑"]
 ---
+
 ## Q: 為什麼 iPad 的「iCloud 私密轉送」被強制關閉且無法開啟？這會影響隱私嗎？
 
 ## Answer

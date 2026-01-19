@@ -2,6 +2,7 @@
 term: "Activation Lock (啟用鎖定)"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 Activation Lock（啟用鎖定）是 Apple 的防盜機制，與「尋找 (Find My)」功能綁定。重置裝置後，必須輸入原使用者的 Apple ID 密碼才能啟用。這對企業是雙面刃：能防盜，但若員工離職未登出，裝置將無法給下一人使用。企業需透過 MDM 的 Activation Lock Bypass Code 來解決此問題。

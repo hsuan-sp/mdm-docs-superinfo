@@ -3,6 +3,7 @@ term: "Liquid Glass (液態玻璃設計)"
 category: ["Core"]
 tags: ["Liquid Glass", "介面設計", "iOS 26", "macOS Tahoe", "visionOS"]
 ---
+
 ## 術語定義
 
 Liquid Glass 是 Apple 於 2025 年（系統版本 26）推出的全新視覺設計語言，靈感來自 visionOS。特色包括透明度增強、動態反射效果、以及流暢的視覺層次感。iPadOS 26 與 macOS Tahoe 全面採用此設計，鎖定畫面、應用程式圖示、資料夾圖示都展現玻璃質感。

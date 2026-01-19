@@ -2,6 +2,7 @@
 term: "Screen Time"
 category: ["Core", "Security"]
 ---
+
 ## Term Definition
 
 Screen Time provides insights into device usage and allows for the setting of limits on specific apps or websites. For school-owned devices, MDM can manage these settings to ensure students remain focused during school hours.

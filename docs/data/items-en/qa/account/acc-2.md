@@ -5,6 +5,7 @@ category: "Section 1: Account & Server Management"
 important: true
 tags: ["APNs","Push Certificate","Maintenance"]
 ---
+
 ## Q: What happens if our APNs Push Certificate expires? How do we renew it?
 
 ## Answer

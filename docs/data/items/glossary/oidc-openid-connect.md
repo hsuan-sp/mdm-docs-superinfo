@@ -2,6 +2,7 @@
 term: "OIDC (OpenID Connect)"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 OpenID Connect。基於 OAuth 2.0 的新一代身分認證協定。Jamf Connect 與現代 SSO 登入流程大多採用此標準。它比傳統的 LDAP 更安全，支援多因素驗證 (MFA)，且傳輸的是 Token 而非密碼。

@@ -2,6 +2,7 @@
 term: "PPPC (Privacy Preferences Policy Control)"
 category: ["Security","macOS"]
 ---
+
 ## 術語定義
 
 Privacy Preferences Policy Control (PPPC) 允許 MDM 預先授權應用程式存取敏感資料（如相機、麥克風、桌面檔案）。這能避免使用者在使用公司派發的軟體時，頻繁跳出「是否允許存取」的擾人視窗。

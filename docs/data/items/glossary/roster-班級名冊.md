@@ -2,6 +2,7 @@
 term: "Roster (班級名冊)"
 category: ["Education"]
 ---
+
 ## 術語定義
 
 班級名冊。在教育環境中，ASM 可透過 SFTP 或手動方式匯入學生與教師的班級資料（CSV 格式）。這些資料會自動同步到 Apple Classroom App，讓老師的 iPad 一開啟課堂 App 就能看到正確的學生名單。

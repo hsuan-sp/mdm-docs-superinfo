@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: false
 tags: ["DDM","App 部署","狀態監控","新技術"]
 ---
+
 ## Q: 新架構：什麼是「宣告式 App 管理 (Declarative App Management)」？
 
 ## Answer

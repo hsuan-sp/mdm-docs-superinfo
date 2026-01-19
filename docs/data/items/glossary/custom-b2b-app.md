@@ -2,6 +2,7 @@
 term: "Custom B2B App"
 category: ["Apps"]
 ---
+
 ## 術語定義
 
 Custom B2B App（自訂企業 App）是企業開發並透過 VPP 私密發佈的應用程式。這些 App 不會在公開的 App Store 上架，僅限特定企業透過 ABM 購買並分發給員工使用，適合部署內部專用的業務工具。

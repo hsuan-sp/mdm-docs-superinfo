@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: false
 tags: ["Procreate","App 採購","VPP","通用購買","退款"]
 ---
+
 ## Q: 【番外篇-實務採購常見狀況】以 Procreate 與 Procreate Pocket 為例，這兩者有什麼差別？學校買錯了怎麼辦？
 
 ## Answer

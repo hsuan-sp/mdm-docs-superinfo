@@ -3,6 +3,7 @@ term: "AirDrop Codes (AirDrop 代碼)"
 category: ["Network"]
 tags: ["AirDrop", "代碼", "隱私", "iOS 26.2", "檔案分享"]
 ---
+
 ## 術語定義
 
 iOS 26.2 新增的 AirDrop 安全功能。使用者可產生一次性代碼（有效期 30 天），與陌生人分享檔案時需輸入此代碼驗證，增加隱私保護層。同時可管理「已知 AirDrop 聯絡人」清單。

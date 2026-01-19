@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 important: true
 tags: ["憑證過期","Apple 課堂","教育描述檔"]
 ---
+
 ## Q: 【憑證陷阱】Apple 課堂突然全校失靈，顯示「描述檔無效」？
 
 ## Answer

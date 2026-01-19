@@ -5,6 +5,7 @@ category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["資安稽核","NIST","規範"]
 ---
+
 ## Q: 新要求：教育部資安稽核要求符合 NIST 標準，MDM 該如何配合？
 
 **校園載具需落實教育部要求的 NIST（美國國家標準暨技術研究院）800-63 數位身分準則，確保裝置安全與資料隱私。**

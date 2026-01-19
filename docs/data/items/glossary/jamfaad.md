@@ -2,6 +2,7 @@
 term: "JamfAAD"
 category: ["Jamf","Security"]
 ---
+
 ## 術語定義
 
 JamfAAD 是 Jamf Pro 內建於 macOS 的背景執行程序，專門負責處理與 Microsoft Azure AD (Entra ID) 的註冊與合規性驗證。當使用者需要存取受保護的公司資源（如 Office 365）時，JamfAAD 會負責向微軟證明「這台電腦是合規的公司電腦」。

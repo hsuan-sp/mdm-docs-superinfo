@@ -2,6 +2,7 @@
 term: "Find My（尋找）"
 category: ["Apple","Security"]
 ---
+
 ## 術語定義
 
 Find My（尋找）是 Apple 的裝置追蹤服務，可在地圖上定位裝置、播放聲音、顯示遊失訊息或遠端清除資料。MDM 可透過 Lost Mode（進階版）鎖定裝置並顯示聯絡資訊。對於受監管裝置，MDM 可強制啟用 Find My。

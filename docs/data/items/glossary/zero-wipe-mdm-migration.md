@@ -3,6 +3,7 @@ term: "Zero-Wipe MDM Migration (零抹除 MDM 遷移)"
 category: ["MDM"]
 tags: ["MDM 遷移", "零抹除", "ABM", "ASM", "裝置轉移"]
 ---
+
 ## 術語定義
 
 iOS 26、iPadOS 26、macOS Tahoe 支援的 MDM 遷移功能。透過 Apple Business Manager (ABM) 或 Apple School Manager (ASM)，可將裝置從舊 MDM 遷移至新 MDM，無需抹除資料。保留使用者資料與管理式 App，但仍需重新設定描述檔。

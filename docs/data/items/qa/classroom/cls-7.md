@@ -5,6 +5,7 @@ category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["指令延遲","網路環境","藍牙","使用者隔離"]
 ---
+
 ## Q: 老師端 iPad 一直顯示「等待裝置...」或「離線」，指令發不出去怎麼辦？
 
 ## Answer

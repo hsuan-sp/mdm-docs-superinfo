@@ -5,6 +5,7 @@ category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["iPadOS 26","多工處理","視窗 App","滑動置前","教學效率"]
 ---
+
 ## Q: 如何使用 iPadOS 26.2 的「視窗 App (Window App)」多工處理功能提升教學效率？
 
 ## Answer

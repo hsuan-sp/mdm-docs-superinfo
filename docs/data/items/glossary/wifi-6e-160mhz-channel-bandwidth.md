@@ -3,6 +3,7 @@ term: "Wi-Fi 6E 160MHz Channel Bandwidth (Wi-Fi 6E 160MHz 通道頻寬)"
 category: ["Network"]
 tags: ["Wi-Fi 6E", "160MHz", "網路速度", "iPadOS 26.2", "macOS Tahoe 26.2"]
 ---
+
 ## 術語定義
 
 iPadOS 26.2 與 macOS Tahoe 26.2 的隱藏功能。支援 Wi-Fi 6E 的裝置（如 iPad Pro M2/M4、Mac with Apple Silicon）在 5 GHz 頻段啟用 160 MHz 通道頻寬後，Wi-Fi 速度可翻倍。

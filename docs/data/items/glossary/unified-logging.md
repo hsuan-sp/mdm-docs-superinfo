@@ -2,6 +2,7 @@
 term: "Unified Logging"
 category: ["Core"]
 ---
+
 ## 術語定義
 
 Unified Logging 是 Apple 裝置的統一系統日誌機制。它會收集系統核心與應用程式的運作紀錄。當裝置發生問題時，IT 人員可透過 `log collect` 指令導出這些日誌檔，分析錯誤發生的原因與時間點。

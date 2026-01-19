@@ -2,6 +2,7 @@
 term: "Firmware"
 category: ["Hardware"]
 ---
+
 ## 術語定義
 
 Firmware（韌體）是燒錄在硬體晶片中的底層控制軟體，負責硬體的初始化與基本運作（如 Mac 的 iBoot）。韌體介於硬體與作業系統 (macOS) 之間。Apple 通常會透過系統更新一併升級韌體，以修補底層安全漏洞。

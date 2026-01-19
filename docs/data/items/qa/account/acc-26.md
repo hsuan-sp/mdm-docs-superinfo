@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器設定 (Account & Server)"
 important: false
 tags: ["iCloud+","管理式 Apple 帳號","隱私安全","私密轉送","教育管理"]
 ---
+
 ## Q: 管理式 Apple 帳號的「iCloud+ 功能」（如隱藏電子郵件、私密轉送）在教育環境該如何管理？
 
 ## Answer

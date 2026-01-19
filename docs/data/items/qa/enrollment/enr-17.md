@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["啟用鎖定","Activation Lock","解鎖代碼","Apple 裝置 App"]
 ---
+
 ## Q: 裝置被「啟用鎖定 (Activation Lock)」鎖住了，該如何解除？
 
 ## Answer

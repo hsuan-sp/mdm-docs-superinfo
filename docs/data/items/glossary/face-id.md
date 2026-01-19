@@ -2,6 +2,7 @@
 term: "Face ID"
 category: ["Hardware"]
 ---
+
 ## 術語定義
 
 Face ID 是 Apple 的臉部辨識技術，利用 TrueDepth 相機投射紅外光點建立 3D 臉部模型。它比指紋辨識或平面照片辨識更安全。MDM 可強制要求使用者必須啟用 Face ID 或 Touch ID 才能存取企業 App，作為密碼之外的第二道防線。

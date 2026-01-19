@@ -5,6 +5,7 @@ category: "Section 1: Account & Server Management"
 important: true
 tags: ["ASM","Terms Update"]
 ---
+
 ## Q: The system prompted to agree to 'New Terms and Conditions' when logging into Apple School Manager (ASM). Is this important?
 
 ## Answer

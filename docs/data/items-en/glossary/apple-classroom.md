@@ -2,6 +2,7 @@
 term: "Apple Classroom"
 category: ["Education"]
 ---
+
 ## Term Definition
 
 Apple Classroom is a tool for teachers to manage student iPads in the classroom. It allows teachers to launch apps on every student's device simultaneously, view student screens in real-time, and lock devices into a single app to keep everyone focused on the lesson.

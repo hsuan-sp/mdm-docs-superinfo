@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 important: false
 tags: ["帳號生命週期","畢業離校","資料保留"]
 ---
+
 ## Q: 學生畢業或離校了，我該如何處理他們的管理式 Apple 帳號？
 
 ## Answer

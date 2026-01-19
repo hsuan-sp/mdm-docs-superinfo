@@ -5,6 +5,7 @@ category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["投影","轉接","AirPlay","HDMI"]
 ---
+
 ## Q: 我要如何把 iPad 畫面投影到傳統電視或沒有 Apple TV 的教室？
 
 ## Answer

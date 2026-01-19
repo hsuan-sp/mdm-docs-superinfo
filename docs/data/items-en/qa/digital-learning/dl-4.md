@@ -5,6 +5,7 @@ category: "Section 5: Campus Digital Initiatives & Compliance"
 important: false
 tags: ["Group Management","Automation","Smart Groups","Asset Tracking"]
 ---
+
 ## Q: How do I create Smart Groups specifically for tracking different phases of our hardware rollout?
 
 ## Answer

@@ -2,6 +2,7 @@
 term: "Managed Apple Account"
 category: ["Apple", "Core"]
 ---
+
 ## Term Definition
 
 A Managed Apple Account (formerly Managed Apple ID) is an institutional account created via ASM. Unlike personal Apple IDs, these accounts are owned and controlled by the school. They provide access to 200GB of iCloud storage and collaboration tools but exclude features like purchasing on the App Store or using Apple Pay.

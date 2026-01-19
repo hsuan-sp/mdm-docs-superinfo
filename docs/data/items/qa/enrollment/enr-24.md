@@ -5,6 +5,7 @@ category: "第二部分:裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["Enforcement Deadline", "DDM", "強制執行", "截止日期", "合規"]
 ---
+
 ## Q: 如何設定「強制執行截止日期」(Enforcement Deadline) 確保裝置按時完成 MDM 註冊或系統更新？
 
 ## Answer

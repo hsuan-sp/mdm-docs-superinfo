@@ -2,6 +2,7 @@
 term: "PreStage Enrollment"
 category: ["Enrollment","Jamf"]
 ---
+
 ## 術語定義
 
 PreStage Enrollment 是裝置在開機設定輔助程式 (Setup Assistant) 階段就會套用的部署設定。它決定了使用者開機後會看到哪些設定畫面（如跳過條款頁、跳過 Siri 設定），並可強制裝置在啟用當下立即自動安裝 MDM 描述檔。

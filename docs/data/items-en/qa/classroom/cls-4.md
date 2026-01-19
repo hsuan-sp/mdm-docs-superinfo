@@ -5,6 +5,7 @@ category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["Screen Lock","Classroom Order","Eyes on Me"]
 ---
+
 ## Q: The class is too loud! How do I 'Lock' all student screens at once?
 
 ## Answer

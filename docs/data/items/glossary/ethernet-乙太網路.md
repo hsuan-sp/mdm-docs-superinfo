@@ -2,6 +2,7 @@
 term: "Ethernet（乙太網路）"
 category: ["Network"]
 ---
+
 ## 術語定義
 
 Ethernet 為有線網路連接標準（如 RJ45 接孔）。雖然現代行動裝置多用 Wi-Fi，但在 macOS 部署中，使用乙太網路連接能提供更穩定的傳輸速率與 APNs 連線品質，是 DEP 註冊與大型軟體派送的推薦方式。

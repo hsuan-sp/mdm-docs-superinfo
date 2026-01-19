@@ -3,6 +3,7 @@ term: "Declarative Software Updates (宣告式軟體更新)"
 category: ["DDM"]
 tags: ["DDM", "軟體更新", "2026年強制", "Beta 註冊", "分階段推出"]
 ---
+
 ## 術語定義
 
 Apple 自 2026 年底起強制使用的軟體更新管理方式。傳統 MDM 遠端更新指令將停止支援，所有軟體更新必須透過宣告式裝置管理（DDM）的 Declaration 機制執行。支援遠端註冊 Beta 計畫、分階段推出、Enforcement Deadline 等進階功能。

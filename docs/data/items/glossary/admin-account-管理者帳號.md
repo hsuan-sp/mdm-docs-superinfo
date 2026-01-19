@@ -2,6 +2,7 @@
 term: "Admin Account (管理者帳號)"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 Admin Account（管理者帳號）是 macOS 中擁有最高權限的使用者，可執行安裝軟體、修改系統設定等操作。在受管環境中，為符合資安規範，IT 通常會建立一個隱藏的 Admin 帳號供維護用，並將員工的日常帳號權限降級為標準使用者 (Standard User)。

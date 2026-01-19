@@ -5,6 +5,7 @@ category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["電池","迷思","MDM","耗電"]
 ---
+
 ## Q: 聽說 MDM 很耗電？這是真的嗎？
 
 ## Answer

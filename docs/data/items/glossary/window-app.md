@@ -3,6 +3,7 @@ term: "Window App (視窗化 App)"
 category: ["Core"]
 tags: ["Window App", "多工", "iPadOS 26", "視窗化", "拖放式多工"]
 ---
+
 ## 術語定義
 
 iPadOS 26 引入的視窗化多工系統，允許 iPad 像 Mac 一樣以視窗形式開啟多個 App。使用者可透過拖拉 App 圖示（從 Dock 或 Spotlight）創建分割視圖、滑動置前或獨立視窗。這是 iPad 多工處理的重大革新。

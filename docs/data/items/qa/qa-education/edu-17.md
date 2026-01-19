@@ -5,6 +5,7 @@ category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: true
 tags: ["螢幕錄製","教育限制","控制中心","限制描述檔"]
 ---
+
 ## Q: 【實務排錯】為什麼學生的 iPad 找不到「螢幕錄製」按鈕，或是按鈕是灰色的？
 
 ## Answer

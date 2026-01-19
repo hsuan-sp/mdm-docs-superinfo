@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["Apple Configurator","手動加入 ASM","過渡期"]
 ---
+
 ## Q: 購買的機器沒有出現在 ASM 中，可以用 Apple Configurator 手動加入嗎？
 
 ## Answer

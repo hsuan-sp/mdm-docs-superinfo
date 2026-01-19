@@ -5,6 +5,7 @@ category: "Section 5: Campus Digital Initiatives & Compliance"
 important: true
 tags: ["iPadOS 17","VPN","Jamf Trust","MOE Project","Architecture"]
 ---
+
 ## Q: The VPN icon disappeared after updating to iPadOS 17. Is this normal?
 
 ## Answer

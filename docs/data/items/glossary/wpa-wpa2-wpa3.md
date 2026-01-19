@@ -2,6 +2,7 @@
 term: "WPA / WPA2 / WPA3"
 category: ["Network","Security"]
 ---
+
 ## 術語定義
 
 WPA / WPA 2 / WPA 3 是 Wi-Fi 網路的安全加密標準。企業與校園環境通常採用等級最高的 WPA 2/WPA 3 Enterprise 模式，搭配 802.1X 身份驗證，確保只有授權的裝置與人員能存取網路。

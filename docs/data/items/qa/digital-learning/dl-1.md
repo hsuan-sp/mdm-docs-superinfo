@@ -5,6 +5,7 @@ category: "第五部分：數位學習精進方案專區 (MOE Digital Learning P
 important: true
 tags: ["iPadOS 17","VPN","Jamf Trust","精進方案","架構調整"]
 ---
+
 ## Q: 升級 iPadOS 17 後，螢幕上的 VPN 圖示消失了，這樣正常嗎？
 
 ## Answer

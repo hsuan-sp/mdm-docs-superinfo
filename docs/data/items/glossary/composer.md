@@ -2,6 +2,7 @@
 term: "Composer"
 category: ["macOS","Jamf"]
 ---
+
 ## 術語定義
 
 Composer 是 Jamf 提供的 macOS 軟體封裝工具。IT 人員可用它來監控軟體安裝前後的檔案系統變化 (Snapshot)，將複雜的安裝過程打包成一個標準的 .pkg 或 .dmg 檔案，以便透過 MDM 進行大量部署。

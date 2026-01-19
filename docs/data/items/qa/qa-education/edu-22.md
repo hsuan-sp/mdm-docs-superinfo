@@ -5,6 +5,7 @@ category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["AirDrop", "系統更新", "檔案傳輸", "課堂", "實務操作"]
 ---
+
 ## Q: iOS 26.2 的 AirDrop 代碼機制對課堂檔案分享的實務影響與應對方式
 
 ## Answer

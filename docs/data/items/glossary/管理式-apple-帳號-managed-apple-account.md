@@ -2,6 +2,7 @@
 term: "管理式 Apple 帳號 (Managed Apple Account)"
 category: ["Apple"]
 ---
+
 ## 術語定義
 
 Managed Apple Account（管理式 Apple 帳號）是專為企業與教育機構設計的帳號類型，舊稱 Managed Apple ID。它由組織透過 ABM/ASM 建立與擁有，雖然可用於登入 iCloud 與下載 App，但無法自行購買付費軟體，且組織有權重置密碼與稽核資料。

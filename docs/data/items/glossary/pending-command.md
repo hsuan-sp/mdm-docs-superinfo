@@ -2,6 +2,7 @@
 term: "Pending Command"
 category: ["Core"]
 ---
+
 ## 術語定義
 
 Pending Command（待處理指令）。已發送但裝置尚未執行或回應的 MDM 指令。常見原因為裝置離線、APNs 連線中斷或指令佇列堆積。等待裝置重新連線後會自動執行。

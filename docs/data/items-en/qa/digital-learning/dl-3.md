@@ -5,6 +5,7 @@ category: "Section 5: Campus Digital Initiatives & Compliance"
 important: false
 tags: ["Troubleshooting","Reset","Network","Connection Help"]
 ---
+
 ## Q: How do I perform a 'Reset Network Settings'? What are the risks to my MDM connection?
 
 ## Answer

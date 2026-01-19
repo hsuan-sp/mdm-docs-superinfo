@@ -3,6 +3,7 @@ term: "Network Extension URL Filtering API (網路擴充功能 URL 過濾 API)"
 category: ["Network"]
 tags: ["URL 過濾", "內容過濾", "Network Extension", "隱私保護", "Jamf Safe Internet"]
 ---
+
 ## 術語定義
 
 iOS 26 與 macOS Tahoe 引入的全系統 URL 過濾 API。此 API 讓第三方 App（如 Jamf Safe Internet）能以隱私保護的方式執行系統級 URL 過濾，無需建立傳統 VPN 通道，效能更佳、隱私更好。

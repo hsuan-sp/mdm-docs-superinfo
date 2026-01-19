@@ -5,6 +5,7 @@ category: "Section 6: Hardware & Maintenance"
 important: false
 tags: ["Warranty Policy","VMI","Inspection Standards","Repairs"]
 ---
+
 ## Q: The screen is cracked or the touch response is failing. How is warranty vs. accidental damage determined?
 
 ## Answer

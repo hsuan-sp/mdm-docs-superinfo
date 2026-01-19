@@ -5,6 +5,7 @@ category: "Section 2: Device Enrollment & Deployment"
 important: false
 tags: ["ADE","ASM","Enrollment Failure","Automated Device Enrollment"]
 ---
+
 ## Q: My new iPad didn't show the 'Remote Management' screen during setup. How do I fix this?
 
 ## Answer

@@ -2,6 +2,7 @@
 term: "App Store"
 category: ["Apps"]
 ---
+
 ## 術語定義
 
 App Store 是 Apple 官方的應用程式下載中心。在企業或學校的受監管裝置 (Supervised) 上，IT 人員通常會透過 MDM 完全隱藏 App Store 圖示，禁止使用者自行下載遊戲或娛樂軟體，僅允許透過內部的自強服務 (Self Service) 安裝經由公司審核的 App。

@@ -2,6 +2,7 @@
 term: "Account-Driven Device Enrollment"
 category: ["Enrollment"]
 ---
+
 ## 術語定義
 
 Account-Driven Device Enrollment（帳號驅動裝置註冊）是現代化的 BYOD 註冊方式。使用者只需在「設定」中登入公司的「管理式 Apple 帳號」，系統即會自動引導完成 MDM 註冊。此模式會將公司資料與個人資料嚴格分離（User Enrollment），確保企業只能管理工作資料，無法觸及個人隱私。

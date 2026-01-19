@@ -2,6 +2,7 @@
 term: "Bonjour"
 category: ["Network","Apple"]
 ---
+
 ## 術語定義
 
 Bonjour 是 Apple 開發的零組態網路協定 (Zero Configuration Networking)。它讓 Apple 裝置能自動發現同一區域網路內的印表機 (AirPrint)、投影螢幕 (AirPlay) 和課堂裝置 (Apple Classroom)，完全無需手動設定 IP 位址。

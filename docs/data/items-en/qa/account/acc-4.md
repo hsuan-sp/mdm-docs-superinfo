@@ -5,6 +5,7 @@ category: "Section 1: Account & Server Management"
 important: false
 tags: ["VPP","Token","Volume Purchasing"]
 ---
+
 ## Q: Jamf Pro shows that the 'VPP Token' is about to expire. How do we update it?
 
 ## Answer

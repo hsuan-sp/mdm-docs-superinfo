@@ -2,6 +2,7 @@
 term: "iPhone Mirroring (iPhone 鏡像)"
 category: ["macOS","Security"]
 ---
+
 ## 術語定義
 
 iPhone 鏡像。macOS 15 的新功能，允許在 Mac 螢幕上完全遠端操作 iPhone。MDM 可停用此功能以防止在公用電腦上洩漏個人隱私，或防止透過此管道規避某些 Mac 端的水印或稽核軟體。

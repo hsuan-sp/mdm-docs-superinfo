@@ -2,6 +2,7 @@
 term: "Apple Pencil"
 category: ["Hardware"]
 ---
+
 ## 術語定義
 
 Apple Pencil 是 iPad 專用的主動式觸控筆，支援壓力感應與防手掌誤觸。在教育考試或特定工作場景中，MDM 可透過描述檔停用 Apple Pencil 的連線或特定手勢（如點兩下切換工具），以防止誤操作或作弊。

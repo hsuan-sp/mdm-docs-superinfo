@@ -126,23 +126,27 @@ tags: ["標籤1", "標籤2", "標籤3"]  # 3-6個精確標籤
 參考 `dl-16`、`enr-3`、`app-15` 等優秀範例，每個 Q&A 應包含：
 
 1. **操作步驟**：條列式、可執行的 SOP
- * 使用編號或 bullet points
- * 具體路徑（如「Jamf Pro > Blueprints > Restrictions」）
- * 可檢查的結果（如「若顯示綠色盾牌，即代表...」）
+
+* 使用編號或 bullet points
+* 具體路徑（如「Jamf Pro > Blueprints > Restrictions」）
+* 可檢查的結果（如「若顯示綠色盾牌，即代表...」）
 
 1. **技術原理**：解釋「為什麼」這樣做
- * 底層機制（如「基於 DDM 的 Declaration 機制」）
- * 與其他方案的差異（如傳統 vs. 新方法對比表）
+
+* 底層機制（如「基於 DDM 的 Declaration 機制」）
+* 與其他方案的差異（如傳統 vs. 新方法對比表）
 
 1. **風險提示**：明確警告可能的副作用
- * 操作風險（如「可能導致 Apple Classroom 失靈」）
- * 使用者影響（如「學生會看到...」）
- * 例外狀況（如「Intel Mac 需搭配 T2 晶片」）
+
+* 操作風險（如「可能導致 Apple Classroom 失靈」）
+* 使用者影響（如「學生會看到...」）
+* 例外狀況（如「Intel Mac 需搭配 T2 晶片」）
 
 1. **實務建議**：優化流程與避免陷阱的進階技巧
- * 最佳實務（如「建議分年級段管理」）
- * 溝通策略（如「向家長說明...」）
- * 效率提升（如「可節省約 40 小時工時」）
+
+* 最佳實務（如「建議分年級段管理」）
+* 溝通策略（如「向家長說明...」）
+* 效率提升（如「可節省約 40 小時工時」）
 
 ## 4.4 實例化說明方法
 
@@ -208,11 +212,14 @@ tags: ["Zero-Wipe MDM Migration", "iOS 26", "教育環境", "Return to Service",
 
 1. 先查閱 `MAINTENANCE_INDEX.md` 確認題目未重複
 1. 若新題目與現有題目相似，需調整角度：
- * 現有：「如何設定 Apple Classroom？」
- * 新增：「如何解決 Apple Classroom 連線失敗？」（故障排除角度）
+
+* 現有：「如何設定 Apple Classroom？」
+* 新增：「如何解決 Apple Classroom 連線失敗？」（故障排除角度）
+
 1. 避免矛盾建議：
- * 檢查現有答案的技術建議是否一致
- * 若技術更新，考慮「補充」而非「否定」舊答案
+
+* 檢查現有答案的技術建議是否一致
+* 若技術更新，考慮「補充」而非「否定」舊答案
 
 **精進方案特殊處理**：
 
@@ -344,50 +351,59 @@ iOS 26 最佳化的功能：
 **每次撰寫新 Q&A 前，務必查證以下資源**：
 
 1. **Apple Platform Deployment Guide**（最權威）
- * 網址：https://support.apple.com/guide/deployment/welcome/web
- * 重點查看：「What's New in iOS XX」、「What's New in macOS XX」
- * 確認功能支援的系統版本
+
+* 網址：https://support.apple.com/guide/deployment/welcome/web
+  * 重點查看：「What's New in iOS XX」、「What's New in macOS XX」
+  * 確認功能支援的系統版本
 
 1. **Apple Developer Release Notes**
- * iOS：https://developer.apple.com/documentation/iOS-iPadOS-release-notes
- * macOS：https://developer.apple.com/documentation/macOS-release-notes
- * 查看：Beta 功能、API 變更、已知問題
+
+* iOS：https://developer.apple.com/documentation/iOS-iPadOS-release-notes
+  * macOS：https://developer.apple.com/documentation/macOS-release-notes
+  * 查看：Beta 功能、API 變更、已知問題
 
 1. **Jamf Pro 官方繁中文件**
- * 網址：https://learn.Jamf.com/zh-TW/
- * 確認：Jamf Pro 是否已支援該功能
- * 查看：設定路徑與操作步驟
+
+* 網址：https://learn.Jamf.com/zh-TW/
+  * 確認：Jamf Pro 是否已支援該功能
+  * 查看：設定路徑與操作步驟
 
 1. **Apple School Manager / Business Manager 更新日誌**
- * 網址：https://support.apple.com/guide/apple-school-manager/whats-new/web
- * 確認：ASM 新功能、API 變更、政策調整
+
+* 網址：https://support.apple.com/guide/apple-school-manager/whats-new/web
+  * 確認：ASM 新功能、API 變更、政策調整
 
 1. **台灣教育部公告（針對精進方案相關題目）**
- * 搜尋：「數位學習精進方案」+ 關鍵字
- * 確認：政策是否仍有效（精進方案於 2025 年底結束）
+
+* 搜尋：「數位學習精進方案」+ 關鍵字
+  * 確認：政策是否仍有效（精進方案於 2025 年底結束）
 
 ## 8.3 版本號查證 SOP
 
 **撰寫 Q&A 前，務必執行以下步驟**：
 
 1. **確認當前最新版本**
- * 查詢 Wikipedia「iOS version history」或「macOS version history」
- * 記錄：最新正式版版本號（如：iOS 26.2）
- * 區分：Beta 版本號（如：iOS 26.3 beta 2）
+
+* 查詢 Wikipedia「iOS version history」或「macOS version history」
+  * 記錄：最新正式版版本號（如：iOS 26.2）
+  * 區分：Beta 版本號（如：iOS 26.3 beta 2）
 
 1. **驗證功能存在性與正確性**
- * 在 Apple Platform Deployment Guide 搜尋功能名稱
- * 確認功能支援的系統版本（如「iOS 26 以上」）
- * 確認功能未被標註為「已棄用」或「即將移除」
+
+* 在 Apple Platform Deployment Guide 搜尋功能名稱
+  * 確認功能支援的系統版本（如「iOS 26 以上」）
+  * 確認功能未被標註為「已棄用」或「即將移除」
 
 1. **驗證操作步驟的準確性**
- * 若可能，實際操作確認步驟正確
- * 或查證 Jamf 官方文件的螢幕截圖
- * 確認路徑（如「Blueprints > Restrictions」）在最新版本仍有效
+
+* 若可能，實際操作確認步驟正確
+  * 或查證 Jamf 官方文件的螢幕截圖
+  * 確認路徑（如「Blueprints > Restrictions」）在最新版本仍有效
 
 1. **交叉驗證至少兩個來源**
- * Apple 官方 + Jamf 官方 = 最可靠組合
- * 若資訊衝突，以 Apple 官方為準
+
+* Apple 官方 + Jamf 官方 = 最可靠組合
+  * 若資訊衝突，以 Apple 官方為準
 
 ## 8.4 避免過時資訊的檢查清單
 

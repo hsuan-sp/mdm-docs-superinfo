@@ -2,6 +2,7 @@
 term: "Push Notification (推播通知)"
 category: ["Core","Apple"]
 ---
+
 ## 術語定義
 
 Push Notification（推播通知）是伺服器主動發送訊息給裝置的技術。MDM 透過 Apple 的推播服務 (APNs) 發送「喚醒封包」給裝置，告訴裝置「有新指令了，快來跟伺服器連線」。這是 MDM 即時管理的基礎。

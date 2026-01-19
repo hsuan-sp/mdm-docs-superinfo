@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 important: true
 tags: ["moemdm","教育部","Jamf Pro","架構說明"]
 ---
+
 ## Q: 「moemdm」跟「Jamf Pro」是一樣的東西嗎？為什麼學校需要兩個帳號？
 
 ## Answer

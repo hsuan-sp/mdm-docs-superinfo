@@ -5,6 +5,7 @@ category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["鎖定","比較","Guided Access","單一 App 模式"]
 ---
+
 ## Q: 「引導使用模式 (Guided Access)」跟「單一 App 模式」有什麼不一樣？
 
 ## Answer

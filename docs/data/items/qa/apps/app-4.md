@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: false
 tags: ["VPP","ASM","位置代號","授權管理"]
 ---
+
 ## Q: 大量採購免費 App 時，有哪些容易被忽略的細節？
 
 ## Answer

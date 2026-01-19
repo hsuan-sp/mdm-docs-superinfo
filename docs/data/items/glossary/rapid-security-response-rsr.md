@@ -2,6 +2,7 @@
 term: "Rapid Security Response (RSR)"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 Rapid Security Response (RSR) 是 Apple 用於修補重大安全漏洞的快速更新機制。不同於完整的系統升級 (OS Upgrade)，RSR 檔案較小、安裝速度快，且通常不需要重開機（或僅需快速重啟），讓 IT 能在零日攻擊風險出現時迅速部署防禦。

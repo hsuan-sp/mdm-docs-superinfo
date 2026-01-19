@@ -5,6 +5,7 @@ category: "Section 7: Advanced Mac Management"
 important: false
 tags: ["Privilege Management","LAPS","Security","Standard User"]
 ---
+
 ## Q: How do we manage Local Admin privileges for staff and students on Macs?
 
 ## Answer

@@ -3,6 +3,7 @@ term: "DNS over HTTPS/TLS (DNS 加密協定)"
 category: ["Network"]
 tags: ["DoH", "DoT", "DNS 加密", "隱私", "Jamf Safe Internet"]
 ---
+
 ## 術語定義
 
 加密的 DNS 查詢協定。DoH 使用 HTTPS (Port 443) 加密 DNS 請求，DoT 使用 TLS (Port 853)。可防止 ISP 或中間人監聽 DNS 查詢，保護隱私，但也可能繞過學校 DNS 過濾。

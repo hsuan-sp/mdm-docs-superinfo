@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["描述檔無效","故障排除","抹除裝置","宣告式管理"]
 ---
+
 ## Q: 裝置顯示「描述檔無效」或運作異常緩慢，即使重置也無法解決？
 
 ## Answer

@@ -5,6 +5,7 @@ category: "Section 7: Advanced Mac Management"
 important: false
 tags: ["System Updates","DDM","Nudge","IT Operations"]
 ---
+
 ## Q: How do I force a Mac to perform system updates? Students keep clicking 'Remind Me Later'.
 
 ## Answer

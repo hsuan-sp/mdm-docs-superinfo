@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 important: false
 tags: ["聯合驗證","Google Workspace","Microsoft Entra ID","SSO"]
 ---
+
 ## Q: 我們學校有使用 Google Workspace / Microsoft 365，可以用這些帳號登入 Apple 服務嗎？
 
 ## Answer

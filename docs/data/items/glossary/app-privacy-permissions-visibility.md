@@ -3,6 +3,7 @@ term: "App Privacy Permissions Visibility (App 隱私權限可見度)"
 category: ["Mac"]
 tags: ["隱私權限", "透明度", "PPPC", "系統設定"]
 ---
+
 ## 術語定義
 
 macOS Tahoe 的透明度提升功能。MDM 設定的 App 隱私權限（如螢幕錄製、全磁碟取用）現在會明確顯示在「系統設定 > 隱私權與安全性」，標示為「由組織設定」。

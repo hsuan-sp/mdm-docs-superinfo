@@ -2,6 +2,7 @@
 term: "VLAN"
 category: ["Network"]
 ---
+
 ## 術語定義
 
 Virtual Local Area Network (VLAN) 是在實體網路交換器上切分出的虛擬子網段。學校通常會將「教學用網路」、「行政用網路」與「訪客網路」切分成不同的 VLAN，以隔離廣播封包並提升安全性。

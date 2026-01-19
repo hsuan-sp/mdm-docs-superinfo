@@ -2,6 +2,7 @@
 term: "TestFlight"
 category: ["Apps"]
 ---
+
 ## 術語定義
 
 TestFlight。Apple 官方的 Beta 測試平台。開發者可上傳測試版 App，透過邀請碼分發給內部測試人員或公開測試者。最多可邀請 10,000 名外部測試者，每個測試版有效期 90 天。

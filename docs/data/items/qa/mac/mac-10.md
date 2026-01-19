@@ -5,6 +5,7 @@ category: "第七部分：Mac 電腦進階管理 (Mac Management)"
 important: false
 tags: ["延伸屬性","Extension Attributes","腳本","資產","客製化欄位"]
 ---
+
 ## Q: Jamf Pro 預設的「資產」報告中沒有我要的資訊（如特定檔案版本、最後重開機時間），該如何自訂收集？
 
 ## Answer

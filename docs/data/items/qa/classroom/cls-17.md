@@ -5,6 +5,7 @@ category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["App 刪除","限制描述檔","主畫面管理"]
 ---
+
 ## Q: 如何防止學生自己手動刪除 App？
 
 ## Answer

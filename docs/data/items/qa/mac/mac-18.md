@@ -5,6 +5,7 @@ category: "第七部分：Mac 電腦進階管理 (Mac Management)"
 important: false
 tags: ["啟用鎖定","Activation Lock","ASM","解除鎖定","資產回收"]
 ---
+
 ## Q: 【資產救援】Mac 送修回來或離職交接時被舊 Apple 帳號鎖住 (啟用鎖定)，怎麼辦？
 
 ## Answer

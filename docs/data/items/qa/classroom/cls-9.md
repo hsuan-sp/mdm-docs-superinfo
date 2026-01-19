@@ -5,6 +5,7 @@ category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["裝置設定","省電","自動鎖定","限制描述檔"]
 ---
+
 ## Q: 如何管理學生 iPad 的「螢幕亮度」與「自動鎖定」？
 
 ## Answer

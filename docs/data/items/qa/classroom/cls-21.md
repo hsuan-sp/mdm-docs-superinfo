@@ -5,6 +5,7 @@ category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["AirPlay","Apple TV","畫面分享","教學展示"]
 ---
+
 ## Q: 老師可以強制將學生的畫面投影到 Apple TV 或大螢幕嗎？
 
 ## Answer

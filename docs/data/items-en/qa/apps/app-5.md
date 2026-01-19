@@ -5,6 +5,7 @@ category: "Section 3: App Management & Distribution"
 important: false
 tags: ["Deployment Strategy","Content Caching","Bandwidth Management"]
 ---
+
 ## Q: How do we balance automated app installs with limited school bandwidth?
 
 ## Answer

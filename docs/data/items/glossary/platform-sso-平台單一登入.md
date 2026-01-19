@@ -2,6 +2,7 @@
 term: "Platform SSO (平台單一登入)"
 category: ["Security","macOS"]
 ---
+
 ## 術語定義
 
 Platform SSO 是 macOS 13+ 引入的高階身分驗證功能。它將 Mac 的本機登入帳號與雲端身分提供者 (IdP，如 Microsoft Entra ID) 深度整合。使用者登入 Mac 時，系統會自動在後台完成雲端帳號驗證，實現真正的一鍵登入所有企業資源，且支援密碼即時同步。

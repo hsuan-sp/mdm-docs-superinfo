@@ -2,6 +2,7 @@
 term: "Identity Provider (IdP)"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 Identity Provider (IdP) 是負責管理與驗證使用者身分的雲端服務（如 Microsoft Entra ID、Google Workspace）。MDM 不直接管理帳號，而是透過聯合驗證 (Federation) 把登入請求轉交給 IdP 處理，讓企業能用同一套帳號登入所有系統（SSO）。

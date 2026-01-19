@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["防止取消註冊","受監管","PreStage 註冊","ADE","返回服務"]
 ---
+
 ## Q: 如何防止學生自行移除 MDM 管理描述檔？
 
 ## Answer

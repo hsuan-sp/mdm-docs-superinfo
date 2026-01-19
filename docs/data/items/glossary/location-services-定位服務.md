@@ -2,6 +2,7 @@
 term: "Location Services（定位服務）"
 category: ["Apple","Core"]
 ---
+
 ## 術語定義
 
 Location Services（定位服務）是 Apple 裝置內建的地理位置偵測功能。它結合了 GPS、藍牙、Wi-Fi 熱點與基地台資訊來判斷裝置位置。管理員可透過 MDM 強制開啟此功能，以確保在裝置遺失並進入「遺失模式 (Lost Mode)」時能獲取座標，或設定限制以防止使用者自行關閉。

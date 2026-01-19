@@ -3,6 +3,7 @@ term: "Intel Mac End-of-Support Milestone (Intel Mac 支援終止里程碑)"
 category: ["Mac"]
 tags: ["Intel Mac", "支援終止", "Apple Silicon", "採購規劃", "汰換"]
 ---
+
 ## 術語定義
 
 macOS Tahoe 是最後支援 Intel Mac 的版本。支援的最後一批 Intel Mac 包括 2020 iMac、2019 16" MacBook Pro、2020 13" MacBook Pro (四個 Thunderbolt 3 埠)、2019 Mac Pro。未來 macOS 版本將僅支援 Apple Silicon。

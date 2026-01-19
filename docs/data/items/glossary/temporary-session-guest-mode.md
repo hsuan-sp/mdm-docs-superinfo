@@ -2,6 +2,7 @@
 term: "Temporary Session (Guest Mode)"
 category: ["Education"]
 ---
+
 ## 術語定義
 
 臨時工作階段（訪客模式）。Shared iPad 的一種使用模式。使用者點擊「訪客」即可免帳號登入使用。登出後，所有資料（瀏覽紀錄、下載檔案、App 資料）會被立即清除，確保下一位使用者拿到的是乾淨的裝置。

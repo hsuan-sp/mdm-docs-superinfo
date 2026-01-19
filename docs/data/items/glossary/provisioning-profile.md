@@ -2,6 +2,7 @@
 term: "Provisioning Profile"
 category: ["Apps","Security"]
 ---
+
 ## 術語定義
 
 Provisioning Profile（佈建描述檔）是 Apple 開發者帳號簽署的授權檔案，允許 App 在特定裝置上執行。對於企業內部開發的 App (In-House App)，此檔案必須每年更新一次。若檔案過期，App 將立即無法開啟閃退。

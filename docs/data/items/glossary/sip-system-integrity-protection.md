@@ -2,6 +2,7 @@
 term: "SIP (System Integrity Protection)"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 系統完整性保護。macOS 的核心防護罩。它禁止任何使用者（包含最高權限的 root）修改系統核心檔案與資料夾（如 /System, /usr）。這確保了就算惡意軟體拿到了 root 權限，也無法破壞作業系統的根基。

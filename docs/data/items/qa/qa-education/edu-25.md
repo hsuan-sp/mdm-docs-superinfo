@@ -5,6 +5,7 @@ category: "第八部分：教育場景與教學應用 (Education Scenarios)"
 important: false
 tags: ["精進方案", "2026", "系統升級", "iOS 26", "後續使用"]
 ---
+
 ## Q: 精進方案結束後，學生使用的 iPad 還可以繼續用於學習嗎？系統升級到 iOS 26 會有問題嗎？
 
 ## Answer

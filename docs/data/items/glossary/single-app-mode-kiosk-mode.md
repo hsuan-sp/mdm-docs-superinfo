@@ -2,6 +2,7 @@
 term: "Single App Mode (Kiosk Mode)"
 category: ["Apps"]
 ---
+
 ## 術語定義
 
 Single App Mode（單一 App 模式），俗稱 Kiosk 模式。這是一種將 iPad 或 iPhone 鎖定在「單一個應用程式」無法退出的狀態。常用於博物館導覽、餐廳點餐機或考試專用機，防止使用者跳出畫面去玩遊戲或修改設定。

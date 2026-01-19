@@ -3,6 +3,7 @@ term: "FileVault Unlock over SSH (透過 SSH 解鎖 FileVault)"
 category: ["Mac"]
 tags: ["FileVault", "SSH", "遠端解鎖", "Remote Login"]
 ---
+
 ## 術語定義
 
 macOS Tahoe 的新功能。若 Mac 已啟用「遠端登入 (Remote Login)」且有網路連線，管理員可透過 SSH 遠端解鎖 FileVault 加密的磁碟，無需實體接觸 Mac。

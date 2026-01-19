@@ -5,6 +5,7 @@ category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["備份","備用機","iCloud","資料還原"]
 ---
+
 ## Q: 學生 iPad 故障，臨時借用備用機時，原本的資料還在嗎？
 
 ## Answer

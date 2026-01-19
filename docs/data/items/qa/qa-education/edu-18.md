@@ -5,6 +5,7 @@ category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["DNS","DHCP","網路故障","交叉測試"]
 ---
+
 ## Q: 【網路排除】iPad 顯示已連上 Wi-Fi 也有打勾，但網頁都打不開（顯示無網路連線）？
 
 ## Answer

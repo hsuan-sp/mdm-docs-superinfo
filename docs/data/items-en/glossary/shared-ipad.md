@@ -2,6 +2,7 @@
 term: "Shared iPad"
 category: ["Education", "Enrollment"]
 ---
+
 ## Term Definition
 
 Shared iPad is a technology that allows multiple students to use the same iPad while having their own unique experience. When a student logs in with their Managed Apple Account, their data (like photos and documents) is downloaded from iCloud. When they log out, the data is pushed back to the cloud, allowing the next student to use a clean device.

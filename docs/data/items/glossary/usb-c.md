@@ -2,6 +2,7 @@
 term: "USB-C"
 category: ["Hardware"]
 ---
+
 ## 術語定義
 
 USB Type-C。現今 Apple 全線產品（iPhone 15/16+, iPad, Mac）的通用介面。它支援正反插，且集成了資料傳輸、影音輸出 (DisplayPort) 與雙向高瓦數供電 (PD)。對於管理者而言，這意味著周邊配件與充電器的統一，但也帶來了資料透過隨身碟外洩的風險，需透過 MDM 管控 USB 權限。

@@ -3,6 +3,7 @@ term: "Platform SSO in Setup Assistant (設定輔助程式中的 Platform SSO)"
 category: ["Mac"]
 tags: ["Platform SSO", "Setup Assistant", "ADE", "Secure Enclave", "FileVault"]
 ---
+
 ## 術語定義
 
 macOS Tahoe 的 ADE 增強功能。在自動裝置註冊 (ADE) 期間，Platform SSO 可整合至設定輔助程式，使用者可在初次開機時即用企業帳號登入，Secure Enclave 金鑰驗證可免除密碼輸入，並自動解鎖 FileVault。

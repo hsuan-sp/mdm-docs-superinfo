@@ -5,6 +5,7 @@ category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["共用 iPad","Shared iPad","登出指令","智慧快取"]
 ---
+
 ## Q: 課堂結束後，老師如何一鍵「登出」所有學生的共用 iPad？
 
 ## Answer

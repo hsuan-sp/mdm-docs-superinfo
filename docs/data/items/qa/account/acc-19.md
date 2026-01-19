@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 important: false
 tags: ["Apple Intelligence","服務存取","ASM"]
 ---
+
 ## Q: 如何控管「管理式 Apple 帳號」是否能使用 Apple Intelligence 功能？
 
 ## Answer

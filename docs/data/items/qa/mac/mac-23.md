@@ -5,6 +5,7 @@ category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["iPhone 鏡像輸出", "教室管理", "限制", "macOS 26", "教學端控制"]
 ---
+
 ## Q: 【課室秩序】如何透過 MDM 控管或禁用「iPhone 鏡像輸出」，防止學生在課堂中進行遠端干擾？
 
 ## Answer

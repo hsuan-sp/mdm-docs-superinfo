@@ -2,6 +2,7 @@
 term: "Inventory"
 category: ["Core"]
 ---
+
 ## 術語定義
 
 Inventory（資產清單）是 MDM 資料庫中記錄的所有裝置詳細資訊。每次裝置連線回報 (Inventory Update) 時，都會更新這些資料，包含型號、序號、IP 位址、剩餘電量、已安裝 App 清單等。這是管理者進行決策與分組的基礎。

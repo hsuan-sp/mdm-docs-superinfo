@@ -2,6 +2,7 @@
 term: "Managed Open In"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 管理式開啟 (Managed Open In)。這是一項 DLP (資料外洩防護) 功能。MDM 可設定邊界，禁止「受管 App (如公司 Email)」的文件被「非受管 App (如個人 Line)」開啟。這能有效阻止員工將公司機密檔案轉傳到私人社交軟體。

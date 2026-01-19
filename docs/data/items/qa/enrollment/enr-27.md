@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與自動部署 (Enrollment)"
 important: true
 tags: ["iOS 26","MDM 遷移","Zero-Wipe","資產轉移","Jamf Pro"]
 ---
+
 ## Q: iOS 26 的「零抹除 MDM 遷移」實戰：從教育部 Jamf Pro 轉移至校內自建 MDM 的完整流程
 
 ## Answer

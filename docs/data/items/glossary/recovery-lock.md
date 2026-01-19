@@ -2,6 +2,7 @@
 term: "Recovery Lock"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 復原鎖。這是 Apple Silicon Mac 的關鍵防護機制。它禁止未經授權的使用者透過長按開機鍵進入「復原模式 (Recovery Mode)」來清除電腦或降低安全性設定。要進入復原模式，必須輸入 MDM 設定的一組密碼。

@@ -3,6 +3,7 @@ term: "Drag and Drop Multitasking (拖放式多工)"
 category: ["Core"]
 tags: ["拖放", "多工", "iPadOS 26.2", "Dock", "Spotlight"]
 ---
+
 ## 術語定義
 
 iPadOS 26.2 強化的拖放式多工手勢。使用者可直接從 Dock 或 Spotlight 拖拉 App 圖示，快速建立分割視圖（Split View）、滑動置前（Slide Over）或視窗配置，無需繁瑣的多步驟操作。

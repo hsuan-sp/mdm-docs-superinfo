@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 important: false
 tags: ["密碼重置","ASM","管理式 Apple 帳號"]
 ---
+
 ## Q: 如何重置學生的「管理式 Apple 帳號」密碼？
 
 ## Answer

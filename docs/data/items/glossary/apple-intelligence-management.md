@@ -2,6 +2,7 @@
 term: "Apple Intelligence Management"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 Apple Intelligence Management（Apple Intelligence 管理）是針對 iOS 18+/macOS 15+ 生成式 AI 功能的 MDM 管控選項。企業可限制 AI 是否能分析使用者內容、是否允許資料傳送至私有雲端運算 (PCC)，以防止企業機密被 AI 模型讀取或外洩。

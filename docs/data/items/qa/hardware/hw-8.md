@@ -5,6 +5,7 @@ category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: true
 tags: ["清潔","保養","消毒","酒精","抗油外層"]
 ---
+
 ## Q: 可以用酒精清潔 iPad 螢幕嗎？有沒有損壞風險？
 
 ## Answer

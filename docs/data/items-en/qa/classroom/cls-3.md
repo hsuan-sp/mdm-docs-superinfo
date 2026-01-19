@@ -5,6 +5,7 @@ category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["Web Navigation","Safari","Content Filtering","Troubleshooting"]
 ---
+
 ## Q: Why is the web navigation failing when I try to push a URL to student iPads?
 
 ## Answer

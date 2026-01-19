@@ -2,6 +2,7 @@
 term: "Configuration Profile Removal（描述檔移除）"
 category: ["Core"]
 ---
+
 ## 術語定義
 
 Configuration Profile Removal（描述檔移除）指 MDM 遠端下達移除特定設定描述檔的指令。當描述檔被移除後，由該描述檔安裝的憑證、Wi-Fi 設定、VPN 設定等都會一併刪除。此功能常用於員工離職或裝置回收時的清理作業。

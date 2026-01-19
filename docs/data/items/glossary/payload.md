@@ -2,6 +2,7 @@
 term: "Payload"
 category: ["Core"]
 ---
+
 ## 術語定義
 
 Payload（設定承載）是描述檔 (Profile) 中的最小設定單位。一個 Profile 可以包含多個 Payload，例如一個「Wi-Fi 設定檔」可能包含「Wi-Fi 連線 Payload」與「憑證 Payload」。這是 MDM 組成管理策略的積木。

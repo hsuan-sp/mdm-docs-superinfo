@@ -2,6 +2,7 @@
 term: "Jamf Pro API"
 category: ["Jamf","Other"]
 ---
+
 ## 術語定義
 
 Jamf Pro 提供的 RESTful API 介面。允許開發者和系統管理員使用程式自動化操作 Jamf,如批量建立 Policy、匯入裝置清單、產生自訂報表、觸發遠端指令等。現已全面改用 Jamf Pro API v2,提供更完整的功能和更好的效能。支援各種程式語言整合。

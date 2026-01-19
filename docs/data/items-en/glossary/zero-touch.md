@@ -2,6 +2,7 @@
 term: "Zero-Touch Deployment"
 category: ["Core", "Enrollment"]
 ---
+
 ## Term Definition
 
 Zero-Touch Deployment is a process where devices are shipped directly to teachers or students and automatically configured over-the-air. IT never has to physically touch the box, as ADE and MDM handle the setup remotely.

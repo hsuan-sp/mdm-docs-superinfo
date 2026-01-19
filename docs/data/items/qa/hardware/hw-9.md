@@ -5,6 +5,7 @@ category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: false
 tags: ["鍵盤","聰穎接點","巧控鍵盤","硬體相容性","故障排除"]
 ---
+
 ## Q: 連接聰穎鍵盤或巧控鍵盤 (Smart/Magic Keyboard) 但無反應，如何排除？
 
 ## Answer

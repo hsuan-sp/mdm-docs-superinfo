@@ -5,6 +5,7 @@ category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: true
 tags: ["EACS", "ADE 故障排除", "網路認證", "Terminal 指令", "復原模式"]
 ---
+
 ## Q: 【現場救援】Mac 快速重置 (EACS) 後若自動註冊卡住，有哪些離線恢復與修復技巧？
 
 ## Answer

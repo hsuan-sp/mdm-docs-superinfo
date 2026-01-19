@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 important: false
 tags: ["PSSO","FileVault","macOS 15+","身分驗證"]
 ---
+
 ## Q: 如何結合 Platform SSO (PSSO) 實現 Mac 開機即解鎖 FileVault？
 
 ## Answer

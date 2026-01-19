@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: false
 tags: ["故障排除","授權衝突","管理式 App","裝置型指派"]
 ---
+
 ## Q: 為什麼開啟 App 時，iPad 會跳出要求輸入 Apple 帳號密碼的對話框？
 
 ## Answer

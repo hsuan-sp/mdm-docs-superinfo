@@ -2,6 +2,7 @@
 term: "Content Caching (內容快取)"
 category: ["Network"]
 ---
+
 ## 術語定義
 
 Content Caching（內容快取）是 macOS 內建的頻寬優化服務。開啟此功能的 Mac 會自動暫存已下載的 iCloud 資料、App 或系統更新檔。當同網段的其他裝置需要下載相同內容時，會直接從這台 Mac 抓取，無需佔用對外頻寬，極大提升更新速度。

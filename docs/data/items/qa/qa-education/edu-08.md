@@ -5,6 +5,7 @@ category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["系統更新","穩定性","iOS 更新"]
 ---
+
 ## Q: 收到 iOS 更新通知，我可以馬上更新嗎？還是要等學校通知？
 
 ## Answer

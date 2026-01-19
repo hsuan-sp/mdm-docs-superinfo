@@ -5,6 +5,7 @@ category: "Section 6: Hardware & Maintenance"
 important: true
 tags: ["Battery Health","Storage","Summer Break","Prevention"]
 ---
+
 ## Q: How should we store iPads during the summer break to prevent battery damage?
 
 ## Answer

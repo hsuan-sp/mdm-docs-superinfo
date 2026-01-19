@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 important: false
 tags: ["密碼重置","Jamf Pro","災難復原"]
 ---
+
 ## Q: 忘記 Jamf Pro 的管理員登入密碼怎麼辦？
 
 ## Answer

@@ -2,6 +2,7 @@
 term: "Activation Lock Bypass Code"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 Activation Lock Bypass Code（啟用鎖定略過代碼）是 MDM 自動從受監管裝置 (Supervised) 收集的一組特殊解鎖碼。當遇到員工離職未登出導致的 Activation Lock 鎖死情況時，IT 管理員可輸入此代碼來強制解鎖，無需原使用者的 Apple ID 密碼。

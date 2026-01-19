@@ -5,6 +5,7 @@ category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["Troubleshooting","Bluetooth","Local Network Permissions"]
 ---
+
 ## Q: Troubleshooting: Bluetooth is on, but why does Apple Classroom show the students as 'Offline'?
 
 ## Answer

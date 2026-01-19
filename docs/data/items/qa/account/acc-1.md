@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 important: true
 tags: ["ASM","條款更新"]
 ---
+
 ## Q: 登入 Apple 校務管理 (ASM) 時，系統提示需同意新的條款與約定，這很重要嗎？
 
 ## Answer

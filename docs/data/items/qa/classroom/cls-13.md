@@ -5,6 +5,7 @@ category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["共用 iPad","訪客模式","Shared iPad","圖書館"]
 ---
+
 ## Q: 【共用 iPad】不想要每節課都輸入帳號密碼，有「訪客模式」嗎？
 
 ## Answer

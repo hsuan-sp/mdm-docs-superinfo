@@ -5,6 +5,7 @@ category: "第五部分：數位學習精進方案專區 (MOE Digital Learning P
 important: false
 tags: ["網路","有線連接","Ethernet","Lightning","iPad 9"]
 ---
+
 ## Q: 學校 Wi-Fi 訊號很差，精進方案的 iPad 可以接有線網路 (Ethernet) 嗎？
 
 ## Answer

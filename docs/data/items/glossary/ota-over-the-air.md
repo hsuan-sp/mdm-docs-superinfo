@@ -2,6 +2,7 @@
 term: "OTA (Over-The-Air)"
 category: ["Core"]
 ---
+
 ## 術語定義
 
 Over-the-Air (OTA) 是一種無線傳輸技術，允許裝置透過 Wi-Fi 或行動網路接收系統更新、安裝 App 或接收 MDM 指令。使用者無需將裝置連接電腦與傳輸線，只要連上網，就能自動完成所有維護工作。

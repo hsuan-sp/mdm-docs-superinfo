@@ -5,6 +5,7 @@ category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: false
 tags: ["觸控異常","陀螺儀","加速度計","Ghost Touch","故障排除"]
 ---
+
 ## Q: 螢幕觸控亂跳 (Ghost Touch) 或畫面無法翻轉（自動旋轉異常）如何處理？
 
 ## Answer

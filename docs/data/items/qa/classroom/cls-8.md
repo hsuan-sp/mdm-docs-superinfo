@@ -5,6 +5,7 @@ category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["網路優化","內容快取","頻寬管理","iCloud"]
 ---
+
 ## Q: 全班同時下載教材會讓網路癱瘓嗎？什麼是「內容快取 (Content Caching)」？
 
 ## Answer

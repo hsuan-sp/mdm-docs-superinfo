@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["PreStage", "設定輔助程式", "ADE", "部署加速", "最佳實務"]
 ---
+
 ## Q: PreStage 註冊時可以跳過哪些「設定輔助程式」步驟？教育場域的建議設定為何？
 
 ## Answer

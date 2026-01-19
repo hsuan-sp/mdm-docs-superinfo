@@ -5,6 +5,7 @@ category: "Section 3: App Management & Distribution"
 important: false
 tags: ["VPP","ASM","Location Tokens","Inventory Management"]
 ---
+
 ## Q: What details should we keep in mind when 'purchasing' free apps in bulk?
 
 ## Answer

@@ -5,6 +5,7 @@ category: "Section 8: Education Scenarios & FAQ"
 important: false
 tags: ["Roles","Permissions","Group Policy","Classroom"]
 ---
+
 ## Q: What are the configuration differences between Teacher iPads and Student iPads?
 
 ## Answer
@@ -22,8 +23,8 @@ In Jamf Pro, we use Smart Groups to separate these roles and ensure that the rig
 | **App Installations** | Allowed via Self Service Pro | Managed strictly by IT |
 | **Content Filtering** | Relaxed (Standard Web) | Strict (Child Safety Enforced) |
 | **Apple Classroom** | **Teacher Role** (Controller) | **Student Role** (Managed) |
-| **Jamf Teacher App**| Create Lessons / Clear Passcodes | Receive Lessons |
-| **Zero-Wipe Migration**| Available for data transfer | Restricted to IT staff |
+| **Jamf Teacher App** | Create Lessons / Clear Passcodes | Receive Lessons |
+| **Zero-Wipe Migration** | Available for data transfer | Restricted to IT staff |
 
 ## Implementation in Jamf Pro:
 

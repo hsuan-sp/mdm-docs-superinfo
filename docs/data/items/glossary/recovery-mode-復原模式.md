@@ -2,6 +2,7 @@
 term: "Recovery Mode（復原模式）"
 category: ["Apple","macOS"]
 ---
+
 ## 術語定義
 
 Recovery Mode（復原模式）是 Apple 裝置內建的緊急救援系統。當作業系統無法正常啟動、需要修復磁碟或重新安裝 OS 時，可進入此模式。MDM 支援「復原鎖 (Recovery Lock)」，可設定密碼防止未授權人員進入此模式清除裝置，確保安全性。

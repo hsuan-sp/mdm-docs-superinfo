@@ -2,6 +2,7 @@
 term: "Supervision (受監管)"
 category: ["Core"]
 ---
+
 ## 術語定義
 
 Supervision（監管模式）是 iOS 裝置的最高管理權限狀態。透過 ADE 註冊或 Apple Configurator 處理過的裝置會進入此模式。只有在監管模式下，MDM 才能執行「單一 App 模式」、「網頁內容過濾」或「靜默安裝 App」等進階管理功能。

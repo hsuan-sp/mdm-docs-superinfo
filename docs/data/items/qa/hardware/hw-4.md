@@ -5,6 +5,7 @@ category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: false
 tags: ["維修判定","保固規範","VMI","精進方案報價","合約到期"]
 ---
+
 ## Q: 螢幕破裂或觸控失靈，如何判定保固範圍與人為損壞？及合約末期維修建議。
 
 ## Answer

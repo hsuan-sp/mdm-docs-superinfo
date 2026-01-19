@@ -64,6 +64,7 @@ function generateIndex({ itemsDir, outputFile, lang, title, intro, glossaryTitle
         }
     });
 
+    output = output.trim() + '\n';
     fs.writeFileSync(outputFile, output, 'utf-8');
     console.log(`[Index Generator] Index updated at ${outputFile}`);
 }

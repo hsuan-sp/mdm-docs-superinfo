@@ -5,6 +5,7 @@ category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["故障排除","藍牙","本地網路權限","課堂連線"]
 ---
+
 ## Q: 【實務除錯】藍牙都開了，為什麼「課堂」App 還是顯示學生離線？
 
 ## Answer

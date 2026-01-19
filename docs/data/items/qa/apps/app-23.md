@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: true
 tags: ["DDM", "App 管理", "宣告式", "自動更新", "iOS 26"]
 ---
+
 ## Q: 什麼是「Declarative App Management (宣告式 App 管理)」？與傳統 VPP App 指派有什麼不同？
 
 ## Answer

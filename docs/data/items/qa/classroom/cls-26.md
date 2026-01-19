@@ -5,6 +5,7 @@ category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["AirDrop", "代碼", "隱私", "政策調整", "iOS 26.2"]
 ---
+
 ## Q: iOS 26.2 的「AirDrop 代碼」會影響學校的 AirDrop 管理政策嗎？學生會利用此功能繞過管控嗎？
 
 ## Answer

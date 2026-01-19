@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["重新命名","名稱同步","資產預載","預備註冊","The MUT"]
 ---
+
 ## Q: 在 Jamf Pro 修改了裝置名稱，為什麼 iPad 本機端仍顯示舊名字？
 
 ## Answer

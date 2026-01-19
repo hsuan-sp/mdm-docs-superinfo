@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["Return to Service", "iOS 26", "共享 iPad", "App 保留", "快速部署"]
 ---
+
 ## Q: iOS 26 的「Return to Service 保留 App」功能如何運作？實際效益為何？
 
 ## Answer

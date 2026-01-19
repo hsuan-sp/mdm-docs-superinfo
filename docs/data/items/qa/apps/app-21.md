@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: true
 tags: ["iOS 18","隱藏 App","鎖定 App","限制描述檔","受監管"]
 ---
+
 ## Q: 如何防止學生利用 iOS 18 的功能「隱藏」或「鎖定」管理式 App？
 
 ## Answer

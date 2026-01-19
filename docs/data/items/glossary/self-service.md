@@ -2,6 +2,7 @@
 term: "Self Service"
 category: ["Apps","Jamf"]
 ---
+
 ## 術語定義
 
 Self Service（自助服務）是 Jamf 提供的企業專屬應用程式商店。IT 人員可將公司核准的 App、修復腳本、電子書或設定檔上架至此。員工可隨時自行開啟 Self Service 安裝所需資源，無需等待 IT 人員協助，也無需 admin 權限。

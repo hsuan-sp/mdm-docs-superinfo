@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 important: true
 tags: ["遷移","MDM 轉移","OS 26"]
 ---
+
 ## Q: 【MDM 遷移】更換新 MDM 廠商時，可以「不抹除資料」直接轉移嗎？
 
 ## Answer

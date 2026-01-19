@@ -2,6 +2,7 @@
 term: "Private Wi-Fi Address (私有 Wi-Fi 位址)"
 category: ["Network","Security"]
 ---
+
 ## 術語定義
 
 Private Wi-Fi Address（私有 Wi-Fi 位址）是 iOS/iPadOS 為了防止被追蹤而隨機生成的假的 MAC Address。這能保護使用者隱私，但在依賴 MAC Address 進行認證（MAC Binding）的校園網路中，會導致裝置無法連線或被視為陌生裝置。

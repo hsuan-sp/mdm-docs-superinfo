@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: false
 tags: ["主畫面佈局","Home Screen Layout","限制","資料夾"]
 ---
+
 ## Q: 我可以統一排版學生 iPad 的桌面嗎？（例如：把數學 App 放在第一頁）
 
 ## Answer

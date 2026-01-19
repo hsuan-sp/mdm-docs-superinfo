@@ -2,6 +2,7 @@
 term: "Automatic App Updates（自動更新 App）"
 category: ["Apps"]
 ---
+
 ## 術語定義
 
 Automatic App Updates（自動更新 App）是 iOS/macOS 的背景更新機制。啟用後，裝置會在連接 Wi-Fi 且處於閒置狀態時，自動下載並安裝 App 的最新版本。MDM 可強制啟用或停用此功能，確保所有裝置維持在統一的 App 版本。

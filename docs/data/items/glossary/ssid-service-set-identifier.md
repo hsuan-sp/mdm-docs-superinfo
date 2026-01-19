@@ -2,6 +2,7 @@
 term: "SSID (Service Set Identifier)"
 category: ["Network"]
 ---
+
 ## 術語定義
 
 Service Set Identifier (SSID) 是無線網路的名稱識別碼（如 School_WiFi）。MDM 可以透過設定描述檔 (Wi-Fi Payload) 預先將學校的 SSID 寫入裝置，讓裝置一進入訊號範圍就自動連線，使用者無需手動搜尋或輸入密碼。

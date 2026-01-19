@@ -2,6 +2,7 @@
 term: "Schoolwork App"
 category: ["Education"]
 ---
+
 ## 術語定義
 
 Schoolwork App。Apple 為 K-12 教育設計的作業管理工具。老師可發布講義（Handouts）、指派 App 活動、追蹤學生進度，並查看學生在教育 App 中的學習時間與成績。與 Apple Classroom 整合使用。

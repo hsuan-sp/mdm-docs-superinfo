@@ -5,6 +5,7 @@ category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: true
 tags: ["Safari", "干擾控制", "考試防弊", "macOS 26", "教學端管理"]
 ---
+
 ## Q: 【考試防弊】如何管理 Safari 的「干擾控制 (Distraction Control)」，避免學生在網頁檢定中隱藏關鍵 UI？
 
 ## Answer

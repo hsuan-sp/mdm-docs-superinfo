@@ -2,6 +2,7 @@
 term: "Extension Attribute (擴充屬性)"
 category: ["Core"]
 ---
+
 ## 術語定義
 
 Extension Attribute（擴充屬性）是 Jamf Pro 的高階功能，允許管理員使用 Script (Bash/Python) 收集標準 MDM 協定以外的客製化資訊。例如：偵測電腦是否安裝了非法的挖礦軟體、檢查電池循環次數，或確認某個內部設定檔是否存在。

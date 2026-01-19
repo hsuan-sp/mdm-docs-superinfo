@@ -2,6 +2,7 @@
 term: "SSID (Service Set Identifier)"
 category: ["Network"]
 ---
+
 ## Term Definition
 
 An SSID is the broadcast name of a Wi-Fi network. Schools often have multiple SSIDs (e.g., "TES-Student", "TES-Guest") to provide different levels of access and security.

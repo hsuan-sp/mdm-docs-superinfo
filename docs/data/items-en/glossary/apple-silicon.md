@@ -2,6 +2,7 @@
 term: "Apple Silicon"
 category: ["Hardware", "Apple"]
 ---
+
 ## Term Definition
 
 Apple Silicon refers to the custom-designed chips (like the M1, M2, M3, and M4 series) used in modern Macs and iPads. These chips integrate the CPU, GPU, and memory, providing industry-leading performance and battery life for classroom tasks.

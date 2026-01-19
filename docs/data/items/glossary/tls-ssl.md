@@ -2,6 +2,7 @@
 term: "TLS / SSL"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 TLS (Transport Layer Security) 和 SSL (Secure Sockets Layer) 是用於加密網路通訊的協定。它們確保資料在客戶端（如瀏覽器）和伺服器之間傳輸時不被竊聽或篡改。MDM 伺服器與裝置之間的通訊也依賴 TLS 加密。

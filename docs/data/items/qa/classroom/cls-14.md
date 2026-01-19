@@ -5,6 +5,7 @@ category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["AirDrop","限制","課堂秩序","Jamf Teacher"]
 ---
+
 ## Q: 如何管理 AirDrop？避免學生上課亂傳梗圖雜圖干擾秩序？
 
 ## Answer

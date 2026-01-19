@@ -2,6 +2,7 @@
 term: "Remote Management"
 category: ["Core", "Enrollment"]
 ---
+
 ## Term Definition
 
 Remote Management is the screen or status that appears on an Apple device during setup, indicating that the device is being configured by the school's MDM server. It confirms the organization's ownership and sets initial boundaries.

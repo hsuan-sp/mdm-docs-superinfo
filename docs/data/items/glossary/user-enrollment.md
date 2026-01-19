@@ -2,6 +2,7 @@
 term: "User Enrollment"
 category: ["Enrollment"]
 ---
+
 ## 術語定義
 
 User Enrollment（使用者註冊）是專為 BYOD 設計的註冊模式。在此模式下，MDM 只能管理「工作容器」內的資料（如公司 Email、Wi-Fi），完全無法存取使用者的私人照片或 App，且使用者可隨時移除管理，保障個人隱私。

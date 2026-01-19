@@ -5,6 +5,7 @@ category: "Section 6: Hardware & Maintenance"
 important: true
 tags: ["Hardware Compatibility","Lightning","USB-C","Apple Pencil","Charging Carts"]
 ---
+
 ## Q: We have both older Lightning iPads and newer USB-C models. How do we manage accessories and Apple Pencils?
 
 ## Answer

@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["指令卡住","推播通知服務","APNs","宣告式管理","空白推播"]
 ---
+
 ## Q: Jamf Pro 指令一直顯示「擱置中 (Pending)」，但裝置明明有連網？
 
 ## Answer

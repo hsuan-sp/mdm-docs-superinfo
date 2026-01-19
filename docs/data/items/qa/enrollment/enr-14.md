@@ -5,6 +5,7 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["自動化","Wi-Fi","Return to Service","無人值守"]
 ---
+
 ## Q: 如何讓 iPad 重置後自動連上 Wi-Fi 並完成註冊 (Return to Service)？
 
 ## Answer

@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: false
 tags: ["AppConfig","XML","變數代換","Jamf Pro"]
 ---
+
 ## Q: 什麼是「受管理的應用程式設定 (Managed App Configuration)」？如何應用於大量部署？
 
 ## Answer

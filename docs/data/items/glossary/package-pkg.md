@@ -2,6 +2,7 @@
 term: "Package (.pkg)"
 category: ["macOS"]
 ---
+
 ## 術語定義
 
 Package (.pkg) 是 macOS 的標準軟體安裝包格式。它包含應用程式的檔案、安裝腳本與權限設定。MDM 可透過 Policy 將 .pkg 檔派送至 Mac 並在背景靜默安裝，無需使用者輸入管理者密碼。

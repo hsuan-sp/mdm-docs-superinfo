@@ -5,6 +5,7 @@ category: "Section 2: Device Enrollment & Deployment"
 important: false
 tags: ["Manual Enrollment","Account-Driven","Supervised","Apple Configurator"]
 ---
+
 ## Q: Can we just install a profile manually? What is the difference between Manual and Automated Enrollment?
 
 ## Answer

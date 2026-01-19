@@ -2,6 +2,7 @@
 term: "MDM (Mobile Device Management)"
 category: ["Core"]
 ---
+
 ## Term Definition
 
 Mobile Device Management (MDM) is a security and administrative protocol used to oversee Apple hardware. By installing a management profile, the school can remotely push commands, configure settings (like campus Wi-Fi), and deploy educational apps across the entire fleet of iPads and Macs.

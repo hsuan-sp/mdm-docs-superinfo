@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 important: true
 tags: ["網域衝突","帳號轉移","ASM"]
 ---
+
 ## Q: 如何在 Apple 校務管理中處理「網域衝突」並取回帳號主導權？
 
 ## Answer

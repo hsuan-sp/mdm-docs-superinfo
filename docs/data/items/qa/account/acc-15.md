@@ -5,6 +5,7 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 important: false
 tags: ["Jamf Pro","Jamf School","產品比較"]
 ---
+
 ## Q: Jamf Pro 與 Jamf School 的主要差異為何？該如何選擇？
 
 ## Answer

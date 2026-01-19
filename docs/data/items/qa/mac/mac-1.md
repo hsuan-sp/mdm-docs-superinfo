@@ -5,6 +5,7 @@ category: "第七部分：Mac 電腦進階管理 (Mac Management)"
 important: true
 tags: ["AD","身分認證","Jamf Connect","Platform SSO","No-Bind"]
 ---
+
 ## Q: Mac 需要綁定 AD (Active Directory) 嗎？現代化的建議是什麼？
 
 ## Answer

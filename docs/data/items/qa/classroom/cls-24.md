@@ -5,6 +5,7 @@ category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: true
 tags: ["視窗 App", "多工處理", "專注度", "iPadOS 26", "課堂管理"]
 ---
+
 ## Q: 如何防止學生使用 iPadOS 26 的「視窗 App」功能在課堂分心？
 
 ## Answer

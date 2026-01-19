@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: false
 tags: ["管理式 App","授權歸屬","VPP","資料保護"]
 ---
+
 ## Q: 管理式 App 與個人安裝的 App 有何不同？學生畢業後可以將 App 帶走嗎？
 
 ## Answer

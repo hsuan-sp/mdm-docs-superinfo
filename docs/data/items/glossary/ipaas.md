@@ -2,6 +2,7 @@
 term: "iPaaS"
 category: ["Other"]
 ---
+
 ## 術語定義
 
 iPaaS (Integration Platform as a Service) 是一種雲端服務，提供平台讓企業整合不同應用程式、資料來源與流程。MDM 可透過 iPaaS 與其他企業系統（如 HR、ERP）串接，實現自動化流程。

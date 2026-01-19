@@ -2,6 +2,7 @@
 term: "DDM App Management (宣告式 App 管理)"
 category: ["Apps"]
 ---
+
 ## 術語定義
 
 DDM App Management 是基於 DDM 架構的應用程式部署方式。由裝置端全權負責 App 的下載、安裝進度監控與重試機制。若使用者不小心刪除受管 App，裝置會偵測到狀態不符宣告，並立即自動重新安裝，無需等待 MDM 伺服器發現。

@@ -5,6 +5,7 @@ category: "第五部分：數位學習精進方案專區 (MOE Digital Learning P
 important: false
 tags: ["隱私","定位","GPS","遺失模式"]
 ---
+
 ## Q: MDM 會不會隨時監控學生的位置 (GPS)？這有隱私問題嗎？
 
 ## Answer

@@ -2,6 +2,7 @@
 term: "ADE (Automated Device Enrollment)"
 category: ["Enrollment"]
 ---
+
 ## Term Definition
 
 Automated Device Enrollment (ADE) is an Apple service that automatically links a new device to the school's management system the moment it is powered on. Because the device is registered with the school at the point of purchase, it will automatically download its management profile during the initial setup, even if it is erased.

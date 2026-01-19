@@ -2,6 +2,7 @@
 term: "Firmware Password"
 category: ["macOS"]
 ---
+
 ## 術語定義
 
 Firmware Password（韌體密碼）是 Intel Mac 的開機安全鎖（Apple Silicon Mac 改用 Recovery Lock）。設定後，必須輸入密碼才能使用外接硬碟開機或進入復原模式。這能防止未經授權的人員繞過主系統竊取資料。

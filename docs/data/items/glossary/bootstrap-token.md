@@ -2,6 +2,7 @@
 term: "Bootstrap Token"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 Bootstrap Token（引導代幣）是 macOS 的自動化授權憑證。當第一位使用者啟用 FileVault 加密時，系統會產生此代幣並託管給 MDM。MDM 可使用此 Token 授權其他管理員帳號登入加密的 Mac，或在無人值守的情況下自動完成軟體更新的授權。

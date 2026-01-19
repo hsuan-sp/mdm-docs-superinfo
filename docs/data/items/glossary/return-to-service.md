@@ -2,6 +2,7 @@
 term: "Return to Service"
 category: ["Enrollment"]
 ---
+
 ## 術語定義
 
 重置並自動部署。這是一項現代化的清除指令。當 MDM 發送此指令清除 iOS 裝置時，會同時寫入一組 Wi-Fi 設定。裝置清除完畢後，會自動連上 Wi-Fi 並重新向 MDM 註冊，完全無需人工介入點擊螢幕。這對共享裝置或自助服務站 (Kiosk) 非常重要。

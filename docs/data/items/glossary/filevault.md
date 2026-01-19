@@ -2,6 +2,7 @@
 term: "FileVault"
 category: ["Security"]
 ---
+
 ## 術語定義
 
 FileVault 是 macOS 內建的全磁碟加密技術 (Full Disk Encryption)。啟用後，硬碟資料會被高強度加密 (XTS-AES-128)。即使電腦遺失或硬碟被拆出，沒有登入密碼或修復金鑰 (Recovery Key) 就完全無法讀取資料。這是企業資安合規的基本要求。

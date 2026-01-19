@@ -5,6 +5,7 @@ category: "第三部分：應用程式分發與管理 (Apps & Books)"
 important: false
 tags: ["部署策略","內容快取","頻寬管理","自動安裝"]
 ---
+
 ## Q: 如何平衡「自動安裝」與「網路頻寬」？大批 App 下載不動怎麼辦？
 
 ## Answer

@@ -2,6 +2,7 @@
 term: "Smart Group"
 category: ["Core","Jamf"]
 ---
+
 ## 術語定義
 
 Smart Group（智慧型群組）是 Jamf Pro 的核心功能，依據特定條件（如：電量<20%、未安裝 Office、屬於財務部）自動篩選裝置。當裝置狀態改變時，會自動加入或移出群組。這是實現「自動化管理」的基礎。
