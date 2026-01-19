@@ -14,65 +14,47 @@ const toggleCollapse = () => {
 </script>
 
 <template>
-    <Transition name="slide-down">
-        <div v-if="showBanner" class="wip-banner" :class="{ 'is-collapsed': isCollapsed }" role="alert">
-            <div class="wip-content" v-show="!isCollapsed">
-                <div class="wip-icon">🚧</div>
-                <div class="wip-text">
-                    <strong>Translation Complete</strong>
-                    <span>English content is fully translated but is currently pending review.</span>
+    <div v-if="showBanner" class="wip-wrapper" :class="{ 'is-minimized': isCollapsed }">
+        <Transition name="morph" mode="out-in">
+            <!-- Expanded Banner -->
+            <div v-if="!isCollapsed" class="wip-banner" role="alert" key="expanded">
+                <div class="wip-content">
+                    <div class="wip-icon">🚧</div>
+                    <div class="wip-text">
+                        <strong>Work in Progress</strong>
+                        <span>English content translated & pending final check.</span>
+                    </div>
+                    <button class="collapse-btn" @click.stop="toggleCollapse" aria-label="Minimize notice">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m18 15-6-6-6 6" />
+                        </svg>
+                    </button>
                 </div>
-                <button class="collapse-btn" @click="toggleCollapse" aria-label="Collapse banner">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m18 15-6-6-6 6" />
-                    </svg>
-                </button>
             </div>
-            <button v-show="isCollapsed" class="expand-btn" @click="toggleCollapse" aria-label="Expand banner">
-                <span class="expand-icon">🚧</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+
+            <!-- Minimized Floating Button -->
+            <button v-else class="wip-fab" @click="toggleCollapse" aria-label="Expand notice" key="collapsed">
+                <span class="fab-icon">🚧</span>
+                <span class="fab-label">WIP</span>
+                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                     <path d="m6 9 6 6 6-6" />
                 </svg>
             </button>
-        </div>
-    </Transition>
+        </Transition>
+    </div>
 </template>
 
 <style scoped>
+/* Main Banner Styles */
 .wip-banner {
-    position: relative;
-    z-index: 1000;
     background: linear-gradient(90deg, #ff9500 0%, #ffcc00 100%);
     color: #1d1d1f;
     padding: 8px 24px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.wip-banner.is-collapsed {
-    position: fixed;
-    top: 64px;
-    /* Align with or below the nav bar */
-    left: 12px;
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    border-radius: 50%;
-    border: 3px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(135deg, #ff9500 0%, #ffcc00 100%);
-    cursor: pointer;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.wip-banner.is-collapsed:hover {
-    transform: scale(1.05);
-    background: linear-gradient(135deg, #ffcc00 0%, #ff9500 100%);
+    position: relative;
+    z-index: 1000;
 }
 
 .wip-content {
@@ -85,8 +67,42 @@ const toggleCollapse = () => {
     position: relative;
 }
 
-.collapse-btn,
-.expand-btn {
+/* FAB (Floating Button) Styles */
+.wip-fab {
+    position: fixed;
+    top: 72px;
+    left: 20px;
+    z-index: 1001;
+    background: linear-gradient(135deg, #ff9500 0%, #ffcc00 100%);
+    color: #1d1d1f;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: 2.5px solid #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wip-fab:hover {
+    transform: scale(1.05) translateX(2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.fab-icon {
+    font-size: 16px;
+}
+
+.fab-label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.collapse-btn {
     background: rgba(0, 0, 0, 0.1);
     border: none;
     border-radius: 50%;
@@ -99,36 +115,12 @@ const toggleCollapse = () => {
     color: #000;
     transition: all 0.2s ease;
     padding: 0;
-}
-
-.collapse-btn {
     position: absolute;
     right: -10px;
 }
 
-.expand-btn {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
-}
-
-.expand-icon {
-    font-size: 20px;
-    line-height: 1;
-}
-
-.expand-btn svg {
-    margin-top: -4px;
-}
-
 .collapse-btn:hover {
     background: rgba(0, 0, 0, 0.2);
-    transform: translateY(-1px);
 }
 
 .wip-icon {
@@ -167,20 +159,24 @@ const toggleCollapse = () => {
 .wip-text span {
     font-size: 13px;
     font-weight: 600;
-    color: rgba(0, 0, 0, 0.8);
-    border-bottom: 1.5px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.82);
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.15);
 }
 
-/* Transitions */
-.slide-down-enter-active,
-.slide-down-leave-active {
-    transition: all 0.3s ease;
+/* Morphing Transition */
+.morph-enter-active,
+.morph-leave-active {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.slide-down-enter-from,
-.slide-down-leave-to {
-    transform: translateY(-100%);
+.morph-enter-from {
     opacity: 0;
+    transform: translateY(-20px) scale(0.9);
+}
+
+.morph-leave-to {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.9);
 }
 
 @media (max-width: 768px) {
@@ -188,15 +184,11 @@ const toggleCollapse = () => {
         padding: 10px 20px;
     }
 
-    .wip-banner.is-collapsed {
+    .wip-fab {
         top: auto;
         bottom: 80px;
-        /* Above potential mobile bottom nav */
-        left: 12px;
-    }
-
-    .collapse-btn {
-        right: -5px;
+        left: 20px;
+        padding: 6px 12px;
     }
 
     .wip-text {
