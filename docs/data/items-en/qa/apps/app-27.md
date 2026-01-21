@@ -16,7 +16,7 @@ To ensure classroom iPads remain up-to-date, it is recommended to combine automa
 
 ### 1. Configuring Automated Updates and Sync Schedules
 
-To allow the system to monitor and update apps automatically, configure the following in the **"General"** tab of the app's settings:
+Go to **Devices > Mobile Device Apps** and select the app you wish to manage. In the **"General"** tab, configure the following:
 
 * **Schedule App Checks**: Check the option **「排程 Jamf Pro，使其自動檢查 App Store 是否有應用程式更新」** (Schedule Jamf Pro to automatically check the App Store for app updates). This ensures Jamf Pro stays informed about new descriptions, icons, and versions.
 * **Automated Enforcement**: Check **「自動強制執行App更新」** (Automatically force app updates). The system will then automatically send update commands to mobile devices whenever a new version is detected.
@@ -24,7 +24,7 @@ To allow the system to monitor and update apps automatically, configure the foll
 
 ### 2. Manually Forcing App Updates (Force Update)
 
-For urgent updates (e.g., fixing critical bugs or preparing for a competition), you can trigger an update manually for all devices in the app's scope:
+For urgent updates, navigate to **Devices > Mobile Device Apps** and select the target app. You can trigger an update manually without waiting for the schedule:
 
 1. Go to the detailed information page for the app.
 1. Scroll down to the **「強制應用程式更新」** (Force App Update) section.
