@@ -27,8 +27,8 @@ const toggleCollapse = () => {
                 <div class="wip-content">
                     <div class="wip-icon">🚧</div>
                     <div class="wip-text">
-                        <strong>Work in Progress</strong>
-                        <span>English content translated & pending final check.</span>
+                        <strong>English Beta (Ver. 2026 Verified)</strong>
+                        <span>Technically accurate. Language refinement in progress.</span>
                     </div>
                     <button class="collapse-btn" @click.stop="toggleCollapse" aria-label="Minimize notice">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -65,7 +65,8 @@ const toggleCollapse = () => {
     color: #1d1d1f;
     padding: 8px 24px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-    z-index: 3000; /* Higher than Navbar */
+    z-index: 3000;
+    /* Higher than Navbar */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -95,14 +96,15 @@ const toggleCollapse = () => {
     letter-spacing: 0.02em;
     text-transform: uppercase;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 
-        0 2px 4px rgba(0,0,0,0.05),
-        inset 0 1px 0 rgba(255,255,255,0.25);
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
     white-space: nowrap;
     align-self: center;
     border: 1.5px solid rgba(255, 255, 255, 0.6);
     pointer-events: auto !important;
-    z-index: 2100; /* Ensure it stays above title link */
+    z-index: 2100;
+    /* Ensure it stays above title link */
     user-select: none;
 }
 
@@ -144,8 +146,15 @@ const toggleCollapse = () => {
 }
 
 @keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 .wip-text {
