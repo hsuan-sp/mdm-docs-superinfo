@@ -184,11 +184,11 @@ const getCategoryChipName = (cat: string) => (cat === 'All' ? t.value.allChips :
           <div class="view-status-bar">
             <span class="status-label">{{ selectedCategory === 'All' ? t.allCategories :
               getCategoryName(selectedCategory)
-              }}</span>
+            }}</span>
             <span class="status-count">{{ t.totalTerms.replace('{n}', String(filteredTerms.length)) }}</span>
             <button v-if="!isMobileView" @click="toggleSort" class="desk-sort-btn">{{ sortOrder === 'asc' ? 'A-Z' :
               'Z-A'
-              }}</button>
+            }}</button>
           </div>
         </header>
 
@@ -206,11 +206,11 @@ const getCategoryChipName = (cat: string) => (cat === 'All' ? t.value.allChips :
                 <div class="term-definition markdown-body" :lang="lang" v-html="item.definition"></div>
               </div>
               <section v-if="item.analogy" class="analogy-wrapper">
-                <div class="analogy-icon">💡</div>
-                <div class="analogy-content">
+                <div class="analogy-header">
+                  <span class="analogy-icon">💡</span>
                   <span class="analogy-label">{{ t.analogyLabel }}</span>
-                  <div class="analogy-text markdown-body" :lang="lang" v-html="item.analogy"></div>
                 </div>
+                <div class="analogy-text markdown-body" :lang="lang" v-html="item.analogy"></div>
               </section>
             </div>
           </article>
@@ -583,26 +583,24 @@ const getCategoryChipName = (cat: string) => (cat === 'All' ? t.value.allChips :
   background: var(--vp-c-bg-soft);
   padding: 24px 28px;
   border-top: 1px solid var(--vp-c-divider);
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
 }
 
-.analogy-content {
-  flex: 1;
+.analogy-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
 .analogy-icon {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .analogy-label {
-  display: block;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 11px;
   color: var(--vp-c-brand-1);
   text-transform: uppercase;
-  margin-bottom: 6px;
 }
 
 .badge {
