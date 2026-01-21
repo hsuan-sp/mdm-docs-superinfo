@@ -1,64 +1,78 @@
 /* ============================================================
-   MDM 2026 專業文檔增強樣式 (VitePress / .vp-doc)
-   適用對象：術語百科 (Glossary) & FAQ 管理指南
+   MDM 2026 專業文檔全要素增強樣式
+   整合：術語百科、FAQ、以及 VitePress 所有內建元件
    ============================================================ */
 
-/* --- 1. 核心排版與 CJK 優化 --- */
+/* --- 1. 核心排版與容器 --- */
 .vp-doc {
-  max-width: 820px; /* 優化長文閱讀視距 */
+  max-width: 860px;
   margin: 0 auto;
+  line-height: 1.8;
+  font-family: var(--vp-font-family-base);
 }
 
-.vp-doc p {
-  font-size: 1.05rem;
-  line-height: 1.85; /* 提供舒適的呼吸感 */
-  color: var(--vp-c-text-2);
-  margin-bottom: 1.5rem;
-  
-  /* CJK 混合排版關鍵：解決中英文混排時的混亂間距 */
-  text-align: justify;
-  text-justify: inter-character;
-  word-break: break-word;
-  hyphens: auto;
-}
-
-/* --- 2. 標題層級：定義術語與 FAQ 問題 --- */
 .vp-doc h1 {
-  font-size: 2.25em;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
   letter-spacing: -0.02em;
-  line-height: 1.2;
   color: var(--vp-c-text-1);
 }
 
-/* 針對 FAQ 的 Q: 或是術語分類 */
+/* 針對 Q: 與 Answer 的層級感 */
 .vp-doc h2 {
-  font-size: 1.65em;
+  font-size: 1.75rem;
+  font-weight: 700;
   margin-top: 3.5rem;
   margin-bottom: 1.2rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid var(--vp-c-divider); /* 保留淡線增加結構感 */
-  letter-spacing: -0.01em;
-  font-weight: 600;
-  color: var(--vp-c-brand-1); /* 使用品牌色引導視覺 */
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--vp-c-divider);
+  color: var(--vp-c-text-1);
 }
 
 .vp-doc h3 {
-  font-size: 1.35em;
-  margin-top: 2.2rem;
-  margin-bottom: 0.8rem;
-  color: var(--vp-c-text-1);
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
-/* --- 3. 強調語法：重點結論與核心術語 --- */
+/* --- 2. 修正後的列表系統 (重點解決截圖問題) --- */
+.vp-doc ul, .vp-doc ol {
+  padding-left: 1.5rem; /* 確保符號有足夠空間，不與文字重疊 */
+  margin-bottom: 1.5rem;
+}
 
-/* 針對 FAQ 開頭的「核心答案」第一行粗體進行微調 */
-.vp-doc p > strong:first-child {
-  color: var(--vp-c-text-1);
-  font-size: 1.1rem;
-  /* 增加一個微妙的底色，讓核心答案更像「螢光筆」劃過 */
-  background: linear-gradient(180deg, transparent 70%, var(--vp-c-brand-soft) 30%);
+.vp-doc li {
+  margin-bottom: 0.8rem;
+  padding-left: 0.3rem;
+}
+
+/* 確保列表中的段落不會有額外的邊距，導致對齊失敗 */
+.vp-doc li p {
+  margin: 0.2rem 0;
+  text-align: justify;
+}
+
+/* --- 3. 段落與強調 (螢光筆效果) --- */
+.vp-doc p {
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  text-align: justify;
+  text-justify: inter-character;
+  color: var(--vp-c-text-2);
+}
+
+/* 讓第一個 Strong (通常是核心答案) 變成重點卡片感 */
+.vp-doc h2 + p > strong:first-child {
+  display: block;
+  font-size: 1.15rem;
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  border-left: 5px solid var(--vp-c-brand-1);
+  margin-bottom: 1.5rem;
 }
 
 .vp-doc strong {
@@ -66,52 +80,7 @@
   font-weight: 700;
 }
 
-/* 行內代碼：顯示 Bundle ID、API 指令或術語原文 */
-.vp-doc :not(pre) > code {
-  background-color: var(--vp-c-bg-soft);
-  color: var(--vp-c-brand-1);
-  padding: 0.15em 0.4em;
-  border-radius: 6px;
-  font-size: 0.88em;
-  font-family: var(--vp-font-family-mono);
-  border: 1px solid var(--vp-c-divider);
-  white-space: nowrap;
-}
-
-/* --- 4. 列表：步驟指引與細節說明 --- */
-.vp-doc li {
-  line-height: 1.75;
-  margin-bottom: 0.6rem;
-  color: var(--vp-c-text-2);
-}
-
-.vp-doc li strong {
-  color: var(--vp-c-text-1); /* 列表中的關鍵字加深 */
-}
-
-.vp-doc ul, .vp-doc ol {
-  padding-left: 1.4rem;
-  margin-bottom: 1.4rem;
-}
-
-/* --- 5. 引用區塊：完美承載「白話文比喻」與「實務建議」 --- */
-.vp-doc blockquote {
-  margin: 2rem 0;
-  padding: 1.2rem 1.5rem;
-  background-color: var(--vp-c-bg-soft);
-  border-left: 4px solid var(--vp-c-brand-1);
-  border-radius: 0 12px 12px 0;
-  color: var(--vp-c-text-2);
-  transition: all 0.3s ease;
-}
-
-.vp-doc blockquote p {
-  margin-bottom: 0;
-  font-style: normal; /* 中文比喻不使用斜體，保持專業與易讀 */
-  font-weight: 500;
-}
-
-/* --- 6. 表格：顯示功能對照與規格清單 --- */
+/* --- 4. 企業級表格 (完全保留並強化) --- */
 .vp-doc table {
   display: table;
   width: 100%;
@@ -120,50 +89,82 @@
   margin: 2rem 0;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   border: 1px solid var(--vp-c-divider);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .vp-doc th {
   background-color: var(--vp-c-bg-alt);
-  font-weight: 600;
   color: var(--vp-c-text-1);
-  font-size: 0.9em;
+  font-weight: 700;
   padding: 14px 16px;
-  text-align: left;
+  font-size: 0.9rem;
+  text-transform: uppercase;
 }
 
 .vp-doc td {
   padding: 14px 16px;
-  border: none;
   border-top: 1px solid var(--vp-c-divider);
-  font-size: 0.95em;
 }
 
 .vp-doc tr:nth-child(2n) {
   background-color: var(--vp-c-bg-soft);
 }
 
-.vp-doc tr:hover td {
-  background-color: var(--vp-c-bg-mute); /* 提升閱讀追蹤性 */
+/* --- 5. 比喻區塊與引用 (優化截圖 0 的設計) --- */
+.vp-doc blockquote {
+  background-color: var(--vp-c-bg-soft);
+  border-left: 6px solid var(--vp-c-brand-1);
+  border-radius: 0 12px 12px 0;
+  padding: 1.2rem 1.5rem;
+  margin: 2rem 0;
+  color: var(--vp-c-text-2);
 }
 
-/* --- 7. 代碼區塊：腳本與 XML 配置 --- */
+/* 專門給「白話文比喻」使用的樣式，若您想用黃色區隔 */
+.vp-doc blockquote:has(strong:contains("比喻")),
+.vp-doc blockquote:has(strong:contains("解說")) {
+  border-left-color: #fbbf24; /* 燈泡黃 */
+  background-color: rgba(251, 191, 36, 0.05);
+}
+
+/* --- 6. 行內代碼與代碼塊 (確保 VitePress 原始功能不壞) --- */
+.vp-doc :not(pre) > code {
+  background-color: var(--vp-c-bg-mute);
+  color: var(--vp-c-brand-1);
+  padding: 0.2em 0.5em;
+  border-radius: 6px;
+  font-size: 0.9em;
+  border: 1px solid var(--vp-c-divider);
+}
+
 .vp-doc div[class*="language-"] {
   border-radius: 12px;
-  margin: 1.8rem 0;
-  border: 1px solid var(--vp-c-divider);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  margin: 1.5rem 0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-/* 超連結：強化導引感 */
+/* --- 7. UI 小組件：Badge 標籤 (解決截圖中的「重要」標記) --- */
+.vp-doc .important-badge {
+  background-color: #ef4444;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+/* 超連結 */
 .vp-doc a {
+  font-weight: 500;
   color: var(--vp-c-brand-1);
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  transition: border-color 0.25s;
+  transition: border-bottom 0.2s;
 }
 
 .vp-doc a:hover {
-  border-bottom-color: var(--vp-c-brand-1);
+  border-bottom: 1px solid var(--vp-c-brand-1);
 }
