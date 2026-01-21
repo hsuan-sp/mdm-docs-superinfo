@@ -2,21 +2,78 @@
 import { useData, withBase } from 'vitepress'
 import { computed } from 'vue'
 
-const { lang } = useData()
+const { page } = useData()
 
 const t = computed(() => {
-  return lang.value === 'zh-TW' ? {
+  const isZh = lang.value === 'zh-TW'
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : 'Unknown URL'
+  const pageTitle = page.value.title || 'Unknown Page'
+
+  // Detect Context
+  let context = 'General'
+  if (currentUrl.includes('/glossary/')) context = 'Glossary (術語表)'
+  if (currentUrl.includes('/qa/')) context = 'Q&A (問答庫)'
+
+  // Construct Body
+  const bodyZh = `
+頁面資訊 (Page Info):
+- 標題: ${pageTitle}
+- 網址: ${currentUrl}
+- 範圍: ${context}
+
+問題類型 (請保留一項並刪除其他):
+[ ] 內容錯誤 (Content Error) - 資訊不正確或有誤導性
+[ ] 資訊過時 (Outdated Info) - 內容已不符合最新版本 (iOS 26/macOS Tahoe)
+[ ] 翻譯建議 (Translation) - 術語或語句翻譯不順暢
+[ ] 技術故障 (Bug) - 頁面功能異狀或顯示錯誤
+[ ] 連結失效 (Broken Link) - 圖片或連結無法開啟
+[ ] 其他建議 (Suggestion)
+
+問題描述 (Description):
+(請在此描述您遇到的問題...)
+  `.trim()
+
+  const bodyEn = `
+Page Info:
+- Title: ${pageTitle}
+- URL: ${currentUrl}
+- Context: ${context}
+
+Issue Type (Please keep one):
+[ ] Content Accuracy - Information is incorrect or misleading
+[ ] Outdated Info - Content does not match iOS 26/macOS Tahoe
+[ ] Translation - Terminology or phrasing issues
+[ ] Technical Bug - Layout or functional errors
+[ ] Broken Link/Image
+[ ] Suggestion
+
+Description:
+(Please describe the issue...)
+  `.trim()
+
+  const subjectPrefix = isZh ? '[問題回報]' : '[Issue Report]'
+  const subject = encodeURIComponent(`${subjectPrefix} ${pageTitle}`)
+  const body = encodeURIComponent(isZh ? bodyZh : bodyEn)
+  const mailto = `mailto:hsuan@superinfo.com.tw?subject=${subject}&body=${body}`
+
+  return isZh ? {
     company: '極電資訊有限公司',
     badges: 'Apple 授權教育經銷商｜Apple 校園體驗中心｜軟硬體專業諮詢',
     slogan: '致力於給您最好的服務',
     copyright: 'Copyright ©2026 極電資訊｜Apple 授權教育經銷商',
-    info: '極電資訊有限公司 | 統一編號 23756990'
+    info: '極電資訊有限公司 | 統一編號 23756990',
+    reportLabel: '回報頁面問題',
+    reportTitle: '透過 Email 回報此頁面的錯誤或建議',
+    mailtoLink: mailto
   } : {
     company: 'Superinfo Computer Co., Ltd.',
     badges: 'Apple Authorized Education Specialist｜Apple Campus Experience Center｜Hardware & Software Advisory',
     slogan: 'Committed to excellence in service',
     copyright: 'Copyright © 2026 Superinfo｜Apple Authorized Education Specialist',
-    info: 'Superinfo Computer Co., Ltd. | Tax ID 23756990'
+    info: 'Superinfo Computer Co., Ltd. | Tax ID 23756990',
+    reportLabel: 'Report Page Issue',
+    reportTitle: 'Report error or suggestion via Email',
+    mailtoLink: mailto
   }
 })
 </script>
@@ -39,6 +96,12 @@ const t = computed(() => {
     <div class="footer-copyright">
       <p>{{ t.copyright }}</p>
       <p>{{ t.info }}</p>
+
+      <div class="report-issue-container">
+        <a :href="t.mailtoLink" class="report-link" :title="t.reportTitle">
+          <span class="icon">🐞</span> {{ t.reportLabel }}
+        </a>
+      </div>
     </div>
   </footer>
 </template>
@@ -122,5 +185,34 @@ const t = computed(() => {
     flex-direction: column;
     align-items: center;
   }
+}
+
+/* Report Issue Link Styles */
+.report-issue-container {
+  margin-top: 16px;
+}
+
+.report-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--vp-c-text-2);
+  text-decoration: none;
+  border: 1px solid var(--vp-c-divider);
+  padding: 4px 12px;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+  background-color: var(--vp-c-bg);
+}
+
+.report-link:hover {
+  color: var(--vp-c-brand);
+  border-color: var(--vp-c-brand);
+  background-color: var(--vp-c-bg-soft);
+}
+
+.report-link .icon {
+  font-size: 14px;
 }
 </style>
