@@ -30,18 +30,19 @@ const t = computed(() => {
     'zh-TW': {
       sidebarTitle: "指南導覽",
       allQuestions: "全部題目",
-      searchPlaceholder: "搜尋... (按 / 聚焦)",
+      searchPlaceholder: "搜尋服務、硬體或常見問題...",
       important: "重要",
       searchResult: "搜尋結果：{q}",
       clearSearch: "清除搜尋",
-      menuBtn: "章節選單",
-      drawerTitle: "章節選單",
+      menuBtn: "設定",
+      drawerTitle: "介面設定",
       prevPage: "上一頁",
       nextPage: "下一頁",
       fontScaleTitle: "字體大小調整",
       fontSmall: "小",
       fontMedium: "中",
       fontLarge: "大",
+      allLabel: "全部",
       hashMap: {
         'account': '帳號與伺服器',
         'enrollment': '裝置註冊',
@@ -56,18 +57,19 @@ const t = computed(() => {
     'en-US': {
       sidebarTitle: "Guide Navigation",
       allQuestions: "All Questions",
-      searchPlaceholder: "Search... (Press / to focus)",
+      searchPlaceholder: "Search services, hardware...",
       important: "Important",
       searchResult: "Search results: {q}",
       clearSearch: "Clear Search",
-      menuBtn: "Chapter Menu",
-      drawerTitle: "Chapters",
+      menuBtn: "Settings",
+      drawerTitle: "Interface Settings",
       prevPage: "Previous",
       nextPage: "Next",
       fontScaleTitle: "Font Size Adjustment",
       fontSmall: "S",
       fontMedium: "M",
       fontLarge: "L",
+      allLabel: "All",
       hashMap: {
         'account': 'Account & Server Management',
         'enrollment': 'Enrollment & Device Setup',
@@ -96,10 +98,9 @@ const { fontScale, isSidebarCollapsed, toggleSidebar } = useAppFeatures('mdm-qa'
 
 const handleHashChange = () => {
   const hash = window.location.hash.replace('#', '').toLowerCase();
+  if (!hash) return;
 
-  // Mapping for both languages
   const hashMap = t.value.hashMap as Record<string, string>;
-
   const targetSource = hashMap[hash] || (allQAData.value as any[]).find((m: any) => m.source.toLowerCase().includes(hash))?.source;
 
   if (targetSource) {
@@ -207,12 +208,14 @@ const switchModule = (source: string | "All") => {
   searchQuery.value = '';
   isSidebarOpen.value = false;
   openItems.value.clear();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 </script>
 
 <template>
   <div class="guide-app" :style="{ '--app-scale': fontScale }" :class="{ 'sidebar-collapsed': isSidebarCollapsed }">
     <div v-if="isMounted" class="app-layout">
+      <!-- Desktop Sidebar -->
       <AppSidebar :title="t.sidebarTitle" :is-open="!isSidebarCollapsed" class="desktop-only" @toggle="toggleSidebar"
         @update:scale="val => fontScale = val">
         <template #search>
@@ -247,6 +250,34 @@ const switchModule = (source: string | "All") => {
       </AppSidebar>
 
       <main class="app-content">
+        <!-- New Mobile Smart Header -->
+        <div class="mobile-smart-header">
+          <div class="mobile-search-bar">
+            <div class="search-box">
+              <span class="search-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </span>
+              <input v-model="searchQuery" type="text" :placeholder="t.searchPlaceholder" class="search-input" />
+              <button v-if="searchQuery" class="clear-search-btn" @click="searchQuery = ''">✕</button>
+            </div>
+          </div>
+
+          <div class="mobile-filter-chips">
+            <div class="chip-scroll-container">
+              <button @click="switchModule('All')" :class="['filter-chip', { active: activeSource === 'All' }]">
+                {{ t.allLabel }}
+              </button>
+              <button v-for="m in allQAData" :key="m.source" @click="switchModule(m.source)"
+                :class="['filter-chip', { active: activeSource === m.source }]">
+                {{ m.source }}
+              </button>
+            </div>
+          </div>
+        </div>
+
         <header class="content-header" v-if="searchQuery">
           <h2 class="title-text">{{ t.searchResult.replace('{q}', searchQuery) }}</h2>
         </header>
@@ -257,21 +288,17 @@ const switchModule = (source: string | "All") => {
               <h3 class="group-label">{{ group.source }}</h3>
               <div v-for="(item, idx) in group.items" :key="item.id" class="qa-item"
                 :class="{ open: openItems.has(item.id) }" :style="{ '--item-index': idx }">
-                <div class="qa-lift-layer">
-                  <div class="qa-bob-layer">
-                    <div class="qa-card-content">
-                      <div class="qa-trigger" @click="toggleItem(item.id)">
-                        <div class="q-main">
-                          <span v-if="item.important" class="imp-tag">{{ t.important }}</span>
-                          <span class="q-text">{{ item.question }}</span>
-                        </div>
-                        <span class="arrow">▼</span>
-                      </div>
-                      <div v-if="openItems.has(item.id)" class="qa-content">
-                        <div class="markdown-body" v-html="item.answer"></div>
-                        <div class="tags"><span v-for="t in item.tags" :key="t" class="tag">#{{ t }}</span></div>
-                      </div>
+                <div class="qa-card-content">
+                  <div class="qa-trigger" @click="toggleItem(item.id)">
+                    <div class="q-main">
+                      <span v-if="item.important" class="imp-tag">{{ t.important }}</span>
+                      <span class="q-text">{{ item.question }}</span>
                     </div>
+                    <span class="arrow">▼</span>
+                  </div>
+                  <div v-if="openItems.has(item.id)" class="qa-content">
+                    <div class="markdown-body" v-html="item.answer"></div>
+                    <div class="tags"><span v-for="tag in item.tags" :key="tag" class="tag">#{{ tag }}</span></div>
                   </div>
                 </div>
               </div>
@@ -286,21 +313,17 @@ const switchModule = (source: string | "All") => {
               <h3 class="section-label">{{ section.title }}</h3>
               <div v-for="(item, idx) in section.items" :key="item.id" class="qa-item"
                 :class="{ open: openItems.has(item.id) }" :style="{ '--item-index': idx }">
-                <div class="qa-lift-layer">
-                  <div class="qa-bob-layer">
-                    <div class="qa-card-content">
-                      <div class="qa-trigger" @click="toggleItem(item.id)">
-                        <div class="q-main">
-                          <span v-if="item.important" class="imp-tag">{{ t.important }}</span>
-                          <span class="q-text">{{ item.question }}</span>
-                        </div>
-                        <span class="arrow">▼</span>
-                      </div>
-                      <div v-if="openItems.has(item.id)" class="qa-content">
-                        <div class="markdown-body" v-html="item.answer"></div>
-                        <div class="tags"><span v-for="t in item.tags" :key="t" class="tag">#{{ t }}</span></div>
-                      </div>
+                <div class="qa-card-content">
+                  <div class="qa-trigger" @click="toggleItem(item.id)">
+                    <div class="q-main">
+                      <span v-if="item.important" class="imp-tag">{{ t.important }}</span>
+                      <span class="q-text">{{ item.question }}</span>
                     </div>
+                    <span class="arrow">▼</span>
+                  </div>
+                  <div v-if="openItems.has(item.id)" class="qa-content">
+                    <div class="markdown-body" v-html="item.answer"></div>
+                    <div class="tags"><span v-for="tag in item.tags" :key="tag" class="tag">#{{ tag }}</span></div>
                   </div>
                 </div>
               </div>
@@ -314,21 +337,17 @@ const switchModule = (source: string | "All") => {
                 <h3 class="section-label">{{ section.title }}</h3>
                 <div v-for="(item, idx) in section.items" :key="item.id" class="qa-item"
                   :class="{ open: openItems.has(item.id) }" :style="{ '--item-index': idx }">
-                  <div class="qa-lift-layer">
-                    <div class="qa-bob-layer">
-                      <div class="qa-card-content">
-                        <div class="qa-trigger" @click="toggleItem(item.id)">
-                          <div class="q-main">
-                            <span v-if="item.important" class="imp-tag">{{ t.important }}</span>
-                            <span class="q-text">{{ item.question }}</span>
-                          </div>
-                          <span class="arrow">▼</span>
-                        </div>
-                        <div v-if="openItems.has(item.id)" class="qa-content">
-                          <div class="markdown-body" v-html="item.answer"></div>
-                          <div class="tags"><span v-for="t in item.tags" :key="t" class="tag">#{{ t }}</span></div>
-                        </div>
+                  <div class="qa-card-content">
+                    <div class="qa-trigger" @click="toggleItem(item.id)">
+                      <div class="q-main">
+                        <span v-if="item.important" class="imp-tag">{{ t.important }}</span>
+                        <span class="q-text">{{ item.question }}</span>
                       </div>
+                      <span class="arrow">▼</span>
+                    </div>
+                    <div v-if="openItems.has(item.id)" class="qa-content">
+                      <div class="markdown-body" v-html="item.answer"></div>
+                      <div class="tags"><span v-for="tag in item.tags" :key="tag" class="tag">#{{ tag }}</span></div>
                     </div>
                   </div>
                 </div>
@@ -339,33 +358,11 @@ const switchModule = (source: string | "All") => {
       </main>
     </div>
 
+    <div v-if="!isMounted" class="app-loading-placeholder">
+    </div>
+
+    <!-- Mobile Settings Drawer (Simplified) -->
     <MobileDrawer v-if="isMounted" :is-open="isSidebarOpen" :title="t.drawerTitle" @close="isSidebarOpen = false">
-      <div class="search-box mobile-search">
-        <span class="search-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-        </span>
-        <input v-model="searchQuery" type="text" :placeholder="t.searchPlaceholder" class="search-input" />
-      </div>
-
-      <div class="mobile-nav-scroll">
-        <div @click="switchModule('All')" class="m-nav-item"
-          :class="{ active: activeSource === 'All' && !searchQuery }">
-          <span class="nav-text">{{ t.allQuestions }}</span>
-          <span class="nav-count">{{(allQAData as any[]).reduce((t: any, m: any) => t + getChapterCount(m.source),
-            0)}}</span>
-        </div>
-
-        <div v-for="m in allQAData" :key="m.source" @click="switchModule(m.source)" class="m-nav-item"
-          :class="{ active: activeSource === m.source && !searchQuery }">
-          <span class="nav-text">{{ m.source }}</span>
-          <span class="nav-count">{{ getChapterCount(m.source) }}</span>
-        </div>
-      </div>
-
       <div class="font-controls-mobile">
         <div class="categories-header-mini"><span>{{ t.fontScaleTitle }}</span></div>
         <div class="btn-group-mobile">
@@ -376,12 +373,14 @@ const switchModule = (source: string | "All") => {
       </div>
     </MobileDrawer>
 
-    <button v-if="isMounted" class="mobile-menu-btn" @click="isSidebarOpen = true">
-      {{ t.menuBtn }}
+    <button v-if="isMounted" class="mobile-settings-btn" @click="isSidebarOpen = true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="3"></circle>
+        <path
+          d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+        </path>
+      </svg>
     </button>
-
-    <div v-if="!isMounted" class="app-loading-placeholder">
-    </div>
   </div>
 </template>
 
@@ -411,139 +410,154 @@ const switchModule = (source: string | "All") => {
   }
 }
 
-/* 全域比例控制 */
 .guide-app {
   --base-size: calc(16px * var(--app-scale));
   font-size: var(--base-size);
   width: 100%;
   color: var(--vp-c-text-1);
-  line-height: 1.6;
 }
 
-/* 主要內容區域 */
-.app-content {
-  flex: 1;
-  min-width: 0;
-  max-width: 920px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* 佈局：電腦版固定側邊欄 */
 .app-layout {
   display: flex;
   gap: 48px;
   justify-content: center;
   align-items: flex-start;
   padding: 40px 24px;
-  position: relative;
   max-width: 1400px;
   margin: 0 auto;
-  min-height: 100vh;
-  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* 統一頁首樣式 */
-.content-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+.app-content {
+  flex: 1;
+  min-width: 0;
+  max-width: 920px;
+}
+
+/* Mobile Smart Header */
+.mobile-smart-header {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
   margin-bottom: 24px;
-  min-height: 48px;
+  position: sticky;
+  top: var(--vp-nav-height);
+  z-index: 100;
+  background: var(--vp-c-bg);
+  padding: 12px 0;
 }
 
-.title-text {
-  font-size: 2.2em;
-  margin: 0;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--vp-c-text-1);
+.mobile-search-bar .search-box {
+  background: var(--vp-c-bg-mute);
+  border-radius: 16px;
+  border: 1px solid var(--vp-c-divider);
+  padding: 4px;
+}
+
+.mobile-search-bar .search-input {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  /* Prevent zoom on iOS */
+}
+
+.clear-search-btn {
+  padding: 8px 12px;
+  color: var(--vp-c-text-3);
+  font-size: 18px;
+}
+
+.mobile-filter-chips {
+  overflow: hidden;
+  margin: 0 -24px;
+  padding: 0 24px;
+}
+
+.chip-scroll-container {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.chip-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-chip {
+  white-space: nowrap;
+  padding: 8px 16px;
+  background: var(--vp-c-bg-soft);
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+  border: 1px solid var(--vp-c-divider);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.filter-chip:active {
+  transform: scale(0.95);
+}
+
+.filter-chip.active {
+  background: var(--vp-c-brand-1);
+  color: white;
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 4px 12px rgba(var(--vp-c-brand-1-rgb), 0.3);
 }
 
 @media (max-width: 900px) {
   .app-layout {
     display: block;
-    padding-top: 10px;
+    padding: 12px 20px;
+  }
+
+  .mobile-smart-header {
+    display: flex;
   }
 
   .desktop-only {
     display: none !important;
   }
-
-  .content-header {
-    gap: 10px;
-    margin-bottom: 20px;
-  }
 }
 
-/* 問答卡片 */
+/* QA Cards Styling */
 .qa-item {
-  margin-bottom: 24px;
-  width: 100%;
+  margin-bottom: 20px;
 }
 
 .qa-card-content {
   border: 1px solid var(--vp-c-divider);
-  border-radius: 20px;
+  border-radius: 16px;
   overflow: hidden;
-  background: var(--vp-c-bg-elv, #ffffff);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  animation: qa-intro 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-delay: calc(var(--item-index, 0) * 0.05s);
-}
-
-@keyframes qa-intro {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.qa-item:hover .qa-card-content {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  border-color: var(--vp-c-brand-soft);
-}
-
-.qa-item.open .qa-card-content {
-  border-color: var(--vp-c-brand-1);
-  box-shadow: 0 12px 30px rgba(0, 122, 255, 0.1);
+  background: var(--vp-c-bg-elv);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .qa-trigger {
-  padding: 24px 32px;
+  padding: 20px 24px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-}
-
-.q-main {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  flex: 1;
+  gap: 16px;
 }
 
 .q-text {
-  font-size: 1.15em;
+  font-size: 1.1em;
   font-weight: 700;
-  line-height: 1.45;
+  line-height: 1.4;
 }
 
 .imp-tag {
-  font-size: 0.75em;
   background: #ff3b30;
   color: white;
-  padding: 2px 8px;
-  border-radius: 6px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
   font-weight: 800;
 }
 
@@ -558,54 +572,55 @@ const switchModule = (source: string | "All") => {
 }
 
 .qa-content {
-  padding: 0 32px 32px;
-  border-top: 1px solid var(--vp-c-divider);
+  padding: 0 24px 24px;
   background: var(--vp-c-bg-soft);
+  border-top: 1px solid var(--vp-c-divider);
 }
 
 .markdown-body {
   font-size: 1.05em;
-  line-height: 1.8;
-  padding-top: 24px;
+  line-height: 1.7;
+  padding-top: 16px;
 }
 
 .section-label {
-  font-size: 1.6em;
-  margin: 48px 0 24px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid var(--vp-c-divider);
+  font-size: 1.5em;
+  margin: 40px 0 20px;
   font-weight: 800;
+  border-bottom: 2px solid var(--vp-c-divider);
+  padding-bottom: 8px;
 }
 
 .chapter-title {
-  font-size: 2em;
-  margin: 64px 0 24px;
-  padding: 16px 24px;
+  font-size: 1.8em;
+  margin: 60px 0 24px;
+  padding: 12px 20px;
   background: var(--vp-c-bg-soft);
   color: var(--vp-c-brand-1);
-  border-radius: 20px;
+  border-radius: 16px;
   font-weight: 800;
+}
+
+.mobile-settings-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  background: var(--vp-c-bg-alt);
+  color: var(--vp-c-text-1);
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
   border: 1px solid var(--vp-c-divider);
 }
 
-.mobile-menu-btn {
-  position: fixed;
-  bottom: 24px;
-  left: 24px;
-  z-index: 100;
-  padding: 14px 28px;
-  background: var(--vp-c-brand-1);
-  color: white;
-  border-radius: 100px;
-  border: none;
-  font-weight: 700;
-  box-shadow: 0 8px 25px rgba(0, 113, 227, 0.3);
-  display: none;
-}
-
 @media (max-width: 900px) {
-  .mobile-menu-btn {
-    display: block;
+  .mobile-settings-btn {
+    display: flex;
   }
 }
 
@@ -613,6 +628,7 @@ const switchModule = (source: string | "All") => {
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .search-input {
@@ -633,30 +649,43 @@ const switchModule = (source: string | "All") => {
   display: flex;
 }
 
-.m-nav-item {
+.font-controls-mobile {
+  padding: 20px 0;
+}
+
+.categories-header-mini {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--vp-c-text-3);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.btn-group-mobile {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px;
-  border-radius: 16px;
-  margin-bottom: 8px;
-  background: rgba(0, 0, 0, 0.03);
+  gap: 8px;
 }
 
-.dark .m-nav-item {
-  background: rgba(255, 255, 255, 0.05);
+.btn-group-mobile button {
+  flex: 1;
+  padding: 14px;
+  background: var(--vp-c-bg-soft);
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-divider);
+  font-weight: 700;
+  color: var(--vp-c-text-2);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-tap-highlight-color: transparent;
 }
 
-.m-nav-item.active {
+.btn-group-mobile button:active {
+  transform: scale(0.97);
+}
+
+.btn-group-mobile button.active {
   background: var(--vp-c-brand-1);
   color: white;
-  font-weight: 700;
-}
-
-.nav-count {
-  font-size: 11px;
-  padding: 2px 8px;
-  background: var(--vp-c-divider);
-  border-radius: 10px;
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 4px 12px rgba(var(--vp-c-brand-1-rgb), 0.3);
 }
 </style>

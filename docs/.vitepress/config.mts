@@ -82,7 +82,7 @@ export default defineConfig({
           { text: 'Home', link: '/en/' },
           { text: 'Guide', link: '/en/guide/' },
           { text: 'Glossary', link: '/en/glossary' },
-          { text: 'Changelog', link: '/CHANGELOG' },
+          { text: 'Changelog', link: '/en/CHANGELOG' },
           {
             text: 'Resources (Traditional Chinese Primarily)',
             items: [

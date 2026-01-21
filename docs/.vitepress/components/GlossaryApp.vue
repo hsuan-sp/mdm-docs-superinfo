@@ -7,10 +7,8 @@ import { data as rawLoaderData } from "../../data/all-data.data";
 const { lang } = useData();
 const isMounted = ref(false);
 
-// Use shallowRef to avoid deep reactivity overhead on huge static data
 const rawData = shallowRef(rawLoaderData);
 
-// Selected data based on current language
 const langData = computed(() => {
   const d = rawData.value;
   return lang.value === 'en-US' ? d?.en : d?.zh;
@@ -24,82 +22,65 @@ import AppSidebar from './AppSidebar.vue';
 import MobileDrawer from '../theme/components/MobileDrawer.vue';
 import EmptyState from '../theme/components/EmptyState.vue';
 
-// UI Translations
 const t = computed(() => {
   const translations = {
     'zh-TW': {
-      sidebarTitle: "術語庫分類",
-      searchPlaceholder: "搜尋術語... (按 / 聚焦)",
-      categoryLabel: "分類",
+      sidebarTitle: "術語分類",
+      searchPlaceholder: "輸入 MDM 術語或縮寫...",
+      categoryLabel: "類別",
       allLabel: "全部顯示",
       allChips: "全部",
       sortAZ: "A-Z",
       sortZA: "Z-A",
       sortBtnAZ: "排序 A-Z",
       sortBtnZA: "排序 Z-A",
-      allCategories: "所有分類",
-      totalTerms: "共 {n} 個術語",
-      analogyLabel: "白話文 / 比喻",
-      emptyState: "沒有找到符合「{q}」的術語",
-      clearSearch: "清除搜尋條件",
-      mobileBtn: "篩選與搜尋",
-      drawerTitle: "篩選與搜尋",
+      allCategories: "所有術語",
+      totalTerms: "找到 {n} 項",
+      analogyLabel: "白話文解說",
+      emptyState: "未找到「{q}」",
+      clearSearch: "清除搜尋",
+      mobileBtn: "設定",
+      drawerTitle: "介面設定",
       drawerCategoryTitle: "分類選擇",
       fontScaleTitle: "字體大小調整",
       fontSmall: "小",
       fontMedium: "中",
       fontLarge: "大",
       categories: {
-        Core: "核心概念",
-        Enrollment: "裝置註冊",
-        Apple: "Apple 服務",
-        Security: "資訊安全",
-        Network: "網路配置",
-        Hardware: "硬體管理",
-        Apps: "App 管理",
-        Other: "其他",
-        Education: "教育場域",
-        macOS: "macOS 管理",
-        Jamf: "Jamf 專區"
+        Core: "核心", Enrollment: "註冊", Apple: "Apple", Security: "安管",
+        Network: "網路", Hardware: "硬體", Apps: "軟體", Other: "其他",
+        Education: "教育", macOS: "macOS", Jamf: "Jamf"
       },
       alertMsg: ""
     },
     'en-US': {
       sidebarTitle: "Glossary Categories",
-      searchPlaceholder: "Search terms... (Press / to focus)",
-      categoryLabel: "Category",
+      searchPlaceholder: "Search terms or abbreviations...",
+      categoryLabel: "Module",
       allLabel: "Show All",
       allChips: "All",
       sortAZ: "A-Z",
       sortZA: "Z-A",
       sortBtnAZ: "Sort A-Z",
       sortBtnZA: "Sort Z-A",
-      allCategories: "All Categories",
-      totalTerms: "{n} terms found",
-      analogyLabel: "Plain English Analogy",
-      emptyState: "No terms found for \"{q}\"",
-      clearSearch: "Clear Search",
-      mobileBtn: "Filter & Search",
-      drawerTitle: "Filter & Search",
-      drawerCategoryTitle: "Category Selection",
-      fontScaleTitle: "Font Size Adjustment",
+      allCategories: "Glossary",
+      totalTerms: "{n} items",
+      analogyLabel: "In Plain English",
+      emptyState: "No results for \"{q}\"",
+      clearSearch: "Clear",
+      mobileBtn: "Settings",
+      drawerTitle: "Settings",
+      drawerCategoryTitle: "Categories",
+      fontScaleTitle: "Font Size",
       fontSmall: "S",
       fontMedium: "M",
       fontLarge: "L",
       categories: {
-        Core: "Core Concepts",
-        Enrollment: "Enrollment",
-        Apple: "Apple Services",
-        Security: "Security",
-        Network: "Networking",
-        Hardware: "Hardware",
-        Apps: "App Management",
-        Other: "Other",
-        Education: "Education",
-        macOS: "macOS",
-        Jamf: "Jamf"
+        Core: "Core", Enrollment: "Enroll", Apple: "Apple", Security: "Security",
+        Network: "Network", Hardware: "Hardware", Apps: "Apps", Other: "Other",
+        Education: "Edu", macOS: "macOS", Jamf: "Jamf"
       },
-      alertMsg: "Section 1-8 translated. Full content coming soon."
+      alertMsg: ""
     }
   };
   return translations[lang.value as keyof typeof translations] || translations['zh-TW'];
@@ -107,44 +88,25 @@ const t = computed(() => {
 
 const { isMobileView } = useLayoutMode();
 const { fontScale, isSidebarCollapsed, toggleSidebar } = useAppFeatures('mdm-glossary');
-type CategoryType = "Core" | "Enrollment" | "Apple" | "Security" | "Network" | "Hardware" | "Apps" | "Other" | "Education" | "macOS" | "Jamf";
-
 const searchQuery = ref("");
-const selectedCategory = ref<CategoryType | "All">("All");
+const selectedCategory = ref<string | "All">("All");
 const sortOrder = ref<'asc' | 'desc'>('asc');
-const isControlsExpanded = ref(false);
+const isSettingsOpen = ref(false);
 
-const categories = [
-  "All",
-  "Core",
-  "Enrollment",
-  "Apple",
-  "Security",
-  "Network",
-  "Hardware",
-  "Apps",
-  "Other",
-  "Education",
-  "macOS",
-  "Jamf",
+const categoriesList = [
+  "All", "Core", "Enrollment", "Apple", "Security", "Network", "Hardware", "Apps", "Education", "macOS", "Jamf", "Other"
 ] as const;
 
 const filteredTerms = computed(() => {
   let filtered = glossaryData.value.filter((item: any) => {
     const queries = searchQuery.value.trim().toLowerCase().split(/\s+/);
+    const matchesSearch = queries.every(q =>
+      item.term.toLowerCase().includes(q) ||
+      item.definition.toLowerCase().includes(q) ||
+      item.analogy.toLowerCase().includes(q));
 
-    const matchesSearch = queries.every(q => {
-      return item.term.toLowerCase().includes(q) ||
-        item.definition.toLowerCase().includes(q) ||
-        item.analogy.toLowerCase().includes(q);
-    });
-
-    const currentCategory = selectedCategory.value;
-    const matchesCategory =
-      currentCategory === "All" ||
-      (Array.isArray(item.category)
-        ? item.category.includes(currentCategory as any)
-        : item.category === currentCategory);
+    const matchesCategory = selectedCategory.value === "All" ||
+      (Array.isArray(item.category) ? item.category.includes(selectedCategory.value) : item.category === selectedCategory.value);
 
     return matchesSearch && matchesCategory;
   });
@@ -152,103 +114,48 @@ const filteredTerms = computed(() => {
   return filtered.sort((a: any, b: any) => {
     const termA = a.term.replace(/\s*\([^)]*\)/g, '').toUpperCase();
     const termB = b.term.replace(/\s*\([^)]*\)/g, '').toUpperCase();
-
-    if (sortOrder.value === 'asc') {
-      return termA.localeCompare(termB);
-    } else {
-      return termB.localeCompare(termA);
-    }
+    return sortOrder.value === 'asc' ? termA.localeCompare(termB) : termB.localeCompare(termA);
   });
 });
 
-const getCategoryColor = (cat: string) => {
-  return `badge-${cat.toLowerCase()}`;
-};
-
-const toggleSort = () => {
-  sortOrder.value = sortOrder.value === 'asc' ? 'desc' : 'asc';
-};
+const getCategoryColor = (cat: string) => `badge-${cat.toLowerCase()}`;
+const toggleSort = () => sortOrder.value = sortOrder.value === 'asc' ? 'desc' : 'asc';
 
 useKeyboardShortcuts({
-  onSearchFocus: () => {
-    const searchInput = document.querySelector('.search-input') as HTMLInputElement;
-    searchInput?.focus();
-  },
-  onEscape: () => {
-    if (searchQuery.value) {
-      searchQuery.value = '';
-    } else if (isControlsExpanded.value) {
-      isControlsExpanded.value = false;
-    }
-  }
+  onSearchFocus: () => (document.querySelector('.search-input') as HTMLInputElement)?.focus(),
+  onEscape: () => { searchQuery.value = ''; isSettingsOpen.value = false; }
 });
 
 onMounted(async () => {
   isMounted.value = true;
   await nextTick();
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('card-visible');
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-
-  document.querySelectorAll('.term-card').forEach((el) => {
-    observer.observe(el);
-  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('card-visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.term-card').forEach(el => observer.observe(el));
 });
 
 const getCategoryCount = (cat: string) => {
   if (cat === 'All') return glossaryData.value.length;
   return glossaryData.value.filter((item: any) =>
-    Array.isArray(item.category)
-      ? item.category.includes(cat as any)
-      : item.category === cat
+    Array.isArray(item.category) ? item.category.includes(cat) : item.category === cat
   ).length;
 };
 
-const clearSearch = () => {
-  searchQuery.value = '';
-  selectedCategory.value = 'All';
-};
-
-const getCategoryName = (cat: string) => {
-  if (cat === 'All') return t.value.allLabel;
-  return (t.value.categories as any)[cat] || cat;
-};
-
-const getCategoryChipName = (cat: string) => {
-  if (cat === 'All') return t.value.allChips;
-  return (t.value.categories as any)[cat] || cat;
-};
+const getCategoryName = (cat: string) => (cat === 'All' ? t.value.allLabel : (t.value.categories as any)[cat] || cat);
+const getCategoryChipName = (cat: string) => (cat === 'All' ? t.value.allChips : (t.value.categories as any)[cat] || cat);
 </script>
 
 <template>
-  <div class="glossary-app" :class="{ 'is-mobile-device': isMobileView, 'sidebar-collapsed': isSidebarCollapsed }"
-    :style="{ '--app-scale': fontScale }">
+  <div class="glossary-app" :class="{ 'sidebar-collapsed': isSidebarCollapsed }" :style="{ '--app-scale': fontScale }">
     <div v-if="isMounted" class="app-layout">
       <AppSidebar :title="t.sidebarTitle" :is-open="!isSidebarCollapsed" class="desktop-only" @toggle="toggleSidebar"
         @update:scale="val => fontScale = val">
-        <div v-if="lang === 'en-US'" class="wip-banner">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="12" y1="8" x2="12" y2="12"></line>
-            <line x1="12" y1="16" x2="12.01" y2="16"></line>
-          </svg>
-          <span>{{ t.alertMsg }}</span>
-        </div>
-
         <template #search>
           <div class="search-section">
             <div class="search-box">
               <span class="search-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <circle cx="11" cy="11" r="8"></circle>
                   <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
@@ -261,13 +168,10 @@ const getCategoryChipName = (cat: string) => {
         <template #nav-items>
           <div class="categories-header">
             <span>{{ t.categoryLabel }}</span>
-            <button @click="toggleSort" class="sort-btn" :title="sortOrder === 'asc' ? t.sortAZ : t.sortZA">
-              {{ sortOrder === 'asc' ? t.sortAZ : t.sortZA }}
-            </button>
+            <button @click="toggleSort" class="sort-btn">{{ sortOrder === 'asc' ? t.sortAZ : t.sortZA }}</button>
           </div>
-
           <div class="categories-list">
-            <button v-for="cat in categories" :key="cat" @click="selectedCategory = cat"
+            <button v-for="cat in categoriesList" :key="cat" @click="selectedCategory = cat"
               :class="['cat-item', { active: selectedCategory === cat }]">
               {{ getCategoryName(cat) }}
               <span class="cat-count" v-if="getCategoryCount(cat) > 0">{{ getCategoryCount(cat) }}</span>
@@ -277,32 +181,58 @@ const getCategoryChipName = (cat: string) => {
       </AppSidebar>
 
       <main class="app-content">
+        <!-- New Mobile Smart Header -->
+        <div class="mobile-smart-header">
+          <div class="mobile-search-bar">
+            <div class="search-box">
+              <span class="search-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </span>
+              <input v-model="searchQuery" type="text" :placeholder="t.searchPlaceholder" class="search-input" />
+              <button v-if="searchQuery" class="clear-search-btn" @click="searchQuery = ''">✕</button>
+            </div>
+          </div>
+
+          <div class="mobile-filter-chips">
+            <div class="chip-scroll-container">
+              <button v-for="cat in categoriesList" :key="cat" @click="selectedCategory = cat"
+                :class="['filter-chip', { active: selectedCategory === cat }]">
+                {{ getCategoryChipName(cat) }}
+              </button>
+            </div>
+          </div>
+        </div>
+
         <header class="content-header">
           <div class="view-status-bar">
             <span class="status-label">{{ selectedCategory === 'All' ? t.allCategories :
               getCategoryName(selectedCategory)
-              }}</span>
+            }}</span>
             <span class="status-count">{{ t.totalTerms.replace('{n}', String(filteredTerms.length)) }}</span>
+            <button v-if="!isMobileView" @click="toggleSort" class="desk-sort-btn">{{ sortOrder === 'asc' ? 'A-Z' :
+              'Z-A'
+            }}</button>
           </div>
         </header>
+
         <TransitionGroup name="list" tag="div" class="terms-grid">
-          <article v-for="(item, index) in filteredTerms" :key="item.term" class="term-card"
-            :style="{ '--delay': (index as any) % 10 }">
+          <article v-for="item in filteredTerms" :key="item.term" class="term-card">
             <div class="term-card-content">
               <div class="card-main">
                 <header class="card-header">
                   <h3 class="term-title">{{ item.term }}</h3>
                   <div class="term-badges">
                     <span v-for="cat in (Array.isArray(item.category) ? item.category : [item.category])" :key="cat"
-                      :class="['badge', getCategoryColor(cat)]">
-                      {{ getCategoryName(cat) }}
-                    </span>
+                      :class="['badge', getCategoryColor(cat)]">{{ getCategoryName(cat) }}</span>
                   </div>
                 </header>
                 <div class="term-definition markdown-body" v-html="item.definition"></div>
               </div>
               <section v-if="item.analogy" class="analogy-wrapper">
-                <div class="analogy-icon" aria-hidden="true">💡</div>
+                <div class="analogy-icon">💡</div>
                 <div class="analogy-content">
                   <span class="analogy-label">{{ t.analogyLabel }}</span>
                   <div class="analogy-text markdown-body" v-html="item.analogy"></div>
@@ -312,122 +242,48 @@ const getCategoryChipName = (cat: string) => {
           </article>
         </TransitionGroup>
 
-        <EmptyState v-if="filteredTerms.length === 0" icon="🧐" :description="t.emptyState.replace('{q}', searchQuery)"
-          :action-text="t.clearSearch" @clear="clearSearch" />
+        <EmptyState v-if="filteredTerms.length === 0" :description="t.emptyState.replace('{q}', searchQuery)"
+          :action-text="t.clearSearch" @clear="searchQuery = ''; selectedCategory = 'All'" />
       </main>
     </div>
 
-    <MobileDrawer v-if="isMounted" :is-open="isControlsExpanded" :title="t.drawerTitle"
-      @close="isControlsExpanded = false">
-      <div class="search-box mobile-search-box">
-        <span class="search-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-        </span>
-        <input v-model="searchQuery" type="text" :placeholder="t.searchPlaceholder" class="search-input"
-          :aria-label="t.searchPlaceholder" />
-      </div>
+    <div v-if="!isMounted" class="app-loading-placeholder"></div>
 
-      <div class="categories-wrapper">
-        <div class="categories-header">
-          <span>{{ t.drawerCategoryTitle }}</span>
-          <button @click="toggleSort" class="sort-btn">
-            {{ sortOrder === 'asc' ? t.sortBtnAZ : t.sortBtnZA }}
-          </button>
-        </div>
-        <div class="categories-chips">
-          <button v-for="cat in categories" :key="cat" @click="selectedCategory = cat; isControlsExpanded = false"
-            :class="['cat-chip', { active: selectedCategory === cat }]">
-            {{ getCategoryChipName(cat) }}
-          </button>
-        </div>
-      </div>
-
-      <div class="font-controls-mobile">
-        <div class="categories-header"><span>{{ t.fontScaleTitle }}</span></div>
+    <MobileDrawer v-if="isMounted" :is-open="isSettingsOpen" :title="t.drawerTitle" @close="isSettingsOpen = false">
+      <div class="settings-group">
+        <div class="group-label">{{ t.fontScaleTitle }}</div>
         <div class="btn-group-mobile">
           <button @click="fontScale = 0.9" :class="{ active: fontScale === 0.9 }">{{ t.fontSmall }}</button>
           <button @click="fontScale = 1.0" :class="{ active: fontScale === 1.0 }">{{ t.fontMedium }}</button>
           <button @click="fontScale = 1.2" :class="{ active: fontScale === 1.2 }">{{ t.fontLarge }}</button>
         </div>
       </div>
+      <div class="settings-group" style="margin-top: 24px;">
+        <div class="group-label">排序方式</div>
+        <div class="btn-group-mobile">
+          <button @click="sortOrder = 'asc'" :class="{ active: sortOrder === 'asc' }">A → Z</button>
+          <button @click="sortOrder = 'desc'" :class="{ active: sortOrder === 'desc' }">Z → A</button>
+        </div>
+      </div>
     </MobileDrawer>
 
-    <button v-if="isMounted" class="mobile-floating-btn" @click="isControlsExpanded = true" v-show="!isControlsExpanded"
-      :aria-label="t.mobileBtn">
-      <span class="icon" aria-hidden="true">🔍</span>
-      <span class="label">{{ t.mobileBtn }}</span>
+    <button v-if="isMounted" class="mobile-settings-btn" @click="isSettingsOpen = true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="3"></circle>
+        <path
+          d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+        </path>
+      </svg>
     </button>
-
-    <div v-if="!isMounted" class="app-loading-placeholder">
-    </div>
   </div>
 </template>
 
 <style scoped>
-.app-loading-placeholder {
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--vp-c-bg-soft);
-  margin: 40px;
-  border-radius: 24px;
-  animation: pulse 1.5s infinite ease-in-out;
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 0.6;
-  }
-
-  50% {
-    opacity: 0.3;
-  }
-
-  100% {
-    opacity: 0.6;
-  }
-}
-
-.mobile-floating-btn {
-  position: fixed;
-  bottom: 32px;
-  left: 24px;
-  background: var(--vp-c-brand-1);
-  color: white;
-  border: none;
-  padding: 14px 24px;
-  border-radius: 100px;
-  font-weight: 700;
-  font-size: 15px;
-  box-shadow: 0 8px 20px rgba(0, 113, 227, 0.3);
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-@media (min-width: 901px) {
-  .mobile-floating-btn {
-    display: none;
-  }
-}
-
-.categories-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
 .glossary-app {
   --base-size: calc(16px * var(--app-scale, 1));
   font-size: var(--base-size);
   width: 100%;
+  color: var(--vp-c-text-1);
 }
 
 .app-layout {
@@ -435,17 +291,109 @@ const getCategoryChipName = (cat: string) => {
   gap: 40px;
   justify-content: center;
   align-items: flex-start;
-  padding: 40px 24px 100px;
-  position: relative;
+  padding: 40px 24px;
   max-width: 1600px;
   margin: 0 auto;
-  min-height: 100vh;
+}
+
+.app-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Mobile Smart Header */
+.mobile-smart-header {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  position: sticky;
+  top: var(--vp-nav-height);
+  z-index: 100;
+  background: var(--vp-c-bg);
+  padding: 12px 0;
+}
+
+.mobile-search-bar .search-box {
+  background: var(--vp-c-bg-mute);
+  border-radius: 16px;
+  border: 1px solid var(--vp-c-divider);
+  padding: 4px;
+}
+
+.mobile-search-bar .search-input {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+}
+
+.clear-search-btn {
+  padding: 8px 12px;
+  color: var(--vp-c-text-3);
+  font-size: 18px;
+}
+
+.mobile-filter-chips {
+  overflow: hidden;
+  margin: 0 -24px;
+  padding: 0 24px;
+}
+
+.chip-scroll-container {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.chip-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-chip {
+  white-space: nowrap;
+  padding: 8px 16px;
+  background: var(--vp-c-bg-soft);
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+  border: 1px solid var(--vp-c-divider);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.filter-chip:active {
+  transform: scale(0.95);
+}
+
+.filter-chip.active {
+  background: var(--vp-c-brand-1);
+  color: white;
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 4px 12px rgba(var(--vp-c-brand-1-rgb), 0.3);
+}
+
+@media (max-width: 900px) {
+  .app-layout {
+    display: block;
+    padding: 12px 20px;
+  }
+
+  .mobile-smart-header {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
 }
 
 .content-header {
   display: flex;
   align-items: center;
-  gap: 20px;
   margin-bottom: 32px;
 }
 
@@ -456,6 +404,7 @@ const getCategoryChipName = (cat: string) => {
   font-size: 14px;
   color: var(--vp-c-text-3);
   font-weight: 700;
+  width: 100%;
 }
 
 .status-label {
@@ -465,51 +414,40 @@ const getCategoryChipName = (cat: string) => {
   border-radius: 6px;
 }
 
-.cat-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 16px;
-  border-radius: 12px;
-  font-size: 14px;
-  color: var(--vp-c-text-2);
-  cursor: pointer;
-  width: 100%;
-  border: none;
-  background: transparent;
-}
-
-.cat-item.active {
-  background: var(--vp-c-brand-soft);
+.desk-sort-btn {
+  margin-left: auto;
   color: var(--vp-c-brand-1);
-  font-weight: 600;
 }
 
-.cat-count {
-  font-size: 11px;
-  background: var(--vp-c-bg-alt);
-  padding: 2px 8px;
-  border-radius: 10px;
-  border: 1px solid var(--vp-c-divider);
-}
-
+/* Grid Layout */
 .terms-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
-  gap: 32px;
+  gap: 24px;
+}
+
+.term-card {
+  height: 100%;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .term-card-content {
-  background: var(--vp-c-bg-elv, #ffffff);
+  background: var(--vp-c-bg-elv);
   border-radius: 20px;
   border: 1px solid var(--vp-c-divider);
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.term-card:hover {
+  transform: translateY(-8px);
 }
 
 .card-main {
-  padding: 32px;
+  padding: 28px;
   flex: 1;
 }
 
@@ -517,19 +455,20 @@ const getCategoryChipName = (cat: string) => {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 20px;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 .term-title {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
   margin: 0;
+  line-height: 1.3;
 }
 
 .analogy-wrapper {
   background: var(--vp-c-bg-soft);
-  padding: 24px 32px;
+  padding: 20px 28px;
   border-top: 1px solid var(--vp-c-divider);
   display: flex;
   gap: 16px;
@@ -541,15 +480,16 @@ const getCategoryChipName = (cat: string) => {
   font-size: 11px;
   color: var(--vp-c-brand-1);
   text-transform: uppercase;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .badge {
   font-size: 10px;
-  padding: 4px 10px;
-  border-radius: 8px;
+  padding: 2px 8px;
+  border-radius: 6px;
   font-weight: 700;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .badge-core {
@@ -592,14 +532,128 @@ const getCategoryChipName = (cat: string) => {
   color: #cca300;
 }
 
-@media (max-width: 900px) {
-  .app-layout {
-    display: block;
-    padding-top: 10px;
-  }
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
 
-  .desktop-only {
-    display: none !important;
+.search-input {
+  width: 100%;
+  padding: 12px 16px 12px 40px;
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-mute);
+  color: var(--vp-c-text-1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+  display: flex;
+}
+
+.cat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: transparent;
+}
+
+.cat-item.active {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+.cat-count {
+  font-size: 11px;
+  background: var(--vp-c-bg-alt);
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.mobile-settings-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  background: var(--vp-c-bg-alt);
+  color: var(--vp-c-text-1);
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  border: 1px solid var(--vp-c-divider);
+}
+
+@media (max-width: 900px) {
+  .mobile-settings-btn {
+    display: flex;
   }
+}
+
+.settings-group {
+  padding: 12px 0;
+}
+
+.group-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--vp-c-text-3);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.btn-group-mobile {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-group-mobile button {
+  flex: 1;
+  padding: 14px;
+  background: var(--vp-c-bg-soft);
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-divider);
+  font-weight: 700;
+  color: var(--vp-c-text-2);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-group-mobile button:active {
+  transform: scale(0.97);
+}
+
+.btn-group-mobile button.active {
+  background: var(--vp-c-brand-1);
+  color: white;
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 4px 12px rgba(var(--vp-c-brand-1-rgb), 0.3);
+}
+
+.app-loading-placeholder {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--vp-c-bg-soft);
+  margin: 40px;
+  border-radius: 20px;
 }
 </style>

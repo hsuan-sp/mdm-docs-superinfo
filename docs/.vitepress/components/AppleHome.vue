@@ -8,16 +8,7 @@ const isMounted = ref(false)
 
 // Standardized translation object
 const t = computed(() => {
-  return lang.value === 'zh-TW' ? {
-    eyebrow: 'Superinfo Apple MDM Hub',
-    title: '賦能教育科技',
-    intro1: 'MDM 術語庫 × 實戰問答集',
-    intro2: '台灣教育現場的專業技術指南',
-    explore: '開始探索',
-    searchGlossary: '查詢術語表',
-    exploreThemes: '探索主題',
-    mastery: '從基礎設定到進階管理，一切盡在掌握。'
-  } : {
+  return lang.value === 'en-US' ? {
     eyebrow: 'Superinfo Apple MDM Hub',
     title: 'Empowering Education',
     intro1: 'MDM Glossary × Expert Q&A',
@@ -26,6 +17,15 @@ const t = computed(() => {
     searchGlossary: 'Search Glossary',
     exploreThemes: 'Explore Topics',
     mastery: 'From basic setup to advanced management, master it all here.'
+  } : {
+    eyebrow: 'Superinfo Apple MDM Hub',
+    title: '賦能教育科技',
+    intro1: 'MDM 術語庫 × 實戰問答集',
+    intro2: '台灣教育現場的專業技術指南',
+    explore: '開始探索',
+    searchGlossary: '查詢術語表',
+    exploreThemes: '探索主題',
+    mastery: '從基礎設定到進階管理，一切盡在掌握。'
   }
 })
 
@@ -49,7 +49,7 @@ const navCards = computed(() => {
       title: 'Deployment',
       subtitle: isZh ? '零接觸部署' : 'Zero-Touch Deployment',
       desc: isZh ? '透過 Apple Configurator 與 ADE 達成自動化開箱即用。' : 'Achieve out-of-the-box automation with Apple Configurator and ADE.',
-      link: `${base}enrollment`, // Changed to simpler link or kept as is
+      link: `${base}guide/#enrollment`,
       bg: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
       textColor: '#fff',
       icon: '📦'
