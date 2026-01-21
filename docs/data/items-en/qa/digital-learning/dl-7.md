@@ -14,7 +14,7 @@ tags: ["iCloud","Private Relay","Digital Learning Project","Policy Info"]
 
 ## Current Situation:
 
-On Supervised devices within the Digital Learning Project, you will typically find the "Private Relay" switch under **Settings > iCloud** is **greyed out and set to 'Off'.** This is a mandatory restriction enforced via MDM configuration profiles.
+On Supervised devices within the Digital Learning Project, you will typically find the "Private Relay" switch under **Settings > iCloud**is**greyed out and set to 'Off'.** This is a mandatory restriction enforced via MDM configuration profiles.
 
 ## Why Must it be Disabled? (Technical Conflict)
 
@@ -28,4 +28,4 @@ On Supervised devices within the Digital Learning Project, you will typically fi
 
 ## Practical Advice:
 
-If you find a student iPad that **can enable** Private Relay, it means the device has likely **fallen out of management** or **missed the restriction profile.** Ensure you run "Update Inventory" or redeploy the restriction settings in Jamf Pro for that device.
+If you find a student iPad that **can enable**Private Relay, it means the device has likely**fallen out of management**or**missed the restriction profile.** Ensure you run "Update Inventory" or redeploy the restriction settings in Jamf Pro for that device.

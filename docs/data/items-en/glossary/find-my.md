@@ -15,7 +15,7 @@ Organizational capabilities:
 
 ## Analogy
 
-This is the device's **"Built-in GPS Tracker"** and **"Loud Siren."**
+This is the device's **"Built-in GPS Tracker"**and**"Loud Siren."**
 
 If a student leaves their iPad on a park bench, IT can immediately see exactly where it is on a satellite map. They can even make it play a loud "beeping" sound (even if it's on silent) or put an unmissable message on the screen saying, "This iPad belongs to the school. Please return it."
 

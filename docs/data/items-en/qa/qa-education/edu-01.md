@@ -17,7 +17,7 @@ This architectural shift is intentional and was implemented to improve device ba
 ## Why the Icon is Gone:
 
 * **Legacy (iOS 16 & older)**: Used "Always-On VPN" which displayed a permanent VPN icon.
-* **Modern (iOS 17 - 26)**: Uses native **Content Filtering APIs**. These operate at the system level without needing a separate VPN connection, so the icon is no longer displayed in the status bar.
+***Modern (iOS 17 - 26)**: Uses native**Content Filtering APIs**. These operate at the system level without needing a separate VPN connection, so the icon is no longer displayed in the status bar.
 
 ## How to Verify Protection is Active:
 

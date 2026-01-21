@@ -147,6 +147,26 @@ function normalizeProperNouns(text) {
   return result;
 }
 
+/**
+ * Ensures bold/italic markers have spaces OUTSIDE when adjacent to CJK,
+ * but NO spaces INSIDE (which breaks markdown parsing).
+ */
+function fixMarkdownSyntaxSpacing(text) {
+  return text
+    // 1. Remove spaces INSIDE bold/italic markers: ** text ** -> **text**
+    .replace(/(\*\*|__)\s+(.*?)\s+(\*\*|__)/g, '$1$2$3')
+    .replace(/(\*|_)\s+(.*?)\s+(\*|_)/g, '$1$2$3')
+    
+    // 2. Add spaces OUTSIDE bold markers if adjacent to CJK
+    // CJK**bold** -> CJK **bold**
+    .replace(/([\u4e00-\u9fa5])(\*\*|__)/g, '$1 $2')
+    // **bold**CJK -> **bold** CJK
+    .replace(/(\*\*|__)([\u4e00-\u9fa5])/g, '$1 $2')
+    
+    // 3. Ensure no double spaces created by above rules
+    .replace(/ {2,}/g, ' ');
+}
+
 function processFile(filePath) {
   try {
     const rawContent = fs.readFileSync(filePath, 'utf-8');
@@ -314,6 +334,7 @@ function processFile(filePath) {
       // E. 一般文字優化
       if (!line.trim().startsWith('<') && !line.trim().startsWith('[')) {
         line = normalizeProperNouns(line);
+        line = fixMarkdownSyntaxSpacing(line); // Fix markdown markers first
         line = optimizeSpacing(line, lang);
       }
 

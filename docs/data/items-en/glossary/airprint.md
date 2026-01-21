@@ -10,7 +10,8 @@ category: ["Core"]
 Key advantages for IT:
 
 * **No Drivers**: Eliminates the need for manual driver installation on individual devices.
-* **Payloads**: MDM can use an AirPrint payload to push an **"Allowlist"** of specific school printers to student and staff devices.
+***Payloads**: MDM can use an AirPrint payload to push an**"Allowlist"** of specific school printers to student and staff devices.
+
 * **Automation**: Printers appear automatically in the print menu when the device connects to the school network.
 
 ## Analogy

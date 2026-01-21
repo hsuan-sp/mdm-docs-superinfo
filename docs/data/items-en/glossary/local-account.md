@@ -10,7 +10,8 @@ A **Local Account** is a user profile that resides strictly on the individual co
 Key differences from Network Accounts:
 
 * **Authentication**: Usage is verified against a local database on the machine, not a central server.
-* **Scope**: Credentials work **only** on that specific Mac; they cannot be used to log in to other computers.
+***Scope**: Credentials work**only** on that specific Mac; they cannot be used to log in to other computers.
+
 * **Use Case**: Typically reserved for the primary "Administrator" account used by IT for maintenance, or for specialized stations (like a theater lighting controller) that do not require network connectivity.
 
 ## Analogy

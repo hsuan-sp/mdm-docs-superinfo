@@ -10,7 +10,8 @@ category: ["macOS", "Jamf"]
 Key functionalities:
 
 * **Snapshots**: Monitors a Mac's filesystem during a software installation to identify exactly what files were added or modified.
-* **Packaging**: Bundles these changes into a standardized **.pkg** or **.dmg** installer.
+***Packaging**: Bundles these changes into a standardized**.pkg**or**.dmg** installer.
+
 * **Customization**: Allows administrators to include specific configuration files or licenses within an app installer.
 
 This tool is essential for deploying complex software that doesn't follow standard App Store installation methods.

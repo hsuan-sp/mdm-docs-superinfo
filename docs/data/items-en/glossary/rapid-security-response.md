@@ -9,7 +9,8 @@ category: ["Security"]
 
 Differences from standard updates:
 
-* **Agility**: Delivers important vulnerability patches *between* major software updates.
+***Agility**: Delivers important vulnerability patches*between* major software updates.
+
 * **Speed**: RSR files are smaller and install significantly faster than a full OS upgrade.
 * **Uptime**: Often requires only a quick restart (or sometimes no restart at all for Safari-only patches), minimizing classroom disruption.
 * **Version**: Indicated by a letter after the version number (e.g., iOS 16.4.1 (a)).

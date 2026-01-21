@@ -5,13 +5,13 @@ category: ["Apple", "Security"]
 
 ## Term Definition
 
-**Domain Capture** is a powerful security feature within **Apple Business/School Manager** that allows an organization to assert authority over its email domain.
+**Domain Capture**is a powerful security feature within**Apple Business/School Manager** that allows an organization to assert authority over its email domain.
 
 Requirements and Outcomes:
 
 * **Verification**: The organization must prove ownership of the domain (e.g., `@school.edu`).
 * **Conflict Resolution**: If a user previously created a personal Apple ID using an official institutional email address, the organization can "capture" it.
-* **Migration**: The affected user is notified and must either change the email address of their personal account (to a personal email like Gmail) or allow the account to be converted into an official **Managed Apple Account**.
+***Migration**: The affected user is notified and must either change the email address of their personal account (to a personal email like Gmail) or allow the account to be converted into an official**Managed Apple Account**.
 
 ## MDM Context
 

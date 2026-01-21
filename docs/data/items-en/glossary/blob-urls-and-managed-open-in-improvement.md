@@ -10,9 +10,11 @@ A security enhancement introduced in **OS version 26** that bridges a common loo
 
 Functional details:
 
-* **Scope**: **Blob URLs** (temporary, browser-generated links used to handle data inside a session).
-* **Enforcement**: These links now strictly respect **"Managed Open-In"** restrictions.
-* **Goal**: Prevents users from bypassing organization-level **Data Loss Prevention (DLP)** policies by using browser-based "Blob" links to export sensitive files from managed apps to unmanaged personal accounts.
+***Scope**:**Blob URLs** (temporary, browser-generated links used to handle data inside a session).
+
+***Enforcement**: These links now strictly respect**"Managed Open-In"** restrictions.
+
+***Goal**: Prevents users from bypassing organization-level**Data Loss Prevention (DLP)** policies by using browser-based "Blob" links to export sensitive files from managed apps to unmanaged personal accounts.
 
 ## Analogy
 

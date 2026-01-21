@@ -19,6 +19,6 @@ This strategy ensures that critical security patches are delivered without sudde
 
 Think of this as **"Scheduling a Home Renovation."**
 
-The school IT team **"delivers the building materials"** (downloads the update) while the student is busy using the iPad for class. However, the actually noisy and disruptive **"construction work"** (the installation and restart) doesn't start until the student is finished with their homework and has gone to sleep.
+The school IT team **"delivers the building materials"**(downloads the update) while the student is busy using the iPad for class. However, the actually noisy and disruptive**"construction work"** (the installation and restart) doesn't start until the student is finished with their homework and has gone to sleep.
 
 This way, the iPad is fully updated and ready to go the next morning without ever interrupting a single minute of learning.

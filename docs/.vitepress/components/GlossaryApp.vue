@@ -184,11 +184,11 @@ const getCategoryChipName = (cat: string) => (cat === 'All' ? t.value.allChips :
           <div class="view-status-bar">
             <span class="status-label">{{ selectedCategory === 'All' ? t.allCategories :
               getCategoryName(selectedCategory)
-            }}</span>
+              }}</span>
             <span class="status-count">{{ t.totalTerms.replace('{n}', String(filteredTerms.length)) }}</span>
             <button v-if="!isMobileView" @click="toggleSort" class="desk-sort-btn">{{ sortOrder === 'asc' ? 'A-Z' :
               'Z-A'
-            }}</button>
+              }}</button>
           </div>
         </header>
 
@@ -601,6 +601,11 @@ const getCategoryChipName = (cat: string) => (cat === 'All' ? t.value.allChips :
   font-size: 11px;
   color: var(--vp-c-brand-1);
   text-transform: uppercase;
+}
+
+.analogy-text :deep(strong) {
+  color: var(--vp-c-brand-1);
+  font-weight: 700;
 }
 
 .badge {

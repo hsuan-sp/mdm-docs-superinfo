@@ -19,6 +19,6 @@ This represents a significant shift from Intel Macs, where MDM could often perfo
 
 This is the **"High-Performance Engine"** inside modern Apple computers.
 
-While it's incredibly fast, it's also much more secure. Think of it like a supercar that requires both a **physical key** and a **biometric scan** to start the engine.
+While it's incredibly fast, it's also much more secure. Think of it like a supercar that requires both a **physical key**and a**biometric scan** to start the engine.
 
 While it makes the computer almost impossible for a thief to use, it also means the school’s IT team has to use more sophisticated methods to keep everything updated and secure.

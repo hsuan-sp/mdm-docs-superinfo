@@ -17,6 +17,6 @@ How it works:
 
 Think of this as **"Digital Biometric Verification"** for the device itself.
 
-In the past, the system just asked for an "ID Card" (the serial number), which could be forged. Now, the system asks for a **"Fingerprint"** or **"DNA Scan"** of the machine's actual hardware.
+In the past, the system just asked for an "ID Card" (the serial number), which could be forged. Now, the system asks for a **"Fingerprint"**or**"DNA Scan"** of the machine's actual hardware.
 
 It proves beyond a doubt that the device is a real, physical iPad following the rules, and not an impostor or a fake computer program pretending to be a school device.

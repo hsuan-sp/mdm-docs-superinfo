@@ -18,7 +18,7 @@ The key to unlocking it depends on which organization currently owns the serial 
 
 If the serial number appears in ASM (common for original-unit repairs):
 
-1. Log in to **ASM** > **Devices** > Search for the serial number.
+1. Log in to **ASM**>**Devices** > Search for the serial number.
 1. Click **Manage Activation Lock > Turn off Activation Lock**.
 1. **Result**: Wait about 10 minutes, restart the Mac, and connect to Wi-Fi. The lock will be cleared via Apple's servers.
 
@@ -26,7 +26,7 @@ If the serial number appears in ASM (common for original-unit repairs):
 
 If the repair involved a new logic board that wasn't auto-transferred to your ASM:
 
-1. **Tools**: Use another Mac with **Apple Configurator** or an iPhone with the **Apple Configurator app**.
+1. **Tools**: Use another Mac with **Apple Configurator**or an iPhone with the**Apple Configurator app**.
 1. **Steps**: Put the target Mac on the "Setup Assistant" (Hello) screen. Use the iPhone app to scan the cloud pattern or the Mac app to **Add to Apple School Manager**.
 1. **Follow-up**: Once the serial appears in your ASM, proceed with **Option 1**.
 
@@ -35,7 +35,8 @@ If the repair involved a new logic board that wasn't auto-transferred to your AS
 If the repair shop used a "pre-owned" or "test" board that is still managed by another school or enterprise:
 
 * **Symptom**: Apple Configurator will throw an error saying "This device is owned by another organization."
-* **Risk**: **You cannot unlock this yourself.** Legally and technically, the hardware ownership remains with another entity.
+***Risk**:**You cannot unlock this yourself.** Legally and technically, the hardware ownership remains with another entity.
+
 * **Fix**: Demand that the repair vendor either contacts the original owner for a "Release" in ASM or replaces the board with a clean, unmanaged unit.
 
 ## Last Resort: DFU Mode Restore

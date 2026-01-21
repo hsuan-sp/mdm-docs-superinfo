@@ -5,7 +5,7 @@ category: ["Network"]
 
 ## Term Definition
 
-**Ethernet** is the standard technology for wired local area network (LAN) connections, typically utilizing **RJ45** cables.
+**Ethernet**is the standard technology for wired local area network (LAN) connections, typically utilizing**RJ45** cables.
 
 Deployment advantages:
 

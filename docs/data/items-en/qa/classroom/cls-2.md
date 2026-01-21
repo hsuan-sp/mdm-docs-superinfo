@@ -24,7 +24,8 @@ This is particularly useful for assessments (e.g., Kahoot, Quizlet), focused wri
 
 ## How to Unlock:
 
-* Tap the **"Unlock"** button in the teacher’s toolbar.
+*Tap the**"Unlock"** button in the teacher’s toolbar.
+
 * The devices will also automatically unlock when the teacher ends the class session.
 
 ## Practical Tip:

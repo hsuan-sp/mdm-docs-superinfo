@@ -23,11 +23,15 @@ In a classroom environment with multiple users, a proper disinfection routine is
 
 ## 2. Prohibited Substances & Tools:
 
-* ❌ **Bleach** or products containing **Hydrogen Peroxide**.
-* ❌ **Window cleaners or household detergents**.
-* ❌ **Aerosols, solvents, or abrasives**.
-* ❌ **Compressed air** sprayed directly into openings (can damage microphone or speaker membranes).
-* ❌ **Rough fabrics, paper towels, or napkins** (may cause micro-scratches).
+*❌**Bleach**or products containing**Hydrogen Peroxide**.
+
+*❌**Window cleaners or household detergents**.
+
+*❌**Aerosols, solvents, or abrasives**.
+
+*❌**Compressed air** sprayed directly into openings (can damage microphone or speaker membranes).
+
+*❌**Rough fabrics, paper towels, or napkins** (may cause micro-scratches).
 
 ## 3. Standard Cleaning Steps:
 
@@ -39,8 +43,9 @@ In a classroom environment with multiple users, a proper disinfection routine is
 ## 4. Risk Warnings and Material Differences:
 
 * **Oleophobic Coating**: iPad screens have an oil-resistant coating that naturally wears over time. While alcohol is allowed, frequent or excessive cleaning will accelerate the degradation of this coating.
-* **Nano-texture Models (Special Note)**: If your iPad Pro (M4) is equipped with **Nano-texture glass**, only use the dedicated polishing cloth provided by Apple. For stubborn grime, you may dampen the cloth with 70% IPA.
-* **Leather and Fabric Accessories**: **Stay away** from alcohol on official Apple leather, FineWoven, or Smart Folio fabrics, as it will cause discoloration or material damage.
+***Nano-texture Models (Special Note)**: If your iPad Pro (M4) is equipped with**Nano-texture glass**, only use the dedicated polishing cloth provided by Apple. For stubborn grime, you may dampen the cloth with 70% IPA.
+
+***Leather and Fabric Accessories**:**Stay away** from alcohol on official Apple leather, FineWoven, or Smart Folio fabrics, as it will cause discoloration or material damage.
 
 ## Practical Advice:
 

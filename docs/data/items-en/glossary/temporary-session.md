@@ -5,7 +5,7 @@ category: ["Education"]
 
 ## Term Definition
 
-A **Temporary Session** (often called Guest functionality) is a feature of the **Shared iPad** environment.
+A **Temporary Session**(often called Guest functionality) is a feature of the**Shared iPad** environment.
 
 Workflow:
 
@@ -18,6 +18,6 @@ Workflow:
 
 Think of this as a **"Public Library Computer."**
 
-You don't need a library card to sit down and start using it. However, the moment you stand up and **"log out,"** the keyboard auto-cleans itself and the computer **shreds any papers** you left on the desk.
+You don't need a library card to sit down and start using it. However, the moment you stand up and **"log out,"**the keyboard auto-cleans itself and the computer**shreds any papers** you left on the desk.
 
 This ensures the next person can't see what you were doing, and the iPad stays fresh and fast for everyone.

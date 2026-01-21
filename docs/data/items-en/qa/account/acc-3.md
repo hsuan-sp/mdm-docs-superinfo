@@ -25,10 +25,10 @@ Because these are school-managed assets, students cannot use the standard "I for
 ## Bulk Reset (Multiple Students):
 
 1. In the **"Users"** list, filter for the specific grade or class.
-1. Use keyboard shortcuts to select multiple students (Hold **Command** or **Shift** while clicking).
+1. Use keyboard shortcuts to select multiple students (Hold **Command**or**Shift** while clicking).
 1. Click **"Create Sign-In Communications"** (or Reset Password) in the right-hand panel.
-1. Download the results as a **PDF** or **CSV**. This file will contain a list of temporary passwords that you can print out or distribute to the teachers.
+1. Download the results as a **PDF**or**CSV**. This file will contain a list of temporary passwords that you can print out or distribute to the teachers.
 
 ## Important Note: Federated Authentication
 
-If your school has enabled **Federated Authentication** with Google or Microsoft (Microsoft Entra ID), you **cannot** reset passwords in ASM. Instead, you must reset the student's password in the Google Admin Console or Microsoft 365 Admin Center. The change will automatically sync to their Apple account.
+If your school has enabled **Federated Authentication**with Google or Microsoft (Microsoft Entra ID), you**cannot** reset passwords in ASM. Instead, you must reset the student's password in the Google Admin Console or Microsoft 365 Admin Center. The change will automatically sync to their Apple account.

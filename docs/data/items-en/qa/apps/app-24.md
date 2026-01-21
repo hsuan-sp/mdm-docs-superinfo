@@ -14,14 +14,16 @@ tags: ["Cellular Data", "Wi-Fi", "App Download", "Traffic Management", "iOS 26"]
 
 ## Configuration
 
-This feature is implemented via **DDM** configurations. In **Jamf Pro**:
+This feature is implemented via **DDM**configurations. In**Jamf Pro**:
 
-1. Go to **Blueprints** or **App Declarations**.
+1. Go to **Blueprints**or**App Declarations**.
 1. Define the policy for individual managed apps or a group of apps.
 1. Set the **'CellularDataPolicy'** in the deployment declaration:
+
 * **Disallow**: Forces download/update to happen only over Wi-Fi.
-  * **Allow**: Permits installation over any available network.
-1. Deploy to the target group (Requires **iOS 18+** and a **Supervised** device).
+ * **Allow**: Permits installation over any available network.
+
+1. Deploy to the target group (Requires **iOS 18+**and a**Supervised** device).
 
 ## Use Cases and Benefits
 
@@ -31,13 +33,13 @@ This feature is implemented via **DDM** configurations. In **Jamf Pro**:
 ## Impact and Limitations
 
 * **Applies to**:
-  * Manual App Store downloads.
-  * MDM-initiated (DDM) automated installs.
-  * App auto-updates.
-  * **Does NOT apply to**:
-  * General web browsing or video streaming (YouTube still consumes data unless managed by a Content Filter).
-  * In-app content updates (e.g., additional data packs inside a game).
-  * **User Experience**: When a student tries to download an app on 4G/5G, the button will be grayed out or a prompt will appear: "Please connect to Wi-Fi to download."
+ * Manual App Store downloads.
+ * MDM-initiated (DDM) automated installs.
+ * App auto-updates.
+ * **Does NOT apply to**:
+ * General web browsing or video streaming (YouTube still consumes data unless managed by a Content Filter).
+ * In-app content updates (e.g., additional data packs inside a game).
+ * **User Experience**: When a student tries to download an app on 4G/5G, the button will be grayed out or a prompt will appear: "Please connect to Wi-Fi to download."
 
 ## Expert Strategy
 

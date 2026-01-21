@@ -18,7 +18,7 @@ When a user enters their email (e.g., `student@tes.tp.edu.tw`) during the enroll
 
 1. The device sends an HTTP GET request to:
 
-    `https://school.domain.com/.well-known/com.apple.remotemanagement`
+ `https://school.domain.com/.well-known/com.apple.remotemanagement`
 
 1. The school’s web server must respond with a JSON file that points the device to the correct MDM server URL.
 

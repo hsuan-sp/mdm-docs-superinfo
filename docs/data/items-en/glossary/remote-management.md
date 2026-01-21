@@ -5,7 +5,7 @@ category: ["Core", "Jamf"]
 
 ## Term Definition
 
-**Remote Management** is the specific screen presented by the Setup Assistant on a new Apple device during the **Automated Device Enrollment** process.
+**Remote Management**is the specific screen presented by the Setup Assistant on a new Apple device during the**Automated Device Enrollment** process.
 
 Signifies:
 

@@ -5,12 +5,13 @@ category: ["Security"]
 
 ## Term Definition
 
-**Apple Intelligence Management** refers to the MDM controls introduced in **iOS 18.1** and **macOS 15.1** to govern generative AI capabilities.
+**Apple Intelligence Management**refers to the MDM controls introduced in**iOS 18.1**and**macOS 15.1** to govern generative AI capabilities.
 
 Organizations can manage:
 
 * **Content Analysis**: Whether AI tools can analyze user content (emails, documents, and transcripts).
-* **Data Transmission**: Control over data sent to the **Private Cloud Compute (PCC)** layer.
+***Data Transmission**: Control over data sent to the**Private Cloud Compute (PCC)** layer.
+
 * **Privacy Compliance**: Ensuring that sensitive institutional data is not used for model training or inadvertently processed.
 
 This maintains strict data privacy while allowing users to benefit from AI-powered productivity tools.

@@ -33,7 +33,7 @@ If the device was Supervised and managed by Jamf Pro before being locked:
 
 If the device is in an abnormal state and cannot receive commands:
 
-1. Use **Finder / Apple Configurator** (macOS) or the **Apple Devices app** (Windows).
+1. Use **Finder / Apple Configurator**(macOS) or the**Apple Devices app** (Windows).
 1. Enter Recovery Mode and perform a Restore.
 1. **Note**: This clears the data, but the Activation Lock screen may still appear (requiring Option 1 or 2 to unlock).
 
@@ -43,4 +43,4 @@ If automated tools fail (e.g., a device was not enrolled before being locked by 
 
 ## Practical Advice:
 
-In your Jamf Pro **PreStage Enrollment** settings, always check **Prevent Activation Lock**. This ensures devices do not enter a locked state when erased, reducing administrative overhead.
+In your Jamf Pro **PreStage Enrollment**settings, always check**Prevent Activation Lock**. This ensures devices do not enter a locked state when erased, reducing administrative overhead.

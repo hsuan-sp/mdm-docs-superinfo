@@ -11,7 +11,7 @@ In managed school environments:
 
 * **Restriction**: On supervised devices, IT administrators often use MDM to hide the App Store icon.
 * **Focus**: This prevents students from downloading unapproved games or distracting applications.
-* **Alternative**: Students are instead directed to use a curated **Self Service** portal to install approved educational tools.
+***Alternative**: Students are instead directed to use a curated**Self Service** portal to install approved educational tools.
 
 ## Analogy
 

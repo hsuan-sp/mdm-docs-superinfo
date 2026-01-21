@@ -21,6 +21,6 @@ tags: ["AirPlay","Apple TV","Screen Sharing","Instructional Display"]
 
 ## Essential Security Settings:
 
-To prevent students from "hijacking" the screen, administrators should configure the **Apple TV** to **Require Passcode** or be **On-Network only**. In Jamf Pro, you can also enable **Force AirPlay outgoing requests to accept pairing password** in a Restrictions profile to ensure the teacher maintains control.
+To prevent students from "hijacking" the screen, administrators should configure the **Apple TV**to**Require Passcode**or be**On-Network only**. In Jamf Pro, you can also enable **Force AirPlay outgoing requests to accept pairing password** in a Restrictions profile to ensure the teacher maintains control.
 > [!TIP]
 > This is a powerful feature for showcasing student's work in real-time.

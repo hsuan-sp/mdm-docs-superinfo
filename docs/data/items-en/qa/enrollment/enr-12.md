@@ -25,18 +25,20 @@ This solves the problem of student data (Safari history, projects, etc.) getting
 1. **Navigate**: Go to **Mobile Devices > PreStage Enrollments**.
 1. **Enable**: In your PreStage profile, find and check the **Shared iPad** option.
 1. **Set User Capacity**: Define the **Maximum Number of Users**.
+
 * **Storage Tip**: While iPadOS supports "Dynamic Quota," we recommend no more than 3 users for 64GB models. Larger models (128GB+) can accommodate more users.
+
 1. **Wipe and Re-enroll**: If the device is not currently in Shared Mode, you **must wipe the device** and re-enroll it via the updated PreStage profile for the feature to take effect.
 
 ## Pros and Cons:
 
 * **Pros**:
-  * **Privacy**: Once a student logs out, the next user cannot access their data.
-  * **Cloud Sync**: Projects started on Device A will sync (via iCloud) when the student logs into Device B.
-  * **Cons**:
-  * **Login Time**: The initial login requires downloading the user profile, which can take time on slower networks.
-  * **Limited Storage**: If too many users are assigned, students may run out of space when installing large apps or filming high-res video.
-  * **Guest Sessions**: You can enable Temporary Sessions for account-free login, but all data is wiped immediately upon logout.
+ * **Privacy**: Once a student logs out, the next user cannot access their data.
+ * **Cloud Sync**: Projects started on Device A will sync (via iCloud) when the student logs into Device B.
+ * **Cons**:
+ * **Login Time**: The initial login requires downloading the user profile, which can take time on slower networks.
+ * **Limited Storage**: If too many users are assigned, students may run out of space when installing large apps or filming high-res video.
+ * **Guest Sessions**: You can enable Temporary Sessions for account-free login, but all data is wiped immediately upon logout.
 
 ## Practical Advice:
 

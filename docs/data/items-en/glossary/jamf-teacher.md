@@ -18,6 +18,6 @@ Teachers can manage their own specific classes based on synchronized rosters fro
 
 ## Analogy
 
-Think of this as the **"Digital Pointer"** or **"Classroom Remote Control"** for the modern teacher.
+Think of this as the **"Digital Pointer"**or**"Classroom Remote Control"** for the modern teacher.
 
 Instead of a teacher having to walk around the room to see what every student is doing on their screen, they can use this app on their own iPad to keep everyone focused. With one single button, the teacher can make sure all 30 students are looking at the exact same textbook page at the same time, preventing anyone from getting lost or distracted by games.

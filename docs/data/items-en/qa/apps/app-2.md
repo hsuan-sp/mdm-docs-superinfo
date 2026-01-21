@@ -12,7 +12,7 @@ tags: ["VPP","Device-based Assignment","Apple ID","Managed Apple Account"]
 
 **Yes. This is called "Device-based Assignment," and it is the standard and most efficient method for school environments.**
 
-By using the **Volume Purchase Program (VPP)** within Apple School Manager (ASM), the school links app licenses to the device’s **Serial Number** rather than a specific student’s Apple ID.
+By using the **Volume Purchase Program (VPP)**within Apple School Manager (ASM), the school links app licenses to the device’s**Serial Number** rather than a specific student’s Apple ID.
 
 ## Advantages for the School:
 
@@ -26,4 +26,4 @@ Since the device is not signed into a personal account, **In-App Purchases (IAP)
 
 ## Technical Requirement:
 
-In the Jamf Pro App settings, ensure the **"Assign VPP Content"** checkbox is selected and the distribution method is set to **"Install Automatically/Prompt users to install."**
+In the Jamf Pro App settings, ensure the **"Assign VPP Content"**checkbox is selected and the distribution method is set to**"Install Automatically/Prompt users to install."**

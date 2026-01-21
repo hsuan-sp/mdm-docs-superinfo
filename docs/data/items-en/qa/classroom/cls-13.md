@@ -25,4 +25,4 @@ tags: ["Shared iPad","Guest Session","Library"]
 
 ## Configuration:
 
-In the Jamf Pro **PreStage Enrollment** settings, find the "Shared iPad" section and check **Allow Temporary Session** (previously known as Guest Login).
+In the Jamf Pro **PreStage Enrollment**settings, find the "Shared iPad" section and check**Allow Temporary Session** (previously known as Guest Login).

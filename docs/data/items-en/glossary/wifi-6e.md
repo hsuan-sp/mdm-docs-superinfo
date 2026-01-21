@@ -11,7 +11,8 @@ tags: ["Wi-Fi 6E", "160MHz", "Performance", "iPadOS 26.2", "macOS Tahoe 26.2"]
 Advantages for schools:
 
 * **Spectrum**: Adds huge amounts of new "airspace" (1200 MHz) exclusively for 6E devices, avoiding interference from older Wi-Fi 5 devices.
-* **Speed**: Supports **160MHz channels**, effectively doubling the throughput for compatible devices (iPad Pro M2+, MacBook Pro M2+).
+***Speed**: Supports**160MHz channels**, effectively doubling the throughput for compatible devices (iPad Pro M2+, MacBook Pro M2+).
+
 * **Latency**: Significantly reduces lag, critical for AR/VR applications and high-density classroom testing.
 
 ## Analogy

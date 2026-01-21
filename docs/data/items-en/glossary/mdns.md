@@ -5,13 +5,13 @@ category: ["Network"]
 
 ## Term Definition
 
-**Multicast DNS (mDNS)** is the underlying "zero-configuration" network protocol that powers Apple’s **Bonjour** service.
+**Multicast DNS (mDNS)**is the underlying "zero-configuration" network protocol that powers Apple’s**Bonjour** service.
 
 How it works:
 
 * **Discovery**: Devices use UDP port 5353 to broadcast their availability on the local network.
 * **Resolution**: It allows devices to translate local hostnames (like `My-iPad.local`) into IP addresses without a central DNS server.
-* **Challenge**: By default, mDNS signals do not cross between different network subnets (VLANs). In large schools, IT creates an **"mDNS Gateway"** or **"Bonjour Reflector"** to allow AirPlay and AirPrint to work across the entire campus.
+***Challenge**: By default, mDNS signals do not cross between different network subnets (VLANs). In large schools, IT creates an**"mDNS Gateway"**or**"Bonjour Reflector"** to allow AirPlay and AirPrint to work across the entire campus.
 
 ## Analogy
 

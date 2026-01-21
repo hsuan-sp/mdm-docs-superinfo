@@ -11,9 +11,11 @@ tags: ["DDM", "Software Updates", "Enforcement", "Beta Enrollment"]
 Fundamental changes:
 
 * **Phase-out**: Legacy MDM update commands (like `ScheduleOSUpdate`) are being replaced by the DDM "Configuration" mechanism.
-* **Deadlines**: Supports strict **Enforcement Deadlines** where the device will force an update at a specific date and time.
-* **Betas**: Allows administrators to remotely enroll or restrict devices in Apple’s **Beta Software Programs**.
-* **Reporting**: Provides real-time progress updates through the **Status Channel** (e.g., "Downloading," "Verifying," "Installing").
+***Deadlines**: Supports strict**Enforcement Deadlines** where the device will force an update at a specific date and time.
+
+***Betas**: Allows administrators to remotely enroll or restrict devices in Apple’s**Beta Software Programs**.
+
+***Reporting**: Provides real-time progress updates through the**Status Channel** (e.g., "Downloading," "Verifying," "Installing").
 
 **Note**: Organizations had to transition to this method starting in late 2024 to maintain update control over modern versions of iOS and macOS.
 

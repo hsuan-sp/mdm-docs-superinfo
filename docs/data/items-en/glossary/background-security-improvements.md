@@ -10,7 +10,8 @@ Introduced in **iOS 26.3**, **Background Security Improvements** represent a mod
 
 Key features:
 
-* **Modular Patching**: Allows Apple to rapidly patch critical security vulnerabilities in specific components like **Safari** and **WebKit**.
+***Modular Patching**: Allows Apple to rapidly patch critical security vulnerabilities in specific components like**Safari**and**WebKit**.
+
 * **No Restarts**: Updates are applied silently in the background without requiring a full OS update or a device restart.
 * **Zero-Day Protection**: Ensures devices are protected against active exploits as soon as a fix is developed by Apple.
 

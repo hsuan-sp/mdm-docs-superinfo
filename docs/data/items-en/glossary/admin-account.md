@@ -13,7 +13,7 @@ Users with Admin rights can:
 * **Modify Settings**: Change network configurations, security policies, and system-wide preferences.
 * **Manage Users**: Create, delete, or reset passwords for other local accounts.
 
-In managed environments, IT departments typically maintain a hidden **management Admin account** for maintenance while downgrading regular users to **"Standard User"** status to prevent unauthorized changes.
+In managed environments, IT departments typically maintain a hidden **management Admin account**for maintenance while downgrading regular users to**"Standard User"** status to prevent unauthorized changes.
 
 ## Analogy
 

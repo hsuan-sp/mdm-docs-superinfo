@@ -33,7 +33,8 @@ If the school has deployed the Jamf Teacher app or web portal to teachers:
 
 ## ⚠️ Important Considerations:
 
-* **Network Connection is Required**: If the iPad is locked out as "iPad Unavailable" because too many incorrect passcodes were entered, and **Wi-Fi has disconnected**, the command cannot be delivered. In this case, the device might need to be restored via a computer.
+***Network Connection is Required**: If the iPad is locked out as "iPad Unavailable" because too many incorrect passcodes were entered, and**Wi-Fi has disconnected**, the command cannot be delivered. In this case, the device might need to be restored via a computer.
+
 * **Different from Apple ID Password**: This method only removes the "Screen Lock Passcode." It does not solve issues with forgetting an "Apple ID/iCloud password."
 * **Preventive Measures**: Encourage students to use passcodes related to their class number or seat number, or keep a record on a sticker on the back of the iPad (though not ideal for security, it is practical for younger students).
 

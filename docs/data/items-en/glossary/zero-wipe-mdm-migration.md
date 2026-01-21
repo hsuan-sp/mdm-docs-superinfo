@@ -21,6 +21,6 @@ Mechanism (Declarative Device Management):
 
 In the past, switching to a new management system was like **"tearing down a house and rebuilding it"** just to change the landlord.
 
-Now, **Zero-Wipe Migration** is like **"keeping your house and furniture exactly as is, but just hiring a new security guard."**
+Now, **Zero-Wipe Migration**is like**"keeping your house and furniture exactly as is, but just hiring a new security guard."**
 
 All your photos and homework stay on the iPad, but the school gets to manage it using a newer, better system.

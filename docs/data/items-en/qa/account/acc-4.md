@@ -19,7 +19,7 @@ If the token expires, Jamf Pro will lose the ability to fetch new licenses or up
 ## Step 1: Download the Token from ASM
 
 1. Log in to [school.apple.com](https://school.apple.com) with "Administrator" or "Content Manager" privileges.
-1. Click your **Account Name** in the bottom-left corner and go to **Preferences**.
+1. Click your **Account Name**in the bottom-left corner and go to**Preferences**.
 1. Select **Payments and Billing**.
 1. Find the **Apps and Books** section and locate your specific location (e.g., "Main Campus").
 1. Click **Download** next to the VPP Token for that location. A `.vpptoken` file will be saved to your computer.
@@ -34,8 +34,9 @@ If the token expires, Jamf Pro will lose the ability to fetch new licenses or up
 
 ## Troubleshooting Tips:
 
-* **Location Mismatch**: If you have multiple sites in ASM, ensure you are downloading the token for the *same* location currently configured in Jamf. Using the wrong token will cause your license counts to drop to zero.
-* **Manual Sync**: After renewing, it is good practice to click the **"Sync"** button within Jamf Pro to ensure the immediate update of your app inventory.
+***Location Mismatch**: If you have multiple sites in ASM, ensure you are downloading the token for the*same* location currently configured in Jamf. Using the wrong token will cause your license counts to drop to zero.
+
+***Manual Sync**: After renewing, it is good practice to click the**"Sync"** button within Jamf Pro to ensure the immediate update of your app inventory.
 
 ## Institutional Advice:
 

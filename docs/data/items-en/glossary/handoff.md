@@ -5,7 +5,7 @@ category: ["Apple"]
 
 ## Term Definition
 
-**Handoff** is a primary component of Apple’s **Continuity** framework that enables users to transfer an active task between nearby devices seamlessly.
+**Handoff**is a primary component of Apple’s**Continuity** framework that enables users to transfer an active task between nearby devices seamlessly.
 
 How it works:
 

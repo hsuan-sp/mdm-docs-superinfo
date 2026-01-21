@@ -24,7 +24,7 @@ Using macOS 26 **System Configurations**, you can set the following intelligent 
 ## Update-Initiated Wake
 
 * **Configuration**: Enable `Allow Wake for Managed Activity` in the DDM payload.
-* **Effect**: Even if the Mac is asleep, when Jamf Pro pushes a **Security Response (RSR)** or a **DDM Software Declaration**, the Mac will briefly "wake," complete the background installation, and return to deep sleep once the task is reported as successful.
+***Effect**: Even if the Mac is asleep, when Jamf Pro pushes a**Security Response (RSR)**or a**DDM Software Declaration**, the Mac will briefly "wake," complete the background installation, and return to deep sleep once the task is reported as successful.
 
 ## Energy Auditing (Status Channel)
 
@@ -33,7 +33,7 @@ Using macOS 26 **System Configurations**, you can set the following intelligent 
 ## 2. Operational Recommendations
 
 * **Avoid Hard Power Cuts**: Discourage the facility team from cutting the main circuit to the lab at night. This prevents M4/M5 Macs from performing essential background maintenance tasks like AI indexing, Spotlight optimization, and system cache cleaning.
-* **Nudge Integration**: If an update requires a restart, use a **Nudge** notification to ask the teacher to "Restart Now" the next morning, rather than forcing a midnight reboot that could cause loss of unsaved teaching materials.
+***Nudge Integration**: If an update requires a restart, use a**Nudge** notification to ask the teacher to "Restart Now" the next morning, rather than forcing a midnight reboot that could cause loss of unsaved teaching materials.
 
 ## 3. Real-World Case Study
 

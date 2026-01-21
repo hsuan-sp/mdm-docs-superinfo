@@ -9,8 +9,10 @@ category: ["Apple"]
 
 It serves as the foundation for modern digital education:
 
-* **Device Assignment**: Linking serial numbers to specific MDM servers for **Automated Device Enrollment (ADE)**.
-* **Roster Management**: Syncing with **Student Information Systems (SIS)** to automatically create classes and student accounts.
+***Device Assignment**: Linking serial numbers to specific MDM servers for**Automated Device Enrollment (ADE)**.
+
+***Roster Management**: Syncing with**Student Information Systems (SIS)** to automatically create classes and student accounts.
+
 * **Managed Apple Accounts**: Creating and managing organizational IDs for students and teachers.
 * **Content**: Purchasing and distributing educational apps and books in volume.
 

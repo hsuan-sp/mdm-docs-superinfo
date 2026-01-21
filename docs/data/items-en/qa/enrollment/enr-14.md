@@ -16,12 +16,13 @@ This feature eliminates the need for technicians to manually select language, re
 
 ## How it Works:
 
-When an administrator sends the "Wipe Device" command from Jamf Pro, they can include a **Wi-Fi Profile** as part of the instruction. After the device clears all data and reboots, it automatically applies the Wi-Fi credentials to get online and immediately requests **Automated Device Enrollment (ADE)** from Apple's servers.
+When an administrator sends the "Wipe Device" command from Jamf Pro, they can include a **Wi-Fi Profile**as part of the instruction. After the device clears all data and reboots, it automatically applies the Wi-Fi credentials to get online and immediately requests**Automated Device Enrollment (ADE)** from Apple's servers.
 
 ## Prerequisites:
 
 * **Hardware**: iPad must be running iPadOS 17 or later.
-* **Management Status**: The device must be already enrolled via ADE and in a **Supervised** state.
+***Management Status**: The device must be already enrolled via ADE and in a**Supervised** state.
+
 * **Configuration**: A corresponding PreStage Enrollment must be configured in Jamf Pro with the appropriate Wi-Fi settings.
 
 ## Recommended Steps:

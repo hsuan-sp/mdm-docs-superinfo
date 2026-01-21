@@ -32,6 +32,6 @@ Since the device broadcasts a virtual MAC, traditional network management system
 
 ## Result:
 
-When the device connects to the *specific SSID* (e.g., School-Student) defined in the profile, it will be forced to use its **Real Hardware MAC Address.**
+When the device connects to the *specific SSID*(e.g., School-Student) defined in the profile, it will be forced to use its**Real Hardware MAC Address.**
 
 * *Note: This only applies to the Wi-Fi network specified in that profile. When students connect to their home Wi-Fi, the privacy feature will automatically re-enable.*

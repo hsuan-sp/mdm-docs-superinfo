@@ -14,12 +14,12 @@ tags: ["MDM Migration", "Zero-Wipe", "System Maintenance", "iOS 26 Technology"]
 
 ## Comparison: Traditional vs. Zero-Wipe Migration
 
-| Feature | **Traditional Migration (Legacy)** | **Zero-Wipe Migration (iOS 26+)** |
+| Feature | **Traditional Migration (Legacy)**|**Zero-Wipe Migration (iOS 26+)** |
 | :--- | :--- | :--- |
-| **Data Retention** | All data wiped (must backup). | **Full Retention** (files, settings, apps). |
-| **User Experience** | Must redo the Setup Assistant. | **Silent Background Process** (needs internet). |
-| **Network Impact** | Massive (GBs of app downloads). | **Minimal** (Management permission swap only). |
-| **Time per Device** | 30–60 minutes. | **2–5 minutes**. |
+| **Data Retention**| All data wiped (must backup). |**Full Retention** (files, settings, apps). |
+| **User Experience**| Must redo the Setup Assistant. |**Silent Background Process** (needs internet). |
+| **Network Impact**| Massive (GBs of app downloads). |**Minimal** (Management permission swap only). |
+| **Time per Device**| 30–60 minutes. |**2–5 minutes**. |
 
 ## Requirements for Zero-Wipe Migration
 
@@ -38,7 +38,7 @@ Even though the feature is available, education technology experts often conside
 ## Expert Recommendation:
 
 * **Use Zero-Wipe WHEN**: You must migrate in the middle of a semester with zero downtime and the devices contain critical teacher data that cannot be backed up.
-* **Use Wipe & Re-enroll WHEN**: It is the summer break. A clean reset via **EACS (Erase All Content and Settings)** is the only way to guarantee 100% policy compliance and peak device performance for the new school year.
+***Use Wipe & Re-enroll WHEN**: It is the summer break. A clean reset via**EACS (Erase All Content and Settings)** is the only way to guarantee 100% policy compliance and peak device performance for the new school year.
 
 ## Summary
 

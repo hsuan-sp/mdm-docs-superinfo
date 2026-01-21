@@ -16,7 +16,7 @@ A Policy consists of:
 
 ## Analogy
 
-A Policy is like a **"School Bell Schedule"** combined with a **"Lesson Plan."**
+A Policy is like a **"School Bell Schedule"**combined with a**"Lesson Plan."**
 
 You don't have to announce "Go to Math Class" to every student individually. The bell (**Trigger**) automatically signals to the students (**Scope**) that it is time to do a specific task (**Payload**).
 

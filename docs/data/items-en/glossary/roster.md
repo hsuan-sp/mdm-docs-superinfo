@@ -11,7 +11,7 @@ Data flow:
 
 1. **Source**: Originates from the school's **Student Information System (SIS)** (e.g., PowerSchool, iSAMS).
 2. **Sync**: Uploaded to **Apple School Manager** via SFTP or API.
-3. **Usage**: Populates apps like **Apple Classroom** and **Schoolwork**.
+3. **Usage**: Populates apps like **Apple Classroom**and**Schoolwork**.
 
 Accurate rostering ensures that when a teacher opens their iPad, they automatically see the correct list of 25 students sitting in front of them for "Period 1 Math," without manual data entry.
 

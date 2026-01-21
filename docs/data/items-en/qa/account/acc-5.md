@@ -17,7 +17,8 @@ By linking Apple School Manager (ASM) with your Google Workspace or Microsoft En
 ## Key Benefits:
 
 * **One Password**: Users don't need to remember a separate password for their iPad or Mac. They use their official campus login.
-* **Automatic Provisioning**: You can configure a **SCIM** bridge so that when a new student is added to Google or Microsoft, their Apple account is created automatically in ASM—no CSV imports required.
+***Automatic Provisioning**: You can configure a**SCIM** bridge so that when a new student is added to Google or Microsoft, their Apple account is created automatically in ASM—no CSV imports required.
+
 * **Security Alignment**: Password policies and Multi-Factor Authentication (MFA) are managed by your primary identity provider (Google or Microsoft).
 
 ## Technical Requirements:

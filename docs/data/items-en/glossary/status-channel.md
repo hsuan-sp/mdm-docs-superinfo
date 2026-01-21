@@ -5,12 +5,13 @@ category: ["Core"]
 
 ## Term Definition
 
-The **Status Channel** is a real-time communication pipeline used in **Declarative Device Management (DDM)**.
+The **Status Channel**is a real-time communication pipeline used in**Declarative Device Management (DDM)**.
 
 Key shift from legacy MDM:
 
 * **Legacy (Polling)**: The server has to proactively ask the device, "Do you have this app installed?" repeatedly.
-* **Modern (Status)**: The device automatically subscribes to "status items" (like Battery Health or Passcode Compliance). When a value changes, the device **immediately** notifies the server.
+***Modern (Status)**: The device automatically subscribes to "status items" (like Battery Health or Passcode Compliance). When a value changes, the device**immediately** notifies the server.
+
 * **Efficiency**: Reduces network traffic and server load while increasing data accuracy.
 
 ## Analogy

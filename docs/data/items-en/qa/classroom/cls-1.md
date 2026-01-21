@@ -19,11 +19,13 @@ tags: ["Classroom App","Screen View","Privacy","AirPlay"]
 
 ## Privacy Safeguards:
 
-* **The Blue Status Bar**: When a teacher is actively viewing a student’s screen, a **blue AirPlay icon** (or a blue pill-shaped bubble) appears in the status bar at the top of the student's iPad.
+***The Blue Status Bar**: When a teacher is actively viewing a student’s screen, a**blue AirPlay icon** (or a blue pill-shaped bubble) appears in the status bar at the top of the student's iPad.
+
 * **Indelible Notification**: This notification is a hard-coded system feature of iPadOS. It cannot be disabled by IT or the MDM, ensuring students always know when their screen is being shared.
 
 ## Technical Requirements:
 
 * **Bluetooth & Wi-Fi**: Both teacher and student devices must have Bluetooth and Wi-Fi enabled and be within physical proximity (the same classroom).
-* **Supervised Status**: Student iPads must be in **Supervised Mode** for the teacher to view the screen without the student needing to tap "Accept" for every session.
+***Supervised Status**: Student iPads must be in**Supervised Mode** for the teacher to view the screen without the student needing to tap "Accept" for every session.
+
 * **MDM Permissions**: The management profile pushed to the student device must explicitly allow "AirPlay and Screen View."

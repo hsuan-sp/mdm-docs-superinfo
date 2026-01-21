@@ -5,7 +5,7 @@ category: ["macOS"]
 
 ## Term Definition
 
-A **Firmware Password** is a foundational security lock designed for Intel-based Macs. (Note: On modern Apple Silicon Macs, this has been superseded by **"Recovery Lock"**).
+A **Firmware Password**is a foundational security lock designed for Intel-based Macs. (Note: On modern Apple Silicon Macs, this has been superseded by**"Recovery Lock"**).
 
 What it protects:
 

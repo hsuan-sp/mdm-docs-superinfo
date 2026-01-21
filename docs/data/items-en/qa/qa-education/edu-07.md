@@ -14,7 +14,8 @@ tags: ["Battery","Myths","MDM","Power Consumption"]
 
 Actually, MDM operates in an extremely energy-efficient way.
 
-* **Declarative Management (DDM)**: **2026 Mainstream Tech**. Devices now monitor their own state (e.g., whether a profile is active) and only report to the server when a "change" occurs. This drastically reduces the power loss associated with traditional MDM "polling."
+***Declarative Management (DDM)**:**2026 Mainstream Tech**. Devices now monitor their own state (e.g., whether a profile is active) and only report to the server when a "change" occurs. This drastically reduces the power loss associated with traditional MDM "polling."
+
 * **No Persistent Connection**: MDM does not need to maintain a continuous network connection or VPN tunnel.
 
 ## Jamf Trust Power Consumption:
@@ -23,7 +24,7 @@ The Jamf Trust app, which handles content filtering and data reporting, also use
 
 * It uses DNS Proxy technology at the system level.
 * Background processes are highly optimized.
-* Under **Settings > Battery**, Jamf Trust typically accounts for less than 1% of usage.
+*Under**Settings > Battery**, Jamf Trust typically accounts for less than 1% of usage.
 
 ## The Real Battery Killers:
 
@@ -32,7 +33,7 @@ The Jamf Trust app, which handles content filtering and data reporting, also use
 | **Max Screen Brightness** | ⚡⚡⚡ Very High | Lower brightness to 50% or enable "Auto-Brightness." |
 | **Long Video Streaming (YouTube, Netflix)** | ⚡⚡⚡ Very High | Limit usage time. |
 | **GPS Navigation Apps** | ⚡⚡⚡ Very High | Close when not in use. |
-| **Background App Refresh** | ⚡⚡ Medium | Disable in **Settings > General > Background App Refresh**. |
+| **Background App Refresh**| ⚡⚡ Medium | Disable in**Settings > General > Background App Refresh**. |
 | **Email Push** | ⚡ Low | Change to "Fetch" mode. |
 | **AirDrop Searching** | ⚡ Low | Set to "Contacts Only" or "Off." |
 

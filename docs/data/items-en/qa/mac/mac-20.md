@@ -32,7 +32,7 @@ After entering the password, the SSH session will momentarily drop as the encryp
 
 ## 2026 Safety Warning (M5 Macs):
 
-On **M5 Silicon** Macs, Apple has tightened **Secure Enclave** protections.
+On **M5 Silicon**Macs, Apple has tightened**Secure Enclave** protections.
 
 * If you have enabled "Lockdown Mode" or "Advanced Data Protection," the Pre-boot SSH stack may be crippled for safety.
 * **Recommendation**: For server-room units requiring remote telemetry, ensure these high-restriction security toggles are managed carefully via MDM to allow the network stack to initialize.

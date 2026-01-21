@@ -5,7 +5,7 @@ category: ["Security"]
 
 ## Term Definition
 
-**AirDrop for Business** (also known as **Managed AirDrop**) is a management capability that allows IT administrators to control data flow via AirDrop.
+**AirDrop for Business**(also known as**Managed AirDrop**) is a management capability that allows IT administrators to control data flow via AirDrop.
 
 The system distinguishes between:
 

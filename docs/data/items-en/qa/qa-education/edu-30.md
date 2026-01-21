@@ -16,12 +16,14 @@ tags: ["Connectivity", "Backup Plan", "Offline Usage", "Network Instability"]
 
 ## 1. Pre-Class Preparation: Caching and Syncing
 
-* **Content Caching**: Ensure your school has a macOS **Content Caching** server. If the main internet line fails but the internal local network (LAN) is active, iPads can still download apps or updates from the local cache.
-* **Asset Pre-loading**: Use Jamf Pro to push "Essential Courseware" directly into the student's **Files** app or **Books** beforehand, rather than relying on cloud links.
+***Content Caching**: Ensure your school has a macOS**Content Caching** server. If the main internet line fails but the internal local network (LAN) is active, iPads can still download apps or updates from the local cache.
+
+***Asset Pre-loading**: Use Jamf Pro to push "Essential Courseware" directly into the student's**Files**app or**Books** beforehand, rather than relying on cloud links.
 
 ## 2. Handling the Outage in the Classroom
 
-* **Apple Classroom**: As long as the teacher's Mac/iPad and the students' iPads are in the same room with Bluetooth and Peer-to-Peer Wi-Fi enabled, **the Classroom app will still function**. Teachers can still monitor screens and push PDFs or local bookmarks without any internet connection.
+***Apple Classroom**: As long as the teacher's Mac/iPad and the students' iPads are in the same room with Bluetooth and Peer-to-Peer Wi-Fi enabled,**the Classroom app will still function**. Teachers can still monitor screens and push PDFs or local bookmarks without any internet connection.
+
 * **Creative Suite**: Professional tools like Keynote, Pages, GarageBand, and Swift Playgrounds all support full offline editing.
 
 ## 3. MDM Configuration for Reliability

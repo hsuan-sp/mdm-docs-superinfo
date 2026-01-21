@@ -5,7 +5,7 @@ category: ["Apple"]
 
 ## Term Definition
 
-A **Push Notification** is a small, efficient data packet sent via the **Apple Push Notification service (APNs)** to wake a device.
+A **Push Notification**is a small, efficient data packet sent via the**Apple Push Notification service (APNs)** to wake a device.
 
 How MDM uses it:
 

@@ -24,12 +24,13 @@ Under the latest OS architecture, **DDM** is the best path for silent updates:
 1. **License Mode**: Must be set to "Device-based" (bound to serial number).
 1. **Supervised Mode**: The iPad must be in a "Supervised" state.
 1. **Jamf Configuration**: In the app's distribution settings, enable **"Automatically Update App."**
+
 * *Note: On DDM-supported devices, this checkbox automatically triggers a DDM declaration.*
 
 ## Common Troubleshooting for Failed Updates:
 
 * **App in Use**: If a student is currently using the app, the system will typically wait until the app is in the background or the device is idle before updating.
 * **Insufficient Storage**: Updates require temporary space to download the installer. If the device is full, the update will fail.
-* **Stuck Commands**: If you see many pending update commands, try sending a **"Blank Push"** to force the device to check in with Apple servers.
+***Stuck Commands**: If you see many pending update commands, try sending a**"Blank Push"** to force the device to check in with Apple servers.
 
 **Note**: DDM makes the device more proactive in scheduling updates, reducing its real-time dependency on the MDM server for simple maintenance tasks.

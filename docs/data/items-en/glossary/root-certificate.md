@@ -17,6 +17,6 @@ Role in a school:
 
 Think of this as the **"Trusted Founder"** of a family.
 
-Trust in digital security works like a family tree. If your device trusts the **"Grandfather"** (the Root Certificate), it will automatically trust all of his **"Children and Grandchildren"** (the other certificates).
+Trust in digital security works like a family tree. If your device trusts the **"Grandfather"**(the Root Certificate), it will automatically trust all of his**"Children and Grandchildren"** (the other certificates).
 
 However, if your device doesn't know the Grandfather, it will block the entire family from entering—which means you won't be allowed to connect to the secure school Wi-Fi.

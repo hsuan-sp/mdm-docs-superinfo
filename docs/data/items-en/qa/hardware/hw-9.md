@@ -16,8 +16,10 @@ In a 2026 classroom environment where iPad 9th, 10th, and 11th generations coexi
 
 ## Phase 1: Verify Physical Compatibility (Core Check)
 
-* **iPad 9th Gen**: Only supports the **Smart Keyboard** using a Lightning-based connector on the vertical side.
-* **iPad 10th / 11th Gen**: Only supports the two-piece **Magic Keyboard Folio**, which uses Smart Connector pins on the horizontal side.
+***iPad 9th Gen**: Only supports the**Smart Keyboard** using a Lightning-based connector on the vertical side.
+
+***iPad 10th / 11th Gen**: Only supports the two-piece**Magic Keyboard Folio**, which uses Smart Connector pins on the horizontal side.
+
 * **Warning**: Forcing an iPad 9th Gen keyboard onto a newer model will not work; the magnets and electronic protocols are fundamentally different.
 
 ## Phase 2: Deep Cleaning the Smart Connector
@@ -31,15 +33,18 @@ In a 2026 classroom environment where iPad 9th, 10th, and 11th generations coexi
 1. **Reseat**: Completely remove the iPad from the keyboard case and reinstall it. For the Magic Keyboard Folio, ensure both the back panel and keyboard are properly aligned.
 1. **Remove Interference**: Some third-party cases or extra-thick screen protectors may prevent the Smart Connector from making a solid connection. Try testing without any case.
 1. **Hard Reset**:
+
 * **iPad 9th Gen**: Hold the Power and Home buttons.
-  * **Newer Models**: Press Vol Up, Vol Down, then hold Power until the Apple logo appears.
+ * **Newer Models**: Press Vol Up, Vol Down, then hold Power until the Apple logo appears.
 
 ## Phase 4: Administrator Cross-Testing
 
 * **Cross-Validation**: Try a known-working keyboard of the same model with the iPad.
-  * If it still doesn't work, the **iPad's internal Smart Connector IC** is likely at fault.
-  * If it works with a different keyboard, the **internal ribbon cable** of the original keyboard is likely broken (common at the hinge).
-  * **Repair Reminder**: Apple keyboards are covered under the project's hardware warranty. If there are no signs of accidental damage (like spills or tears) before the 2026 warranty expires, contact your vendor for a replacement.
+ *If it still doesn't work, the**iPad's internal Smart Connector IC** is likely at fault.
+
+*If it works with a different keyboard, the**internal ribbon cable** of the original keyboard is likely broken (common at the hinge).
+
+* **Repair Reminder**: Apple keyboards are covered under the project's hardware warranty. If there are no signs of accidental damage (like spills or tears) before the 2026 warranty expires, contact your vendor for a replacement.
 
 ## Practical Advice:
 

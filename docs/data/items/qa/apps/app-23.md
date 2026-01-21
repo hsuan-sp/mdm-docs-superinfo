@@ -16,10 +16,10 @@ tags: ["DDM", "App 管理", "宣告式", "自動更新", "iOS 26"]
 
 | 特性 | 傳統 MDM (InstallApplication Command) | 宣告式 App 管理 (App Declaration) |
 | :--- | :--- | :--- |
-| **觸發機制** | MDM 伺服器必須「主動」發送安裝指令，若失敗需伺服器重試 | MDM 只需傳送「宣告 (Declaration)」，裝置會**自主**嘗試安裝直到成功 |
-| **狀態回報** | 被動。MDM 需定期輪詢 (Check-in) 才能知道安裝進度 | **即時 (Real-time)**。安裝成功、失敗或下載中，裝置會透過 Status Channel 立即主動回報 |
-| **更新控制** | 只能設定全域「自動更新」或手動推送更新 | 可針對**個別 App** 設定：強制更新、延遲更新、或依循使用者偏好設定 |
-| **部署範圍** | App Store App、VPP App | App Store App、VPP App、Custom App，macOS 也支援 .pkg 安裝檔 |
+| ** 觸發機制 **| MDM 伺服器必須「主動」發送安裝指令，若失敗需伺服器重試 | MDM 只需傳送「宣告 (Declaration)」，裝置會 ** 自主 ** 嘗試安裝直到成功 |
+| ** 狀態回報 **| 被動。MDM 需定期輪詢 (Check-in) 才能知道安裝進度 |** 即時 (Real-time)**。安裝成功、失敗或下載中，裝置會透過 Status Channel 立即主動回報 |
+| ** 更新控制 **| 只能設定全域「自動更新」或手動推送更新 | 可針對 ** 個別 App** 設定：強制更新、延遲更新、或依循使用者偏好設定 |
+| ** 部署範圍 ** | App Store App、VPP App | App Store App、VPP App、Custom App，macOS 也支援 .pkg 安裝檔 |
 
 ## 適用平台與版本
 
@@ -31,7 +31,7 @@ tags: ["DDM", "App 管理", "宣告式", "自動更新", "iOS 26"]
 
 在支援 DDM 的 Jamf Pro 版本中：
 
-1. 進入 **Blueprints** > **App Management**
+1. 進入 **Blueprints**>**App Management**
 1. 建立 **App Declaration**
 1. 設定 **Installation Behavior**：
 
@@ -45,6 +45,6 @@ tags: ["DDM", "App 管理", "宣告式", "自動更新", "iOS 26"]
 
 ## 部署建議
 
-* **新裝置全面採用**：對於符合版本需求的裝置，建議全面改用宣告式方式部署 App，可顯著降低伺服器負載並提升安裝成功率
-* **混合環境策略**：舊版裝置仍需使用傳統 VPP 派送，Jamf Smart Groups 可協助區分新舊裝置並套用不同策略
-* **監控狀態回報**：善用 DDM 的即時狀態回報功能，快速識別安裝失敗的裝置並採取對應措施
+* ** 新裝置全面採用 **：對於符合版本需求的裝置，建議全面改用宣告式方式部署 App，可顯著降低伺服器負載並提升安裝成功率
+* ** 混合環境策略 **：舊版裝置仍需使用傳統 VPP 派送，Jamf Smart Groups 可協助區分新舊裝置並套用不同策略
+* ** 監控狀態回報 **：善用 DDM 的即時狀態回報功能，快速識別安裝失敗的裝置並採取對應措施

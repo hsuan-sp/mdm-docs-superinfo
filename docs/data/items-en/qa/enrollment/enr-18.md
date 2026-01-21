@@ -25,7 +25,8 @@ This eliminates the need to call support or provide invoices for managed hardwar
 ## Prerequisites and Limitations:
 
 * **Ownership**: The device must appear in your ASM device list.
-* **Management Mode**: This applies to Supervised devices assigned via **Automated Device Enrollment (ADE)** or added via Apple Configurator.
+***Management Mode**: This applies to Supervised devices assigned via**Automated Device Enrollment (ADE)** or added via Apple Configurator.
+
 * **Connectivity**: The device must be connected to Wi-Fi to communicate with Apple's activation servers and confirm the unlock.
 
 ## Why Prioritize This Method?
@@ -35,4 +36,4 @@ This eliminates the need to call support or provide invoices for managed hardwar
 
 ## Practical Advice:
 
-If you need to reinstall the OS after unlocking, Windows users should use the **Apple Devices app**, and Mac users should use **Finder** or **Apple Configurator**. Once restored, the lock will be gone.
+If you need to reinstall the OS after unlocking, Windows users should use the **Apple Devices app**, and Mac users should use **Finder**or**Apple Configurator**. Once restored, the lock will be gone.

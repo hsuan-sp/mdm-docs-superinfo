@@ -11,7 +11,7 @@ Characteristics:
 
 * **Focus**: Does not add new features (like new Emojis); only closes security holes.
 * **Mandate**: MDM policies often force these updates to install immediately (0-day deadline) to protect the network.
-* **Invisibility**: Modern **Rapid Security Responses** can sometimes be installed without the user even noticing, as they don't always require a restart.
+***Invisibility**: Modern**Rapid Security Responses** can sometimes be installed without the user even noticing, as they don't always require a restart.
 
 ## Analogy
 

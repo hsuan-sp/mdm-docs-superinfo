@@ -6,7 +6,7 @@ tags: ["Design", "iOS 26", "macOS Tahoe"]
 
 ## Term Definition
 
-**Liquid Glass** is the advanced visual design language introduced by Apple in **OS version 26**, drawing heavy inspiration from the spatial computing interface of visionOS.
+**Liquid Glass**is the advanced visual design language introduced by Apple in**OS version 26**, drawing heavy inspiration from the spatial computing interface of visionOS.
 
 Visual characteristics:
 

@@ -16,7 +16,8 @@ Apple maintains strict permission levels for Managed Apple Account security. Pas
 
 ## 1. Federated Authentication (Google / Microsoft)
 
-* If your school uses Google or Microsoft credentials to log in, password resets are **handled entirely on the Google or Microsoft side.**
+*If your school uses Google or Microsoft credentials to log in, password resets are**handled entirely on the Google or Microsoft side.**
+
 * The user simply changes their password on that platform, and the Apple Account syncs automatically. This is currently the only way to achieve true "Self-Service Reset."
 
 ## 2. Standard Managed Apple Accounts (Non-Federated)

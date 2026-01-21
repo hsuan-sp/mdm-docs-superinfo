@@ -5,7 +5,7 @@ category: ["Core"]
 
 ## Term Definition
 
-A **Payload** is the fundamental unit of configuration within an MDM **Configuration Profile**.
+A **Payload**is the fundamental unit of configuration within an MDM**Configuration Profile**.
 
 Structure:
 
@@ -18,6 +18,6 @@ Multiple payloads can be bundled into a single profile to deliver a complete con
 
 This is a **"Single Instruction"** inside a rulebook.
 
-If a **Profile** is the complete "Student Handbook," a **Payload** is just one specific paragraph inside it—like "Rule 1: Use the school Wi-Fi" or "Rule 2: Don't use the camera."
+If a **Profile**is the complete "Student Handbook," a**Payload** is just one specific paragraph inside it—like "Rule 1: Use the school Wi-Fi" or "Rule 2: Don't use the camera."
 
 IT combines these individual instructions (payloads) into one big package (the profile) to tell the iPad exactly how to behave.

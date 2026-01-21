@@ -12,7 +12,7 @@ tags: ["iPadOS 17","VPN","Jamf Trust","MOE Project","Architecture"]
 
 **Yes, this is completely normal. It reflects a shift in the management architecture designed to optimize connection speeds and ensure compatibility with local educational network standards.**
 
-In alignement with the latest digital learning policies, the **Jamf Trust** agent has transitioned from a full-tunnel VPN to a more efficient **"DNS Proxy"** and **"Content Filter"** architecture.
+In alignement with the latest digital learning policies, the **Jamf Trust**agent has transitioned from a full-tunnel VPN to a more efficient**"DNS Proxy"**and**"Content Filter"** architecture.
 
 ## Key Changes:
 
@@ -22,7 +22,8 @@ In alignement with the latest digital learning policies, the **Jamf Trust** agen
 
 ## How to Verify Protection is Active:
 
-* **Check the App**: Open the **Jamf Trust** app on the iPad. If you see a **Green Shield (Protected)**, the filtering and data reporting functions are operating correctly.
+***Check the App**: Open the**Jamf Trust**app on the iPad. If you see a**Green Shield (Protected)**, the filtering and data reporting functions are operating correctly.
+
 * **Inventory Status**: In the Jamf Pro dashboard, verify that the "Content Filter" and "DNS Proxy" configuration profiles are listed as "Installed" for that device.
 
 ## Institutional Advice:

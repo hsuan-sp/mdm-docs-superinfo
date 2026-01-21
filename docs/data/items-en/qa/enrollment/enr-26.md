@@ -36,8 +36,8 @@ tags: ["Return to Service", "iOS 26", "Shared iPad", "App Preservation", "Rapid 
 | Wipe Data | 2–3 mins | 2–3 mins |
 | Reboot | 1–2 mins | 1–2 mins |
 | Re-enroll | 1–2 mins | 1–2 mins |
-| App Download/Install | **30–60 mins** | **0 mins** (Already there) |
-| **Total Time** | **35–65 mins** | **5–10 mins** |
+| App Download/Install | **30–60 mins**|**0 mins** (Already there) |
+| **Total Time**|**35–65 mins**|**5–10 mins** |
 
 ## Best Use Cases
 
@@ -55,6 +55,8 @@ When sending a **Return to Service** command:
 
 ## Key Limitations
 
-* Requires **iOS/iPadOS 26** or later.
-* Only works for apps deployed as **Managed Apps** via MDM.
+*Requires**iOS/iPadOS 26** or later.
+
+*Only works for apps deployed as**Managed Apps** via MDM.
+
 * If the app itself requires an update, it will still trigger a download after the reset.
