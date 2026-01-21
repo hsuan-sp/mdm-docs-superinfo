@@ -184,11 +184,11 @@ const getCategoryChipName = (cat: string) => (cat === 'All' ? t.value.allChips :
           <div class="view-status-bar">
             <span class="status-label">{{ selectedCategory === 'All' ? t.allCategories :
               getCategoryName(selectedCategory)
-            }}</span>
+              }}</span>
             <span class="status-count">{{ t.totalTerms.replace('{n}', String(filteredTerms.length)) }}</span>
             <button v-if="!isMobileView" @click="toggleSort" class="desk-sort-btn">{{ sortOrder === 'asc' ? 'A-Z' :
               'Z-A'
-            }}</button>
+              }}</button>
           </div>
         </header>
 
@@ -316,7 +316,7 @@ const getCategoryChipName = (cat: string) => (cat === 'All' ? t.value.allChips :
 .markdown-body[lang="zh-TW"] {
   line-height: 1.75 !important;
   /* CJK needs slightly more breathing room */
-  text-align: justify;
+  text-align: left;
 }
 
 .markdown-body[lang="en-US"] {
@@ -584,7 +584,12 @@ const getCategoryChipName = (cat: string) => (cat === 'All' ? t.value.allChips :
   padding: 24px 28px;
   border-top: 1px solid var(--vp-c-divider);
   display: flex;
+  align-items: flex-start;
   gap: 20px;
+}
+
+.analogy-content {
+  flex: 1;
 }
 
 .analogy-icon {

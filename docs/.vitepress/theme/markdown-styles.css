@@ -68,8 +68,7 @@
 .vp-doc p {
   font-size: 1.0625rem; /* ~17px for readability */
   margin-bottom: 1.5rem;
-  text-align: justify; /* Clean edges */
-  text-justify: inter-word;
+  text-align: left; /* Improved readability, avoids weird gaps */
   color: var(--vp-c-text-2);
 }
 
