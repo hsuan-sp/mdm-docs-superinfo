@@ -27,8 +27,8 @@ Go to **Devices > Mobile Device Apps** and select the app you wish to manage. In
 For urgent updates, navigate to **Devices > Mobile Device Apps** and select the target app. You can trigger an update manually without waiting for the schedule:
 
 1. Go to the detailed information page for the app.
-1. Scroll down to the **「強制應用程式更新」** (Force App Update) section.
-1. Click the **`Force Update`** button. Jamf Pro will immediately send a force update command to all devices within the app's **"Scope."**
+2. Scroll down to the **「強制應用程式更新」** (Force App Update) section.
+3. Click the **`Force Update`** button. Jamf Pro will immediately send a force update command to all devices within the app's **"Scope."**
 
 ### 3. Considerations for 2026: DDM and Update Constraints
 
