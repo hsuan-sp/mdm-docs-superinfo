@@ -19,11 +19,11 @@ tags: ["帳號驅動註冊","服務偵測",".well-known","BYOD"]
 具體流程如下：
 
 1. 使用者輸入 `user@school.edu.tw`。
-1. 裝置發送 HTTP GET 請求至：
+2. 裝置發送 HTTP GET 請求至：
 
  `https://school.edu.tw/.well-known/com.apple.remotemanagement`
 
-1. 伺服器需回傳一個 JSON 檔案，其中包含 MDM 伺服器的 URL。
+3. 伺服器需回傳一個 JSON 檔案，其中包含 MDM 伺服器的 URL。
 
 **實作需求**：
 
@@ -36,5 +36,5 @@ tags: ["帳號驅動註冊","服務偵測",".well-known","BYOD"]
 **替代方案**：
 
 1. **直接瀏覽註冊網址**：管理員可產出 MDM 註冊 URL（通常是 `https://your-server.jamfcloud.com/enroll`），讓使用者直接透過 Safari 下載描述檔。
-1. **QR Code 掃描**：將註冊網址製作成 QR Code 貼在教室或教員室，使用者掃描後即可快速跳轉至註冊入口。
-1. **預載配置**：對於學校資產，優先使用 **自動裝置註冊 (ADE)**，完全不需手動輸入帳號或偵測服務。
+2. **QR Code 掃描**：將註冊網址製作成 QR Code 貼在教室或教員室，使用者掃描後即可快速跳轉至註冊入口。
+3. **預載配置**：對於學校資產，優先使用 **自動裝置註冊 (ADE)**，完全不需手動輸入帳號或偵測服務。

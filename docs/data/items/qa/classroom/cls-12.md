@@ -21,9 +21,9 @@ tags: ["Apple Intelligence","寫作工具","數學備忘錄","防弊","iOS 18"]
 **設定路徑 (Jamf Pro)**：
 
 1. 進入 **Blueprints** 或 **Declarations**。
-1. 新增 **Restrictions** 宣告。
-1. 針對上述 AI 功能進行封鎖，DDM 具備「即時生效」特性，適合考試前快速派送。
-1. **未納管裝置**：若學生使用個人裝置，管理員可在 **ASM (Apple 校務管理)** 的「服務存取」中，針對租戶層級關閉管理式 Apple 帳號的 Apple Intelligence 權限。
+2. 新增 **Restrictions** 宣告。
+3. 針對上述 AI 功能進行封鎖，DDM 具備「即時生效」特性，適合考試前快速派送。
+4. **未納管裝置**：若學生使用個人裝置，管理員可在 **ASM (Apple 校務管理)** 的「服務存取」中，針對租戶層級關閉管理式 Apple 帳號的 Apple Intelligence 權限。
 
 **硬體門檻校對**：
 

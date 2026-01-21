@@ -32,8 +32,8 @@ tags: ["DDM", "App 管理", "宣告式", "自動更新", "iOS 26"]
 在支援 DDM 的 Jamf Pro 版本中：
 
 1. 進入 **Blueprints** > **App Management**
-1. 建立 **App Declaration**
-1. 設定 **Installation Behavior**：
+2. 建立 **App Declaration**
+3. 設定 **Installation Behavior**：
 
 * **Required (必要)**：強制安裝，且使用者無法移除。若使用者刪除，裝置會自動重裝
 * **Optional (選用)**：出現在 Self Service 供下載，使用者可移除

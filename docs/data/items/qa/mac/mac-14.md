@@ -73,8 +73,8 @@ echo "Printer $DISPLAY_NAME installed successfully."
 若印表機太舊不支援 AirPrint，必須安裝廠商驅動：
 
 1. **打包驅動**：下載廠商的 `.pkg` 驅動程式，上傳至 Jamf Pro。
-1. **安裝驅動**：建立一個政策先安裝該 `.pkg`。
-1. **對應 PPD**：
+2. **安裝驅動**：建立一個政策先安裝該 `.pkg`。
+3. **對應 PPD**：
 
 * 在執行 `lpadmin` 腳本時，需指定 PPD 檔案在本機的路徑 (通常在 `/Library/Printers/PPDs/...`)。
 * 語法：`-P "/Library/Printers/PPDs/Contents/Resources/HP_LaserJet_v10.gz"`

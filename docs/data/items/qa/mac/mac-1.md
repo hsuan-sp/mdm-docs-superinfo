@@ -22,11 +22,11 @@ tags: ["AD","身分認證","Jamf Connect","Platform SSO","No-Bind"]
 
  導致密碼無法同步或登入緩慢。
 
-1. **鑰匙圈 (Keychain) 災難**：AD 密碼變更後，Mac 本機的鑰匙圈密碼往往不會同步更新，
+2. **鑰匙圈 (Keychain) 災難**：AD 密碼變更後，Mac 本機的鑰匙圈密碼往往不會同步更新，
 
  導致使用者頻繁遭遇彈窗報錯。
 
-1. **Apple 政策**：Apple 已不再積極維護 AD Plugin，並建議轉向現代化驗證。
+3. **Apple 政策**：Apple 已不再積極維護 AD Plugin，並建議轉向現代化驗證。
 
 **近年的主流替代方案：**
 

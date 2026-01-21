@@ -22,8 +22,8 @@ tags: ["App 更新","裝置型分派","自動更新","DDM"]
 **傳統 MDM 設定（作為相容層）**：
 
 1. **授權模式**：必須為裝置型指派（與序號綁定）。
-1. **受監管模式**：iPad 必須處於受監管 (Supervised) 狀態。
-1. **Jamf 設定**：在 App 的分發設定中，開啟 **「自動更新應用程式 (Automatically Update App)」**。
+2. **受監管模式**：iPad 必須處於受監管 (Supervised) 狀態。
+3. **Jamf 設定**：在 App 的分發設定中，開啟 **「自動更新應用程式 (Automatically Update App)」**。
 
 * *註：在支援 DDM 的裝置上，此勾選框會自動觸發 DDM 宣告輸出。*
 

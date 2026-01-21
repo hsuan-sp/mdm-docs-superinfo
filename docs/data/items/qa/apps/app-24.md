@@ -19,8 +19,8 @@ tags: ["行動數據", "Wi-Fi", "App 下載", "流量管理", "iOS 26"]
 **Jamf Pro：**
 
 1. 進入 **Blueprints** 或 **App Declarations**
-1. 針對個別受管 App 進行定義
-1. 在部署宣告中設定 **「CellularDataPolicy」**：
+2. 針對個別受管 App 進行定義
+3. 在部署宣告中設定 **「CellularDataPolicy」**：
 
 * **Disallow (不允許)**：強制僅能透過 Wi-Fi 下載。
 * **Allow (允許)**：不分網路類型執行安裝。

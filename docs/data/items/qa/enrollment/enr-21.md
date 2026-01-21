@@ -23,7 +23,7 @@ tags: ["Apple Configurator","手動加入 ASM","過渡期"]
 * 或者是使用 iPhone 下載 **Apple Configurator App**（此方法適用於將 Mac 加入 ASM）。
 
 1. **帳號權限**：操作者需具備 ASM 的「裝置註冊經理」或「管理員」等權限。
-1. **裝置狀態**：iPad 必須處於 **「設定輔助程式 (Setup Assistant)」** 階段（即哈囉畫面）。
+2. **裝置狀態**：iPad 必須處於 **「設定輔助程式 (Setup Assistant)」** 階段（即哈囉畫面）。
 
  若已進入系統，需先抹除裝置。
 
