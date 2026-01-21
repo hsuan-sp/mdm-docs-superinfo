@@ -10,11 +10,8 @@ category: ["Enrollment", "Jamf"]
 Customization options:
 
 * **Setup Assistant**: Choose which screens to skip (e.g., skip "Apple Pay," "Siri," and "Terms of Service" screens) to speed up setup.
-
 * **Authentication**: Require LDAP or SSO login credentials to ensure only authorized users can set up the device.
-
 * **Identity**: Automatically set the device name and create a local administrator account during setup.
-
 * **Supervision**: Enforce supervision status and mandatory MDM profile installation.
 
 ## Analogy

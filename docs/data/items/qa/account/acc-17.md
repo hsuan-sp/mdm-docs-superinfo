@@ -19,7 +19,6 @@ tags: ["PSSO","FileVault","macOS 15+","身分驗證"]
 透過 macOS 15 引入的 Platform SSO 延伸功能，可以達成：
 
 1. **密碼同步**：將網路帳號（如 Microsoft Entra ID / Okta）的憑證直接寫入加密磁碟的解鎖清單中。
-
 1. **單一登入體驗**：使用者在開機畫面輸入組織帳號密碼，
 
  系統解鎖磁碟後會自動透傳身分至桌面，無需再次登入。
@@ -27,9 +26,7 @@ tags: ["PSSO","FileVault","macOS 15+","身分驗證"]
 **技術需求**：
 
 * **系統版本**：macOS 15 或更新版本（建議升級至 **macOS 26 Tahoe** 以獲得最穩定體驗）。
-
 * **IdP 支援**：您的身分提供者必須支援 Platform SSO 的最新協定（如 Microsoft Entra ID 已於 2025 年正式支援此功能）。
-
 * **MDM 設定**：需在 Jamf Pro 的「單一登入延伸功能」描述檔中，
 
  將 `Shared Device Keys` 與 `FileVault` 相關設定開啟。

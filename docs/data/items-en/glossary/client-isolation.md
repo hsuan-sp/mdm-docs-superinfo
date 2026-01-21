@@ -10,9 +10,7 @@ category: ["Network"]
 Effect on Managed Devices:
 
 * **Security**: Prevents connected devices from communicating directly with each other on the same Wi-Fi network, stopping the spread of malware.
-
 * **Functionality Loss**: It immediately disables peer-to-peer Apple services that rely on local discovery.
-
 * **Affected Services**: **AirPlay**, **AirDrop**, and student monitoring features in **Apple Classroom** will fail to connect if Client Isolation is enabled.
 
 ## Analogy

@@ -11,11 +11,8 @@ Introduced in **OS version 26**, this core DDM mechanism allows for more sophist
 Key management capabilities:
 
 * **Required Apps**: Automatically installed and self-healed (cannot be permanently removed by users).
-
 * **Optional Apps**: Available for users to download through a curated organizational portal.
-
 * **Update Pinning**: Administrators can freeze high-stakes testing apps at a specific version to ensure stability.
-
 * **Granular Control**: Detailed settings for forcing updates or disabling auto-updates per-application.
 
 ## Analogy

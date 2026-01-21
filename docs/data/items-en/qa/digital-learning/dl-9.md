@@ -27,5 +27,4 @@ Administrators can only trigger location tracking if a device is specifically ma
 ## Practical Advice:
 
 * School MDM **cannot see** a student's photos, messages, or browsing history (it can only filter domains, not see specific page content).
-
 * The location feature is used solely for "asset recovery," never for monitoring a student's movements after school hours. This complies with GDPR and national cybersecurity standards.

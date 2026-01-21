@@ -17,27 +17,20 @@ This eliminates the need to call support or provide invoices for managed hardwar
 ## Self-Service Unlocking Steps:
 
 1. Log in to **[Apple School Manager (ASM)](https://school.apple.com)**.
-
 1. Select **Devices** from the sidebar and search for the target serial number.
-
 1. Open the device details and look for the toolbar button (or "More" menu).
-
 1. Click **Turn Off Activation Lock** and confirm.
-
 1. **Success Flow**: Apple's servers will de-link the serial number from the previous account. Wait 2-10 minutes, then restart the device or perform a Restore via computer to bypass the password screen.
 
 ## Prerequisites and Limitations:
 
 * **Ownership**: The device must appear in your ASM device list.
-
 * **Management Mode**: This applies to Supervised devices assigned via **Automated Device Enrollment (ADE)** or added via Apple Configurator.
-
 * **Connectivity**: The device must be connected to Wi-Fi to communicate with Apple's activation servers and confirm the unlock.
 
 ## Why Prioritize This Method?
 
 * **No Red Tape**: No need for invoices, official documents, or waiting 3-10 days for Apple Support to review the case.
-
 * **Last Resort**: If a device was accidentally deleted from the MDM (losing the Bypass Code), ASM is your only remaining self-service path.
 
 ## Practical Advice:

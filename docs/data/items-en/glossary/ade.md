@@ -10,9 +10,7 @@ category: ["Enrollment"]
 The workflow involves:
 
 1. **Purchasing**: Devices are bought through an authorized reseller or Apple directly.
-
 2. **Assignment**: Serial numbers are automatically added to the organization's **Apple School Manager (ASM)** or **Apple Business Manager (ABM)** account.
-
 3. **Activation**: The moment the device is turned on and connected to Wi-Fi, it automatically downloads the school's MDM profile.
 
 This process is mandatory and cannot be skipped by the end-user, enabling true **"Zero-Touch"** deployment.

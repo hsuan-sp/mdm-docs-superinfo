@@ -15,9 +15,7 @@ tags: ["Writing Tools", "Apple Intelligence", "Exam Security", "iOS 26", "AI"]
 ## Potential for Misuse:
 
 * **Rewrite**: A student enters fragmented notes, and the AI expands them into a polished, professional paragraph.
-
 * **Proofread**: Automatically corrects grammar and syntax errors, making it impossible to grade a student's actual writing proficiency.
-
 * **Summarize**: In a reading comprehension test, the AI can instantly identify the main points of a long text, bypassing the student's need to read.
 
 ## Management Solutions:
@@ -26,9 +24,7 @@ tags: ["Writing Tools", "Apple Intelligence", "Exam Security", "iOS 26", "AI"]
 Create a Jamf Pro profile specifically for the exam period:
 
 * **Restrictions**: Disable **'Allow Writing Tools'**.
-
 * **Optional**: Also disable **'Allow Math Notes'** to prevent cheating in mathematics exams.
-
 * **Deployment**: Push this profile 15 minutes before the exam and remove it immediately after.
 
 **Strategy B: App Lock (Single App Mode)**
@@ -41,5 +37,4 @@ Using the **Classroom** app's **'App Lock'** feature is the most secure method:
 Remember that not all iPads have these features. Use Smart Groups to target only those that require the restriction:
 
 * **Need Restrictions**: iPad Air (M1/M2+), iPad Pro (M1/M4+), iPad mini 7 (A17 Pro).
-
 * **No Action Needed**: iPad 9, iPad 10 (These models lack the Neural Engine required for local Writing Tools).

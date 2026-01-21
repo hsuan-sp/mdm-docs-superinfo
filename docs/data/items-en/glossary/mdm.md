@@ -10,11 +10,8 @@ category: ["Core"]
 Core capabilities:
 
 * **Configuration**: Pushing settings for Wi-Fi, Email, and VPN.
-
 * **Security**: Enforcing passcodes, encryption, and restricting features like the camera.
-
 * **Deployment**: Installing and updating apps and books remotely.
-
 * **Inventory**: Reporting on device status, OS version, and installed software.
 
 MDM relies on the Apple Push Notification service (APNs) to maintain constant contact with devices.

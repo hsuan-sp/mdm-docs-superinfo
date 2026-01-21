@@ -32,5 +32,4 @@ Apple now recommends **Account-Driven User Enrollment**. Instead of downloading 
 ## Institutional Advice:
 
 * **For School iPads**: Never use User Enrollment. You need the ability to lock and track the device if it’s lost.
-
 * **For Staff/Shared personal use**: User Enrollment is the perfect balance for teachers who want to access school email on their personal iPhones without the school being able to see their private data.

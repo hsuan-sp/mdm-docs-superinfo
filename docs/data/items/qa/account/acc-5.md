@@ -26,7 +26,6 @@ tags: ["聯合驗證","Google Workspace","Microsoft Entra ID","SSO"]
  ASM 端的資料會即時同步，不需重複匯入 CSV。
 
 * **身分驗證接軌**：密碼變更與安全性驗證（如 2FA）均由原身分提供者處理，ASM 直接信任其結果。
-
 * **平台單一登入 (Platform SSO)**：macOS 15 以上版本及目前的 **macOS 26 Tahoe** 支援進階的單一登入功能，
 
  使用者在 Mac 登入畫面輸入組織帳號後，即可同時完成系統與所有 Apple 服務的授權，實現極佳的使用者體驗。
@@ -52,7 +51,6 @@ tags: ["聯合驗證","Google Workspace","Microsoft Entra ID","SSO"]
 **注意事項**：
 
 * **單一來源**：每個網域僅能關聯一個身分提供者（Google 或 Microsoft 擇一）。
-
 * **網路依賴**：由於密碼是向 Google/Microsoft 驗證，
 
  若該服務發生大規模中斷，使用者將暫時無法登入受管理的 Apple 服務。

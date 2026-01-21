@@ -11,9 +11,7 @@ tags: ["Multitasking", "iPadOS 26", "Productivity", "Split View"]
 Capabilities:
 
 * **Floating Windows**: Apps can be resized, overlapped, and moved freely, similar to macOS.
-
 * **Grouping**: Users can create "App Pairs" or workspaces (e.g., Safari + Notes for research) that are saved together.
-
 * **External Display**: Full support for extending the desktop to a monitor (up to 6K) rather than just mirroring, effectively turning the iPad into a desktop workstation.
 
 ## Analogy

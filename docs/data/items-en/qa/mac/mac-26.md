@@ -19,17 +19,13 @@ In Jamf Pro, you should establish these baseline groups for accurate deployment:
 ## Apple Silicon Group (Primary)
 
 * **Criteria**: `Architecture Type`
-
 * **Operator**: `is`
-
 * **Value**: `arm 64` (or `Apple Silicon`)
 
 ## Intel Mac Group (Legacy)
 
 * **Criteria**: `Architecture Type`
-
 * **Operator**: `is`
-
 * **Value**: `x86_64`
 
 ## Rosetta 2 Status Group
@@ -39,17 +35,12 @@ In Jamf Pro, you should establish these baseline groups for accurate deployment:
 ## 2. Recommended Deployment Strategy
 
 1. **Prioritize Universal Binaries**: If a developer provides a Universal installer (e.g., Google Chrome or Microsoft Office), use it. macOS will automatically run the correct architecture.
-
 1. **Architecture-Specific .pkgs**:
-
 * For professional software (Adobe Creative Cloud, specialized lab tools), upload separate packages: `App_v1.0_AppleSilicon.pkg` and `App_v1.0_Intel.pkg`.
-
   * Scope the former to the Apple Silicon group and the latter to the Intel group.
-
 1. **App Store Apps (VPP)**: This is the most efficient method. Apple’s servers automatically detect the client architecture and download the optimized version. Use VPP whenever possible.
 
 ## 3. Administrative Insight
 
 * **System Updates**: macOS 26 handles updates differently for each architecture. Always use **Declarative Device Management (DDM)** for OS updates; the system will autonomously verify and install the correct update files without manual intervention.
-
 * **Asset Tagging**: Add an "Expiring Support 2028" tag to your Intel Smart Group. This helps in visualising budget requirements for the final phase-out of the Intel fleet.

@@ -18,7 +18,6 @@ tags: ["VPP","Token","大量採購"]
 **過期前 Jamf Pro 會提供以下警告**：
 
 * 儀錶板顯示紅色或橘色警告標籤。
-
 * 管理員 Email 會收到到期通知（通常為到期前 30 天）。
 
 **更新流程**：
@@ -26,13 +25,9 @@ tags: ["VPP","Token","大量採購"]
 **步驟一：從 Apple 校務管理下載新的 Token**
 
 1. 登入 [school.apple.com](https://school.apple.com)，使用具備「管理員」或「App 與書籍管理者」權限的帳號。
-
 1. 點選左下角的 **帳號名稱**，進入 **「偏好設定 (Preferences)」**。
-
 1. 選擇 **「付款與帳單 (Payments and Billing)」** 分頁。
-
 1. 找到 **「App (Apps)」** 區塊。
-
 1. 在對應的「位置 (Location)」，例如 Jamf Pro_VPP 旁邊，
 
  點選 **「下載 (Download)」** 按鈕，將 **.vpptoken** 檔案儲存到電腦。
@@ -40,13 +35,9 @@ tags: ["VPP","Token","大量採購"]
 **步驟二：將新 Token 上傳至 Jamf Pro**
 
 1. 登入 Jamf Pro 管理介面。
-
 1. 前往 **「設定 (Settings)」>「全域管理 (Global Management)」>「大量採購 (Volume Purchasing)」**。
-
 1. 找到對應的位置 (Location) 項目，點選進入編輯畫面。
-
 1. 點選 **「上傳 (Upload)」**，選擇剛才下載的 .vpptoken 檔案。
-
 1. 儲存後，狀態應顯示為 **「有效 (Active)」** 並且正確更新過期時間。
 
 **常見問題**：
@@ -60,5 +51,4 @@ tags: ["VPP","Token","大量採購"]
 **實務建議**：
 
 * 將 VPP Token 更新日期設定在行事曆提醒，建議每年固定日期處理（例如暑假開學前）。
-
 * 更新 Token 後，建議執行一次 **「同步大量採購內容 (Sync Volume Purchasing Content)」** 以確保授權數量正確。

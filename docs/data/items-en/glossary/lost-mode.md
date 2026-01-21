@@ -10,11 +10,8 @@ category: ["Security"]
 When activated by IT:
 
 * **Lock Down**: The device is immediately locked and cannot be unlocked by the user.
-
 * **Messaging**: A custom message (e.g., "Property of School - Call 555-0199") is displayed on the Lock Screen.
-
 * **Tracking**: The device begins reporting its GPS coordinates to the MDM server, even if Location Services were previously disabled.
-
 * **Privacy**: Personal data remains encrypted and inaccessible during the lock state.
 
 ## Analogy

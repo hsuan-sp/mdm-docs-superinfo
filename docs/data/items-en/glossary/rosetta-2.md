@@ -10,9 +10,7 @@ category: ["macOS"]
 Function:
 
 * **Translation**: It instantly converts instructions written for Intel processors (x86_64) into instructions that Apple Silicon (ARM64) can understand.
-
 * **transparency**: Users typically don't realize it is running; apps just open and work.
-
 * **Deployment**: IT can use MDM to pre-install Rosetta 2 on all new Macs. This prevents users from seeing a confusing "You need to install Rosetta" prompt when they try to open older software like Adobe Photoshop or older printer drivers.
 
 ## Analogy

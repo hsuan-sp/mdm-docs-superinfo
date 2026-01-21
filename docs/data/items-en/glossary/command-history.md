@@ -10,9 +10,7 @@ category: ["Core"]
 Administrators use this history to:
 
 * **Audit**: Verify when a specific command (like "Lock Device" or "Clear Passcode") was issued.
-
 * **Troubleshoot**: Investigate error codes associated with failed app installations or profile deployments.
-
 * **Track Status**: Monitor whether a command is currently **Pending** (device offline), **Succeeded**, or **Failed**.
 
 ## Analogy

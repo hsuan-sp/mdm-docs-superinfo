@@ -10,9 +10,7 @@ category: ["Enrollment"]
 Apple’s **User Enrollment** framework facilitates BYOD by:
 
 * **Work Partitioning**: Creating a separate, encrypted file system for work data.
-
 * **Privacy Focus**: Institutional management is limited to the work partition.
-
 * **Separation**: The organization has **no access** to personal photos, messages, location data, or apps on the rest of the device.
 
 This achieves a critical balance between maintaining institutional security and protecting personal user privacy.

@@ -17,23 +17,16 @@ tags: ["Return to Service", "iOS 26", "Shared iPad", "App Preservation", "Rapid 
 ## Traditional Return to Service (v25 and earlier)
 
 1. Wipes all data and apps.
-
 1. Preserves Wi-Fi settings.
-
 1. Reboots and auto-enrolls in MDM.
-
 1. **MDM re-installs all apps** (This is the slowest part of the process).
 
 ## iOS 26 Enhanced Return to Service
 
 1. MDM sends the command and the device creates a **Filesystem Snapshot**.
-
 1. **Snapshot includes installed Managed App binaries.**
-
 1. User data (documents, photos, settings) is wiped.
-
 1. Device reboots and restores to the snapshot state.
-
 1. Device auto-enrolls; **Apps are re-licensed and ready immediately** without a single download.
 
 ## Efficiency Comparison
@@ -49,9 +42,7 @@ tags: ["Return to Service", "iOS 26", "Shared iPad", "App Preservation", "Rapid 
 ## Best Use Cases
 
 * **Semester Rotation**: Assigning a 1:1 iPad to a new student for the next term.
-
 * **Public/Shared iPads**: Periodic clearing of student data in libraries or computer labs.
-
 * **Bulk Deployment**: Resetting 30+ iPads at once without crashing the school's internet connection.
 
 ## Implementation in Jamf Pro
@@ -59,15 +50,11 @@ tags: ["Return to Service", "iOS 26", "Shared iPad", "App Preservation", "Rapid 
 When sending a **Return to Service** command:
 
 1. Select the **Clear Activation Lock** option.
-
 1. Select **Retain Wi-Fi Profile**.
-
 1. Select the new **Preserve Managed Apps** option.
 
 ## Key Limitations
 
 * Requires **iOS/iPadOS 26** or later.
-
 * Only works for apps deployed as **Managed Apps** via MDM.
-
 * If the app itself requires an update, it will still trigger a download after the reset.

@@ -10,9 +10,7 @@ category: ["Security"]
 Administrators can use MDM to:
 
 * **Disable Summaries**: Turn off AI-generated summaries in Safari, Mail, and Messages.
-
 * **Writing Tools Control**: Restrict the use of AI for rewriting or proofreading.
-
 * **Auditing**: Monitor the availability of AI features across the device fleet.
 
 This ensures students are reading, synthesizing, and writing content based on their own comprehension rather than relying on automated assistance.

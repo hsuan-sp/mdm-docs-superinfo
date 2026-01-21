@@ -17,15 +17,12 @@ According to the latest updates from WWDC 25, Apple has enhanced the `MigrateDev
 ## 1. Educational Environment Constraints:
 
 * **Profile Residue**: Non-wipe migrations often lead to residual "Restriction Profiles" or "Education Settings" from the old MDM conflicting with the new one, potentially breaking Apple Classroom.
-
 * **Data Integrity**: Over time, student devices accumulate cache and temporary files. Without a clean reset, new MDM configurations may not apply correctly.
-
 * **License Sync**: VPP app licenses may fail to transition smoothly, preventing subsequent updates.
 
 ## 2. Technical Context:
 
 * Devices must be updated to **Version 26 (iOS/iPadOS 26, macOS 26 Tahoe)** for the most stable "wipe-free" migration experience.
-
 * While this feature has been significantly bolstered since WWDC 2025, a clean reset remains the recommended option for complex educational deployments.
 
 ## Practical Advice:

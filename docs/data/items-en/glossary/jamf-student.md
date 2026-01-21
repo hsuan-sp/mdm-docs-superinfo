@@ -10,9 +10,7 @@ category: ["Jamf", "Education"]
 Key functions:
 
 * **Lesson Participation**: Allows students to receive websites, documents, and app links pushed directly from the **Jamf Teacher** app.
-
 * **Communication**: Provides a secure portal for students to ask for help or submit specific classroom assignments.
-
 * **Restrictions**: It is the endpoint that receives and executes "focused learning" commands, such as locking the iPad into a single required app for a test.
 
 ## Analogy

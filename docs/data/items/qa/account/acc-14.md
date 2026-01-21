@@ -32,13 +32,9 @@ tags: ["ADE","Server Token","自動裝置註冊"]
 **操作步驟：伺服器代號 (Server Token) 續約**：
 
 1. 登入 [school.apple.com](https://school.apple.com)。
-
 1. 點選左下角帳號名稱 > **「偏好設定」** > **「您的 MDM 伺服器」**。
-
 1. 選擇對應的伺服器名稱，點選 **「下載代號 (Download Token)」**。
-
 1. 登入 Jamf Pro，前往 **「設定」>「全域管理」>「裝置註冊 (Device Enrollment)」**。
-
 1. 點選您的伺服器項目進入，上傳新下載的代號檔案完成更新。
 
 **關於同步的現況**：

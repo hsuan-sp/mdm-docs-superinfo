@@ -25,19 +25,14 @@ tags: ["macOS 26", "Package", "DDM", ".pkg", "Jamf Policy"]
 ## Requirements & Limitations
 
 * **OS**: macOS 26 (Tahoe) or later.
-
 * **Package Quality**:
-
   * Must be a **Distribution Package** (not a basic component pkg).
-
   * Must be **signed** with a valid Apple Developer ID Installer certificate.
-
   * Must be **notarized** by Apple. MDM deployment in macOS 26 is extremely strict regarding security; unsigned or un-notarized packages will fail with a `VerificationFailed` error in the status channel.
 
 ## When to use each?
 
 * **Use DDM Packages**: For standard core software (Microsoft Office, Google Chrome, Adobe Acrobat) on macOS 26+ machines where you need high visibility of success rates.
-
 * **Use Jamf Policies**: For legacy machines (v25 and below), complex workflows (requires post-install scripts or UI interaction), or non-standard installers (DMGs).
 
 ## Expert Tip: The Notarization Check

@@ -11,9 +11,7 @@ tags: ["Wi-Fi 6", "802.11ax", "OFDMA", "Efficiency"]
 Key improvements for schools:
 
 * **OFDMA**: Allows one transmission to deliver data to multiple devices at once (like a delivery truck making multiple stops), reducing latency in classrooms with 30+ iPads.
-
 * **Target Wake Time (TWT)**: Allows devices to "sleep" and wake up only when scheduled to send data, significantly saving battery life on iPads and MacBooks.
-
 * **BSS Coloring**: Reduces interference from neighboring classrooms' Wi-Fi networks.
 
 ## Analogy

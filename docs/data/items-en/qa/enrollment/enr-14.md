@@ -21,29 +21,20 @@ When an administrator sends the "Wipe Device" command from Jamf Pro, they can in
 ## Prerequisites:
 
 * **Hardware**: iPad must be running iPadOS 17 or later.
-
 * **Management Status**: The device must be already enrolled via ADE and in a **Supervised** state.
-
 * **Configuration**: A corresponding PreStage Enrollment must be configured in Jamf Pro with the appropriate Wi-Fi settings.
 
 ## Recommended Steps:
 
 1. Search for and select the target device in Jamf Pro.
-
 1. Click **Management > Send Remote Commands > Wipe Device**.
-
 1. In the command options, check **Return to Service**.
-
 1. Specify the Wi-Fi configuration to be sent to the device.
-
 1. If Activation Lock might be present, ensure **Clear Activation Lock** is also checked.
-
 1. Send the command.
 
 ## Risks and Limitations:
 
 * **Network Dependency**: If the specified Wi-Fi SSID changes or the password is incorrect, the device will be stuck at the "Hello" screen, requiring manual intervention to solve the connectivity issue.
-
 * **Processing Time**: It typically takes 5 to 10 minutes from sending the command to the device returning to the Home Screen, depending on network speed and the size of the configurations/apps being downloaded.
-
 * **Data Erasure**: This feature still performs a full device wipe. Always ensure any critical instructional data has been backed up to the cloud before execution.

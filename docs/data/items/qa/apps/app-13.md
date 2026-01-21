@@ -25,13 +25,9 @@ tags: ["AppConfig","XML","變數代換","Jamf Pro"]
 您可以使用 Jamf Pro 的內建變數來動態填入每台裝置的專屬資訊，無需為每個人製作獨立的設定檔。
 
 * **常用變數範例**：
-
 * `$SERIALNUMBER`：自動填入裝置序號。
-
 * `$EMAIL`：自動填入使用者的 Email（需與 Inventory 連結）。
-
 * `$USERNAME`：自動填入使用者名稱。
-
 * `$JSSID`：填入 Jamf Pro ID。
 
 **實務範例 (設定 Zoom SSO 登入網域)**：

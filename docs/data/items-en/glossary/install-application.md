@@ -10,11 +10,8 @@ category: ["Core"]
 Operational flow:
 
 1. **Command Issuance**: The MDM server sends a directive containing the app's unique identifier (App Store ID or Bundle ID).
-
 2. **Device Reception**: The device acknowledges the command and checks its network status.
-
 3. **Execution**: The device contacts the **App Store** (or a local VPP distribution point) to securely download and install the software.
-
 4. **Acknowledgment**: Once complete, the device reports the successful installation status back to the MDM console.
 
 ## Analogy

@@ -10,11 +10,8 @@ category: ["Security"]
 Typical compliance checks include:
 
 * **Passcode**: Is a secure passcode set up and active?
-
 * **Version**: Is the device running an approved and patched OS version?
-
 * **Integrity**: Is the device free from unauthorized modifications (e.g., is not "Jailbroken")?
-
 * **Applications**: Are mandatory security apps installed and running?
 
 If a device drifts out of compliance, MDM can automatically trigger alerts or restrict its access to institutional resources like email or Wi-Fi.

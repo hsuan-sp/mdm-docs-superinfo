@@ -15,9 +15,7 @@ tags: ["Passcode Policy","Security","Compliance"]
 ## Common Requirements:
 
 1. **Minimum Length**: Increased from the default 4 digits to 6 or more.
-
 1. **Complexity**: May require letters or forbid simple sequences (like "123456").
-
 1. **Grace Period**: Once the profile is pushed, you typically have 60 minutes to update your passcode. If ignored, the device will force a pop-up prompt until the requirement is met.
 
 ## Practical Advice:

@@ -17,17 +17,11 @@ tags: ["網路優化","內容快取","頻寬管理","iCloud"]
 它是一台架設在校內的 Mac（如 Mac mini），用來暫存 **「Apple 官方伺服器」** 的內容。
 
 * **支援快取的內容**：
-
 * iOS / iPadOS 系統更新檔（這是最大的流量殺手）。
-
 * App Store 下載的 App。
-
 * 儲存在 iCloud Drive 的教材檔案（如 Keynote、Pages、PDF）。
-
 * 上傳到 iCloud 的照片與備份。
-
 * **不支援的內容**：
-
 * **YouTube 影片、Netflix、一般網頁瀏覽**。這些流量**不會**經過內容快取，依然會佔用對外頻寬。
 
 **實際效益**：

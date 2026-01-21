@@ -16,5 +16,4 @@ tags: ["iOS 18","Apple Intelligence","通知管理"]
 **實務建議：管理方式**
 
 * **限制模式**：管理員可透過 Restrictions Payload 關閉「Allow Intelligent Notification Preview」。
-
 * **教學建議**：鼓勵學生在「上課時間」專注模式中設定此功能，僅顯示最緊急的教育資訊，減少訊息干擾。

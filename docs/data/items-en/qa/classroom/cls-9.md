@@ -17,15 +17,12 @@ According to Apple's MDM protocol specifications:
 ## 1. Auto-Lock
 
 * **Manageable**: Administrators can use a configuration profile (Passcode Payload) to enforce a specific "Timeout before Auto-Lock" (e.g., force locking after 5 minutes of inactivity).
-
 * **Advice**: Set this to between 2 and 5 minutes. Too short interferes with reading; too long wastes battery.
 
 ## 2. Screen Brightness
 
 * **NOT Manageable**: Currently, there is no MDM command to lock brightness at a specific percentage (e.g., 50%).
-
 * This is by design to ensure accessibility and visibility across varying lighting environments.
-
 * **Advice**: Teachers should instruct students to enable "Auto-Brightness" or manually adjust it via Control Center.
 
 ## 3. Wallpaper

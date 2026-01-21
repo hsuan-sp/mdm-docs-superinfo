@@ -17,17 +17,13 @@ To ensure your school meets its Key Performance Indicators (KPIs), you must impl
 ## Barrier 1: Prevent App Deletion (Most Effective)
 
 1. In Jamf Pro, edit the **Restrictions** profile assigned to the student devices.
-
 1. Uncheck the box for **"Allow removing apps."**
-
 1. **The Result**: When a student long-presses any icon, the "Delete" option simply does not appear. This is the most robust way to ensure the agent remains on the device.
 
 ## Barrier 2: Automated Self-Healing
 
 1. In the Jamf Pro settings for the Jamf Trust app, ensure the Distribution Method is set to **"Install Automatically."**
-
 1. Make sure the app is "In Scope" for all student groups.
-
 1. Even if a student manages to bypass restrictions and delete the app, the device will detect the "Missing App" status during its next check-in and forcefully reinstall Jamf Trust in the background.
 
 ## Institutional Advice:

@@ -10,9 +10,7 @@ The **International Mobile Equipment Identity (IMEI)** is a unique 15-digit seri
 Key features:
 
 * **Hardcoded**: Unlike a phone number, the IMEI is permanently assigned to the hardware and cannot be easily changed or replaced.
-
 * **Cellular Only**: Exists only on devices with cellular capabilities (iPhones and cellular-enabled iPads).
-
 * **Security**: If a device is lost or stolen, the IMEI can be provided to carriers to **blocklist** the device, preventing it from ever connecting to a mobile network again, even if the SIM card is swapped.
 
 ## Analogy

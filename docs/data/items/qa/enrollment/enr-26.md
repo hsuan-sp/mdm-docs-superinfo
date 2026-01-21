@@ -17,39 +17,26 @@ tags: ["Return to Service", "iOS 26", "共享 iPad", "App 保留", "快速部署
 ## 傳統 Return to Service（iOS 25 及之前）
 
 1. 清除所有使用者資料和 App
-
 1. 保留 Wi-Fi 設定
-
 1. 裝置重新啟動
-
 1. 自動註冊至 MDM
-
 1. **重新下載並安裝所有 App**（耗時最長的步驟）
 
 ## iOS 26 增強版 Return to Service
 
 1. MDM 發送指令並建立檔案系統快照
-
 1. **快照包含已安裝的 Managed App 程式檔案**
-
 1. 清除使用者資料（文件、照片、設定等）
-
 1. 裝置重新啟動
-
 1. 回復至快照狀態
-
 1. 自動註冊至 MDM
-
 1. **App 重新授權並立即可用**（無需下載）
 
 ## 關鍵技術
 
 * 使用檔案系統快照 (Filesystem Snapshot)
-
 * 僅保留 App 的二進位檔案 (Binary)
-
 * 清除 App 內的使用者資料
-
 * 重新驗證 VPP 授權
 
 ## 實際效益比較
@@ -67,7 +54,6 @@ tags: ["Return to Service", "iOS 26", "共享 iPad", "App 保留", "快速部署
 ## 網路頻寬節省
 
 * **單一裝置**：假設教學 App 總計 10GB，可節省 10GB 下載流量
-
 * **批次處理**：假設同時重置 30 台 iPad，可節省 300GB 流量，避免網路壅塞
 
 ## 操作步驟（Jamf Pro 範例）
@@ -75,17 +61,12 @@ tags: ["Return to Service", "iOS 26", "共享 iPad", "App 保留", "快速部署
 ## 發送 Return to Service 指令
 
 1. 在 Jamf Pro 中選擇要重置的裝置
-
 1. 點選 **Management** > **Commands**
-
 1. 選擇 **Return to Service** 指令
-
 1. 設定以下選項：
 
 * ✅ **Clear Activation Lock**（清除啟用鎖定）
-
 * ✅ **Retain Wi-Fi Profile**（保留 Wi-Fi 設定）
-
 * ✅ **Preserve Managed Apps**（保留受管理的 App，iOS 26 新選項）
 
 1. 執行指令
@@ -93,9 +74,7 @@ tags: ["Return to Service", "iOS 26", "共享 iPad", "App 保留", "快速部署
 ## 注意事項
 
 * 僅適用於 iOS 26、iPadOS 26、visionOS 26 或更新版本
-
 * 舊版 iOS 裝置不會顯示「保留 App」選項
-
 * 需要在 MDM 發送 `DeviceConfigured` 指令後才會建立快照
 
 ## 適用情境
@@ -103,19 +82,14 @@ tags: ["Return to Service", "iOS 26", "共享 iPad", "App 保留", "快速部署
 ## 最佳使用時機
 
 * **學期交替**：學生畢業後，裝置分配給下一屆
-
 * **共享 iPad 定期重置**：圖書館或電腦教室的共用裝置
-
 * **故障排除**：遇到軟體問題需要重置，但不想重新下載所有 App
-
 * **批次重新部署**：學期結束統一重置所有裝置
 
 ## 不適用的情況
 
 * 需要變更 App 清單（新增或移除 App）
-
 * App 版本需要更新
-
 * 裝置狀態異常，需要完全清除
 
 ## 保留與清除的內容
@@ -123,21 +97,15 @@ tags: ["Return to Service", "iOS 26", "共享 iPad", "App 保留", "快速部署
 ## 會保留的項目
 
 * ✅ Managed App 的程式檔案（二進位）
-
 * ✅ Wi-Fi 設定（需勾選選項）
-
 * ✅ MDM 註冊資訊
 
 ## 會清除的項目
 
 * ❌ 使用者的個人資料（照片、影片、文件）
-
 * ❌ App 內的使用者資料（如 Word 編輯過的文件）
-
 * ❌ 瀏覽記錄、cookies
-
 * ❌ 使用者自行安裝的 App（非 Managed App）
-
 * ❌ 個人 Apple 帳號登入狀態
 
 ## 學校部署建議
@@ -145,19 +113,14 @@ tags: ["Return to Service", "iOS 26", "共享 iPad", "App 保留", "快速部署
 ## 規劃建議
 
 * **統一重置時間**：學期結束後的第一週集中處理
-
 * **確認 App 清單**：在建立快照前，確認所有需要的 App 都已安裝
-
 * **測試驗證**：先在少數裝置上測試，確認流程順利
-
 * **網路準備**：雖然節省下載流量，但仍需確保 Wi-Fi 連線穩定
 
 ## 與傳統重置的選擇
 
 * **App 清單不變**：使用 Return to Service 保留 App
-
 * **需要更新 App**：使用傳統方式，讓裝置重新下載最新版本
-
 * **混合使用**：部分常用 App 保留，其他透過 MDM 重新部署
 
 ## 效益評估
@@ -175,7 +138,5 @@ tags: ["Return to Service", "iOS 26", "共享 iPad", "App 保留", "快速部署
 **核心優勢**：
 
 * 大幅減少網路頻寬壓力
-
 * 可在課間休息時間快速完成
-
 * 不影響其他教學活動的網路使用

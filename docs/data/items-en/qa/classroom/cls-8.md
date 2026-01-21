@@ -17,17 +17,11 @@ tags: ["Network Optimization","Content Caching","Bandwidth Management","iCloud"]
 Content Caching is a feature on a local Mac (e.g., a Mac mini) that stores content from **Apple's official servers** locally.
 
 * **Supported Content**:
-
   * iOS / iPadOS system updates (the single largest bandwidth consumer).
-
   * Apps downloaded from the App Store.
-
   * Course files stored in iCloud Drive (e.g., Keynote, Pages, PDFs).
-
   * Photos and backups uploaded to iCloud.
-
   * **Unsupported Content**:
-
   * **YouTube videos, Netflix, and general web browsing.** This traffic does **not** go through Content Caching and will still consume outbound bandwidth.
 
 ## Practical Benefits:

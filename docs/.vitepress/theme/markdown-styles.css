@@ -1,170 +1,215 @@
 /* ============================================================
-   MDM 2026 專業文檔全要素增強樣式
-   整合：術語百科、FAQ、以及 VitePress 所有內建元件
+   MDM Support Site - Premium Typography System (2026)
+   Designed for: Legibility, Hierarchy, and Visual Excellence
    ============================================================ */
 
-/* --- 1. 核心排版與容器 --- */
+/* --- Base Variables & Core Layout --- */
 .vp-doc {
-  max-width: 860px;
+  max-width: 800px; /* Slightly narrower for better reading comfort */
   margin: 0 auto;
-  line-height: 1.8;
-  font-family: var(--vp-font-family-base);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.75;
+  color: var(--vp-c-text-1);
 }
 
+/* --- 1. Typography Hierarchy --- */
+
+/* H1: The Page Title */
 .vp-doc h1 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 800;
-  margin-bottom: 2rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
   color: var(--vp-c-text-1);
+  background: linear-gradient(120deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
-/* 針對 Q: 與 Answer 的層級感 */
+/* H2: Section Headers (Used for Q: and Term Definitions) */
 .vp-doc h2 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-top: 3.5rem;
-  margin-bottom: 1.2rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--vp-c-divider);
+  margin-top: 3.5rem; /* Breathable spacing */
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--vp-c-divider);
   color: var(--vp-c-text-1);
+  display: flex;
+  align-items: center;
 }
 
+/* Add a subtle indicator for H2 to guide the eye */
+.vp-doc h2::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 24px;
+  background-color: var(--vp-c-brand-1);
+  border-radius: 4px;
+  margin-right: 12px;
+}
+
+/* H3: Sub-sections */
 .vp-doc h3 {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
+  font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 600;
+  color: var(--vp-c-text-1);
 }
 
-/* --- 2. 修正後的列表系統 (重點解決截圖問題) --- */
+/* --- 2. Content & Readability --- */
+
+/* Paragraphs */
+.vp-doc p {
+  font-size: 1.0625rem; /* ~17px for readability */
+  margin-bottom: 1.5rem;
+  text-align: justify; /* Clean edges */
+  text-justify: inter-word;
+  color: var(--vp-c-text-2);
+}
+
+/* Lists - fixing the "ugly" list rendering */
 .vp-doc ul, .vp-doc ol {
-  padding-left: 1.5rem; /* 確保符號有足夠空間，不與文字重疊 */
+  padding-left: 1.25rem;
   margin-bottom: 1.5rem;
 }
 
 .vp-doc li {
-  margin-bottom: 0.8rem;
-  padding-left: 0.3rem;
-}
-
-/* 確保列表中的段落不會有額外的邊距，導致對齊失敗 */
-.vp-doc li p {
-  margin: 0.2rem 0;
-  text-align: justify;
-}
-
-/* --- 3. 段落與強調 (螢光筆效果) --- */
-.vp-doc p {
-  font-size: 1.05rem;
-  margin-bottom: 1.2rem;
-  text-align: justify;
-  text-justify: inter-character;
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
   color: var(--vp-c-text-2);
 }
 
-/* 讓第一個 Strong (通常是核心答案) 變成重點卡片感 */
-.vp-doc h2 + p > strong:first-child {
-  display: block;
-  font-size: 1.15rem;
+/* List markers styling */
+.vp-doc ul > li {
+  list-style-type: none;
+  position: relative;
+}
+
+.vp-doc ul > li::before {
+  content: "•";
   color: var(--vp-c-brand-1);
-  background: var(--vp-c-brand-soft);
-  padding: 1rem 1.2rem;
-  border-radius: 8px;
-  border-left: 5px solid var(--vp-c-brand-1);
-  margin-bottom: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  left: -1.25rem;
+  font-size: 1.2em;
+  line-height: 1.5;
 }
 
-.vp-doc strong {
-  color: var(--vp-c-text-1);
-  font-weight: 700;
+/* --- 3. Feature: Cards & Callouts (Q&A / Glossary Highlights) --- */
+
+/* The "Answer" block or "Definition" block often follows an H2. 
+   Let's make the FIRST paragraph after an H2 pop if it contains specific keywords or just generally. */
+
+/* Blockquotes - Enhanced for "Analogy" or "Notes" */
+.vp-doc blockquote {
+  background-color: var(--vp-c-bg-soft);
+  border: none; /* Remove default border */
+  border-left: 4px solid var(--vp-c-brand-1);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  color: var(--vp-c-text-2);
+  font-style: normal; /* Remove italic */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
 
-/* --- 4. 企業級表格 (完全保留並強化) --- */
+/* Specific styling for "Analogy" (白話文比喻) often found in Glossary */
+.vp-doc blockquote p:first-child strong {
+  color: var(--vp-c-brand-dark) !important;
+}
+
+/* Interactive/Important Badges */
+.important-badge {
+    background-color: var(--vp-c-danger-soft);
+    color: var(--vp-c-danger-1);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+/* --- 4. Tables --- */
 .vp-doc table {
-  display: table;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   margin: 2rem 0;
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--vp-c-divider);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .vp-doc th {
-  background-color: var(--vp-c-bg-alt);
-  color: var(--vp-c-text-1);
-  font-weight: 700;
-  padding: 14px 16px;
-  font-size: 0.9rem;
+  background-color: var(--vp-c-bg-mute);
   text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  padding: 12px 16px;
+  border-bottom: 2px solid var(--vp-c-divider);
 }
 
 .vp-doc td {
-  padding: 14px 16px;
-  border-top: 1px solid var(--vp-c-divider);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--vp-c-divider);
+  font-size: 0.95rem;
 }
 
-.vp-doc tr:nth-child(2n) {
+.vp-doc tr:last-child td {
+  border-bottom: none;
+}
+
+.vp-doc tr:hover td {
   background-color: var(--vp-c-bg-soft);
 }
 
-/* --- 5. 比喻區塊與引用 (優化截圖 0 的設計) --- */
-.vp-doc blockquote {
-  background-color: var(--vp-c-bg-soft);
-  border-left: 6px solid var(--vp-c-brand-1);
-  border-radius: 0 12px 12px 0;
-  padding: 1.2rem 1.5rem;
-  margin: 2rem 0;
-  color: var(--vp-c-text-2);
-}
-
-/* 專門給「白話文比喻」使用的樣式，若您想用黃色區隔 */
-.vp-doc blockquote:has(strong:contains("比喻")),
-.vp-doc blockquote:has(strong:contains("解說")) {
-  border-left-color: #fbbf24; /* 燈泡黃 */
-  background-color: rgba(251, 191, 36, 0.05);
-}
-
-/* --- 6. 行內代碼與代碼塊 (確保 VitePress 原始功能不壞) --- */
+/* --- 5. Code & Pre --- */
 .vp-doc :not(pre) > code {
-  background-color: var(--vp-c-bg-mute);
-  color: var(--vp-c-brand-1);
-  padding: 0.2em 0.5em;
-  border-radius: 6px;
   font-size: 0.9em;
-  border: 1px solid var(--vp-c-divider);
-}
-
-.vp-doc div[class*="language-"] {
-  border-radius: 12px;
-  margin: 1.5rem 0;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-/* --- 7. UI 小組件：Badge 標籤 (解決截圖中的「重要」標記) --- */
-.vp-doc .important-badge {
-  background-color: #ef4444;
-  color: #fff;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-weight: 700;
-  font-size: 0.8rem;
-  vertical-align: middle;
-  margin-right: 0.5rem;
-}
-
-/* 超連結 */
-.vp-doc a {
-  font-weight: 500;
   color: var(--vp-c-brand-1);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-bottom 0.2s;
+  background-color: var(--vp-c-bg-mute); /* Softer background */
+  padding: 0.2em 0.4em;
+  border-radius: 6px;
 }
 
-.vp-doc a:hover {
-  border-bottom: 1px solid var(--vp-c-brand-1);
+/* --- 6. Strong Emphasis (Highlighting) --- */
+.vp-doc strong {
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+/* Special Highlighting - mimicking a marker */
+/* If you want to use it manually via HTML or specific markdown patterns, keeping it simple for now */
+
+/* Special Highlighting - Q&A Answer Card */
+.vp-doc h2 + p > strong:first-child {
+  display: block;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--vp-c-brand-text);
+  background-color: var(--vp-c-brand-soft);
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--vp-c-brand-1);
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+/* --- 7. Images --- */
+.vp-doc img {
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem auto;
+  display: block;
 }

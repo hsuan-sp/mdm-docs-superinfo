@@ -17,17 +17,13 @@ By linking Apple School Manager (ASM) with your Google Workspace or Microsoft En
 ## Key Benefits:
 
 * **One Password**: Users don't need to remember a separate password for their iPad or Mac. They use their official campus login.
-
 * **Automatic Provisioning**: You can configure a **SCIM** bridge so that when a new student is added to Google or Microsoft, their Apple account is created automatically in ASM—no CSV imports required.
-
 * **Security Alignment**: Password policies and Multi-Factor Authentication (MFA) are managed by your primary identity provider (Google or Microsoft).
 
 ## Technical Requirements:
 
 1. **Domain Verification**: You must prove ownership of your school's email domain (e.g., `@tes.tp.edu.tw`) within ASM by adding a specific TXT record to your DNS settings.
-
 1. **IdP Connection**: An administrator must authorize the link within the ASM **Preferences > Directory Sync** section.
-
 1. **Conflict Resolution**: If staff members have previously used their school email to create *personal* Apple IDs, Apple will provide a 60-day window for them to change their personal email address to a private one before the school "takes over" that domain.
 
 ## Operational Note:

@@ -10,9 +10,7 @@ category: ["Apps"]
 Functional aspects:
 
 * **Automation**: The device automatically downloads and installs updates when connected to Wi-Fi and in an idle state.
-
 * **MDM Control**: Administrators can force-enable this feature to maintain version consistency across the fleet or disable it to manage bandwidth during critical times.
-
 * **Security**: Ensures that all devices have the latest security patches and features for their installed applications.
 
 ## Analogy

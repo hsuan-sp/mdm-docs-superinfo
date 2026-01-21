@@ -38,7 +38,6 @@ tags: ["資料回報","故障排除","Jamf Trust","使用率"]
 1. **描述檔狀態異常**：
 
 * **現象**：Jamf Trust App 雖已安裝，但缺少對應的 DNS Proxy 設定檔。
-
 * **對策**：在 Jamf Pro 對該裝置執行 **「更新資產 (Update Inventory)」**，
 
  或嘗試重新推送 Jamf Trust 設定。

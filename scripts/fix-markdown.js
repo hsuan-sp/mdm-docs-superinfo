@@ -16,9 +16,11 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// 目標目錄
-const DIRECTORIES = [
-  path.join(__dirname, '../docs/data'),
+const TARGET_DIRS = [
+  path.join(__dirname, '../docs/data/items'),
+  path.join(__dirname, '../docs/data/items-en'),
+  path.join(__dirname, '../docs/data/items/qa'),
+  path.join(__dirname, '../docs/data/items/glossary'),
 ];
 
 // 專有名詞映射表 (大小寫敏感)
@@ -265,6 +267,23 @@ function processFile(filePath) {
           indent = newIndent;
         }
 
+        // Merge logic from format_glossary: Tighten lists by removing empty lines between list items
+        if (isPrevEmpty && processedLines.length >= 2) {
+          const prePrevLine = processedLines[processedLines.length - 2];
+          const isPrePrevList = prePrevLine && prePrevLine.match(/^(?:(?:>\s*)+)?(\s*)([*+-]|\d+\.) /);
+          if (isPrePrevList) {
+            processedLines.pop(); // Remove the empty line to tighten the list
+            // Update prevLine to the one before the removed empty line
+            const newPrevLine = processedLines[processedLines.length - 1];
+            // Re-evaluate previous list state
+            const isPrevInListUpdated = newPrevLine && newPrevLine.match(/^(?:(?:>\s*)+)?(\s*)([*+-]|\d+\.) /);
+            if (isPrevInListUpdated) {
+                // If it was a list item of the same type, we don't need to do anything special here
+                // as the logic below will handle indentation etc.
+            }
+          }
+        }
+
         if (isPrevInList && !isOrdered && indent.length === 0 && !shouldPrependEmpty) {
             const prevMatch = prevLine.match(/^(?:(?:>\s*)+)?(\s*)([*+-]|\d+\.) /);
             const prevIndent = prevMatch[1].length;
@@ -331,7 +350,7 @@ function main() {
   console.log('🚀 開始執行 MDM Support Site Markdown 修正工具...');
   console.log('==================================================');
   const allFiles = [];
-  DIRECTORIES.forEach(dir => allFiles.push(...getAllMarkdownFiles(dir)));
+  TARGET_DIRS.forEach(dir => allFiles.push(...getAllMarkdownFiles(dir)));
   stats.total = allFiles.length;
   console.log(`📝 掃描到 files: ${stats.total}`);
   allFiles.forEach(file => {
@@ -347,3 +366,4 @@ function main() {
 }
 
 main();
+

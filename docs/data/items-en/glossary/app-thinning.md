@@ -8,9 +8,7 @@ category: ["Apps"]
 **App Thinning** is an Apple optimization technology designed to minimize the storage footprint of applications. It consists of three pillars:
 
 * **Slicing**: The system only downloads the specific assets (e.g., graphics for that specific retina scale) required for the target device.
-
 * **Bitcode**: Allows Apple to re-optimize an app binary for future hardware updates without the developer resubmitting the app.
-
 * **On-Demand Resources**: Allows parts of an app (like advanced levels in a game) to be downloaded only when needed.
 
 This significantly reduces download times and saves precious storage space on student iPads with limited capacity.

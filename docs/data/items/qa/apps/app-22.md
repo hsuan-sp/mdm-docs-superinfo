@@ -29,11 +29,8 @@ tags: ["Procreate","App 採購","VPP","通用購買","退款"]
 1. **VPP 退款申請**：
 
 * 管理員登入 **Apple 校務管理**，前往 **「偏好設定」>「付款與帳單」>「檢視購買記錄」**。
-
 * 或是直接登入 **reportaproblem.apple.com**，使用 ASM 管理式帳號登入。
-
 * 選擇該筆訂單，提出「要求退款 (Request a refund)」請求，理由註明「購買了錯誤的版本 (Purchased wrong version)」。
-
 * *注意：Apple 審核退款通常需要 24-48 小時做出決定，且不可撤回。*
 
 1. **重新採購**：

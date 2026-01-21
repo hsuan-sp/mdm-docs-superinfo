@@ -15,7 +15,6 @@ tags: ["Battery","Myths","MDM","Power Consumption"]
 Actually, MDM operates in an extremely energy-efficient way.
 
 * **Declarative Management (DDM)**: **2026 Mainstream Tech**. Devices now monitor their own state (e.g., whether a profile is active) and only report to the server when a "change" occurs. This drastically reduces the power loss associated with traditional MDM "polling."
-
 * **No Persistent Connection**: MDM does not need to maintain a continuous network connection or VPN tunnel.
 
 ## Jamf Trust Power Consumption:
@@ -23,9 +22,7 @@ Actually, MDM operates in an extremely energy-efficient way.
 The Jamf Trust app, which handles content filtering and data reporting, also uses very little power:
 
 * It uses DNS Proxy technology at the system level.
-
 * Background processes are highly optimized.
-
 * Under **Settings > Battery**, Jamf Trust typically accounts for less than 1% of usage.
 
 ## The Real Battery Killers:
@@ -42,11 +39,8 @@ The Jamf Trust app, which handles content filtering and data reporting, also use
 ## How to Check Battery Usage:
 
 1. Go to **Settings > Battery**.
-
 1. View usage for the "Last 24 Hours" or "Last 10 Days."
-
 1. Identify which apps are consuming the most power.
-
 1. If Jamf Trust or "MDM" exceeds 5%, contact your administrator.
 
 ## Practical Advice: Battery Health

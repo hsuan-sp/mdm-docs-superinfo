@@ -10,9 +10,7 @@ category: ["Network"]
 Use cases in education:
 
 * **Wi-Fi Security**: Often paired with **802.1X** to verify that a user is allowed on the network.
-
 * **VPN Access**: Checks credentials before allowing remote access to internal servers.
-
 * **Centralization**: Instead of every Wi-Fi router needing its own list of passwords, they all check a single central server (the RADIUS server) to approve access requests.
 
 ## Analogy

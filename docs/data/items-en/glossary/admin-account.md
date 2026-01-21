@@ -10,9 +10,7 @@ An **Admin Account** is a privilege level in macOS that grants full control over
 Users with Admin rights can:
 
 * **Install Software**: Add or remove applications at the system level.
-
 * **Modify Settings**: Change network configurations, security policies, and system-wide preferences.
-
 * **Manage Users**: Create, delete, or reset passwords for other local accounts.
 
 In managed environments, IT departments typically maintain a hidden **management Admin account** for maintenance while downgrading regular users to **"Standard User"** status to prevent unauthorized changes.

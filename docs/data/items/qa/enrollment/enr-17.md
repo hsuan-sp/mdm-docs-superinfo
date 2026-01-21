@@ -20,7 +20,6 @@ tags: ["啟用鎖定","Activation Lock","解鎖代碼","Apple 裝置 App"]
 若裝置在鎖定前已受 Jamf Pro 管理且為受監管狀態：
 
 1. 登入 Jamf Pro，找到該裝置紀錄。
-
 1. 在 **「清單 (Inventory)」>「安全性 (Security)」** 中，
 
  尋找 **「啟用鎖定繞過代碼 (Activation Lock Bypass Code)」**。
@@ -30,9 +29,7 @@ tags: ["啟用鎖定","Activation Lock","解鎖代碼","Apple 裝置 App"]
 **方案二：透過管理入口直接解除 —— 最新標準流程**
 
 1. 登入 [Apple 校務管理 (ASM)](https://school.apple.com)。
-
 1. 點選「裝置」，搜尋該序號。
-
 1. 若該裝置由組織擁有，可直接點選 **「關閉啟動鎖定 (Turn off Activation Lock)」**。
 
  完成後稍候片刻，將 iPad 重新開機即可直接進入設定。
@@ -42,7 +39,6 @@ tags: ["啟用鎖定","Activation Lock","解鎖代碼","Apple 裝置 App"]
 若裝置狀態異常，無法接收遠端指令：
 
 1. 使用 Mac 的 **Finder / Apple Configurator**，或 Windows 的 **Apple 裝置 App**。
-
 1. 將裝置進入復原模式進行回復。
 
  注意：此動作會清除資料，且完成後仍可能出現啟動鎖定畫面（需搭配方案一或二解鎖）。

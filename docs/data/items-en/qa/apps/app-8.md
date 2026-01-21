@@ -19,13 +19,11 @@ tags: ["Web Clip","Safari","Configuration Profile","Teaching Tools"]
 In your Jamf Pro configuration, ensure the "Full Screen" option is enabled.
 
 * **Effect**: Opening the link will hide the Safari address bar and toolbar.
-
 * **Benefit**: This makes the website look like a standalone native app, reducing the chance of students getting distracted by other sites.
 
 ## 2. Custom Icons and Visuals
 
 * **Recommended Specification**: Upload a **180x180 pixel PNG file** for maximum clarity.
-
 * **Transparency Support**: Modern systems support PNG icons with transparency, allowing for more professional-looking home screen layouts.
 
 ## 3. Prevent Removal (Non-removable)
@@ -37,5 +35,4 @@ For shared classroom devices, you can set the Web Clip as "Non-removable."
 ## Limitations & Risks:
 
 * **Browser Dependency**: Web Clips rely on the built-in Safari engine. If you have a restriction profile that completely disables the Safari app, Web Clips will not open.
-
 * **Internet Connectivity**: Since these are essentially web pages, the device must be online to load the content. For offline use, you must look for Progressive Web Apps (PWAs) that support offline caching or install native apps.

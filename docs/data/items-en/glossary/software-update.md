@@ -10,9 +10,7 @@ category: ["macOS", "Jamf"]
 Management controls (via DDM):
 
 * **Deferral**: IT can hide an update for up to 90 days to allow for testing.
-
 * **Enforcement**: IT can force an update to install by a specific date and time.
-
 * **Verification**: The device must reach out to Apple's servers to cryptographically verify the update package before installing.
 
 ## Analogy

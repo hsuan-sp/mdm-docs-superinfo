@@ -10,11 +10,8 @@ category: ["Education"]
 Key features:
 
 * **Handouts**: Teachers can create assignments that include app activities, PDFs, web links, or photos.
-
 * **Deep Linking**: Teachers can direct students to a specific chapter or activity *inside* a compatible educational app (e.g., "Open GeoGebra to Level 3").
-
 * **Progress Tracking**: Provides real-time data to teachers on student progress (e.g., "Time spent," "Quiz score," or "Completion status").
-
 * **Privacy**: Student data is encrypted and visible only to the teacher and the school.
 
 ## Analogy

@@ -10,9 +10,7 @@ category: ["Core"]
 In classroom environments, MDM can:
 
 * **Pre-configure permissions**: Specify which Apple TV a specific iPad is allowed to use.
-
 * **Security**: Pre-fill security passwords or set required verification steps.
-
 * **Automation**: Ensure that teachers can present without navigating complex Wi-Fi or Bluetooth settings.
 
 ## Analogy

@@ -10,11 +10,8 @@ A **Web Clip** is a configuration profile payload that places a website shortcut
 Features:
 
 * **Appearance**: Looks exactly like a regular app icon.
-
 * **Function**: When tapped, it launches Safari (or a dedicated full-screen web view) directly to a specified URL.
-
 * **Customization**: IT can define the icon image, the display name, and whether the clip is removable by the user.
-
 * **Use Case**: Commonly used for quick access to school portals, library catalogs, or IT help desks.
 
 ## Analogy

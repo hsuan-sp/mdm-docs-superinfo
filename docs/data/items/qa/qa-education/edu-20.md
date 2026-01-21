@@ -16,7 +16,6 @@ tags: ["密碼管理","帳號安全","排錯"]
 **解鎖 SOP：**
 
 1. **解除裝置鎖定**：先透過 Jamf Pro 發送「Clear Passcode」。
-
 1. **重置管理式 Apple 帳號 密碼**：管理員在 ASM 後台點選該學生帳號，
 
  點選「重置密碼 (Reset Password)」。

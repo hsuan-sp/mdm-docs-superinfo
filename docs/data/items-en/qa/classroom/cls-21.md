@@ -15,11 +15,8 @@ tags: ["AirPlay","Apple TV","Screen Sharing","Instructional Display"]
 ## Operation:
 
 1. In the **Classroom** app, tap on the student.
-
 1. Tap the **AirPlay** icon.
-
 1. Select the **Apple TV** or AirPlay-compatible display in the room.
-
 1. The student's screen will immediately be projected.
 
 ## Essential Security Settings:

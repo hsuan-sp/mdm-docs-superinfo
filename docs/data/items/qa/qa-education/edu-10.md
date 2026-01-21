@@ -34,39 +34,28 @@ tags: ["App Store","Self Service","限制"]
 **操作步驟**：
 
 1. 在主畫面找到 **「Self Service」** App（圖示通常是學校 Logo 或 Jamf 標誌）。
-
 1. 開啟 App，瀏覽可用的 App 與資源。
-
 1. 找到需要的 App，點選 **「安裝 (Install)」**。
-
 1. App 會自動開始安裝，**無需輸入任何 Apple 帳號 密碼**。
-
 1. 安裝完成後，App 會出現在主畫面。
 
 **Self Service 的優點**：
 
 * **無需密碼**：透過 VPP 授權自動處理。
-
 * **經過審核**：只有學校核准的 App 才會出現。
-
 * **即時更新**：管理員可隨時新增或移除 App。
-
 * **可自訂**：部分學校會在 Self Service 中放置教學手冊、網站捷徑等資源。
 
 **若需要的 App 不在 Self Service 中**：
 
 1. **向老師或 IT 人員反映**：說明 App 名稱與教學用途。
-
 1. **由學校統一購買**：透過 ASM/VPP 購買授權。
-
 1. **管理員加入 Self Service**：經審核後，該 App 會出現在 Self Service 供安裝。
 
 **實務建議：常見問題**
 
 * **Self Service 打不開**：確認裝置已連網，嘗試重啟 iPad。
-
 * **安裝按鈕是灰色的**：可能授權數量不足或 App 正在背景處理，稍後再試。
-
 * **找不到 Self Service App**：它可能被收進某個資料夾中，或在第二頁。
 
  也可使用 Spotlight 搜尋。

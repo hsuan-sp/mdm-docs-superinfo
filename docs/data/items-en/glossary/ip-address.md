@@ -10,17 +10,13 @@ An **IP Address** (Internet Protocol Address) is a unique numerical label assign
 It serves two primary functions:
 
 * **Identification**: uniquely identifying a specific host or network interface.
-
 * **Addressing**: Providing the location of the host in the network so data reaches the correct destination.
 
 ## Common Types:
 
 * **Dynamic IP (DHCP)**: Automatically and temporarily assigned by a server; the address may change over time.
-
 * **Static IP**: Manually and permanently assigned; the address remains constant.
-
 * **Private IP**: Used within the school's internal network (e.g., `10.x.x.x` or `192.168.x.x`).
-
 * **Public IP**: The address seen by the rest of the world on the internet.
 
 ## Analogy

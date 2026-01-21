@@ -27,31 +27,20 @@ Traditional monolithic imaging has been completely retired by Apple. The modern 
 ## Standard Reset SOP (Jamf Pro):
 
 1. **Send Command**:
-
 * Send the **"Wipe Computer"** command to the target computer group.
-
   * **Crucial**: For Apple Silicon and T2-equipped Macs, this command triggers **EACS (Erase All Content and Settings)**.
-
 1. **Execution (Within minutes)**:
-
 * The system instantly discards the encryption keys (Cryptographic Erase), making data unreadable within seconds.
-
   * The computer reboots to the "Hello" screen.
-
 1. **Automated Deployment (Zero-Touch)**:
-
 * The computer connects to the network (Ensure a non-authenticated Wi-Fi or wired network is provided).
-
   * **ADE (Automated Device Enrollment)** is triggered automatically.
-
   * The **PreStage Enrollment** settings are downloaded from Jamf Pro.
-
   * Administrator accounts are created, software is installed, and settings are applied automatically.
 
 ## Difference from Traditional Recovery Cards:
 
 * Traditional cards "restore on every reboot."
-
 * Modern Mac management uses EACS reset at the "end of a semester or project."
 
 If daily restoration is required (e.g., for library public kiosks), consider using **"Guest User"** mode (which deletes data upon logout) or specialized kiosk software (like Deep Freeze for Mac, though check compatibility with modern macOS).

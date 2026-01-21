@@ -17,13 +17,11 @@ tags: ["AirDrop","限制","課堂秩序","Jamf Teacher"]
 1. **完全停用 (最嚴格 - 適合考試)**：
 
 * 在限制描述檔中 **取消勾選「允許 AirDrop (Allow AirDrop)」**。
-
 * 結果：控制中心的 AirDrop 按鈕消失，任何人都無法傳送或接收檔案。
 
 1. **強制設為「僅限聯絡人」 (折衷)**：
 
 * 勾選 **「強制 AirDrop 為僅限聯絡人 (Force AirDrop to be treated as unmanaged destination)」**。
-
 * 由於學生 iPad 通常沒有彼此的聯絡人資料，這能有效阻擋陌生裝置的惡作劇，
 
  但仍保留與老師機（若有存聯絡人）傳檔的可能。
@@ -31,7 +29,6 @@ tags: ["AirDrop","限制","課堂秩序","Jamf Teacher"]
 1. **Jamf Teacher 臨時管控 (最為彈性)**：
 
 * 平時開放 AirDrop 方便交作業。
-
 * 上課時，老師在 Jamf Teacher App 按下 **「關閉 AirDrop」**，
 
  全班 AirDrop 功能即時停用；下課後自動恢復。

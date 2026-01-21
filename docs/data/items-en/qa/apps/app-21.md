@@ -17,11 +17,8 @@ tags: ["iOS 18","Hide App","Lock App","Restrictions"]
 Administrators must enable two new restrictions in the **Restrictions** profile for **Supervised** devices:
 
 1. **Disallow Locking Apps (allowLockedApps)**:
-
 * Prevents users from enabling Face ID/Touch ID verification for any app. **Note: Disabling this item also automatically disables the ability to hide apps.**
-
 1. **Disallow Hiding Apps (allowHiddenApps)**:
-
 * Prevents users from moving apps into the "Hidden" folder.
 
 ## Technical Detail:

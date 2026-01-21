@@ -23,13 +23,9 @@ In the mobile device app details page in Jamf Pro, switch to the **App Configura
 You can use Jamf Pro's built-in variables to dynamically fill in specific information for each device, eliminating the need for individual configuration files.
 
 * **Common Variables**:
-
   * `$SERIALNUMBER`: Automatically fills the device serial number.
-
   * `$EMAIL`: Fills the user's email (if linked in Inventory).
-
   * `$USERNAME`: Fills the username.
-
   * `$JSSID`: Fills the Jamf Pro ID.
 
 ## Practical Example (Setting Zoom SSO Domain):

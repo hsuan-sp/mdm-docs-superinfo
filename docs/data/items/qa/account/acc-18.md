@@ -21,7 +21,6 @@ tags: ["VPP","MDM 遷移","授權回收"]
  必須在舊 MDM 中刪除 App 派送任務，確保授權狀態變回「可用 (Available)」。
 
 1. **更新新 MDM 的 Token**：將該位置的 VPP Token 上傳至新 MDM (如 Jamf Pro)。
-
 1. **同步內容**：新 MDM 會立即抓取到 ASM 中剩餘的授權數量。
 
 **進階技術 (MDM Migration API)**：

@@ -26,7 +26,6 @@ Recovery Mode is powerful. If left unprotected, anyone with physical access can 
 Starting with macOS 11.5, MDM can set a Recovery Lock. When enabled, the Mac will prompt for the administrator-defined password before allowing entry into Recovery Mode.
 
 * **Jamf Pro Action**: Select a computer > **Management > Remote Commands > Set Recovery Lock**.
-
 * **Management Note**: Jamf Pro will escrow the password so you can retrieve it later from the inventory record.
 
 ## 2. Firmware Password (For Intel Macs)

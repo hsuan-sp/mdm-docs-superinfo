@@ -10,9 +10,7 @@ category: ["Security", "macOS"]
 Protected resources include:
 
 * **Hardware**: Camera, Microphone.
-
 * **Data**: Desktop folder, Documents folder, Photos, Downloads.
-
 * **System**: Screen Recording, Accessibility features.
 
 **MDM Role**: Administrators deploy a PPPC Payload to **pre-approve** trusted school apps (like Zoom or Teams) so they can access the camera/mic without users needing to click "Allow" on pop-up prompts. Note that for privacy reasons, MDM can *allow* access or *deny* access, but it cannot silently enable the Camera/Mic without *some* user awareness in certain contexts.

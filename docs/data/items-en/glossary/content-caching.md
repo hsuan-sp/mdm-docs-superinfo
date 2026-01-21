@@ -10,9 +10,7 @@ category: ["Network"]
 How it works:
 
 1. **Initial Download**: When the first device on a network downloads a new OS update or app, the "Caching Mac" saves a copy.
-
 2. **Local Delivery**: When subsequent devices request that same content, they pull it directly from the local Mac at LAN speeds.
-
 3. **Efficiency**: Dramatically reduces external internet usage and speeds up fleet-wide deployments.
 
 ## Analogy

@@ -11,9 +11,7 @@ The **Managed App Framework** (announced at WWDC 2025) is the modern successor t
 Capabilities:
 
 * **Dynamic Updates**: Allows apps to receive configuration changes (settings, server URLs) in real-time without needing a restart.
-
 * **Secure Channel**: Establishes a direct, encrypted pipeline between the MDM and the app for delivering sensitive items like identity certificates.
-
 * **Pull Model**: Apps can proactively request updated settings from the system, rather than waiting passively for a push.
 
 ## Analogy

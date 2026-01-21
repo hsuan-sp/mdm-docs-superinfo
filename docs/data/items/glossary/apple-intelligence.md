@@ -11,15 +11,12 @@ tags: ["Apple Intelligence", "AI", "寫作工具", "Image Playground", "Genmoji"
 關鍵功能包括：
 
 * **寫作工具 (Writing Tools)**：協助校對、改寫及摘要文字內容。
-
 * **視覺智慧 (Visual Intelligence)**：Genmoji (自訂表情符號) 與 Image Playground (影像生成)。
-
 * **郵件與訊息**：通知優先排序與智慧回覆。
 
 **技術規格**：
 
 * **隱私**：絕大多數運算在裝置端完成。複雜任務會使用 **私有雲端運算 (PCC)**，且不儲存任何資料。
-
 * **硬體需求**：僅限配備 **M 系列晶片** (M1 或更新) 或 **A17 Pro** (及更新) 的裝置。支援 iPad Pro/Air (M1+)。
 
 ## MDM 管理情境 (MDM Context)

@@ -10,11 +10,8 @@ category: ["Jamf", "Education"]
 Focus areas:
 
 * **Ease of Use**: A simplified interface designed to be managed by educators or dedicated IT staff with less engineering experience than Jamf Pro requires.
-
 * **Teacher Tools**: Includes the **Jamf Teacher** app, which gives classroom teachers direct, simple control over student iPads during their lessons.
-
 * **Integration**: Deeply synchronized with **Apple School Manager (ASM)** for easy roster and class management.
-
 * **Parental Control**: Includes a parent-facing app to extend management logic to the home environment.
 
 ## Analogy

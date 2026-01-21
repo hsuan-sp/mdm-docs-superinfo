@@ -17,9 +17,7 @@ This is a favorite "Eyes on Me" tool for teachers when they need the class to st
 ## How it Works:
 
 1. Tap the **"Lock"** icon in the Classroom toolbar.
-
 1. Every student iPad screen will immediately turn black and display a lock message (e.g., "This device is locked by your teacher").
-
 1. Touch input and physical buttons will be disabled until the teacher taps **"Unlock."**
 
 ## Technical Note:

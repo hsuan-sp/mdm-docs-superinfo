@@ -10,9 +10,7 @@ category: ["Security"]
 It allows devices to automatically:
 
 * **Request**: Ask for a new identity certificate.
-
 * **Verify**: Prove the device's identity to the Certificate Authority (CA).
-
 * **Renew**: Refresh expiring certificates without manual IT intervention.
 
 In modern Apple management, ACME is increasingly replacing the older **SCEP** protocol to ensure that device identity certificates remain valid and secure indefinitely.

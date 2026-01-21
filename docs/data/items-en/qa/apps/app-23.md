@@ -24,9 +24,7 @@ tags: ["DDM", "App Management", "Declarative", "Auto-Update", "iOS 26"]
 ## Supported Platforms
 
 * **iOS 26 / iPadOS 26**: Supports Declarative management for App Store and Custom apps.
-
 * **macOS 26 (Tahoe)**: Extends DDM support to **.pkg** installers.
-
 * **visionOS 26**: Full support for Declarative app management.
 
 ## Setup in Jamf Pro
@@ -34,25 +32,16 @@ tags: ["DDM", "App Management", "Declarative", "Auto-Update", "iOS 26"]
 On DDM-compatible versions of Jamf Pro:
 
 1. Navigate to **Blueprints > App Management**.
-
 1. Create an **App Declaration**.
-
 1. Set **Installation Behavior**:
-
 * **Required**: App is mandatory and unremovable. If a user tries to delete it, the device reinstall it automatically.
-
   * **Optional**: Appears in Self Service; user can remove it.
-
 1. Set **Update Behavior**:
-
 * **Automatic**: Always keeps the app at the latest version.
-
   * **Follow User Preference**: Respects the toggle in the local App Store settings.
 
 ## Deployment Strategy
 
 * **New Fleet**: For devices running v26+, we recommend shifting entirely to Declarative deployment to reduce server load and increase success rates.
-
 * **Mixed Fleet**: Use **Jamf Smart Groups** to distinguish between legacy (v25 and below) and modern (v26+) devices to apply the appropriate deployment method.
-
 * **Monitoring**: Leverage the real-time Status Channel to quickly identify failed installs and take corrective action.

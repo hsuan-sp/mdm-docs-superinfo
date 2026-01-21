@@ -11,9 +11,7 @@ tags: ["Wi-Fi 7", "802.11be", "MLO", "320MHz", "Low Latency"]
 Key innovations for education:
 
 * **320MHz Channels**: Doubles the bandwidth of Wi-Fi 6E, offering massive capacity for 8K video and AR/VR classrooms.
-
 * **Multi-Link Operation (MLO)**: Allows a device (like an iPhone 16) to connect to multiple bands (e.g., 5GHz and 6GHz) *simultaneously* to send and receive data. This dramatically reduces latency and connection drops.
-
 * **4K QAM**: Packs 20% more data into each signal transmission for higher peak speeds.
 
 ## Analogy

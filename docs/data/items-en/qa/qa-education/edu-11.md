@@ -28,5 +28,4 @@ These two methods are often confused, but they serve different purposes:
 ## Practical Advice:
 
 * **Use Guided Access** for quick, low-stakes classroom management where a teacher needs students to stay in one app for a short duration.
-
 * **Use Single App Mode** for formal exams or public-facing informational kiosks where manual tampering must be completely prevented.

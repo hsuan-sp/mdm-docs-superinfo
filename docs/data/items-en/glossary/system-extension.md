@@ -10,9 +10,7 @@ A **System Extension** is a modern macOS framework that allows software to exten
 Advantages over Kernel Extensions (Kexts):
 
 * **User Space**: Runs outside the kernel. If the extension crashes, the app restarts, but the whole Mac does *not* crash (no Kernel Panic).
-
 * **Security**: Easier for macOS to police, preventing malware from gaining "root" access to the core of the system.
-
 * **Ease of Management**: Can be installed and authorized via MDM without requiring a reboot into Recovery Mode.
 
 ## Analogy

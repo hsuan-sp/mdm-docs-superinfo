@@ -17,9 +17,7 @@ As long as your licenses are in your ASM backend, you can rotate them between di
 ## Standard Transfer Flow:
 
 1. **Reclaim Licenses in Old MDM**: This is the most critical step. You must remove the app assignment tasks in your old MDM to ensure the license status returns to "Available."
-
 1. **Update Token in New MDM**: Upload the VPP Token for that specific location to your new MDM (e.g., Jamf Pro).
-
 1. **Sync Content**: The new MDM will immediately pull the counts for all remaining licenses from ASM.
 
 ## Advanced Tech (MDM Migration API):

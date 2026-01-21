@@ -24,5 +24,4 @@ tags: ["Jamf Teacher","Apple Classroom","Tool Comparison"]
 ## Best Use Cases:
 
 * **During Lesson Monitoring**: Use **Apple Classroom** to keep an eye on active screens.
-
 * **Focus/Exam Mode**: Use **Jamf Teacher**. It is more powerful for hiding irrelevant apps (games, browsers) and doesn't rely on Bluetooth proximity.

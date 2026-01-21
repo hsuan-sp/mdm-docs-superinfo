@@ -10,9 +10,7 @@ category: ["Hardware"]
 In specialized assessment or highly controlled classroom scenarios, MDM can be used to:
 
 * **Restrict Bluetooth**: Disable the connection to the stylus entirely.
-
 * **Limit Gestures**: Restrict specific inputs like the **"Double-Tap"** feature (on Apple Pencil 2 and later) to prevent distractions.
-
 * **Standardize Input**: Ensure a uniform writing experience during digital exams.
 
 ## Analogy

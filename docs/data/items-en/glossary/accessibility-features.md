@@ -10,11 +10,8 @@ category: ["Apple"]
 Key tools include:
 
 * **Vision**: VoiceOver (screen reading), Zoom, and Magnifier.
-
 * **Hearing**: Live Captions, Made for iPhone hearing aid support.
-
 * **Motor**: Voice Control, Switch Control, and AssistiveTouch.
-
 * **Cognitive**: Assisted Access and Background Sounds.
 
 MDM allows administrators to **pre-configure** or lock these settings, ensuring that students with special needs have the correct tools ready as soon as they receive their device.
