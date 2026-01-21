@@ -8,6 +8,7 @@ category: ["Apple"]
 A **Push Notification** is a small, efficient data packet sent via the **Apple Push Notification service (APNs)** to wake a device.
 
 How MDM uses it:
+
 1. **Trigger**: The admin sends a command (e.g., "Install Microsoft Word").
 2. **Push**: The MDM server sends a "Poke" to APNs.
 3. **Wake**: APNs forwards this small packet to the iPad.

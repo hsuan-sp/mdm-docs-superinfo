@@ -22,7 +22,7 @@ Key features include:
 
 * **Hardware Requirements**: Requires devices with **M-series** chips (M1 or later) or **A17 Pro** chips and later.
 
-### MDM Context
+## MDM Context
 
 Organizations can choose to fully enable or disable Apple Intelligence via MDM. In education, it is highly recommended to establish strong usage policies—especially during exams, where "Writing Tools" should be disabled to prevent academic dishonesty.
 

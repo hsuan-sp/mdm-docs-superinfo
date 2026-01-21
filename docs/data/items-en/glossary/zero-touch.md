@@ -8,6 +8,7 @@ category: ["Enrollment"]
 **Zero-Touch Deployment** is a hands-off distribution model for Apple devices.
 
 Workflow:
+
 1. **Purchase**: School buys devices from Apple/Reseller.
 2. **Assign**: Devices are automatically added to **Apple School Manager (ASM)**.
 3. **Ship**: Unopened boxes are shipped directly to students' homes.

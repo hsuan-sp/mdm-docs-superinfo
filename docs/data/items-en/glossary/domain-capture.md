@@ -15,7 +15,7 @@ Requirements and Outcomes:
 
 * **Migration**: The affected user is notified and must either change the email address of their personal account (to a personal email like Gmail) or allow the account to be converted into an official **Managed Apple Account**.
 
-### MDM Context
+## MDM Context
 
 Domain Capture is a prerequisite for **Federated Authentication**. It ensures that no unauthorized personal accounts can exist using the school's official identity, preventing data confusion and improving security.
 

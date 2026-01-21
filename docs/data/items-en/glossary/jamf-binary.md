@@ -5,7 +5,7 @@ category: ["Jamf", "macOS"]
 
 ## Term Definition
 
-The **Jamf Binary** (frequently referred to as the `jamf` command-line tool) is the management agent that powers advanced control on macOS.
+The **Jamf Binary** (frequently referred to as the `Jamf` command-line tool) is the management agent that powers advanced control on macOS.
 
 Operational roles:
 

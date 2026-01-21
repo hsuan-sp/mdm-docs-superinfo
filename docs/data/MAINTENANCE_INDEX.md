@@ -2,19 +2,19 @@
 
 > 此文件由腳本自動生成。用於讓維護人員（或 AI）快速確認目前已存在的內容，避免重複新增。
 
-最後更新時間：2026/1/21下午3:01:00
+最後更新時間：2026/1/21下午5:16:11
 
 ## 術語表 (Glossary)
 
 目前共有 **223** 個術語：
 
 * **802.1X** (`802-1x.md`)
-* **AAS (Automatic Assessment Configuration)** (`aas-automatic-assessment-configuration.md`)
+* **AAC (Automatic Assessment Configuration)** (`aac-automatic-assessment-configuration.md`)
 * **ABM (Apple Business Manager)** (`abm-apple-business-manager.md`)
-* **Accessibility Features（輔助使用功能）** (`accessibility-features-輔助使用功能.md`)
+* **Accessibility Features (輔助使用功能)** (`accessibility-features-輔助使用功能.md`)
 * **Account-Driven Device Enrollment** (`account-driven-device-enrollment.md`)
-* **ACME (Automated Certificate Management Environment)** (`acme-automated-certificate-management-environment.md`)
-* **Activation Lock Bypass Code** (`activation-lock-bypass-code.md`)
+* **ACME (Automated Certificate Management Environment)** (`acme.md`)
+* **Activation Lock Bypass Code (啟用鎖定繞過代碼)** (`activation-lock-bypass-code.md`)
 * **Activation Lock (啟用鎖定)** (`activation-lock-啟用鎖定.md`)
 * **ADE (Automated Device Enrollment)** (`ade-automated-device-enrollment.md`)
 * **Admin Account (管理者帳號)** (`admin-account-管理者帳號.md`)
@@ -24,15 +24,15 @@
 * **AirPlay** (`airplay.md`)
 * **AirPrint** (`airprint.md`)
 * **Always-on VPN** (`always-on-vpn.md`)
-* **APNs (Apple Push Notification service)** (`apns-apple-push-notification-service.md`)
-* **App Config (App Configuration)** (`app-config-app-configuration.md`)
+* **APNs (Apple Push Notification service)** (`apns.md`)
+* **App Config (App Configuration)** (`app-config.md`)
 * **App Privacy Permissions Visibility (App 隱私權限可見度)** (`app-privacy-permissions-visibility.md`)
 * **App Store** (`app-store.md`)
-* **App Thinning（App 精簡化）** (`app-thinning-app-精簡化.md`)
+* **App Thinning (App 精簡化)** (`app-thinning-app-精簡化.md`)
 * **Apple Classroom (Apple 課堂)** (`apple-classroom-apple-課堂.md`)
 * **Apple Configurator** (`apple-configurator.md`)
 * **Apple Intelligence Management** (`apple-intelligence-management.md`)
-* **Apple Intelligence Reports (AI 報告管理)** (`apple-intelligence-reports-ai-報告管理.md`)
+* **Apple Intelligence Reports (Apple Intelligence 報告與管理)** (`apple-intelligence-reports-ai-報告管理.md`)
 * **Apple Intelligence (Apple 智慧)** (`apple-intelligence.md`)
 * **Apple Pencil** (`apple-pencil.md`)
 * **Apple Silicon** (`apple-silicon.md`)
@@ -111,9 +111,11 @@
 * **IP Address (IP 位址)** (`ip-address-ip-位址.md`)
 * **iPaaS** (`ipaas.md`)
 * **iPhone Mirroring (iPhone 鏡像)** (`iphone-mirroring-iphone-鏡像.md`)
+* **JamfAAD** (`jamf-aad.md`)
 * **Jamf binary** (`jamf-binary.md`)
 * **Jamf Connect** (`jamf-connect.md`)
 * **Jamf Data Policy** (`jamf-data-policy.md`)
+* **jamfHelper** (`jamf-helper.md`)
 * **Jamf Now** (`jamf-now.md`)
 * **Jamf Pro API** (`jamf-pro-api.md`)
 * **Jamf Pro** (`jamf-pro.md`)
@@ -124,9 +126,7 @@
 * **Jamf Student** (`jamf-student.md`)
 * **Jamf Teacher** (`jamf-teacher.md`)
 * **Jamf Trust (Jamf Private Access)** (`jamf-trust-jamf-private-access.md`)
-* **JamfAAD** (`jamfaad.md`)
-* **jamfHelper** (`jamfhelper.md`)
-* **JSON (JavaScript Object Notation)** (`json-javascript-object-notation.md`)
+* **JSON (JavaScript Object Notation)** (`json.md`)
 * **Kernel Extension (Kext)** (`kernel-extension-kext.md`)
 * **Keychain (鑰匙圈)** (`keychain-鑰匙圈.md`)
 * **LAPS (Local Administrator Password Solution)** (`laps-local-administrator-password-solution.md`)
@@ -137,7 +137,8 @@
 * **Location Services（定位服務）** (`location-services-定位服務.md`)
 * **Lost Mode (遺失模式)** (`lost-mode-遺失模式.md`)
 * **MAC Address** (`mac-address.md`)
-* **Managed App Framework (管理式 App 架構)** (`managed-app-framework.md`)
+* **Managed App Framework (管理式 App 框架)** (`managed-app-framework.md`)
+* **Managed Apple Account (管理式 Apple 帳號)** (`managed-apple-account-管理式-apple-帳號.md`)
 * **Managed Classes（管理化班級）** (`managed-classes-管理化班級.md`)
 * **Managed Device Attestation** (`managed-device-attestation.md`)
 * **Managed Open In** (`managed-open-in.md`)
@@ -230,7 +231,6 @@
 * **Zero-Touch Deployment** (`zero-touch-deployment.md`)
 * **Zero Trust** (`zero-trust.md`)
 * **Zero-Wipe MDM Migration (零抹除 MDM 遷移)** (`zero-wipe-mdm-migration.md`)
-* **管理式 Apple 帳號 (Managed Apple Account)** (`管理式-apple-帳號-managed-apple-account.md`)
 
 ---
 

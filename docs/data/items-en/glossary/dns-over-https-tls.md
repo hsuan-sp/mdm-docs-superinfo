@@ -16,7 +16,7 @@ Technical details:
 
 * **Goal**: Prevents eavesdropping, tampering, and "Man-in-the-Middle" attacks by ISPs or malicious actors on public networks.
 
-### MDM Context
+## MDM Context
 
 While beneficial for privacy, DoH can be used to bypass school content filters. Solutions like **Jamf Safe Internet** utilize a managed DoH/DoT gateway to provide filtering while still maintaining high encryption standards.
 

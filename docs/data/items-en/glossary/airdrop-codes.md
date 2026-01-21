@@ -16,7 +16,7 @@ Key features include:
 
 * **Privacy Protection**: Prevents unsolicited AirDrop requests and ensures files are only sent to the intended recipient.
 
-### MDM Context
+* **MDM Context**:
 
 Schools should evaluate how this affects their AirDrop policies. While it increases privacy, IT admins must ensure it doesn't bypass institutional restrictions. If MDM has disabled AirDrop entirely, the code functionality will also be unavailable.
 

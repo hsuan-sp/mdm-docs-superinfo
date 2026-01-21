@@ -16,7 +16,7 @@ Functional capabilities:
 
 * **Privacy Compliance**: Ensures that only approved educational apps can use the camera and microphone, even on a fully managed device.
 
-### MDM Context
+## MDM Context
 
 In a classroom, IT can allow a specific science app to use the camera for capturing experiments while keeping the camera disabled for social media or distracting apps.
 

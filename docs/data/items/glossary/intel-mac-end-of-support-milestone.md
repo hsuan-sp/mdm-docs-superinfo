@@ -1,29 +1,25 @@
 ---
 term: "Intel Mac End-of-Support Milestone (Intel Mac 支援終止里程碑)"
 category: ["Mac"]
-tags: ["Intel Mac", "支援終止", "Apple Silicon", "採購規劃", "汰換"]
+tags: ["Intel Mac", "支援終止", "Apple Silicon", "汰換計畫"]
 ---
 
 ## 術語定義
 
-macOS Tahoe 是最後支援 Intel Mac 的版本。支援的最後一批 Intel Mac 包括 2020 iMac、2019 16" MacBook Pro、2020 13" MacBook Pro (四個 Thunderbolt 3 埠)、2019 Mac Pro。未來 macOS 版本將僅支援 Apple Silicon。
+**Intel Mac 支援終止里程碑** 指的是 Apple 作業系統轉型的關鍵轉折點。自此之後，現代 macOS 將不再相容於搭載 Intel 處理器的舊款 Mac 電腦。
+
+關鍵時間軸與影響：
+
+* **最後支援版本**：**macOS Tahoe (版本 26)** 是支援 Intel 硬體的最後一個主要作業系統版本。
+
+* **受影響硬體**：包含 Apple 售出的最後一批 Intel 機型，如 2020 年款 iMac 與 2019 年款 Mac Pro。
+
+* **管理層級影響**：自 2027 年發布的 macOS 版本起，許多現代化 MDM 指令和進階資安功能將強制要求具備 **Apple Silicon**（M 系列晶片）才能執行。
 
 ## 白話文比喻
 
-就像「最後一班往舊市區的公車」。macOS Tahoe 是 Intel Mac 的終點站，之後的公車（新版 macOS）只開往新市區（Apple Silicon）。
+這就是舊式火車的**「最終終點站」**。
 
-## MDM 相關
+**macOS Tahoe** 是 Intel 晶片老火車可以跑的最後一站。過了這一站，所有的「新火車」（未來的新版 macOS）都只能在更新、更快的專屬軌道（M 系列晶片）上運行。
 
-學校需緊急評估 Intel Mac 的數量與汰換時程。2026 年後購買 Mac 必須是 Apple Silicon，且需規劃 Intel Mac 的逐步淘汰。
-
-## 財務影響
-
-若學校電腦教室仍有大量 Intel Mac，需編列預算逐步汰換，否則將無法升級未來的 macOS。
-
-## 實務建議
-
-* 2026 年：盤點 Intel Mac 清單
-
-* 2027 年：開始逐步汰換高使用率裝置
-
-* 2028-2029 年：完全轉換至 Apple Silicon
+對學校的預算編列而言，這意味著教室裡現有的 Intel Mac 已進入「退役倒數階段」，建議儘早規劃汰換，以免設備因無法更新而變得緩慢且暴露於資安風險中。

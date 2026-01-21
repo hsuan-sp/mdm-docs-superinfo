@@ -16,7 +16,7 @@ Key features include:
 
 * **User Insight**: Users can see exactly what has been authorized by IT, promoting a transparent security environment.
 
-### MDM Context
+* **MDM Context**:
 
 While this increases transparency, it may also lead to user questions about why certain apps have high-level permissions. IT should be prepared to explain these security authorizations to staff.
 

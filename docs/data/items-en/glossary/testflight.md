@@ -8,6 +8,7 @@ category: ["Apps"]
 **TestFlight** is Apple's platform for beta testing pre-release applications.
 
 Workflow:
+
 1. **Invite**: Developers send an email invitation or public link to testers.
 2. **Install**: Testers download the TestFlight app to install the beta version of the software.
 3. **Feedback**: Testers can take screenshots or send crash reports directly to the developer from within the app.

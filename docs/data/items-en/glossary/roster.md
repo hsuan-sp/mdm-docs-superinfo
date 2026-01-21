@@ -8,6 +8,7 @@ category: ["Education"]
 In educational technology, a **Roster** is the digital dataset defining the relationship between students, teachers, and classes.
 
 Data flow:
+
 1. **Source**: Originates from the school's **Student Information System (SIS)** (e.g., PowerSchool, iSAMS).
 2. **Sync**: Uploaded to **Apple School Manager** via SFTP or API.
 3. **Usage**: Populates apps like **Apple Classroom** and **Schoolwork**.

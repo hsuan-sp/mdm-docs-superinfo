@@ -19,6 +19,6 @@ This significantly reduces download times and saves precious storage space on st
 
 Think of this as **"Custom Tailoring"** for apps.
 
-Instead of delivering every possible version of an app (for iPad Air, iPad Pro, and Mac Mini) to your device, the App Store only sends the parts that actually fit your specific hardware.
+Instead of delivering every possible version of an app (for iPad Air, iPad Pro, and Mac mini) to your device, the App Store only sends the parts that actually fit your specific hardware.
 
 It's like buying a shirt in your exact size rather than taking home a giant box containing every size from XS to XL.

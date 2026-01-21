@@ -8,6 +8,7 @@ category: ["Enrollment"]
 **Return to Service** is a high-efficiency command for iOS and iPadOS devices that automates the device reset cycle.
 
 Workflow:
+
 1. **Wipe**: IT sends the "Erase Device" command.
 2. **Persist**: The command includes a "Return to Service" package (Wi-Fi profile + Language settings).
 3. **Reboot**: The device erases all user data.

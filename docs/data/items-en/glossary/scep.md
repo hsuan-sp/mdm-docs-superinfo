@@ -8,6 +8,7 @@ category: ["Security"]
 **Simple Certificate Enrollment Protocol (SCEP)** is a standard allowing devices to request and retrieve digital certificates automatically.
 
 The workflow:
+
 1. **Request**: The MDM pushes a "SCEP Profile" to the device.
 2. **Generation**: The device generates a private key and sends a request to the server.
 3. **Issuance**: The Certificate Authority (CA) verifies the request and issues a signed certificate.

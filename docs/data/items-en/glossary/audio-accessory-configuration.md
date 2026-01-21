@@ -16,7 +16,7 @@ Key management features:
 
 * **Shared iPad Optimization**: Designed specifically to ensure that accessory connections are cleared when a student logs out.
 
-### MDM Context
+## MDM Context
 
 This solves the long-standing problem of AirPods pairing conflicts in shared labs. It ensures that students don't accidentally connect to a set of headphones used by someone else in a previous class.
 

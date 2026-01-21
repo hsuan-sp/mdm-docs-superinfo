@@ -5,8 +5,20 @@ category: ["Core"]
 
 ## 術語定義
 
-Apple Configurator 是 Mac 上的實體部署工具。當裝置發生嚴重故障需重刷 (IPSW)，或需要將非經銷商購買的裝置手動加入 ABM 時，需使用 USB 線連接此工具操作。它是 MDM 無法觸及時的救援與初始化工具。
+**Apple Configurator** 是 macOS 上的實體管理與診斷工具。
+
+其主要用途包括：
+
+* **大量配置 (Bulk Provisioning)**：透過有線連接批量設定裝置。
+
+* **加入 ABM (ABM Addition)**：將非透過企業經銷商購買的裝置，手動加入 **Apple Business Manager**。
+
+* **裝置復原 (Restoration)**：重新安裝韌體 (IPSW) 或救援「死機 (Bricked)」的裝置。
+
+當裝置無法連網接受 MDM 管理時，它是 IT 人員的 **「終極救援手段 (Last Resort)」**。
 
 ## 白話文比喻
 
-這是 IT 的「實體工作台」。當 iPad 死機連不上網，或是買來的二手裝置不在公司管理名單內，就一定得拿 USB 線接上這台電腦，進行深度的重置或強制納管註冊。
+把這想像成 IT 人員的 **「實體工作台」**。
+
+如果一台 iPad 完全當機或連不上網路，你就必須拿一條 USB 線把它接上跑著 Apple Configurator 的 Mac 電腦。這就像是把車子拖回原廠 **「重置引擎」**，或是強制把在大賣場買的 iPad 註冊到學校的管理系統中。

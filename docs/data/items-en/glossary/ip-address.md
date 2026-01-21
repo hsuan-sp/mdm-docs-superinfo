@@ -13,7 +13,7 @@ It serves two primary functions:
 
 * **Addressing**: Providing the location of the host in the network so data reaches the correct destination.
 
-### Common Types:
+## Common Types:
 
 * **Dynamic IP (DHCP)**: Automatically and temporarily assigned by a server; the address may change over time.
 

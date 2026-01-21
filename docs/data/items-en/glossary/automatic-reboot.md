@@ -16,7 +16,7 @@ Configuration details:
 
 * **Protection**: Moving from **"Before First Unlock" (BFU)** to a cold-boot state makes the device significantly harder to compromise or decrypt if stolen.
 
-### MDM Context
+## MDM Context
 
 Schools should use this feature to ensure that lost or stolen devices automatically enter a more secure state. It is important to inform users that these reboots are an intentional security feature and not a hardware fault.
 

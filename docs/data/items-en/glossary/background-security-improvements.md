@@ -14,9 +14,9 @@ Key features:
 
 * **No Restarts**: Updates are applied silently in the background without requiring a full OS update or a device restart.
 
-* **Zer-Day Protection**: Ensures devices are protected against active exploits as soon as a fix is developed by Apple.
+* **Zero-Day Protection**: Ensures devices are protected against active exploits as soon as a fix is developed by Apple.
 
-### MDM Context
+## MDM Context
 
 School IT admins should note that these updates occur automatically and silently. This significantly improves the security posture of the fleet without requiring administrative action or disturbing class time.
 

@@ -1,17 +1,25 @@
 ---
-term: "Managed App Framework (管理式 App 架構)"
+term: "Managed App Framework (管理式 App 框架)"
 category: ["DDM"]
-tags: ["Managed App Framework", "App 設定", "憑證傳遞", "WWDC 2025"]
+tags: ["App Configuration", "憑證傳遞", "資安", "未來功能"]
 ---
 
 ## 術語定義
 
-WWDC 2025 宣布的新 App 管理框架，預計在後續系統版本中推出。允許 MDM 安全地傳遞設定、憑證、密碼給 App，取代傳統的 Managed App Configuration。使用更安全的加密通道，App 可動態請求設定更新。
+**Managed App Framework** (於 WWDC 2025 發表) 是傳統「受管理應用程式配置 (Managed App Configuration)」標準的現代化接班人。
+
+其核心能力包括：
+
+* **動態更新**：允許 App 在執行過程中即時接收設定變更（如伺服器網址、功能開關），完全**無需重新啟動**應用程式。
+
+* **安全通道**：在 MDM 與 App 之間建立一條直接且加密的管線，專門用來安全地傳遞身分憑證或金鑰等敏感資訊。
+
+* **主動式模型 (Pull Model)**：App 能夠主動向系統請求最新的設定狀態，而非像過去只能單純地被動等待 MDM 推播。
 
 ## 白話文比喻
 
-以前給 App 設定像「寫紙條塞進信箱」（Managed App Configuration），App 只能開啟時讀一次。新框架像「即時通訊」（Managed App Framework），App 可隨時跟 MDM 要最新設定，更彈性更安全。
+在過去，提供設定給 App 就像是**「把紙條塞進信箱」**——App 只有在開門（初次開啟程式）的時候，才能讀到信箱裡的內容。
 
-## MDM 相關
+全新的 **Managed App Framework** 則更像是**「即時通訊」**。
 
-未來趨勢，但尚未正式推出。建議先了解概念，待 Apple 正式發布後再規劃遷移。
+在你使用 App 的*過程中*，它能隨時與校園系統保持連線，瞬間獲取最新的資安更新或伺服器異動。它更快、更安全，這意味著你的教學 App 永遠能維持在完美的設定狀態，完全不需要你手動關閉再重開。

@@ -9,6 +9,7 @@ tags: ["Migration", "Zero-Wipe", "ABM", "ASM", "Transfer"]
 **Zero-Wipe MDM Migration** is a transition feature in iOS/iPadOS and macOS that allows devices to switch MDM servers without erasing user data.
 
 Mechanism (Declarative Device Management):
+
 1. **Unenroll**: The device gracefully leaves the old MDM server.
 2. **Transfer**: It retains user data (photos, files) and apps.
 3. **Re-enroll**: It immediately enrolls into the *new* MDM server designated in Apple School Manager.

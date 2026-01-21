@@ -16,7 +16,7 @@ Operational logic:
 
 * **Automation**: The device executes the task autonomously based on the server's declaration, ensuring fleet-wide compliance with security patches.
 
-### MDM Context
+## MDM Context
 
 Enforcement Deadlines are used for critical security remediations, such as mandatory macOS/iOS updates, to ensure 100% compliance without manual IT intervention or constant server polling.
 

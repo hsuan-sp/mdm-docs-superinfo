@@ -16,7 +16,7 @@ const t = computed(() => {
     if (currentUrl.includes('/qa/')) category = isZh ? '問答庫' : 'Q&A'
 
     // Unified Professional Bilingual Template with Examples
-    const unifiedBody = `=== PROFESSIONAL ISSUE REPORT / 頁面問題回報 ===
+    const unifiedBody = `=== PAGE ISSUE REPORT / 頁面問題回報 ===
 
 [PAGE CONTEXT / 頁面資訊]
 - Title / 標題: ${pageTitle}
