@@ -35,8 +35,8 @@ Manual enrollment is typically reserved for personal "Bring Your Own Device" (BY
 If you have a device that wasn't bought through school channels but you want full control over it:
 
 1. **Physical Link**: Connect the iPad to a Mac running **Apple Configurator**.
-2. **Prepare**: Use the "Prepare" wizard and select **"Add to Apple School Manager."**
-3. **Wipe & Bridge**: This process **will erase the device**. Once completed, the device enters a 30-day "provisional period" during which the user can still opt-out. After 30 days, the device is permanently merged into your ASM organization as a fully Supervised asset.
+1. **Prepare**: Use the "Prepare" wizard and select **"Add to Apple School Manager."**
+1. **Wipe & Bridge**: This process **will erase the device**. Once completed, the device enters a 30-day "provisional period" during which the user can still opt-out. After 30 days, the device is permanently merged into your ASM organization as a fully Supervised asset.
 
 ## Institutional Advice:
 

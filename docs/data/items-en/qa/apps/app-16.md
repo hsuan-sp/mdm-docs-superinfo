@@ -15,9 +15,9 @@ tags: ["Home Screen Layout","Restrictions","Folders"]
 ## Configuration Method:
 
 1. In Jamf Pro, go to **Mobile Devices > Configuration Profiles**.
-2. Select the **Home Screen Layout** payload.
-3. Define the contents of the **Dock** and specific **Pages**.
-4. You can create "Folders" to group similar apps (e.g., iWork productivity tools).
+1. Select the **Home Screen Layout** payload.
+1. Define the contents of the **Dock** and specific **Pages**.
+1. You can create "Folders" to group similar apps (e.g., iWork productivity tools).
 
 ## Important Constraints and Risks:
 

@@ -25,8 +25,8 @@ In addition to traditional inventory updates, macOS 26 recommends using the DDM 
 ## Setup Steps (SOP):
 
 1. **Navigate**: Go to **Settings > Computer Management > Extension Attributes**.
-2. **Add**: Click **+ New**.
-3. **Configure**:
+1. **Add**: Click **+ New**.
+1. **Configure**:
 
 * **Display Name**: e.g., "Last Reboot Time".
   * **Input Type**: Select **Script**.

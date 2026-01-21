@@ -18,11 +18,11 @@ tags: ["內容過濾","例外開放","YouTube","Jamf Trust","DNS Proxy"]
 **方法一：暫時將裝置排除 (Jamf Trust Scope Exclusion)**
 
 1. 登入 Jamf Pro。
-2. 找到 Jamf Trust 的 **「設定描述檔 (DNS Proxy / Content Filter)」**。
-3. 進入 **「範圍 (Scope)」>「排除 (Exclusion)」**。
-4. 將老師的教學 iPad 或特定班級群組加入排除清單。
-5. 儲存後，裝置下次 Check-in 時會移除過濾設定，即可瀏覽 YouTube。
-6. **重要**：課後務必移除排除，否則該裝置將長期失去防護與資料回報功能。
+1. 找到 Jamf Trust 的 **「設定描述檔 (DNS Proxy / Content Filter)」**。
+1. 進入 **「範圍 (Scope)」>「排除 (Exclusion)」**。
+1. 將老師的教學 iPad 或特定班級群組加入排除清單。
+1. 儲存後，裝置下次 Check-in 時會移除過濾設定，即可瀏覽 YouTube。
+1. **重要**：課後務必移除排除，否則該裝置將長期失去防護與資料回報功能。
 
 **方法二：使用 AirPlay 投影教師機**
 

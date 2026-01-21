@@ -17,11 +17,11 @@ tags: ["Managed Apple Account", "DLP", "iOS 26", "Organizational Devices", "WWDC
 This is an organization-level security policy that must be enabled by an **Administrator**:
 
 1. Log in to **Apple School Manager (ASM)** or **Apple Business Manager (ABM)**.
-2. Go to **Access Management**.
-3. Select **Apple Services**.
-4. Find the option: **'Apple Account on Organization Devices'**.
-5. Enable the option to **'Allow Only Managed Apple Accounts to Sign In'**.
-6. Save settings.
+1. Go to **Access Management**.
+1. Select **Apple Services**.
+1. Find the option: **'Apple Account on Organization Devices'**.
+1. Enable the option to **'Allow Only Managed Apple Accounts to Sign In'**.
+1. Save settings.
 
 Once configured, this policy automatically applies to all eligible devices owned by the organization.
 

@@ -31,8 +31,8 @@ tags: ["Connectivity", "Backup Plan", "Offline Usage", "Network Instability"]
 ## Administrator Backup SOP
 
 1. **Bluetooth Awareness**: Remind teachers that during an outage, they must keep Bluetooth ON for "Classroom" app peer-to-peer functions to work.
-2. **Hardwire Kits**: Keep a set of Lightning/USB-C to Ethernet adapters and a laptop with **Apple Configurator** to manually inject Wi-Fi profiles if a device loses its configuration during a prolonged outage.
-3. **Offline Inventory**: Maintain a physical or local PDF copy of your asset list (Serial Numbers and Wi-Fi MAC addresses) for manual troubleshooting.
+1. **Hardwire Kits**: Keep a set of Lightning/USB-C to Ethernet adapters and a laptop with **Apple Configurator** to manually inject Wi-Fi profiles if a device loses its configuration during a prolonged outage.
+1. **Offline Inventory**: Maintain a physical or local PDF copy of your asset list (Serial Numbers and Wi-Fi MAC addresses) for manual troubleshooting.
 
 ## Summary Advice
 

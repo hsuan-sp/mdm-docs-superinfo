@@ -40,9 +40,9 @@ The device needs to reach both the Jamf server and Apple's servers. Ensure the c
 * **Clear Pending Commands**:
 
 1. Open the device record in Jamf Pro.
-2. Go to **History > Management Commands**.
-3. If there are many **Pending** or **Failed** commands, click **Cancel All Pending and Failed Commands**.
-4. Click **Update Inventory** in the top right to trigger a fresh sync.
+1. Go to **History > Management Commands**.
+1. If there are many **Pending** or **Failed** commands, click **Cancel All Pending and Failed Commands**.
+1. Click **Update Inventory** in the top right to trigger a fresh sync.
 
 **Advanced Troubleshooting**:
 

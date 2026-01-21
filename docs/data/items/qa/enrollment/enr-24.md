@@ -33,8 +33,8 @@ tags: ["Enforcement Deadline", "DDM", "強制執行", "截止日期", "合規"]
 ## 軟體更新截止日設定
 
 1. 進入 **Devices** > **Blueprints** 或 **Computers** > **Blueprints**
-2. 建立或編輯 **Software Update Declaration**
-3. 設定更新目標：
+1. 建立或編輯 **Software Update Declaration**
+1. 設定更新目標：
 
 * 指定目標 iOS/macOS 版本
 * 或選擇「最新版本」
@@ -49,8 +49,8 @@ tags: ["Enforcement Deadline", "DDM", "強制執行", "截止日期", "合規"]
 ## MDM 遷移截止日設定
 
 1. 在 ASM/ABM 中設定遷移目標 MDM
-2. 設定 **Enrollment Deadline**
-3. 裝置會自動處理遷移流程
+1. 設定 **Enrollment Deadline**
+1. 裝置會自動處理遷移流程
 
 ## 使用者體驗時間軸
 

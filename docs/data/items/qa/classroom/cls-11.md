@@ -27,9 +27,9 @@ tags: ["MAC 位址","專用 Wi-Fi 位址","隱私功能","網路管理"]
 **MDM 解決方案 (全校統一關閉)**：
 
 1. 在 Jamf Pro 編輯 **「Wi-Fi」** 設定描述檔。
-2. 進入 Wi-Fi Payload 設定頁面。
-3. 勾選 **「停用 MAC 位址隨機化 (Disable MAC Address Randomization)」** (或稱 Disable Private Address)。
-4. 將此描述檔派送至裝置。
+1. 進入 Wi-Fi Payload 設定頁面。
+1. 勾選 **「停用 MAC 位址隨機化 (Disable MAC Address Randomization)」** (或稱 Disable Private Address)。
+1. 將此描述檔派送至裝置。
 
 **效果**：
 

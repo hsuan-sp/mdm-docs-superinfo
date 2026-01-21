@@ -35,7 +35,7 @@ ICT 資訊支援團隊應在 Jamf Pro 中建立以下基準群組：
 ## 二、 部署策略建議
 
 1. **優先使用 Universal 二進位檔**：如果廠商提供 Universal 版（如 Chrome、Office），請直接上傳該版本，Jamf 會自動適配。
-2. **區分 PKG 派送**：
+1. **區分 PKG 派送**：
 
 * 針對專業軟體（如 Adobe 系列、特定實驗軟體），請分別製作 `Soft_v1.0_AppleSilicon.pkg` 與 `Soft_v1.0_Intel.pkg`。
 * 在政策中，將前者派送給 Apple Silicon 群組，後者派送給 Intel 群組。

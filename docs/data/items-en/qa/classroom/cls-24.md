@@ -37,8 +37,8 @@ Allow multitasking normally, but lock it down when focus is required.
 * **Action**:
 
 1. Select the class or specific students.
-2. Select **Open App** and check **Lock in App after opening**.
-3. Select the required app (e.g., Keynote).
+1. Select **Open App** and check **Lock in App after opening**.
+1. Select the required app (e.g., Keynote).
 
 * **Effect**: The student’s iPad is locked into that specific app in Full Screen mode. They cannot switch to windows or other apps until the teacher clicks "Unlock."
 

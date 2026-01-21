@@ -53,10 +53,10 @@ tags: ["macOS 26", "Package", "DDM", ".pkg", "Jamf Policy"]
 ## Jamf Pro 設定步驟
 
 1. 確保 .pkg 已由 Apple Developer ID 正確簽署
-2. 在 Jamf Pro 建立 **Package Declaration**（位於 Blueprints 或 Packages 區域）
-3. 上傳 .pkg 檔案至 Jamf 分發點
-4. 設定部署條件（可選）：例如僅在磁碟空間 > 10GB 時安裝
-5. 指派給目標裝置或裝置群組
+1. 在 Jamf Pro 建立 **Package Declaration**（位於 Blueprints 或 Packages 區域）
+1. 上傳 .pkg 檔案至 Jamf 分發點
+1. 設定部署條件（可選）：例如僅在磁碟空間 > 10GB 時安裝
+1. 指派給目標裝置或裝置群組
 
 ## 專家建議
 

@@ -34,9 +34,9 @@ Many IT teams follow the "N-1" principle: keeping production environments (stude
 ## School Update Strategies:
 
 1. **Update Deferral**: MDM can set "Skip software updates for X days," so devices don't see the notification immediately.
-2. **Pilot Groups**: Updates are pushed to IT or volunteer devices first for a week of validation.
-3. **Scheduled Updates**: Updates are pushed via MDM during non-teaching hours (nights or weekends).
-4. **Version Blocking**: If a specific version has a known bug, it can be temporarily blocked.
+1. **Pilot Groups**: Updates are pushed to IT or volunteer devices first for a week of validation.
+1. **Scheduled Updates**: Updates are pushed via MDM during non-teaching hours (nights or weekends).
+1. **Version Blocking**: If a specific version has a known bug, it can be temporarily blocked.
 
 ## Practical Advice:
 

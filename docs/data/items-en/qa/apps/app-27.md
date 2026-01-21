@@ -14,7 +14,7 @@ tags: ["App Update","Jamf Pro","Manual Update","Auto Update","DDM"]
 
 To ensure classroom iPads remain up-to-date, it is recommended to combine automated checking with manual enforcement when necessary.
 
-### 1. Configuring Automated Updates and Sync Schedules
+## 1. Configuring Automated Updates and Sync Schedules
 
 Go to **Devices > Mobile Device Apps** and select the app you wish to manage. In the **"General"** tab, configure the following:
 
@@ -22,15 +22,15 @@ Go to **Devices > Mobile Device Apps** and select the app you wish to manage. In
 * **Automated Enforcement**: Check **「自動強制執行App更新」** (Automatically force app updates). The system will then automatically send update commands to mobile devices whenever a new version is detected.
 * **Sync Time**: Adjust the **「App Store Sync Time」** to a time outside of school hours (e.g., midnight) to avoid peak network traffic.
 
-### 2. Manually Forcing App Updates (Force Update)
+## 2. Manually Forcing App Updates (Force Update)
 
 For urgent updates, navigate to **Devices > Mobile Device Apps** and select the target app. You can trigger an update manually without waiting for the schedule:
 
 1. Go to the detailed information page for the app.
-2. Scroll down to the **「強制應用程式更新」** (Force App Update) section.
-3. Click the **`Force Update`** button. Jamf Pro will immediately send a force update command to all devices within the app's **"Scope."**
+1. Scroll down to the **「強制應用程式更新」** (Force App Update) section.
+1. Click the **`Force Update`** button. Jamf Pro will immediately send a force update command to all devices within the app's **"Scope."**
 
-### 3. Considerations for 2026: DDM and Update Constraints
+## 3. Considerations for 2026: DDM and Update Constraints
 
 In iOS 26 and the latest system environments, update execution is still subject to the following rules:
 

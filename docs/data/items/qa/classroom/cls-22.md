@@ -20,7 +20,7 @@ tags: ["網路架構","VLAN","Bonjour","mDNS"]
 請網管人員在核心交換器或無線控制器 (WLC) 上設定：
 
 1. **啟用 mDNS 轉發**：允許 Bonjour 封包在 VLAN 之間流動。
-2. **放行服務**：特別是 `_classroom._tcp` (Apple Classroom) 與 `_airplay._tcp` (AirPlay) 服務。
+1. **放行服務**：特別是 `_classroom._tcp` (Apple Classroom) 與 `_airplay._tcp` (AirPlay) 服務。
 
 **替代方案**：
 

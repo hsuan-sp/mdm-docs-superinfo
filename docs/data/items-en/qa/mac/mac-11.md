@@ -21,15 +21,15 @@ Apple requires all macOS software to undergo **Notarization** to ensure it is fr
 This is the standard way to bypass the block without lowering overall system security.
 
 1. Find the app in **Finder**.
-2. Hold the **Control** key (or right-click) and select **Open**.
-3. The resulting dialog will now include an **Open** button. Once selected, the system adds this app to a local allowlist.
+1. Hold the **Control** key (or right-click) and select **Open**.
+1. The resulting dialog will now include an **Open** button. Once selected, the system adds this app to a local allowlist.
 
 ## Option 2: System Settings Override
 
 1. When the block message appears, click "OK."
-2. Go to **System Settings > Privacy & Security**.
-3. Under the "Security" section, look for "[App Name] was blocked" and click **Open Anyway**.
-4. Authenticate with an administrator password to run the app.
+1. Go to **System Settings > Privacy & Security**.
+1. Under the "Security" section, look for "[App Name] was blocked" and click **Open Anyway**.
+1. Authenticate with an administrator password to run the app.
 
 ## Administrator Solutions (Jamf Pro):
 

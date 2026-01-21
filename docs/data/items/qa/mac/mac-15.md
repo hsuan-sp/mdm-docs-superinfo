@@ -21,7 +21,7 @@ tags: ["Office","Microsoft 365","Serializer","大量授權","Jamf App Installers
 電腦教室必須讓學生「坐下即用」，不能要求學生登入微軟帳號。
 
 1. **安裝主程式**：透過 Jamf Pro 的 **「App Installers」** 派送 Microsoft Office 365。
-2. **啟用授權 (關鍵)**：
+1. **啟用授權 (關鍵)**：
 
 * 前往微軟大量授權中心 (VLSC) 下載 **「Volume License Serializer (VL Serializer)」** 的 .pkg 檔。
 * 將此 .pkg 上傳至 Jamf Pro 並建立 **「政策 (Policy)」** 安裝。
@@ -34,7 +34,7 @@ tags: ["Office","Microsoft 365","Serializer","大量授權","Jamf App Installers
 行政同仁通常擁有個人的 Microsoft 365 (A3/A5) 帳號。
 
 1. **安裝主程式**：同樣透過 **「App Installers」** 派送，確保軟體永遠保持最新。
-2. **啟用授權**：
+1. **啟用授權**：
 
 * 不需安裝 Serializer。
 * 使用者首次開啟 App 時，輸入學校提供的 Microsoft 365 帳號密碼登入即可啟用。
@@ -46,11 +46,11 @@ tags: ["Office","Microsoft 365","Serializer","大量授權","Jamf App Installers
 
  (包含 Teams/Outlook 等)。
 
-2. **建立 Serializer 政策 (僅限教室)**：將 VL Serializer 設為「Once per computer」
+1. **建立 Serializer 政策 (僅限教室)**：將 VL Serializer 設為「Once per computer」
 
  並派送給教室群組。
 
-3. **設定 MAU (Microsoft AutoUpdate)**：建立設定描述檔，強制設定 MAU 的更新期限 (Deadline)，
+1. **設定 MAU (Microsoft AutoUpdate)**：建立設定描述檔，強制設定 MAU 的更新期限 (Deadline)，
 
  確保漏洞被修補。
 

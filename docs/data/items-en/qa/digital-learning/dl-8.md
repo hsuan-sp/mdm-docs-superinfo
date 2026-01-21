@@ -31,10 +31,10 @@ Connect the adapter to the Ethernet wall jack in the classroom.
 ## Setup Steps:
 
 1. Plug the adapter into the iPad.
-2. **Crucial Step: Connect Power.** Plug the charging cable into the adapter's power port (especially for Lightning models).
-3. Connect the Ethernet cable.
-4. An **Ethernet** option will appear in the iPad **Settings**.
-5. Check if the IP address is fetched correctly (usually via DHCP).
+1. **Crucial Step: Connect Power.** Plug the charging cable into the adapter's power port (especially for Lightning models).
+1. Connect the Ethernet cable.
+1. An **Ethernet** option will appear in the iPad **Settings**.
+1. Check if the IP address is fetched correctly (usually via DHCP).
 
 ## Practical Advice:
 

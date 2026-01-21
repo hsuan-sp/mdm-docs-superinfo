@@ -27,8 +27,8 @@ Since the device broadcasts a virtual MAC, traditional network management system
 ## MDM Solution (School-wide Disable):
 
 1. Edit a **Wi-Fi** configuration profile in Jamf Pro.
-2. In the Wi-Fi payload, check **Disable MAC Address Randomization** (also known as Disable Private Address).
-3. Deploy this profile to your devices.
+1. In the Wi-Fi payload, check **Disable MAC Address Randomization** (also known as Disable Private Address).
+1. Deploy this profile to your devices.
 
 ## Result:
 

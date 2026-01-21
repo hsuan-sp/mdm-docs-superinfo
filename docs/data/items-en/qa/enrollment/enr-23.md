@@ -15,9 +15,9 @@ tags: ["MDM Migration", "Zero-Wipe", "iOS 26", "macOS 26", "Risk Assessment"]
 ## How it Works
 
 1. Configure the target (new) MDM in **Apple School Manager (ASM)**.
-2. Set an **Enrollment Deadline**.
-3. The device notifies the user as the deadline approaches.
-4. At the deadline, the device automatically:
+1. Set an **Enrollment Deadline**.
+1. The device notifies the user as the deadline approaches.
+1. At the deadline, the device automatically:
 
 * Removes the old MDM management profile.
   * **Preserves** user data, apps, and settings.

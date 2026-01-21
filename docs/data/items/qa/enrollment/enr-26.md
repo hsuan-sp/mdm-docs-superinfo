@@ -17,20 +17,20 @@ tags: ["Return to Service", "iOS 26", "共享 iPad", "App 保留", "快速部署
 ## 傳統 Return to Service（iOS 25 及之前）
 
 1. 清除所有使用者資料和 App
-2. 保留 Wi-Fi 設定
-3. 裝置重新啟動
-4. 自動註冊至 MDM
-5. **重新下載並安裝所有 App**（耗時最長的步驟）
+1. 保留 Wi-Fi 設定
+1. 裝置重新啟動
+1. 自動註冊至 MDM
+1. **重新下載並安裝所有 App**（耗時最長的步驟）
 
 ## iOS 26 增強版 Return to Service
 
 1. MDM 發送指令並建立檔案系統快照
-2. **快照包含已安裝的 Managed App 程式檔案**
-3. 清除使用者資料（文件、照片、設定等）
-4. 裝置重新啟動
-5. 回復至快照狀態
-6. 自動註冊至 MDM
-7. **App 重新授權並立即可用**（無需下載）
+1. **快照包含已安裝的 Managed App 程式檔案**
+1. 清除使用者資料（文件、照片、設定等）
+1. 裝置重新啟動
+1. 回復至快照狀態
+1. 自動註冊至 MDM
+1. **App 重新授權並立即可用**（無需下載）
 
 ## 關鍵技術
 
@@ -61,9 +61,9 @@ tags: ["Return to Service", "iOS 26", "共享 iPad", "App 保留", "快速部署
 ## 發送 Return to Service 指令
 
 1. 在 Jamf Pro 中選擇要重置的裝置
-2. 點選 **Management** > **Commands**
-3. 選擇 **Return to Service** 指令
-4. 設定以下選項：
+1. 點選 **Management** > **Commands**
+1. 選擇 **Return to Service** 指令
+1. 設定以下選項：
 
 * ✅ **Clear Activation Lock**（清除啟用鎖定）
 * ✅ **Retain Wi-Fi Profile**（保留 Wi-Fi 設定）

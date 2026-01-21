@@ -36,8 +36,8 @@ These issues directly impact the usability of the device. Administrators should 
 If the iPad screen won't rotate with the device, check the following in order:
 
 1. **Control Center Lock**: Ensure the "Rotation Lock" icon (a lock with a circular arrow) is not highlighted in red.
-2. **MDM Restriction Check**: Admins should verify that a **Restrictions** profile in Jamf Pro hasn't accidentally enabled "Lock Screen Orientation," which would disable rotation for all scoped devices.
-3. **Sensor Self-Diagnosis**:
+1. **MDM Restriction Check**: Admins should verify that a **Restrictions** profile in Jamf Pro hasn't accidentally enabled "Lock Screen Orientation," which would disable rotation for all scoped devices.
+1. **Sensor Self-Diagnosis**:
 
 * **Logic**: Rotation relies on the internal **Accelerometer** and **Gyroscope**.
   * **Test Method**: Open the built-in **Compass** app. If the needle is completely frozen, or the level feature doesn't react to tilt, the internal sensor hardware is likely damaged.

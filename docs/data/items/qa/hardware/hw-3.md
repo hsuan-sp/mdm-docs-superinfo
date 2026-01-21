@@ -21,7 +21,7 @@ tags: ["AirDrop","AirPlay","網路管理","mDNS Relay","投影故障排除"]
 
  即使 iPad 未連上網際網路，Wi-Fi 仍必須保持開啟。
 
-2. **接收權限限制**：
+1. **接收權限限制**：
 
 * **系統限制**：自 iOS 16.2 起，Apple 將「所有人」模式限制為每次 10 分鐘，
 
@@ -35,7 +35,7 @@ tags: ["AirDrop","AirPlay","網路管理","mDNS Relay","投影故障排除"]
 
  導致 AirDrop 功能停用，務必先行關閉熱點。
 
-2. **物理距離與干擾**：藍牙發現機制在電子訊號密集的電腦教室中易受干擾，
+1. **物理距離與干擾**：藍牙發現機制在電子訊號密集的電腦教室中易受干擾，
 
  建議雙方裝置保持在 3 公尺內的直視距離。
 
@@ -46,17 +46,17 @@ tags: ["AirDrop","AirPlay","網路管理","mDNS Relay","投影故障排除"]
  教師 iPad 若連線至教職員 SSID（如 `Staff-Wi-Fi`），而 Apple TV 連線至教室載具專用網段，
  若兩者 VLAN 隔離且無跨網段路由，AirPlay 封包將無法到達。
 
-2. **mDNS (Bonjour) 協定放行**：AirPlay 使用 **UDP 5353 埠** 進行服務廣播。
+1. **mDNS (Bonjour) 協定放行**：AirPlay 使用 **UDP 5353 埠** 進行服務廣播。
 
  若學校防火牆或無線基地台 (AP) 啟用了 **「使用者隔離 (Client Isolation)」**，
  會阻擋裝置間的橫向通訊。
 
-3. **網管層級優化 (mDNS Relay)**：在多 VLAN 的校園架構下，
+1. **網管層級優化 (mDNS Relay)**：在多 VLAN 的校園架構下，
 
  建議網管人員在核心交換器或防火牆開啟 **mDNS Relay (或稱為 Bonjour Gateway)** 功能，
  允許 Discovery 封包跨網段轉發，這是確保教師機在不同教室移動時仍能順利投影的關鍵。
 
-4. **Apple TV 安全性設定**：進入 Apple TV 設定 > AirPlay 與 HomeKit，
+1. **Apple TV 安全性設定**：進入 Apple TV 設定 > AirPlay 與 HomeKit，
 
  確認「存取權限」設定為「同一網路上的任何人」，並視需求決定是否開啟「要求密碼」以防學生誤投。
 

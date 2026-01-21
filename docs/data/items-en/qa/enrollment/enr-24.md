@@ -28,9 +28,9 @@ tags: ["Enforcement Deadline", "DDM", "Enforcement", "Deadline", "Compliance"]
 ## Software Update Deadline:
 
 1. Go to **Devices > Blueprints** or **Computers > Blueprints**.
-2. Create/Edit a **Software Update Declaration**.
-3. Set the **Target Version** (e.g., Latest version).
-4. Enable **Enforcement Deadline**.
+1. Create/Edit a **Software Update Declaration**.
+1. Set the **Target Version** (e.g., Latest version).
+1. Enable **Enforcement Deadline**.
 
 * Set the specific date and time (e.g., 2026-02-28 17:00).
   * Choose the time zone (Local device time is recommended).

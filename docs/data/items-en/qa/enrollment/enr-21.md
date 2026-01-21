@@ -17,8 +17,8 @@ This allows "retail" iPads or Macs to achieve the same management status (Superv
 ## Preparation:
 
 1. **Hardware**: A Mac with **Apple Configurator** installed, or an iPhone with the **Apple Configurator app** (for adding Macs to ASM).
-2. **Permissions**: An ASM account with "Device Enrollment Manager" or "Administrator" roles.
-3. **Device State**: The iPad must be on the **Setup Assistant** (Hello) screen. If it is already in use, it must be erased first.
+1. **Permissions**: An ASM account with "Device Enrollment Manager" or "Administrator" roles.
+1. **Device State**: The iPad must be on the **Setup Assistant** (Hello) screen. If it is already in use, it must be erased first.
 
 ## The 30-Day Provisional Period:
 

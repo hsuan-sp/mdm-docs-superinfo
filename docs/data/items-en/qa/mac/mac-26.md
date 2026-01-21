@@ -35,7 +35,7 @@ In Jamf Pro, you should establish these baseline groups for accurate deployment:
 ## 2. Recommended Deployment Strategy
 
 1. **Prioritize Universal Binaries**: If a developer provides a Universal installer (e.g., Google Chrome or Microsoft Office), use it. macOS will automatically run the correct architecture.
-2. **Architecture-Specific .pkgs**:
+1. **Architecture-Specific .pkgs**:
 
 * For professional software (Adobe Creative Cloud, specialized lab tools), upload separate packages: `App_v1.0_AppleSilicon.pkg` and `App_v1.0_Intel.pkg`.
   * Scope the former to the Apple Silicon group and the latter to the Intel group.

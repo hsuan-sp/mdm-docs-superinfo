@@ -39,5 +39,5 @@ In iOS/iPadOS/macOS 26.2, a 6-digit temporary authorization code can be used to 
 ## Administrative Advice
 
 1. **For Exams**: Keep AirDrop set to **'Receiving Off'** via MDM. This renders all codes useless and prevents illicit file sharing.
-2. **For Daily Lessons**: **'Contacts Only'** is the recommended setting. The AirDrop Code feature actually makes this setting *more* useful for schools, as students can share files for class projects without the privacy risk of exchanging personal contact details.
-3. **Governance**: Remind students that an AirDrop Code is a key—only give it to people you trust to send you academic material.
+1. **For Daily Lessons**: **'Contacts Only'** is the recommended setting. The AirDrop Code feature actually makes this setting *more* useful for schools, as students can share files for class projects without the privacy risk of exchanging personal contact details.
+1. **Governance**: Remind students that an AirDrop Code is a key—only give it to people you trust to send you academic material.

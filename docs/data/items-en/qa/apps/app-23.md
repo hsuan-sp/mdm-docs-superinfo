@@ -32,8 +32,8 @@ tags: ["DDM", "App Management", "Declarative", "Auto-Update", "iOS 26"]
 On DDM-compatible versions of Jamf Pro:
 
 1. Navigate to **Blueprints > App Management**.
-2. Create an **App Declaration**.
-3. Set **Installation Behavior**:
+1. Create an **App Declaration**.
+1. Set **Installation Behavior**:
 
 * **Required**: App is mandatory and unremovable. If a user tries to delete it, the device reinstall it automatically.
   * **Optional**: Appears in Self Service; user can remove it.

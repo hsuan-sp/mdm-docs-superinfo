@@ -15,7 +15,7 @@ tags: ["Command Latency","Network Environment","Bluetooth","Client Isolation"]
 Apple Classroom relies on two layers of communication to function:
 
 1. **Bluetooth (Discovery)**: Used to find nearby students.
-2. **Wi-Fi (Transport)**: Used to transmit commands and screen data.
+1. **Wi-Fi (Transport)**: Used to transmit commands and screen data.
 
 ## Troubleshooting Checklist:
 

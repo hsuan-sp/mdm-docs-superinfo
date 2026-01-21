@@ -17,8 +17,8 @@ If a device is enrolled manually (e.g., via a manual link or temporary Apple Con
 ## Steps for Mandatory Control (Jamf Pro):
 
 1. **PreStage Enrollment**: Ensure the device is assigned to the correct **Automated Device Enrollment** instance.
-2. **Enable Mandatory Supervision**: Under the **Supervised Devices** section, ensure **Supervise Devices** is checked. This is the foundation for all advanced management; unsupervised devices cannot lock profiles.
-3. **Lock the Profile (Crucial Step)**:
+1. **Enable Mandatory Supervision**: Under the **Supervised Devices** section, ensure **Supervise Devices** is checked. This is the foundation for all advanced management; unsupervised devices cannot lock profiles.
+1. **Lock the Profile (Crucial Step)**:
 
 * Check **Prevent Unenrollment**.
   * **Result**: The "Remove Management" button will disappear from the iPad settings. Unless the device was added via Apple Configurator (which has a 30-day grace period), the student cannot manually remove the MDM profile.

@@ -30,9 +30,9 @@ If your school uses a Student Information System (SIS), you can upload data via 
   * **Workflow**:
 
 1. **Setup Connection**: Obtain your SFTP URL, username, and password from ASM.
-2. **Prepare Files**: Export data and create a **ZIP archive** containing all necessary CSV files.
-3. **Upload**: Use an SFTP client to connect and drag the ZIP file into the **dropbox** folder (this is the default root folder on Apple’s SFTP server).
-4. **Processing**: ASM will process the files automatically. You can download logs to check for errors.
+1. **Prepare Files**: Export data and create a **ZIP archive** containing all necessary CSV files.
+1. **Upload**: Use an SFTP client to connect and drag the ZIP file into the **dropbox** folder (this is the default root folder on Apple’s SFTP server).
+1. **Processing**: ASM will process the files automatically. You can download logs to check for errors.
 
 *Note: After the initial connection, every subsequent update must include "all" CSV files, even those that haven't changed.*
 

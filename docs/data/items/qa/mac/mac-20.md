@@ -31,8 +31,8 @@ tags: ["FileVault", "SSH", "遠端解鎖", "macOS 26", "遠端管理"]
 * 或透過 MDM 推送 `com.apple.RemoteManagement`
 
 1. **網路連線**：乙太網路（最可靠）或 Pre-boot 可用的 Wi-Fi
-2. **授權使用者**：SSH 帳號必須是 FileVault 授權使用者
-3. **系統版本**：macOS 26 或更新
+1. **授權使用者**：SSH 帳號必須是 FileVault 授權使用者
+1. **系統版本**：macOS 26 或更新
 
 ## 操作流程
 

@@ -15,9 +15,9 @@ tags: ["AirDrop", "System Update", "File Transfer", "Classroom", "Operations"]
 ## The New Workflow:
 
 1. **Sender**: Selects the file and clicks the student's name in AirDrop.
-2. **Recipient**: Taps "Get AirDrop Code" (since they aren't in the teacher's contacts).
-3. **Sender**: Enters the 6-digit code shown on the student's screen.
-4. **Trust established**: For the next 30 days, these two devices can swap files without a code.
+1. **Recipient**: Taps "Get AirDrop Code" (since they aren't in the teacher's contacts).
+1. **Sender**: Enters the 6-digit code shown on the student's screen.
+1. **Trust established**: For the next 30 days, these two devices can swap files without a code.
 
 ## School Challenges:
 

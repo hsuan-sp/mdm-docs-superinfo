@@ -22,8 +22,8 @@ Under the latest OS architecture, **DDM** is the best path for silent updates:
 ## Traditional MDM Configuration (Compatibility Layer):
 
 1. **License Mode**: Must be set to "Device-based" (bound to serial number).
-2. **Supervised Mode**: The iPad must be in a "Supervised" state.
-3. **Jamf Configuration**: In the app's distribution settings, enable **"Automatically Update App."**
+1. **Supervised Mode**: The iPad must be in a "Supervised" state.
+1. **Jamf Configuration**: In the app's distribution settings, enable **"Automatically Update App."**
 
 * *Note: On DDM-supported devices, this checkbox automatically triggers a DDM declaration.*
 

@@ -18,8 +18,8 @@ tags: ["啟用鎖定","Activation Lock","ASM","解除鎖定","資產回收"]
 **標準解鎖 SOP：**
 
 1. **登入 ASM**：使用管理員帳號登入 [school.apple.com](https://school.apple.com)。
-2. **搜尋裝置**：在側邊欄點選 **「裝置 (Devices)」**，輸入該 Mac 的序號。
-3. **執行解鎖**：
+1. **搜尋裝置**：在側邊欄點選 **「裝置 (Devices)」**，輸入該 Mac 的序號。
+1. **執行解鎖**：
 
 * 在裝置詳情頁面，找到 **「啟用鎖定 (Activation Lock)」** 狀態。
 * 點選 **「關閉 (Turn Off)」** 或 **「解除鎖定」**。

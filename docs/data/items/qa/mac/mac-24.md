@@ -37,6 +37,6 @@ ICT 資訊支援團隊長應在大型測驗或檢定期間，透過 Jamf Pro 執
 ## 三、 實務營運建議
 
 1. **Smart Group 分組**：建立一個「考試機」群組，僅在考前 15 分鐘推送限制設定檔。
-2. **腳本檢查**：考前可透過延伸屬性 (Extension Attributes) 檢查 Safari 的 `DistractionControl` 是否已成功被 MDM 覆寫。
+1. **腳本檢查**：考前可透過延伸屬性 (Extension Attributes) 檢查 Safari 的 `DistractionControl` 是否已成功被 MDM 覆寫。
 
 **組長觀點**：雖然「干擾控制」能提升日常閱讀效率，但在資訊素養檢定或校內段考情境下，它是個顯著的防弊漏洞。建議組長在「測驗用設定檔」中，將此選項與「翻譯功能」一併評估是否關閉。

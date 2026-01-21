@@ -19,9 +19,9 @@ When a personal iPhone is mirrored to a school Mac, notifications, photos, and a
 ## Jamf Pro Configuration:
 
 1. Go to **Computers > Configuration Profiles > Restrictions**.
-2. Navigate to the macOS 26 (Tahoe) section.
-3. **Option A (Full Block)**: Uncheck **Allow iPhone Mirroring**.
-4. **Option B (Granular)**: Use the **View Only** mode or uncheck **Allow file and clipboard sync**.
+1. Navigate to the macOS 26 (Tahoe) section.
+1. **Option A (Full Block)**: Uncheck **Allow iPhone Mirroring**.
+1. **Option B (Granular)**: Use the **View Only** mode or uncheck **Allow file and clipboard sync**.
 
 ## Result:
 

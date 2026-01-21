@@ -17,8 +17,8 @@ tags: ["Cellular Data", "Wi-Fi", "App Download", "Traffic Management", "iOS 26"]
 This feature is implemented via **DDM** configurations. In **Jamf Pro**:
 
 1. Go to **Blueprints** or **App Declarations**.
-2. Define the policy for individual managed apps or a group of apps.
-3. Set the **'CellularDataPolicy'** in the deployment declaration:
+1. Define the policy for individual managed apps or a group of apps.
+1. Set the **'CellularDataPolicy'** in the deployment declaration:
 
 * **Disallow**: Forces download/update to happen only over Wi-Fi.
   * **Allow**: Permits installation over any available network.

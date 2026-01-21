@@ -17,7 +17,7 @@ tags: ["PSSO","FileVault","macOS 15+","Authentication"]
 Previously, even if a Mac was domain-joined, the initial FileVault unlock screen required a local password. With the Platform SSO extensions introduced in macOS 15, we can achieve:
 
 1. **Password Synchronization**: Write network credentials (e.g., Microsoft Entra ID / Okta) directly into the FileVault unlock list.
-2. **Single Sign-On Experience**: Users enter their organizational credentials at the boot screen. Once the disk is unlocked, the identity is passed through to the desktop, bypassing the second login screen.
+1. **Single Sign-On Experience**: Users enter their organizational credentials at the boot screen. Once the disk is unlocked, the identity is passed through to the desktop, bypassing the second login screen.
 
 ## Technical Requirements:
 

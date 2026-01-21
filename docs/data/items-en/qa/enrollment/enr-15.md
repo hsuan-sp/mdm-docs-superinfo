@@ -21,8 +21,8 @@ A security mechanism is triggered when a user enters the wrong passcode multiple
 If the iPad is still connected to Wi-Fi or a cellular network (previously joined networks usually remain active even while locked):
 
 1. Log in to Jamf Pro and find the device record.
-2. Click **Management > Remote Commands > Wipe Device**.
-3. **Benefit**: This is the fastest method. If the device was enrolled via **Automated Device Enrollment (ADE)**, it will reboot and immediately enter the automated setup process without further manual intervention.
+1. Click **Management > Remote Commands > Wipe Device**.
+1. **Benefit**: This is the fastest method. If the device was enrolled via **Automated Device Enrollment (ADE)**, it will reboot and immediately enter the automated setup process without further manual intervention.
 
 ## Option 2: Restore using a Computer
 

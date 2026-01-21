@@ -21,6 +21,7 @@ export default defineConfig({
           { text: '首頁', link: '/' },
           { text: '指南', link: '/guide/' },
           { text: '術語表', link: '/glossary' },
+          { text: '更新日誌', link: '/CHANGELOG' },
           {
             text: '資源與服務',
             items: [
@@ -81,6 +82,7 @@ export default defineConfig({
           { text: 'Home', link: '/en/' },
           { text: 'Guide', link: '/en/guide/' },
           { text: 'Glossary', link: '/en/glossary' },
+          { text: 'Changelog', link: '/CHANGELOG' },
           {
             text: 'Resources (Traditional Chinese Primarily)',
             items: [

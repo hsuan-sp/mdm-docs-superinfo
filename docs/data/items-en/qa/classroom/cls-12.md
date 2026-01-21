@@ -21,9 +21,9 @@ tags: ["Apple Intelligence","Writing Tools","Math Notes","Anti-Cheating","iOS 18
 ## Setup Path (Jamf Pro):
 
 1. Go to **Blueprints** or **Declarations**.
-2. Add a **Restrictions** declaration.
-3. Block the AI features listed above. DDM is "instant," making it ideal for deployment right before an exam.
-4. **Unmanaged Devices**: If students use personal devices, administrators can turn off Apple Intelligence permissions for Managed Apple Accounts at the tenant level in **ASM (Apple School Manager) > Service Access**.
+1. Add a **Restrictions** declaration.
+1. Block the AI features listed above. DDM is "instant," making it ideal for deployment right before an exam.
+1. **Unmanaged Devices**: If students use personal devices, administrators can turn off Apple Intelligence permissions for Managed Apple Accounts at the tenant level in **ASM (Apple School Manager) > Service Access**.
 
 ## Hardware Requirements:
 

@@ -39,9 +39,9 @@ The Jamf Trust app, which handles content filtering and data reporting, also use
 ## How to Check Battery Usage:
 
 1. Go to **Settings > Battery**.
-2. View usage for the "Last 24 Hours" or "Last 10 Days."
-3. Identify which apps are consuming the most power.
-4. If Jamf Trust or "MDM" exceeds 5%, contact your administrator.
+1. View usage for the "Last 24 Hours" or "Last 10 Days."
+1. Identify which apps are consuming the most power.
+1. If Jamf Trust or "MDM" exceeds 5%, contact your administrator.
 
 ## Practical Advice: Battery Health
 

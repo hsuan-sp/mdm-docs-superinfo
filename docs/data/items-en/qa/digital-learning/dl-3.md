@@ -26,8 +26,8 @@ Use this only when the device shows "Unable to Join Network," fails to see any B
 ## Steps to Reset:
 
 1. Navigate to **Settings > General > Transfer or Reset iPad > Reset**.
-2. Select **Reset Network Settings**. The iPad will reboot.
-3. **After Reboot**: All saved Wi-Fi passwords and Bluetooth pairings are wiped. Managed Wi-Fi profiles pushed by the school should automatically re-apply once the device is unlocked and detects the campus signal.
+1. Select **Reset Network Settings**. The iPad will reboot.
+1. **After Reboot**: All saved Wi-Fi passwords and Bluetooth pairings are wiped. Managed Wi-Fi profiles pushed by the school should automatically re-apply once the device is unlocked and detects the campus signal.
 
 ## Practical Tip:
 

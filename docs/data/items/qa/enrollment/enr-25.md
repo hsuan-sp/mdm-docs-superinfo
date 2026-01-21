@@ -75,8 +75,8 @@ tags: ["PreStage", "設定輔助程式", "ADE", "部署加速", "最佳實務"]
 ## 設定路徑
 
 1. 前往 **Devices** > **PreStage Enrollments**（或 **Computers** > **PreStage Enrollments**）
-2. 建立或編輯 PreStage
-3. 進入 **Account Settings** 和 **Setup Assistant** 分頁
+1. 建立或編輯 PreStage
+1. 進入 **Account Settings** 和 **Setup Assistant** 分頁
 
 ## 建議設定
 
