@@ -181,9 +181,10 @@
   border-radius: 6px;
 }
 
-/* --- 6. Strong Emphasis (Highlighting) --- */
-.vp-doc strong {
-  font-weight: 600;
+/* --- 6. Strong Emphasis (Bold Text) --- */
+.vp-doc strong,
+.markdown-body strong {
+  font-weight: 700;
   color: var(--vp-c-text-1);
 }
 
