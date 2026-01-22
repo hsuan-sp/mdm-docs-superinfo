@@ -51,7 +51,8 @@ const t = computed(() => {
         currentlyLoggedIn: '目前登入',
         language: '語言 / Lang',
         chinese: '中文',
-        english: 'English'
+        english: 'English',
+        reportIssue: '回報頁面問題'
     } : {
         logout: 'Logout',
         logoutAccount: 'Sign Out',
@@ -63,9 +64,41 @@ const t = computed(() => {
         currentlyLoggedIn: 'Current User',
         language: 'Language',
         chinese: 'Chinese',
-        english: 'English'
+        english: 'English',
+        reportIssue: 'Report Issue'
     };
 });
+
+const createReportLink = () => {
+    if (typeof window === 'undefined') return '#';
+
+    const currentUrl = window.location.href;
+    const pageTitle = page.value.title || document.title;
+    const category = page.value.frontmatter?.category || 'General Page';
+
+    const subject = `[Issue Report] ${pageTitle}`;
+    const nl = '%0D%0A';
+
+    const body = `=== PROFESSIONAL ISSUE REPORT / 頁面問題回報 ===${nl}${nl}` +
+        `[PAGE CONTEXT / 頁面資訊]${nl}` +
+        `- Title / 標題: ${pageTitle}${nl}` +
+        `- URL / 網址: ${currentUrl}${nl}` +
+        `- Category / 類別: ${category}${nl}${nl}` +
+        `[ISSUE TYPE / 問題類型]${nl}` +
+        `(Please mark with [x] / 請在括號中填入 x)${nl}` +
+        `[ ] Content Accuracy / 內容準確性 (e.g. Incorrect technical info / 技術資訊錯誤)${nl}` +
+        `[ ] Outdated Info / 資訊過時 (e.g. Does not match spec / 已不符最新規格)${nl}` +
+        `[ ] Translation / 翻譯建議${nl}` +
+        `[ ] Technical Bug / 技術故障${nl}${nl}` +
+        `[DESCRIPTION / 詳細描述]${nl}${nl}${nl}` +
+        `=== END OF REPORT ===`;
+
+    return `mailto:hsuan@superinfo.com.tw?subject=${encodeURIComponent(subject)}&body=${body}`;
+};
+
+const handleReport = () => {
+    window.location.href = createReportLink();
+};
 
 const switchLanguage = () => {
     const relPath = page.value.relativePath;
@@ -218,6 +251,22 @@ const switchLanguage = () => {
                                     <div class="compact-label">{{ t.language }}</div>
                                     <div class="compact-status">{{ lang === 'zh-TW' ? t.english : t.chinese }}</div>
                                 </div>
+
+                                <!-- Report Issue -->
+                                <div class="menu-item compact report-item" @click="handleReport">
+                                    <div class="compact-icon report-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2.5">
+                                            <path
+                                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                                            </path>
+                                            <line x1="12" y1="9" x2="12" y2="13"></line>
+                                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="compact-label">{{ t.reportIssue }}</div>
+                                    <div class="compact-status">Feedback</div>
+                                </div>
                             </div>
                         </div>
 
@@ -229,7 +278,7 @@ const switchLanguage = () => {
                             </div>
 
                             <button v-if="!isGuest" class="logout-btn-full" @click="logout">{{ t.logoutAccount
-                            }}</button>
+                                }}</button>
                             <button class="close-btn" @click="isMenuOpen = false">{{ t.closeMenu }}</button>
                         </div>
                     </div>
@@ -651,12 +700,20 @@ const switchLanguage = () => {
     opacity: 0.5;
 }
 
-/* Settings Grid (Side-by-Side) */
+/* Settings Grid (Side-by-Side/Three-way) */
 .settings-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
     margin-bottom: 0;
+}
+
+.report-icon {
+    color: #ff3b30 !important;
+}
+
+.report-item:hover {
+    background: rgba(255, 59, 48, 0.08) !important;
 }
 
 .menu-item.compact {

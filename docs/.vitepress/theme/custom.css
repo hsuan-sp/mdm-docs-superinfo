@@ -235,20 +235,92 @@ body.is-app::after {
   /* Optimize Navbar for tight spaces */
   .VPNavBar .container {
     padding: 0 12px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
+  /* Force Title Area to be horizontal and left-aligned */
   .VPNavBarTitle {
-    flex-shrink: 1 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    flex: 0 1 auto !important;
     min-width: 0 !important;
+    margin: 0 !important;
+    border-bottom: none !important;
   }
 
-  /* Hide the text part of the title on mobile, keep the logo */
-  .VPNavBarTitle .title :not(.logo) {
+  /* Force the anchor tag to be a horizontal flex container to align logo and text */
+  .VPNavBarTitle a {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 10px !important;
+    text-decoration: none !important;
+    height: var(--vp-nav-height) !important;
+  }
+
+  /* Precise Logo Sizing and vertical centering */
+  .VPNavBarTitle .logo {
+    height: 24px !important;
+    width: auto !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+    display: block !important;
+  }
+
+  /* Hide original title text nodes to prevent corporate name display */
+  .VPNavBarTitle .title {
+    font-size: 0 !important;
+    line-height: normal !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    overflow: visible !important;
+  }
+
+  /* Extra thorough hiding of children */
+  .VPNavBarTitle span,
+  .VPNavBarTitle strong,
+  .VPNavBarTitle .title * {
     display: none !important;
   }
 
-  .VPNavBarTitle .logo {
-    margin-right: 0 !important;
+  /* Re-add title text via pseudo-element on the title container */
+  html[lang="zh-TW"] .VPNavBarTitle .title::after {
+    content: "Apple MDM 知識庫";
+    font-size: 15px !important;
+    font-weight: 700;
+    color: var(--vp-c-text-1);
+    white-space: nowrap;
+    display: block !important;
+  }
+
+  html[lang="en-US"] .VPNavBarTitle .title::after {
+    content: "Apple MDM Knowledge Base";
+    font-size: 12px !important;
+    font-weight: 700;
+    color: var(--vp-c-text-1);
+    white-space: nowrap;
+    display: block !important;
+  }
+
+  /* Force Functional Content (Hamburger) to the far right */
+  .VPNavBar .content {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex: 1 !important;
+  }
+
+  .user-center {
+    margin-left: auto !important;
   }
 }
 

@@ -14,7 +14,6 @@ import IntegratedGuideApp from '../components/IntegratedGuideApp.vue'
 import AppleHome from '../components/AppleHome.vue'
 import BackToTop from '../components/BackToTop.vue'
 import GlobalFooter from '../components/GlobalFooter.vue'
-import WIPBanner from '../components/WIPBanner.vue'
 import ChangelogApp from '../components/ChangelogApp.vue'
 
 // 匯入全域佈局增強元件
@@ -34,9 +33,7 @@ export default {
       // 在導覽列右側注入使用者中心與安全性防護元件
       'nav-bar-content-after': () => [h(UserCenter), h(SecurityGuard)],
       // 在頁面最底層掛載全域頁尾與返回頂部按鈕
-      'layout-bottom': () => [h(GlobalFooter), h(BackToTop)],
-      // WIP 提示橫幅 (顯示於頁面最頂端，收合後會透過 Teleport 嵌入 Topbar)
-      'layout-top': () => h(WIPBanner)
+      'layout-bottom': () => [h(GlobalFooter), h(BackToTop)]
     })
   },
   /**
@@ -50,7 +47,6 @@ export default {
     app.component('GlobalFooter', GlobalFooter)
     app.component('MobileDrawer', MobileDrawer)
     app.component('EmptyState', EmptyState)
-    app.component('WIPBanner', WIPBanner)
     app.component('ChangelogApp', ChangelogApp)
   }
 }
