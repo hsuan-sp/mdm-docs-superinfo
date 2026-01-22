@@ -1,15 +1,15 @@
 ---
-id: cls-7
-title: >-
-  The teacher iPad shows 'Waiting for devices...' or 'Offline'. Why aren't
-  commands sending?
 category: 'Section 4: Classroom Management & Instruction'
+id: cls-7
 important: false
 tags:
   - Command Latency
   - Network Environment
   - Bluetooth
   - Client Isolation
+title: >-
+  The teacher iPad shows 'Waiting for devices...' or 'Offline'. Why aren't
+  commands sending?
 ---
 ## Q: The teacher iPad shows 'Waiting for devices...' or 'Offline'. Why aren't commands sending?
 
@@ -19,9 +19,8 @@ tags:
 
 Apple Classroom relies on two layers of communication to function:
 
-1.**Bluetooth (Discovery)**: Used to find nearby students.
-
-1.**Wi-Fi (Transport)**: Used to transmit commands and screen data.
+1. **Bluetooth (Discovery)**: Used to find nearby students.
+2. **Wi-Fi (Transport)**: Used to transmit commands and screen data.
 
 ## Troubleshooting Checklist:
 

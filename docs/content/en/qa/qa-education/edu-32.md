@@ -1,7 +1,6 @@
 ---
-id: edu-32
-title: What if a student forgets their iPad passcode? Can a teacher help reset it?
 category: 'Section 8: Common Education Scenarios'
+id: edu-32
 important: true
 tags:
   - Passcode
@@ -9,6 +8,7 @@ tags:
   - Jamf Pro
   - Remote Commands
   - Troubleshooting
+title: What if a student forgets their iPad passcode? Can a teacher help reset it?
 ---
 ## Q: What should I do if a student forgets their iPad passcode? Can a teacher help reset it?
 
@@ -23,17 +23,17 @@ This is a very common scenario in the classroom.
 If the school has deployed the Jamf Teacher app or web portal to teachers:
 
 1. Open**Jamf Teacher**.
-1. Select the class where the student is located.
-1. Select the student's name.
-1. Find and tap the**"Clear Passcode"**option in the feature list.
-1. The passcode on the student's iPad will be removed instantly. The student can then simply swipe to open the device and set a new passcode.
+2. Select the class where the student is located.
+3. Select the student's name.
+4. Find and tap the**"Clear Passcode"**option in the feature list.
+5. The passcode on the student's iPad will be removed instantly. The student can then simply swipe to open the device and set a new passcode.
 
 ## Method 2: Using the Jamf Pro Console (For Administrators)
 
 1. Log in to the Jamf Pro dashboard and search for the iPad.
-1. Go to**`Inventory` > `Management` > `Commands`**.
-1. Click the**`Clear Passcode`**command.
-1. As long as the device is connected to the network, the passcode lock will disappear moments later.
+2. Go to**`Inventory`>`Management`>`Commands`**.
+3. Click the**`Clear Passcode`**command.
+4. As long as the device is connected to the network, the passcode lock will disappear moments later.
 
 ## ⚠️ Important Considerations:
 

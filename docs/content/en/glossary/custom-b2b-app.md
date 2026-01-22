@@ -1,7 +1,7 @@
 ---
-term: Custom B2B App
 category:
   - Apps
+term: Custom B2B App
 ---
 ## Term Definition
 

@@ -1,7 +1,7 @@
 ---
-term: eSIM
 category:
   - Hardware
+term: eSIM
 ---
 ## Term Definition
 

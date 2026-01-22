@@ -1,7 +1,7 @@
 ---
-term: Payload
 category:
   - Core
+term: Payload
 ---
 ## Term Definition
 

@@ -1,8 +1,8 @@
 ---
-term: Jamf Binary
 category:
   - Jamf
   - macOS
+term: Jamf Binary
 ---
 ## Term Definition
 

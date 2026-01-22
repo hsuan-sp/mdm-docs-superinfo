@@ -1,7 +1,7 @@
 ---
-term: Deprecated
 category:
   - Other
+term: Deprecated
 ---
 ## Term Definition
 

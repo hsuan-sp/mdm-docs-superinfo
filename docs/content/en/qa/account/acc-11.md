@@ -1,14 +1,14 @@
 ---
-id: acc-11
-title: >-
-  Troubleshooting: Apple Classroom fails school-wide with 'Invalid Profile' (The
-  Certificate Trap)
 category: 'Section 1: Account & Server Management'
+id: acc-11
 important: true
 tags:
   - Certificate Expiration
   - Apple Classroom
   - Education Profile
+title: >-
+  Troubleshooting: Apple Classroom fails school-wide with 'Invalid Profile' (The
+  Certificate Trap)
 ---
 ## Q: Troubleshooting: Apple Classroom fails school-wide with 'Invalid Profile' (The Certificate Trap)
 
@@ -22,16 +22,14 @@ Teachers report that all students appear "Offline" or are unable to join classes
 
 ## Solution:
 
-1.**Check Certificate Status**: Log in to Jamf Pro and navigate to**Settings > Global Management > Apple Education Support**.
+1. **Check Certificate Status**: Log in to Jamf Pro and navigate to**Settings > Global Management > Apple Education Support**.
+2. **Regenerate**: Check the status of the "Education Identity Certificate." If it has expired, click**Regenerate**. This issues a new two-year certificate for your school's educational framework.
+3. **Force Deployment**:
 
-1.**Regenerate**: Check the status of the "Education Identity Certificate." If it has expired, click**Regenerate**. This issues a new two-year certificate for your school's educational framework.
-
-1.**Force Deployment**:
-
-* After renewal, Jamf Pro usually schedules the profile update automatically.
+*    After renewal, Jamf Pro usually schedules the profile update automatically.
 * **Manual Acceleration**: If devices do not respond promptly, use the relevant buttons within the "Apple Education Support" interface to re-send the education configuration profiles.
 
-1.**Wake Up Devices**: For any stubborn devices, send a**Blank Push**to the affected group. This forces the device to communicate with the MDM and download the latest DDM (Declarative Device Management) configurations.
+4. **Wake Up Devices**: For any stubborn devices, send a**Blank Push**to the affected group. This forces the device to communicate with the MDM and download the latest DDM (Declarative Device Management) configurations.
 
 ## Practical Advice:
 

@@ -1,7 +1,7 @@
 ---
-term: Continuity
 category:
   - Apple
+term: Continuity
 ---
 ## Term Definition
 

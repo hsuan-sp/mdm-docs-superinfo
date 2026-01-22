@@ -1,7 +1,7 @@
 ---
-term: Wi-Fi 6E
 category:
   - Network
+term: Wi-Fi 6E
 ---
 ## Term Definition
 

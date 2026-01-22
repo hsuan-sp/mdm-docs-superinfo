@@ -1,7 +1,7 @@
 ---
-term: SSID (Service Set Identifier)
 category:
   - Network
+term: SSID (Service Set Identifier)
 ---
 ## Term Definition
 

@@ -1,14 +1,14 @@
 ---
-id: cls-23
-title: >-
-  iPads are making noise and disrupting class. Can the teacher 'Mute All' at
-  once?
 category: 'Section 4: Classroom Management & Instructional Tools'
+id: cls-23
 important: false
 tags:
   - Mute
   - Volume Control
   - Classroom Order
+title: >-
+  iPads are making noise and disrupting class. Can the teacher 'Mute All' at
+  once?
 ---
 ## Q: iPads are making noise and disrupting class. Can the teacher 'Mute All' at once?
 

@@ -1,7 +1,7 @@
 ---
-term: App Thinning (App 精簡化)
 category:
   - Apps
+term: App Thinning (App 精簡化)
 ---
 ## 術語定義
 

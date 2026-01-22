@@ -1,7 +1,7 @@
 ---
-term: Apple Intelligence
 category:
   - Core
+term: Apple Intelligence
 ---
 ## Term Definition
 

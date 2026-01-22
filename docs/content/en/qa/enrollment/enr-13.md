@@ -1,7 +1,6 @@
 ---
-id: enr-13
-title: How do I prevent students from removing the MDM management profile?
 category: 'Section 2: Device Enrollment'
+id: enr-13
 important: true
 tags:
   - Prevent Unenrollment
@@ -9,6 +8,7 @@ tags:
   - PreStage Enrollment
   - ADE
   - Return to Service
+title: How do I prevent students from removing the MDM management profile?
 ---
 ## Q: How do I prevent students from removing the MDM management profile?
 
@@ -16,18 +16,16 @@ tags:
 
 **The key to preventing profile removal is using the 'Automated Device Enrollment (ADE)' process and enabling mandatory locking in the 'PreStage Enrollment' settings.**
 
-If a device is enrolled manually (e.g., via a manual link or temporary Apple Configurator enrollment), students can remove the profile at any time under**Settings > VPN & Device Management**.
+If a device is enrolled manually (e.g., via a manual link or temporary Apple Configurator Enrollment), students can remove the profile at any time under**Settings > VPN & Device Management**.
 
 ## Steps for Mandatory Control (Jamf Pro):
 
-1.**PreStage Enrollment**: Ensure the device is assigned to the correct**Automated Device Enrollment**instance.
+1. **PreStage Enrollment**: Ensure the device is assigned to the correct**Automated Device Enrollment**instance.
+2. **Enable Mandatory Supervision**: Under the**Supervised Devices**section, ensure**Supervise Devices**is checked. This is the foundation for all advanced management; unsupervised devices cannot lock profiles.
+3. **Lock the Profile (Crucial Step)**:
 
-1.**Enable Mandatory Supervision**: Under the**Supervised Devices**section, ensure**Supervise Devices**is checked. This is the foundation for all advanced management; unsupervised devices cannot lock profiles.
-
-1.**Lock the Profile (Crucial Step)**:
-
-* Check**Prevent Unenrollment**.
-* **Result**: The "Remove Management" button will disappear from the iPad settings. Unless the device was added via Apple Configurator (which has a 30-day grace period), the student cannot manually remove the MDM profile.
+*    Check**Prevent Unenrollment**.
+* **Result**: The "Remove Management" button will disappear from the iPad settings. Unless the device was added via Apple Configurator (which has a 30-day grace period), the student cannot manually remove the MDM Profile.
 
 ## Supporting Security Measures:
 

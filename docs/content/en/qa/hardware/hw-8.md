@@ -1,7 +1,6 @@
 ---
-id: hw-8
-title: Can I clean the iPad screen with alcohol? Is there a risk of damage?
 category: 'Section 6: Hardware Maintenance & Troubleshooting'
+id: hw-8
 important: true
 tags:
   - Cleaning
@@ -9,6 +8,7 @@ tags:
   - Disinfection
   - Alcohol
   - Oleophobic Coating
+title: Can I clean the iPad screen with alcohol? Is there a risk of damage?
 ---
 ## Q: Can I clean the iPad screen with alcohol? Is there a risk of damage?
 
@@ -27,21 +27,18 @@ In a classroom environment with multiple users, a proper disinfection routine is
 
 ## 2. Prohibited Substances & Tools:
 
-* ❌**Bleach**or products containing**Hydrogen Peroxide**.
-* ❌**Window cleaners or household detergents**.
-* ❌**Aerosols, solvents, or abrasives**.
-* ❌**Compressed air**sprayed directly into openings (can damage microphone or speaker membranes).
-* ❌**Rough fabrics, paper towels, or napkins**(may cause micro-scratches).
+*    ❌**Bleach**or products containing**Hydrogen Peroxide**.
+*    ❌**Window cleaners or household detergents**.
+*    ❌**Aerosols, solvents, or abrasives**.
+*    ❌**Compressed air**sprayed directly into openings (can damage microphone or speaker membranes).
+*    ❌**Rough fabrics, paper towels, or napkins**(may cause micro-scratches).
 
 ## 3. Standard Cleaning Steps:
 
-1.**Power Down**: Unplug all external power, accessories, and cables, and turn off the iPad.
-
-1.**Spray the Cloth**:**Never spray cleaners directly onto the iPad.**Spray the alcohol onto a soft, lint-free microfiber cloth until it is "slightly damp."
-
-1.**Wipe Gently**: Avoid excessive wiping, which may cause damage. Avoid any openings (such as the charging port, speakers, or microphone holes) to prevent liquid from entering the interior.
-
-1.**Accessory Cleaning**: The body of an Apple Pencil (USB-C) can be wiped with a dampened cloth, but**do not wipe the tip itself or allow liquid to enter the USB-C connector.**
+1. **Power Down**: Unplug all external power, accessories, and cables, and turn off the iPad.
+2. **Spray the Cloth**:**Never spray cleaners directly onto the iPad.**Spray the alcohol onto a soft, lint-free microfiber cloth until it is "slightly damp."
+3. **Wipe Gently**: Avoid excessive wiping, which may cause damage. Avoid any openings (such as the charging port, speakers, or microphone holes) to prevent liquid from entering the interior.
+4. **Accessory Cleaning**: The body of an Apple Pencil (USB-C) can be wiped with a dampened cloth, but**do not wipe the tip itself or allow liquid to enter the USB-C connector.**
 
 ## 4. Risk Warnings and Material Differences:
 

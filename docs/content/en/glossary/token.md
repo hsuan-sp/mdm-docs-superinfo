@@ -1,7 +1,7 @@
 ---
-term: Token
 category:
   - Security
+term: Token
 ---
 ## Term Definition
 

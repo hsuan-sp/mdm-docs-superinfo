@@ -1,8 +1,8 @@
 ---
-term: Platform SSO
 category:
   - Security
   - macOS
+term: Platform SSO
 ---
 ## Term Definition
 

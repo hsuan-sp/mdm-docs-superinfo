@@ -1,9 +1,6 @@
 ---
-id: mac-25
-title: >-
-  Security Auditing: Using PSSO 2.0 to achieve 'Boot-to-Desktop' and meet strong
-  password requirements.
 category: 'Section 7: Mac Management'
+id: mac-25
 important: false
 tags:
   - Platform SSO
@@ -11,6 +8,9 @@ tags:
   - Security Standards
   - MOE Requirements
   - Authentication
+title: >-
+  Security Auditing: Using PSSO 2.0 to achieve 'Boot-to-Desktop' and meet strong
+  password requirements.
 ---
 ## Q: Security Auditing: Using PSSO 2.0 to achieve 'Boot-to-Desktop' and meet strong password requirements.
 
@@ -24,25 +24,25 @@ By synchronizing the local Mac login with organizational cloud accounts (Microso
 
 ## 1. Configure PSSO in MDM
 
-* Set up the Platform SSO configuration in Jamf Pro.
-* Select the authentication mode:**'Shared Secret'**(standard) or**'Hardware Bound Key'**(highest security using the Secure Enclave).
+*    Set up the Platform SSO configuration in Jamf Pro.
+*    Select the authentication mode:**'Shared Secret'**(standard) or**'Hardware Bound Key'**(highest security using the Secure Enclave).
 
 ## 2. Enable Boot-to-Desktop
 
-* Enable**'FileVault Login & PSSO Synchronization.'**
+*    Enable**'FileVault Login & PSSO Synchronization.'**
 * **Result**: When the teacher enters their password at the initial FileVault disk-unlock screen, the system automatically uses those credentials to complete the cloud authentication in the background. The Mac loads straight to the desktop without asking for a second password.
 
 ## 3. Enforce Strong Policies via IdP
 
-* Password strength (length, complexity, rotation) is managed centrally by your Cloud Identity Provider (IdP).
+*    Password strength (length, complexity, rotation) is managed centrally by your Cloud Identity Provider (IdP).
 * **Benefit**: The school IT lead no longer needs to manually audit every Mac’s local password. As long as the IdP authentication is successful, the device is automatically compliant with national cybersecurity audit standards.
 
 ## Frequently Asked Questions
 
 * **Can users log in while offline?**
-* Yes. PSSO maintains a local cached credential to ensure teachers can still teach in areas with poor connectivity or while at home.
+*    Yes. PSSO maintains a local cached credential to ensure teachers can still teach in areas with poor connectivity or while at home.
 * **If a teacher changes their password in the cloud, does it update on the Mac?**
-* Yes. On the next login, the Mac will detect the mismatch, prompt the user to enter their new cloud password, and immediately synchronize the local account.
+*    Yes. On the next login, the Mac will detect the mismatch, prompt the user to enter their new cloud password, and immediately synchronize the local account.
 
 ## Expert Insight
 

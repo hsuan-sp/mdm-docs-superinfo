@@ -1,9 +1,6 @@
 ---
-id: mac-21
-title: >-
-  macOS 26 Transparency: Students can see MDM privacy settings. How do I handle
-  questions?
 category: 'Section 7: Mac Management'
+id: mac-21
 important: false
 tags:
   - Privacy Permissions
@@ -11,6 +8,9 @@ tags:
   - PPPC
   - macOS 26
   - Communication
+title: >-
+  macOS 26 Transparency: Students can see MDM privacy settings. How do I handle
+  questions?
 ---
 ## Q: macOS 26 Transparency: Students can see MDM privacy settings. How do I handle questions?
 
@@ -26,11 +26,11 @@ tags:
 ## How to Respond to Common Student/Staff Questions:
 
 * **"Why is the Microphone forced ON?"**
-* Response: This ensures apps like Zoom, Google Meet, or recording software for language classes work instantly. Being "Authorized" does not mean it is "Recording"—macOS still shows a hardware-level**Orange Light**whenever the mic is active.
+*    Response: This ensures apps like Zoom, Google Meet, or recording software for language classes work instantly. Being "Authorized" does not mean it is "Recording"—macOS still shows a hardware-level**Orange Light**whenever the mic is active.
 * **"Why is the Screen Recording permission managed?"**
-* Response: This allows students to share their screen during a presentation or remote lab. macOS displays a**Purple icon**in the menu bar whenever a screen is being shared or recorded.
+*    Response: This allows students to share their screen during a presentation or remote lab. macOS displays a**Purple icon**in the menu bar whenever a screen is being shared or recorded.
 * **"Why can't I turn it OFF?"**
-* Response: Managing these via MDM ensures that critical educational tools don't fail due to a student accidentally clicking "Deny." This reduces technical downtime in the classroom.
+*    Response: Managing these via MDM ensures that critical educational tools don't fail due to a student accidentally clicking "Deny." This reduces technical downtime in the classroom.
 
 ## Professional Advice:
 

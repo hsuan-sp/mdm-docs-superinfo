@@ -1,7 +1,7 @@
 ---
-term: Configuration Profile
 category:
   - Core
+term: Configuration Profile
 ---
 ## Term Definition
 

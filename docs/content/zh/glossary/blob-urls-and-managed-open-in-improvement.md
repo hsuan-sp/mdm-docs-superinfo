@@ -1,7 +1,7 @@
 ---
-term: Blob URLs and Managed Open-In Improvement (Blob URL 與管理式 Open-In 改進)
 category:
   - Security
+term: Blob URLs and Managed Open-In Improvement (Blob URL 與管理式 Open-In 改進)
 ---
 ## 術語定義
 
@@ -17,4 +17,4 @@ category:
 
 ## MDM 相關
 
-這強化了企業的資料防護策略，能有效防止學生或員工將 **管理式 App** 內的敏感資料，設法外傳至個人的雲端硬碟或社群軟體中。
+這強化了企業的資料防護策略，能有效防止學生或員工將 ** 管理式 App** 內的敏感資料，設法外傳至個人的雲端硬碟或社群軟體中。

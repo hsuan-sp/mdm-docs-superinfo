@@ -1,9 +1,9 @@
 ---
-term: Jamf Connect
 category:
   - Jamf
   - Security
   - macOS
+term: Jamf Connect
 ---
 ## Term Definition
 

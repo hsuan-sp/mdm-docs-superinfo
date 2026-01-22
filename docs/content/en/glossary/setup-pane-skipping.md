@@ -1,7 +1,7 @@
 ---
-term: Setup Pane Skipping
 category:
   - Mac
+term: Setup Pane Skipping
 ---
 ## Term Definition
 

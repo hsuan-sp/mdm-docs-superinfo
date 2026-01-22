@@ -1,8 +1,8 @@
 ---
-term: PPPC
 category:
   - Security
   - macOS
+term: PPPC
 ---
 ## Term Definition
 

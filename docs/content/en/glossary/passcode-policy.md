@@ -1,8 +1,8 @@
 ---
-term: Passcode Policy
 category:
   - Security
   - Core
+term: Passcode Policy
 ---
 ## Term Definition
 

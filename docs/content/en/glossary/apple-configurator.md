@@ -1,7 +1,7 @@
 ---
-term: Apple Configurator
 category:
   - Core
+term: Apple Configurator
 ---
 ## Term Definition
 

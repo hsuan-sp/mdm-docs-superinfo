@@ -1,7 +1,7 @@
 ---
-term: Client Isolation
 category:
   - Network
+term: Client Isolation
 ---
 ## Term Definition
 

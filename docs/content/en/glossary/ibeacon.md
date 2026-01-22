@@ -1,7 +1,7 @@
 ---
-term: iBeacon
 category:
   - Hardware
+term: iBeacon
 ---
 ## Term Definition
 

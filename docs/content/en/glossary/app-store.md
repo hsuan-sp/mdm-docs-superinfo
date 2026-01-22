@@ -1,7 +1,7 @@
 ---
-term: App Store
 category:
   - Apps
+term: App Store
 ---
 ## Term Definition
 

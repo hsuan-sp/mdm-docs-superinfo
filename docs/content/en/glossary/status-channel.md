@@ -1,7 +1,7 @@
 ---
-term: Status Channel
 category:
   - Core
+term: Status Channel
 ---
 ## Term Definition
 

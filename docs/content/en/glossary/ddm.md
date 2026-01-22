@@ -1,7 +1,7 @@
 ---
-term: DDM (Declarative Device Management)
 category:
   - Core
+term: DDM (Declarative Device Management)
 ---
 ## Term Definition
 

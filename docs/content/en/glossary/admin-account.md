@@ -1,7 +1,7 @@
 ---
-term: Admin Account
 category:
   - Security
+term: Admin Account
 ---
 ## Term Definition
 

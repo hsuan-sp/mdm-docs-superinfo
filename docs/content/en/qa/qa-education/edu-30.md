@@ -1,15 +1,15 @@
 ---
-id: edu-30
-title: >-
-  Can MDM-managed iPads still be used if the school Wi-Fi is down? What are the
-  backup plans?
 category: 'Section 8: Education Scenarios'
+id: edu-30
 important: true
 tags:
   - Connectivity
   - Backup Plan
   - Offline Usage
   - Network Instability
+title: >-
+  Can MDM-managed iPads still be used if the school Wi-Fi is down? What are the
+  backup plans?
 ---
 ## Q: Can MDM-managed iPads still be used if the school Wi-Fi is down? What are the backup plans?
 
@@ -35,11 +35,9 @@ tags:
 
 ## Administrator Backup SOP
 
-1.**Bluetooth Awareness**: Remind teachers that during an outage, they must keep Bluetooth ON for "Classroom" app peer-to-peer functions to work.
-
-1.**Hardwire Kits**: Keep a set of Lightning/USB-C to Ethernet adapters and a laptop with**Apple Configurator**to manually inject Wi-Fi profiles if a device loses its configuration during a prolonged outage.
-
-1.**Offline Inventory**: Maintain a physical or local PDF copy of your asset list (Serial Numbers and Wi-Fi MAC addresses) for manual troubleshooting.
+1. **Bluetooth Awareness**: Remind teachers that during an outage, they must keep Bluetooth ON for "Classroom" app peer-to-peer functions to work.
+2. **Hardwire Kits**: Keep a set of Lightning/USB-C to Ethernet adapters and a laptop with**Apple Configurator**to manually inject Wi-Fi profiles if a device loses its configuration during a prolonged outage.
+3. **Offline Inventory**: Maintain a physical or local PDF copy of your asset list (Serial Numbers and Wi-Fi MAC addresses) for manual troubleshooting.
 
 ## Summary Advice
 

@@ -1,7 +1,7 @@
 ---
-term: Liquid Glass
 category:
   - Core
+term: Liquid Glass
 ---
 ## Term Definition
 

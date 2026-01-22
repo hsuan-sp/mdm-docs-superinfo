@@ -1,7 +1,7 @@
 ---
-term: Ethernet
 category:
   - Network
+term: Ethernet
 ---
 ## Term Definition
 

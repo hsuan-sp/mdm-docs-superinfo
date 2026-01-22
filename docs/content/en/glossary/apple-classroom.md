@@ -1,7 +1,7 @@
 ---
-term: Apple Classroom
 category:
   - Education
+term: Apple Classroom
 ---
 ## Term Definition
 

@@ -1,8 +1,8 @@
 ---
-term: Guided Access
 category:
   - Education
   - Apple
+term: Guided Access
 ---
 ## Term Definition
 

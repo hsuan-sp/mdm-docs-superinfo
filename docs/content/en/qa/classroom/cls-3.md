@@ -1,13 +1,13 @@
 ---
-id: cls-3
-title: Why is the web navigation failing when I try to push a URL to student iPads?
 category: 'Section 4: Classroom Management & Instructional Tools'
+id: cls-3
 important: false
 tags:
   - Web Navigation
   - Safari
   - Content Filtering
   - Troubleshooting
+title: Why is the web navigation failing when I try to push a URL to student iPads?
 ---
 ## Q: Why is the web navigation failing when I try to push a URL to student iPads?
 
@@ -17,13 +17,10 @@ tags:
 
 ## Troubleshooting Checklist:
 
-1.**Safari is Disabled**: Verify if Safari has been hidden or disabled via a management profile. If the browser is unavailable, the push command has nowhere to go.
-
-1.**Web Content Filtering**: If your school uses a strict "allowlist," and the URL you are pushing (e.g., a specific YouTube video or external blog) is not on that list, Safari will block the page from loading.
-
-1.**Tab Fatigue**: If a student has dozens of open tabs, older iPad models may run out of memory and fail to open a new one. Ask students to clear their Safari tabs and try again.
-
-1.**URL Format**: Ensure the URL you are typing includes the full `https://` prefix.
+1. **Safari is Disabled**: Verify if Safari has been hidden or disabled via a management profile. If the browser is unavailable, the push command has nowhere to go.
+2. **Web Content Filtering**: If your school uses a strict "allowlist," and the URL you are pushing (e.g., a specific YouTube video or external blog) is not on that list, Safari will block the page from loading.
+3. **Tab Fatigue**: If a student has dozens of open tabs, older iPad models may run out of memory and fail to open a new one. Ask students to clear their Safari tabs and try again.
+4. **URL Format**: Ensure the URL you are typing includes the full `HTTPS://` prefix.
 
 ## Best Practice for Teachers:
 

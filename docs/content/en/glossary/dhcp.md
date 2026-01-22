@@ -1,7 +1,7 @@
 ---
-term: DHCP (Dynamic Host Configuration Protocol)
 category:
   - Network
+term: DHCP (Dynamic Host Configuration Protocol)
 ---
 ## Term Definition
 

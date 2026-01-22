@@ -1,9 +1,6 @@
 ---
-id: mac-24
-title: >-
-  Exam Security: Managing Safari 'Distraction Control' to prevent cheating
-  during web-based tests.
 category: 'Section 7: Mac Management'
+id: mac-24
 important: true
 tags:
   - Safari
@@ -11,6 +8,9 @@ tags:
   - Exam Security
   - macOS 26
   - Proctoring
+title: >-
+  Exam Security: Managing Safari 'Distraction Control' to prevent cheating
+  during web-based tests.
 ---
 ## Q: Exam Security: Managing Safari 'Distraction Control' to prevent cheating during web-based tests.
 
@@ -25,15 +25,15 @@ tags:
 
 ## Management Solutions (SOP):
 
-1.**MDM Configuration Profile (Recommended)**:
+1. **MDM Configuration Profile (Recommended)**:
 
-* **Domain**: `com.apple.Safari`.
-* **Payload**: Set `AllowDistractionControl` to `false`.
+* **Domain**: `com.Apple.Safari`.
+* **Payload**: Set `AllowDistractionControl`to`false`.
 * **Effect**: The "Distraction Control" option in the Safari menu will be grayed out and unavailable, ensuring the website UI remains exactly as intended by the test publisher.
 
-1.**Assessment Mode (AAC)**:
+2. **Assessment Mode (AAC)**:
 
-* For high-stakes exams, use a specialized testing app or a managed browser that invokes Apple’s**'Assessment Mode.'**
+*    For high-stakes exams, use a specialized testing app or a managed browser that invokes Apple’s**'Assessment Mode.'**
 * **Effect**: This automatically suppresses Distraction Control, Siri, notifications, and all multitasking features without needing a specific configuration profile.
 
 ## IT Strategy:

@@ -1,9 +1,6 @@
 ---
-id: app-26
-title: >-
-  How to manage the AI-assisted teaching apps in 2024–2025 (e.g., Writing Tools,
-  Image Playground)?
 category: 'Section 3: App Distribution & Management (Apps & Books)'
+id: app-26
 important: true
 tags:
   - AI
@@ -11,6 +8,9 @@ tags:
   - App Management
   - Privacy
   - Exam Security
+title: >-
+  How to manage the AI-assisted teaching apps in 2024–2025 (e.g., Writing Tools,
+  Image Playground)?
 ---
 ## Q: How do I manage the AI-assisted teaching apps in 2024–2025 (e.g., Writing Tools, Image Playground)?
 

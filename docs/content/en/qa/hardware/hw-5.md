@@ -1,13 +1,13 @@
 ---
-id: hw-5
-title: How should we store iPads during the summer break to prevent battery damage?
 category: 'Section 6: Hardware & Maintenance'
+id: hw-5
 important: true
 tags:
   - Battery Health
   - Storage
   - Summer Break
   - Prevention
+title: How should we store iPads during the summer break to prevent battery damage?
 ---
 ## Q: How should we store iPads during the summer break to prevent battery damage?
 
@@ -19,18 +19,18 @@ Storing a device improperly for 2-3 months can lead to "Deep Discharge," where t
 
 ## The Three Golden Rules for Storage:
 
-1.**Charge to ~50%**:
+1. **Charge to ~50%**:
 
 * **Do not store at 0%**: This can lead to the battery falling into a deep discharge state, making the device impossible to turn on come September.
 * **Do not store at 100%**: Keeping a battery at maximum capacity for months can cause it to lose some of its total lifespan permanently.
 
-1.**Power Off Completely**:
+2. **Power Off Completely**:
 
-* After reaching 50%, go to**Settings > General > Shut Down**. This ensures the device isn't slowly draining power while sitting in the cart.
+*    After reaching 50%, go to**Settings > General > Shut Down**. This ensures the device isn't slowly draining power while sitting in the cart.
 
-1.**Cool, Dry Environment**:
+3. **Cool, Dry Environment**:
 
-* Store the iPads (and the charging cart) in a temperature-controlled room. Excessive heat (like a non-air-conditioned classroom in the height of summer) accelerated chemical degradation.
+*    Store the iPads (and the charging cart) in a temperature-controlled room. Excessive heat (like a non-air-conditioned classroom in the height of summer) accelerated chemical degradation.
 
 ## Operational Advice for IT:
 

@@ -1,13 +1,13 @@
 ---
-id: edu-11
-title: What is the difference between 'Guided Access' and 'Single App Mode'?
 category: 'Section 8: Education Scenarios'
+id: edu-11
 important: false
 tags:
   - Locking
   - Comparison
   - Guided Access
   - Single App Mode
+title: What is the difference between 'Guided Access' and 'Single App Mode'?
 ---
 ## Q: What is the difference between 'Guided Access' and 'Single App Mode'?
 

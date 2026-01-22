@@ -1,7 +1,7 @@
 ---
-term: ABM (Apple Business Manager)
 category:
   - Apple
+term: ABM (Apple Business Manager)
 ---
 ## Term Definition
 

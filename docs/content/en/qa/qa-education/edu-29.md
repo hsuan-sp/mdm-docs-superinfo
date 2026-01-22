@@ -1,15 +1,15 @@
 ---
-id: edu-29
-title: >-
-  In the AI Era (iOS 26), how can MDM assist with Digital Citizenship and
-  behavior management?
 category: 'Section 8: Education Scenarios'
+id: edu-29
 important: false
 tags:
   - Digital Citizenship
   - AI Ethics
   - Behavior Management
   - iOS 26
+title: >-
+  In the AI Era (iOS 26), how can MDM assist with Digital Citizenship and
+  behavior management?
 ---
 ## Q: In the AI Era (iOS 26), how can MDM assist with Digital Citizenship and behavior management?
 

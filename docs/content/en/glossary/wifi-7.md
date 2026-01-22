@@ -1,7 +1,7 @@
 ---
-term: Wi-Fi 7
 category:
   - Network
+term: Wi-Fi 7
 ---
 ## Term Definition
 

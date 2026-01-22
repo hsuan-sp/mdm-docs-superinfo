@@ -1,14 +1,14 @@
 ---
-id: acc-14
-title: >-
-  Newly purchased devices are not syncing from ASM to Jamf Pro? (ADE Server
-  Token Renewal)
 category: 'Section 1: Account & Server Management'
+id: acc-14
 important: true
 tags:
   - ADE
   - Server Token
   - Automated Device Enrollment
+title: >-
+  Newly purchased devices are not syncing from ASM to Jamf Pro? (ADE Server
+  Token Renewal)
 ---
 ## Q: Newly purchased devices are not syncing from ASM to Jamf Pro? (ADE Server Token Renewal)
 
@@ -20,19 +20,17 @@ The Server Token acts as the secure bridge between ASM and Jamf Pro for hardware
 
 ## Troubleshooting Steps:
 
-1.**Token Expiration**: Server Tokens are valid for exactly one year. Once expired, Jamf Pro cannot fetch new serial numbers or update the enrollment status of existing ones from Apple.
-
-1.**Unassigned Devices**: New devices must be assigned to your Jamf Pro "MDM Server" within ASM before Jamf Pro can "see" them.
-
-1.**Unaccepted Terms**: As mentioned in `acc-1`, if new Apple terms and conditions have not been accepted, Apple will suspend all ADE synchronization activities.
+1. **Token Expiration**: Server Tokens are valid for exactly one year. Once expired, Jamf Pro cannot fetch new serial numbers or update the Enrollment status of existing ones from Apple.
+2. **Unassigned Devices**: New devices must be assigned to your Jamf Pro "MDM Server" within ASM before Jamf Pro can "see" them.
+3. **Unaccepted Terms**: As mentioned in `acc-1`, if new Apple terms and conditions have not been accepted, Apple will suspend all ADE synchronization activities.
 
 ## How to Renew the Server Token:
 
-1. Log in to [school.apple.com](https://school.apple.com).
-1. Click your name at the bottom left >**Preferences > Your MDM Servers**.
-1. Select your server and click**Download Token**.
-1. Log in to Jamf Pro, go to**Settings > Global Management > Device Enrollment**.
-1. Select your server instance and upload the new token file to complete the renewal.
+1. Log in to [school.Apple.com](HTTPS://school.Apple.com).
+2. Click your name at the bottom left >**Preferences > Your MDM Servers**.
+3. Select your server and click**Download Token**.
+4. Log in to Jamf Pro, go to**Settings > Global Management > Device Enrollment**.
+5. Select your server instance and upload the new token file to complete the renewal.
 
 ## Synchronization Context:
 

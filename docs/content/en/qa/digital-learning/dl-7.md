@@ -1,15 +1,15 @@
 ---
-id: dl-7
-title: >-
-  Why is 'iCloud Private Relay' forced off on school iPads? Does this affect
-  privacy?
 category: 'Section 5: Digital Initiatives (MOE Project)'
+id: dl-7
 important: false
 tags:
   - iCloud
   - Private Relay
   - Digital Learning Project
   - Policy Info
+title: >-
+  Why is 'iCloud Private Relay' forced off on school iPads? Does this affect
+  privacy?
 ---
 ## Q: Why is 'iCloud Private Relay' forced off on school iPads? Does this affect privacy?
 
@@ -23,14 +23,13 @@ On Supervised devices within the Digital Learning Project, you will typically fi
 
 ## Why Must it be Disabled? (Technical Conflict)
 
-1.**Filtering Failure**: iCloud Private Relay encrypts DNS queries and routes them through Apple's relays. This prevents Jamf Trust from identifying whether a student is visiting inappropriate or malicious sites, effectively bypassing the "Safe Search" features.
-
-1.**Data Loss**: Because traffic is encrypted and hidden, Jamf Trust cannot calculate traffic volume or usage time. This leads to**anomalous usage data (showing as zero or very low)**on official reports, which affects school KPI evaluations.
+1. **Filtering Failure**: iCloud Private Relay encrypts DNS queries and routes them through Apple's relays. This prevents Jamf Trust from identifying whether a student is visiting inappropriate or malicious sites, effectively bypassing the "Safe Search" features.
+2. **Data Loss**: Because traffic is encrypted and hidden, Jamf Trust cannot calculate traffic volume or usage time. This leads to**anomalous usage data (showing as zero or very low)**on official reports, which affects school KPI evaluations.
 
 ## Does this Invade Privacy?
 
 * **No.**Disabling Private Relay simply means traffic does not go through Apple's dual-encryption tunnel; it returns to standard network transmission.
-* The school's MDM and filtering mechanisms follow strict cybersecurity regulations. They only block harmful sites and track "usage hours." Administrators cannot see specific Google search keywords or private messages.
+*    The school's MDM and filtering mechanisms follow strict cybersecurity regulations. They only block harmful sites and track "usage hours." Administrators cannot see specific Google search keywords or private messages.
 
 ## Practical Advice:
 

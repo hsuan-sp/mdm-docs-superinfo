@@ -1,9 +1,6 @@
 ---
-id: mac-13
-title: >-
-  Google Meet or Zoom keeps asking for 'Screen Recording' permissions. Can MDM
-  enable this automatically?
 category: 'Section 7: Mac Management'
+id: mac-13
 important: false
 tags:
   - PPPC
@@ -11,6 +8,9 @@ tags:
   - TCC
   - Screen Recording
   - Standard Users
+title: >-
+  Google Meet or Zoom keeps asking for 'Screen Recording' permissions. Can MDM
+  enable this automatically?
 ---
 ## Q: Google Meet or Zoom keeps asking for 'Screen Recording' permissions. Can MDM enable this automatically?
 
@@ -31,7 +31,7 @@ MDM cannot forcibly "turn on" these permissions. However, you can use a**PPPC (P
 
 ## Best Practices for Schools (SOP):
 
-1.**Solve the 'Standard User' Block (Crucial)**
+1. **Solve the 'Standard User' Block (Crucial)**
 
  Since teachers are rarely administrators, they get stuck when a system prompt asks for an admin password to allow screen sharing.
 
@@ -39,7 +39,7 @@ MDM cannot forcibly "turn on" these permissions. However, you can use a**PPPC (P
 * **Setting**: Set `Screen Recording` to**Allow Standard Users to allow access**.
 * **Result**: When the teacher clicks allow, the system**no longer asks for an admin password**.
 
-1.**Silent Authorization**
+2. **Silent Authorization**
 
  For specialized tools, set**Accessibility**to**Allow**to reduce pop-up fatigue for your users.
 

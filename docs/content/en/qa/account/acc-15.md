@@ -1,14 +1,14 @@
 ---
-id: acc-15
-title: >-
-  What are the main differences between Jamf Pro and Jamf School? How should we
-  choose?
 category: 'Section 1: Account & Server Management'
+id: acc-15
 important: false
 tags:
   - Jamf Pro
   - Jamf School
   - Product Comparison
+title: >-
+  What are the main differences between Jamf Pro and Jamf School? How should we
+  choose?
 ---
 ## Q: What are the main differences between Jamf Pro and Jamf School? How should we choose?
 

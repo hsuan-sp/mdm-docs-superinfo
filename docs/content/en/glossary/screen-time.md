@@ -1,8 +1,8 @@
 ---
-term: Screen Time
 category:
   - Apple
   - Core
+term: Screen Time
 ---
 ## Term Definition
 

@@ -1,7 +1,7 @@
 ---
-term: IP Address
 category:
   - Network
+term: IP Address
 ---
 ## Term Definition
 
@@ -16,7 +16,7 @@ It serves two primary functions:
 
 * **Dynamic IP (DHCP)**: Automatically and temporarily assigned by a server; the address may change over time.
 * **Static IP**: Manually and permanently assigned; the address remains constant.
-* **Private IP**: Used within the school's internal network (e.g., `10.x.x.x` or `192.168.x.x`).
+* **Private IP**: Used within the school's internal network (e.g., `10.x.x.x`or`192.168.x.x`).
 * **Public IP**: The address seen by the rest of the world on the internet.
 
 ## Analogy

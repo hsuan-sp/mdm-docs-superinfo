@@ -1,7 +1,7 @@
 ---
-term: Passkeys
 category:
   - Security
+term: Passkeys
 ---
 ## Term Definition
 

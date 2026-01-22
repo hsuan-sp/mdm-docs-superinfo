@@ -1,7 +1,7 @@
 ---
-term: Battery Health
 category:
   - Hardware
+term: Battery Health
 ---
 ## Term Definition
 

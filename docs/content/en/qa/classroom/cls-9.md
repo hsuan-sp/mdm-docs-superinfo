@@ -1,13 +1,13 @@
 ---
-id: cls-9
-title: How do I manage 'Screen Brightness' and 'Auto-Lock' on student iPads?
 category: 'Section 4: Classroom Management & Instruction'
+id: cls-9
 important: false
 tags:
   - Device Settings
   - Power Saving
   - Auto-Lock
   - Restrictions Profile
+title: How do I manage 'Screen Brightness' and 'Auto-Lock' on student iPads?
 ---
 ## Q: How do I manage 'Screen Brightness' and 'Auto-Lock' on student iPads?
 
@@ -25,7 +25,7 @@ According to Apple's MDM protocol specifications:
 ## 2. Screen Brightness
 
 * **NOT Manageable**: Currently, there is no MDM command to lock brightness at a specific percentage (e.g., 50%).
-* This is by design to ensure accessibility and visibility across varying lighting environments.
+*    This is by design to ensure accessibility and visibility across varying lighting environments.
 * **Advice**: Teachers should instruct students to enable "Auto-Brightness" or manually adjust it via Control Center.
 
 ## 3. Wallpaper

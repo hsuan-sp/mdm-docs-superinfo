@@ -1,14 +1,14 @@
 ---
-id: app-8
-title: Can I deploy Web Clips to student home screens? Are they considered apps?
-category: 'Section 3: App Distribution category: '
 Section 3: App Distribution & Management (Apps & Books)" Management"
+category: 'Section 3: App Distribution category: '
+id: app-8
 important: false
 tags:
   - Web Clip
   - Safari
   - Configuration Profile
   - Teaching Tools
+title: Can I deploy Web Clips to student home screens? Are they considered apps?
 ---
 ## Q: Can I deploy Web Clips to student home screens? Are they considered apps?
 

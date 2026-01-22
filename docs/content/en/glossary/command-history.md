@@ -1,7 +1,7 @@
 ---
-term: Command History
 category:
   - Core
+term: Command History
 ---
 ## Term Definition
 

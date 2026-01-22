@@ -1,7 +1,7 @@
 ---
-term: AirDrop for Business
 category:
   - Security
+term: AirDrop for Business
 ---
 ## Term Definition
 

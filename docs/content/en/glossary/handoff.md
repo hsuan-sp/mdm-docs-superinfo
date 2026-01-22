@@ -1,7 +1,7 @@
 ---
-term: Handoff
 category:
   - Apple
+term: Handoff
 ---
 ## Term Definition
 

@@ -1,12 +1,12 @@
 ---
-id: edu-06
-title: Can I sign into my personal Apple Account to download games I bought before?
 category: 'Section 8: Education Scenarios'
+id: edu-06
 important: false
 tags:
   - Apple Account
   - Personal vs. School
   - Account Policies
+title: Can I sign into my personal Apple Account to download games I bought before?
 ---
 ## Q: Can I sign into my personal Apple Account to download games I bought before?
 

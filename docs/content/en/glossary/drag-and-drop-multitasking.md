@@ -1,7 +1,7 @@
 ---
-term: Drag and Drop Multitasking
 category:
   - Core
+term: Drag and Drop Multitasking
 ---
 ## Term Definition
 

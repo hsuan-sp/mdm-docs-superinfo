@@ -1,7 +1,7 @@
 ---
-term: Schoolwork App
 category:
   - Education
+term: Schoolwork App
 ---
 ## Term Definition
 

@@ -1,7 +1,7 @@
 ---
-term: Lost Mode
 category:
   - Security
+term: Lost Mode
 ---
 ## Term Definition
 

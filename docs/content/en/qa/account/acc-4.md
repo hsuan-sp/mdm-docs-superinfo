@@ -1,12 +1,12 @@
 ---
-id: acc-4
-title: Jamf Pro shows that the 'VPP Token' is about to expire. How do we update it?
 category: 'Section 1: Account & Server Management'
+id: acc-4
 important: false
 tags:
   - VPP
   - Token
   - Volume Purchasing
+title: Jamf Pro shows that the 'VPP Token' is about to expire. How do we update it?
 ---
 ## Q: Jamf Pro shows that the 'VPP Token' is about to expire. How do we update it?
 
@@ -20,19 +20,19 @@ If the token expires, Jamf Pro will lose the ability to fetch new licenses or up
 
 ## Step 1: Download the Token from ASM
 
-1. Log in to [school.apple.com](https://school.apple.com) with "Administrator" or "Content Manager" privileges.
-1. Click your**Account Name**in the bottom-left corner and go to**Preferences**.
-1. Select**Payments and Billing**.
-1. Find the**Apps and Books**section and locate your specific location (e.g., "Main Campus").
-1. Click**Download**next to the VPP Token for that location. A `.vpptoken` file will be saved to your computer.
+1. Log in to [school.Apple.com](HTTPS://school.Apple.com) with "Administrator" or "Content Manager" privileges.
+2. Click your**Account Name**in the bottom-left corner and go to**Preferences**.
+3. Select**Payments and Billing**.
+4. Find the**Apps and Books**section and locate your specific location (e.g., "Main Campus").
+5. Click**Download**next to the VPP Token for that location. A `.vpptoken` file will be saved to your computer.
 
 ## Step 2: Upload the Token to Jamf Pro
 
 1. Log in to your Jamf Pro dashboard.
-1. Navigate to**Settings > Global Management > Volume Purchasing**.
-1. Click on the entry for your location and select**Edit**.
-1. Select**Upload**and choose the `.vpptoken` file you just downloaded.
-1. Click**Save**. The status should now reflect a new expiration date one year in the future.
+2. Navigate to**Settings > Global Management > Volume Purchasing**.
+3. Click on the entry for your location and select**Edit**.
+4. Select**Upload**and choose the `.vpptoken` file you just downloaded.
+5. Click**Save**. The status should now reflect a new expiration date one year in the future.
 
 ## Troubleshooting Tips:
 

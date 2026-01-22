@@ -1,7 +1,7 @@
 ---
-term: Certificate
 category:
   - Security
+term: Certificate
 ---
 ## Term Definition
 

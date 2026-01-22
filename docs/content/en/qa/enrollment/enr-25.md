@@ -1,9 +1,6 @@
 ---
-id: enr-25
-title: >-
-  Which Setup Assistant steps should I skip during PreStage Enrollment? What are
-  the best practices for schools?
 category: 'Section 2: Device Enrollment'
+id: enr-25
 important: true
 tags:
   - PreStage
@@ -11,6 +8,9 @@ tags:
   - ADE
   - Deployment Speed
   - Best Practices
+title: >-
+  Which Setup Assistant steps should I skip during PreStage Enrollment? What are
+  the best practices for schools?
 ---
 ## Q: Which Setup Assistant steps should I skip during PreStage Enrollment? What are the best practices for schools?
 

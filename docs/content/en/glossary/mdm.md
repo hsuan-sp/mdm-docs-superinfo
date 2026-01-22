@@ -1,7 +1,7 @@
 ---
-term: MDM (Mobile Device Management)
 category:
   - Core
+term: MDM (Mobile Device Management)
 ---
 ## Term Definition
 

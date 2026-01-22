@@ -1,13 +1,13 @@
 ---
-id: cls-2
-title: Can I restrict students to using only one specific app during my lesson?
 category: 'Section 4: Classroom Management & Instructional Tools'
+id: cls-2
 important: true
 tags:
   - App Lock
   - Single App Mode
   - Focus
   - Compliance
+title: Can I restrict students to using only one specific app during my lesson?
 ---
 ## Q: Can I restrict students to using only one specific app during my lesson?
 
@@ -20,15 +20,15 @@ This is particularly useful for assessments (e.g., Kahoot, Quizlet), focused wri
 ## How to Execute:
 
 1. In the Classroom app, select the entire class or specific students.
-1. Tap the**"Open"**tool.
-1. Select the target app from the list.
-1. Toggle on the switch for**"Lock in app after opening."**
-1. Tap "Done." The student devices will automatically launch the app and disable the Home button and multitasking.
+2. Tap the**"Open"**tool.
+3. Select the target app from the list.
+4. Toggle on the switch for**"Lock in app after opening."**
+5. Tap "Done." The student devices will automatically launch the app and disable the Home button and multitasking.
 
 ## How to Unlock:
 
-* Tap the**"Unlock"**button in the teacher’s toolbar.
-* The devices will also automatically unlock when the teacher ends the class session.
+*    Tap the**"Unlock"**button in the teacher’s toolbar.
+*    The devices will also automatically unlock when the teacher ends the class session.
 
 ## Practical Tip:
 

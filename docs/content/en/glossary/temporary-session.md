@@ -1,7 +1,7 @@
 ---
-term: Temporary Session
 category:
   - Education
+term: Temporary Session
 ---
 ## Term Definition
 

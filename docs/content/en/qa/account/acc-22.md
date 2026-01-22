@@ -1,7 +1,6 @@
 ---
-id: acc-22
-title: How do I batch create Managed Apple Accounts? Should I use SFTP or CSV import?
 category: 'Section 1: Account & Server Management'
+id: acc-22
 important: true
 tags:
   - ASM
@@ -9,6 +8,7 @@ tags:
   - SFTP
   - CSV
   - Managed Apple Account
+title: How do I batch create Managed Apple Accounts? Should I use SFTP or CSV import?
 ---
 ## Q: How do I batch create Managed Apple Accounts? Should I use SFTP or CSV import?
 
@@ -33,15 +33,12 @@ If your school uses a Student Information System (SIS), you can upload data via 
 * **OneRoster CSV**: Supporting OneRoster version 1.1 specifications.
 * **Workflow**:
 
-1.**Setup Connection**: Obtain your SFTP URL, username, and password from ASM.
+1. **Setup Connection**: Obtain your SFTP URL, username, and password from ASM.
+2. **Prepare Files**: Export data and create a**ZIP archive**containing all necessary CSV files.
+3. **Upload**: Use an SFTP client to connect and drag the ZIP file into the**dropbox**folder (this is the default root folder on Apple’s SFTP server).
+4. **Processing**: ASM will process the files automatically. You can download logs to check for errors.
 
-1.**Prepare Files**: Export data and create a**ZIP archive**containing all necessary CSV files.
-
-1.**Upload**: Use an SFTP client to connect and drag the ZIP file into the**dropbox**folder (this is the default root folder on Apple’s SFTP server).
-
-1.**Processing**: ASM will process the files automatically. You can download logs to check for errors.
-
-* Note: After the initial connection, every subsequent update must include "all" CSV files, even those that haven't changed.*
+*    Note: After the initial connection, every subsequent update must include "all" CSV files, even those that haven't changed.*
 
 ## 2. Manual CSV Upload
 

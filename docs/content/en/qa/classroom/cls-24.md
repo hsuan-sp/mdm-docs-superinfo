@@ -1,9 +1,6 @@
 ---
-id: cls-24
-title: >-
-  How do I prevent students from getting distracted by 'Windowed Apps' in iPadOS
-  26?
 category: 'Section 4: Classroom Management & Instructional Tools'
+id: cls-24
 important: true
 tags:
   - Windowed Apps
@@ -11,6 +8,9 @@ tags:
   - Focus
   - iPadOS 26
   - Classroom Management
+title: >-
+  How do I prevent students from getting distracted by 'Windowed Apps' in iPadOS
+  26?
 ---
 ## Q: How do I prevent students from getting distracted by 'Windowed Apps' in iPadOS 26?
 
@@ -43,8 +43,8 @@ Allow multitasking normally, but lock it down when focus is required.
 * **Action**:
 
 1. Select the class or specific students.
-1. Select**Open App**and check**Lock in App after opening**.
-1. Select the required app (e.g., Keynote).
+2. Select**Open App**and check**Lock in App after opening**.
+3. Select the required app (e.g., Keynote).
 
 * **Effect**: The student’s iPad is locked into that specific app in Full Screen mode. They cannot switch to windows or other apps until the teacher clicks "Unlock."
 

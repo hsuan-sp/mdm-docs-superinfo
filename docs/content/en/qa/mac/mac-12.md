@@ -1,13 +1,13 @@
 ---
-id: mac-12
-title: How do I prevent students from entering Recovery Mode to format the computer?
 category: 'Section 7: Mac Management'
+id: mac-12
 important: false
 tags:
   - Tamper Proofing
   - Recovery Lock
   - Firmware Password
   - Security
+title: How do I prevent students from entering Recovery Mode to format the computer?
 ---
 ## Q: How do I prevent students from entering Recovery Mode to format the computer?
 

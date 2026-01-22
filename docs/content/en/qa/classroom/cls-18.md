@@ -1,14 +1,14 @@
 ---
-id: cls-18
-title: >-
-  What is the difference between 'Jamf Teacher' and 'Apple Classroom'? Which one
-  should I use?
 category: 'Section 4: Classroom Management & Instructional Tools'
+id: cls-18
 important: false
 tags:
   - Jamf Teacher
   - Apple Classroom
   - Tool Comparison
+title: >-
+  What is the difference between 'Jamf Teacher' and 'Apple Classroom'? Which one
+  should I use?
 ---
 ## Q: What is the difference between 'Jamf Teacher' and 'Apple Classroom'? Which one should I use?
 

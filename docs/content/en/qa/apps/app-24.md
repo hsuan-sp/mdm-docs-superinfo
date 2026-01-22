@@ -1,10 +1,7 @@
 ---
-id: app-24
-title: >-
-  How do I restrict student iPads to download apps only over Wi-Fi to save
-  cellular data?
-category: 'Section 3: App Distribution category: '
 Section 3: App Distribution & Management (Apps & Books)" Management"
+category: 'Section 3: App Distribution category: '
+id: app-24
 important: false
 tags:
   - Cellular Data
@@ -12,6 +9,9 @@ tags:
   - App Download
   - Traffic Management
   - iOS 26
+title: >-
+  How do I restrict student iPads to download apps only over Wi-Fi to save
+  cellular data?
 ---
 ## Q: How do I restrict student iPads to download apps only over Wi-Fi to save cellular data?
 
@@ -24,13 +24,13 @@ tags:
 This feature is implemented via**DDM**configurations. In**Jamf Pro**:
 
 1. Go to**Blueprints**or**App Declarations**.
-1. Define the policy for individual managed apps or a group of apps.
-1. Set the**'CellularDataPolicy'**in the deployment declaration:
+2. Define the policy for individual managed apps or a group of apps.
+3. Set the**'CellularDataPolicy'**in the deployment declaration:
 
 * **Disallow**: Forces download/update to happen only over Wi-Fi.
 * **Allow**: Permits installation over any available network.
 
-1. Deploy to the target group (Requires**iOS 18+**and a**Supervised**device).
+4. Deploy to the target group (Requires**iOS 18+**and a**Supervised**device).
 
 ## Use Cases and Benefits
 
@@ -40,12 +40,12 @@ This feature is implemented via**DDM**configurations. In**Jamf Pro**:
 ## Impact and Limitations
 
 * **Applies to**:
-* Manual App Store downloads.
-* MDM-initiated (DDM) automated installs.
-* App auto-updates.
+*    Manual App Store downloads.
+*    MDM-initiated (DDM) automated installs.
+*    App auto-updates.
 * **Does NOT apply to**:
-* General web browsing or video streaming (YouTube still consumes data unless managed by a Content Filter).
-* In-app content updates (e.g., additional data packs inside a game).
+*    General web browsing or video streaming (YouTube still consumes data unless managed by a Content Filter).
+*    In-app content updates (e.g., additional data packs inside a game).
 * **User Experience**: When a student tries to download an app on 4G/5G, the button will be grayed out or a prompt will appear: "Please connect to Wi-Fi to download."
 
 ## Expert Strategy

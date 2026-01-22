@@ -1,13 +1,13 @@
 ---
-id: edu-26
-title: How do teachers manage Apple Intelligence 'Writing Tools' in the classroom?
 category: 'Section 8: Education Scenarios'
+id: edu-26
 important: true
 tags:
   - Apple Intelligence
   - Writing Tools
   - AI Management
   - Academic Integrity
+title: How do teachers manage Apple Intelligence 'Writing Tools' in the classroom?
 ---
 ## Q: How do teachers manage Apple Intelligence 'Writing Tools' in the classroom?
 

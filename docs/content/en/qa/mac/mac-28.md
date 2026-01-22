@@ -1,9 +1,6 @@
 ---
-id: mac-28
-title: >-
-  First-Aid: What to do if Mac Enrollment hangs after a 'Wipe All Content and
-  Settings' (EACS) reset.
 category: 'Section 7: Mac Management'
+id: mac-28
 important: true
 tags:
   - EACS
@@ -11,20 +8,21 @@ tags:
   - Network Auth
   - Terminal Commands
   - Recovery Mode
+title: >-
+  First-Aid: What to do if Mac Enrollment hangs after a 'Wipe All Content and
+  Settings' (EACS) reset.
 ---
 ## Q: First-Aid: What to do if Mac Enrollment hangs after a 'Wipe All Content and Settings' (EACS) reset.
 
 ## Answer
 
-**While 'Erase All Content and Settings (EACS)' is highly stable, school environments with captive-portal Wi-Fi or strict firewalls can cause the Mac to hang at the 'Remote Management' enrollment screen.**
+**While 'Erase All Content and Settings (EACS)' is highly stable, school environments with captive-portal Wi-Fi or strict firewalls can cause the Mac to hang at the 'Remote Management' Enrollment screen.**
 
 ## 1. Initial Diagnosis: Why is it hanging?
 
-1.**Time Sync (Most Common)**: If the Mac's system time differs significantly from the Apple servers, SSL certificate validation will fail.
-
-1.**Network Restrictions**: The school Wi-Fi requires a certificate that hasn't been deployed yet, or the firewall is blocking port 443 to `*apple.com`.
-
-1.**ASM Assignment**: The serial number in Apple School Manager has not been properly assigned to the target MDM server.
+1. **Time Sync (Most Common)**: If the Mac's system time differs significantly from the Apple servers, SSL certificate validation will fail.
+2. **Network Restrictions**: The school Wi-Fi requires a certificate that hasn't been deployed yet, or the firewall is blocking port 443 to `*Apple.com`.
+3. **ASM Assignment**: The serial number in Apple School Manager has not been properly assigned to the target MDM server.
 
 ## 2. Recovery Techniques (SOP)
 
@@ -65,4 +63,4 @@ If EACS fails completely to trigger, enter**Recovery Mode**:
 
 ## Expert Insight
 
-Don't panic when a batch of Macs hangs during enrollment. 90% of failures are solved by simply "Syncing the Time" or "Changing the Hotspot." We recommend IT leads keep a USB drive with a list of required Apple domains/ports to assist the networking team in troubleshooting.
+Don't panic when a batch of Macs hangs during Enrollment. 90% of failures are solved by simply "Syncing the Time" or "Changing the Hotspot." We recommend IT leads keep a USB drive with a list of required Apple domains/ports to assist the networking team in troubleshooting.

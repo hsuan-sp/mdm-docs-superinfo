@@ -54,27 +54,30 @@ function generateQASection(baseDir, isEn) {
         { dir: 'qa-education', title: isEn ? 'Education Scenarios' : '教育實戰', path: 'qa/qa-education' }
     ];
 
-    let output = `## ${isEn ? 'Q&A (EN)' : '問答集 (Q&A)'}\n\n`;
-
-    categories.forEach(cat => {
+    let totalQA = 0;
+    const catData = categories.map(cat => {
         const catDir = path.join(baseDir, cat.dir);
-        if (!fs.existsSync(catDir)) return;
-
-        output += `### ${cat.title} (\`${cat.path}\`)\n\n`;
-        
+        if (!fs.existsSync(catDir)) return { ...cat, files: [] };
         const files = fs.readdirSync(catDir).filter(f => f.endsWith('.md'));
-        // Sort by ID is tricky usually, but let's try alphanumeric sort from filename or id
-        // Better to list regular sort
-        files.sort((a,b) => {
-             // Extract number if possible for natural sort
-             const numA = parseInt(a.match(/\d+/)?.[0] || 0);
-             const numB = parseInt(b.match(/\d+/)?.[0] || 0);
-             if (numA !== numB) return numA - numB;
-             return a.localeCompare(b);
+        files.sort((a, b) => {
+            const numA = parseInt(a.match(/\d+/)?.[0] || 0);
+            const numB = parseInt(b.match(/\d+/)?.[0] || 0);
+            if (numA !== numB) return numA - numB;
+            return a.localeCompare(b);
         });
+        totalQA += files.length;
+        return { ...cat, files };
+    });
 
-        files.forEach(file => {
-            const fm = getFrontmatter(path.join(catDir, file));
+    let output = `## ${isEn ? 'Q&A (EN)' : '問答集 (Q&A)'} [${isEn ? 'Total' : '總計'}: **${totalQA}**]\n\n`;
+
+    catData.forEach(cat => {
+        if (cat.files.length === 0) return;
+
+        output += `### ${cat.title} (\`${cat.path}\`) [**${cat.files.length}** ${isEn ? 'items' : '題'}]\n\n`;
+
+        cat.files.forEach(file => {
+            const fm = getFrontmatter(path.join(baseDir, cat.dir, file));
             const id = fm.id || '';
             const title = fm.title || file;
             output += `* [\`${id}\`] ${title}\n`;

@@ -1,7 +1,7 @@
 ---
-term: MAC Address
 category:
   - Network
+term: MAC Address
 ---
 ## Term Definition
 

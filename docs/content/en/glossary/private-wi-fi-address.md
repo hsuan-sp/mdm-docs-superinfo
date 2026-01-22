@@ -1,8 +1,8 @@
 ---
-term: Private Wi-Fi Address
 category:
   - Network
   - Security
+term: Private Wi-Fi Address
 ---
 ## Term Definition
 

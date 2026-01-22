@@ -1,8 +1,8 @@
 ---
-term: Bonjour
 category:
   - Network
   - Apple
+term: Bonjour
 ---
 ## Term Definition
 

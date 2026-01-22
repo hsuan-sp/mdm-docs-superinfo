@@ -1,7 +1,7 @@
 ---
-term: Supervision
 category:
   - Core
+term: Supervision
 ---
 ## Term Definition
 
@@ -13,7 +13,7 @@ Capabilities unlocked by Supervision:
 * **Kiosk Mode**: Lock the device into a single app (Single App Mode).
 * **Web Filtering**: Enforce global HTTP proxies to filter content.
 * **Lost Mode**: Locate the device if it goes missing.
-* **Security**: Prevent the user from removing the MDM profile or erasing the device.
+* **Security**: Prevent the user from removing the MDM Profile or erasing the device.
 
 Devices enrolled via**Automated Device Enrollment (ADE)**are supervised by default.
 

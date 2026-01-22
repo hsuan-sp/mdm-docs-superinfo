@@ -1,7 +1,7 @@
 ---
-term: Update Inventory
 category:
   - Core
+term: Update Inventory
 ---
 ## Term Definition
 

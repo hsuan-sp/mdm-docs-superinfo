@@ -1,7 +1,7 @@
 ---
-term: Package (.pkg)
 category:
   - macOS
+term: Package (.pkg)
 ---
 ## Term Definition
 

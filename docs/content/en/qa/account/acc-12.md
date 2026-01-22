@@ -1,12 +1,12 @@
 ---
-id: acc-12
-title: Can I migrate to a new MDM provider without wiping device data?
 category: 'Section 1: Account & Server Management'
+id: acc-12
 important: true
 tags:
   - Migration
   - MDM Transfer
   - OS 26
+title: Can I migrate to a new MDM provider without wiping device data?
 ---
 ## Q: Can I migrate to a new MDM provider without wiping device data?
 
@@ -24,8 +24,8 @@ According to the latest updates from WWDC 25, Apple has enhanced the `MigrateDev
 
 ## 2. Technical Context:
 
-* Devices must be updated to**Version 26 (iOS/iPadOS 26, macOS 26 Tahoe)**for the most stable "wipe-free" migration experience.
-* While this feature has been significantly bolstered since WWDC 2025, a clean reset remains the recommended option for complex educational deployments.
+*    Devices must be updated to**Version 26 (iOS/iPadOS 26, macOS 26 Tahoe)**for the most stable "wipe-free" migration experience.
+*    While this feature has been significantly bolstered since WWDC 2025, a clean reset remains the recommended option for complex educational deployments.
 
 ## Practical Advice:
 

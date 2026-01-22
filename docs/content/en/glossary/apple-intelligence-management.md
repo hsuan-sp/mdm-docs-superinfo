@@ -1,7 +1,7 @@
 ---
-term: Apple Intelligence Management
 category:
   - Security
+term: Apple Intelligence Management
 ---
 ## Term Definition
 

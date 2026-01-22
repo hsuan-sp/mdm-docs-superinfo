@@ -1,7 +1,7 @@
 ---
-term: Setup Assistant
 category:
   - Enrollment
+term: Setup Assistant
 ---
 ## Term Definition
 

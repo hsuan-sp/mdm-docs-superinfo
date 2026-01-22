@@ -1,15 +1,15 @@
 ---
-id: mac-18
-title: >-
-  A Mac is locked by a former user's Apple ID (Activation Lock). How do I
-  recover it?
 category: 'Section 7: Mac Management'
+id: mac-18
 important: false
 tags:
   - Activation Lock
   - ASM
   - Unlocking
   - Asset Recovery
+title: >-
+  A Mac is locked by a former user's Apple ID (Activation Lock). How do I
+  recover it?
 ---
 ## Q: A Mac is locked by a former user's Apple ID (Activation Lock). How do I recover it?
 
@@ -21,21 +21,19 @@ This is a critical failsafe for when staff leave or students graduate without si
 
 ## Standard Recovery SOP:
 
-1.**Log in to ASM**: Use your administrator account at [school.apple.com](https://school.apple.com).
+1. **Log in to ASM**: Use your administrator account at [school.Apple.com](HTTPS://school.Apple.com).
+2. **Search Device**: Click**Devices**in the sidebar and enter the Mac's serial number.
+3. **Execute Unlock**:
 
-1.**Search Device**: Click**Devices**in the sidebar and enter the Mac's serial number.
+*    Locate the**Activation Lock**status in the details pane.
+*    Click**Turn Off**or**Clear Unlock Code**.
 
-1.**Execute Unlock**:
+4. **Reset Device**:
 
-* Locate the**Activation Lock**status in the details pane.
-* Click**Turn Off**or**Clear Unlock Code**.
-
-1.**Reset Device**:
-
-* Wait a few minutes for the command to propagate.
-* Put the Mac into**Recovery Mode**and reinstall macOS. The lock screen will no longer appear.
+*    Wait a few minutes for the command to propagate.
+*    Put the Mac into**Recovery Mode**and reinstall macOS. The lock screen will no longer appear.
 
 ## Prerequisites:
 
-* The device must be part of your**Automated Device Enrollment (ADE)**pool and assigned to your MDM.
-* For older machines purchased outside the project, they must have been added to ASM via Apple Configurator for this feature to work.
+*    The device must be part of your**Automated Device Enrollment (ADE)**pool and assigned to your MDM.
+*    For older machines purchased outside the project, they must have been added to ASM via Apple Configurator for this feature to work.

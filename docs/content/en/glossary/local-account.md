@@ -1,7 +1,7 @@
 ---
-term: Local Account
 category:
   - Core
+term: Local Account
 ---
 ## Term Definition
 

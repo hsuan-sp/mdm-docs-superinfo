@@ -1,7 +1,7 @@
 ---
-term: Extension Attribute
 category:
   - Core
+term: Extension Attribute
 ---
 ## Term Definition
 

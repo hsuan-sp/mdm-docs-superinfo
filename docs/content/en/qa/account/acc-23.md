@@ -1,9 +1,6 @@
 ---
-id: acc-23
-title: >-
-  How do I configure the feature to prevent personal Apple Account logins on
-  organizational devices?
 category: 'Section 1: Account & Server Management'
+id: acc-23
 important: true
 tags:
   - Managed Apple Account
@@ -11,6 +8,9 @@ tags:
   - iOS 26
   - Organizational Devices
   - WWDC 2025
+title: >-
+  How do I configure the feature to prevent personal Apple Account logins on
+  organizational devices?
 ---
 ## Q: How do I configure the feature to prevent personal Apple Account logins on organizational devices?
 
@@ -23,26 +23,26 @@ tags:
 This is an organization-level security policy that must be enabled by an**Administrator**:
 
 1. Log in to**Apple School Manager (ASM)**or**Apple Business Manager (ABM)**.
-1. Go to**Access Management**.
-1. Select**Apple Services**.
-1. Find the option:**'Apple Account on Organization Devices'**.
-1. Enable the option to**'Allow Only Managed Apple Accounts to Sign In'**.
-1. Save settings.
+2. Go to**Access Management**.
+3. Select**Apple Services**.
+4. Find the option:**'Apple Account on Organization Devices'**.
+5. Enable the option to**'Allow Only Managed Apple Accounts to Sign In'**.
+6. Save settings.
 
 Once configured, this policy automatically applies to all eligible devices owned by the organization.
 
 ## Technical Characteristics and Limitations
 
 * **System-Level Enforcement**:
-* The restriction operates at the OS level and does not require a specific MDM configuration profile once the organization-level policy is set.
-* It applies during the "Setup Assistant" phase and within "System Settings."
-* The device validates that the signing-in account domain matches the verified domains in your ASM/ABM.
+*    The restriction operates at the OS level and does not require a specific MDM configuration profile once the organization-level policy is set.
+*    It applies during the "Setup Assistant" phase and within "System Settings."
+*    The device validates that the signing-in account domain matches the verified domains in your ASM/ABM.
 * **System Version Requirements**:
-* Requires**iOS 26**,**iPadOS 26**,**macOS 26 (Tahoe)**, or later.
-* macOS 26 (Tahoe) was officially released on September 15, 2025.
+*    Requires**iOS 26**,**iPadOS 26**,**macOS 26 (Tahoe)**, or later.
+*    macOS 26 (Tahoe) was officially released on September 15, 2025.
 * **Device Conditions**:
-* Devices must be owned by the organization and managed via ASM/ABM.
-* We recommend combining this with**Automated Device Enrollment (ADE)**and**Supervised Mode**for complete protection.
+*    Devices must be owned by the organization and managed via ASM/ABM.
+*    We recommend combining this with**Automated Device Enrollment (ADE)**and**Supervised Mode**for complete protection.
 
 ## Deployment Advice
 

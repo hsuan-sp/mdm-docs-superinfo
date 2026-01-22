@@ -1,7 +1,7 @@
 ---
-term: Background Security Improvements
 category:
   - Security
+term: Background Security Improvements
 ---
 ## Term Definition
 

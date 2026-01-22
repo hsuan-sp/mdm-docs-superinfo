@@ -1,7 +1,7 @@
 ---
-term: Lightning Connector
 category:
   - Hardware
+term: Lightning Connector
 ---
 ## Term Definition
 

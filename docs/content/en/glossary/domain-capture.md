@@ -1,8 +1,8 @@
 ---
-term: Domain Capture
 category:
   - Apple
   - Security
+term: Domain Capture
 ---
 ## Term Definition
 

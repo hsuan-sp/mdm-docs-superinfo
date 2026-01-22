@@ -1,7 +1,7 @@
 ---
-term: Account-Driven Device Enrollment
 category:
   - Enrollment
+term: Account-Driven Device Enrollment
 ---
 ## Term Definition
 
@@ -10,7 +10,7 @@ category:
 The process is streamlined:
 
 1. Users sign in with their**Managed Apple Account**directly in the Settings app.
-2. The system automatically detects the organization's MDM and guides the user through enrollment.
+2. The system automatically detects the organization's MDM and guides the user through Enrollment.
 
 This method enforces a strict**separation between work and personal data**. The organization can only manage business apps and specific professional settings, while personal photos, messages, and accounts remain completely private and inaccessible to the IT department.
 

@@ -1,7 +1,7 @@
 ---
-term: Gatekeeper
 category:
   - Security
+term: Gatekeeper
 ---
 ## Term Definition
 

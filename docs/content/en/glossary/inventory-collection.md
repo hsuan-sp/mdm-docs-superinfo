@@ -1,8 +1,8 @@
 ---
-term: Inventory Collection
 category:
   - Jamf
   - Core
+term: Inventory Collection
 ---
 ## Definition
 

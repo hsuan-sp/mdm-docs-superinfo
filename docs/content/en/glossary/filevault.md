@@ -1,7 +1,7 @@
 ---
-term: FileVault
 category:
   - Security
+term: FileVault
 ---
 ## Term Definition
 

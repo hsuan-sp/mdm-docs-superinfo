@@ -1,8 +1,8 @@
 ---
-term: iCloud Backup
 category:
   - Core
   - Apple
+term: iCloud Backup
 ---
 ## Term Definition
 

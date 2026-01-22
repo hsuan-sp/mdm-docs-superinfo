@@ -1,8 +1,8 @@
 ---
-term: Composer
 category:
   - macOS
   - Jamf
+term: Composer
 ---
 ## Term Definition
 

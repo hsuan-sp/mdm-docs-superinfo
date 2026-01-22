@@ -1,7 +1,7 @@
 ---
-term: Identity Provider (IdP)
 category:
   - Security
+term: Identity Provider (IdP)
 ---
 ## Term Definition
 

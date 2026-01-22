@@ -1,7 +1,7 @@
 ---
-term: App Config (App Configuration)
 category:
   - Apps
+term: App Config (App Configuration)
 ---
 ## Term Definition
 

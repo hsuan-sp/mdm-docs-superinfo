@@ -1,13 +1,13 @@
 ---
-id: cls-1
-title: Can teachers see every student's screen using the Apple Classroom app?
 category: 'Section 4: Classroom Management & Instructional Tools'
+id: cls-1
 important: true
 tags:
   - Classroom App
   - Screen View
   - Privacy
   - AirPlay
+title: Can teachers see every student's screen using the Apple Classroom app?
 ---
 ## Q: Can teachers see every student's screen using the Apple Classroom app?
 

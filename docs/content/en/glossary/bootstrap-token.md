@@ -1,7 +1,7 @@
 ---
-term: Bootstrap Token
 category:
   - Security
+term: Bootstrap Token
 ---
 ## Term Definition
 

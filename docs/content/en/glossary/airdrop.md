@@ -1,7 +1,7 @@
 ---
-term: AirDrop
 category:
   - Core
+term: AirDrop
 ---
 ## Term Definition
 

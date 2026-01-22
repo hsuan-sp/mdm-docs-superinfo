@@ -1,7 +1,7 @@
 ---
-term: IMEI
 category:
   - Hardware
+term: IMEI
 ---
 ## Term Definition
 

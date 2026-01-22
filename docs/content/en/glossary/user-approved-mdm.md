@@ -1,8 +1,8 @@
 ---
-term: User Approved MDM
 category:
   - Enrollment
   - macOS
+term: User Approved MDM
 ---
 ## Term Definition
 

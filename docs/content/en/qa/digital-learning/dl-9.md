@@ -1,13 +1,13 @@
 ---
-id: dl-9
-title: Does MDM monitor the student's location (GPS) at all times?
 category: 'Section 5: Digital Initiatives (MOE Project)'
+id: dl-9
 important: false
 tags:
   - Privacy
   - Location
   - GPS
   - Lost Mode
+title: Does MDM monitor the student's location (GPS) at all times?
 ---
 ## Q: Does MDM monitor the student's location (GPS) at all times?
 
@@ -29,5 +29,5 @@ Administrators can only trigger location tracking if a device is specifically ma
 
 ## Practical Advice:
 
-* School MDM**cannot see**a student's photos, messages, or browsing history (it can only filter domains, not see specific page content).
-* The location feature is used solely for "asset recovery," never for monitoring a student's movements after school hours. This complies with GDPR and national cybersecurity standards.
+*    School MDM**cannot see**a student's photos, messages, or browsing history (it can only filter domains, not see specific page content).
+*    The location feature is used solely for "asset recovery," never for monitoring a student's movements after school hours. This complies with GDPR and national cybersecurity standards.

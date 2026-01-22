@@ -1,7 +1,7 @@
 ---
-term: Wipe
 category:
   - Core
+term: Wipe
 ---
 ## Term Definition
 

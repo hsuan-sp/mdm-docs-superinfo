@@ -1,13 +1,13 @@
 ---
-id: acc-21
-title: Is 'moemdm' the same as 'Jamf Pro'? Why does the school need two accounts?
 category: 'Section 1: Account & Server Management'
+id: acc-21
 important: true
 tags:
   - moemdm
   - MOE
   - Jamf Pro
   - Architecture
+title: Is 'moemdm' the same as 'Jamf Pro'? Why does the school need two accounts?
 ---
 ## Q: Is 'moemdm' the same as 'Jamf Pro'? Why does the school need two accounts?
 

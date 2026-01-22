@@ -1,7 +1,7 @@
 ---
-term: Blob URLs and Managed Open-In Improvement
 category:
   - Security
+term: Blob URLs and Managed Open-In Improvement
 ---
 ## Term Definition
 

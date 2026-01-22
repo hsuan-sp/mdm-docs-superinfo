@@ -1,8 +1,8 @@
 ---
-term: Jamf School
 category:
   - Jamf
   - Education
+term: Jamf School
 ---
 ## Term Definition
 

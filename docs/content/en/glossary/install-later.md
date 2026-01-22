@@ -1,7 +1,7 @@
 ---
-term: Install Later
 category:
   - Core
+term: Install Later
 ---
 ## Term Definition
 

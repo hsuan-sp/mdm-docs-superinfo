@@ -1,8 +1,8 @@
 ---
-term: Smart Group
 category:
   - Core
   - Jamf
+term: Smart Group
 ---
 ## Term Definition
 

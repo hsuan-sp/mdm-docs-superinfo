@@ -1,7 +1,7 @@
 ---
-term: RADIUS
 category:
   - Network
+term: RADIUS
 ---
 ## Term Definition
 

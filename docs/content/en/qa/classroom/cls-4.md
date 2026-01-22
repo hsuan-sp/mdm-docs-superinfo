@@ -1,12 +1,12 @@
 ---
-id: cls-4
-title: The class is too loud! How do I 'Lock' all student screens at once?
 category: 'Section 4: Classroom Management & Instructional Tools'
+id: cls-4
 important: false
 tags:
   - Screen Lock
   - Classroom Order
   - Eyes on Me
+title: The class is too loud! How do I 'Lock' all student screens at once?
 ---
 ## Q: The class is too loud! How do I 'Lock' all student screens at once?
 
@@ -19,8 +19,8 @@ This is a favorite "Eyes on Me" tool for teachers when they need the class to st
 ## How it Works:
 
 1. Tap the**"Lock"**icon in the Classroom toolbar.
-1. Every student iPad screen will immediately turn black and display a lock message (e.g., "This device is locked by your teacher").
-1. Touch input and physical buttons will be disabled until the teacher taps**"Unlock."**
+2. Every student iPad screen will immediately turn black and display a lock message (e.g., "This device is locked by your teacher").
+3. Touch input and physical buttons will be disabled until the teacher taps**"Unlock."**
 
 ## Technical Note:
 

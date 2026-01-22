@@ -1,7 +1,7 @@
 ---
-term: Wi-Fi 6
 category:
   - Network
+term: Wi-Fi 6
 ---
 ## Term Definition
 

@@ -1,8 +1,8 @@
 ---
-term: Self Service
 category:
   - Apps
   - Jamf
+term: Self Service
 ---
 ## Term Definition
 

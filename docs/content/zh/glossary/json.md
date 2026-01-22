@@ -1,7 +1,7 @@
 ---
-term: JSON (JavaScript Object Notation)
 category:
   - Other
+term: JSON (JavaScript Object Notation)
 ---
 ## 術語定義
 

@@ -1,14 +1,14 @@
 ---
-id: acc-6
-title: >-
-  Students have graduated or left the school. How should I handle their Managed
-  Apple Accounts?
 category: 'Section 1: Account & Server Management'
+id: acc-6
 important: false
 tags:
   - Account Lifecycle
   - Graduation
   - Data Retention
+title: >-
+  Students have graduated or left the school. How should I handle their Managed
+  Apple Accounts?
 ---
 ## Q: Students have graduated or left the school. How should I handle their Managed Apple Accounts?
 
@@ -22,16 +22,15 @@ The lifecycle of a Managed Apple Account should align with your school's adminis
 **Recommended Workflow**:
 **Phase 1: Deactivate Account**
 
-1. Log in to Apple School Manager ([school.apple.com](https://school.apple.com)).
-1. Click**Users**in the sidebar, then search for and select the student.
-1. In the details panel on the right, click**Change Account Status**(or click "Edit"/"Change" next to the status).
-1. Change the status to**Deactivated**.
+1. Log in to Apple School Manager ([school.Apple.com](HTTPS://school.Apple.com)).
+2. Click**Users**in the sidebar, then search for and select the student.
+3. In the details panel on the right, click**Change Account Status**(or click "Edit"/"Change" next to the status).
+4. Change the status to**Deactivated**.
+5. **Effects**:
 
-1.**Effects**:
-
-* The student will be immediately signed out of all devices and can no longer access any Apple services.
-* Data in iCloud (**200 GB free tier**) is retained on the server until the account is permanently deleted.
-* Administrators can reactivate access at any time by switching the status back to "Active".
+*    The student will be immediately signed out of all devices and can no longer access any Apple services.
+*    Data in iCloud (**200 GB free tier**) is retained on the server until the account is permanently deleted.
+*    Administrators can reactivate access at any time by switching the status back to "Active".
 
 **Phase 2: Retention Period**
 
@@ -40,18 +39,17 @@ It is advisable to retain accounts for 30 to 90 days after graduation. Since stu
 **Phase 3: Delete Account**
 
 1. Select the deactivated user.
-1. Click**Delete User**in the right-hand panel.
+2. Click**Delete User**in the right-hand panel.
+3. **Consequences**:
 
-1.**Consequences**:
-
-* All cloud data (Drive files, Notes, Photos) associated with the account will be permanently erased.
-* Any App licenses (VPP) assigned to the user will be automatically released back to the school's license pool.
+*    All cloud data (Drive files, Notes, Photos) associated with the account will be permanently erased.
+*    Any App licenses (VPP) assigned to the user will be automatically released back to the school's license pool.
 
 **Batch Processing for Graduates**:
 
 1. In the**Users**list, use "Search" or "Filter" to locate students of a specific grade or class.
-1. Select multiple students using keyboard shortcuts (hold**Command**or**Ctrl**, or use**Shift**for range selection).
-1. Click**Change Account Status**in the panel to deactivate the entire class at once.
+2. Select multiple students using keyboard shortcuts (hold**Command**or**Ctrl**, or use**Shift**for range selection).
+3. Click**Change Account Status**in the panel to deactivate the entire class at once.
 
 **Important Notes**:
 

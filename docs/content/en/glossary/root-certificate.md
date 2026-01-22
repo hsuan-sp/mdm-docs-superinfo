@@ -1,7 +1,7 @@
 ---
-term: Root Certificate
 category:
   - Security
+term: Root Certificate
 ---
 ## Term Definition
 

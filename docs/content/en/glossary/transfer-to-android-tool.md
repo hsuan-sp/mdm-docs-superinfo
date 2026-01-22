@@ -1,7 +1,7 @@
 ---
-term: Transfer to Android Tool
 category:
   - Core
+term: Transfer to Android Tool
 ---
 ## Term Definition
 

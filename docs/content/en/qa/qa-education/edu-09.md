@@ -1,15 +1,15 @@
 ---
-id: edu-09
-title: >-
-  How do I project my iPad screen to a traditional TV or a classroom without
-  Apple TV?
 category: 'Section 8: Education Scenarios'
+id: edu-09
 important: false
 tags:
   - Projection
   - Adapters
   - AirPlay
   - HDMI
+title: >-
+  How do I project my iPad screen to a traditional TV or a classroom without
+  Apple TV?
 ---
 ## Q: How do I project my iPad screen to a traditional TV or a classroom without Apple TV?
 
@@ -28,17 +28,17 @@ tags:
 **Steps**:
 
 1. Plug the adapter into the iPad.
-1. Connect one end of the HDMI cable to the adapter and the other to the TV/Projector.
-1. Switch the TV input to the correct HDMI source.
-1. The iPad screen will automatically mirror.
+2. Connect one end of the HDMI cable to the adapter and the other to the TV/Projector.
+3. Switch the TV input to the correct HDMI source.
+4. The iPad screen will automatically mirror.
 
 **Pros**:
 
-* Near-zero latency, great for live demos.
-* No network required.
-* Compatible with any TV/Projector with an HDMI port.
+*    Near-zero latency, great for live demos.
+*    No network required.
+*    Compatible with any TV/Projector with an HDMI port.
 
 **Cons**:
 
-* Requires carrying an adapter and cable.
-* The iPad is tethered to the cable length.
+*    Requires carrying an adapter and cable.
+*    The iPad is tethered to the cable length.

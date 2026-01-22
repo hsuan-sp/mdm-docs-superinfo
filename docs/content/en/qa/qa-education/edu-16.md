@@ -1,12 +1,12 @@
 ---
-id: edu-16
-title: Why can't iPads install 'APKs' (or third-party apps) like Android devices?
 category: 'Section 8: Education Scenarios'
+id: edu-16
 important: false
 tags:
   - Security
   - Sideloading
   - App Store
+title: Why can't iPads install 'APKs' (or third-party apps) like Android devices?
 ---
 ## Q: Why can't iPads install 'APKs' (or third-party apps) like Android devices?
 

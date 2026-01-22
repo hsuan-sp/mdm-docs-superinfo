@@ -1,8 +1,8 @@
 ---
-term: WPA / WPA2 / WPA3
 category:
   - Network
   - Security
+term: WPA / WPA2 / WPA3
 ---
 ## Term Definition
 

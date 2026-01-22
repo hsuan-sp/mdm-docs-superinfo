@@ -1,7 +1,7 @@
 ---
-term: Proxy
 category:
   - Network
+term: Proxy
 ---
 ## Term Definition
 

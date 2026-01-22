@@ -1,7 +1,7 @@
 ---
-term: Camera Access Control per App
 category:
   - Privacy
+term: Camera Access Control per App
 ---
 ## Term Definition
 

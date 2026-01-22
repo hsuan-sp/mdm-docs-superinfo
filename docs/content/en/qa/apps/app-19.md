@@ -1,16 +1,16 @@
 ---
-id: app-19
-title: >-
-  How do I lock an iPad into a 'Single App' for exams? Can students exit
-  themselves?
-category: 'Section 3: App Distribution category: '
 Section 3: App Distribution & Management (Apps & Books)" Management"
+category: 'Section 3: App Distribution category: '
+id: app-19
 important: true
 tags:
   - Single App Mode
   - ASAM
   - Assessment Mode
   - Risk Warning
+title: >-
+  How do I lock an iPad into a 'Single App' for exams? Can students exit
+  themselves?
 ---
 ## Q: How do I lock an iPad into a 'Single App' for exams? Can students exit themselves?
 

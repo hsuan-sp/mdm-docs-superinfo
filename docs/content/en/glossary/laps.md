@@ -1,7 +1,7 @@
 ---
-term: LAPS (Local Administrator Password Solution)
 category:
   - Security
+term: LAPS (Local Administrator Password Solution)
 ---
 ## Term Definition
 

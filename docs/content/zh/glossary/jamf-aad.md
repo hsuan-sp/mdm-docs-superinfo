@@ -1,8 +1,8 @@
 ---
-term: JamfAAD
 category:
   - Jamf
   - Security
+term: JamfAAD
 ---
 ## 術語定義
 

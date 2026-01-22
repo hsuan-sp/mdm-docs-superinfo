@@ -1,8 +1,8 @@
 ---
-term: Find My
 category:
   - Apple
   - Security
+term: Find My
 ---
 ## Term Definition
 

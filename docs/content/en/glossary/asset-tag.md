@@ -1,7 +1,7 @@
 ---
-term: Asset Tag
 category:
   - Core
+term: Asset Tag
 ---
 ## Term Definition
 

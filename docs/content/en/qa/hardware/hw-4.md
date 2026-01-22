@@ -1,15 +1,15 @@
 ---
-id: hw-4
-title: >-
-  The screen is cracked or the touch response is failing. How is warranty vs.
-  accidental damage determined?
 category: 'Section 6: Hardware & Maintenance'
+id: hw-4
 important: false
 tags:
   - Warranty Policy
   - VMI
   - Inspection Standards
   - Repairs
+title: >-
+  The screen is cracked or the touch response is failing. How is warranty vs.
+  accidental damage determined?
 ---
 ## Q: The screen is cracked or the touch response is failing. How is warranty vs. accidental damage determined?
 
@@ -35,4 +35,4 @@ tags:
 
 ## Institutional Advice:
 
-We recommend that schools maintain an "Internal Insurance Fund" or accidental damage protection (like AppleCare+ for Schools) to cover the high cost of screen replacements, which can often be up to 60-80% of the cost of a new device.
+We recommend that schools maintain an "Internal Insurance Fund" or accidental damage protection (like AppleCare+++++++ for Schools) to cover the high cost of screen replacements, which can often be up to 60-80% of the cost of a new device.

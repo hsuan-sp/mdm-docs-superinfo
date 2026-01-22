@@ -1,7 +1,7 @@
 ---
-term: DNS over HTTPS/TLS (DoH/DoT)
 category:
   - Network
+term: DNS over HTTPS/TLS (DoH/DoT)
 ---
 ## Term Definition
 

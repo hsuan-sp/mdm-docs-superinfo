@@ -1,7 +1,7 @@
 ---
-term: Background App Refresh
 category:
   - Apps
+term: Background App Refresh
 ---
 ## Term Definition
 

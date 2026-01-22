@@ -1,7 +1,7 @@
 ---
-term: Firmware Password
 category:
   - macOS
+term: Firmware Password
 ---
 ## Term Definition
 

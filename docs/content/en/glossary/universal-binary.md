@@ -1,7 +1,7 @@
 ---
-term: Universal Binary
 category:
   - macOS
+term: Universal Binary
 ---
 ## Term Definition
 

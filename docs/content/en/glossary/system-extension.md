@@ -1,7 +1,7 @@
 ---
-term: System Extension
 category:
   - Core
+term: System Extension
 ---
 ## Term Definition
 

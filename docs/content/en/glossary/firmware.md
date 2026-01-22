@@ -1,7 +1,7 @@
 ---
-term: Firmware
 category:
   - Hardware
+term: Firmware
 ---
 ## Term Definition
 

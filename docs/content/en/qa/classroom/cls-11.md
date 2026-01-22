@@ -1,15 +1,15 @@
 ---
-id: cls-11
-title: >-
-  Why can't I see the device's real MAC address after iPadOS 17? (Private Wi-Fi
-  Address)
 category: 'Section 4: Classroom Management & Instructional Tools'
+id: cls-11
 important: true
 tags:
   - MAC Address
   - Private Wi-Fi Address
   - Privacy Features
   - Network Management
+title: >-
+  Why can't I see the device's real MAC address after iPadOS 17? (Private Wi-Fi
+  Address)
 ---
 ## Q: Why can't I see the device's real MAC address after iPadOS 17? (Private Wi-Fi Address)
 
@@ -32,8 +32,8 @@ Since the device broadcasts a virtual MAC, traditional network management system
 ## MDM Solution (School-wide Disable):
 
 1. Edit a**Wi-Fi**configuration profile in Jamf Pro.
-1. In the Wi-Fi payload, check**Disable MAC Address Randomization**(also known as Disable Private Address).
-1. Deploy this profile to your devices.
+2. In the Wi-Fi payload, check**Disable MAC Address Randomization**(also known as Disable Private Address).
+3. Deploy this profile to your devices.
 
 ## Result:
 

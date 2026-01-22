@@ -1,8 +1,7 @@
 ---
-id: app-18
-title: The App Store icon disappeared! How do I get it back?
-category: 'Section 3: App Distribution category: '
 Section 3: App Distribution & Management (Apps & Books)" Management"
+category: 'Section 3: App Distribution category: '
+id: app-18
 important: false
 tags:
   - App Store
@@ -10,6 +9,7 @@ tags:
   - Troubleshooting
   - Screen Time
   - Restrictions
+title: The App Store icon disappeared! How do I get it back?
 ---
 ## Q: The App Store icon disappeared! How do I get it back?
 

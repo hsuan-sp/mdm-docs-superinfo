@@ -1,7 +1,7 @@
 ---
-term: mDNS (Multicast DNS)
 category:
   - Network
+term: mDNS (Multicast DNS)
 ---
 ## Term Definition
 

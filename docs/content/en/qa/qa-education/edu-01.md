@@ -1,9 +1,6 @@
 ---
-id: edu-01
-title: >-
-  The VPN icon is missing on iPadOS. Are network filtering and usage reporting
-  still working?
 category: 'Section 8: Education Scenarios & FAQ'
+id: edu-01
 important: true
 tags:
   - MOE Project
@@ -11,6 +8,9 @@ tags:
   - Jamf Trust
   - Content Filtering
   - Compliance
+title: >-
+  The VPN icon is missing on iPadOS. Are network filtering and usage reporting
+  still working?
 ---
 ## Q: The VPN icon is missing on iPadOS. Are network filtering and usage reporting still working?
 
@@ -27,11 +27,9 @@ This architectural shift is intentional and was implemented to improve device ba
 
 ## How to Verify Protection is Active:
 
-1.**Open the Jamf Trust App**: If it shows a**Green Shield (Protected)**, your data is being recorded and filtered correctly.
-
-1.**Test the Filter**: Try navigating to a known blocked category (e.g., a gaming site) in Safari. If the page is blocked, the filter is active.
-
-1.**Check Jamf Pro**: Reconfirm that the "DNS Proxy" and "Content Filter" profiles are marked as "Installed" in the device inventory.
+1. **Open the Jamf Trust App**: If it shows a**Green Shield (Protected)**, your data is being recorded and filtered correctly.
+2. **Test the Filter**: Try navigating to a known blocked category (e.g., a gaming site) in Safari. If the page is blocked, the filter is active.
+3. **Check Jamf Pro**: Reconfirm that the "DNS Proxy" and "Content Filter" profiles are marked as "Installed" in the device inventory.
 
 ## New for 2026: Return to Service (RTS) Protection
 

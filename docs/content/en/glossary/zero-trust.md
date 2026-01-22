@@ -1,7 +1,7 @@
 ---
-term: Zero Trust
 category:
   - Security
+term: Zero Trust
 ---
 ## Term Definition
 

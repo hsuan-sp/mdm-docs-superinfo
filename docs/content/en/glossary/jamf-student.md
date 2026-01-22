@@ -1,8 +1,8 @@
 ---
-term: Jamf Student
 category:
   - Jamf
   - Education
+term: Jamf Student
 ---
 ## Term Definition
 

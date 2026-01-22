@@ -1,9 +1,6 @@
 ---
-id: acc-26
-title: >-
-  How should iCloud+ features (e.g., Hide My Email, Private Relay) be managed
-  for Managed Apple Accounts in schools?
 category: 'Section 1: Account & Server Management'
+id: acc-26
 important: false
 tags:
   - iCloud+
@@ -11,6 +8,9 @@ tags:
   - Privacy
   - Private Relay
   - Education Management
+title: >-
+  How should iCloud+ features (e.g., Hide My Email, Private Relay) be managed
+  for Managed Apple Accounts in schools?
 ---
 ## Q: How should iCloud+ features (e.g., Hide My Email, Private Relay) be managed for Managed Apple Accounts in schools?
 

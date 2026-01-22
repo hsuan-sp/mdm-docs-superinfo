@@ -1,7 +1,7 @@
 ---
-term: Managed Open In
 category:
   - Security
+term: Managed Open In
 ---
 ## Term Definition
 

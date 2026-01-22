@@ -1,7 +1,6 @@
 ---
-id: mac-8
-title: Why does MDM require FileVault? How do I recover a forgotten login password?
 category: 'Section 7: Mac Management'
+id: mac-8
 important: true
 tags:
   - FileVault
@@ -10,6 +9,7 @@ tags:
   - Recovery Key
   - Jamf Pro
   - Inventory
+title: Why does MDM require FileVault? How do I recover a forgotten login password?
 ---
 ## Q: Why does MDM require FileVault? How do I recover a forgotten login password?
 
@@ -25,35 +25,35 @@ tags:
 
 ## Jamf Pro Deployment and Escrow Flow (SOP):
 
-1.**Create Configuration Profile**:
+1. **Create Configuration Profile**:
 
-* Go to**Configuration Profiles > New > FileVault**.
-* Set to**Require FileVault**.
+*    Go to**Configuration Profiles > New > FileVault**.
+*    Set to**Require FileVault**.
 * **Crucial Step**: Set to**Create Personal Recovery Key**and choose**Escrow Personal Recovery Key to MDM**.
 
-1.**User-Side Activation**:
+2. **User-Side Activation**:
 
-* After deployment, the system will prompt the user to enable encryption at the next logout or reboot.
+*    After deployment, the system will prompt the user to enable encryption at the next logout or reboot.
 * **Note**: Jamf Pro will only receive the key once the user completes this step and the status changes to "Encrypted."
 
 ## Recovery Scenario: Looking up the Recovery Key
 
 If a user forgets their password, the administrator must retrieve the key from the console.
 
-1.**Navigate to Inventory**:
+1. **Navigate to Inventory**:
 
-* Log in to Jamf Pro and search for the computer.
-* Go to the detail page and select the**Inventory**tab >**Disk Encryption**.
+*    Log in to Jamf Pro and search for the computer.
+*    Go to the detail page and select the**Inventory**tab >**Disk Encryption**.
 
-1.**Verify Encryption and Key**:
+2. **Verify Encryption and Key**:
 
-* First, check if**FileVault 2 Enabled**is set to**Encrypted**or**Enabled**.
+*    First, check if**FileVault 2 Enabled**is set to**Encrypted**or**Enabled**.
 * **If Encrypted**: You will see a**Personal Recovery Key**field. Click**Show Key**to reveal the code.
 * **If Not Encrypted**: This field will not appear, meaning encryption is incomplete or the key was not successfully reported. Recovery via MDM is not possible in this state.
 
-1.**Perform the Unlock**:
+3. **Perform the Unlock**:
 
-* On the Mac login screen, click the question mark (?) or enter the wrong password three times. Select**Reset password using Recovery Key**and enter the code.
+*    On the Mac login screen, click the question mark (?) or enter the wrong password three times. Select**Reset password using Recovery Key**and enter the code.
 
 ## Practical Advice & Warnings:
 

@@ -1,7 +1,7 @@
 ---
-term: Configuration Profile Removal
 category:
   - Core
+term: Configuration Profile Removal
 ---
 ## Term Definition
 

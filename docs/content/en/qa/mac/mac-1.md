@@ -1,9 +1,6 @@
 ---
-id: mac-1
-title: >-
-  Should we still bind our Macs to Active Directory (AD)? What is the modern
-  recommendation?
 category: 'Section 7: Advanced Mac Management'
+id: mac-1
 important: true
 tags:
   - AD
@@ -11,6 +8,9 @@ tags:
   - Jamf Connect
   - Platform SSO
   - No-Bind
+title: >-
+  Should we still bind our Macs to Active Directory (AD)? What is the modern
+  recommendation?
 ---
 ## Q: Should we still bind our Macs to Active Directory (AD)? What is the modern recommendation?
 

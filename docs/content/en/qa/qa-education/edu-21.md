@@ -1,12 +1,12 @@
 ---
-id: edu-21
-title: How do I manage the new 'Notification Summary' AI feature in iOS 18?
 category: 'Section 8: Education Scenarios'
+id: edu-21
 important: true
 tags:
   - iOS 18
   - Apple Intelligence
   - Notification Management
+title: How do I manage the new 'Notification Summary' AI feature in iOS 18?
 ---
 ## Q: How do I manage the new 'Notification Summary' AI feature in iOS 18?
 

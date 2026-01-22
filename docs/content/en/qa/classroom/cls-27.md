@@ -1,9 +1,6 @@
 ---
-id: cls-27
-title: >-
-  How does the 'Audio Accessory Configuration' in iOS 26 solve AirPods pairing
-  confusion in labs?
 category: 'Section 4: Classroom Management & Instructional Tools'
+id: cls-27
 important: false
 tags:
   - AirPods
@@ -11,6 +8,9 @@ tags:
   - Shared iPad
   - iOS 26
   - Headset Management
+title: >-
+  How does the 'Audio Accessory Configuration' in iOS 26 solve AirPods pairing
+  confusion in labs?
 ---
 ## Q: How does the 'Audio Accessory Configuration' in iOS 26 solve AirPods pairing confusion in labs?
 
@@ -24,13 +24,10 @@ Introduced in**iOS 26 (Tahoe)**, this MDM payload completely changes how accesso
 
 ## Key Logic:
 
-1.**Ephemeral Pairing**: When the MDM pushes the `com.apple.configuration.audio-accessory.settings` payload, the iPad allows AirPods or Beats to pair but**flagged as temporary**.
-
-1.**No iCloud Sync**: The pairing record is**not**written to the iCloud Keychain. It lives only in the local RAM of that session.
-
-1.**Logout Purge**: The moment the current student logs out of the Shared iPad, the pairing record is deleted.
-
-1.**Ready for Next**: When the next student logs in, the iPad is a "clean slate." They can pair their own headset without fighting for the connection with the previous user.
+1. **Ephemeral Pairing**: When the MDM pushes the `com.Apple.configuration.audio-accessory.settings` payload, the iPad allows AirPods or Beats to pair but**flagged as temporary**.
+2. **No iCloud Sync**: The pairing record is**not**written to the iCloud Keychain. It lives only in the local RAM of that session.
+3. **Logout Purge**: The moment the current student logs out of the Shared iPad, the pairing record is deleted.
+4. **Ready for Next**: When the next student logs in, the iPad is a "clean slate." They can pair their own headset without fighting for the connection with the previous user.
 
 ## Why this matters for the classroom:
 

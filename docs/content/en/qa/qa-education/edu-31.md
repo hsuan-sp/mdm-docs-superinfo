@@ -1,9 +1,6 @@
 ---
-id: edu-31
-title: >-
-  What is the difference between the 'MOE Managed Jamf Pro' and
-  'School-Purchased Jamf Pro'?
 category: 'Section 8: Education Scenarios'
+id: edu-31
 important: true
 tags:
   - MOE Instance
@@ -11,6 +8,9 @@ tags:
   - Permission Differences
   - Integration
   - IT Coordinator
+title: >-
+  What is the difference between the 'MOE Managed Jamf Pro' and
+  'School-Purchased Jamf Pro'?
 ---
 ## Q: What is the difference between the 'MOE Managed Jamf Pro' and 'School-Purchased Jamf Pro'?
 
@@ -22,11 +22,9 @@ tags:
 
 In the**MOE Managed Jamf Pro**architecture, permissions are layered to balance security with local flexibility:
 
-1.**MOE Administrators (Full Admin)**: Hold the highest authority over the Jamf Pro instance. They set global security policies and decide when to enable major new DDM (Declarative Device Management) features.
-
-1.**Vendor/Reseller Accounts**: Have broad access to assist multiple schools with deployment but cannot override core MOE-defined restrictions.
-
-1.**School IT Coordinators (Site Admin)**: Have daily operational control over their specific "Site" (e.g., app distribution, smart groups, device naming). However, there are safety restrictions, such as the**inability to delete configuration profiles**. This is a protective measure to ensure critical MOE security settings aren't accidentally removed.
+1. **MOE Administrators (Full Admin)**: Hold the highest authority over the Jamf Pro instance. They set global security policies and decide when to enable major new DDM (Declarative Device Management) features.
+2. **Vendor/Reseller Accounts**: Have broad access to assist multiple schools with deployment but cannot override core MOE-defined restrictions.
+3. **School IT Coordinators (Site Admin)**: Have daily operational control over their specific "Site" (e.g., app distribution, smart groups, device naming). However, there are safety restrictions, such as the**inability to delete configuration profiles**. This is a protective measure to ensure critical MOE security settings aren't accidentally removed.
 
 ## Core Comparison Matrix
 

@@ -1,13 +1,13 @@
 ---
-id: enr-11
-title: '''Allow App Deletion'' is enabled, but students still can''t delete apps. Why?'
 category: 'Section 2: Device Enrollment'
+id: enr-11
 important: true
 tags:
   - App Management
   - Restriction Profiles
   - Screen Time
   - Troubleshooting
+title: '''Allow App Deletion'' is enabled, but students still can''t delete apps. Why?'
 ---
 ## Q: 'Allow App Deletion' is enabled, but students still can't delete apps. Why?
 

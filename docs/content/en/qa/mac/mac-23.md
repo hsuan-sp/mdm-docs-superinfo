@@ -1,9 +1,6 @@
 ---
-id: mac-23
-title: >-
-  Classroom Order: How to manage or disable 'iPhone Mirroring' to prevent
-  student distractions.
 category: 'Section 7: Mac Management'
+id: mac-23
 important: false
 tags:
   - iPhone Mirroring
@@ -11,6 +8,9 @@ tags:
   - Restrictions
   - macOS 26
   - Security
+title: >-
+  Classroom Order: How to manage or disable 'iPhone Mirroring' to prevent
+  student distractions.
 ---
 ## Q: Classroom Order: How to manage or disable 'iPhone Mirroring' to prevent student distractions.
 
@@ -22,19 +22,19 @@ tags:
 
 Using Jamf Pro's**Restrictions**payload, you should apply one of these three strategies based on the machine's location:
 
-1.**Full Disable (High Security labs)**:
+1. **Full Disable (High Security labs)**:
 
 * **Best For**: Library open-access Macs, Computer Labs.
 * **Setting**: Uncheck `Allow iPhone Mirroring`.
 * **Effect**: If a student tries to pair their iPhone, they will see a message: "This feature is disabled by your organization." This prevents students from showing social media or personal photos on school monitors.
 
-1.**Forced View-Only (Presentation Focus)**:
+2. **Forced View-Only (Presentation Focus)**:
 
 * **Best For**: Classroom podium Macs used by teachers.
 * **Setting**: Enable `Force View-Only Mirroring`.
 * **Effect**: The iPhone screen can be displayed on the Mac (perfect for demonstrating a student's mobile project), but the teacher's Mac keyboard and mouse cannot control the iPhone. This prevents accidental interaction with the student's personal notifications.
 
-1.**Restricted Data Transfer (DLP Focus)**:
+3. **Restricted Data Transfer (DLP Focus)**:
 
 * **Best For**: Faculty/Staff administrative computers.
 * **Setting**: Disable `Allow File and Clipboard Sync with iPhone Mirroring`.

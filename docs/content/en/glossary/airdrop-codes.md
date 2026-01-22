@@ -1,7 +1,7 @@
 ---
-term: AirDrop Codes
 category:
   - Network
+term: AirDrop Codes
 ---
 ## Term Definition
 

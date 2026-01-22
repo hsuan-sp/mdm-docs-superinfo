@@ -1,13 +1,13 @@
 ---
-id: mac-7
-title: What special restrictions apply to managing Apple Silicon (M-series) Macs?
 category: 'Section 7: Mac Management'
+id: mac-7
 important: false
 tags:
   - Apple Silicon
   - Bootstrap Token
   - Secure Boot
   - Kernel Extensions
+title: What special restrictions apply to managing Apple Silicon (M-series) Macs?
 ---
 ## Q: What special restrictions apply to managing Apple Silicon (M-series) Macs?"
 
@@ -23,15 +23,15 @@ Without proper configuration, MDM will be unable to perform software updates or 
 
 * **The Issue**: On Apple Silicon, certain high-privilege operations (such as installing software updates or enabling kernel extensions) require a "Secure Token."
 * **The Solution**: Ensure that "Allow MDM to upload Bootstrap Token" is checked in the Jamf Pro**PreStage Enrollment**settings.
-* **Verification**: In the Jamf Pro computer record, confirm that `Bootstrap Token Allowed` is set to `Yes`. If it is "No," many management commands will fail.
+* **Verification**: In the Jamf Pro computer record, confirm that `Bootstrap Token Allowed`is set to`Yes`. If it is "No," many management commands will fail.
 
 ## 2. Volume Ownership
 
-* Only users designated as "Owners" can perform system resets or updates.
-* The first account created through ADE enrollment automatically gains ownership. MDM escorts this privilege via the Bootstrap Token.
+*    Only users designated as "Owners" can perform system resets or updates.
+*    The first account created through ADE Enrollment automatically gains ownership. MDM escorts this privilege via the Bootstrap Token.
 
 ## 3. Kernel Extensions (KEXTs)
 
-* Apple Silicon**blocks**all third-party KEXTs by default.
-* If they must be installed (e.g., for older antivirus software), the device must be rebooted into Recovery Mode to lower the security setting to "Reduced Security."
+*    Apple Silicon**blocks**all third-party KEXTs by default.
+*    If they must be installed (e.g., for older antivirus software), the device must be rebooted into Recovery Mode to lower the security setting to "Reduced Security."
 * **Modern Recommendation**: Use**System Extensions**instead. This is Apple's recommended architecture, which can be authorized directly via MDM configuration profiles without lowering system security.

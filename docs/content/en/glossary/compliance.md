@@ -1,7 +1,7 @@
 ---
-term: Compliance
 category:
   - Security
+term: Compliance
 ---
 ## Term Definition
 

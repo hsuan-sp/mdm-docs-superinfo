@@ -1,7 +1,7 @@
 ---
-term: Federated Authentication
 category:
   - Apple
+term: Federated Authentication
 ---
 ## Term Definition
 

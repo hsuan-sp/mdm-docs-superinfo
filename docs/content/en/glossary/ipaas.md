@@ -1,7 +1,7 @@
 ---
-term: iPaaS
 category:
   - Other
+term: iPaaS
 ---
 ## Definition
 

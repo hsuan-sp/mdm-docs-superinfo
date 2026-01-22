@@ -1,8 +1,8 @@
 ---
-term: Security Update
 category:
   - Core
   - Jamf
+term: Security Update
 ---
 ## Term Definition
 

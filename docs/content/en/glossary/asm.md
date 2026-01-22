@@ -1,7 +1,7 @@
 ---
-term: ASM (Apple School Manager)
 category:
   - Apple
+term: ASM (Apple School Manager)
 ---
 ## Term Definition
 

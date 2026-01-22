@@ -1,7 +1,7 @@
 ---
-term: Global Proxy
 category:
   - Network
+term: Global Proxy
 ---
 ## Term Definition
 

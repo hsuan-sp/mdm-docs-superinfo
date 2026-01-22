@@ -1,7 +1,7 @@
 ---
-term: Wi-Fi 5
 category:
   - Network
+term: Wi-Fi 5
 ---
 ## Term Definition
 

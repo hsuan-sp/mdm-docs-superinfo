@@ -1,16 +1,16 @@
 ---
-id: app-14
-title: >-
-  Can teachers use Managed Apple Accounts to test school-developed Beta apps in
-  TestFlight?
-category: 'Section 3: App Distribution category: '
 Section 3: App Distribution & Management (Apps & Books)" Management"
+category: 'Section 3: App Distribution category: '
+id: app-14
 important: false
 tags:
   - TestFlight
   - App Store Connect
   - Managed Apple Account
   - Service Access
+title: >-
+  Can teachers use Managed Apple Accounts to test school-developed Beta apps in
+  TestFlight?
 ---
 ## Q: Can teachers use Managed Apple Accounts to test school-developed Beta apps in TestFlight?
 
@@ -24,11 +24,9 @@ The administrator must log into**Apple School Manager**and go to**Settings > Use
 
 ## Standard Deployment Flow:
 
-1.**App Store Connect Setup**: The school developer adds the teacher's Managed Apple Account to the**External Testing**group. An invitation email will be sent to the teacher's inbox.
-
-1.**Deploy the TestFlight App**: The administrator "purchases" free**TestFlight**licenses in ASM and installs them on teacher iPads via**Device-based Assignment**in Jamf Pro.
-
-1.**Redeem Invitation**: The teacher opens the invitation email on the iPad and taps "View in TestFlight." The TestFlight app will launch automatically, and the teacher can sign in with their Managed Apple Account to begin testing.
+1. **App Store Connect Setup**: The school developer adds the teacher's Managed Apple Account to the**External Testing**group. An invitation email will be sent to the teacher's inbox.
+2. **Deploy the TestFlight App**: The administrator "purchases" free**TestFlight**licenses in ASM and installs them on teacher iPads via**Device-based Assignment**in Jamf Pro.
+3. **Redeem Invitation**: The teacher opens the invitation email on the iPad and taps "View in TestFlight." The TestFlight app will launch automatically, and the teacher can sign in with their Managed Apple Account to begin testing.
 
 ## Difference from Personal Accounts:
 

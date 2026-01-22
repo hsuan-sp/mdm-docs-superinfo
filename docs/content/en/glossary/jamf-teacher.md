@@ -1,8 +1,8 @@
 ---
-term: Jamf Teacher
 category:
   - Jamf
   - Education
+term: Jamf Teacher
 ---
 ## Term Definition
 

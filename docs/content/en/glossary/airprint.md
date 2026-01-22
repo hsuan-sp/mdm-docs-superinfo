@@ -1,7 +1,7 @@
 ---
-term: AirPrint
 category:
   - Core
+term: AirPrint
 ---
 ## Term Definition
 

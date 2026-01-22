@@ -1,9 +1,6 @@
 ---
-id: mac-27
-title: >-
-  Automated Maintenance: Using macOS 26 DDM for 'Smart Energy Management'
-  (Eco-friendly vs. Scheduled Updates).
 category: 'Section 7: Mac Management'
+id: mac-27
 important: false
 tags:
   - Energy Policy
@@ -11,6 +8,9 @@ tags:
   - Auto-Update
   - Power Management
   - macOS 26
+title: >-
+  Automated Maintenance: Using macOS 26 DDM for 'Smart Energy Management'
+  (Eco-friendly vs. Scheduled Updates).
 ---
 ## Q: Automated Maintenance: Using macOS 26 DDM for 'Smart Energy Management' (Eco-friendly vs. Scheduled Updates).
 
@@ -34,7 +34,7 @@ Using macOS 26**System Configurations**, you can set the following intelligent l
 
 ## Energy Auditing (Status Channel)
 
-* You can monitor "Battery Cycle Counts" or "Up-time in High Performance Mode" via the DDM Status Channel to use as quantitative data for future hardware replacement cycles.
+*    You can monitor "Battery Cycle Counts" or "Up-time in High Performance Mode" via the DDM Status Channel to use as quantitative data for future hardware replacement cycles.
 
 ## 2. Operational Recommendations
 

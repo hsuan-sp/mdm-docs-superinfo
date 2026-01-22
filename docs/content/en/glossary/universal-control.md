@@ -1,8 +1,8 @@
 ---
-term: Universal Control
 category:
   - Apple
   - macOS
+term: Universal Control
 ---
 ## Term Definition
 

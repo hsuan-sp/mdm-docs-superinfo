@@ -1,8 +1,8 @@
 ---
-term: Remote Management
 category:
   - Core
   - Jamf
+term: Remote Management
 ---
 ## Term Definition
 
@@ -11,7 +11,7 @@ category:
 Signifies:
 
 * **Detection**: The device has "called home" to Apple and recognized that it belongs to an organization (e.g., specific school).
-* **Consent**: The user must click "Next" or "Enroll" to download the MDM profile.
+* **Consent**: The user must click "Next" or "Enroll" to download the MDM Profile.
 * **Mandate**: If the device is in ADE, this screen is usually mandatory and cannot be skipped, ensuring no device enters the fleet unmanaged.
 
 ## Analogy

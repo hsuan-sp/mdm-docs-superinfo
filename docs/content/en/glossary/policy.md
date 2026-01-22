@@ -1,7 +1,7 @@
 ---
-term: Policy
 category:
   - Core
+term: Policy
 ---
 ## Term Definition
 

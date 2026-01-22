@@ -1,7 +1,7 @@
 ---
-term: Enforcement Deadline
 category:
   - DDM
+term: Enforcement Deadline
 ---
 ## Term Definition
 
@@ -21,8 +21,8 @@ Enforcement Deadlines are used for critical security remediations, such as manda
 
 Think of it as a**"Library Book Due Date."**
 
-* One week before it's due, you get a gentle reminder.
-* One day before, you get a more urgent alert.
-* Once the**deadline**hits, the library "locks your account" or applies a fine until the book is returned.
+*    One week before it's due, you get a gentle reminder.
+*    One day before, you get a more urgent alert.
+*    Once the**deadline**hits, the library "locks your account" or applies a fine until the book is returned.
 
 Enforcement Deadlines ensure that critical rules are followed on time across the entire school, so no one is left vulnerable to old bugs.

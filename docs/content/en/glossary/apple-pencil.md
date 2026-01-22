@@ -1,7 +1,7 @@
 ---
-term: Apple Pencil
 category:
   - Hardware
+term: Apple Pencil
 ---
 ## Term Definition
 

@@ -1,17 +1,17 @@
 ---
-term: Apple Intelligence Reports (Apple Intelligence 報告與管理)
 category:
   - Security
+term: Apple Intelligence Reports (Apple Intelligence 報告與管理)
 ---
 ## 術語定義
 
-**Apple Intelligence 報告與管理工具** 是行動裝置管理 (MDM) 中提供的一系列稽核與限制功能，旨在維護校園的 **學術倫理與誠信**。
+**Apple Intelligence 報告與管理工具 ** 是行動裝置管理 (MDM) 中提供的一系列稽核與限制功能，旨在維護校園的 ** 學術倫理與誠信 **。
 
 管理員可以透過 MDM 執行以下操作：
 
-* **停用摘要功能**：關閉 Safari、郵件 (Mail) 與訊息 (Messages) 中由 AI 自動生成的內容摘要。
-* **控管寫作工具**：限制使用 AI 進行文章重寫、校對或語氣調整等功能。
-* **稽核與監控**：遠端追蹤並監看整批裝置中 AI 功能的啟用狀態與可用性。
+*** 停用摘要功能 **：關閉 Safari、郵件 (Mail) 與訊息 (Messages) 中由 AI 自動生成的內容摘要。
+*** 控管寫作工具 **：限制使用 AI 進行文章重寫、校對或語氣調整等功能。
+*** 稽核與監控 **：遠端追蹤並監看整批裝置中 AI 功能的啟用狀態與可用性。
 
 這能確保學生是基於自身的理解力進行閱讀、彙整與創作，而非單純依賴自動化工具產出內容。
 

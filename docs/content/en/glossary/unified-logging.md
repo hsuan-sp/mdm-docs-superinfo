@@ -1,7 +1,7 @@
 ---
-term: Unified Logging
 category:
   - Core
+term: Unified Logging
 ---
 ## Term Definition
 

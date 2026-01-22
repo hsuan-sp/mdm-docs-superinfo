@@ -1,7 +1,7 @@
 ---
-term: Face ID
 category:
   - Hardware
+term: Face ID
 ---
 ## Term Definition
 

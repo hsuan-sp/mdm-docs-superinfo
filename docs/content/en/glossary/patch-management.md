@@ -1,8 +1,8 @@
 ---
-term: Patch Management
 category:
   - macOS
   - Jamf
+term: Patch Management
 ---
 ## Term Definition
 

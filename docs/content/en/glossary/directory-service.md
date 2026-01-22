@@ -1,7 +1,7 @@
 ---
-term: Directory Service
 category:
   - Network
+term: Directory Service
 ---
 ## Term Definition
 

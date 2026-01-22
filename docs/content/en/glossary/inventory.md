@@ -1,7 +1,7 @@
 ---
-term: Inventory
 category:
   - Core
+term: Inventory
 ---
 ## Term Definition
 

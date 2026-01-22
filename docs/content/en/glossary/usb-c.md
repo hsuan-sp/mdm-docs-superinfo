@@ -1,7 +1,7 @@
 ---
-term: USB-C
 category:
   - Hardware
+term: USB-C
 ---
 ## Term Definition
 
@@ -12,7 +12,7 @@ Capabilities:
 * **Power**: High-wattage charging (Power Delivery).
 * **Data**: High-speed file transfer (up to 40 Gbps with Thunderbolt).
 * **Video**: Connects directly to projectors and monitors.
-* **Accessories**: Supports ethernet dongles, microphones, and hard drives.
+* **Accessories**: Supports Ethernet dongles, microphones, and hard drives.
 
 **MDM Context**: Because USB-C makes it so easy to plug in flash drives, schools often use**"USB Restricted Mode"**profiles to stop students from copying school data onto personal drives.
 

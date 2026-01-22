@@ -1,14 +1,14 @@
 ---
-id: cls-13
-title: >-
-  On a [Shared iPad], can students log in without a password? Is there a 'Guest
-  Mode'?
 category: 'Section 4: Classroom Management & Instructional Tools'
+id: cls-13
 important: false
 tags:
   - Shared iPad
   - Guest Session
   - Library
+title: >-
+  On a [Shared iPad], can students log in without a password? Is there a 'Guest
+  Mode'?
 ---
 ## Q: On a [Shared iPad], can students log in without a password? Is there a 'Guest Mode'?
 
@@ -18,16 +18,14 @@ tags:
 
 ## Features and Limitations:
 
-1.**Login**: Tap the**Guest**button below the user icons on the sign-in screen.
-
-1.**Temporary Storage**: Any Safari history, photos, or documents created during the session are only stored locally.
-
-1.**Wipe on Logout**: This is the most important feature.**Once the user logs out, all guest data is permanently wiped and cannot be recovered.**
+1. **Login**: Tap the**Guest**button below the user icons on the sign-in screen.
+2. **Temporary Storage**: Any Safari history, photos, or documents created during the session are only stored locally.
+3. **Wipe on Logout**: This is the most important feature.**Once the user logs out, all guest data is permanently wiped and cannot be recovered.**
 
 ## Use Cases:
 
-* Public kiosks in the library.
-* Temporary sessions for younger students who haven't yet received Managed Apple Accounts.
+*    Public kiosks in the library.
+*    Temporary sessions for younger students who haven't yet received Managed Apple Accounts.
 
 ## Configuration:
 

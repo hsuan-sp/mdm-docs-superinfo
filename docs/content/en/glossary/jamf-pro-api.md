@@ -1,8 +1,8 @@
 ---
-term: Jamf Pro API
 category:
   - Jamf
   - Other
+term: Jamf Pro API
 ---
 ## Definition
 

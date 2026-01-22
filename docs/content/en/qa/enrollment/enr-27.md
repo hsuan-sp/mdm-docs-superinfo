@@ -1,9 +1,6 @@
 ---
-id: enr-27
-title: >-
-  Zero-Wipe MDM Migration: Moving devices from MOE Managed Jamf Pro to an
-  In-House MDM.
 category: 'Section 2: Device Enrollment'
+id: enr-27
 important: true
 tags:
   - iOS 26
@@ -11,6 +8,9 @@ tags:
   - Zero-Wipe
   - Asset Transfer
   - Jamf Pro
+title: >-
+  Zero-Wipe MDM Migration: Moving devices from MOE Managed Jamf Pro to an
+  In-House MDM.
 ---
 ## Q: Zero-Wipe MDM Migration: Moving devices from MOE Managed Jamf Pro to an In-House MDM.
 
@@ -24,22 +24,22 @@ tags:
 
 The MDM server change must originate at the root of the ownership chain:
 
-* In**Apple School Manager**, go to**Devices**.
-* Select the target devices and choose**Edit MDM Server**.
-* Point them to your new "In-House" MDM server.
+*    In**Apple School Manager**, go to**Devices**.
+*    Select the target devices and choose**Edit MDM Server**.
+*    Point them to your new "In-House" MDM server.
 
 ## 2. Configure the Migration Payload
 
 In your *existing* (MOE) MDM server, you must configure the migration instructions:
 
-* **Target MDM URL**: The enrollment URL of your new server.
+* **Target MDM URL**: The Enrollment URL of your new server.
 * **Enforcement Deadline**: Define the date and time when the transfer*must* occur.
 
 ## 3. The Device Experience
 
-* The student receives a notification that their device will be moved to a new management system.
-* Up until the deadline, they can choose "Later."
-* At the**Enforcement Deadline**, the device silently unenrolls from the MOE server and immediately enrolls in the school's server.
+*    The student receives a notification that their device will be moved to a new management system.
+*    Up until the deadline, they can choose "Later."
+*    At the**Enforcement Deadline**, the device silently unenrolls from the MOE server and immediately enrolls in the school's server.
 * **Crucial**: All local student files, photos, and project data are**not touched**.
 
 ## Risks and Mitigation for Schools

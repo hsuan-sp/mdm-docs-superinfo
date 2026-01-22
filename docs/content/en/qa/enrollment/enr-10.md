@@ -1,9 +1,6 @@
 ---
-id: enr-10
-title: >-
-  I changed the device name in Jamf Pro, but the iPad still shows the old name
-  locally. Why?
 category: 'Section 2: Device Enrollment'
+id: enr-10
 important: false
 tags:
   - Renaming
@@ -11,6 +8,9 @@ tags:
   - Inventory Preload
   - PreStage
   - The MUT
+title: >-
+  I changed the device name in Jamf Pro, but the iPad still shows the old name
+  locally. Why?
 ---
 ## Q: I changed the device name in Jamf Pro, but the iPad still shows the old name locally. Why?
 
@@ -25,17 +25,17 @@ To ensure the local name matches, successful admins use three correct methods:
 
 This is the recommended automated solution, naming the device the moment it activates:
 
-* Configure in**PreStage Enrollment > Mobile Device Names**.
-* **Use Variables**: You can use `$SERIALNUMBER` or `$ASSET_TAG` to generate names like `EDU-$SERIALNUMBER`.
+*    Configure in**PreStage Enrollment > Mobile Device Names**.
+* **Use Variables**: You can use `$SERIALNUMBER`or`$ASSET_TAG`to generate names like`EDU-$SERIALNUMBER`.
 * **Critical Checkbox**: You must check**Enforce Mobile Device Name on devices**. This ensures the device renames itself upon connecting to the network during setup.
 
 **2. Manual Sync via 'Remote Commands'**
 
 If you have already edited the name in the Jamf Pro device record, you must take the following actions:
 
-* Click**Edit**on the device record and confirm the name change.
-* Check the box**Enforce Mobile Device Name**below the name field and save.
-* The system will immediately queue a `DeviceName` command to the iPad. Once the device receives it (must be unlocked and online), the local name will update.
+*    Click**Edit**on the device record and confirm the name change.
+*    Check the box**Enforce Mobile Device Name**below the name field and save.
+*    The system will immediately queue a `DeviceName` command to the iPad. Once the device receives it (must be unlocked and online), the local name will update.
 
 **3. Batch Updates using 'Mass Actions' or The MUT**
 
@@ -43,7 +43,7 @@ When hundreds of devices need renaming:
 
 * **Mass Actions**: Select specific devices in a Smart Group, then choose**Action > Send Remote Commands > Set Device Name**.
 * **The MUT**: Upload a CSV file containing "Serial Number" and "Desired Name".
-* This tool updates the record and simultaneously triggers Jamf Pro to send rename commands to the physical devices.
+*    This tool updates the record and simultaneously triggers Jamf Pro to send rename commands to the physical devices.
 
 **Why do commands get stuck?**
 

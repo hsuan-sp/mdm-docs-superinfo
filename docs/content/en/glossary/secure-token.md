@@ -1,7 +1,7 @@
 ---
-term: Secure Token
 category:
   - Security
+term: Secure Token
 ---
 ## Term Definition
 

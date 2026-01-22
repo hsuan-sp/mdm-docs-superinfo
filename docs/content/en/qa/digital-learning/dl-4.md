@@ -1,15 +1,15 @@
 ---
-id: dl-4
-title: >-
-  How do I create Smart Groups specifically for tracking different phases of our
-  hardware rollout?
 category: 'Section 5: Digital Initiatives (MOE Project)'
+id: dl-4
 important: false
 tags:
   - Group Management
   - Automation
   - Smart Groups
   - Asset Tracking
+title: >-
+  How do I create Smart Groups specifically for tracking different phases of our
+  hardware rollout?
 ---
 ## Q: How do I create Smart Groups specifically for tracking different phases of our hardware rollout?
 
@@ -21,18 +21,18 @@ Using Smart Groups, you can target specific "batches" of hardware with unique ap
 
 ## Common Logic Examples:
 
-1.**Based on Naming Conventions (Recommended)**:
+1. **Based on Naming Conventions (Recommended)**:
 
-* If you named your new arrivals with a year prefix (e.g., `2025-iPad-001`).
+*    If you named your new arrivals with a year prefix (e.g., `2025-iPad-001`).
 * **Criterion**: Device Name**like**`2025-%`.
 * **Result**: All devices from the 2025 intake are instantly grouped for easy management.
 
-1.**Based on Asset Tags**:
+2. **Based on Asset Tags**:
 
-* If you uploaded a CSV of your asset tags into Jamf.
+*    If you uploaded a CSV of your asset tags into Jamf.
 * **Criterion**: Asset Tag**is**`EDU-PROJ-A`.
 
-1.**To Monitor Failure Points**:
+3. **To Monitor Failure Points**:
 
 * **Criterion**: Application Title**does not have**`Jamf Trust`.
 * **Purpose**: This creates a "Live Hit List" of every device that has accidentally lost its reporting agent, allowing the ICT team to intervene precisely.

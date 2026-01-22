@@ -1,7 +1,7 @@
 ---
-term: Device Name
 category:
   - Core
+term: Device Name
 ---
 ## Term Definition
 

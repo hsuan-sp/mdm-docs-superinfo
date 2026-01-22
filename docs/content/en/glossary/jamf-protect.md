@@ -1,9 +1,9 @@
 ---
-term: Jamf Protect
 category:
   - Jamf
   - Security
   - macOS
+term: Jamf Protect
 ---
 ## Definition
 

@@ -1,7 +1,7 @@
 ---
-term: Restrict App Downloads over Cellular
 category:
   - Network
+term: Restrict App Downloads over Cellular
 ---
 ## Term Definition
 

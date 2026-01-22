@@ -1,7 +1,7 @@
 ---
-term: Web Clip
 category:
   - Apps
+term: Web Clip
 ---
 ## Term Definition
 

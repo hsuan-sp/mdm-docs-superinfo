@@ -1,7 +1,7 @@
 ---
-term: Managed Device Attestation
 category:
   - Security
+term: Managed Device Attestation
 ---
 ## Term Definition
 

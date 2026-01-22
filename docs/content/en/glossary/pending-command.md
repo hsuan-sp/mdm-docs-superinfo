@@ -1,7 +1,7 @@
 ---
-term: Pending Command
 category:
   - Core
+term: Pending Command
 ---
 ## Term Definition
 

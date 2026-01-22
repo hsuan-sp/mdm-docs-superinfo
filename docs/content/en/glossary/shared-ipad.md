@@ -1,12 +1,12 @@
 ---
-term: Shared iPad
 category:
   - Education
   - Enrollment
+term: Shared iPad
 ---
 ## Term Definition
 
-**Shared iPad**is a multi-user enrollment mode for iPadOS designed for classroom carts.
+**Shared iPad**is a multi-user Enrollment mode for iPadOS designed for classroom carts.
 
 How it works:
 

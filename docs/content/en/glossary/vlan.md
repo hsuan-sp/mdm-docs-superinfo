@@ -1,7 +1,7 @@
 ---
-term: VLAN
 category:
   - Network
+term: VLAN
 ---
 ## Definition
 

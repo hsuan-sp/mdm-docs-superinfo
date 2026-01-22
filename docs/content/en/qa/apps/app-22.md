@@ -1,10 +1,7 @@
 ---
-id: app-22
-title: >-
-  Purchasing Procreate vs. Procreate Pocket: What's the difference, and what if
-  we bought the wrong version?
-category: 'Section 3: App Distribution category: '
 Section 3: App Distribution & Management (Apps & Books)" Management"
+category: 'Section 3: App Distribution category: '
+id: app-22
 important: false
 tags:
   - Procreate
@@ -12,6 +9,9 @@ tags:
   - VPP
   - Universal Purchase
   - Refund
+title: >-
+  Purchasing Procreate vs. Procreate Pocket: What's the difference, and what if
+  we bought the wrong version?
 ---
 ## Q: Purchasing Procreate vs. Procreate Pocket: What's the difference, and what if we bought the wrong version?
 
@@ -28,18 +28,18 @@ These two apps are distinct product lines and do**not**support "Universal Purcha
 
 ## Standard Process for Correction:
 
-1.**Request a VPP Refund**:
+1. **Request a VPP Refund**:
 
-* The administrator should log in to**Apple School Manager**, go to**Settings > Payments and Billing > View Purchase History**.
-* Alternatively, log in to**reportaproblem.apple.com**using the Managed Apple Account used for the purchase.
-* Select the order and "Request a refund," citing "Purchased wrong version."
+*    The administrator should log in to**Apple School Manager**, go to**Settings > Payments and Billing > View Purchase History**.
+*    Alternatively, log in to**reportaproblem.Apple.com**using the Managed Apple Account used for the purchase.
+*    Select the order and "Request a refund," citing "Purchased wrong version."
 
 **Note: Apple typically decides on refunds within 24–48 hours.*
 
-1.**Re-purchase**:
+1. **Re-purchase**:
 
-* Because the licenses are not interchangeable, you must purchase the correct iPad version to deploy it to student iPads.
+*    Because the licenses are not interchangeable, you must purchase the correct iPad version to deploy it to student iPads.
 
-1.**Clean Up**:
+2. **Clean Up**:
 
-* In Jamf Pro, ensure you remove the "Pocket" version from any scopes to prevent students from installing the low-resolution version, which would degrade the classroom experience.
+*    In Jamf Pro, ensure you remove the "Pocket" version from any scopes to prevent students from installing the low-resolution version, which would degrade the classroom experience.

@@ -1,7 +1,7 @@
 ---
-term: Intelligent Hub
 category:
   - Apps
+term: Intelligent Hub
 ---
 ## Definition
 

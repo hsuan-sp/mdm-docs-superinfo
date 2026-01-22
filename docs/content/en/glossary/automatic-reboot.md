@@ -1,7 +1,7 @@
 ---
-term: Automatic Reboot
 category:
   - Security
+term: Automatic Reboot
 ---
 ## Term Definition
 

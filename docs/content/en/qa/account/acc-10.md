@@ -1,14 +1,14 @@
 ---
-id: acc-10
-title: >-
-  Our school email domain has changed (e.g., from .edu.tw to .xh.edu.tw). How do
-  I update the Managed Apple Accounts?
 category: 'Section 1: Account & Server Management'
+id: acc-10
 important: false
 tags:
   - Domain Change
   - Account Management
   - Major Migration
+title: >-
+  Our school email domain has changed (e.g., from .edu.tw to .xh.edu.tw). How do
+  I update the Managed Apple Accounts?
 ---
 ## Q: Our school email domain has changed (e.g., from .edu.tw to .xh.edu.tw). How do I update the Managed Apple Accounts?
 
@@ -24,25 +24,24 @@ tags:
 **Procedure**:
 **Step 1: Add and Verify the New Domain**
 
-1. Log in to Apple School Manager ([school.apple.com](https://school.apple.com)).
-1. Go to**Preferences > Accounts**(or "User Sign-in & Directory Sync").
-1. In the Domains section, click**Add**and enter the new domain (e.g., `@school.xh.edu.tw`).
-1. Follow the instructions to add a TXT record to your DNS settings. Once verified, the domain can be assigned to users.
+1. Log in to Apple School Manager ([school.Apple.com](HTTPS://school.Apple.com)).
+2. Go to**Preferences > Accounts**(or "User Sign-in & Directory Sync").
+3. In the Domains section, click**Add**and enter the new domain (e.g., `@school.xh.edu.tw`).
+4. Follow the instructions to add a TXT record to your DNS settings. Once verified, the domain can be assigned to users.
 
 **Step 2: Batch Update Account Formats**
 
 * **For Manually Managed Accounts**:
 
 1. Export all users as a CSV from the "Users" list.
-1. Find & Replace the domain part of the "Managed Apple Account" column in the CSV with the new domain.
-1. Re-upload the updated CSV via the import function.
+2. Find & Replace the domain part of the "Managed Apple Account" column in the CSV with the new domain.
+3. Re-upload the updated CSV via the import function.
 
 * **For Federated Authentication (Google / Microsoft)**:
 
-1.**Critical Order**: You must first complete the email domain migration on the Google or Microsoft side.
-
-1. Return to ASM to trigger a re-sync.
-1. ASM will detect the email changes and automatically update the corresponding Managed Apple Accounts.
+4. **Critical Order**: You must first complete the email domain migration on the Google or Microsoft side.
+5. Return to ASM to trigger a re-sync.
+6. ASM will detect the email changes and automatically update the corresponding Managed Apple Accounts.
 
 **Step 3: Client-Side Action**
 

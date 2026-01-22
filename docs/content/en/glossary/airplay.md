@@ -1,7 +1,7 @@
 ---
-term: AirPlay
 category:
   - Core
+term: AirPlay
 ---
 ## Term Definition
 

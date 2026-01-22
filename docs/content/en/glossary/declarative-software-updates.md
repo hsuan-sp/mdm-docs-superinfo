@@ -1,7 +1,7 @@
 ---
-term: Declarative Software Updates
 category:
   - DDM
+term: Declarative Software Updates
 ---
 ## Term Definition
 

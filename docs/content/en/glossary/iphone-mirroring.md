@@ -1,8 +1,8 @@
 ---
-term: iPhone Mirroring
 category:
   - macOS
   - Security
+term: iPhone Mirroring
 ---
 ## Definition
 

@@ -1,8 +1,8 @@
 ---
-term: jamfHelper
 category:
   - macOS
   - Jamf
+term: jamfHelper
 ---
 ## 術語定義
 

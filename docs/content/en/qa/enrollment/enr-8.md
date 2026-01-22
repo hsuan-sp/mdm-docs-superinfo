@@ -1,13 +1,13 @@
 ---
-id: enr-8
-title: Enrollment fails with 'Profile Installation Failed'. Why?
 category: 'Section 2: Device Enrollment'
+id: enr-8
 important: false
 tags:
   - Troubleshooting
   - Network
   - Declarative Management
   - Profile
+title: Enrollment fails with 'Profile Installation Failed'. Why?
 ---
 ## Q: Enrollment fails with 'Profile Installation Failed'. Why?
 
@@ -25,22 +25,22 @@ SSL certificate validation relies heavily on correct time. If the iPad's clock i
 
 **Check 2: Check Campus Firewall and Network Filtering**
 
-MDM commands are delivered via**Apple Push Notification service (APNs)**. If the school network blocks specific hosts, enrollment fails.
+MDM commands are delivered via**Apple Push Notification service (APNs)**. If the school network blocks specific hosts, Enrollment fails.
 
-* **Critical Domains**: Ensure the firewall allows connections to `apple.com` and all its subdomains.
+* **Critical Domains**: Ensure the firewall allows connections to `Apple.com` and all its subdomains.
 * **Ports**: Must open**TCP 443, 2197, and 5223**.
 * **Test**: Try enrolling the iPad using an external mobile hotspot. If successful, it confirms a campus network restriction.
 
 **Check 3: Declarative Device Management (DDM) Sync Issues**
 
-In the latest OS versions, Apple heavily utilizes "Declarative Management" for enrollment.
+In the latest OS versions, Apple heavily utilizes "Declarative Management" for Enrollment.
 If there are logic conflicts in Jamf Pro settings (e.g., assigning multiple PreStages overlap), the profile download may be interrupted.
 
-* **Solution**: Admins should check PreStage settings in Jamf Pro to ensure the device falls into only one enrollment scope and the corresponding VPP Token is healthy.
+* **Solution**: Admins should check PreStage settings in Jamf Pro to ensure the device falls into only one Enrollment scope and the corresponding VPP Token is healthy.
 
 **Check 4: Is the APNs Certificate Expired?**
 
-If the APNs Push Certificate in the MDM backend has expired, Apple will reject all enrollment requests.
+If the APNs Push Certificate in the MDM backend has expired, Apple will reject all Enrollment requests.
 
 * **Solution**: Ask an administrator to check the certificate validity in Jamf Pro's "Global Management".
 

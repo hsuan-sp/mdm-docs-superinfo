@@ -1,7 +1,7 @@
 ---
-term: OIDC (OpenID Connect)
 category:
   - Security
+term: OIDC (OpenID Connect)
 ---
 ## Term Definition
 

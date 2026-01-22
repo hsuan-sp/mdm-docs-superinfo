@@ -1,7 +1,7 @@
 ---
-term: Kernel Extension (Kext)
 category:
   - Core
+term: Kernel Extension (Kext)
 ---
 ## Term Definition
 

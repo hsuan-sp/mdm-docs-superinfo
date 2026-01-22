@@ -1,15 +1,15 @@
 ---
-id: cls-22
-title: >-
-  The school network is divided into 'Teacher' and 'Student' VLANs. Will Apple
-  Classroom still work?
 category: 'Section 4: Classroom Management & Instructional Tools'
+id: cls-22
 important: true
 tags:
   - Network Architecture
   - VLAN
   - Bonjour
   - mDNS
+title: >-
+  The school network is divided into 'Teacher' and 'Student' VLANs. Will Apple
+  Classroom still work?
 ---
 ## Q: The school network is divided into 'Teacher' and 'Student' VLANs. Will Apple Classroom still work?
 
@@ -23,9 +23,8 @@ If your school network separates teachers (e.g., 192.168.10.x) and students (e.g
 
 The network administrator must configure the core switch or Wireless LAN Controller (WLC) to:
 
-1.**Enable mDNS Bridging/Relay**: This allows Bonjour packets to flow between VLANs.
-
-1.**Permit Specific Services**: Specifically allow `_classroom._tcp` (Apple Classroom) and `_airplay._tcp` (AirPlay).
+1. **Enable mDNS Bridging/Relay**: This allows Bonjour packets to flow between VLANs.
+2. **Permit Specific Services**: Specifically allow `_classroom._tcp`(Apple Classroom) and`_AirPlay._tcp` (AirPlay).
 
 ## Alternative Workaround:
 

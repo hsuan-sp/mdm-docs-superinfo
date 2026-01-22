@@ -1,7 +1,7 @@
 ---
-term: Script
 category:
   - macOS
+term: Script
 ---
 ## Term Definition
 

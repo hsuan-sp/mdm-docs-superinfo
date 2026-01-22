@@ -1,9 +1,6 @@
 ---
-id: cls-12
-title: >-
-  How do I prevent students from cheating using Apple Intelligence (Writing
-  Tools) or Math Notes?
 category: 'Section 4: Classroom Management & Instructional Tools'
+id: cls-12
 important: false
 tags:
   - Apple Intelligence
@@ -11,6 +8,9 @@ tags:
   - Math Notes
   - Anti-Cheating
   - iOS 18
+title: >-
+  How do I prevent students from cheating using Apple Intelligence (Writing
+  Tools) or Math Notes?
 ---
 ## Q: How do I prevent students from cheating using Apple Intelligence (Writing Tools) or Math Notes?
 
@@ -22,18 +22,17 @@ tags:
 
 * **Writing Tools**: Disable via the DDM**Restrictions**declaration using `allowWritingTools`.
 * **Math Notes**: Disable using `allowMathNotes`.
-* **Genmoji and Image Playground**: Disable using `allowGenmoji` and `allowImagePlayground`.
+* **Genmoji and Image Playground**: Disable using `allowGenmoji`and`allowImagePlayground`.
 
 ## Setup Path (Jamf Pro):
 
 1. Go to**Blueprints**or**Declarations**.
-1. Add a**Restrictions**declaration.
-1. Block the AI features listed above. DDM is "instant," making it ideal for deployment right before an exam.
-
-1.**Unmanaged Devices**: If students use personal devices, administrators can turn off Apple Intelligence permissions for Managed Apple Accounts at the tenant level in**ASM (Apple School Manager) > Service Access**.
+2. Add a**Restrictions**declaration.
+3. Block the AI features listed above. DDM is "instant," making it ideal for deployment right before an exam.
+4. **Unmanaged Devices**: If students use personal devices, administrators can turn off Apple Intelligence permissions for Managed Apple Accounts at the tenant level in**ASM (Apple School Manager) > Service Access**.
 
 ## Hardware Requirements:
 
-* Apple Intelligence is only supported on devices with**M-series chips**or**A17 Pro and later**.
+*    Apple Intelligence is only supported on devices with**M-series chips**or**A17 Pro and later**.
 
 **Note: Entry-level iPads (e.g., 10th and 11th Gen with A14/A16 chips) do not support these AI features natively. Focus your management efforts on iPad Air and iPad Pro models with M-series chips.*

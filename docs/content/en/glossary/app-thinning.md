@@ -1,7 +1,7 @@
 ---
-term: App Thinning
 category:
   - Apps
+term: App Thinning
 ---
 ## Term Definition
 

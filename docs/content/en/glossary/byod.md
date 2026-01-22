@@ -1,7 +1,7 @@
 ---
-term: BYOD (Bring Your Own Device)
 category:
   - Enrollment
+term: BYOD (Bring Your Own Device)
 ---
 ## Term Definition
 

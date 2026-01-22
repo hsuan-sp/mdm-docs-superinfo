@@ -1,8 +1,8 @@
 ---
-term: Jamf Remote Assist
 category:
   - Jamf
   - macOS
+term: Jamf Remote Assist
 ---
 ## Definition
 

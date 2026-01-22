@@ -1,14 +1,14 @@
 ---
-id: acc-19
-title: >-
-  How do I control access to Apple Intelligence features for Managed Apple
-  Accounts?
 category: 'Section 1: Account & Server Management'
+id: acc-19
 important: false
 tags:
   - Apple Intelligence
   - Service Access
   - ASM
+title: >-
+  How do I control access to Apple Intelligence features for Managed Apple
+  Accounts?
 ---
 ## Q: How do I control access to Apple Intelligence features for Managed Apple Accounts?
 
@@ -20,9 +20,8 @@ As Apple expands**Apple Intelligence**through 2024 and 2025, ASM provides accoun
 
 ## Configuration Methods:
 
-1.**Account Level (ASM)**: Log in to ASM >**Settings > User Management > Service Access**. Here, you can enable or disable Apple Intelligence services for specific roles (e.g., students).
-
-1.**Device Level (MDM)**: In the Jamf Pro Restrictions profile, you can specifically disable features like "Writing Tools" or "Image Playground."
+1. **Account Level (ASM)**: Log in to ASM >**Settings > User Management > Service Access**. Here, you can enable or disable Apple Intelligence services for specific roles (e.g., students).
+2. **Device Level (MDM)**: In the Jamf Pro Restrictions profile, you can specifically disable features like "Writing Tools" or "Image Playground."
 
 ## Why configure at the account level?
 

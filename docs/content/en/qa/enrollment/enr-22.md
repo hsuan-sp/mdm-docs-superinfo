@@ -1,15 +1,15 @@
 ---
-id: enr-22
-title: >-
-  The school is changing its Wi-Fi SSID. How do I prevent iPads from losing
-  connectivity?
 category: 'Section 2: Device Enrollment'
+id: enr-22
 important: true
 tags:
   - Wi-Fi Migration
   - SSID
   - Disaster Prevention
   - Network Config
+title: >-
+  The school is changing its Wi-Fi SSID. How do I prevent iPads from losing
+  connectivity?
 ---
 ## Q: The school is changing its Wi-Fi SSID. How do I prevent iPads from losing connectivity?
 
@@ -21,23 +21,23 @@ If handled incorrectly, iPads will lose contact with the old Wi-Fi and be unable
 
 ## Standard Safe Migration SOP:
 
-1.**Step 1: Push the New Profile**:
+1. **Step 1: Push the New Profile**:
 
-* Create a new Wi-Fi configuration profile in Jamf Pro (with the new SSID and password).
-* Deploy this to all devices. At this point, the iPads will have*both* the old and new Wi-Fi settings.
+*    Create a new Wi-Fi configuration profile in Jamf Pro (with the new SSID and password).
+*    Deploy this to all devices. At this point, the iPads will have*both* the old and new Wi-Fi settings.
 
-1.**Step 2: Field Testing**:
+2. **Step 2: Field Testing**:
 
-* Take a test iPad to various locations in the school. Manually turn off the old SSID (if broadcasting) to confirm the device switches to and successfully connects via the new SSID.
+*    Take a test iPad to various locations in the school. Manually turn off the old SSID (if broadcasting) to confirm the device switches to and successfully connects via the new SSID.
 
-1.**Step 3: Grace Period**:
+3. **Step 3: Grace Period**:
 
-* Keep both SSIDs active for at least**2 to 3 days**.
-* This ensures that devices that were asleep, powered off, or off-site have a chance to wake up and receive the new Wi-Fi profile before the old network disappears.
+*    Keep both SSIDs active for at least**2 to 3 days**.
+*    This ensures that devices that were asleep, powered off, or off-site have a chance to wake up and receive the new Wi-Fi profile before the old network disappears.
 
-1.**Step 4: Decommission Old Config**:
+4. **Step 4: Decommission Old Config**:
 
-* Once you verify that the majority of devices have connected via the new network (checked via inventory reports), remove the "Scope" for the old Wi-Fi profile in Jamf Pro.
+*    Once you verify that the majority of devices have connected via the new network (checked via inventory reports), remove the "Scope" for the old Wi-Fi profile in Jamf Pro.
 
 ## WARNING: Why you should NOT just edit the old profile
 

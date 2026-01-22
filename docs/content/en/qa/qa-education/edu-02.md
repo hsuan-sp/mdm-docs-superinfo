@@ -1,15 +1,15 @@
 ---
-id: edu-02
-title: >-
-  What is 'Shared iPad' and how does it differ from a standard iPad? When should
-  we use it?
 category: 'Section 8: Education Scenarios & FAQ'
+id: edu-02
 important: false
 tags:
   - Shared iPad
   - Multi-User
   - Deployment Modes
   - iCloud
+title: >-
+  What is 'Shared iPad' and how does it differ from a standard iPad? When should
+  we use it?
 ---
 ## Q: What is 'Shared iPad' and how does it differ from a standard iPad? When should we use it?"
 

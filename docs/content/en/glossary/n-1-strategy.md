@@ -1,7 +1,7 @@
 ---
-term: N-1 Strategy
 category:
   - Core
+term: N-1 Strategy
 ---
 ## Term Definition
 

@@ -1,8 +1,8 @@
 ---
-term: Blueprints
 category:
   - Jamf
   - Core
+term: Blueprints
 ---
 ## Term Definition
 

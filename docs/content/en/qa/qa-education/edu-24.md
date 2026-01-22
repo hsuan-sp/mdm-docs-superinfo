@@ -1,9 +1,6 @@
 ---
-id: edu-24
-title: >-
-  Managing 'Writing Tools' (AI) during exams: Which features should be
-  restricted?
 category: 'Section 8: Education Scenarios'
+id: edu-24
 important: true
 tags:
   - Writing Tools
@@ -11,6 +8,9 @@ tags:
   - Exam Security
   - iOS 26
   - AI
+title: >-
+  Managing 'Writing Tools' (AI) during exams: Which features should be
+  restricted?
 ---
 ## Q: Managing 'Writing Tools' (AI) during exams: Which features should be restricted?
 
@@ -38,7 +38,7 @@ Create a Jamf Pro profile specifically for the exam period:
 
 Using the**Classroom**app's**'App Lock'**feature is the most secure method:
 
-* When locked into a single app, the system-wide text selection menu is suppressed, and the student cannot access the Writing Tools interface. This is effective for both school-owned and BYOD devices.
+*    When locked into a single app, the system-wide text selection menu is suppressed, and the student cannot access the Writing Tools interface. This is effective for both school-owned and BYOD devices.
 
 ## Device Capability Audit:
 

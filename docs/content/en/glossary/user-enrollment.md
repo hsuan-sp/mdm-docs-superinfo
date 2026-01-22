@@ -1,7 +1,7 @@
 ---
-term: User Enrollment
 category:
   - Enrollment
+term: User Enrollment
 ---
 ## Definition
 

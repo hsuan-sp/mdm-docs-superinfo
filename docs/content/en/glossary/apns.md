@@ -1,8 +1,8 @@
 ---
-term: APNs (Apple Push Notification service)
 category:
   - Core
   - Apple
+term: APNs (Apple Push Notification service)
 ---
 ## Term Definition
 
@@ -10,11 +10,10 @@ category:
 
 Because an MDM server cannot communicate directly with a device (due to firewalls and battery-saving sleeps), it follows this workflow:
 
-1.**Signal**: The MDM server sends a push command to Apple’s APNs servers.
+1. **Signal**: The MDM server sends a push command to Apple’s APNs servers.
+2. **Wake up**: APNs "wakes up" the device via a persistent low-power connection.
+3. **Check-in**: The device is instructed to check in with the MDM server to receive its tasks.
 
-2.**Wake up**: APNs "wakes up" the device via a persistent low-power connection.
-
-3.**Check-in**: The device is instructed to check in with the MDM server to receive its tasks.
 **Crucial Note**: If the connection to APNs is blocked (e.g., by a school firewall or misconfigured network), management of the devices will fail entirely.
 
 ## Analogy

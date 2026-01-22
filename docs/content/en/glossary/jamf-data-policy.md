@@ -1,8 +1,8 @@
 ---
-term: Jamf Data Policy
 category:
   - Jamf
   - Security
+term: Jamf Data Policy
 ---
 ## Definition
 

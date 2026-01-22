@@ -1,7 +1,7 @@
 ---
-term: Casper Suite
 category:
   - Jamf
+term: Casper Suite
 ---
 ## Term Definition
 

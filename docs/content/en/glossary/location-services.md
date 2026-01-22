@@ -1,8 +1,8 @@
 ---
-term: Location Services
 category:
   - Apple
   - Core
+term: Location Services
 ---
 ## Term Definition
 

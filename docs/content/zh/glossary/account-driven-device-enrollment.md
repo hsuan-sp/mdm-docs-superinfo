@@ -1,7 +1,7 @@
 ---
-term: Account-Driven Device Enrollment
 category:
   - Enrollment
+term: Account-Driven Device Enrollment
 ---
 ## 術語定義
 
@@ -9,7 +9,7 @@ category:
 
 操作流程極度精簡：
 
-1. 使用者直接在「設定」App 中登入其 **管理式 Apple 帳號 (Managed Apple Account)**。
+1. 使用者直接在「設定」App 中登入其 ** 管理式 Apple 帳號 (Managed Apple Account)**。
 2. 系統會自動偵測組織的 MDM 伺服器，並引導使用者完成註冊。
 
 此方法落實了嚴格的 **「公私資料分離」**。組織僅能管理公務用的 App 與特定的專業設定，而使用者的私人照片、訊息與個人帳號則維持完全隱私，IT 部門完全無法存取。

@@ -1,11 +1,11 @@
 ---
-term: Wi-Fi Payload
 category:
   - Network
+term: Wi-Fi Payload
 ---
 ## Term Definition
 
-A**Wi-Fi Payload**is the section of an MDM profile that configures wireless connectivity settings.
+A**Wi-Fi Payload**is the section of an MDM Profile that configures wireless connectivity settings.
 
 Contents:
 

@@ -1,8 +1,8 @@
 ---
-term: Jamf Pro
 category:
   - Core
   - Jamf
+term: Jamf Pro
 ---
 ## Term Definition
 

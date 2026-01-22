@@ -1,15 +1,15 @@
 ---
-id: enr-16
-title: >-
-  The device shows 'Invalid Profile' or is running extremely slow, even after a
-  reset. Why?
 category: 'Section 2: Device Enrollment'
+id: enr-16
 important: false
 tags:
   - Invalid Profile
   - Troubleshooting
   - Wipe Device
   - Declarative Management
+title: >-
+  The device shows 'Invalid Profile' or is running extremely slow, even after a
+  reset. Why?
 ---
 ## Q: The device shows 'Invalid Profile' or is running extremely slow, even after a reset. Why?
 
@@ -24,15 +24,14 @@ In this state, the device appears managed but has lost its ability to communicat
 ## Option 1: Send 'Wipe Device' (If online)
 
 1. Log in to Jamf Pro and attempt to send a**Wipe Device**command.
-1. If the device receives it, performing a fresh**Automated Device Enrollment (ADE)**after the wipe usually establishes a new, healthy trust relationship.
+2. If the device receives it, performing a fresh**Automated Device Enrollment (ADE)**after the wipe usually establishes a new, healthy trust relationship.
 
-## Option 2: Manual Wipe and Re-enrollment (The thorough fix)
+## Option 2: Manual Wipe and Re-Enrollment (The thorough fix)
 
 If remote commands fail:
 
-1.**Manual Wipe**: On the iPad, go to**Settings > General > Transfer or Reset iPad > Erase All Content and Settings**.
-
-1.**Re-enroll**: Once back at the "Hello" screen, connect to stable Wi-Fi and re-download the "Remote Management" profile during the Setup Assistant.
+1. **Manual Wipe**: On the iPad, go to**Settings > General > Transfer or Reset iPad > Erase All Content and Settings**.
+2. **Re-enroll**: Once back at the "Hello" screen, connect to stable Wi-Fi and re-download the "Remote Management" profile during the Setup Assistant.
 
 ## Why does a reset sometimes fail?
 

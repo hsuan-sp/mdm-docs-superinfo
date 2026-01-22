@@ -1,8 +1,8 @@
 ---
-term: Managed Classes
 category:
   - Education
   - Jamf
+term: Managed Classes
 ---
 ## Term Definition
 

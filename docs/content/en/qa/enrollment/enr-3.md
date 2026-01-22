@@ -1,12 +1,12 @@
 ---
-id: enr-3
-title: What is 'Supervised Mode'? Why is it essential for school-owned devices?
 category: 'Section 2: Device Enrollment & Deployment'
+id: enr-3
 important: true
 tags:
   - Supervised
   - Management Levels
   - ADE
+title: What is 'Supervised Mode'? Why is it essential for school-owned devices?
 ---
 ## Q: What is 'Supervised Mode'? Why is it essential for school-owned devices?
 

@@ -1,7 +1,7 @@
 ---
-term: Sites
 category:
   - Core
+term: Sites
 ---
 ## Term Definition
 

@@ -1,7 +1,7 @@
 ---
-term: Managed App Framework
 category:
   - DDM
+term: Managed App Framework
 ---
 ## Term Definition
 

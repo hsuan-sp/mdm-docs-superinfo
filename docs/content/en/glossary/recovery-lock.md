@@ -1,7 +1,7 @@
 ---
-term: Recovery Lock
 category:
   - Security
+term: Recovery Lock
 ---
 ## Term Definition
 

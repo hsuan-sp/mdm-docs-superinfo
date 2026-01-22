@@ -1,15 +1,15 @@
 ---
-id: dl-3
-title: >-
-  How do I perform a 'Reset Network Settings'? What are the risks to my MDM
-  connection?
 category: 'Section 5: Digital Initiatives (MOE Project)'
+id: dl-3
 important: false
 tags:
   - Troubleshooting
   - Reset
   - Network
   - Connection Help
+title: >-
+  How do I perform a 'Reset Network Settings'? What are the risks to my MDM
+  connection?
 ---
 ## Q: How do I perform a 'Reset Network Settings'? What are the risks to my MDM connection?
 
@@ -31,9 +31,8 @@ Use this only when the device shows "Unable to Join Network," fails to see any B
 ## Steps to Reset:
 
 1. Navigate to**Settings > General > Transfer or Reset iPad > Reset**.
-1. Select**Reset Network Settings**. The iPad will reboot.
-
-1.**After Reboot**: All saved Wi-Fi passwords and Bluetooth pairings are wiped. Managed Wi-Fi profiles pushed by the school should automatically re-apply once the device is unlocked and detects the campus signal.
+2. Select**Reset Network Settings**. The iPad will reboot.
+3. **After Reboot**: All saved Wi-Fi passwords and Bluetooth pairings are wiped. Managed Wi-Fi profiles pushed by the school should automatically re-apply once the device is unlocked and detects the campus signal.
 
 ## Practical Tip:
 

@@ -1,7 +1,7 @@
 ---
-term: Intel Mac End-of-Support Milestone
 category:
   - Mac
+term: Intel Mac End-of-Support Milestone
 ---
 ## Term Definition
 

@@ -1,7 +1,7 @@
 ---
-term: DMG (Disk Image)
 category:
   - macOS
+term: DMG (Disk Image)
 ---
 ## Term Definition
 
@@ -11,7 +11,7 @@ Key characteristics:
 
 * **Mounting**: When opened, it behaves like a virtual external drive or CD-ROM appearing on the Desktop.
 * **Compression**: Often compressed to save space during download.
-* **Usage**: Typically used to deliver `.app` bundles. Users install software by dragging the application icon from the DMG into the `/Applications` folder.
+* **Usage**: Typically used to deliver `.app`bundles. Users install software by dragging the application icon from the DMG into the`/Applications` folder.
 
 In enterprise management, DMG files are often converted into**.pkg**files for automated deployment, as standard DMGs usually require manual user interaction to "drag and drop" the app.
 

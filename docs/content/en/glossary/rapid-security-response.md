@@ -1,7 +1,7 @@
 ---
-term: Rapid Security Response (RSR)
 category:
   - Security
+term: Rapid Security Response (RSR)
 ---
 ## Term Definition
 

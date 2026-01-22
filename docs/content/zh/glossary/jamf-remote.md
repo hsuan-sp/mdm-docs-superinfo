@@ -1,8 +1,8 @@
 ---
-term: Jamf Remote
 category:
   - Jamf
   - macOS
+term: Jamf Remote
 ---
 ## 術語定義
 
@@ -10,9 +10,9 @@ category:
 
 它讓 IT 管理員能透過瀏覽器安全地連線到使用者的 Mac，功能包括：
 
-* **螢幕共享**：直接檢視並操控使用者的桌面以解決問題。
-* **模式選擇**：支援「使用者同意模式」(Attended) 與「無人值守模式」(Unattended)。
-* **無需額外軟體**：不需要安裝 TeamViewer 或 AnyDesk，直接整合在管理後台。
+*** 螢幕共享 **：直接檢視並操控使用者的桌面以解決問題。
+*** 模式選擇 **：支援「使用者同意模式」(Attended) 與「無人值守模式」(Unattended)。
+*** 無需額外軟體 **：不需要安裝 TeamViewer 或 AnyDesk，直接整合在管理後台。
 
 ## 白話文比喻
 

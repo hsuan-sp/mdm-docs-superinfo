@@ -1,8 +1,8 @@
 ---
-term: Recovery Mode
 category:
   - Apple
   - macOS
+term: Recovery Mode
 ---
 ## Term Definition
 

@@ -1,9 +1,6 @@
 ---
-id: app-27
-title: >-
-  How to update apps via Jamf Pro? (Automated Enforcement and Manual Force
-  Update)
 category: 'Section 3: App Distribution & Management (Apps & Books)'
+id: app-27
 important: true
 tags:
   - App Update
@@ -11,6 +8,9 @@ tags:
   - Manual Update
   - Auto Update
   - DDM
+title: >-
+  How to update apps via Jamf Pro? (Automated Enforcement and Manual Force
+  Update)
 ---
 ## Q: How do I update apps via Jamf Pro? Can I force an update manually?
 
@@ -33,8 +33,8 @@ Go to**Devices > Mobile Device Apps**and select the app you wish to manage. In t
 For urgent updates, navigate to**Devices > Mobile Device Apps**and select the target app. You can trigger an update manually without waiting for the schedule:
 
 1. Go to the detailed information page for the app.
-1. Scroll down to the**「強制應用程式更新」**(Force App Update) section.
-1. Click the**`Force Update`**button. Jamf Pro will immediately send a force update command to all devices within the app's**"Scope."**
+2. Scroll down to the**「強制應用程式更新」**(Force App Update) section.
+3. Click the**`Force Update`**button. Jamf Pro will immediately send a force update command to all devices within the app's**"Scope."**
 
 ## 3. Considerations for 2026: DDM and Update Constraints
 

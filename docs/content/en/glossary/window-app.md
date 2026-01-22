@@ -1,7 +1,7 @@
 ---
-term: Window App
 category:
   - Core
+term: Window App
 ---
 ## Term Definition
 

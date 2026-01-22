@@ -1,7 +1,7 @@
 ---
-term: ARD (Apple Remote Desktop)
 category:
   - Core
+term: ARD (Apple Remote Desktop)
 ---
 ## Term Definition
 

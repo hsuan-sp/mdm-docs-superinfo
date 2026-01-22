@@ -1,15 +1,15 @@
 ---
-id: enr-4
-title: >-
-  What is the difference between 'User Enrollment' and standard Device
-  Enrollment?
 category: 'Section 2: Device Enrollment & Deployment'
+id: enr-4
 important: false
 tags:
   - BYOD
   - Privacy
   - Partitioning
   - Account-Driven
+title: >-
+  What is the difference between 'User Enrollment' and standard Device
+  Enrollment?
 ---
 ## Q: What is the difference between 'User Enrollment' and standard Device Enrollment?
 
@@ -17,7 +17,7 @@ tags:
 
 **User Enrollment is a privacy-first management mode specifically designed for "Bring Your Own Device" (BYOD) scenarios.**
 
-Unlike standard enrollment used for school-owned iPads, User Enrollment (User-Driven) creates a**secure partition**on the device to separate school data from the student's personal photos, messages, and apps.
+Unlike standard Enrollment used for school-owned iPads, User Enrollment (User-Driven) creates a**secure partition**on the device to separate school data from the student's personal photos, messages, and apps.
 
 ## Comparison Table:
 

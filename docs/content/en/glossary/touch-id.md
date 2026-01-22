@@ -1,7 +1,7 @@
 ---
-term: Touch ID
 category:
   - Hardware
+term: Touch ID
 ---
 ## Term Definition
 

@@ -1,13 +1,13 @@
 ---
-id: edu-07
-title: I heard MDM drains the battery quickly. Is this true?
 category: 'Section 8: Education Scenarios'
+id: edu-07
 important: false
 tags:
   - Battery
   - Myths
   - MDM
   - Power Consumption
+title: I heard MDM drains the battery quickly. Is this true?
 ---
 ## Q: I heard MDM drains the battery quickly. Is this true?
 
@@ -24,9 +24,9 @@ Actually, MDM operates in an extremely energy-efficient way.
 
 The Jamf Trust app, which handles content filtering and data reporting, also uses very little power:
 
-* It uses DNS Proxy technology at the system level.
-* Background processes are highly optimized.
-* Under**Settings > Battery**, Jamf Trust typically accounts for less than 1% of usage.
+*    It uses DNS Proxy technology at the system level.
+*    Background processes are highly optimized.
+*    Under**Settings > Battery**, Jamf Trust typically accounts for less than 1% of usage.
 
 ## The Real Battery Killers:
 
@@ -42,9 +42,9 @@ The Jamf Trust app, which handles content filtering and data reporting, also use
 ## How to Check Battery Usage:
 
 1. Go to**Settings > Battery**.
-1. View usage for the "Last 24 Hours" or "Last 10 Days."
-1. Identify which apps are consuming the most power.
-1. If Jamf Trust or "MDM" exceeds 5%, contact your administrator.
+2. View usage for the "Last 24 Hours" or "Last 10 Days."
+3. Identify which apps are consuming the most power.
+4. If Jamf Trust or "MDM" exceeds 5%, contact your administrator.
 
 ## Practical Advice: Battery Health
 

@@ -1,13 +1,13 @@
 ---
-id: cls-6
-title: Can students leave or remove 'Classroom' classes created by the teacher?
 category: 'Section 4: Classroom Management & Instruction'
+id: cls-6
 important: false
 tags:
   - Classroom
   - ASM
   - Restrictions Profile
   - Prevent Leaving
+title: Can students leave or remove 'Classroom' classes created by the teacher?
 ---
 ## Q: Can students leave or remove 'Classroom' classes created by the teacher?
 
@@ -22,7 +22,7 @@ tags:
 
 * **Source**: Created by administrators in ASM or a Student Information System (SIS) and deployed via MDM.
 * **Student Rights**:**Cannot be removed.**These are considered permanent educational configurations.
-* On the iPad under**Settings > Classroom**, students can view class info but will find no "Remove Class" option.
+*    On the iPad under**Settings > Classroom**, students can view class info but will find no "Remove Class" option.
 
 ## 2. Teacher-created Classes (Ad-hoc)
 

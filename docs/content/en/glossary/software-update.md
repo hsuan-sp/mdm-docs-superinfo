@@ -1,8 +1,8 @@
 ---
-term: Software Update
 category:
   - macOS
   - Jamf
+term: Software Update
 ---
 ## Term Definition
 

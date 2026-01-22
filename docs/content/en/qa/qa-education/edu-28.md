@@ -1,15 +1,15 @@
 ---
-id: edu-28
-title: >-
-  How should MDM administrators handle the 'Retirement' process for iPad/Mac
-  hardware?
 category: 'Section 8: Education Scenarios'
+id: edu-28
 important: false
 tags:
   - Device Retirement
   - ESG
   - Data Sanitization
   - Asset Management
+title: >-
+  How should MDM administrators handle the 'Retirement' process for iPad/Mac
+  hardware?
 ---
 ## Q: How should MDM administrators handle the 'Retirement' process for iPad/Mac hardware?
 
@@ -28,14 +28,14 @@ tags:
 
 This is the most critical step. It prevents the device from trying to enroll back in the school MDM if it is resold or recycled:
 
-* Log in to**Apple School Manager**.
-* Search for the serial number and select**"Release Device."**
+*    Log in to**Apple School Manager**.
+*    Search for the serial number and select**"Release Device."**
 * **WARNING**: Once released, a device cannot be re-added to ADE/DEP without physical access and a tethered connection to Apple Configurator. Only release devices that are permanently leaving the organization.
 
 ## 3. Inventory Archiving
 
-* Do not immediately delete the record from your MDM. Move it to a**"Retired/Decommissioned"**group for 12 months.
-* Export a final report (Serial, Purchase Date, Retirement Date) to serve as an audit trail for asset disposal.
+*    Do not immediately delete the record from your MDM. Move it to a**"Retired/Decommissioned"**group for 12 months.
+*    Export a final report (Serial, Purchase Date, Retirement Date) to serve as an audit trail for asset disposal.
 
 ## 4. Sustainability & ESG
 

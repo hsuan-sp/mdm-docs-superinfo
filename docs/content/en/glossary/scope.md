@@ -1,8 +1,8 @@
 ---
-term: Scope
 category:
   - Core
   - Jamf
+term: Scope
 ---
 ## Term Definition
 

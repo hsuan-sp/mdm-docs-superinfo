@@ -1,8 +1,8 @@
 ---
-term: Recon
 category:
   - Jamf
   - macOS
+term: Recon
 ---
 ## Term Definition
 

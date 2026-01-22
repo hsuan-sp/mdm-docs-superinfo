@@ -1,7 +1,7 @@
 ---
-term: MDM Profile
 category:
   - Core
+term: MDM Profile
 ---
 ## Term Definition
 

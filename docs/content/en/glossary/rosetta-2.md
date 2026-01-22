@@ -1,7 +1,7 @@
 ---
-term: Rosetta 2
 category:
   - macOS
+term: Rosetta 2
 ---
 ## Term Definition
 

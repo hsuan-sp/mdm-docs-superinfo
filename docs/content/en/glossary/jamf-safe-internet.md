@@ -1,9 +1,9 @@
 ---
-term: Jamf Safe Internet
 category:
   - Jamf
   - Security
   - Network
+term: Jamf Safe Internet
 ---
 ## Term Definition
 

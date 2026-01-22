@@ -1,7 +1,7 @@
 ---
-term: Certificate Authority (CA)
 category:
   - Security
+term: Certificate Authority (CA)
 ---
 ## Term Definition
 

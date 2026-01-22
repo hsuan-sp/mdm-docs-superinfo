@@ -1,7 +1,7 @@
 ---
-term: Network Extension URL Filtering API
 category:
   - Network
+term: Network Extension URL Filtering API
 ---
 ## Term Definition
 

@@ -1,7 +1,7 @@
 ---
-term: Platform SSO in Setup Assistant
 category:
   - Mac
+term: Platform SSO in Setup Assistant
 ---
 ## Term Definition
 

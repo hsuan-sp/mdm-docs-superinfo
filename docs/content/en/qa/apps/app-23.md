@@ -1,10 +1,7 @@
 ---
-id: app-23
-title: >-
-  What is 'Declarative App Management' (DDM), and how does it differ from
-  traditional VPP?
-category: 'Section 3: App Distribution category: '
 Section 3: App Distribution & Management (Apps & Books)" Management"
+category: 'Section 3: App Distribution category: '
+id: app-23
 important: true
 tags:
   - DDM
@@ -12,6 +9,9 @@ tags:
   - Declarative
   - Auto-Update
   - iOS 26
+title: >-
+  What is 'Declarative App Management' (DDM), and how does it differ from
+  traditional VPP?
 ---
 ## Q: What is 'Declarative App Management' (DDM), and how does it differ from traditional VPP?
 
@@ -39,13 +39,13 @@ tags:
 On DDM-compatible versions of Jamf Pro:
 
 1. Navigate to**Blueprints > App Management**.
-1. Create an**App Declaration**.
-1. Set**Installation Behavior**:
+2. Create an**App Declaration**.
+3. Set**Installation Behavior**:
 
 * **Required**: App is mandatory and unremovable. If a user tries to delete it, the device reinstall it automatically.
 * **Optional**: Appears in Self Service; user can remove it.
 
-1. Set**Update Behavior**:
+4. Set**Update Behavior**:
 
 * **Automatic**: Always keeps the app at the latest version.
 * **Follow User Preference**: Respects the toggle in the local App Store settings.

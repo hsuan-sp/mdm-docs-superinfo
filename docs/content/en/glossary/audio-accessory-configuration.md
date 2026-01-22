@@ -1,11 +1,11 @@
 ---
-term: Audio Accessory Configuration
 category:
   - Hardware
+term: Audio Accessory Configuration
 ---
 ## Term Definition
 
-Introduced in**iOS/iPadOS 26**(`com.apple.configuration.audio-accessory.settings`), this MDM payload improves audio accessory management in collaborative environments.
+Introduced in**iOS/iPadOS 26**(`com.Apple.configuration.audio-accessory.settings`), this MDM payload improves audio accessory management in collaborative environments.
 
 Key management features:
 

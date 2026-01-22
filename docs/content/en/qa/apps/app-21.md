@@ -1,14 +1,14 @@
 ---
-id: app-21
-title: How do I prevent students from 'hiding' or 'locking' Managed Apps in iOS 18?
-category: 'Section 3: App Distribution category: '
 Section 3: App Distribution & Management (Apps & Books)" Management"
+category: 'Section 3: App Distribution category: '
+id: app-21
 important: true
 tags:
   - iOS 18
   - Hide App
   - Lock App
   - Restrictions
+title: How do I prevent students from 'hiding' or 'locking' Managed Apps in iOS 18?
 ---
 ## Q: How do I prevent students from 'hiding' or 'locking' Managed Apps in iOS 18?
 
@@ -20,13 +20,13 @@ tags:
 
 Administrators must enable two new restrictions in the**Restrictions**profile for**Supervised**devices:
 
-1.**Disallow Locking Apps (allowLockedApps)**:
+1. **Disallow Locking Apps (allowLockedApps)**:
 
-* Prevents users from enabling Face ID/Touch ID verification for any app.**Note: Disabling this item also automatically disables the ability to hide apps.**
+*    Prevents users from enabling Face ID/Touch ID verification for any app.**Note: Disabling this item also automatically disables the ability to hide apps.**
 
-1.**Disallow Hiding Apps (allowHiddenApps)**:
+2. **Disallow Hiding Apps (allowHiddenApps)**:
 
-* Prevents users from moving apps into the "Hidden" folder.
+*    Prevents users from moving apps into the "Hidden" folder.
 
 ## Technical Detail:
 

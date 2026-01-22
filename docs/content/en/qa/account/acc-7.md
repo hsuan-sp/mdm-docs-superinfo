@@ -1,12 +1,12 @@
 ---
-id: acc-7
-title: Can I use my personal Apple Account to sign in to a school iPad?
 category: 'Section 1: Account & Server Management'
+id: acc-7
 important: false
 tags:
   - Personal Apple Account
   - Managed Apple Account
   - Access Control
+title: Can I use my personal Apple Account to sign in to a school iPad?
 ---
 ## Q: Can I use my personal Apple Account to sign in to a school iPad?
 

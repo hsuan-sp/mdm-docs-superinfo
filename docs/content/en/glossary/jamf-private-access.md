@@ -1,9 +1,9 @@
 ---
-term: Jamf Private Access
 category:
   - Jamf
   - Security
   - Network
+term: Jamf Private Access
 ---
 ## Definition
 

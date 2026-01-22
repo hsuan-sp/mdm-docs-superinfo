@@ -1,15 +1,15 @@
 ---
-id: enr-14
-title: >-
-  How do I make an iPad automatically connect to Wi-Fi and re-enroll after a
-  reset? (Return to Service)
 category: 'Section 2: Device Enrollment'
+id: enr-14
 important: false
 tags:
   - Automation
   - Wi-Fi
   - Return to Service
   - Zero-Touch
+title: >-
+  How do I make an iPad automatically connect to Wi-Fi and re-enroll after a
+  reset? (Return to Service)
 ---
 ## Q: How do I make an iPad automatically connect to Wi-Fi and re-enroll after a reset? (Return to Service)
 
@@ -32,11 +32,11 @@ When an administrator sends the "Wipe Device" command from Jamf Pro, they can in
 ## Recommended Steps:
 
 1. Search for and select the target device in Jamf Pro.
-1. Click**Management > Send Remote Commands > Wipe Device**.
-1. In the command options, check**Return to Service**.
-1. Specify the Wi-Fi configuration to be sent to the device.
-1. If Activation Lock might be present, ensure**Clear Activation Lock**is also checked.
-1. Send the command.
+2. Click**Management > Send Remote Commands > Wipe Device**.
+3. In the command options, check**Return to Service**.
+4. Specify the Wi-Fi configuration to be sent to the device.
+5. If Activation Lock might be present, ensure**Clear Activation Lock**is also checked.
+6. Send the command.
 
 ## Risks and Limitations:
 

@@ -1,7 +1,7 @@
 ---
-term: Activation Lock
 category:
   - Security
+term: Activation Lock
 ---
 ## Term Definition
 
@@ -9,8 +9,8 @@ category:
 
 How it works:
 
-* It is automatically enabled when**Find My**is turned on.
-* Once a device is reset, the original user's Apple ID and password are required to reactivate it.
+*    It is automatically enabled when**Find My**is turned on.
+*    Once a device is reset, the original user's Apple ID and password are required to reactivate it.
 
 While highly effective for anti-theft, it can be a challenge for organizations if a student or staff member leaves without signing out. In such cases, administrators must use an**Activation Lock Bypass Code**or request a lock removal from Apple Support.
 

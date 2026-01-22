@@ -1,8 +1,8 @@
 ---
-term: Provisioning Profile
 category:
   - Apps
   - Security
+term: Provisioning Profile
 ---
 ## Term Definition
 

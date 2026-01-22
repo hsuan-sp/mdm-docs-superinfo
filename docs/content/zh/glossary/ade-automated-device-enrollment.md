@@ -1,7 +1,7 @@
 ---
-term: ADE (Automated Device Enrollment)
 category:
   - Enrollment
+term: ADE (Automated Device Enrollment)
 ---
 ## 術語定義
 
@@ -9,11 +9,9 @@ category:
 
 運作流程包括：
 
-1.**採購**：透過授權經銷商或 Apple 直接購買裝置。
-
-2.**指派**：序號會自動加入組織的 **ASM (Apple School Manager)** 或 **ABM** 帳戶。
-
-3.**啟用**：裝置開機並連上 Wi-Fi 的那一刻，會自動下載學校的 MDM 描述檔。
+1. ** 採購 **：透過授權經銷商或 Apple 直接購買裝置。
+2. ** 指派 **：序號會自動加入組織的 **ASM (Apple School Manager)** 或 **ABM** 帳戶。
+3. ** 啟用 **：裝置開機並連上 Wi-Fi 的那一刻，會自動下載學校的 MDM 描述檔。
 
 此流程為強制性且使用者無法跳過，實現了真正的 **「零接觸部署 (Zero-Touch)」**。
 
