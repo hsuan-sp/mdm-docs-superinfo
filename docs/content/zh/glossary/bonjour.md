@@ -9,9 +9,9 @@ category: ["Network","Apple"]
 
 其主要功能讓 Apple 裝置能自動發現同一區域網路內的服務，包括：
 
-* **AirPrint** ：自動搜尋印表機。
-* **AirPlay** ：自動搜尋投影螢幕或 Apple TV。
-* **Apple Classroom** ：自動搜尋附近的師生裝置。
+- **AirPrint** ：自動搜尋印表機。
+- **AirPlay** ：自動搜尋投影螢幕或 Apple TV。
+- **Apple Classroom** ：自動搜尋附近的師生裝置。
 
 這讓使用者完全無需手動設定 IP 位址，即可連線使用這些週邊設備。
 

@@ -9,9 +9,9 @@ The **Jamf Binary** (frequently referred to as the `Jamf` command-line tool) is 
 
 Operational roles:
 
-* **Local Engine** : It is the "brain" on the Mac that executes instructions sent from the Jamf Pro server.
-* **Policies** : Unlike standard MDM profiles, the binary allows for complex "Policies" that can run scripts, install specialized software packages, and perform system maintenance.
-* **Check-ins** : The binary periodically "checks in" with the server to see if there are any new tasks to perform.
+- **Local Engine** : It is the "brain" on the Mac that executes instructions sent from the Jamf Pro server.
+- **Policies** : Unlike standard MDM profiles, the binary allows for complex "Policies" that can run scripts, install specialized software packages, and perform system maintenance.
+- **Check-ins** : The binary periodically "checks in" with the server to see if there are any new tasks to perform.
 
 **Note** : While iPads use Apple’s built-in MDM framework alone, Macs use a combination of standard MDM and the Jamf Binary to provide deeper management capabilities.
 

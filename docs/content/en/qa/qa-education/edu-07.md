@@ -8,8 +8,8 @@ tags: ["Battery","Myths","MDM","Power Consumption"]
 
 **This is a myth. MDM itself consumes very little resources and does not significantly impact battery life. The real battery drainers are typically screen brightness, video streaming, and GPS navigation.** Actually, MDM operates in an extremely energy-efficient way.
 
-* **Declarative Management (DDM)** : **2026 Mainstream Tech** . Devices now monitor their own state (e.g., whether a profile is active) and only report to the server when a "change" occurs. This drastically reduces the power loss associated with traditional MDM "polling."
-* **No Persistent Connection** : MDM does not need to maintain a continuous network connection or VPN tunnel.
+- **Declarative Management (DDM)** : **2026 Mainstream Tech** . Devices now monitor their own state (e.g., whether a profile is active) and only report to the server when a "change" occurs. This drastically reduces the power loss associated with traditional MDM "polling."
+- **No Persistent Connection** : MDM does not need to maintain a continuous network connection or VPN tunnel.
 
 ## Jamf Trust Power Consumption:
 

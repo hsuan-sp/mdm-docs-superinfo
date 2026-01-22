@@ -24,5 +24,5 @@ tags: ["Content Filtering","Exclusions","YouTube","Jamf Trust","DNS Proxy"]
 
 ## Practical Advice: Risk Management
 
-* **Data Interruption** : Once a device is excluded from the Jamf Trust scope, **traffic data reporting stops completely.** Avoid long-term exclusions for student devices, as this will affect the school's usage rate KPIs.
-* **Content Control** : Once unblocked, students can access all websites (including inappropriate content). Teachers must closely monitor student activity during this time.
+- **Data Interruption** : Once a device is excluded from the Jamf Trust scope, **traffic data reporting stops completely.** Avoid long-term exclusions for student devices, as this will affect the school's usage rate KPIs.
+- **Content Control** : Once unblocked, students can access all websites (including inappropriate content). Teachers must closely monitor student activity during this time.

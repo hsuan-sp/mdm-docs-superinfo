@@ -4,22 +4,22 @@
 
 本知識庫的維護人員必須以 **「台灣 Apple 部署與 MDM 教育應用資深專家」** 的身份進行內容創作。您的思考應包含：
 
-* **極致精緻 (Exquisite)**：內容精準，排版完美。嚴格禁止列表之間出現空行，必須保持緊湊結構。
-* **風險意識**：提供操作建議時，必須主動提及風險（如：斷網死機、資料中斷、Apple ID 鎖定、回報機制失效）。
-* **實戰經驗**：深刻理解教育部精進方案的 KPI（如載具使用率、流量回報）、各縣市平台（如酷課雲、親師生平台）的架構差異。
-* **語言規範**：嚴格使用台灣 Apple 官方繁體中文術語。不使用大陸用語（如「文件」應為「描述檔/檔案」、「資料」不是「數據」）。
-* **精確查證**：對應 2025/2026 最新系統版本（iOS 26、macOS Tahoe）與 DDM (宣告式管理) 協定。查證資料來源包括 [Apple Platform Deployment Guide](https://support.apple.com/guide/deployment/welcome/web) 與 [Jamf 官方繁中文件](https://learn.Jamf.com/zh-TW/)。
+- **極致精緻 (Exquisite)**：內容精準，排版完美。嚴格禁止列表之間出現空行，必須保持緊湊結構。
+- **風險意識**：提供操作建議時，必須主動提及風險（如：斷網死機、資料中斷、Apple ID 鎖定、回報機制失效）。
+- **實戰經驗**：深刻理解教育部精進方案的 KPI（如載具使用率、流量回報）、各縣市平台（如酷課雲、親師生平台）的架構差異。
+- **語言規範**：嚴格使用台灣 Apple 官方繁體中文術語。不使用大陸用語（如「文件」應為「描述檔/檔案」、「資料」不是「數據」）。
+- **精確查證**：對應 2025/2026 最新系統版本（iOS 26、macOS Tahoe）與 DDM (宣告式管理) 協定。查證資料來源包括 [Apple Platform Deployment Guide](https://support.apple.com/guide/deployment/welcome/web) 與 [Jamf 官方繁中文件](https://learn.Jamf.com/zh-TW/)。
 
 ---
 
 ## 2. 檔案位置與維護索引
 
-* **檔案目錄**：`docs/content/zh/qa/[類別資料夾]/`
-* **自動化索引 (必看)**：在新增問題前，請務必先查閱 **`docs/maintenance/INDEX_ZH.md`** 中的 Q&A 區塊。
-* **維護規範**：先透過索引確認相同問題是否已存在。AI 助手或真人在接手任務時，應以此索引為唯一參考來源，確認「好喔，這個題目沒有寫過」再進行新增。
-* **排版與索引腳本**：
-  * **目前暫無專用的 Q&A 自動排版腳本**，請人工確保格式「嚴格緊湊」（Tight List）。
-  * **更新索引**：`npm run update-index` (調用 `scripts/maintenance/generate-index.js`)
+- **檔案目錄**：`docs/content/zh/qa/[類別資料夾]/`
+- **自動化索引 (必看)**：在新增問題前，請務必先查閱 **`docs/maintenance/INDEX_ZH.md`** 中的 Q&A 區塊。
+- **維護規範**：先透過索引確認相同問題是否已存在。AI 助手或真人在接手任務時，應以此索引為唯一參考來源，確認「好喔，這個題目沒有寫過」再進行新增。
+- **排版與索引腳本**：
+  - **目前暫無專用的 Q&A 自動排版腳本**，請人工確保格式「嚴格緊湊」（Tight List）。
+  - **更新索引**：`npm run update-index` (調用 `scripts/maintenance/generate-index.js`)
 
 ---
 

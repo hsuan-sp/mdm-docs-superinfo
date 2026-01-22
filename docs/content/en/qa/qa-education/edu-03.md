@@ -22,9 +22,9 @@ tags: ["Roles","Permissions","Group Policy","Classroom"]
 
 ## Implementation in Jamf Pro:
 
-* **Automatic Naming** : We recommend using a prefix like `T-` (Teacher) and `S-` (Student) during enrollment.
-* **Scoped Profiles** : Create a "Student Restrictions" profile and scope it*exclusively* to the Student Smart Group. Create a separate, "Lighter Restrictions" profile for staff.
-* **App Deployment** : Some specialized creative or assessment apps (like Goodnotes or Exam.net) might be deployed to all devices, while administrative tools (like ManageBac or PowerSchool Teacher) are scoped only to staff.
+- **Automatic Naming** : We recommend using a prefix like `T-` (Teacher) and `S-` (Student) during enrollment.
+- **Scoped Profiles** : Create a "Student Restrictions" profile and scope it*exclusively* to the Student Smart Group. Create a separate, "Lighter Restrictions" profile for staff.
+- **App Deployment** : Some specialized creative or assessment apps (like Goodnotes or Exam.net) might be deployed to all devices, while administrative tools (like ManageBac or PowerSchool Teacher) are scoped only to staff.
 
 ## Institutional Advice:
 

@@ -9,9 +9,9 @@ category: ["Network", "Apple"]
 
 Common use cases in schools:
 
-* **Printing** : Discovering **AirPrint** enabled printers.
-* **Display** : Finding **AirPlay** destinations like Apple TVs.
-* **Collaboration** : Allowing **Apple Classroom** to discover student iPads.
+- **Printing** : Discovering **AirPrint** enabled printers.
+- **Display** : Finding **AirPlay** destinations like Apple TVs.
+- **Collaboration** : Allowing **Apple Classroom** to discover student iPads.
 
 Bonjour eliminates the need for users to know technical details like IP addresses or DNS records to connect nearby devices.
 

@@ -9,10 +9,10 @@ category: ["Apple", "macOS"]
 
 Functionality:
 
-* **Zero Setup** : Devices signed into the same iCloud account automatically detect each other.
-* **Cross-Platform** : A cursor can move from a Mac screen onto an iPad screen seamlessly.
-* **Drag & Drop** : Files can be dragged from one device to another.
-* **MDM Control** : Schools often disable this on shared or lab computers to prevent students from accidentally (or intentionally) moving files between machines during exams.
+- **Zero Setup** : Devices signed into the same iCloud account automatically detect each other.
+- **Cross-Platform** : A cursor can move from a Mac screen onto an iPad screen seamlessly.
+- **Drag & Drop** : Files can be dragged from one device to another.
+- **MDM Control** : Schools often disable this on shared or lab computers to prevent students from accidentally (or intentionally) moving files between machines during exams.
 
 ## Analogy
 

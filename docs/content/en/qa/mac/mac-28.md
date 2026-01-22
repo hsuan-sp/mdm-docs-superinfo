@@ -49,9 +49,9 @@ If the school firewall is the bottleneck, connect the Mac to an administrator's 
 
 If EACS fails completely to trigger, enter **Recovery Mode** :
 
-* **Apple Silicon (M1–M5)** : Hold the Power button until "Loading startup options" appears.
-* **Intel Mac (T2)** : Hold `Command + R` during startup.
-* **Action** : Select "Erase Mac" from the Recovery menu. This forces a complete reset of the Secure Enclave and all hardware-bound security keys, allowing for a fresh start.
+- **Apple Silicon (M1–M5)** : Hold the Power button until "Loading startup options" appears.
+- **Intel Mac (T2)** : Hold `Command + R` during startup.
+- **Action** : Select "Erase Mac" from the Recovery menu. This forces a complete reset of the Secure Enclave and all hardware-bound security keys, allowing for a fresh start.
 
 ## Expert Insight
 

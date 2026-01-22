@@ -9,9 +9,9 @@ category: ["Core"]
 
 Consequences of removal:
 
-* **Instant Deletion** : Wi-Fi credentials, VPN configurations, and security restrictions are removed immediately.
-* **Certificate Revocation** : Any digital certificates included in the profile are deleted from the device's keychain.
-* **Resource Recovery** : Essential for offboarding users or clearing organizational data before a device is reassigned.
+- **Instant Deletion** : Wi-Fi credentials, VPN configurations, and security restrictions are removed immediately.
+- **Certificate Revocation** : Any digital certificates included in the profile are deleted from the device's keychain.
+- **Resource Recovery** : Essential for offboarding users or clearing organizational data before a device is reassigned.
 
 ## Analogy
 

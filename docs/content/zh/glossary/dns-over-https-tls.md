@@ -9,8 +9,8 @@ category: ["Network"]
 
 傳統 DNS 查詢是明文傳輸的，容易被 ISP 或中間人監聽。加密協定則提供了保護：
 
-* **DoH (DNS over HTTPS)** ：使用 HTTPS 協定 (Port 443) 加密 DNS 請求，看起來就像一般的網頁流量，難以被阻擋或分析。
-* **DoT (DNS over TLS)** ：使用 TLS 協定 (Port 853) 加密 DNS 請求，專用且更有效率。
+- **DoH (DNS over HTTPS)** ：使用 HTTPS 協定 (Port 443) 加密 DNS 請求，看起來就像一般的網頁流量，難以被阻擋或分析。
+- **DoT (DNS over TLS)** ：使用 TLS 協定 (Port 853) 加密 DNS 請求，專用且更有效率。
 
 雖然保護了隱私，但也可能導致 **繞過學校的 DNS 過濾機制** ，讓學生接觸到不當內容。
 

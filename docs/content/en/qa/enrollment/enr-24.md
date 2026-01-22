@@ -16,8 +16,8 @@ tags: ["Enforcement Deadline", "DDM", "Enforcement", "Deadline", "Compliance"]
 
 ## Scope
 
-* **OS Versions** : iOS 26, iPadOS 26, macOS 26, visionOS 26, tvOS 26.
-* **Applications** : Software Update enforcement, MDM Migration deadlines, and Configuration Profile installations.
+- **OS Versions** : iOS 26, iPadOS 26, macOS 26, visionOS 26, tvOS 26.
+- **Applications** : Software Update enforcement, MDM Migration deadlines, and Configuration Profile installations.
 
 ## Implementation (Jamf Pro Example)
 
@@ -45,17 +45,17 @@ tags: ["Enforcement Deadline", "DDM", "Enforcement", "Deadline", "Compliance"]
 
 ## Behavior at Deadline:
 
-* **Power On** : Immediately begins download and installation.
-* **Power Off** : Provides a 1-hour grace period upon the next boot, then forces the action.
-* **Restart** : If a restart is required, the user may be given a brief warning, but the system will eventually force the reboot.
+- **Power On** : Immediately begins download and installation.
+- **Power Off** : Provides a 1-hour grace period upon the next boot, then forces the action.
+- **Restart** : If a restart is required, the user may be given a brief warning, but the system will eventually force the reboot.
 
 ## Deployment Advice for Schools
 
-* **Buffer Time** : Provide 2–4 weeks for users to update voluntarily.
-* **Scheduling** : Avoid exam weeks or major school events. Friday afternoons or weekends are often best.
-* **Capacity** : Ensure school bandwidth can handle the concurrent downloads if a large number of devices reach the deadline at once.
+- **Buffer Time** : Provide 2–4 weeks for users to update voluntarily.
+- **Scheduling** : Avoid exam weeks or major school events. Friday afternoons or weekends are often best.
+- **Capacity** : Ensure school bandwidth can handle the concurrent downloads if a large number of devices reach the deadline at once.
 
 ## Communication:
 
-* **Teachers** : Explain*why* the update is necessary (security/new features) and encourage them to update manually before the deadline to avoid interruptions.
-* **Students** : Remind them to leave their iPads connected to power at home to allow for automatic background updates.
+- **Teachers** : Explain*why* the update is necessary (security/new features) and encourage them to update manually before the deadline to avoid interruptions.
+- **Students** : Remind them to leave their iPads connected to power at home to allow for automatic background updates.

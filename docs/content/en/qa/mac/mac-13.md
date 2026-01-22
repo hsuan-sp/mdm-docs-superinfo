@@ -21,9 +21,9 @@ tags: ["PPPC","Privacy","TCC","Screen Recording","Standard Users"]
 
 1. **Solve the 'Standard User' Block (Crucial)** Since teachers are rarely administrators, they get stuck when a system prompt asks for an admin password to allow screen sharing.
 
-* **Fix** : Create a PPPC payload in Jamf Pro for the specific app (e.g., Zoom).
-* **Setting** : Set `Screen Recording` to **Allow Standard Users to allow access** .
-* **Result** : When the teacher clicks allow, the system **no longer asks for an admin password** .
+- **Fix** : Create a PPPC payload in Jamf Pro for the specific app (e.g., Zoom).
+- **Setting** : Set `Screen Recording` to **Allow Standard Users to allow access** .
+- **Result** : When the teacher clicks allow, the system **no longer asks for an admin password** .
 
 1. **Silent Authorization** For specialized tools, set **Accessibility** to **Allow** to reduce pop-up fatigue for your users.
 

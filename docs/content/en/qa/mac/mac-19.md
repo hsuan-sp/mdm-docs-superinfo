@@ -13,12 +13,12 @@ tags: ["Deployment","ADE","Offline Install","Content Caching","macOS 26"]
 1. **Content Caching Server** :
 
 * This is the lifeblood of mass deployment. Dedicate one Mac mini (M5) to this role for each computer lab.
-* **Benefit** : When the first Mac downloads Office or a macOS update, the other 49 units will pull it locally from the cache at near-instant speeds, protecting your school's external internet pipe.
+- **Benefit** : When the first Mac downloads Office or a macOS update, the other 49 units will pull it locally from the cache at near-instant speeds, protecting your school's external internet pipe.
 
 1. **Declarative Enrollment (DDM)** :
 
-* **macOS 26** supports a more resilient enrollment engine.
-* **Feature** : Instead of waiting for the server to push commands, the device "declares" its target state the moment it joins. This improves software install success rates by approx. 30% on shaky Wi-Fi.
+- **macOS 26** supports a more resilient enrollment engine.
+- **Feature** : Instead of waiting for the server to push commands, the device "declares" its target state the moment it joins. This improves software install success rates by approx. 30% on shaky Wi-Fi.
 
 1. **Hybrid 'Pre-load' Strategy** :
 

@@ -20,9 +20,9 @@ When a user enters their email (e.g., `student@tes.tp.edu.tw`) during the enroll
 
 ## Technical Requirements:
 
-* **Web Server Access** : Your school’s main website server must be configured to host this specific `.well-known` directory.
-* **MIME Type** : The server must return the file with the `application/json` header.
-* **SSL Certificate** : The server MUST have a valid, trusted HTTPS certificate.
+- **Web Server Access** : Your school’s main website server must be configured to host this specific `.well-known` directory.
+- **MIME Type** : The server must return the file with the `application/json` header.
+- **SSL Certificate** : The server MUST have a valid, trusted HTTPS certificate.
 
 ## Alternative Options:
 

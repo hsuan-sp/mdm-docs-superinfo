@@ -9,9 +9,9 @@ category: ["Security"]
 
 How it works:
 
-* **Secure Enclave** : The device uses its built-in hardware security chip to generate a cryptographic key.
-* **Apple Server** : This key is sent to Apple's attestation servers to verify that the device is a genuine Apple product (not a hackintosh or simulator) and has not been compromised.
-* **Outcome** : The device receives a "certificate of authenticity" that it presents to the MDM or Wi-Fi network to gain access.
+- **Secure Enclave** : The device uses its built-in hardware security chip to generate a cryptographic key.
+- **Apple Server** : This key is sent to Apple's attestation servers to verify that the device is a genuine Apple product (not a hackintosh or simulator) and has not been compromised.
+- **Outcome** : The device receives a "certificate of authenticity" that it presents to the MDM or Wi-Fi network to gain access.
 
 ## Analogy
 

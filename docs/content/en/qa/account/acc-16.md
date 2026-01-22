@@ -16,8 +16,8 @@ tags: ["Domain Conflict","Account Transfer","ASM"]
 
 1. **60-Day Grace Period** : Users have 60 days to choose:
 
-* **Change Personal Email** : The user changes their personal Apple Account to a private email (e.g., Gmail). All data (photos, app purchases) remains intact, but the account name changes.
-* **Release for Organization Use** : If the account was used solely for work/teaching, the user can change the email to release it, allowing the school to recreate it as a **Managed Apple Account** .
+- **Change Personal Email** : The user changes their personal Apple Account to a private email (e.g., Gmail). All data (photos, app purchases) remains intact, but the account name changes.
+- **Release for Organization Use** : If the account was used solely for work/teaching, the user can change the email to release it, allowing the school to recreate it as a **Managed Apple Account** .
 
 1. **Forced Release (Domain Capture)** : If the user takes no action after 60 days, Apple requires them to change their email upon their next sign-in (using a temporary `@gtempaccount.com` name). The school email is then released for the organization to use. In 2025+ versions, administrators can further automate this via the "Domain Capture" feature.
 

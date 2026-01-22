@@ -10,9 +10,9 @@ tags: ["VPP","Device-based Assignment","Apple ID","Managed Apple Account"]
 
 ## Advantages for the School:
 
-* **Zero-Login Deployment** : Students can receive all necessary classroom apps immediately upon unboxing the device without ever needing a personal or Managed Apple Account.
-* **Asset Reclamation** : App licenses remain school property. When a student graduates or an iPad is erased, the license is automatically "returned" to your school’s pool, ready to be redistributed to another device.
-* **Simplified Maintenance** : There are no prompts for passwords when apps need to be updated or reinstalled.
+- **Zero-Login Deployment** : Students can receive all necessary classroom apps immediately upon unboxing the device without ever needing a personal or Managed Apple Account.
+- **Asset Reclamation** : App licenses remain school property. When a student graduates or an iPad is erased, the license is automatically "returned" to your school’s pool, ready to be redistributed to another device.
+- **Simplified Maintenance** : There are no prompts for passwords when apps need to be updated or reinstalled.
 
 ## Important Limitation: In-App Purchases
 

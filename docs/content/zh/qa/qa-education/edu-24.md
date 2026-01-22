@@ -10,9 +10,9 @@ tags: ["Writing Tools", "Apple Intelligence", "考試防弊", "iOS 26", "AI"]
 
 ## 作弊風險分析
 
-* **改寫 (Rewrite)** ：學生輸入零碎關鍵字，AI 自動潤飾成完整通順的段落
-* **校對 (Proofread)** ：自動修正錯別字與文法錯誤，影響英文或國文測驗的鑑別度
-* **摘要 (Summarize)** ：閱讀測驗時，直接生成文章重點，跳過閱讀過程
+- **改寫 (Rewrite)** ：學生輸入零碎關鍵字，AI 自動潤飾成完整通順的段落
+- **校對 (Proofread)** ：自動修正錯別字與文法錯誤，影響英文或國文測驗的鑑別度
+- **摘要 (Summarize)** ：閱讀測驗時，直接生成文章重點，跳過閱讀過程
 
 ## 防弊管理方案
 
@@ -24,7 +24,7 @@ tags: ["Writing Tools", "Apple Intelligence", "考試防弊", "iOS 26", "AI"]
 1. 前往 **Restrictions (限制)** > **Intelligence** 或 **Siri** 相關分類
 1. 啟用以下限制（設為 Restrict 或取消 Allow）：
 
-* **Allow Writing Tools (允許寫作工具)***** Allow Image Playground (允許影像樂園)***** Allow Genmoji***** Allow Math Notes (允許數學筆記)** （防止數學作弊）
+- **Allow Writing Tools (允許寫作工具)***** Allow Image Playground (允許影像樂園)***** Allow Genmoji***** Allow Math Notes (允許數學筆記)** （防止數學作弊）
 
 1. **部署策略** ：在考試前派送至目標裝置群組，考完試後移除
 
@@ -32,8 +32,8 @@ tags: ["Writing Tools", "Apple Intelligence", "考試防弊", "iOS 26", "AI"]
 
 若不確定描述檔是否生效，或混用個人裝置（BYOD），建議使用 **「課堂」(Classroom)** App 的 **「鎖定 App」(App Lock)** 功能：
 
-* **操作** ：老師將學生的 iPad 鎖定在特定的測驗 App 或瀏覽器頁面
-* **原理** ：單一 App 模式下，學生無法選取文字呼叫系統選單，也無法使用任何浮動視窗或多工處理，自然無法使用寫作工具
+- **操作** ：老師將學生的 iPad 鎖定在特定的測驗 App 或瀏覽器頁面
+- **原理** ：單一 App 模式下，學生無法選取文字呼叫系統選單，也無法使用任何浮動視窗或多工處理，自然無法使用寫作工具
 
 ## 裝置差異與管理
 

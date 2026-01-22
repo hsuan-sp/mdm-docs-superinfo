@@ -21,9 +21,9 @@ tags: ["Software Updates", "DDM", "macOS 26", "Compliance", "IT Strategy"]
 
 1. **Set an Enforcement Deadline** :
 
-* **Major Updates (e.g., 26.1)** : Set a deadline for **14-21 days** after release. This gives everyone time to choose a convenient moment.
-* **Security Patches (RSR)** : Set a deadline for **48 hours** . Critical security shouldn't wait.
-* **The Result** : Users get multiple gentle reminders. If they haven't updated by the deadline, the Mac will **force a restart and install** automatically at the specified time.
+- **Major Updates (e.g., 26.1)** : Set a deadline for **14-21 days** after release. This gives everyone time to choose a convenient moment.
+- **Security Patches (RSR)** : Set a deadline for **48 hours** . Critical security shouldn't wait.
+- **The Result** : Users get multiple gentle reminders. If they haven't updated by the deadline, the Mac will **force a restart and install** automatically at the specified time.
 
 1. **Utilize Background Caching** :
 

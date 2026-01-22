@@ -9,10 +9,10 @@ category: ["DDM"]
 
 Fundamental changes:
 
-* **Phase-out** : Legacy MDM update commands (like `ScheduleOSUpdate`) are being replaced by the DDM "Configuration" mechanism.
-* **Deadlines** : Supports strict **Enforcement Deadlines** where the device will force an update at a specific date and time.
-* **Betas** : Allows administrators to remotely enroll or restrict devices in Apple’s **Beta Software Programs** .
-* **Reporting** : Provides real-time progress updates through the **Status Channel** (e.g., "Downloading," "Verifying," "Installing").
+- **Phase-out** : Legacy MDM update commands (like `ScheduleOSUpdate`) are being replaced by the DDM "Configuration" mechanism.
+- **Deadlines** : Supports strict **Enforcement Deadlines** where the device will force an update at a specific date and time.
+- **Betas** : Allows administrators to remotely enroll or restrict devices in Apple’s **Beta Software Programs** .
+- **Reporting** : Provides real-time progress updates through the **Status Channel** (e.g., "Downloading," "Verifying," "Installing").
 
 **Note** : While the transition began with iOS 17 and macOS 14, Apple has announced the full deprecation of legacy MDM update commands by late 2026.
 

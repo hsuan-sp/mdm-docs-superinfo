@@ -10,7 +10,7 @@ tags: ["Cleaning","Maintenance","Disinfection","Alcohol","Oleophobic Coating"]
 
 ## 1. Approved Cleaning Agents:
 
-* **70% Isopropyl Alcohol (IPA) wipes.***** 75% Ethyl Alcohol wipes.***** Clorox Disinfecting Wipes.***** A soft, lint-free microfiber cloth dampened with water** (for basic cleaning only).
+- **70% Isopropyl Alcohol (IPA) wipes.***** 75% Ethyl Alcohol wipes.***** Clorox Disinfecting Wipes.***** A soft, lint-free microfiber cloth dampened with water** (for basic cleaning only).
 
 ## 2. Prohibited Substances & Tools:
 
@@ -32,9 +32,9 @@ tags: ["Cleaning","Maintenance","Disinfection","Alcohol","Oleophobic Coating"]
 
 ## 4. Risk Warnings and Material Differences:
 
-* **Oleophobic Coating** : iPad screens have an oil-resistant coating that naturally wears over time. While alcohol is allowed, frequent or excessive cleaning will accelerate the degradation of this coating.
-* **Nano-texture Models (Special Note)** : If your iPad Pro (M4) is equipped with **Nano-texture glass** , only use the dedicated polishing cloth provided by Apple. For stubborn grime, you may dampen the cloth with 70% IPA.
-* **Leather and Fabric Accessories** : **Stay away** from alcohol on official Apple leather, FineWoven, or Smart Folio fabrics, as it will cause discoloration or material damage.
+- **Oleophobic Coating** : iPad screens have an oil-resistant coating that naturally wears over time. While alcohol is allowed, frequent or excessive cleaning will accelerate the degradation of this coating.
+- **Nano-texture Models (Special Note)** : If your iPad Pro (M4) is equipped with **Nano-texture glass** , only use the dedicated polishing cloth provided by Apple. For stubborn grime, you may dampen the cloth with 70% IPA.
+- **Leather and Fabric Accessories** : **Stay away** from alcohol on official Apple leather, FineWoven, or Smart Folio fabrics, as it will cause discoloration or material damage.
 
 ## Practical Advice:
 

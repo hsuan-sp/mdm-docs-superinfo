@@ -9,9 +9,9 @@ category: ["Core"]
 
 Core concepts:
 
-* **Declarations** : Instead of a stream of commands, the server sends "Declarations" (sets of rules and desires) to the device.
-* **Autonomy** : The device manages itself based on these rules. It monitors its own state (e.g., OS version, app presence) without waiting for a server "poke."
-* **Status Channel** : The device proactively reports changes in its state back to the server only when something relevant happens.
+- **Declarations** : Instead of a stream of commands, the server sends "Declarations" (sets of rules and desires) to the device.
+- **Autonomy** : The device manages itself based on these rules. It monitors its own state (e.g., OS version, app presence) without waiting for a server "poke."
+- **Status Channel** : The device proactively reports changes in its state back to the server only when something relevant happens.
 
 This shift significantly reduces server load, improves battery life, and makes device management far more responsive to real-world changes.
 

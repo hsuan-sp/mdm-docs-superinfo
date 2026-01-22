@@ -10,9 +10,9 @@ tags: ["Apple Intelligence","Writing Tools","Math Notes","Anti-Cheating","iOS 18
 
 ## Risk Features and Controls:
 
-* **Writing Tools** : Disable via the DDM **Restrictions** declaration using `allowWritingTools`.
-* **Math Notes** : Disable using `allowMathNotes`.
-* **Genmoji and Image Playground** : Disable using `allowGenmoji` and `allowImagePlayground`.
+- **Writing Tools** : Disable via the DDM **Restrictions** declaration using `allowWritingTools`.
+- **Math Notes** : Disable using `allowMathNotes`.
+- **Genmoji and Image Playground** : Disable using `allowGenmoji` and `allowImagePlayground`.
 
 ## Setup Path (Jamf Pro):
 

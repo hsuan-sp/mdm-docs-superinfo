@@ -10,16 +10,16 @@ tags: ["Software Distribution","App Installers","PKG","Auto-Update"]
 
 ## Modern Software Deployment Tiers:
 
-* **Tier 1: Jamf App Installers (Preferred)** :
-* **The Workflow** : You choose "Google Chrome" from the Jamf catalog. Jamf handles the downloading, packaging, and—crucially—the **Automatic Updates** .
-* **Self-Healing** : In **macOS 26** , this is backed by DDM. If a student deletes Chrome, the Mac notices the "State Desync" and automatically reinstalls the app in the background without any IT intervention.
-* **Tier 2: Mac App Store (VPP)** :
+- **Tier 1: Jamf App Installers (Preferred)** :
+- **The Workflow** : You choose "Google Chrome" from the Jamf catalog. Jamf handles the downloading, packaging, and—crucially—the **Automatic Updates** .
+- **Self-Healing** : In **macOS 26** , this is backed by DDM. If a student deletes Chrome, the Mac notices the "State Desync" and automatically reinstalls the app in the background without any IT intervention.
+- **Tier 2: Mac App Store (VPP)** :
 * Best for classroom favorites like Goodnotes, Keynote, or GarageBand.
 * Purchase licenses in bulk via Apple School Manager and push them to devices. Installation is silent and updates are managed by the system.
-* **Tier 3: Adobe Creative Cloud (Shared Device License)** :
+- **Tier 3: Adobe Creative Cloud (Shared Device License)** :
 * For computer labs, use the **Adobe Admin Console** to create a "Shared Device License" package.
 * Push this package via a Jamf Pro policy. This ensures that any student who sits at the Mac can use the software using their individual school ID.
-* **Tier 4: Custom PKGs (Last Resort)** :
+- **Tier 4: Custom PKGs (Last Resort)** :
 * Use **Jamf Composer** to package specialized local curriculum software or niche drivers that are not found in public catalogs.
 
 ## Institutional Advice:

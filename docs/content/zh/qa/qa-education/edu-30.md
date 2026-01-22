@@ -12,18 +12,18 @@ tags: ["斷網維運", "備援方案", "離線使用", "網路不穩"]
 
 ## 1. 課前準備：快取與同步
 
-* **內容快取 (Content Caching)** ：確保學校內建有 macOS 內容快取伺服器（Content Caching）。一旦主線斷網，區域網路內的 iPad 仍可從快取機下載已有的 App 或系統更新。
-* **教材預載** ：透過 Jamf Pro 預先將「必備教材」存入 iPad 的「檔案」App 或 Books 中。
+- **內容快取 (Content Caching)** ：確保學校內建有 macOS 內容快取伺服器（Content Caching）。一旦主線斷網，區域網路內的 iPad 仍可從快取機下載已有的 App 或系統更新。
+- **教材預載** ：透過 Jamf Pro 預先將「必備教材」存入 iPad 的「檔案」App 或 Books 中。
 
 ## 2. 斷網當下的操作建議
 
-* **Apple 課堂 (Classroom)** ：只要 iPad 與 教師端 Mac/iPad 在同一個教室內（開啟藍牙與 Peer-to-Peer Wi-Fi）， **即使斷開網際網路，課堂 App 仍可正常派送 PDF、網頁書籤與監控畫面** 。
-* **離線 App 使用** ：Keynote, Pages, Numbers, GarageBand 等專業軟體均支援離線編輯。
+- **Apple 課堂 (Classroom)** ：只要 iPad 與 教師端 Mac/iPad 在同一個教室內（開啟藍牙與 Peer-to-Peer Wi-Fi）， **即使斷開網際網路，課堂 App 仍可正常派送 PDF、網頁書籤與監控畫面** 。
+- **離線 App 使用** ：Keynote, Pages, Numbers, GarageBand 等專業軟體均支援離線編輯。
 
 ## 3. MDM 策略配置：離線存取
 
-* **密碼檢核** ：設定較長的「離線報到寬容期」，避免因為 24 小時沒連上網路就導致帳號被鎖定。
-* **區域網路 SSO** ：若校內有建立區域網路 SSO 代理，裝置仍可透過區域 Wi-Fi 進行身分驗證。
+- **密碼檢核** ：設定較長的「離線報到寬容期」，避免因為 24 小時沒連上網路就導致帳號被鎖定。
+- **區域網路 SSO** ：若校內有建立區域網路 SSO 代理，裝置仍可透過區域 Wi-Fi 進行身分驗證。
 
 ## 資訊組長的備援 SOP
 

@@ -11,8 +11,8 @@ tags: ["投影","轉接","AirPlay","HDMI"]
 
 **方案一：HDMI 轉接器（最推薦）****所需裝置** ：
 
-* **Lightning 機型** ：Lightning Digital AV 轉接器（Apple 原廠或 MFi 認證）。
-* **USB-C 機型** ：USB-C Digital AV 多埠轉接器。
+- **Lightning 機型** ：Lightning Digital AV 轉接器（Apple 原廠或 MFi 認證）。
+- **USB-C 機型** ：USB-C Digital AV 多埠轉接器。
 * HDMI 線（連接轉接器與電視/投影機）。
 
 **操作步驟** ：

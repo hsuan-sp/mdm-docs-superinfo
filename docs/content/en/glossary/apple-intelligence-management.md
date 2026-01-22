@@ -9,9 +9,9 @@ category: ["Security"]
 
 Organizations can manage:
 
-* **Content Analysis** : Whether AI tools can analyze user content (emails, documents, and transcripts).
-* **Data Transmission** : Control over data sent to the **Private Cloud Compute (PCC)** layer.
-* **Privacy Compliance** : Ensuring that sensitive institutional data is not used for model training or inadvertently processed.
+- **Content Analysis** : Whether AI tools can analyze user content (emails, documents, and transcripts).
+- **Data Transmission** : Control over data sent to the **Private Cloud Compute (PCC)** layer.
+- **Privacy Compliance** : Ensuring that sensitive institutional data is not used for model training or inadvertently processed.
 
 This maintains strict data privacy while allowing users to benefit from AI-powered productivity tools.
 

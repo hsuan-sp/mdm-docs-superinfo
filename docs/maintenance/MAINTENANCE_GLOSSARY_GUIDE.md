@@ -4,27 +4,27 @@
 
 本知識庫的內容品質由 **「台灣 Apple 部署與 MDM 教育應用資深專家」** 守護。在進行任何內容增修時，請內化以下思維：
 
-* **極致精緻 (Exquisite)**：不僅內容要準確，排版與格式必須達到「展示級」水準。
-* **術語精確**：嚴格使用台灣 Apple 官方繁體中文術語（如：聯合驗證、受監管模式、預備註冊、管理式 Apple 帳號）。
-* **專業嚴謹**：絕不提供未經證實的虛假功能。若功能有系統版本限制，必須明確標註正確版本號。
-* **零廢話、無聲操作**：切勿陳述您的角色或語言模式。直接從解決方案或資料開始，不使用「你好」、「作為一個 AI」等贅詞。
-* **反幻覺**：必須查證最新官方資料（如 [Jamf 官方繁中文件](https://learn.Jamf.com/zh-TW/bundle/Jamf-pro-documentation-current/page/Jamf_Pro_Documentation.html)、[Apple Platform Deployment Guide](https://support.apple.com/guide/deployment/welcome/web)），確保資訊時效性。
+- **極致精緻 (Exquisite)**：不僅內容要準確，排版與格式必須達到「展示級」水準。
+- **術語精確**：嚴格使用台灣 Apple 官方繁體中文術語（如：聯合驗證、受監管模式、預備註冊、管理式 Apple 帳號）。
+- **專業嚴謹**：絕不提供未經證實的虛假功能。若功能有系統版本限制，必須明確標註正確版本號。
+- **零廢話、無聲操作**：切勿陳述您的角色或語言模式。直接從解決方案或資料開始，不使用「你好」、「作為一個 AI」等贅詞。
+- **反幻覺**：必須查證最新官方資料（如 [Jamf 官方繁中文件](https://learn.Jamf.com/zh-TW/bundle/Jamf-pro-documentation-current/page/Jamf_Pro_Documentation.html)、[Apple Platform Deployment Guide](https://support.apple.com/guide/deployment/welcome/web)），確保資訊時效性。
 
 ---
 
 ## 2. 檔案位置與維護索引
 
-* **檔案目錄**：`docs/content/zh/glossary/`
-* **自動化索引 (必看)**：在新增內容前，請務必先查閱 **`docs/maintenance/INDEX_ZH.md`**。
+- **檔案目錄**：`docs/content/zh/glossary/`
+- **自動化索引 (必看)**：在新增內容前，請務必先查閱 **`docs/maintenance/INDEX_ZH.md`**。
 * 此索引會自動列出所有已存在的術語與問答題目。
-* **維護規範**：請先看過索引，確認該術語「尚未編寫」再進行新增，避免資源重複或衝突。
-* **自動排版腳本 (重要)**：
+- **維護規範**：請先看過索引，確認該術語「尚未編寫」再進行新增，避免資源重複或衝突。
+- **自動排版腳本 (重要)**：
 
   在此專案中，我們使用嚴格的 `Tight List` 格式（列表項之間無空行），並透過腳本強制執行。
 
-  * **英文術語排版**：`node scripts/maintenance/align-glossary.js` (或 `rename-glossary.js`)
-  * **中文術語排版**：`node scripts/maintenance/fix-markdown.js`
-  * **更新索引**：`npm run update-index` (或 `node scripts/maintenance/generate-index.js`)
+  - **英文術語排版**：`node scripts/maintenance/align-glossary.js` (或 `rename-glossary.js`)
+  - **中文術語排版**：`node scripts/maintenance/fix-markdown.js`
+  - **更新索引**：`npm run update-index` (或 `node scripts/maintenance/generate-index.js`)
 
   **建議流程**：修改完檔案後，先執行上述排版腳本，確認格式無誤後再執行 `update-index`。
 
@@ -51,8 +51,8 @@ tags: ["標籤1", "標籤2", "標籤3"]
 
 這裡是該術語的專業定義。請確保解釋了技術原理（如 APNs 通訊機制或 DDM 宣告式邏輯），並符合 2025/2026 財年的技術背景。
 
-* **特點一**：說明...
-* **特點二**：說明...
+- **特點一**：說明...
+- **特點二**：說明...
 
 ## 白話文比喻
 
@@ -107,9 +107,9 @@ tags: ["標籤1", "標籤2", "標籤3"]
 
 **比喻範例**：
 
-* **Liquid Glass**：「就像百貨公司的玻璃帷幕，既能看到內容，又能映照出周圍環境的光影變化。」
-* **Zero-Wipe Migration**：「以前換 MDM 像『搬家要把房子拆掉重建』，現在像『換管理公司但不搬家』。」
-* **Enforcement Deadline**：「就像圖書館的『到期催還書』系統，最後一天會鎖帳號強制還書。」
+- **Liquid Glass**：「就像百貨公司的玻璃帷幕，既能看到內容，又能映照出周圍環境的光影變化。」
+- **Zero-Wipe Migration**：「以前換 MDM 像『搬家要把房子拆掉重建』，現在像『換管理公司但不搬家』。」
+- **Enforcement Deadline**：「就像圖書館的『到期催還書』系統，最後一天會鎖帳號強制還書。」
 
 ## 4.3 MDM 相關說明要求
 
@@ -375,9 +375,9 @@ FileVault 是 macOS 的全磁碟加密功能。macOS Tahoe 26 新增透過 SSH �
 
 若術語與「推動中小學數位學習精進方案」相關，請注意：
 
-* **方案期程**：110/12/01 ~ 114/12/31（2025 年底已結束）
-* **2026 年狀態**：進入過渡期，需說明「先前精進方案配發的裝置...」
-* **新政策**：2026 年起的「AI 教育 4 年計畫」（細節待教育部公布）
+- **方案期程**：110/12/01 ~ 114/12/31（2025 年底已結束）
+- **2026 年狀態**：進入過渡期，需說明「先前精進方案配發的裝置...」
+- **新政策**：2026 年起的「AI 教育 4 年計畫」（細節待教育部公布）
 
 ## 9.2 縣市平台整合
 

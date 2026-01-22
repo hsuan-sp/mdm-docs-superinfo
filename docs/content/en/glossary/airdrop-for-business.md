@@ -9,8 +9,8 @@ category: ["Security"]
 
 The system distinguishes between:
 
-* **Managed Storage** : Organizational apps and data.
-* **Unmanaged Storage** : Personal apps and data.
+- **Managed Storage** : Organizational apps and data.
+- **Unmanaged Storage** : Personal apps and data.
 
 IT can prevent users from sharing sensitive school documents with personal devices while still allowing AirDrop for legitimate schoolwork between managed devices.
 

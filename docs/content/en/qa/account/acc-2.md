@@ -10,8 +10,8 @@ tags: ["APNs","Push Certificate","Maintenance"]
 
 ## What Happens if it Expires?
 
-* **Total Loss of Control** : Devices will not "leave" management, but they will become "unmanaged devices." You will not be able to send any new profiles, apps, or commands.
-* **The Point of No Return** : If the certificate expires and you accidentally create a **new** one instead of **renewing** the old one, you will lose the link to all currently enrolled devices. You would then have to manually erase and re-enroll every single device in the school.
+- **Total Loss of Control** : Devices will not "leave" management, but they will become "unmanaged devices." You will not be able to send any new profiles, apps, or commands.
+- **The Point of No Return** : If the certificate expires and you accidentally create a **new** one instead of **renewing** the old one, you will lose the link to all currently enrolled devices. You would then have to manually erase and re-enroll every single device in the school.
 
 ## How to Renew (Before Expiration):
 
@@ -27,6 +27,6 @@ tags: ["APNs","Push Certificate","Maintenance"]
 
 ## Institutional Advice:
 
-* **Use a Shared Account** : Always create your push certificate using a generic school IT email (e.g., `MDM-admin@school.tp.edu.tw`) rather than a personal teacher's Apple ID.
-* **Calendar Alerts** : Set multiple calendar reminders (3 months, 1 month, and 2 weeks before expiration) to ensure this task is never forgotten.
-* **Keep Backup codes** : Ensure the recovery phone number and backup keys for the management Apple ID are stored in the school’s secure password manager.
+- **Use a Shared Account** : Always create your push certificate using a generic school IT email (e.g., `MDM-admin@school.tp.edu.tw`) rather than a personal teacher's Apple ID.
+- **Calendar Alerts** : Set multiple calendar reminders (3 months, 1 month, and 2 weeks before expiration) to ensure this task is never forgotten.
+- **Keep Backup codes** : Ensure the recovery phone number and backup keys for the management Apple ID are stored in the school’s secure password manager.

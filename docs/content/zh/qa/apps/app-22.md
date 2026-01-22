@@ -10,11 +10,11 @@ tags: ["Procreate","App 採購","VPP","通用購買","退款"]
 
 **** 這兩款 App 屬於不同的產品線，且不支援「通用購買 (Universal Purchase)」。 **** 規格對照 ** ：
 
-* **Procreate (iPad 版)** ：專為 iPadOS 與 Apple Pencil 設計。
+- **Procreate (iPad 版)** ：專為 iPadOS 與 Apple Pencil 設計。
 
  支援大畫布與完整繪圖引擎，是美術班的標準教材。 **單價較高** 。
 
-* **Procreate Pocket (iPhone 版)** ：專為 iOS 手機介面設計。
+- **Procreate Pocket (iPhone 版)** ：專為 iOS 手機介面設計。
 
  雖然能在 iPad 上安裝（相容模式），但畫面周圍會有黑邊，
  且不支援 Pencil 的壓力感應與傾斜功能。

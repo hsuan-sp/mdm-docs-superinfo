@@ -9,9 +9,9 @@ A **Universal Binary** is a macOS application package that contains executable c
 
 Structure:
 
-* **Fat Binary** : It includes code for both **Intel** (x86_64) and **Apple Silicon** (ARM64) chips inside a single app file.
-* **Workflow** : When the user double-clicks the app, macOS automatically chooses the correct code for the computer's chip.
-* **Benefit** : Ensures the app runs at maximum native speed on an M3 MacBook Air*and*an old Intel iMac, without needing **Rosetta 2** .
+- **Fat Binary** : It includes code for both **Intel** (x86_64) and **Apple Silicon** (ARM64) chips inside a single app file.
+- **Workflow** : When the user double-clicks the app, macOS automatically chooses the correct code for the computer's chip.
+- **Benefit** : Ensures the app runs at maximum native speed on an M3 MacBook Air*and*an old Intel iMac, without needing **Rosetta 2** .
 
 ## Analogy
 

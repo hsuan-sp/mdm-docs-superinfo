@@ -31,9 +31,9 @@ If the repair involved a new logic board that wasn't auto-transferred to your AS
 
 If the repair shop used a "pre-owned" or "test" board that is still managed by another school or enterprise:
 
-* **Symptom** : Apple Configurator will throw an error saying "This device is owned by another organization."
-* **Risk** : **You cannot unlock this yourself.** Legally and technically, the hardware ownership remains with another entity.
-* **Fix** : Demand that the repair vendor either contacts the original owner for a "Release" in ASM or replaces the board with a clean, unmanaged unit.
+- **Symptom** : Apple Configurator will throw an error saying "This device is owned by another organization."
+- **Risk** : **You cannot unlock this yourself.** Legally and technically, the hardware ownership remains with another entity.
+- **Fix** : Demand that the repair vendor either contacts the original owner for a "Release" in ASM or replaces the board with a clean, unmanaged unit.
 
 ## Last Resort: DFU Mode Restore
 

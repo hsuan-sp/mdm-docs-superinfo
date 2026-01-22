@@ -10,9 +10,9 @@ tags: ["Apple Intelligence","寫作工具","數學備忘錄","防弊","iOS 18"]
 
 **** 風險功能與控管方式 ** ：
 
-* **寫作工具 (Writing Tools)** ：透過 DDM 的 **Restrictions** 宣告停用 `allowWritingTools`。
-* **數學備忘錄 (Math Notes)** ：停用 `allowMathNotes`。
-* **Genmoji 與影像遊樂場** ：停用 `allowGenmoji` 與 `allowImagePlayground`。
+- **寫作工具 (Writing Tools)** ：透過 DDM 的 **Restrictions** 宣告停用 `allowWritingTools`。
+- **數學備忘錄 (Math Notes)** ：停用 `allowMathNotes`。
+- **Genmoji 與影像遊樂場** ：停用 `allowGenmoji` 與 `allowImagePlayground`。
 
 **設定路徑 (Jamf Pro)** ：
 

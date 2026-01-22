@@ -12,8 +12,8 @@ tags: ["Cybersecurity Audit","NIST","Compliance"]
 
 1. **Authenticator Assurance (Passcodes)** :
 
-* **2026 Standard** : Move away from simple periodic password changes toward "anti-guessing" and MFA.
-* **MDM Practice** : Force 6-digit minimum passcodes and enable Managed Apple Account MFA.
+- **2026 Standard** : Move away from simple periodic password changes toward "anti-guessing" and MFA.
+- **MDM Practice** : Force 6-digit minimum passcodes and enable Managed Apple Account MFA.
 
 1. **Managed App Attestation** :
 
@@ -27,6 +27,6 @@ tags: ["Cybersecurity Audit","NIST","Compliance"]
 
 Since the "MOE Centralized Jamf Pro" must manage millions of devices, some cutting-edge DDM features may have a rollout delay.
 
-* **Advice** : If your school has an independent **Jamf School/Pro** instance, use it as a **"Beta Test Lab."**
+- **Advice** : If your school has an independent **Jamf School/Pro** instance, use it as a **"Beta Test Lab."**
 
 * Test your iOS 26 profiles and DDM status channels there first. When the central MOE instance is updated, you will already be an expert on the configuration, ensuring your school passes cybersecurity audits with flying colors.

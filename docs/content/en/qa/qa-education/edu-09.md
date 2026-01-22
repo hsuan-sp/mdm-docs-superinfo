@@ -12,9 +12,9 @@ tags: ["Projection","Adapters","AirPlay","HDMI"]
 
 **Required Equipment** :
 
-* **Lightning Models** : Lightning Digital AV Adapter (Original Apple or MFi certified).
-* **USB-C Models** : USB-C Digital AV Multiport Adapter.
-* **HDMI Cable** .
+- **Lightning Models** : Lightning Digital AV Adapter (Original Apple or MFi certified).
+- **USB-C Models** : USB-C Digital AV Multiport Adapter.
+- **HDMI Cable** .
 
 **Steps** :
 

@@ -10,18 +10,18 @@ tags: ["Privacy Permissions", "Transparency", "PPPC", "macOS 26", "Communication
 
 ## The Interface Change:
 
-* **Pre-macOS 26** : Users saw toggles as grayed out but often didn't know*why*.
-* **macOS 26** : Displays a badge: **"Managed by [School Name]"** . Users can see what has been authorized but cannot change it.
+- **Pre-macOS 26** : Users saw toggles as grayed out but often didn't know*why*.
+- **macOS 26** : Displays a badge: **"Managed by [School Name]"** . Users can see what has been authorized but cannot change it.
 
 ## How to Respond to Common Student/Staff Questions:
 
-* **"Why is the Microphone forced ON?"**
+- **"Why is the Microphone forced ON?"**
 
 * Response: This ensures apps like Zoom, Google Meet, or recording software for language classes work instantly. Being "Authorized" does not mean it is "Recording"—macOS still shows a hardware-level **Orange Light** whenever the mic is active.
-* **"Why is the Screen Recording permission managed?"**
+- **"Why is the Screen Recording permission managed?"**
 
 * Response: This allows students to share their screen during a presentation or remote lab. macOS displays a **Purple icon** in the menu bar whenever a screen is being shared or recorded.
-* **"Why can't I turn it OFF?"**
+- **"Why can't I turn it OFF?"**
 
 * Response: Managing these via MDM ensures that critical educational tools don't fail due to a student accidentally clicking "Deny." This reduces technical downtime in the classroom.
 

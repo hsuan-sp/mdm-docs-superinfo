@@ -12,8 +12,8 @@ tags: ["Device Retirement", "ESG", "Data Sanitization", "Asset Management"]
 
 ## 1. Secure Data Wipe (Zero-Touch Cleanup)
 
-* **Execute Wipe** : Send a remote wipe command via Jamf Pro. Use the **"Erase All Content and Settings (EACS)"** command for modern Macs and iPads; it is faster and more secure than a traditional re-installation.
-* **Verification** : Ensure the MDM console confirms the "Wipe Complete" status before physical disposal.
+- **Execute Wipe** : Send a remote wipe command via Jamf Pro. Use the **"Erase All Content and Settings (EACS)"** command for modern Macs and iPads; it is faster and more secure than a traditional re-installation.
+- **Verification** : Ensure the MDM console confirms the "Wipe Complete" status before physical disposal.
 
 ## 2. Disassociation in ASM (Release from ASM)
 
@@ -31,8 +31,8 @@ This is the most critical step. It prevents the device from trying to enroll bac
 
 ## 4. Sustainability & ESG
 
-* **Second Life** : If the hardware is functional but cannot support newer OS versions, consider repurposing it as a "Library E-reader" or a dedicated "Sign-in Kiosk."
-* **Certified Recycling** : For damaged units, choose a certified e-waste recycler and mark the device as **"Decommissioned"** in ASM for ESG reporting.
+- **Second Life** : If the hardware is functional but cannot support newer OS versions, consider repurposing it as a "Library E-reader" or a dedicated "Sign-in Kiosk."
+- **Certified Recycling** : For damaged units, choose a certified e-waste recycler and mark the device as **"Decommissioned"** in ASM for ESG reporting.
 
 ## Summary Advice
 

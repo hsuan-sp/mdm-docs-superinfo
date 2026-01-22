@@ -9,9 +9,9 @@ A **Bundle ID** (Bundle Identifier) is a unique string that serves as the offici
 
 Key characteristics:
 
-* **Format** : Conventionally follows reverse-DNS notation (e.g., `com.apple.Keynote` or `com.google.Chrome`).
-* **Uniqueness** : No two apps can share the same Bundle ID in the App Store.
-* **MDM Role** : IT administrators use this ID—rather than the app's display name—to target specific apps for deployment, configuration, or security policies.
+- **Format** : Conventionally follows reverse-DNS notation (e.g., `com.apple.Keynote` or `com.google.Chrome`).
+- **Uniqueness** : No two apps can share the same Bundle ID in the App Store.
+- **MDM Role** : IT administrators use this ID—rather than the app's display name—to target specific apps for deployment, configuration, or security policies.
 
 ## Analogy
 

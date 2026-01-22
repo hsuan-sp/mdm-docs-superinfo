@@ -14,12 +14,12 @@ tags: ["DNS","DHCP","Network Failure","Troubleshooting"]
 
 * Go to **Settings > Wi-Fi** and tap the **(i)** next to the connection.
 * If the IP starts with `169.254.x.x`, it means the iPad failed to get a real IP from the school router (DHCP failure).
-* **Fix** : Tap **Forget This Network** and reconnect, or ask the network admin if the DHCP pool is full.
+- **Fix** : Tap **Forget This Network** and reconnect, or ask the network admin if the DHCP pool is full.
 
 1. **Cross-Test with Hotspot** :
 
 * Connect the iPad to a mobile hotspot.
-* **Result** : If it works on a hotspot, the iPad is fine—the issue is the school's Wi-Fi or DNS config.
+- **Result** : If it works on a hotspot, the iPad is fine—the issue is the school's Wi-Fi or DNS config.
 
 1. **Check Content Filters** :
 

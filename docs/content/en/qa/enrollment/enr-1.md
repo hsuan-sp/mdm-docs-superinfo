@@ -33,5 +33,5 @@ tags: ["ADE","ASM","Enrollment Failure","Automated Device Enrollment"]
 
 If the device has already reached the Home Screen (skipping management):
 
-* **The device must be erased** : Go to **Settings > General > Transfer or Reset iPad > Erase All Content and Settings** .
+- **The device must be erased** : Go to **Settings > General > Transfer or Reset iPad > Erase All Content and Settings** .
 * Once wiped and restarted, ensure the Wi-Fi connection is stable. The device will check again and should now present the "Remote Management" screen.

@@ -33,5 +33,5 @@ tags: ["Account Lifecycle","Graduation","Data Retention"]
 
 **Important Notes** :
 
-* **Federated Authentication Users** : If student accounts are federated via Google or Microsoft, you should first deactivate the user in the Google/Microsoft directory, then return to ASM to check the sync status.
-* **License Reclaiming** : Whenever an account is deactivated or deleted, any app licenses previously assigned to that user are automatically returned to the school.
+- **Federated Authentication Users** : If student accounts are federated via Google or Microsoft, you should first deactivate the user in the Google/Microsoft directory, then return to ASM to check the sync status.
+- **License Reclaiming** : Whenever an account is deactivated or deleted, any app licenses previously assigned to that user are automatically returned to the school.

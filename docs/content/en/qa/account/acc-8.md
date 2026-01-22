@@ -34,12 +34,12 @@ tags: ["Password Reset","Jamf Pro","Disaster Recovery"]
 * Some versions support resetting specific admin privileges via the command line.
 
 **Scenario 3: SSO / Multi-Factor Authentication (MFA) Enabled***** SSO Integration** : If your Jamf Pro uses **Microsoft Entra ID** or **Google Workspace** , reset your password directly on that provider's platform.
-* **Lost MFA** : If you know your password but lost your MFA authenticator (e.g., new phone), ask another admin to "disable MFA temporarily" or "reset MFA registration" for your account.
+- **Lost MFA** : If you know your password but lost your MFA authenticator (e.g., new phone), ask another admin to "disable MFA temporarily" or "reset MFA registration" for your account.
 
 **Best Practices** :
 
-* **Create a Break-glass Account** :
+- **Create a Break-glass Account** :
 * Set up a local administrator account that is **not** bound to a personal email, uses a strong password, and is excluded from SSO policies.
 * Physically store these credentials in a secure location.
-* **Redundant Admins** : Organizations should maintain at least two personnel with administrative access to avoid a single point of failure.
-* **Managed Password Storage** : Store admin credentials in an organization-grade password manager (e.g., 1Password or Bitwarden) rather than relying on browser memory.
+- **Redundant Admins** : Organizations should maintain at least two personnel with administrative access to avoid a single point of failure.
+- **Managed Password Storage** : Store admin credentials in an organization-grade password manager (e.g., 1Password or Bitwarden) rather than relying on browser memory.

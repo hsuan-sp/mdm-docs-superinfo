@@ -25,14 +25,14 @@ tags: ["PPPC","隱私權限","TCC","螢幕錄製","標準使用者","Apple Intel
 
 由於學校老師通常非管理者，當其要允許螢幕錄製時，系統會要求輸入「管理員密碼」。
 
-* **解法** ：在 Jamf Pro 的 **「隱私權偏好設定 (PPPC)」** Payload 中。
-* **設定** ：針對 `Screen Recording` 權限，勾選 **「允許標準使用者允許存取 (Allow Standard Users to allow access)」** 。
-* **效果** ：老師點擊開關時， **不再需要輸入管理員密碼** ，即點即用。
+- **解法** ：在 Jamf Pro 的 **「隱私權偏好設定 (PPPC)」** Payload 中。
+- **設定** ：針對 `Screen Recording` 權限，勾選 **「允許標準使用者允許存取 (Allow Standard Users to allow access)」** 。
+- **效果** ：老師點擊開關時， **不再需要輸入管理員密碼** ，即點即用。
 
 ## 2. 靜默授權與 AI 功能控管
 
-* **輔助使用** ：直接將常用教育 App (如 Zoom, Teams) 設為 **Allow** ，減少彈窗。
-* **AI 隱私** ：針對 macOS 26 的 **書寫工具 (Writing Tools)** ，雖然 TCC 無法全開，但可透過「限制 (Restrictions)」描述檔禁用不符合校規的 AI 功能（如 Image Playground）。
+- **輔助使用** ：直接將常用教育 App (如 Zoom, Teams) 設為 **Allow** ，減少彈窗。
+- **AI 隱私** ：針對 macOS 26 的 **書寫工具 (Writing Tools)** ，雖然 TCC 無法全開，但可透過「限制 (Restrictions)」描述檔禁用不符合校規的 AI 功能（如 Image Playground）。
 
 ## 三、 實務建議
 

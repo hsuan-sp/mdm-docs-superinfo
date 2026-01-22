@@ -19,14 +19,14 @@ tags: ["Activation Lock","ASM","Automated Device Enrollment","Unlock"]
 
 ## Prerequisites and Limitations:
 
-* **Ownership** : The device must appear in your ASM device list.
-* **Management Mode** : This applies to Supervised devices assigned via **Automated Device Enrollment (ADE)** or added via Apple Configurator.
-* **Connectivity** : The device must be connected to Wi-Fi to communicate with Apple's activation servers and confirm the unlock.
+- **Ownership** : The device must appear in your ASM device list.
+- **Management Mode** : This applies to Supervised devices assigned via **Automated Device Enrollment (ADE)** or added via Apple Configurator.
+- **Connectivity** : The device must be connected to Wi-Fi to communicate with Apple's activation servers and confirm the unlock.
 
 ## Why Prioritize This Method?
 
-* **No Red Tape** : No need for invoices, official documents, or waiting 3-10 days for Apple Support to review the case.
-* **Last Resort** : If a device was accidentally deleted from the MDM (losing the Bypass Code), ASM is your only remaining self-service path.
+- **No Red Tape** : No need for invoices, official documents, or waiting 3-10 days for Apple Support to review the case.
+- **Last Resort** : If a device was accidentally deleted from the MDM (losing the Bypass Code), ASM is your only remaining self-service path.
 
 ## Practical Advice:
 

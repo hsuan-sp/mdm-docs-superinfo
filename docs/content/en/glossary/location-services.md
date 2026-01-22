@@ -9,10 +9,10 @@ category: ["Apple", "Core"]
 
 Inputs used for positioning:
 
-* **GPS/GLONASS** : Satellite signals (most accurate outdoors).
-* **Wi-Fi** : Triangulation based on known Wi-Fi hotspot locations.
-* **Cellular** : Proximity to cell towers.
-* **iBeacons** : Micro-location awareness indoors.
+- **GPS/GLONASS** : Satellite signals (most accurate outdoors).
+- **Wi-Fi** : Triangulation based on known Wi-Fi hotspot locations.
+- **Cellular** : Proximity to cell towers.
+- **iBeacons** : Micro-location awareness indoors.
 
 **MDM Policy** : For school-owned devices, administrators often force Location Services to be **"On"** to ensure that **Lost Mode** functions correctly if a device goes missing.
 

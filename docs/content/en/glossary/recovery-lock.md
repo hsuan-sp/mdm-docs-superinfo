@@ -9,9 +9,9 @@ category: ["Security"]
 
 Functionality:
 
-* **Block** : Prevents users from entering macOS Recovery Mode unless they have authorization.
-* **Requirement** : Users must enter a predefined password (managed by MDM) to access tools like Disk Utility or Terminal in the recovery environment.
-* **Goal** : Stops students or thieves from wiping the Mac, disabling security settings (like SIP), or downgrading the OS to bypass management.
+- **Block** : Prevents users from entering macOS Recovery Mode unless they have authorization.
+- **Requirement** : Users must enter a predefined password (managed by MDM) to access tools like Disk Utility or Terminal in the recovery environment.
+- **Goal** : Stops students or thieves from wiping the Mac, disabling security settings (like SIP), or downgrading the OS to bypass management.
 
 ## Analogy
 

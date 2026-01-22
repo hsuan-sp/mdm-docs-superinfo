@@ -32,8 +32,8 @@ tags: ["密碼重置","ASM","管理式 Apple 帳號"]
 
 **注意事項** ：
 
-* **聯合驗證 (Federated Authentication)** ：若學校啟用了與 Google 或 Microsoft 的聯合驗證，
+- **聯合驗證 (Federated Authentication)** ：若學校啟用了與 Google 或 Microsoft 的聯合驗證，
 
  密碼權限在該平台端。請直接在 Google 管理主控台或 Microsoft 管理中心重置密碼，ASM 端的按鈕將失效。
 
-* **介面提醒** ：ASM 使用者清單中不提供勾選框，必須透過電腦鍵盤快捷鍵進行多重選取。
+- **介面提醒** ：ASM 使用者清單中不提供勾選框，必須透過電腦鍵盤快捷鍵進行多重選取。

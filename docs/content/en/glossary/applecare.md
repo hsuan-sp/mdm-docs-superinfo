@@ -9,9 +9,9 @@ category: ["Hardware"]
 
 Key benefits for organizations:
 
-* **Extended Support** : Extends the standard 1-year limited warranty and provides 24/7 priority access to Apple experts.
-* **Accidental Coverage** : Covers repairs for "accidental damage" (such as cracked screens or liquid spills) for a set deductible per incident.
-* **Fleet Management** : Purchasing AppleCare+ for a device fleet is a vital strategy for predictable budgeting and maintaining hardware longevity.
+- **Extended Support** : Extends the standard 1-year limited warranty and provides 24/7 priority access to Apple experts.
+- **Accidental Coverage** : Covers repairs for "accidental damage" (such as cracked screens or liquid spills) for a set deductible per incident.
+- **Fleet Management** : Purchasing AppleCare+ for a device fleet is a vital strategy for predictable budgeting and maintaining hardware longevity.
 
 ## Analogy
 

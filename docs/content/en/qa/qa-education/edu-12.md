@@ -49,5 +49,5 @@ Best for small groups or immediate collection.
 
 ## Troubleshooting:
 
-* **Cannot find Google Drive in Files app** : Open the **Files** app > Tap "..." > **Edit** > Toggle on **Google Drive** .
-* **File too large** : Lower video resolution or share via a cloud link instead.
+- **Cannot find Google Drive in Files app** : Open the **Files** app > Tap "..." > **Edit** > Toggle on **Google Drive** .
+- **File too large** : Lower video resolution or share via a cloud link instead.

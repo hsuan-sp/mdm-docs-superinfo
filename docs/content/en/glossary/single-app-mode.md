@@ -9,10 +9,10 @@ category: ["Apps"]
 
 Use cases:
 
-* **Assessment** : Locking the iPad to a test app so students cannot Google answers.
-* **Kiosks** : Using an iPad as a dedicated visitor sign-in station or library catalog.
-* **Ordering** : Restaurant menus.
-* **Behavior** : Teachers using **Apple Classroom** to temporarily lock all student screens to a specific learning app ("Eyes on the textbook").
+- **Assessment** : Locking the iPad to a test app so students cannot Google answers.
+- **Kiosks** : Using an iPad as a dedicated visitor sign-in station or library catalog.
+- **Ordering** : Restaurant menus.
+- **Behavior** : Teachers using **Apple Classroom** to temporarily lock all student screens to a specific learning app ("Eyes on the textbook").
 
 ## Analogy
 

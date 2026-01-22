@@ -9,9 +9,9 @@ category: ["Hardware"]
 
 Educational applications:
 
-* **Automation** : Automatically opening a specific textbook app when a student enters the library.
-* **Restrictions** : Automatically muting iPad volume or disabling the camera as soon as a device "senses" it is inside the auditorium.
-* **Inventory** : Helping IT locate sets of iPads within large buildings by identifying which beacon they are currently near.
+- **Automation** : Automatically opening a specific textbook app when a student enters the library.
+- **Restrictions** : Automatically muting iPad volume or disabling the camera as soon as a device "senses" it is inside the auditorium.
+- **Inventory** : Helping IT locate sets of iPads within large buildings by identifying which beacon they are currently near.
 
 ## Analogy
 

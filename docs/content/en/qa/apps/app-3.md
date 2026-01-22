@@ -22,5 +22,5 @@ Self Service is the school’s private, curated app portal. Instead of giving st
 
 ## Troubleshooting:
 
-* **Missing Self Service** : If the app is missing, ensure the device is correctly enrolled and has a stable Wi-Fi connection.
-* **Web Clips** : The school can also place direct links to web-based platforms (like ManageBac or Google Classroom) inside Self Service for easy one-tap access.
+- **Missing Self Service** : If the app is missing, ensure the device is correctly enrolled and has a stable Wi-Fi connection.
+- **Web Clips** : The school can also place direct links to web-based platforms (like ManageBac or Google Classroom) inside Self Service for easy one-tap access.

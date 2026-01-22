@@ -9,10 +9,10 @@ category: ["Jamf", "Security", "macOS"]
 
 Key benefits:
 
-* **Unified Login** : Allows users to log in to their Mac using their institutional cloud credentials (e.g., Google Workspace or Microsoft Entra ID).
-* **Password Sync** : Ensures that if a user changes their school password online, their Mac login password is automatically updated to match.
-* **MFA Enforcement** : Enables Multi-Factor Authentication during the initial setup of a new Mac, significantly improving security.
-* **Zero-Touch** : Facilitates the creation of a local user account on-the-fly during the first login.
+- **Unified Login** : Allows users to log in to their Mac using their institutional cloud credentials (e.g., Google Workspace or Microsoft Entra ID).
+- **Password Sync** : Ensures that if a user changes their school password online, their Mac login password is automatically updated to match.
+- **MFA Enforcement** : Enables Multi-Factor Authentication during the initial setup of a new Mac, significantly improving security.
+- **Zero-Touch** : Facilitates the creation of a local user account on-the-fly during the first login.
 
 ## Analogy
 

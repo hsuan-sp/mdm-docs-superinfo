@@ -21,5 +21,5 @@ tags: ["Locking","Comparison","Guided Access","Single App Mode"]
 
 ## Practical Advice:
 
-* **Use Guided Access** for quick, low-stakes classroom management where a teacher needs students to stay in one app for a short duration.
-* **Use Single App Mode** for formal exams or public-facing informational kiosks where manual tampering must be completely prevented.
+- **Use Guided Access** for quick, low-stakes classroom management where a teacher needs students to stay in one app for a short duration.
+- **Use Single App Mode** for formal exams or public-facing informational kiosks where manual tampering must be completely prevented.

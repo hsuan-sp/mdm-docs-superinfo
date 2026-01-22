@@ -12,13 +12,13 @@ tags: ["Manual Enrollment","Account-Driven","Supervised","Apple Configurator"]
 
 1. **Management Authority** :
 
-* **Automated (ADE)** : Devices are placed in **"Supervised Mode"** by default. This grants the school the highest level of authority, enabling features like silent app updates, forcing restrictions (kiosk mode), and preventing the removal of the management profile.
-* **Manual** : Devices are "Unsupervised." The school has limited control and cannot force certain high-level restrictions.
+- **Automated (ADE)** : Devices are placed in **"Supervised Mode"** by default. This grants the school the highest level of authority, enabling features like silent app updates, forcing restrictions (kiosk mode), and preventing the removal of the management profile.
+- **Manual** : Devices are "Unsupervised." The school has limited control and cannot force certain high-level restrictions.
 
 1. **Removal Rights** :
 
-* **Automated (ADE)** : The school can make the management profile **"Non-Removable."** The student cannot delete the profile from settings.
-* **Manual** : The user can delete the management profile at any time via **Settings > General > VPN & Device Management** , instantly disconnecting the device from the school's control.
+- **Automated (ADE)** : The school can make the management profile **"Non-Removable."** The student cannot delete the profile from settings.
+- **Manual** : The user can delete the management profile at any time via **Settings > General > VPN & Device Management** , instantly disconnecting the device from the school's control.
 
 1. **Modern Methods** :
 

@@ -12,9 +12,9 @@ tags: ["Repair","Replacement","ADE","Automated Device Enrollment"]
 
 ## 1. Update Apple School Manager (ASM)
 
-* **Auto-Transfer** : If repaired by an Apple Authorized Service Provider, the asset ownership often transfers to the new serial automatically.
-* **Manual Assignment** : If it appears in ASM, search for the new serial and click **Edit MDM Server** to assign it to your Jamf server.
-* **Release Old Unit** : Once the new unit is in service, "Release" the old, scrapped serial from ASM to keep your inventory clean.
+- **Auto-Transfer** : If repaired by an Apple Authorized Service Provider, the asset ownership often transfers to the new serial automatically.
+- **Manual Assignment** : If it appears in ASM, search for the new serial and click **Edit MDM Server** to assign it to your Jamf server.
+- **Release Old Unit** : Once the new unit is in service, "Release" the old, scrapped serial from ASM to keep your inventory clean.
 
 ## 2. Sync Jamf Pro
 
@@ -30,9 +30,9 @@ tags: ["Repair","Replacement","ADE","Automated Device Enrollment"]
 ## 4. Future Resets (Using RTS)
 
 * Once the device has completed the above steps, it is now "Managed."
-* **Next time** you need to wipe it for a new student, you can use the **Return to Service (RTS)** command for a zero-touch wipe and Wi-Fi reconnect.
+- **Next time** you need to wipe it for a new student, you can use the **Return to Service (RTS)** command for a zero-touch wipe and Wi-Fi reconnect.
 
 ## Troubleshooting:
 
-* **Serial Not Found** : If the new unit isn't in ASM, contact the repair shop and ask them to upload the "Case Number" and replacement record to Apple’s educational asset system.
-* **Stuck on Activation Lock** : If the "new" machine asks for an Apple Account, contact the vendor; this is likely residue from their testing or a previous owner.
+- **Serial Not Found** : If the new unit isn't in ASM, contact the repair shop and ask them to upload the "Case Number" and replacement record to Apple’s educational asset system.
+- **Stuck on Activation Lock** : If the "new" machine asks for an Apple Account, contact the vendor; this is likely residue from their testing or a previous owner.

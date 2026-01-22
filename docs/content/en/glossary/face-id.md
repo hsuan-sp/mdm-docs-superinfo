@@ -9,9 +9,9 @@ category: ["Hardware"]
 
 Technical security:
 
-* **TrueDepth Camera** : Projects and analyzes over 30,000 invisible infrared dots to create a 3D mathematical model of the user's face.
-* **Security Enclave** : The mathematical model is stored and processed locally on the device and is never sent to Apple or the cloud.
-* **MDM Control** : Administrators can enforce the use of Face ID (or Touch ID) to unlock devices or access specific managed educational apps, ensuring that sensitive data remains protected even if a device is physically accessed by an unauthorized person.
+- **TrueDepth Camera** : Projects and analyzes over 30,000 invisible infrared dots to create a 3D mathematical model of the user's face.
+- **Security Enclave** : The mathematical model is stored and processed locally on the device and is never sent to Apple or the cloud.
+- **MDM Control** : Administrators can enforce the use of Face ID (or Touch ID) to unlock devices or access specific managed educational apps, ensuring that sensitive data remains protected even if a device is physically accessed by an unauthorized person.
 
 ## Analogy
 

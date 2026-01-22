@@ -9,9 +9,9 @@ category: ["Security"]
 
 Functionality:
 
-* **Separation** : It creates a virtual wall between "Managed Apps" (installed by the school) and "Unmanaged Apps" (installed by the user).
-* **Restriction** : Administrators can prevent school documents (e.g., from Managed Mail) from being opened in personal apps (e.g., WhatsApp or personal Dropbox).
-* **Flow Control** : Conversely, it can also prevent personal data from entering corporate apps to maintain a sterile work environment.
+- **Separation** : It creates a virtual wall between "Managed Apps" (installed by the school) and "Unmanaged Apps" (installed by the user).
+- **Restriction** : Administrators can prevent school documents (e.g., from Managed Mail) from being opened in personal apps (e.g., WhatsApp or personal Dropbox).
+- **Flow Control** : Conversely, it can also prevent personal data from entering corporate apps to maintain a sterile work environment.
 
 ## Analogy
 

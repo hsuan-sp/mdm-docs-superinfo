@@ -9,10 +9,10 @@ A **Smart Group** is a dynamic collection of devices in Jamf Pro that updates au
 
 How it works:
 
-* **Criteria** : Admin sets a rule (e.g., "OS Version is less than 17.0" OR "Battery Level is less than 20%").
-* **Automation** : The MDM constantly checks inventory reports.
-* **Membership** : If a device matches the rule, it is instantly added to the group. If it updates and no longer matches, it is removed.
-* **Action** : These groups are used to trigger policies (e.g., "Update OS" policy targets the "Old OS" Smart Group).
+- **Criteria** : Admin sets a rule (e.g., "OS Version is less than 17.0" OR "Battery Level is less than 20%").
+- **Automation** : The MDM constantly checks inventory reports.
+- **Membership** : If a device matches the rule, it is instantly added to the group. If it updates and no longer matches, it is removed.
+- **Action** : These groups are used to trigger policies (e.g., "Update OS" policy targets the "Old OS" Smart Group).
 
 ## Analogy
 

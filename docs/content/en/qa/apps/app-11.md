@@ -30,8 +30,8 @@ tags: ["E-books","Material Distribution","PDF","Restrictions"]
 
 ## Key Considerations:
 
-* **Regional Restrictions** : You cannot "purchase" books from the Apple Books Store in bulk through ASM like you do with apps in certain regions.
-* **Copyright** : Ensure you have the legal right to distribute any materials you upload to these platforms.
+- **Regional Restrictions** : You cannot "purchase" books from the Apple Books Store in bulk through ASM like you do with apps in certain regions.
+- **Copyright** : Ensure you have the legal right to distribute any materials you upload to these platforms.
 
 ## Practical Advice:
 

@@ -12,13 +12,13 @@ tags: ["Troubleshooting","App Installation","VPP","DDM"]
 
 1. **Insufficient VPP Licenses (Most Common)** :
 
-* **Check** : Log in to Jamf Pro and verify the license count for that app.
-* **Solution** : If **Used Count = Total Count** , Apple's servers will reject the download request. Go to Apple School Manager (ASM) and acquire more licenses. *Tip: For free apps, always "purchase" a large quantity (e.g., 5,000) to account for future growth.*
+- **Check** : Log in to Jamf Pro and verify the license count for that app.
+- **Solution** : If **Used Count = Total Count** , Apple's servers will reject the download request. Go to Apple School Manager (ASM) and acquire more licenses. *Tip: For free apps, always "purchase" a large quantity (e.g., 5,000) to account for future growth.*
 
 1. **Campus Network Restrictions** :
 
 * App downloads require access to Apple’s **Content Delivery Network (CDN)** . If your school’s firewall blocks these domains, the download will sit at 0%.
-* **Test** : Connect the iPad to a mobile hotspot. If the progress bar starts moving immediately, the issue lies with your campus network configuration.
+- **Test** : Connect the iPad to a mobile hotspot. If the progress bar starts moving immediately, the issue lies with your campus network configuration.
 
 1. **Assignment Mode Conflict** :
 

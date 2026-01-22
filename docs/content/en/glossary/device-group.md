@@ -9,8 +9,8 @@ A **Device Group** is a logical container within an MDM console used to categori
 
 Groups are categorized into two types:
 
-* **Static Groups** : Devices are manually added or removed by an administrator. These are useful for fixed sets like "iPad Cart A" or "Board Member MacBooks."
-* **Smart Groups** : Devices move in or out automatically based on criteria (e.g., "All devices running iOS 17" or "iPads with less than 5GB storage").
+- **Static Groups** : Devices are manually added or removed by an administrator. These are useful for fixed sets like "iPad Cart A" or "Board Member MacBooks."
+- **Smart Groups** : Devices move in or out automatically based on criteria (e.g., "All devices running iOS 17" or "iPads with less than 5GB storage").
 
 Groups are the primary target for deploying apps, profiles, and remote commands.
 

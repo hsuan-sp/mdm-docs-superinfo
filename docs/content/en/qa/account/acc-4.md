@@ -28,8 +28,8 @@ tags: ["VPP","Token","Volume Purchasing"]
 
 ## Troubleshooting Tips:
 
-* **Location Mismatch** : If you have multiple sites in ASM, ensure you are downloading the token for the*same* location currently configured in Jamf. Using the wrong token will cause your license counts to drop to zero.
-* **Manual Sync** : After renewing, it is good practice to click the **"Sync"** button within Jamf Pro to ensure the immediate update of your app inventory.
+- **Location Mismatch** : If you have multiple sites in ASM, ensure you are downloading the token for the*same* location currently configured in Jamf. Using the wrong token will cause your license counts to drop to zero.
+- **Manual Sync** : After renewing, it is good practice to click the **"Sync"** button within Jamf Pro to ensure the immediate update of your app inventory.
 
 ## Institutional Advice:
 

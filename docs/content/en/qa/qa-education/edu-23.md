@@ -16,9 +16,9 @@ tags: ["iPadOS 26","Multitasking","Windowed Apps","Slide Over","Teaching Efficie
 
 1. **Advanced Window Management** :
 
-* **Resizable Windows** : Drag any corner to resize an app.
-* **Overlapping** : Move a research browser (Safari) over a writing tool (Pages).
-* **Slide Over (v26.2 Enhanced)** : Use the window control button to send a dictionary or calculator to "Slide Over." These windows now stay pinned on top and can be swiped away and back instantly from the screen edge.
+- **Resizable Windows** : Drag any corner to resize an app.
+- **Overlapping** : Move a research browser (Safari) over a writing tool (Pages).
+- **Slide Over (v26.2 Enhanced)** : Use the window control button to send a dictionary or calculator to "Slide Over." These windows now stay pinned on top and can be swiped away and back instantly from the screen edge.
 
 1. **The Menu Bar** :
 
@@ -26,8 +26,8 @@ tags: ["iPadOS 26","Multitasking","Windowed Apps","Slide Over","Teaching Efficie
 
 ## Best Practices for Students:
 
-* **The Split-Research Layout** : Open a teaching video on the left and a note-taking app on the right.
-* **The Slide Over Dictionary** : Keep a dictionary or translation app in Slide Over so it can be summoned instantly over a reading assignment and dismissed just as fast.
+- **The Split-Research Layout** : Open a teaching video on the left and a note-taking app on the right.
+- **The Slide Over Dictionary** : Keep a dictionary or translation app in Slide Over so it can be summoned instantly over a reading assignment and dismissed just as fast.
 
 ## Teacher Insight:
 

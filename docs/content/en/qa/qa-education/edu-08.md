@@ -37,6 +37,6 @@ Many IT teams follow the "N-1" principle: keeping production environments (stude
 
 ## Practical Advice:
 
-* **Don't click "Install Now"** . Choose "Later" or "Tonight" (and then disable auto-install in Settings).
-* **Wait for School Announcement** . IT will usually release a "Clear to Update" notice.
-* **Ensure power is >50% and Wi-Fi is stable before updating.**
+- **Don't click "Install Now"** . Choose "Later" or "Tonight" (and then disable auto-install in Settings).
+- **Wait for School Announcement** . IT will usually release a "Clear to Update" notice.
+- **Ensure power is >50% and Wi-Fi is stable before updating.**

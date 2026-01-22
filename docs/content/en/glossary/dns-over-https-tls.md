@@ -9,9 +9,9 @@ category: ["Network"]
 
 Technical details:
 
-* **DoH (Port 443)** : Encapsulates DNS queries within standard HTTPS traffic, making them indistinguishable from regular web browsing.
-* **DoT (Port 853)** : Wraps DNS queries in a dedicated TLS tunnel.
-* **Goal** : Prevents eavesdropping, tampering, and "Man-in-the-Middle" attacks by ISPs or malicious actors on public networks.
+- **DoH (Port 443)** : Encapsulates DNS queries within standard HTTPS traffic, making them indistinguishable from regular web browsing.
+- **DoT (Port 853)** : Wraps DNS queries in a dedicated TLS tunnel.
+- **Goal** : Prevents eavesdropping, tampering, and "Man-in-the-Middle" attacks by ISPs or malicious actors on public networks.
 
 ## MDM Context
 

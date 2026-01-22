@@ -19,7 +19,7 @@ tags: ["系統更新","Jamf Pro","DDM","軟體更新藍圖","iOS 更新","macOS 
 
 * 您可以設定一個日期（例如：三天後的下午 5 點）。
 * 在截止日之前，使用者會收到溫和的系統提醒。
-* **一旦到達截止日，裝置將無視使用者狀態，強制重新啟動並執行更新。** 1. 將此藍圖指派給目標裝置群組。
+- **一旦到達截止日，裝置將無視使用者狀態，強制重新啟動並執行更新。** 1. 將此藍圖指派給目標裝置群組。
 
 ## 2. 透過大量動作傳送遠端命令 (傳統方式)
 
@@ -30,15 +30,15 @@ tags: ["系統更新","Jamf Pro","DDM","軟體更新藍圖","iOS 更新","macOS 
 1. 在遠端命令清單中，選擇 **「更新受監管裝置上的 OS 版」** 。
 1. 在 **「更新 OS 選項」** 頁面中，您可以根據需求選擇：
 
-* **目標版本** ：建議選擇「Latest version based on device eligibility (符合裝置資格的最新版本)」。
-* **採取行動** ：
-* **Download the update for users to install** (下載供使用者安裝)：裝置會先下載好檔案，等到學生有空再點選。
-* **Download and install the update, and restart devices after installation** (下載並安裝，並在安裝後重啟)：強制執行，適合在放學後安排統一更新。
+- **目標版本** ：建議選擇「Latest version based on device eligibility (符合裝置資格的最新版本)」。
+- **採取行動** ：
+- **Download the update for users to install** (下載供使用者安裝)：裝置會先下載好檔案，等到學生有空再點選。
+- **Download and install the update, and restart devices after installation** (下載並安裝，並在安裝後重啟)：強制執行，適合在放學後安排統一更新。
 
 ## 3. 2026 年管理重點：macOS 26 Tahoe 與 Intel Mac
 
-* **Legacy 支援** ：macOS 26 是最後一個支援 Intel 處理器 Mac 的版本，對於老舊 Mac，更新時建議預留兩倍的下載時間，並確認 **Bootstrap Token** 已正確代管。
-* **DDM 自主性** ：在最新的系統中，裝置會根據 DDM 宣告，自動在夜間充電且閒置時執行更新，成功率明顯高於以往的推送指令。
+- **Legacy 支援** ：macOS 26 是最後一個支援 Intel 處理器 Mac 的版本，對於老舊 Mac，更新時建議預留兩倍的下載時間，並確認 **Bootstrap Token** 已正確代管。
+- **DDM 自主性** ：在最新的系統中，裝置會根據 DDM 宣告，自動在夜間充電且閒置時執行更新，成功率明顯高於以往的推送指令。
 
 ## 最佳實踐建議：
 

@@ -9,10 +9,10 @@ category: ["Education", "Jamf"]
 
 Data structure includes:
 
-* **Roster** : A list of student Managed Apple IDs and their assigned devices.
-* **Instructors** : The teacher(s) authorized to manage these specific students.
-* **Schedule** : Timeframes when the class is active (optional).
-* **Automation** : This data automatically populates the **Apple Classroom** app, allowing teachers to view screens and launch apps for their students without manual setup.
+- **Roster** : A list of student Managed Apple IDs and their assigned devices.
+- **Instructors** : The teacher(s) authorized to manage these specific students.
+- **Schedule** : Timeframes when the class is active (optional).
+- **Automation** : This data automatically populates the **Apple Classroom** app, allowing teachers to view screens and launch apps for their students without manual setup.
 
 ## Analogy
 

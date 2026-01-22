@@ -9,11 +9,11 @@ category: ["Core"]
 
 Capabilities unlocked by Supervision:
 
-* **Silent App Install** : Push apps without asking the user for permission.
-* **Kiosk Mode** : Lock the device into a single app (Single App Mode).
-* **Web Filtering** : Enforce global HTTP proxies to filter content.
-* **Lost Mode** : Locate the device if it goes missing.
-* **Security** : Prevent the user from removing the MDM profile or erasing the device.
+- **Silent App Install** : Push apps without asking the user for permission.
+- **Kiosk Mode** : Lock the device into a single app (Single App Mode).
+- **Web Filtering** : Enforce global HTTP proxies to filter content.
+- **Lost Mode** : Locate the device if it goes missing.
+- **Security** : Prevent the user from removing the MDM profile or erasing the device.
 
 Devices enrolled via **Automated Device Enrollment (ADE)** are supervised by default.
 

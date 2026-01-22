@@ -13,13 +13,13 @@ Apple 大力推動 IPP/AirPrint 通用協定，大幅簡化了流程。 **部署
 
 * 前往 **「設定」** > **「電腦管理」** > **「印表機」** 。
 * 點選 **「+ 新增」** ，輸入 IP 位址與顯示名稱。
-* **關鍵設定** ：在「驅動程式」欄位，若印表機支援 AirPrint，可選擇 **「Generic PCL Laser Printer」** 或 **「Generic PostScript Printer」** ，通常無需額外安裝廠商驅動。
+- **關鍵設定** ：在「驅動程式」欄位，若印表機支援 AirPrint，可選擇 **「Generic PCL Laser Printer」** 或 **「Generic PostScript Printer」** ，通常無需額外安裝廠商驅動。
 
 1. **建立派送政策** ：
 
 * 前往 **「電腦」** > **「政策」** > **「+ 新增」** 。
 * 在 **「印表機」** 承載資料中，點選「安裝」剛才建立的印表機。
-* **觸發程序** ：建議設為 **「自助服務 (Self Service)」** ，
+- **觸發程序** ：建議設為 **「自助服務 (Self Service)」** ，
 
  讓老師根據自己所在的辦公室位置點選安裝。 **方法二：Shell Script (進階/免驅動部署)** 若需精確控制參數（如使用 `-m everywhere` 呼叫原生 AirPrint 驅動），腳本是最佳解。
 
@@ -59,6 +59,6 @@ echo "Printer $DISPLAY_NAME installed successfully."
 * 語法：`-P "/Library/Printers/PPDs/Contents/Resources/HP_LaserJet_v10.gz"` ** 實務建議：最佳實踐 - 自助服務 (Self Service)
 
 ***** 痛點 ** ：學校印表機眾多，全校派送會導致老師的選單出現數十台印表機，造成混亂。
-* **解法** ：將每台印表機做成一個 **「自助服務」** 項目，並附上位置說明
+- **解法** ：將每台印表機做成一個 **「自助服務」** 項目，並附上位置說明
 
  （如：「安裝 - 二樓導師室印表機」）。讓老師走到哪、裝到哪，亦可減少驅動衝突。

@@ -9,10 +9,10 @@ category: ["Security"]
 
 Security mechanism:
 
-* **Uniqueness** : Ensures every single managed computer has a different, unique local administrator password.
-* **Rotation** : Automatically changes the password after a set period (e.g., every 30 days) or after it has been viewed by IT.
-* **Escrow** : The current password is typically stored securely in the MDM or directory service for authorized retrieval.
-* **Defense** : Prevents **"Lateral Movement"** attacks where compromising one computer's password would otherwise grant access to every computer in the organization.
+- **Uniqueness** : Ensures every single managed computer has a different, unique local administrator password.
+- **Rotation** : Automatically changes the password after a set period (e.g., every 30 days) or after it has been viewed by IT.
+- **Escrow** : The current password is typically stored securely in the MDM or directory service for authorized retrieval.
+- **Defense** : Prevents **"Lateral Movement"** attacks where compromising one computer's password would otherwise grant access to every computer in the organization.
 
 ## Analogy
 

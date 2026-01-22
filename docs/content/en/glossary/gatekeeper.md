@@ -9,9 +9,9 @@ category: ["Security"]
 
 Protective measures:
 
-* **Verification** : Checks downloaded applications for a valid Apple Developer ID signature.
-* **Notarization** : Verifies that the app has been scanned and "notarized" by Apple’s automated security systems to be free of known malware.
-* **In-Place Enforcement** : If an app is from an unknown source or has been tampered with, Gatekeeper prevents it from opening.
+- **Verification** : Checks downloaded applications for a valid Apple Developer ID signature.
+- **Notarization** : Verifies that the app has been scanned and "notarized" by Apple’s automated security systems to be free of known malware.
+- **In-Place Enforcement** : If an app is from an unknown source or has been tampered with, Gatekeeper prevents it from opening.
 
 Administrators use MDM to standardize Gatekeeper settings across the school, ensuring only approved and safe software can be launched by students.
 

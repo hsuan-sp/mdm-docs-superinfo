@@ -19,7 +19,7 @@ In the Jamf Pro **Restrictions** profile, uncheck **Allow removing apps** .
 1. **Removal from Home Screen (Critical Detail)** :
 
 * Even if deletion is blocked, students can still select **Remove from Home Screen** , which hides the app in the "App Library" on the far right.
-* **Solution** : To prevent "hidden apps," pair this with a **Home Screen Layout** profile to pin icons permanently to the desktop.
+- **Solution** : To prevent "hidden apps," pair this with a **Home Screen Layout** profile to pin icons permanently to the desktop.
 
 ## Practical Advice:
 

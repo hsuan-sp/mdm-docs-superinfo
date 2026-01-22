@@ -9,9 +9,9 @@ A **Token** is a temporary digital key used for authentication in modern securit
 
 How it differs from a password:
 
-* **Temporary** : A password lasts forever until changed; a token expires automatically (e.g., in 1 hour).
-* **Specific** : A password unlocks everything; a token grants access only to specific resources (e.g., "Read Email" but not "Delete Email").
-* **Invisible** : The user types their password once; the system exchanges tokens in the background for all subsequent actions, keeping the password safe.
+- **Temporary** : A password lasts forever until changed; a token expires automatically (e.g., in 1 hour).
+- **Specific** : A password unlocks everything; a token grants access only to specific resources (e.g., "Read Email" but not "Delete Email").
+- **Invisible** : The user types their password once; the system exchanges tokens in the background for all subsequent actions, keeping the password safe.
 
 ## Analogy
 

@@ -38,9 +38,9 @@ tags: ["Return to Service", "iOS 26", "Shared iPad", "App Preservation", "Rapid 
 
 ## Best Use Cases
 
-* **Semester Rotation** : Assigning a 1:1 iPad to a new student for the next term.
-* **Public/Shared iPads** : Periodic clearing of student data in libraries or computer labs.
-* **Bulk Deployment** : Resetting 30+ iPads at once without crashing the school's internet connection.
+- **Semester Rotation** : Assigning a 1:1 iPad to a new student for the next term.
+- **Public/Shared iPads** : Periodic clearing of student data in libraries or computer labs.
+- **Bulk Deployment** : Resetting 30+ iPads at once without crashing the school's internet connection.
 
 ## Implementation in Jamf Pro
 

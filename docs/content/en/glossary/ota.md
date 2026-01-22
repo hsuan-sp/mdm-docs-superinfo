@@ -9,9 +9,9 @@ category: ["Core"]
 
 Operational benefits:
 
-* **No Cables** : Eliminates the need to physically connect devices to a computer (like Apple Configurator) via USB.
-* **Remote Management** : Allows IT to manage devices that are off-campus, such as iPads being used for homework at a student's house.
-* **Efficiency** : Enables simultaneous updates to thousands of devices across a network without manual intervention.
+- **No Cables** : Eliminates the need to physically connect devices to a computer (like Apple Configurator) via USB.
+- **Remote Management** : Allows IT to manage devices that are off-campus, such as iPads being used for homework at a student's house.
+- **Efficiency** : Enables simultaneous updates to thousands of devices across a network without manual intervention.
 
 ## Analogy
 

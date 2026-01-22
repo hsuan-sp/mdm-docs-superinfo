@@ -9,14 +9,14 @@ category: ["Core"]
 
 Key features include:
 
-* **Writing Tools** : Proofreading, rewriting, and summarization of text.
-* **Visual Intelligence** : Genmoji (custom emojis) and Image Playground (image generation).
-* **Mail & Messages** : Notification prioritization and smart replies.
+- **Writing Tools** : Proofreading, rewriting, and summarization of text.
+- **Visual Intelligence** : Genmoji (custom emojis) and Image Playground (image generation).
+- **Mail & Messages** : Notification prioritization and smart replies.
 
 **Technical Specifications** :
 
-* **Privacy** : Most processing occurs locally on-device. Complex tasks use **Private Cloud Compute (PCC)** without storing data.
-* **Hardware Requirements** : Requires devices with **M-series** chips (M1 or later) or **A17 Pro** chips and later.
+- **Privacy** : Most processing occurs locally on-device. Complex tasks use **Private Cloud Compute (PCC)** without storing data.
+- **Hardware Requirements** : Requires devices with **M-series** chips (M1 or later) or **A17 Pro** chips and later.
 
 ## MDM Context
 

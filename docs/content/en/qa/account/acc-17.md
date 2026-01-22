@@ -18,9 +18,9 @@ Previously, even if a Mac was domain-joined, the initial FileVault unlock screen
 
 ## Technical Requirements:
 
-* **System Version** : macOS 15 or later (upgrading to **macOS 26 Tahoe** is recommended for the most stable experience).
-* **IdP Support** : Your Identity Provider must support the latest Platform SSO protocols (Microsoft Entra ID officially supported this from 2025).
-* **MDM Configuration** : In the Jamf Pro "Single Sign-On Extensions" profile, you must enable settings for `Shared Device Keys` and `FileVault` integration.
+- **System Version** : macOS 15 or later (upgrading to **macOS 26 Tahoe** is recommended for the most stable experience).
+- **IdP Support** : Your Identity Provider must support the latest Platform SSO protocols (Microsoft Entra ID officially supported this from 2025).
+- **MDM Configuration** : In the Jamf Pro "Single Sign-On Extensions" profile, you must enable settings for `Shared Device Keys` and `FileVault` integration.
 
 ## Benefits:
 

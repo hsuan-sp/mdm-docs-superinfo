@@ -9,10 +9,10 @@ category: ["Hardware"]
 
 Usage in education:
 
-* **Unlock** : Teachers and older students can unlock iPads without typing a passcode.
-* **Purchase** : Authorize App Store requests (if allowed).
-* **Security** : MDM settings can mandate that Touch ID is*allowed* to unlock the device but require the passcode after a restart (Biometric Unlock).
-* **Constraint** : On Shared iPads, Touch ID is generally disabled because the sensor cannot store fingerprints for 30 different students.
+- **Unlock** : Teachers and older students can unlock iPads without typing a passcode.
+- **Purchase** : Authorize App Store requests (if allowed).
+- **Security** : MDM settings can mandate that Touch ID is*allowed* to unlock the device but require the passcode after a restart (Biometric Unlock).
+- **Constraint** : On Shared iPads, Touch ID is generally disabled because the sensor cannot store fingerprints for 30 different students.
 
 ## Analogy
 

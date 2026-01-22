@@ -31,9 +31,9 @@ tags: ["App Store","Self Service","Restrictions"]
 
 ## Benefits of Self Service:
 
-* **No Password Required** : Uses silent VPP licensing.
-* **Vetted Apps** : Only school-approved apps appear.
-* **Instant Updates** : Admins can push new apps or updates remotely.
+- **No Password Required** : Uses silent VPP licensing.
+- **Vetted Apps** : Only school-approved apps appear.
+- **Instant Updates** : Admins can push new apps or updates remotely.
 
 ## If an App is missing from Self Service:
 
@@ -45,6 +45,6 @@ tags: ["App Store","Self Service","Restrictions"]
 
 ## Troubleshooting:
 
-* **Self Service won't open** : Check your internet connection and try restarting the iPad.
-* **Install button is grey** : Licensing may be low or a background process is active; try again later.
-* **Can't find Self Service** : Check inside folders or the second page. You can also use Spotlight to search for it.
+- **Self Service won't open** : Check your internet connection and try restarting the iPad.
+- **Install button is grey** : Licensing may be low or a background process is active; try again later.
+- **Can't find Self Service** : Check inside folders or the second page. You can also use Spotlight to search for it.

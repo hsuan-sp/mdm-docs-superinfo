@@ -20,9 +20,9 @@ tags: ["Shared iPad","Multi-User","Deployment Modes","iCloud"]
 
 ## Modern Features for 2026:
 
-* **Proximity Login** : Students can now tap their iPhone or Apple Watch near a Shared iPad to instantly select their profile and authenticate, saving time at the start of a lesson.
-* **Return to Service (RTS) Optimization** : On **iOS 26** , the system performs an "Instant Flush" of the previous user's local cache when they log out, ensuring the next student has immediate access to maximum storage capacity.
-* **Guest Access** : You can enable a "Guest Mode" where data is completely deleted the moment the student logs out. This is perfect for visiting students or parent demonstration days.
+- **Proximity Login** : Students can now tap their iPhone or Apple Watch near a Shared iPad to instantly select their profile and authenticate, saving time at the start of a lesson.
+- **Return to Service (RTS) Optimization** : On **iOS 26** , the system performs an "Instant Flush" of the previous user's local cache when they log out, ensuring the next student has immediate access to maximum storage capacity.
+- **Guest Access** : You can enable a "Guest Mode" where data is completely deleted the moment the student logs out. This is perfect for visiting students or parent demonstration days.
 
 ## Institutional Advice:
 

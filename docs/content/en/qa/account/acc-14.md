@@ -26,8 +26,8 @@ tags: ["ADE","Server Token","Automated Device Enrollment"]
 
 ## Synchronization Context:
 
-* **Sync Now** : While syncing occurs periodically, you can click "Sync Now" in Jamf Pro to force an immediate refresh after assigning devices in ASM.
-* **Automation Trends** : In modern OS versions, Apple has enhanced background push mechanisms. Synchronization typically occurs automatically within minutes of assignment in ASM, but "Sync Now" remains the go-to tool for manual troubleshooting.
+- **Sync Now** : While syncing occurs periodically, you can click "Sync Now" in Jamf Pro to force an immediate refresh after assigning devices in ASM.
+- **Automation Trends** : In modern OS versions, Apple has enhanced background push mechanisms. Synchronization typically occurs automatically within minutes of assignment in ASM, but "Sync Now" remains the go-to tool for manual troubleshooting.
 
 ## Practical Advice:
 

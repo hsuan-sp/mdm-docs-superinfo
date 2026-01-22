@@ -9,9 +9,9 @@ category: ["Security"]
 
 Protection scope:
 
-* **Restricted Areas** : `/System`, `/usr`, `/bin`, `/sbin`, and pre-installed apps.
-* **Rootless** : Even the "root" (superuser) account cannot modify these protected locations.
-* **Defense** : Prevents malware from injecting code into system processes or modifying critical system binaries to gain persistence.
+- **Restricted Areas** : `/System`, `/usr`, `/bin`, `/sbin`, and pre-installed apps.
+- **Rootless** : Even the "root" (superuser) account cannot modify these protected locations.
+- **Defense** : Prevents malware from injecting code into system processes or modifying critical system binaries to gain persistence.
 
 Disabling SIP generally requires booting into Recovery Mode, a step often taken by developers but strictly prohibited on managed enterprise devices.
 

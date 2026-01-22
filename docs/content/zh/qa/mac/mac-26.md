@@ -14,15 +14,15 @@ tags: ["混合環境", "Intel Mac", "Apple Silicon", "Smart Group", "部署策�
 
 ## 1. Apple Silicon 群組 (主力)
 
-* **變數** ：`Architecture Type`
-* **運算子** ：`is`
-* **數值** ：`arm 64` (或 `Apple Silicon`)
+- **變數** ：`Architecture Type`
+- **運算子** ：`is`
+- **數值** ：`arm 64` (或 `Apple Silicon`)
 
 ## 2. Intel Mac 群組 (退場中)
 
-* **變數** ：`Architecture Type`
-* **運算子** ：`is`
-* **數值** ：`x86_64`
+- **變數** ：`Architecture Type`
+- **運算子** ：`is`
+- **數值** ：`x86_64`
 
 ## 3. Rosetta 2 安裝狀態群組
 
@@ -41,7 +41,7 @@ tags: ["混合環境", "Intel Mac", "Apple Silicon", "Smart Group", "部署策�
 
 ## 三、 實務營運建議
 
-* **系統更新路徑** ：Apple 針對不同架構的系統更新檔案不同。在 macOS 26 中，請務必使用 **DDM (宣告式管理)** 進行更新，系統會自動在本地驗證正確性，不再需要組長手動區分。
-* **汰換標籤** ：建議在 Intel 群組中附加上「Expected Retirement: 2028」的標籤，便於報廢預算編列。
+- **系統更新路徑** ：Apple 針對不同架構的系統更新檔案不同。在 macOS 26 中，請務必使用 **DDM (宣告式管理)** 進行更新，系統會自動在本地驗證正確性，不再需要組長手動區分。
+- **汰換標籤** ：建議在 Intel 群組中附加上「Expected Retirement: 2028」的標籤，便於報廢預算編列。
 
 **組長觀點** ：混合環境的管理關鍵在於「精準分群」。只要 Smart Group 設定正確，後續的軟體部署就不會出錯，這也能讓 資訊組長對於學校資產的健康度有更科學的掌握。

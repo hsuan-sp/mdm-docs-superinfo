@@ -10,12 +10,12 @@ tags: ["軟體派送","App Installers","PKG","自動更新"]
 現在有更聰明的方法。
 
 **現代化軟體部署層級：****Level 1：Jamf App Installers 與 DDM 宣告式管理 (首選)***** 2026 年演進** ：結合 **DDM (Declarative Device Management)** 軟體管理。
-* **原理** ：管理員不再只是「發送安裝命令」，而是「宣告該裝置必須擁有此軟體」。
-* **優勢** ： **具備自癒性 (Self-Healing)** 。若學生誤刪了受管 App（如 Chrome），Mac 會主動發現狀態不一致，並在背景自動補回安裝，大幅減少組長的重複工單。
-* **自動更新** ：確保全校瀏覽器永遠處於最新安全版本。 **Level 2：Mac App Store (VPP)*** 適用於 Keynote, GarageBand, Goodnotes 等上架於商店的 App。
+- **原理** ：管理員不再只是「發送安裝命令」，而是「宣告該裝置必須擁有此軟體」。
+- **優勢** ： **具備自癒性 (Self-Healing)** 。若學生誤刪了受管 App（如 Chrome），Mac 會主動發現狀態不一致，並在背景自動補回安裝，大幅減少組長的重複工單。
+- **自動更新** ：確保全校瀏覽器永遠處於最新安全版本。 **Level 2：Mac App Store (VPP)*** 適用於 Keynote, GarageBand, Goodnotes 等上架於商店的 App。
 * 透過 ASM 購買授權 (VPP) 並指派給裝置，可實現靜默安裝與更新。 **Level 3：手動 PKG 部署 (最後手段)*** 適用於校務行政系統、特定的驅動程式或沒有在 App Catalog 中的冷門軟體。
-* **工具** ：使用 **Jamf Composer** 進行快照 (Snapshot) 或封裝。
-* **流程** ：將軟體打包為 `.pkg` 或 `.mpkg` > 上傳至 Jamf Pro > 建立 Policy 派送。
+- **工具** ：使用 **Jamf Composer** 進行快照 (Snapshot) 或封裝。
+- **流程** ：將軟體打包為 `.pkg` 或 `.mpkg` > 上傳至 Jamf Pro > 建立 Policy 派送。
 
 **實務建議** ：
 

@@ -10,8 +10,8 @@ tags: ["Procreate","App Purchasing","VPP","Universal Purchase","Refund"]
 
 ## Specification Comparison:
 
-* **Procreate (iPad version)** : Designed specifically for iPadOS and Apple Pencil. Supports large canvases and the full brush engine. This is the industry standard for art classes. **Higher price point** .
-* **Procreate Pocket (iPhone version)** : Designed for the smaller iPhone interface. While it*can*be installed on an iPad (via compatibility mode), it will have black bars around the interface and lacks support for Pencil pressure sensitivity and tilt. **Lower price point** .
+- **Procreate (iPad version)** : Designed specifically for iPadOS and Apple Pencil. Supports large canvases and the full brush engine. This is the industry standard for art classes. **Higher price point** .
+- **Procreate Pocket (iPhone version)** : Designed for the smaller iPhone interface. While it*can*be installed on an iPad (via compatibility mode), it will have black bars around the interface and lacks support for Pencil pressure sensitivity and tilt. **Lower price point** .
 
 ## Standard Process for Correction:
 

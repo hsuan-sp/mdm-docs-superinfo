@@ -27,10 +27,10 @@ tags: ["Charging Issues","Diagnostics","Hardware Maintenance"]
 
 ## Stage 3: Physical Inspection
 
-* **Port Check** : Use a flashlight to inspect the Lightning or USB-C port for lint, dust, or student-inserted debris. Carefully clear it using a non-conductive tool (like a wooden toothpick) or compressed air.
-* **Deep Discharge** : If an iPad has been dead for months, the battery voltage may be critically low. Keep it plugged into a high-wattage wall charger for at least **60 minutes** before declaring it a hardware failure.
+- **Port Check** : Use a flashlight to inspect the Lightning or USB-C port for lint, dust, or student-inserted debris. Carefully clear it using a non-conductive tool (like a wooden toothpick) or compressed air.
+- **Deep Discharge** : If an iPad has been dead for months, the battery voltage may be critically low. Keep it plugged into a high-wattage wall charger for at least **60 minutes** before declaring it a hardware failure.
 
 ## Institutional Advice:
 
-* **Warranty** : If the device is found to be faulty (e.g., a burned-out charging IC), verify its warranty status before sending it for repair.
-* **Spare Parts** : Cables are consumables. IT departments should keep a 5-10% stock of spare cables to quickly swap out damaged ones in classroom carts.
+- **Warranty** : If the device is found to be faulty (e.g., a burned-out charging IC), verify its warranty status before sending it for repair.
+- **Spare Parts** : Cables are consumables. IT departments should keep a 5-10% stock of spare cables to quickly swap out damaged ones in classroom carts.

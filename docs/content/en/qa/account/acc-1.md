@@ -10,10 +10,10 @@ tags: ["ASM","Terms Update"]
 
 ## The Impact of Not Agreeing
 
-* **Registration Blocked** : New devices will fail the **Automated Device Enrollment (ADE)** process. Apple’s servers will reject registration requests from your organization until the terms are accepted.
-* **VPP Sync Interruption** : The synchronization of **Volume Purchase Program (VPP)** content will pause. You will be unable to assign new apps or book licenses to your devices.
-* **Feature Lockout** : You may lose access to newer administrative features, such as **Apple Intelligence controls** or the ability to view **AppleCare coverage** within your MDM dashboard.
-* **Management Delays** : While currently enrolled devices won't stop working, you won't be able to push any new configuration profiles or app updates to them.
+- **Registration Blocked** : New devices will fail the **Automated Device Enrollment (ADE)** process. Apple’s servers will reject registration requests from your organization until the terms are accepted.
+- **VPP Sync Interruption** : The synchronization of **Volume Purchase Program (VPP)** content will pause. You will be unable to assign new apps or book licenses to your devices.
+- **Feature Lockout** : You may lose access to newer administrative features, such as **Apple Intelligence controls** or the ability to view **AppleCare coverage** within your MDM dashboard.
+- **Management Delays** : While currently enrolled devices won't stop working, you won't be able to push any new configuration profiles or app updates to them.
 
 ## Who Can Accept the Terms?
 

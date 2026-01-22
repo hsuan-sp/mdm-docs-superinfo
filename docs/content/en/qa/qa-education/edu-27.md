@@ -37,8 +37,8 @@ Even though the feature is available, education technology experts often conside
 
 ## Expert Recommendation:
 
-* **Use Zero-Wipe WHEN** : You must migrate in the middle of a semester with zero downtime and the devices contain critical teacher data that cannot be backed up.
-* **Use Wipe & Re-enroll WHEN** : It is the summer break. A clean reset via **EACS (Erase All Content and Settings)** is the only way to guarantee 100% policy compliance and peak device performance for the new school year.
+- **Use Zero-Wipe WHEN** : You must migrate in the middle of a semester with zero downtime and the devices contain critical teacher data that cannot be backed up.
+- **Use Wipe & Re-enroll WHEN** : It is the summer break. A clean reset via **EACS (Erase All Content and Settings)** is the only way to guarantee 100% policy compliance and peak device performance for the new school year.
 
 ## Summary
 

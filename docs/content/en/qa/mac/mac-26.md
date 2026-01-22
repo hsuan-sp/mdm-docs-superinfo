@@ -14,15 +14,15 @@ In Jamf Pro, you should establish these baseline groups for accurate deployment:
 
 ## Apple Silicon Group (Primary)
 
-* **Criteria** : `Architecture Type`
-* **Operator** : `is`
-* **Value** : `arm 64` (or `Apple Silicon`)
+- **Criteria** : `Architecture Type`
+- **Operator** : `is`
+- **Value** : `arm 64` (or `Apple Silicon`)
 
 ## Intel Mac Group (Legacy)
 
-* **Criteria** : `Architecture Type`
-* **Operator** : `is`
-* **Value** : `x86_64`
+- **Criteria** : `Architecture Type`
+- **Operator** : `is`
+- **Value** : `x86_64`
 
 ## Rosetta 2 Status Group
 
@@ -41,5 +41,5 @@ In Jamf Pro, you should establish these baseline groups for accurate deployment:
 
 ## 3. Administrative Insight
 
-* **System Updates** : macOS 26 handles updates differently for each architecture. Always use **Declarative Device Management (DDM)** for OS updates; the system will autonomously verify and install the correct update files without manual intervention.
-* **Asset Tagging** : Add an "Expiring Support 2028" tag to your Intel Smart Group. This helps in visualising budget requirements for the final phase-out of the Intel fleet.
+- **System Updates** : macOS 26 handles updates differently for each architecture. Always use **Declarative Device Management (DDM)** for OS updates; the system will autonomously verify and install the correct update files without manual intervention.
+- **Asset Tagging** : Add an "Expiring Support 2028" tag to your Intel Smart Group. This helps in visualising budget requirements for the final phase-out of the Intel fleet.

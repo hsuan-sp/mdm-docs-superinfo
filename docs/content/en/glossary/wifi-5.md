@@ -9,9 +9,9 @@ category: ["Network"]
 
 Key characteristics:
 
-* **Speed** : significantly faster than Wi-Fi 4 (802.11n), allowing for HD video streaming.
-* **MU-MIMO** : Introduced the ability for routers to talk to multiple devices simultaneously (Wave 2), though less efficiently than Wi-Fi 6.
-* **Legacy Status** : While still functional, it struggles in high-density environments like modern classrooms where every student has a device.
+- **Speed** : significantly faster than Wi-Fi 4 (802.11n), allowing for HD video streaming.
+- **MU-MIMO** : Introduced the ability for routers to talk to multiple devices simultaneously (Wave 2), though less efficiently than Wi-Fi 6.
+- **Legacy Status** : While still functional, it struggles in high-density environments like modern classrooms where every student has a device.
 
 ## Analogy
 

@@ -9,8 +9,8 @@ An **N-1 Strategy** is a standard IT policy for defining software support lifecy
 
 The formula:
 
-* **N** : The current, latest major version of the operating system (e.g., iOS 18).
-* **N-1** : The immediately preceding major version (e.g., iOS 17).
+- **N** : The current, latest major version of the operating system (e.g., iOS 18).
+- **N-1** : The immediately preceding major version (e.g., iOS 17).
 
 **Policy** : IT commits to fully supporting only these two versions. Devices running older software ( **N-2** , e.g., iOS 16) are considered "End of Life" for support purposes. They may still work, but IT will not troubleshoot issues or guarantee that new apps will function on them.
 

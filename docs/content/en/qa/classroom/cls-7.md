@@ -17,13 +17,13 @@ tags: ["Command Latency","Network Environment","Bluetooth","Client Isolation"]
 ## 1. Check for 'Client Isolation' on the Wi-Fi Access Point (AP)
 
 This is the most common culprit. If your school's AP has this feature enabled, devices connected to the same AP **cannot communicate with each other.***** Symptoms** : The teacher can "see" students online (discovered via Bluetooth), but when attempting to view a screen or send a command, it spins indefinitely (the Wi-Fi packet cannot be delivered).
-* **Solution** : Ask your network administrator to disable "Client Isolation" on the SSIDs used for instruction.
+- **Solution** : Ask your network administrator to disable "Client Isolation" on the SSIDs used for instruction.
 
 ## 2. Bluetooth Signal Interference
 
 If the classroom is crowded with other Bluetooth devices (keyboards, mice, microphones), it may interfere with the Classroom broadcast.
 
-* **Tip** : Try having the teacher move closer to the student devices to test connectivity.
+- **Tip** : Try having the teacher move closer to the student devices to test connectivity.
 
 ## 3. Confirm Devices are on the Same Subnet
 

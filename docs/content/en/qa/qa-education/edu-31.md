@@ -31,9 +31,9 @@ In the **MOE Managed Jamf Pro** architecture, permissions are layered to balance
 
 ## Important Repository Statement (Disclaimer)
 
-* **Feature Availability** : All management technologies described in this site (e.g., DDM Self-Healing, AI Controls, PSSO) are standard Apple features.
-* **'Hidden' Features** : If you cannot find a specific button or setting in your MOE Jamf Pro console, **it does not mean the technology is faulty or your devices are faulty** . It usually means the feature's "Global Toggle" (available only to Full Admins) has not yet been activated by the Ministry's central team.
-* **Management Advice** : In the MOE Managed environment, focus on **instructional stability** . If you require a high-degree of experimentation or custom automation, we recommend using a "School-Purchased" private instance for those specific project devices.
+- **Feature Availability** : All management technologies described in this site (e.g., DDM Self-Healing, AI Controls, PSSO) are standard Apple features.
+- **'Hidden' Features** : If you cannot find a specific button or setting in your MOE Jamf Pro console, **it does not mean the technology is faulty or your devices are faulty** . It usually means the feature's "Global Toggle" (available only to Full Admins) has not yet been activated by the Ministry's central team.
+- **Management Advice** : In the MOE Managed environment, focus on **instructional stability** . If you require a high-degree of experimentation or custom automation, we recommend using a "School-Purchased" private instance for those specific project devices.
 
 ## Summary
 

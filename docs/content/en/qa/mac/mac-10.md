@@ -12,9 +12,9 @@ tags: ["Extension Attributes","Scripts","Inventory","Custom Fields"]
 
 In addition to traditional inventory updates, macOS 26 recommends using the DDM Status Channel:
 
-* **Real-time** : When a state changes (e.g., CPU load, disk space, FileVault status), the device actively reports to Jamf Pro rather than waiting for the next scheduled scan.
-* **Low Load** : Only changed fields are reported, significantly reducing server overhead.
-* **Recommendation** : For fields where accuracy is critical (e.g., whether security software is running), prioritize the DDM Status Channel.
+- **Real-time** : When a state changes (e.g., CPU load, disk space, FileVault status), the device actively reports to Jamf Pro rather than waiting for the next scheduled scan.
+- **Low Load** : Only changed fields are reported, significantly reducing server overhead.
+- **Recommendation** : For fields where accuracy is critical (e.g., whether security software is running), prioritize the DDM Status Channel.
 
 ## Setup Steps (SOP):
 
@@ -24,14 +24,14 @@ In addition to traditional inventory updates, macOS 26 recommends using the DDM 
 
 1. **Configure** :
 
-* **Display Name** : e.g., "Last Reboot Time".
-* **Input Type** : Select **Script** .
-* **Data Type** : String, Integer, or Date. This affects Smart Group logic (e.g., "greater than/less than" vs. "contains").
+- **Display Name** : e.g., "Last Reboot Time".
+- **Input Type** : Select **Script** .
+- **Data Type** : String, Integer, or Date. This affects Smart Group logic (e.g., "greater than/less than" vs. "contains").
 
 1. **Write Script** :
 
 * Paste your Shell Script in the editor.
-* **Crucial Syntax** : Jamf Pro only reads values enclosed in `<result>` and `</result>` tags. Any other `echo` output will only appear in debug logs and won't be written to the database.
+- **Crucial Syntax** : Jamf Pro only reads values enclosed in `<result>` and `</result>` tags. Any other `echo` output will only appear in debug logs and won't be written to the database.
 
 ## Practical Example: Collecting "System Uptime Days"
 
@@ -49,9 +49,9 @@ echo "<result>$days</result>"
 
 ## Advanced Application Scenarios:
 
-* **Compliance Check** : Use a script to check if a security daemon (like CrowdStrike or SentinelOne) is running. If it returns "Stopped," the computer can automatically fall into a "Non-Compliant Group" and trigger a remediation policy.
-* **Administrative Management** : Set Input Type to **Pop-up Menu** for fields like "Department" (e.g., Academic, Administrative, IT). This allows admins to manually assign units during device issuance for easier group management.
+- **Compliance Check** : Use a script to check if a security daemon (like CrowdStrike or SentinelOne) is running. If it returns "Stopped," the computer can automatically fall into a "Non-Compliant Group" and trigger a remediation policy.
+- **Administrative Management** : Set Input Type to **Pop-up Menu** for fields like "Department" (e.g., Academic, Administrative, IT). This allows admins to manually assign units during device issuance for easier group management.
 
 ## Practical Advice: Expert Tips
 
-* **Execution Performance** : Extension Attribute scripts run during **every** inventory update. Avoid time-consuming scripts (like `find /` scanning the whole drive), as they can slow down inventory reporting across the school or cause system lag.
+- **Execution Performance** : Extension Attribute scripts run during **every** inventory update. Avoid time-consuming scripts (like `find /` scanning the whole drive), as they can slow down inventory reporting across the school or cause system lag.

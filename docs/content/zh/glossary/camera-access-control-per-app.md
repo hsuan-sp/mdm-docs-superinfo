@@ -19,5 +19,5 @@ MDM 金鑰 `allowedCameraRestrictionBundleIDs` 是 **iOS 26/iPadOS 26** 新增�
 
 在教育場域中，這非常實用。例如：
 
-* **允許** ：「課堂 (Classroom)」或「Schoolwork」使用相機交作業。
-* **禁止** ：社群媒體 App (如 Instagram, TikTok) 使用相機，防止上課自拍或隱私洩漏。
+- **允許** ：「課堂 (Classroom)」或「Schoolwork」使用相機交作業。
+- **禁止** ：社群媒體 App (如 Instagram, TikTok) 使用相機，防止上課自拍或隱私洩漏。

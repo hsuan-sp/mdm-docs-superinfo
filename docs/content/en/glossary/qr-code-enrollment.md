@@ -9,10 +9,10 @@ category: ["Enrollment"]
 
 The process:
 
-* **Scan** : The user points the device camera at a unique QR code provided by IT.
-* **Decode** : The device reads the embedded URL and enrollment token.
-* **Connect** : Safari automatically opens to the specific enrollment portal.
-* **Install** : The user is prompted to download and install the MDM profile immediately.
+- **Scan** : The user points the device camera at a unique QR code provided by IT.
+- **Decode** : The device reads the embedded URL and enrollment token.
+- **Connect** : Safari automatically opens to the specific enrollment portal.
+- **Install** : The user is prompted to download and install the MDM profile immediately.
 
 This reduces typing errors and significantly speeds up "User-Initiated Enrollment" (UIE).
 

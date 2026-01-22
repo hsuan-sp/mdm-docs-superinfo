@@ -26,7 +26,7 @@ tags: ["Automation","Shell Script","Zsh","Policies","Scripts","jamfHelper"]
 
 While scripts were previously used to check system states periodically, macOS 26 recommends using **Declarative Device Management (DDM)** .
 
-* **Example** : Instead of a script that periodically deletes large caches in `/tmp/`, you can define a DDM policy that allows the system to perform "Self-Healing" in place, which is more efficient and real-time.
+- **Example** : Instead of a script that periodically deletes large caches in `/tmp/`, you can define a DDM policy that allows the system to perform "Self-Healing" in place, which is more efficient and real-time.
 
 ## Setup and Deployment Flow (SOP):
 
@@ -38,7 +38,7 @@ While scripts were previously used to check system states periodically, macOS 26
 
 * Go to **Settings > Computer Management > Scripts** .
 * Click **+ New** , enter a name, and paste your script content.
-* **Parameters** : You can set labels for variables `$4` through `$11`, allowing the same script to take different inputs (e.g., a printer IP) via different policies.
+- **Parameters** : You can set labels for variables `$4` through `$11`, allowing the same script to take different inputs (e.g., a printer IP) via different policies.
 
 1. **Execute via Policy** :
 
@@ -73,5 +73,5 @@ DESC="Your computer will undergo a security update in 10 minutes. Please save yo
 
 ## Practical Advice & Expert Tips:
 
-* **Permissions** : Scripts run by Jamf Pro default to **Root** status. Always test on a pilot device to avoid accidental deletion of critical system files.
-* **Running as User** : To run a command as the currently logged-in user (e.g., to modify their Dock), use: `sudo -u $(stat -f%Su /dev/console) command`.
+- **Permissions** : Scripts run by Jamf Pro default to **Root** status. Always test on a pilot device to avoid accidental deletion of critical system files.
+- **Running as User** : To run a command as the currently logged-in user (e.g., to modify their Dock), use: `sudo -u $(stat -f%Su /dev/console) command`.

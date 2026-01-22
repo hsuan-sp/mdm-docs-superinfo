@@ -18,8 +18,8 @@ tags: ["iPadOS 17","VPN","Jamf Trust","MOE Project","Architecture"]
 
 ## How to Verify Protection is Active:
 
-* **Check the App** : Open the **Jamf Trust** app on the iPad. If you see a **Green Shield (Protected)** , the filtering and data reporting functions are operating correctly.
-* **Inventory Status** : In the Jamf Pro dashboard, verify that the "Content Filter" and "DNS Proxy" configuration profiles are listed as "Installed" for that device.
+- **Check the App** : Open the **Jamf Trust** app on the iPad. If you see a **Green Shield (Protected)** , the filtering and data reporting functions are operating correctly.
+- **Inventory Status** : In the Jamf Pro dashboard, verify that the "Content Filter" and "DNS Proxy" configuration profiles are listed as "Installed" for that device.
 
 ## Institutional Advice:
 

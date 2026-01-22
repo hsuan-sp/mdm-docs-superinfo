@@ -9,11 +9,11 @@ category: ["Apple", "macOS"]
 
 Available tools:
 
-* **Disk Utility** : Repair or erase the hard drive.
-* **Reinstall macOS** : Download and install a fresh copy of the operating system.
-* **Restore from Backup** : Recover data from a Time Machine backup.
-* **Terminal** : Advanced command-line tools for fixing system errors.
-* **Security Utility** : Change startup security policies (e.g., allow booting from external drives).
+- **Disk Utility** : Repair or erase the hard drive.
+- **Reinstall macOS** : Download and install a fresh copy of the operating system.
+- **Restore from Backup** : Recover data from a Time Machine backup.
+- **Terminal** : Advanced command-line tools for fixing system errors.
+- **Security Utility** : Change startup security policies (e.g., allow booting from external drives).
 
 ## Analogy
 

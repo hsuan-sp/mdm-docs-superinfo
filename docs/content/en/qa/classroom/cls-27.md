@@ -24,9 +24,9 @@ Introduced in **iOS 26 (Tahoe)** , this MDM payload completely changes how acces
 
 ## Why this matters for the classroom:
 
-* **Language Labs** : Students can bring their own headsets without corrupting the school iPad's Bluetooth list.
-* **Privacy** : Students don't need to worry about their classmates inheriting their headset name or history.
-* **Sanity** : Teachers no longer have to spend 10 minutes helping 5 students "Forget this Device" so they can reconnect.
+- **Language Labs** : Students can bring their own headsets without corrupting the school iPad's Bluetooth list.
+- **Privacy** : Students don't need to worry about their classmates inheriting their headset name or history.
+- **Sanity** : Teachers no longer have to spend 10 minutes helping 5 students "Forget this Device" so they can reconnect.
 
 ## Deployment Tip:
 

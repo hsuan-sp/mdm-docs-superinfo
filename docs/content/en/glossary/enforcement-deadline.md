@@ -9,9 +9,9 @@ An **Enforcement Deadline** is a critical component of **Declarative Device Mana
 
 Operational logic:
 
-* **Notification Phase** : As the set date and time approach, the device provides increasingly frequent and persistent notifications to the user.
-* **Enforcement Phase** : Once the deadline passes, the user can no longer dismiss or postpone the action (such as a software update).
-* **Automation** : The device executes the task autonomously based on the server's declaration, ensuring fleet-wide compliance with security patches.
+- **Notification Phase** : As the set date and time approach, the device provides increasingly frequent and persistent notifications to the user.
+- **Enforcement Phase** : Once the deadline passes, the user can no longer dismiss or postpone the action (such as a software update).
+- **Automation** : The device executes the task autonomously based on the server's declaration, ensuring fleet-wide compliance with security patches.
 
 ## MDM Context
 

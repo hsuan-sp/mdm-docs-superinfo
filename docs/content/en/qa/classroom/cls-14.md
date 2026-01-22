@@ -13,7 +13,7 @@ tags: ["AirDrop","Restrictions","Classroom Order","Jamf Teacher"]
 1. **Fully Disable (Strict - Ideal for Exams)** :
 
 * In a Restrictions profile, **uncheck 'Allow AirDrop'** .
-* **Result** : The AirDrop icon disappears from the Control Center, and no one can send or receive files.
+- **Result** : The AirDrop icon disappears from the Control Center, and no one can send or receive files.
 
 1. **Force 'Contacts Only' (Balanced)** :
 

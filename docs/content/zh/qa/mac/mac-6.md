@@ -24,7 +24,7 @@ tags: ["重置","EACS","抹除所有內容","電腦教室","Imaging"]
 1. **發送指令** ：
 
 * 對目標電腦群組發送 **「清除電腦 (Wipe Computer)」** 指令。
-* **關鍵** ：針對 Apple Silicon 與配備 T2 晶片的 Mac，此指令會觸發 **EACS (Erase All Content and Settings)** 。
+- **關鍵** ：針對 Apple Silicon 與配備 T2 晶片的 Mac，此指令會觸發 **EACS (Erase All Content and Settings)** 。
 
 1. **執行過程 (數分鐘內)** ：
 

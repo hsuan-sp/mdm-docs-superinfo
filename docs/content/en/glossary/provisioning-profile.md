@@ -9,9 +9,9 @@ A **Provisioning Profile** is a digital signing asset that links a developer's c
 
 Usage contexts:
 
-* **App Store Apps** : Signed by Apple, valid indefinitely for the user.
-* **In-House Enterprise Apps** : Signed by the organization. These profiles typically expire after **1 year** .
-* **Expiration** : If the profile expires, the app will crash immediately upon launch. It must be renewed and pushed via MDM to restore functionality.
+- **App Store Apps** : Signed by Apple, valid indefinitely for the user.
+- **In-House Enterprise Apps** : Signed by the organization. These profiles typically expire after **1 year** .
+- **Expiration** : If the profile expires, the app will crash immediately upon launch. It must be renewed and pushed via MDM to restore functionality.
 
 ## Analogy
 

@@ -9,9 +9,9 @@ category: ["Network"]
 
 Functionality:
 
-* **Constraint** : It explicitly forbids the App Store and MDM from downloading or updating apps while using a cellular (4G/5G) connection.
-* **Enforcement** : Downloads will pause and wait until the device connects to a Wi-Fi network.
-* **Purpose** : Prevents students with cellular-enabled iPads from accidentally exhausting the school's data plan quota with large game or OS updates.
+- **Constraint** : It explicitly forbids the App Store and MDM from downloading or updating apps while using a cellular (4G/5G) connection.
+- **Enforcement** : Downloads will pause and wait until the device connects to a Wi-Fi network.
+- **Purpose** : Prevents students with cellular-enabled iPads from accidentally exhausting the school's data plan quota with large game or OS updates.
 
 ## Analogy
 

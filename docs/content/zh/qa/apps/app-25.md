@@ -44,6 +44,6 @@ tags: ["macOS 26", "Package", "DDM", ".pkg", "Jamf Policy"]
 
 ## 專家建議
 
-* **混合使用策略** ：對於 macOS 26 以上裝置優先使用 DDM，舊版裝置保留 Policy，透過 Smart Groups 自動區分。
-* **公證 (Notarization) 是關鍵** ：macOS 26 的 DDM 部署對安全性要求極高。 **所有 .pkg 檔案必須經過 Apple 公證 (Notarized)** ，否則裝置將拒絕安裝，並在 Status Channel 回報 `VerificationFailed` 錯誤。
-* **測試先行** ：新軟體部署前，建議先在測試裝置上驗證 .pkg 是否具備完整的簽署鍊與公證票據。
+- **混合使用策略** ：對於 macOS 26 以上裝置優先使用 DDM，舊版裝置保留 Policy，透過 Smart Groups 自動區分。
+- **公證 (Notarization) 是關鍵** ：macOS 26 的 DDM 部署對安全性要求極高。 **所有 .pkg 檔案必須經過 Apple 公證 (Notarized)** ，否則裝置將拒絕安裝，並在 Status Channel 回報 `VerificationFailed` 錯誤。
+- **測試先行** ：新軟體部署前，建議先在測試裝置上驗證 .pkg 是否具備完整的簽署鍊與公證票據。

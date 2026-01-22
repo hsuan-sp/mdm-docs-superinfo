@@ -28,7 +28,7 @@ tags: ["AirDrop", "System Update", "File Transfer", "Classroom", "Operations"]
 1. **Prioritize the 'Classroom' App (Recommended)** :
 
 * The **Classroom** app bypasses the AirDrop Code requirement entirely.
-* **Action** : Teachers should use the "Navigate" or "Share" function within the Classroom app to push PDFs and URLs. It's faster, requires no student confirmation, and works for the whole class simultaneously.
+- **Action** : Teachers should use the "Navigate" or "Share" function within the Classroom app to push PDFs and URLs. It's faster, requires no student confirmation, and works for the whole class simultaneously.
 
 1. **'Pairing Day' Routine** :
 

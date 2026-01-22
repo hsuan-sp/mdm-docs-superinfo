@@ -18,11 +18,11 @@ tags: ["硬體管理","Lightning","USB-C","Apple Pencil","轉接器","充電車"
 
 1. **iPad Pro (M4)、iPad Air (M2/M3)、iPad mini 7 (A17 Pro) 高階機型** ：
 
-* **重大變更** ：這些機型改用新磁吸結構， **不再支援 Apple Pencil (第 2 代)** 。
-* **僅支援** ：
-* **Apple Pencil Pro** （建議）：具備側壓 (Squeeze)、陀螺儀旋轉、觸覺回饋，並支援「尋找網路 (Find My)」，遺失時可定位追蹤，對校園管理極為重要。
-* **Apple Pencil (USB-C)** ：預算有限時的選項，但無壓力感應與進階功能。
-* **採購提醒** ：若學校有 M4 iPad Pro，千萬不要採購 Apple Pencil 2，會完全無法使用。
+- **重大變更** ：這些機型改用新磁吸結構， **不再支援 Apple Pencil (第 2 代)** 。
+- **僅支援** ：
+- **Apple Pencil Pro** （建議）：具備側壓 (Squeeze)、陀螺儀旋轉、觸覺回饋，並支援「尋找網路 (Find My)」，遺失時可定位追蹤，對校園管理極為重要。
+- **Apple Pencil (USB-C)** ：預算有限時的選項，但無壓力感應與進階功能。
+- **採購提醒** ：若學校有 M4 iPad Pro，千萬不要採購 Apple Pencil 2，會完全無法使用。
 
 1. **第三方配件** ：若採購副廠觸控筆，請確認其支援 USB-C 充電並具備防誤觸功能，以減少教學干擾。
 

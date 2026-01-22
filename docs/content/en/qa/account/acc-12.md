@@ -10,9 +10,9 @@ tags: ["Migration","MDM Transfer","OS 26"]
 
 ## 1. Educational Environment Constraints:
 
-* **Profile Residue** : Non-wipe migrations often lead to residual "Restriction Profiles" or "Education Settings" from the old MDM conflicting with the new one, potentially breaking Apple Classroom.
-* **Data Integrity** : Over time, student devices accumulate cache and temporary files. Without a clean reset, new MDM configurations may not apply correctly.
-* **License Sync** : VPP app licenses may fail to transition smoothly, preventing subsequent updates.
+- **Profile Residue** : Non-wipe migrations often lead to residual "Restriction Profiles" or "Education Settings" from the old MDM conflicting with the new one, potentially breaking Apple Classroom.
+- **Data Integrity** : Over time, student devices accumulate cache and temporary files. Without a clean reset, new MDM configurations may not apply correctly.
+- **License Sync** : VPP app licenses may fail to transition smoothly, preventing subsequent updates.
 
 ## 2. Technical Context:
 

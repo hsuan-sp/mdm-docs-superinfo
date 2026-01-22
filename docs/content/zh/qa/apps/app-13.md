@@ -13,7 +13,7 @@ tags: ["AppConfig","XML","變數代換","Jamf Pro"]
 在 Jamf Pro 的行動裝置 App 詳細資訊頁面中，切換至 **「App Configuration」** 分頁。
 您需要貼入符合該 App 開發者規範的 **Plist (Property List)** XML 代碼。 **Jamf Pro 獨家優勢：變數代換 (Variable Substitution)** 您可以使用 Jamf Pro 的內建變數來動態填入每台裝置的專屬資訊，無需為每個人製作獨立的設定檔。
 
-* **常用變數範例** ：
+- **常用變數範例** ：
 * `$SERIALNUMBER`：自動填入裝置序號。
 * `$EMAIL`：自動填入使用者的 Email（需與 Inventory 連結）。
 * `$USERNAME`：自動填入使用者名稱。

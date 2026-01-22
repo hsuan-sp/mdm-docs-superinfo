@@ -20,10 +20,10 @@ tags: ["Apple Configurator","Manual ASM Addition","Provisional Period"]
 
 Devices added manually to ASM have a **30-day "grace period"** :
 
-* **User Rights** : During these 30 days, a user can manually remove the MDM profile via the device Settings.
-* **Permanent Enrollment** : After 30 days, the device becomes a permanent part of the organization. The MDM profile becomes unremovable, just like a device purchased via ADE.
+- **User Rights** : During these 30 days, a user can manually remove the MDM profile via the device Settings.
+- **Permanent Enrollment** : After 30 days, the device becomes a permanent part of the organization. The MDM profile becomes unremovable, just like a device purchased via ADE.
 
 ## Important Reminders:
 
-* **Windows Limitation** : The **Apple Devices app** for Windows can perform restores, but it **cannot** manually add devices to an ASM organization.
-* **Release Risk** : If you "Release" a manually-added device from ASM, it can only be added back using Apple Configurator again; it will not reappear automatically.
+- **Windows Limitation** : The **Apple Devices app** for Windows can perform restores, but it **cannot** manually add devices to an ASM organization.
+- **Release Risk** : If you "Release" a manually-added device from ASM, it can only be added back using Apple Configurator again; it will not reappear automatically.

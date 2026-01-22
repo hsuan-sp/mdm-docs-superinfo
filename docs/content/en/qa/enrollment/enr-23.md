@@ -16,7 +16,7 @@ tags: ["MDM Migration", "Zero-Wipe", "iOS 26", "macOS 26", "Risk Assessment"]
 1. At the deadline, the device automatically:
 
 * Removes the old MDM management profile.
-* **Preserves** user data, apps, and settings.
+- **Preserves** user data, apps, and settings.
 * Registry automatically with the new MDM.
 
 ## Use Cases
@@ -50,15 +50,15 @@ tags: ["MDM Migration", "Zero-Wipe", "iOS 26", "macOS 26", "Risk Assessment"]
 
 For student devices that require periodic resets, **Return to Service** remains the gold standard.
 
-* **Total Wipe** : Ensures the device starts from a 100% clean state.
-* **Wi-Fi Persistence** : Reconnects to Wi-Fi automatically after the wipe.
-* **Auto-Enrollment** : Automatically completes the ADE flow.
-* **App Preservation (iOS 26+)** : You can now choose to preserve the Managed App binaries, saving significant redownload time while still clearing user data.
+- **Total Wipe** : Ensures the device starts from a 100% clean state.
+- **Wi-Fi Persistence** : Reconnects to Wi-Fi automatically after the wipe.
+- **Auto-Enrollment** : Automatically completes the ADE flow.
+- **App Preservation (iOS 26+)** : You can now choose to preserve the Managed App binaries, saving significant redownload time while still clearing user data.
 
 ## When to use Zero-Wipe Migration:
 
-* **1-to-1 Teacher/Staff Devices** : Avoids forcing administrative staff to re-configure their personal data and settings.
-* **BYOD Programs** : Transitions management on teacher-owned devices without touching their personal photos or files.
+- **1-to-1 Teacher/Staff Devices** : Avoids forcing administrative staff to re-configure their personal data and settings.
+- **BYOD Programs** : Transitions management on teacher-owned devices without touching their personal photos or files.
 
 ## When NOT to use it:
 

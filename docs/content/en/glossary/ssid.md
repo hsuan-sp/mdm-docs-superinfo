@@ -9,9 +9,9 @@ An **SSID (Service Set Identifier)** is the technical term for the name of a Wi-
 
 Common school setup:
 
-* **School-Secure** : Encrypted network using WPA2/WPA3-Enterprise (802.1X) for managed devices.
-* **School-Guest** : Open or password-protected network for visitors, isolated from internal servers.
-* **Hidden SSID** : A network that does not broadcast its name (a weak security measure, often discouraged).
+- **School-Secure** : Encrypted network using WPA2/WPA3-Enterprise (802.1X) for managed devices.
+- **School-Guest** : Open or password-protected network for visitors, isolated from internal servers.
+- **Hidden SSID** : A network that does not broadcast its name (a weak security measure, often discouraged).
 
 ## Analogy
 

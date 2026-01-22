@@ -22,12 +22,12 @@ tags: ["Platform SSO", "Passwordless", "Security Standards", "MOE Requirements",
 ## 3. Enforce Strong Policies via IdP
 
 * Password strength (length, complexity, rotation) is managed centrally by your Cloud Identity Provider (IdP).
-* **Benefit** : The school IT lead no longer needs to manually audit every Mac’s local password. As long as the IdP authentication is successful, the device is automatically compliant with national cybersecurity audit standards.
+- **Benefit** : The school IT lead no longer needs to manually audit every Mac’s local password. As long as the IdP authentication is successful, the device is automatically compliant with national cybersecurity audit standards.
 
 ## Frequently Asked Questions
 
-* **Can users log in while offline?*** Yes. PSSO maintains a local cached credential to ensure teachers can still teach in areas with poor connectivity or while at home.
-* **If a teacher changes their password in the cloud, does it update on the Mac?*** Yes. On the next login, the Mac will detect the mismatch, prompt the user to enter their new cloud password, and immediately synchronize the local account.
+- **Can users log in while offline?*** Yes. PSSO maintains a local cached credential to ensure teachers can still teach in areas with poor connectivity or while at home.
+- **If a teacher changes their password in the cloud, does it update on the Mac?*** Yes. On the next login, the Mac will detect the mismatch, prompt the user to enter their new cloud password, and immediately synchronize the local account.
 
 ## Expert Insight
 

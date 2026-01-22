@@ -17,14 +17,14 @@ tags: ["Privilege Management","LAPS","Security","Standard User"]
 1. **Native LAPS (Local Administrator Password Solution)** :
 
 * As of **macOS 26** , Apple includes a native LAPS protocol.
-* **How it works** : Jamf Pro creates a hidden admin account on every Mac. The password for this account is a long, random string that **rotates automatically** every few days.
-* **Operational use** : If a technician needs to fix a Mac, they look up the*current* random password in the Jamf dashboard. Once used, the password is refreshed, ensuring the old one can never be used again.
+- **How it works** : Jamf Pro creates a hidden admin account on every Mac. The password for this account is a long, random string that **rotates automatically** every few days.
+- **Operational use** : If a technician needs to fix a Mac, they look up the*current* random password in the Jamf dashboard. Once used, the password is refreshed, ensuring the old one can never be used again.
 
 1. **Self-Service Elevation (Privileges App)** :
 
 * For staff members who occasionally need to install a printer driver or specialized software:
-* **Tool** : Deploy the **Privileges** app (or Jamf’s equivalent).
-* **Workflow** : The teacher clicks a lock icon in the Dock, justifies the need, and is granted **Admin rights for 20 minutes** . After the timer expires, the system automatically demotes them back to a Standard User.
+- **Tool** : Deploy the **Privileges** app (or Jamf’s equivalent).
+- **Workflow** : The teacher clicks a lock icon in the Dock, justifies the need, and is granted **Admin rights for 20 minutes** . After the timer expires, the system automatically demotes them back to a Standard User.
 
 ## Institutional Advice:
 

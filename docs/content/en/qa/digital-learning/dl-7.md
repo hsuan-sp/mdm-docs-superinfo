@@ -20,7 +20,7 @@ On Supervised devices within the Digital Learning Project, you will typically fi
 
 ## Does this Invade Privacy?
 
-* **No.** Disabling Private Relay simply means traffic does not go through Apple's dual-encryption tunnel; it returns to standard network transmission.
+- **No.** Disabling Private Relay simply means traffic does not go through Apple's dual-encryption tunnel; it returns to standard network transmission.
 * The school's MDM and filtering mechanisms follow strict cybersecurity regulations. They only block harmful sites and track "usage hours." Administrators cannot see specific Google search keywords or private messages.
 
 ## Practical Advice:

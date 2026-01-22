@@ -14,12 +14,12 @@ Admins often want students to see essential apps immediately upon boot, but if t
 1. **Insufficient VPP Licenses or Invalid Token** :
 
 * If the assigned app has 0 remaining licenses, Apple servers cannot issue a download token, causing the device to wait indefinitely.
-* **Solution** : Check the "Volume Purchasing" status in Jamf Pro to ensure sufficient licenses.
+- **Solution** : Check the "Volume Purchasing" status in Jamf Pro to ensure sufficient licenses.
 
 1. **Campus Wi-Fi Saturation** :
 
 * If a class of 30 iPads tries to download a 2GB app (e.g., GarageBand) at the Setup screen simultaneously, the Wi-Fi bandwidth will collapse, leading to timeouts.
-* **Solution** : Avoid forcing large apps during PreStage. Let students reach the Home Screen first, then allow apps to download in the background.
+- **Solution** : Avoid forcing large apps during PreStage. Let students reach the Home Screen first, then allow apps to download in the background.
 
 1. **Declarative Device Management (DDM) State Changes** :
 
@@ -32,6 +32,6 @@ Admins often want students to see essential apps immediately upon boot, but if t
 
 **Best Practices** :
 
-* **Minimize Initial Payload** : PreStage should only enforce critical configuration profiles or extremely small "Guide Apps".
-* **Background Install** : Set main educational apps to deploy*after* enrollment is complete, rather than intercepting the user during the Setup Assistant.
-* **Pilot Test** : Before unboxing remotely, take one device through the full process to verify VPP sync and download speeds.
+- **Minimize Initial Payload** : PreStage should only enforce critical configuration profiles or extremely small "Guide Apps".
+- **Background Install** : Set main educational apps to deploy*after* enrollment is complete, rather than intercepting the user during the Setup Assistant.
+- **Pilot Test** : Before unboxing remotely, take one device through the full process to verify VPP sync and download speeds.

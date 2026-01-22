@@ -23,7 +23,7 @@ tags: ["Reset","EACS","Erase All Content and Settings","Computer Lab","Imaging"]
 1. **Send Command** :
 
 * Send the **"Wipe Computer"** command to the target computer group.
-* **Crucial** : For Apple Silicon and T2-equipped Macs, this command triggers **EACS (Erase All Content and Settings)** .
+- **Crucial** : For Apple Silicon and T2-equipped Macs, this command triggers **EACS (Erase All Content and Settings)** .
 
 1. **Execution (Within minutes)** :
 
@@ -33,7 +33,7 @@ tags: ["Reset","EACS","Erase All Content and Settings","Computer Lab","Imaging"]
 1. **Automated Deployment (Zero-Touch)** :
 
 * The computer connects to the network (Ensure a non-authenticated Wi-Fi or wired network is provided).
-* **ADE (Automated Device Enrollment)** is triggered automatically.
+- **ADE (Automated Device Enrollment)** is triggered automatically.
 * The **PreStage Enrollment** settings are downloaded from Jamf Pro.
 * Administrator accounts are created, software is installed, and settings are applied automatically.
 

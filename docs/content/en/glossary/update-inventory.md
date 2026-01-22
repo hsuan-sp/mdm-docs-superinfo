@@ -9,10 +9,10 @@ category: ["Core"]
 
 Data points refreshed:
 
-* **Device Info** : OS Version, Battery Level, Storage usage.
-* **Apps** : List of all installed applications and versions.
-* **Security** : Current status of Passcode, Encryption, and System Integrity Protection.
-* **Profiles** : List of installed configuration profiles.
+- **Device Info** : OS Version, Battery Level, Storage usage.
+- **Apps** : List of all installed applications and versions.
+- **Security** : Current status of Passcode, Encryption, and System Integrity Protection.
+- **Profiles** : List of installed configuration profiles.
 
 This command is the "heartbeat" of management; if a device hasn't updated its inventory in 30 days, the data on the server is considered stale and unreliable.
 

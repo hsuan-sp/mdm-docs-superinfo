@@ -25,5 +25,5 @@ tags: ["Self Service","App Store","限制描述檔","自主學習"]
 
 **注意事項** ：
 
-* **Self Service 無法開啟** ：請確認裝置已正確註冊，且「Self Service」App 本身已成功安裝並獲得信任。
-* **Web Clips 整合** ：除了 App，您也可以將網頁捷徑（如：因材網、酷課雲）放在 Self Service 中，讓學生一鍵開啟。
+- **Self Service 無法開啟** ：請確認裝置已正確註冊，且「Self Service」App 本身已成功安裝並獲得信任。
+- **Web Clips 整合** ：除了 App，您也可以將網頁捷徑（如：因材網、酷課雲）放在 Self Service 中，讓學生一鍵開啟。
