@@ -5,7 +5,7 @@ category: ["Network"]
 
 ## Term Definition
 
-A **Global HTTP Proxy** setting is an MDM payload that enforces the routing of all device network traffic (HTTP/HTTPS) through a designated proxy server.
+A**Global HTTP Proxy**setting is an MDM payload that enforces the routing of all device network traffic (HTTP/HTTPS) through a designated proxy server.
 
 Typical organizational goals:
 
@@ -17,6 +17,6 @@ Typical organizational goals:
 
 ## Analogy
 
-Think of this as a **"Mandatory Security Checkpoint"** for all internet traffic.
+Think of this as a**"Mandatory Security Checkpoint"**for all internet traffic.
 
-Every "car" (piece of data) trying to leave or enter the device must first drive through this single checkpoint to be inspected by a guard. While this allows the school to filter out "contraband" (blocked websites), it can sometimes cause a **"traffic jam"** (slower internet speeds) because every single thing has to stop and be checked before it's allowed through the gate.
+Every "car" (piece of data) trying to leave or enter the device must first drive through this single checkpoint to be inspected by a guard. While this allows the school to filter out "contraband" (blocked websites), it can sometimes cause a**"traffic jam"**(slower internet speeds) because every single thing has to stop and be checked before it's allowed through the gate.

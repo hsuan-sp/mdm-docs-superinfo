@@ -5,7 +5,7 @@ category: ["Apple", "macOS"]
 
 ## Term Definition
 
-**Universal Control** is a Continuity feature that allows a single keyboard and mouse to control multiple nearby Apple devices.
+**Universal Control**is a Continuity feature that allows a single keyboard and mouse to control multiple nearby Apple devices.
 
 Functionality:
 
@@ -16,8 +16,8 @@ Functionality:
 
 ## Analogy
 
-Think of this as **"Cursor Teleportation."**
+Think of this as**"Cursor Teleportation."**
 
-If you place your iPad next to your Mac, your mouse has the superpower to **glide right off the edge** of the computer screen and appear instantly on the iPad screen.
+If you place your iPad next to your Mac, your mouse has the superpower to**glide right off the edge**of the computer screen and appear instantly on the iPad screen.
 
 You can even grab a photo from your iPad and drag it onto your Mac to paste it into a report. It makes your two separate devices feel like one giant, powerful workspace.

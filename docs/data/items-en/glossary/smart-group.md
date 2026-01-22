@@ -5,7 +5,7 @@ category: ["Core", "Jamf"]
 
 ## Term Definition
 
-A **Smart Group** is a dynamic collection of devices in Jamf Pro that updates automatically based on live criteria.
+A**Smart Group**is a dynamic collection of devices in Jamf Pro that updates automatically based on live criteria.
 
 How it works:
 
@@ -16,8 +16,8 @@ How it works:
 
 ## Analogy
 
-A Smart Group is an **"Automatic Sorting Bin."**
+A Smart Group is an**"Automatic Sorting Bin."**
 
-You set a rule: **"If a student iPad has less than 10% battery, put it in the 'Needs Charge' list."**
+You set a rule:**"If a student iPad has less than 10% battery, put it in the 'Needs Charge' list."**
 
 The system constantly checks every device; as soon as one drops to 9%, it’s moved to that list automatically. No one has to check manually.

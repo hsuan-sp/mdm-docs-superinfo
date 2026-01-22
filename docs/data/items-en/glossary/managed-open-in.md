@@ -5,7 +5,7 @@ category: ["Security"]
 
 ## Term Definition
 
-**Managed Open In** is a foundational Data Loss Prevention (DLP) for iOS and iPadOS.
+**Managed Open In**is a foundational Data Loss Prevention (DLP) for iOS and iPadOS.
 
 Functionality:
 
@@ -15,7 +15,7 @@ Functionality:
 
 ## Analogy
 
-This is the school's **"Data Boundary Rule."**
+This is the school's**"Data Boundary Rule."**
 
 It's like saying, "You can use these confidential school documents on the school’s official desks (**Managed Apps**), but you are strictly forbidden from taking those documents over to the coffee shop across the street (**Personal Apps**)."
 

@@ -18,9 +18,10 @@ If your school network separates teachers (e.g., 192.168.10.x) and students (e.g
 
 The network administrator must configure the core switch or Wireless LAN Controller (WLC) to:
 
-1. **Enable mDNS Bridging/Relay**: This allows Bonjour packets to flow between VLANs.
-1. **Permit Specific Services**: Specifically allow `_classroom._tcp` (Apple Classroom) and `_airplay._tcp` (AirPlay).
+1.**Enable mDNS Bridging/Relay**: This allows Bonjour packets to flow between VLANs.
+
+1.**Permit Specific Services**: Specifically allow `_classroom._tcp` (Apple Classroom) and `_airplay._tcp` (AirPlay).
 
 ## Alternative Workaround:
 
-If the network hardware does not support mDNS relay, the simplest solution is to have the teacher connect their iPad to the **'Student Wi-Fi'** SSID. This places both parties in the same broadcast domain, enabling a seamless connection.
+If the network hardware does not support mDNS relay, the simplest solution is to have the teacher connect their iPad to the**'Student Wi-Fi'**SSID. This places both parties in the same broadcast domain, enabling a seamless connection.

@@ -5,7 +5,7 @@ category: ["Apps"]
 
 ## Term Definition
 
-A **Bundle ID** (Bundle Identifier) is a unique string that serves as the official identity of an application across Apple’s platforms.
+A**Bundle ID**(Bundle Identifier) is a unique string that serves as the official identity of an application across Apple’s platforms.
 
 Key characteristics:
 
@@ -15,6 +15,6 @@ Key characteristics:
 
 ## Analogy
 
-This is the app's **"Social Security Number"**or**"ID Card Number."**
+This is the app's**"Social Security Number"**or**"ID Card Number."**
 
-While there might be many apps named "Calculator" or "Notes," the **Bundle ID** is guaranteed to be unique to just one app. The IT system uses this specific number to make sure it is helping or managing the exact right app and doesn't get confused by apps with similar-looking names.
+While there might be many apps named "Calculator" or "Notes," the**Bundle ID**is guaranteed to be unique to just one app. The IT system uses this specific number to make sure it is helping or managing the exact right app and doesn't get confused by apps with similar-looking names.

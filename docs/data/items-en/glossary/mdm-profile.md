@@ -6,7 +6,7 @@ tags: ["Enrollment", "Security", "The Contract"]
 
 ## Term Definition
 
-The **MDM Profile** (Mobile Device Management Profile) is the critical configuration file that establishes trust between a device and the management server.
+The**MDM Profile**(Mobile Device Management Profile) is the critical configuration file that establishes trust between a device and the management server.
 
 Its lifecycle:
 
@@ -16,8 +16,8 @@ Its lifecycle:
 
 ## Analogy
 
-Think of this as the device's **"Employment Contract."**
+Think of this as the device's**"Employment Contract."**
 
 By installing this profile, the device agrees to follow the school's rules in exchange for getting access to school resources (like an ID card, office keys, and a desk).
 
-If you **"tear up the contract"** (remove the profile), you are no longer an employee. You have to immediately give back your ID card and keys—meaning all your school apps and Wi-Fi access disappear instantly.
+If you**"tear up the contract"**(remove the profile), you are no longer an employee. You have to immediately give back your ID card and keys—meaning all your school apps and Wi-Fi access disappear instantly.

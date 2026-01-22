@@ -5,7 +5,7 @@ category: ["Security", "macOS"]
 
 ## Term Definition
 
-**Platform Single Sign-On (Platform SSO)** is a framework that deeply integrates a Mac's local user account with an external Identity Provider (IdP).
+**Platform Single Sign-On (Platform SSO)**is a framework that deeply integrates a Mac's local user account with an external Identity Provider (IdP).
 
 Capabilities:
 
@@ -15,8 +15,8 @@ Capabilities:
 
 ## Analogy
 
-This is the **"All-Access School Pass."**
+This is the**"All-Access School Pass."**
 
-In the past, you might have needed one password for your computer and another for your email. **Platform SSO** connects them.
+In the past, you might have needed one password for your computer and another for your email.**Platform SSO**connects them.
 
-As soon as you unlock your Mac with your face or fingerprint, the computer automatically "tells" all the school apps like Google Drive and Zoom, **"It's really them, let them in!"** so you don't have to type your password again and again.
+As soon as you unlock your Mac with your face or fingerprint, the computer automatically "tells" all the school apps like Google Drive and Zoom,**"It's really them, let them in!"**so you don't have to type your password again and again.

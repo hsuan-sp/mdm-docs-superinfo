@@ -5,7 +5,7 @@ category: ["Education", "Apple"]
 
 ## Term Definition
 
-**Guided Access** is a built-in iOS and iPadOS feature designed for accessibility and focused learning.
+**Guided Access**is a built-in iOS and iPadOS feature designed for accessibility and focused learning.
 
 Key functionalities:
 
@@ -18,6 +18,6 @@ Teachers frequently use Guided Access to transform an iPad into a dedicated asse
 
 ## Analogy
 
-This is the **"Single-App Lock Mode."**
+This is the**"Single-App Lock Mode."**
 
-For example, before handing out an iPad for an end-of-unit exam, a teacher can triple-click a button to **"pocket"** the student into the testing app. The student won't be able to leave that app to peek at notes or switch to a game until the teacher enters a secret passcode to "unlock" the device back to normal. It’s a great way to help students stay 100% focused on their current work.
+For example, before handing out an iPad for an end-of-unit exam, a teacher can triple-click a button to**"pocket"**the student into the testing app. The student won't be able to leave that app to peek at notes or switch to a game until the teacher enters a secret passcode to "unlock" the device back to normal. It’s a great way to help students stay 100% focused on their current work.

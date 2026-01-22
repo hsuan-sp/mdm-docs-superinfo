@@ -5,7 +5,7 @@ category: ["Apps"]
 
 ## Term Definition
 
-**Background App Refresh** allows applications to periodically fetch new content and updates even while the device is in standby or the app is not actively in use.
+**Background App Refresh**allows applications to periodically fetch new content and updates even while the device is in standby or the app is not actively in use.
 
 Management through MDM:
 
@@ -15,7 +15,7 @@ Management through MDM:
 
 ## Analogy
 
-Think of this as the app's **"Standby Concierge."**
+Think of this as the app's**"Standby Concierge."**
 
 While you aren't using the device, your apps are "tidying up" and "collecting mail" in the background so everything is ready the moment you unlock the iPad.
 

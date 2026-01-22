@@ -18,15 +18,14 @@ If you encounter this prompt during Enrollment, check the following common cause
 
 SSL certificate validation relies heavily on correct time. If the iPad's clock is off by more than a few minutes, the connection is treated as invalid.
 
-***Solution**: On the device, check**Settings > General > Date & Time**. Ensure **Set Automatically** is on and it has connected to the network to fetch the time zone.
+* **Solution**: On the device, check**Settings > General > Date & Time**. Ensure**Set Automatically**is on and it has connected to the network to fetch the time zone.
 
 **Check 2: Check Campus Firewall and Network Filtering**
 
-MDM commands are delivered via **Apple Push Notification service (APNs)**. If the school network blocks specific hosts, enrollment fails.
+MDM commands are delivered via**Apple Push Notification service (APNs)**. If the school network blocks specific hosts, enrollment fails.
 
 * **Critical Domains**: Ensure the firewall allows connections to `apple.com` and all its subdomains.
-***Ports**: Must open**TCP 443, 2197, and 5223**.
-
+* **Ports**: Must open**TCP 443, 2197, and 5223**.
 * **Test**: Try enrolling the iPad using an external mobile hotspot. If successful, it confirms a campus network restriction.
 
 **Check 3: Declarative Device Management (DDM) Sync Issues**

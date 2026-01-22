@@ -14,29 +14,27 @@ tags: ["iCloud", "Storage", "Quota", "Managed Apple Account"]
 
 ## Storage Quotas by Organization Type
 
-***Education (ASM)**: Apple provides**200GB** of iCloud storage for every user (staff and students) at no additional cost.
-
-***Business (ABM)**: Defaults to 5GB. Organizations with**Apple Business Essentials (ABE)**may have 50GB or 200GB quotas.*Note: As of early 2026, ABE is not yet widely available in all regions (including Taiwan).*
+* **Education (ASM)**: Apple provides**200GB**of iCloud storage for every user (staff and students) at no additional cost.
+* **Business (ABM)**: Defaults to 5GB. Organizations with**Apple Business Essentials (ABE)**may have 50GB or 200GB quotas.*Note: As of early 2026, ABE is not yet widely available in all regions (including Taiwan).*
 
 ## Handling a Full 200GB Quota
 
 If a student's 200GB is full (often due to backing up large personal photo/video libraries), consider the following strategies:
 
-1. **Utilize the 'Schoolwork' App**:
+1.**Utilize the 'Schoolwork' App**:
 
-*Files submitted via the**Schoolwork** app (Pages, Keynote, video assignments) are managed separately from the student’s personal iCloud quota, reducing pressure on their individual space.
-
+* Files submitted via the**Schoolwork**app (Pages, Keynote, video assignments) are managed separately from the student’s personal iCloud quota, reducing pressure on their individual space.
 * Teach students to manage files effectively instead of storing all miscellaneous data in iCloud.
 
-1. **Cleanup and Backup (SOP)**:
+1.**Cleanup and Backup (SOP)**:
 
 * **Check Backup Content**: Go to Settings > Apple Account > iCloud > iCloud Backup and disable backups for non-essential apps.
- * **Offload Photos**: Guide students to move non-academic photos to personal devices or a school-provided Google Photos account.
- * **Purge Old Coursework**: At the end of the semester, export important files to a school NAS or external storage and clear the iCloud space for the next term.
+* **Offload Photos**: Guide students to move non-academic photos to personal devices or a school-provided Google Photos account.
+* **Purge Old Coursework**: At the end of the semester, export important files to a school NAS or external storage and clear the iCloud space for the next term.
 
-1. **Alternative Cloud Services**:
+1.**Alternative Cloud Services**:
 
-*If your school provides**Google Workspace for Education**or**Microsoft 365**, direct students to store large static files (like long-form video projects) on Google Drive or OneDrive. Keep iCloud reserved for app syncing and current documents.
+* If your school provides**Google Workspace for Education**or**Microsoft 365**, direct students to store large static files (like long-form video projects) on Google Drive or OneDrive. Keep iCloud reserved for app syncing and current documents.
 
 ## Expert Insight
 

@@ -18,10 +18,13 @@ Historically, a Mac with FileVault enabled would stop at the login screen after 
 
 ## Requirements:
 
-1. **Remote Login**: Must be enabled in System Settings > General > Sharing.
-1. **Network**: A hardwired Ethernet connection is most reliable for Pre-boot networking.
-1. **Authorization**: The SSH user must be a FileVault-enabled user.
-1. **OS**: macOS 26 or later.
+1.**Remote Login**: Must be enabled in System Settings > General > Sharing.
+
+1.**Network**: A hardwired Ethernet connection is most reliable for Pre-boot networking.
+
+1.**Authorization**: The SSH user must be a FileVault-enabled user.
+
+1.**OS**: macOS 26 or later.
 
 ## Remote Unlock Command:
 
@@ -32,7 +35,7 @@ After entering the password, the SSH session will momentarily drop as the encryp
 
 ## 2026 Safety Warning (M5 Macs):
 
-On **M5 Silicon**Macs, Apple has tightened**Secure Enclave** protections.
+On**M5 Silicon**Macs, Apple has tightened**Secure Enclave**protections.
 
 * If you have enabled "Lockdown Mode" or "Advanced Data Protection," the Pre-boot SSH stack may be crippled for safety.
 * **Recommendation**: For server-room units requiring remote telemetry, ensure these high-restriction security toggles are managed carefully via MDM to allow the network stack to initialize.

@@ -5,7 +5,7 @@ category: ["Apps"]
 
 ## Term Definition
 
-A **Web Clip** is a configuration profile payload that places a website shortcut on an iOS or iPadOS Home Screen.
+A**Web Clip**is a configuration profile payload that places a website shortcut on an iOS or iPadOS Home Screen.
 
 Features:
 
@@ -16,8 +16,8 @@ Features:
 
 ## Analogy
 
-Think of this as a **"Smart Bookmark."**
+Think of this as a**"Smart Bookmark."**
 
-Instead of having to open a browser and type in a long address for the school's learning website, IT places a special **Button** on your iPad that looks just like an app.
+Instead of having to open a browser and type in a long address for the school's learning website, IT places a special**Button**on your iPad that looks just like an app.
 
-You tap it, and it **teleports** you straight to the correct website instantly. It’s a great time-saver for students.
+You tap it, and it**teleports**you straight to the correct website instantly. It’s a great time-saver for students.

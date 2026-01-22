@@ -5,7 +5,7 @@ category: ["Jamf", "macOS"]
 
 ## Term Definition
 
-**Recon** (short for the `Jamf recon` command) is the inventory collection process on managed Macs.
+**Recon**(short for the `Jamf recon` command) is the inventory collection process on managed Macs.
 
 What it collects:
 
@@ -18,10 +18,10 @@ Running `sudo Jamf recon` in Terminal forces the Mac to submit this report immed
 
 ## Analogy
 
-Think of this as an **"Instant Health Checkup."**
+Think of this as an**"Instant Health Checkup."**
 
 Normally, a computer might only send its status report once a day.
 
-If you run the "Recon" command, you're telling the Mac to **"Stop everything, count your apps, check your storage, and tell the main office how you are feeling right now!"**
+If you run the "Recon" command, you're telling the Mac to**"Stop everything, count your apps, check your storage, and tell the main office how you are feeling right now!"**
 
 It ensures IT has the absolute latest information to help fix a problem.

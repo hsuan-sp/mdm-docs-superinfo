@@ -25,14 +25,13 @@ Finding the App Store missing is a result of MDM restrictions, not a malfunction
 
 ## How to Install Apps: Using Self Service
 
-**Self Service** is Jamf's "School App Store." Administrators choose which apps are available for students and staff.
-
+**Self Service**is Jamf's "School App Store." Administrators choose which apps are available for students and staff.
 **Steps**:
 
-1. Find the **Self Service** app on the Home Screen (usually the school logo or Jamf icon).
+1. Find the**Self Service**app on the Home Screen (usually the school logo or Jamf icon).
 1. Open the app and browse available resources.
-1. Find the app you need and tap **Install**.
-1. The app installs automatically **without needing an Apple Account password**.
+1. Find the app you need and tap**Install**.
+1. The app installs automatically**without needing an Apple Account password**.
 1. Wait for the app to appear on the Home Screen.
 
 ## Benefits of Self Service:
@@ -43,9 +42,11 @@ Finding the App Store missing is a result of MDM restrictions, not a malfunction
 
 ## If an App is missing from Self Service:
 
-1. **Submit a request via the School Support Portal or to your Instructor**: Explain why it's needed for class.
-1. **Institutional Purchase**: The school buys licenses via ASM/VPP.
-1. **Deployment**: Once approved, the admin adds it to Self Service for everyone.
+1.**Submit a request via the School Support Portal or to your Instructor**: Explain why it's needed for class.
+
+1.**Institutional Purchase**: The school buys licenses via ASM/VPP.
+
+1.**Deployment**: Once approved, the admin adds it to Self Service for everyone.
 
 ## Troubleshooting:
 

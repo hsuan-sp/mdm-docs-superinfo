@@ -5,7 +5,7 @@ category: ["Jamf"]
 
 ## Definition
 
-Jamf Now is a streamlined, cloud-based MDM solution designed for small organizations or individual departments. It offers a simplified interface for essential tasks like device enrollment, app distribution, and security setting enforcement. While it lacks the advanced scripting and complex automation features of **Jamf Pro**, it is highly user-friendly and ideal for smaller schools or businesses with basic management needs.
+Jamf Now is a streamlined, cloud-based MDM solution designed for small organizations or individual departments. It offers a simplified interface for essential tasks like device enrollment, app distribution, and security setting enforcement. While it lacks the advanced scripting and complex automation features of**Jamf Pro**, it is highly user-friendly and ideal for smaller schools or businesses with basic management needs.
 
 ## Plain English
 

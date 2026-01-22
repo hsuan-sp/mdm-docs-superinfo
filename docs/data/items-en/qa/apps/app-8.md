@@ -23,8 +23,7 @@ In your Jamf Pro configuration, ensure the "Full Screen" option is enabled.
 
 ## 2. Custom Icons and Visuals
 
-***Recommended Specification**: Upload a**180x180 pixel PNG file** for maximum clarity.
-
+* **Recommended Specification**: Upload a**180x180 pixel PNG file**for maximum clarity.
 * **Transparency Support**: Modern systems support PNG icons with transparency, allowing for more professional-looking home screen layouts.
 
 ## 3. Prevent Removal (Non-removable)

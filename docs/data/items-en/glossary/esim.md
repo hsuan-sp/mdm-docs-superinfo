@@ -5,7 +5,7 @@ category: ["Hardware"]
 
 ## Term Definition
 
-An **eSIM** (embedded SIM) is a programmable digital SIM card built directly into the device's hardware, replacing the need for a physical plastic SIM.
+An**eSIM**(embedded SIM) is a programmable digital SIM card built directly into the device's hardware, replacing the need for a physical plastic SIM.
 
 In an MDM environment:
 
@@ -16,8 +16,8 @@ In an MDM environment:
 
 ## Analogy
 
-This is a **"Virtual SIM Card."**
+This is a**"Virtual SIM Card."**
 
-In the past, switching cellular providers meant using a paperclip to poke a tiny hole and swap a plastic chip. With **eSIM**, it's like "downloading" your phone number and data plan through the air, just like an app.
+In the past, switching cellular providers meant using a paperclip to poke a tiny hole and swap a plastic chip. With**eSIM**, it's like "downloading" your phone number and data plan through the air, just like an app.
 
 It’s faster, more secure, and you never have to worry about losing a tiny, fragile piece of plastic.

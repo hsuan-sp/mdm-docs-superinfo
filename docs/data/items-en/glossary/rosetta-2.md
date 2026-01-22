@@ -5,7 +5,7 @@ category: ["macOS"]
 
 ## Term Definition
 
-**Rosetta 2** is a dynamic binary translator developed by Apple for the transition from Intel chips to Apple Silicon (M-series).
+**Rosetta 2**is a dynamic binary translator developed by Apple for the transition from Intel chips to Apple Silicon (M-series).
 
 Function:
 
@@ -15,8 +15,8 @@ Function:
 
 ## Analogy
 
-Think of this as a **"Live Language Translator."**
+Think of this as a**"Live Language Translator."**
 
 The new M-series Macs speak one language (English), while older software speaks another (French).
 
-**Rosetta 2** sits in the middle and translates everything instantly, so your favorite older apps can still talk to your brand-new computer. It's like having a dedicated interpreter follow you around so you don't even notice the language barrier.
+**Rosetta 2**sits in the middle and translates everything instantly, so your favorite older apps can still talk to your brand-new computer. It's like having a dedicated interpreter follow you around so you don't even notice the language barrier.

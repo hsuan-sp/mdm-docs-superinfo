@@ -5,7 +5,7 @@ category: ["Hardware"]
 
 ## Term Definition
 
-**Face ID** is Apple’s advanced facial recognition biometric authentication system.
+**Face ID**is Apple’s advanced facial recognition biometric authentication system.
 
 Technical security:
 
@@ -15,8 +15,8 @@ Technical security:
 
 ## Analogy
 
-This is **"3D Facial Scanning."**
+This is**"3D Facial Scanning."**
 
 It doesn't just take a flat photo; it scans the actual depth and shape of your face using invisible light beams. Even if someone has a high-quality 2D photo or a professional mask of you, they can’t trick the system.
 
-It’s a fast, convenient, and incredibly secure way to make sure that the **correct student**—and only that student—is using the device.
+It’s a fast, convenient, and incredibly secure way to make sure that the**correct student**—and only that student—is using the device.

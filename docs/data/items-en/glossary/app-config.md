@@ -5,7 +5,7 @@ category: ["Apps"]
 
 ## Term Definition
 
-**App Configuration** (Managed App Config) allows MDM to inject specific settings directly into an application during its deployment.
+**App Configuration**(Managed App Config) allows MDM to inject specific settings directly into an application during its deployment.
 
 The benefits include:
 
@@ -17,6 +17,6 @@ This eliminates the need for manual setup by students or teachers and significan
 
 ## Analogy
 
-Think of this as an app that comes **"Pre-filled."**
+Think of this as an app that comes**"Pre-filled."**
 
 When IT sends you an email app, the server settings and your email address are already typed in for you. All you have to do is open the app and start working. You don't need to call IT to ask for complicated IP addresses or secret port numbers.

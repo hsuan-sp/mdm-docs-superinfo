@@ -14,8 +14,7 @@ tags: ["Enforcement Deadline", "DDM", "Enforcement", "Deadline", "Compliance"]
 
 ## Key Principles
 
-*The device receives a**Declaration** containing the deadline.
-
+* The device receives a**Declaration**containing the deadline.
 * The device manages its own notification frequency locally.
 * At the deadline, the action is forced without needing the MDM server to push a real-time command.
 
@@ -28,13 +27,13 @@ tags: ["Enforcement Deadline", "DDM", "Enforcement", "Deadline", "Compliance"]
 
 ## Software Update Deadline:
 
-1. Go to **Devices > Blueprints**or**Computers > Blueprints**.
-1. Create/Edit a **Software Update Declaration**.
-1. Set the **Target Version** (e.g., Latest version).
-1. Enable **Enforcement Deadline**.
+1. Go to**Devices > Blueprints**or**Computers > Blueprints**.
+1. Create/Edit a**Software Update Declaration**.
+1. Set the**Target Version**(e.g., Latest version).
+1. Enable**Enforcement Deadline**.
 
 * Set the specific date and time (e.g., 2026-02-28 17:00).
- * Choose the time zone (Local device time is recommended).
+* Choose the time zone (Local device time is recommended).
 
 1. Deploy to the target group.
 
@@ -46,7 +45,7 @@ tags: ["Enforcement Deadline", "DDM", "Enforcement", "Deadline", "Compliance"]
 | 7 Days | Once per day | Can select "Later" |
 | 3 Days | Twice per day | Can select "Later" |
 | 24 Hours | Once per hour | Can select "Later" |
-| **At Deadline**|**Immediate Enforcement**|**No "Later" option** |
+| **At Deadline** | **Immediate Enforcement** | **No "Later" option** |
 
 ## Behavior at Deadline:
 
@@ -62,6 +61,5 @@ tags: ["Enforcement Deadline", "DDM", "Enforcement", "Deadline", "Compliance"]
 
 ## Communication:
 
-***Teachers**: Explain*why* the update is necessary (security/new features) and encourage them to update manually before the deadline to avoid interruptions.
-
+* **Teachers**: Explain*why* the update is necessary (security/new features) and encourage them to update manually before the deadline to avoid interruptions.
 * **Students**: Remind them to leave their iPads connected to power at home to allow for automatic background updates.

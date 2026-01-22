@@ -6,7 +6,7 @@ tags: ["Setup Assistant", "Skipping", "Deployment", "macOS Tahoe"]
 
 ## Term Definition
 
-**Setup Pane Skipping**is a configuration feature within**Declarative Device Management (DDM)** that suppresses specific UI interruptions.
+**Setup Pane Skipping**is a configuration feature within**Declarative Device Management (DDM)**that suppresses specific UI interruptions.
 
 DDM Improvements in macOS Tahoe:
 
@@ -16,8 +16,8 @@ DDM Improvements in macOS Tahoe:
 
 ## Analogy
 
-In the past, every time a Mac was updated, you had to **"watch a short commercial"** about the new features before you could start working.
+In the past, every time a Mac was updated, you had to**"watch a short commercial"**about the new features before you could start working.
 
-With **Setup Pane Skipping**, the school tells the Mac to **"Skip the Intro."**
+With**Setup Pane Skipping**, the school tells the Mac to**"Skip the Intro."**
 
 This saves time and allows students to get straight to their work without having to click "Next" on five different screens just to open a web browser.

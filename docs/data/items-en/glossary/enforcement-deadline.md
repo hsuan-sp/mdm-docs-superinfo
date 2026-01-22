@@ -6,7 +6,7 @@ tags: ["DDM", "Software Update", "Compliance"]
 
 ## Term Definition
 
-An **Enforcement Deadline**is a critical component of**Declarative Device Management (DDM)** that ensures mandatory actions are completed by a specific time.
+An**Enforcement Deadline**is a critical component of**Declarative Device Management (DDM)**that ensures mandatory actions are completed by a specific time.
 
 Operational logic:
 
@@ -20,10 +20,10 @@ Enforcement Deadlines are used for critical security remediations, such as manda
 
 ## Analogy
 
-Think of it as a **"Library Book Due Date."**
+Think of it as a**"Library Book Due Date."**
 
 * One week before it's due, you get a gentle reminder.
 * One day before, you get a more urgent alert.
-*Once the**deadline** hits, the library "locks your account" or applies a fine until the book is returned.
+* Once the**deadline**hits, the library "locks your account" or applies a fine until the book is returned.
 
 Enforcement Deadlines ensure that critical rules are followed on time across the entire school, so no one is left vulnerable to old bugs.

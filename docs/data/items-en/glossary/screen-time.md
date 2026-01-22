@@ -5,7 +5,7 @@ category: ["Apple", "Core"]
 
 ## Term Definition
 
-**Screen Time** is Apple's built-in framework for monitoring device usage and setting digital boundaries.
+**Screen Time**is Apple's built-in framework for monitoring device usage and setting digital boundaries.
 
 MDM capabilities:
 
@@ -16,6 +16,6 @@ MDM capabilities:
 
 ## Analogy
 
-Screen Time is like a **"Classroom Concentration Assistant."**
+Screen Time is like a**"Classroom Concentration Assistant."**
 
-It helps students understand how they are spending their digital time. If the school wants to ensure students aren't distracted by social media during lunch or playing games after bedtime, the school can set **"Quiet Hours"** standards to help promote a healthy digital-life balance automatically.
+It helps students understand how they are spending their digital time. If the school wants to ensure students aren't distracted by social media during lunch or playing games after bedtime, the school can set**"Quiet Hours"**standards to help promote a healthy digital-life balance automatically.

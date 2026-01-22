@@ -17,8 +17,8 @@ Workflow improvements:
 
 ## Analogy
 
-Previously, setting up a new school Mac meant **"Creating a local account first, then connecting your school ID later."**
+Previously, setting up a new school Mac meant**"Creating a local account first, then connecting your school ID later."**
 
-Now, it's like **"Swiping your employee badge to enter the building."**
+Now, it's like**"Swiping your employee badge to enter the building."**
 
 You use your official work login from the very first second you turn on the computer, and the system sets up your desk, your keys, and your ID card automatically before you even sit down.

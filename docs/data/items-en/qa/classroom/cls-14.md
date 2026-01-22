@@ -14,19 +14,17 @@ tags: ["AirDrop","Restrictions","Classroom Order","Jamf Teacher"]
 
 ## Three Levels of Control:
 
-1. **Fully Disable (Strict - Ideal for Exams)**:
+1.**Fully Disable (Strict - Ideal for Exams)**:
 
-*In a Restrictions profile,**uncheck 'Allow AirDrop'**.
-
+* In a Restrictions profile,**uncheck 'Allow AirDrop'**.
 * **Result**: The AirDrop icon disappears from the Control Center, and no one can send or receive files.
 
-1. **Force 'Contacts Only' (Balanced)**:
+1.**Force 'Contacts Only' (Balanced)**:
 
-*Check**Force AirDrop to be treated as unmanaged destination** (or similar "Contacts Only" profile restriction).
-
+* Check**Force AirDrop to be treated as unmanaged destination**(or similar "Contacts Only" profile restriction).
 * Since student iPads typically lack each other's contact info, this blocks pranks from strangers while allowing communication with the teacher (if stored as a contact).
 
-1. **Jamf Teacher Dynamic Control (Most Flexible)**:
+1.**Jamf Teacher Dynamic Control (Most Flexible)**:
 
 * Keep AirDrop enabled normally for file submissions.
- *During a lesson, the teacher can tap**Disable AirDrop** in the Jamf Teacher app. AirDrop is immediately disabled for the class and automatically restores once the session ends.
+* During a lesson, the teacher can tap**Disable AirDrop**in the Jamf Teacher app. AirDrop is immediately disabled for the class and automatically restores once the session ends.

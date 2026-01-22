@@ -18,10 +18,12 @@ Keyboards work instantly upon pairing. Command-key shortcuts (like Cmd+C/V) func
 
 ## Mouse and Trackpad Support:
 
-1. **Pairing**: Go to **Settings > Bluetooth** and put your mouse in pairing mode.
-1. **Cursor**: Once connected, a circular cursor appears on the screen. It "snaps" to buttons and changes shape (e.g., turning into a bar for text editing).
-1. **USB Mice**: USB-C iPads support wired mice directly (or via a USB-A adapter). Lightning iPads require a "Lightning to USB Camera Adapter."
+1.**Pairing**: Go to**Settings > Bluetooth**and put your mouse in pairing mode.
+
+1.**Cursor**: Once connected, a circular cursor appears on the screen. It "snaps" to buttons and changes shape (e.g., turning into a bar for text editing).
+
+1.**USB Mice**: USB-C iPads support wired mice directly (or via a USB-A adapter). Lightning iPads require a "Lightning to USB Camera Adapter."
 
 ## Customization:
 
-Go to **Settings > Accessibility > Pointer Control** to adjust the cursor size, contrast, scrolling speed, and "Secondary Click" (Right-click) behavior.
+Go to**Settings > Accessibility > Pointer Control**to adjust the cursor size, contrast, scrolling speed, and "Secondary Click" (Right-click) behavior.

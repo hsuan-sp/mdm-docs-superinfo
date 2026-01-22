@@ -5,7 +5,7 @@ category: ["Hardware"]
 
 ## Term Definition
 
-**iBeacon**is Apple's location-aware technology that uses**Bluetooth Low Energy (BLE)** to detect proximity and trigger location-specific actions on mobile devices.
+**iBeacon**is Apple's location-aware technology that uses**Bluetooth Low Energy (BLE)**to detect proximity and trigger location-specific actions on mobile devices.
 
 Educational applications:
 
@@ -15,6 +15,6 @@ Educational applications:
 
 ## Analogy
 
-Think of these as **"Invisible Sense-Posts"**or**"Digital Lighthouses"** placed around the school.
+Think of these as**"Invisible Sense-Posts"**or**"Digital Lighthouses"**placed around the school.
 
 When an iPad walks past a post in the music room, it doesn't need to be scanned; the system just "senses" the location and can automatically tell the iPad, "You're in the music room now—please turn your volume down and open the sheet music app." It helps make the technology respond intelligently to exactly where the student is standing.

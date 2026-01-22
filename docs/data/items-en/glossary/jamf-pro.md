@@ -5,7 +5,7 @@ category: ["Core", "Jamf"]
 
 ## Term Definition
 
-**Jamf Pro** is an enterprise-grade Apple device management (MDM) solution, considered the flagship of the Jamf ecosystem.
+**Jamf Pro**is an enterprise-grade Apple device management (MDM) solution, considered the flagship of the Jamf ecosystem.
 
 Distinguishing features:
 
@@ -18,6 +18,6 @@ Jamf Pro is the preferred choice for schools and businesses that require the hig
 
 ## Analogy
 
-Think of this as the **"Professional DSLR Camera"** of device management.
+Think of this as the**"Professional DSLR Camera"**of device management.
 
 It has hundreds of specialized buttons, menus, and settings that can be customized to do almost anything you can imagine. While it takes an expert (the school's IT team) to learn and operate it correctly, it is the most powerful tool available to ensure that every iPad and Mac in the school is set up perfectly for a safe and productive learning experience.

@@ -5,7 +5,7 @@ category: ["Core"]
 
 ## Term Definition
 
-An **N-1 Strategy** is a standard IT policy for defining software support lifecycles.
+An**N-1 Strategy**is a standard IT policy for defining software support lifecycles.
 
 The formula:
 
@@ -16,7 +16,7 @@ The formula:
 
 ## Analogy
 
-Think of this as the **"Manufacturer's Warranty"** for software.
+Think of this as the**"Manufacturer's Warranty"**for software.
 
 Just as a car company might keep spare parts for the newest model and the previous one, software companies (and school IT) focus their energy on the current version and the one just before it.
 

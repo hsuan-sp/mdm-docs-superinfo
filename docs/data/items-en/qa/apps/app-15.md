@@ -16,12 +16,12 @@ The App Store's automatic update mechanism can be unpredictable. To ensure class
 
 ## 1. Disable Automatic Updates for Specific Apps
 
-In the app details page within Jamf Pro, **uncheck 'Automatically update app'**. Perform this for critical tools like Google Classroom, Meet, or exam apps to prevent a sudden update from introducing bugs mid-lesson.
+In the app details page within Jamf Pro,**uncheck 'Automatically update app'**. Perform this for critical tools like Google Classroom, Meet, or exam apps to prevent a sudden update from introducing bugs mid-lesson.
 
 ## 2. Establish a 'Maintenance Window'
 
-Coordinate a fixed time with the school (e.g., every Friday after 5 PM). Use Jamf Pro's **Mass Actions**to select the target device groups and manually send the**Update Application** command.
+Coordinate a fixed time with the school (e.g., every Friday after 5 PM). Use Jamf Pro's**Mass Actions**to select the target device groups and manually send the**Update Application**command.
 
 ## 3. Leverage Version Pinning
 
-If your environment uses **Volume Purchase (VPP)**, while you cannot technically "downgrade" an app, you can choose not to trigger the update command. This keeps all devices on a stable, current version until a planned upgrade during breaks.
+If your environment uses**Volume Purchase (VPP)**, while you cannot technically "downgrade" an app, you can choose not to trigger the update command. This keeps all devices on a stable, current version until a planned upgrade during breaks.

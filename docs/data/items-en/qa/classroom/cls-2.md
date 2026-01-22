@@ -17,15 +17,14 @@ This is particularly useful for assessments (e.g., Kahoot, Quizlet), focused wri
 ## How to Execute:
 
 1. In the Classroom app, select the entire class or specific students.
-1. Tap the **"Open"** tool.
+1. Tap the**"Open"**tool.
 1. Select the target app from the list.
-1. Toggle on the switch for **"Lock in app after opening."**
+1. Toggle on the switch for**"Lock in app after opening."**
 1. Tap "Done." The student devices will automatically launch the app and disable the Home button and multitasking.
 
 ## How to Unlock:
 
-*Tap the**"Unlock"** button in the teacher’s toolbar.
-
+* Tap the**"Unlock"**button in the teacher’s toolbar.
 * The devices will also automatically unlock when the teacher ends the class session.
 
 ## Practical Tip:

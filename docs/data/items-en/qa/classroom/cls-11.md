@@ -14,7 +14,7 @@ tags: ["MAC Address","Private Wi-Fi Address","Privacy Features","Network Managem
 
 In newer versions of iOS/iPadOS, this feature offers two modes:
 
-* **Fixed Mode** (Default): Provides a unique, random MAC address for a specific Wi-Fi network to prevent cross-network tracking.
+* **Fixed Mode**(Default): Provides a unique, random MAC address for a specific Wi-Fi network to prevent cross-network tracking.
 * **Rotating Mode**: Changes the MAC address approximately every two weeks for maximum security.
 
 Since the device broadcasts a virtual MAC, traditional network management systems cannot identify the hardware.
@@ -26,12 +26,12 @@ Since the device broadcasts a virtual MAC, traditional network management system
 
 ## MDM Solution (School-wide Disable):
 
-1. Edit a **Wi-Fi** configuration profile in Jamf Pro.
-1. In the Wi-Fi payload, check **Disable MAC Address Randomization** (also known as Disable Private Address).
+1. Edit a**Wi-Fi**configuration profile in Jamf Pro.
+1. In the Wi-Fi payload, check**Disable MAC Address Randomization**(also known as Disable Private Address).
 1. Deploy this profile to your devices.
 
 ## Result:
 
 When the device connects to the *specific SSID*(e.g., School-Student) defined in the profile, it will be forced to use its**Real Hardware MAC Address.**
 
-* *Note: This only applies to the Wi-Fi network specified in that profile. When students connect to their home Wi-Fi, the privacy feature will automatically re-enable.*
+**Note: This only applies to the Wi-Fi network specified in that profile. When students connect to their home Wi-Fi, the privacy feature will automatically re-enable.*

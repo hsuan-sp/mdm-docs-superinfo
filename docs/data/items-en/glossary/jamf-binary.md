@@ -5,7 +5,7 @@ category: ["Jamf", "macOS"]
 
 ## Term Definition
 
-The **Jamf Binary** (frequently referred to as the `Jamf` command-line tool) is the management agent that powers advanced control on macOS.
+The**Jamf Binary**(frequently referred to as the `Jamf` command-line tool) is the management agent that powers advanced control on macOS.
 
 Operational roles:
 
@@ -17,8 +17,8 @@ Operational roles:
 
 ## Analogy
 
-Think of this as the **"On-Site Manager"** living inside your Mac.
+Think of this as the**"On-Site Manager"**living inside your Mac.
 
-While the main school office (the MDM server) gives the big-picture orders, the **On-Site Manager** is the person who actually does the heavy physical work—like unpacking and installing your apps, fixing your system settings, and making sure the computer is following all the school’s safety rules.
+While the main school office (the MDM server) gives the big-picture orders, the**On-Site Manager**is the person who actually does the heavy physical work—like unpacking and installing your apps, fixing your system settings, and making sure the computer is following all the school’s safety rules.
 
 Without this silent helper working in the background, the school wouldn't be able to fix your Mac's problems from their office.

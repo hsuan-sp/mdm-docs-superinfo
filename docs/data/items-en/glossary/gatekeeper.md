@@ -5,7 +5,7 @@ category: ["Security"]
 
 ## Term Definition
 
-**Gatekeeper** is a macOS internal security technology designed to protect users from malicious or untrusted software.
+**Gatekeeper**is a macOS internal security technology designed to protect users from malicious or untrusted software.
 
 Protective measures:
 
@@ -17,7 +17,7 @@ Administrators use MDM to standardize Gatekeeper settings across the school, ens
 
 ## Analogy
 
-This is the Mac's **"Software Customs Officer."**
+This is the Mac's**"Software Customs Officer."**
 
 Whenever you try to run a program you downloaded from the internet, the officer (Gatekeeper) stops it to check if it has a valid entry visa (notarization) from Apple.
 

@@ -5,7 +5,7 @@ category: ["Core", "Apple"]
 
 ## Term Definition
 
-**iCloud Backup** is an automated cloud service that replicates a device's data and settings to Apple’s secure servers.
+**iCloud Backup**is an automated cloud service that replicates a device's data and settings to Apple’s secure servers.
 
 Execution criteria:
 
@@ -17,8 +17,8 @@ Execution criteria:
 
 ## Analogy
 
-This is the **"Automatic Digital Safety Net."**
+This is the**"Automatic Digital Safety Net."**
 
 Every night while the student's iPad is sleeping and charging, it quietly packs up all their school work, photos, and settings and stores a safety copy in the "Cloud" (a secure digital warehouse).
 
-If the iPad is dropped and shattered the next morning, IT can just give the student a brand new iPad. Once they log in, their entire **"digital life"** will come back exactly as it was, like nothing ever happened.
+If the iPad is dropped and shattered the next morning, IT can just give the student a brand new iPad. Once they log in, their entire**"digital life"**will come back exactly as it was, like nothing ever happened.

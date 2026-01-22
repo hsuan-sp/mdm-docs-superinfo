@@ -16,6 +16,6 @@ IT can prevent users from sharing sensitive school documents with personal devic
 
 ## Analogy
 
-Think of this as an **"Information Filter"** for AirDrop.
+Think of this as an**"Information Filter"**for AirDrop.
 
 The school can set a rule that says: "You can AirDrop files between school iPads, but you are blocked from sending school work to your personal phone." This ensures that homework and sensitive data stay within the school's safe environment.

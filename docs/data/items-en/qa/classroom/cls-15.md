@@ -14,18 +14,16 @@ tags: ["Backup","Loaner Device","iCloud","Data Restore"]
 
 ## Fate of Data Types:
 
-1. **Cloud Data (Safe)**:
+1.**Cloud Data (Safe)**:
 
-*If the student routinely saves work to**Google Drive, OneDrive, or iCloud Drive**.
-
+* If the student routinely saves work to**Google Drive, OneDrive, or iCloud Drive**.
 * Signing into the cloud app or the Managed Apple Account on the new device will cause files to appear automatically.
 
-1. **Local Data (High Risk)**:
+1.**Local Data (High Risk)**:
 
-*If the student saves Keynote/Pages projects only to the "On My iPad" location and the school**has not enabled** Managed iCloud backups.
-
-*That data will disappear along with the failing device and**cannot** be retrieved on a loaner.
+* If the student saves Keynote/Pages projects only to the "On My iPad" location and the school**has not enabled**Managed iCloud backups.
+* That data will disappear along with the failing device and**cannot**be retrieved on a loaner.
 
 ## Practical Advice:
 
-Education versions of iCloud provide 200GB of space. Administrators can enable **Allow iCloud Backup** in Jamf Pro. This allows students to select "Restore from iCloud Backup" when signing into a new device, restoring their wallpaper, app layout, and local data.
+Education versions of iCloud provide 200GB of space. Administrators can enable**Allow iCloud Backup**in Jamf Pro. This allows students to select "Restore from iCloud Backup" when signing into a new device, restoring their wallpaper, app layout, and local data.

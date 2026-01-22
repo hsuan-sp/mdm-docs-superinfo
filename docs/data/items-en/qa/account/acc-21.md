@@ -33,4 +33,4 @@ Many school administrators find this confusing. Please clarify the following rol
 
 ## Practical Advice:
 
-To troubleshoot a device or change apps, log in to **Jamf Pro**. To check if school KPIs have been met or to fill out end-of-term reports, log in to **moemdm**.
+To troubleshoot a device or change apps, log in to**Jamf Pro**. To check if school KPIs have been met or to fill out end-of-term reports, log in to**moemdm**.

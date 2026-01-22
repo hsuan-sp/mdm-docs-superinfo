@@ -5,7 +5,7 @@ category: ["Security"]
 
 ## Term Definition
 
-A digital **Certificate** is an electronic document used to verify a device's identity and enable encrypted communication.
+A digital**Certificate**is an electronic document used to verify a device's identity and enable encrypted communication.
 
 In an MDM environment, certificates are used for:
 
@@ -17,7 +17,7 @@ In an MDM environment, certificates are used for:
 
 ## Analogy
 
-This is the **"Digital Identity Card"** for your device.
+This is the**"Digital Identity Card"**for your device.
 
 Just as you need a physical ID to open a bank account, your iPad uses this certificate to prove to the school’s network that it is an official, approved school device.
 

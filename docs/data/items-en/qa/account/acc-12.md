@@ -12,7 +12,7 @@ tags: ["Migration","MDM Transfer","OS 26"]
 
 **While System Version 26 supports 'Automated MDM Migration', it remains 'strongly discouraged' in educational environments due to potential configuration conflicts.**
 
-According to the latest updates from WWDC 25, Apple has enhanced the `MigrateDevice` command in **Version 26** (iOS 26 / macOS 26 Tahoe), allowing devices to migrate silently from an old MDM to a new one. However, significant risks remain:
+According to the latest updates from WWDC 25, Apple has enhanced the `MigrateDevice` command in**Version 26**(iOS 26 / macOS 26 Tahoe), allowing devices to migrate silently from an old MDM to a new one. However, significant risks remain:
 
 ## 1. Educational Environment Constraints:
 
@@ -22,10 +22,9 @@ According to the latest updates from WWDC 25, Apple has enhanced the `MigrateDev
 
 ## 2. Technical Context:
 
-*Devices must be updated to**Version 26 (iOS/iPadOS 26, macOS 26 Tahoe)** for the most stable "wipe-free" migration experience.
-
+* Devices must be updated to**Version 26 (iOS/iPadOS 26, macOS 26 Tahoe)**for the most stable "wipe-free" migration experience.
 * While this feature has been significantly bolstered since WWDC 2025, a clean reset remains the recommended option for complex educational deployments.
 
 ## Practical Advice:
 
-To ensure device stability for a new semester, we prioritize the **Return to Service (RTS)**feature. Introduced in iOS 17 and optimized in**Version 26**, RTS allows administrators to send a single command that wipes the device and automatically re-enrolls it using cached Wi-Fi credentials. Crucially, **OS 26 supports retaining installed managed apps during the RTS process**, providing a "clean, stable, and fully automated" transition.
+To ensure device stability for a new semester, we prioritize the**Return to Service (RTS)**feature. Introduced in iOS 17 and optimized in**Version 26**, RTS allows administrators to send a single command that wipes the device and automatically re-enrolls it using cached Wi-Fi credentials. Crucially,**OS 26 supports retaining installed managed apps during the RTS process**, providing a "clean, stable, and fully automated" transition.

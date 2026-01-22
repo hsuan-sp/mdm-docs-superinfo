@@ -5,7 +5,7 @@ category: ["Security"]
 
 ## Term Definition
 
-**Lost Mode** is a powerful recovery protocol available for supervised iOS and iPadOS devices.
+**Lost Mode**is a powerful recovery protocol available for supervised iOS and iPadOS devices.
 
 When activated by IT:
 
@@ -16,7 +16,7 @@ When activated by IT:
 
 ## Analogy
 
-Think of this as a **"Remote Digital Handcuff."**
+Think of this as a**"Remote Digital Handcuff."**
 
 If a student leaves their iPad on a bus, IT can press a button to instantly freeze it. The screen will display a "Return to..." message, and the iPad will start shouting its location to the school's map.
 

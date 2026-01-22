@@ -5,7 +5,7 @@ category: ["Apple", "Security"]
 
 ## Term Definition
 
-**Find My** is Apple’s distributed tracking and recovery network for hardware and accessories.
+**Find My**is Apple’s distributed tracking and recovery network for hardware and accessories.
 
 Organizational capabilities:
 
@@ -15,8 +15,8 @@ Organizational capabilities:
 
 ## Analogy
 
-This is the device's **"Built-in GPS Tracker"**and**"Loud Siren."**
+This is the device's**"Built-in GPS Tracker"**and**"Loud Siren."**
 
 If a student leaves their iPad on a park bench, IT can immediately see exactly where it is on a satellite map. They can even make it play a loud "beeping" sound (even if it's on silent) or put an unmissable message on the screen saying, "This iPad belongs to the school. Please return it."
 
-If it's truly gone, IT can remotely **"Self-Destruct"** all the data to keep it private.
+If it's truly gone, IT can remotely**"Self-Destruct"**all the data to keep it private.

@@ -5,7 +5,7 @@ category: ["macOS", "Jamf"]
 
 ## Term Definition
 
-**Patch Management** is the automated workflow for identifying, distributing, and installing software updates for third-party applications.
+**Patch Management**is the automated workflow for identifying, distributing, and installing software updates for third-party applications.
 
 Jamf Pro capabilities:
 
@@ -16,8 +16,8 @@ Jamf Pro capabilities:
 
 ## Analogy
 
-Think of this as **"Automatic Security Repairs."**
+Think of this as**"Automatic Security Repairs."**
 
-When a software company finds a "hole" (a bug) in their program, they release a **"patch"** to fix it.
+When a software company finds a "hole" (a bug) in their program, they release a**"patch"**to fix it.
 
 IT uses Patch Management to make sure that as soon as a fix is available, it is automatically applied to every computer in the school. It’s like having a maintenance team that automatically fixes every leaky pipe in school the moment it's found, without you having to call them.

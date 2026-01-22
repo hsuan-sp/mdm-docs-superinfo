@@ -5,7 +5,7 @@ category: ["Security", "Core"]
 
 ## Term Definition
 
-A **Passcode Policy** is an MDM payload that defines the mandatory password requirements for a managed device.
+A**Passcode Policy**is an MDM payload that defines the mandatory password requirements for a managed device.
 
 Configurable rules:
 
@@ -16,8 +16,8 @@ Configurable rules:
 
 ## Analogy
 
-A Passcode Policy is like **"Setting the Standards for Classroom Keys."**
+A Passcode Policy is like**"Setting the Standards for Classroom Keys."**
 
-Instead of letting students use a cheap, simple lock that anyone can guess (like "1234"), the school creates a rule saying every lock must be a **"Heavy Duty 6-Pin Lock."**
+Instead of letting students use a cheap, simple lock that anyone can guess (like "1234"), the school creates a rule saying every lock must be a**"Heavy Duty 6-Pin Lock."**
 
 This ensures that if a student forgets their iPad on the bus, the thief can't just guess the code, keeping the important school records inside locked up tight.

@@ -5,7 +5,7 @@ category: ["Enrollment", "Jamf"]
 
 ## Term Definition
 
-**PreStage Enrollment**is the Jamf Pro configuration profile that controls the**Automated Device Enrollment (ADE)** experience.
+**PreStage Enrollment**is the Jamf Pro configuration profile that controls the**Automated Device Enrollment (ADE)**experience.
 
 Customization options:
 
@@ -16,7 +16,7 @@ Customization options:
 
 ## Analogy
 
-PreStage Enrollment is like a **"VIP Express Check-In"** at the airport.
+PreStage Enrollment is like a**"VIP Express Check-In"**at the airport.
 
 Before the student even turns on their new iPad, the ICT department has already pre-filled all their paperwork.
 

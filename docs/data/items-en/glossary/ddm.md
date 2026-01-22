@@ -5,7 +5,7 @@ category: ["Core"]
 
 ## Term Definition
 
-**Declarative Device Management (DDM)** is Apple’s next-generation management architecture designed for a more scaleable and reactive ecosystem.
+**Declarative Device Management (DDM)**is Apple’s next-generation management architecture designed for a more scaleable and reactive ecosystem.
 
 Core concepts:
 
@@ -17,6 +17,6 @@ This shift significantly reduces server load, improves battery life, and makes d
 
 ## Analogy
 
-This is the shift from **"Following Orders"**to**"Autonomous Management."**
+This is the shift from**"Following Orders"**to**"Autonomous Management."**
 
-Traditional MDM is like a remote-control car where you have to press a button for every single turn. **DDM**is like a**Self-Driving Car**—you give it the destination and the rules of the road (the declarations), and it handles the driving itself. It only lets you know when it has reached its destination or encountered a pothole it can't fix.
+Traditional MDM is like a remote-control car where you have to press a button for every single turn.**DDM**is like a**Self-Driving Car**—you give it the destination and the rules of the road (the declarations), and it handles the driving itself. It only lets you know when it has reached its destination or encountered a pothole it can't fix.

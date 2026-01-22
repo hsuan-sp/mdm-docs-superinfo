@@ -5,7 +5,7 @@ category: ["Security"]
 
 ## Term Definition
 
-**Recovery Lock** is a hardware-level security feature for Mac computers with Apple Silicon.
+**Recovery Lock**is a hardware-level security feature for Mac computers with Apple Silicon.
 
 Functionality:
 
@@ -15,7 +15,7 @@ Functionality:
 
 ## Analogy
 
-Think of this as a **"Digital Lock on the ER Door."**
+Think of this as a**"Digital Lock on the ER Door."**
 
 In the past, anyone could take a computer that wasn't working to the "Emergency Room" (Recovery Mode) and reset everything to factory settings.
 

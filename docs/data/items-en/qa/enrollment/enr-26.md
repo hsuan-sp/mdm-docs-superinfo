@@ -19,15 +19,18 @@ tags: ["Return to Service", "iOS 26", "Shared iPad", "App Preservation", "Rapid 
 1. Wipes all data and apps.
 1. Preserves Wi-Fi settings.
 1. Reboots and auto-enrolls in MDM.
-1. **MDM re-installs all apps** (This is the slowest part of the process).
+
+1.**MDM re-installs all apps**(This is the slowest part of the process).
 
 ## iOS 26 Enhanced Return to Service
 
-1. MDM sends the command and the device creates a **Filesystem Snapshot**.
-1. **Snapshot includes installed Managed App binaries.**
+1. MDM sends the command and the device creates a**Filesystem Snapshot**.
+
+1.**Snapshot includes installed Managed App binaries.**
+
 1. User data (documents, photos, settings) is wiped.
 1. Device reboots and restores to the snapshot state.
-1. Device auto-enrolls; **Apps are re-licensed and ready immediately** without a single download.
+1. Device auto-enrolls;**Apps are re-licensed and ready immediately**without a single download.
 
 ## Efficiency Comparison
 
@@ -36,8 +39,8 @@ tags: ["Return to Service", "iOS 26", "Shared iPad", "App Preservation", "Rapid 
 | Wipe Data | 2–3 mins | 2–3 mins |
 | Reboot | 1–2 mins | 1–2 mins |
 | Re-enroll | 1–2 mins | 1–2 mins |
-| App Download/Install | **30–60 mins**|**0 mins** (Already there) |
-| **Total Time**|**35–65 mins**|**5–10 mins** |
+| App Download/Install | **30–60 mins** | **0 mins**(Already there) |
+| **Total Time** | **35–65 mins** | **5–10 mins** |
 
 ## Best Use Cases
 
@@ -47,16 +50,14 @@ tags: ["Return to Service", "iOS 26", "Shared iPad", "App Preservation", "Rapid 
 
 ## Implementation in Jamf Pro
 
-When sending a **Return to Service** command:
+When sending a**Return to Service**command:
 
-1. Select the **Clear Activation Lock** option.
-1. Select **Retain Wi-Fi Profile**.
-1. Select the new **Preserve Managed Apps** option.
+1. Select the**Clear Activation Lock**option.
+1. Select**Retain Wi-Fi Profile**.
+1. Select the new**Preserve Managed Apps**option.
 
 ## Key Limitations
 
-*Requires**iOS/iPadOS 26** or later.
-
-*Only works for apps deployed as**Managed Apps** via MDM.
-
+* Requires**iOS/iPadOS 26**or later.
+* Only works for apps deployed as**Managed Apps**via MDM.
 * If the app itself requires an update, it will still trigger a download after the reset.

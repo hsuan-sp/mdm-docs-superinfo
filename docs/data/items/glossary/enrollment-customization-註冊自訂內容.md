@@ -7,11 +7,11 @@ category: ["Enrollment","Apple"]
 
 **Enrollment Customization (註冊自訂內容)** 是 Automated Device Enrollment (前稱 DEP) 過程中的進階功能。
 
-它允許管理員在標準的開箱設定流程中，插入 ** 客製化的網頁介面 **，常見用途包括：
+它允許管理員在標準的開箱設定流程中，插入 **客製化的網頁介面**，常見用途包括：
 
-* ** 身分驗證 **：整合 Microsoft Entra ID (Azure AD) 或 Google Workspace 進行登入驗證。
-* ** 使用者條款 **：顯示並要求簽署數位使用合約 (EULA)。
-* ** 品牌識別 **：展示學校或企業的 Logo 與歡迎訊息。
+* **身分驗證**：整合 Microsoft Entra ID (Azure AD) 或 Google Workspace 進行登入驗證。
+* **使用者條款**：顯示並要求簽署數位使用合約 (EULA)。
+* **品牌識別**：展示學校或企業的 Logo 與歡迎訊息。
 
 這確保了裝置在真正進入主畫面之前，使用者身分已驗證完畢，且已同意相關規範。
 

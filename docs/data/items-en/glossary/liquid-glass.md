@@ -18,6 +18,6 @@ Visual characteristics:
 
 ## Analogy
 
-Imagine your iPad screen as a sheet of **"Living Glass."**
+Imagine your iPad screen as a sheet of**"Living Glass."**
 
 When you move the device or change the lighting in the room, the icons and windows subtly catch the light and reflect it, just like real glass objects would. It makes the interface feel lighter, more breathable, and more "alive" than the flat, painted-on buttons of the past.

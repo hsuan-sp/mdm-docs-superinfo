@@ -24,7 +24,7 @@ The traditional method of "Binding" a Mac to a Domain Controller (DC) is increas
 
 ## Option A: Platform SSO 2.0 (The Standard for macOS 26 Tahoe)
 
-Introduced in macOS 13 and fully matured in **macOS 26**, Platform SSO is the Apple-native way to link your Cloud ID (Google, Microsoft Entra ID) to the local Mac login.
+Introduced in macOS 13 and fully matured in**macOS 26**, Platform SSO is the Apple-native way to link your Cloud ID (Google, Microsoft Entra ID) to the local Mac login.
 
 * **Simplified Setup**: During the out-of-box "Setup Assistant," the Mac requires the student to log in with their campus ID, which then automatically creates their local account.
 * **Seamless Sync**: The local Mac password is kept perfectly in sync with the cloud password.
@@ -39,4 +39,4 @@ For schools requiring more granular control or custom branding (e.g., displaying
 
 ## Institutional Advice:
 
-If your school still has a large fleet of AD-bound Macs, we recommend a phased "Unbind" project. Migrating to **Platform SSO** will drastically reduce the support burden associated with "Password Desynchronization" and login delays.
+If your school still has a large fleet of AD-bound Macs, we recommend a phased "Unbind" project. Migrating to**Platform SSO**will drastically reduce the support burden associated with "Password Desynchronization" and login delays.

@@ -12,12 +12,13 @@ tags: ["Apple Intelligence","Service Access","ASM"]
 
 **Administrators can determine whether to allow AI features through the 'Service Access' settings in Apple School Manager (ASM).**
 
-As Apple expands **Apple Intelligence** through 2024 and 2025, ASM provides account-level toggles that complement MDM device restrictions.
+As Apple expands**Apple Intelligence**through 2024 and 2025, ASM provides account-level toggles that complement MDM device restrictions.
 
 ## Configuration Methods:
 
-1. **Account Level (ASM)**: Log in to ASM > **Settings > User Management > Service Access**. Here, you can enable or disable Apple Intelligence services for specific roles (e.g., students).
-1. **Device Level (MDM)**: In the Jamf Pro Restrictions profile, you can specifically disable features like "Writing Tools" or "Image Playground."
+1.**Account Level (ASM)**: Log in to ASM >**Settings > User Management > Service Access**. Here, you can enable or disable Apple Intelligence services for specific roles (e.g., students).
+
+1.**Device Level (MDM)**: In the Jamf Pro Restrictions profile, you can specifically disable features like "Writing Tools" or "Image Playground."
 
 ## Why configure at the account level?
 

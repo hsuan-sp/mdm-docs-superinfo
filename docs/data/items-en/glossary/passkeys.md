@@ -5,7 +5,7 @@ category: ["Security"]
 
 ## Term Definition
 
-**Passkeys** are a next-generation authentication standard developed by Apple and the FIDO Alliance to replace traditional passwords.
+**Passkeys**are a next-generation authentication standard developed by Apple and the FIDO Alliance to replace traditional passwords.
 
 Security advantages:
 
@@ -16,8 +16,8 @@ Security advantages:
 
 ## Analogy
 
-Think of this as **"Replacing your password with your face."**
+Think of this as**"Replacing your password with your face."**
 
-Instead of having to remember and type a complicated code like "P@ssw0rd123," your device creates a secret, un-copyable **"Digital Key"** just for you.
+Instead of having to remember and type a complicated code like "P@ssw0rd123," your device creates a secret, un-copyable**"Digital Key"**just for you.
 
 When you want to log in, you simply look at the camera. It’s faster, impossible to forget, and a hacker can't "guess" it or steal it from you because it doesn't exist as a word you can write down.

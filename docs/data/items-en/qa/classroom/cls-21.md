@@ -14,13 +14,13 @@ tags: ["AirPlay","Apple TV","Screen Sharing","Instructional Display"]
 
 ## Operation:
 
-1. In the **Classroom** app, tap on the student.
-1. Tap the **AirPlay** icon.
-1. Select the **Apple TV** or AirPlay-compatible display in the room.
+1. In the**Classroom**app, tap on the student.
+1. Tap the**AirPlay**icon.
+1. Select the**Apple TV**or AirPlay-compatible display in the room.
 1. The student's screen will immediately be projected.
 
 ## Essential Security Settings:
 
-To prevent students from "hijacking" the screen, administrators should configure the **Apple TV**to**Require Passcode**or be**On-Network only**. In Jamf Pro, you can also enable **Force AirPlay outgoing requests to accept pairing password** in a Restrictions profile to ensure the teacher maintains control.
+To prevent students from "hijacking" the screen, administrators should configure the**Apple TV**to**Require Passcode**or be**On-Network only**. In Jamf Pro, you can also enable**Force AirPlay outgoing requests to accept pairing password**in a Restrictions profile to ensure the teacher maintains control.
 > [!TIP]
 > This is a powerful feature for showcasing student's work in real-time.

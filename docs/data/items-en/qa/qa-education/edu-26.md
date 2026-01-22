@@ -31,7 +31,7 @@ iOS 26 enhances a teacher’s visibility into the student's activity:
 
 ## 3. Utilizing Assessment Mode
 
-For formal testing, we recommend using **'Single App Mode'**. In iOS 26, entering Single App Mode **automatically suppresses** system-level Apple Intelligence features, ensuring a clean and fair testing environment.
+For formal testing, we recommend using**'Single App Mode'**. In iOS 26, entering Single App Mode**automatically suppresses**system-level Apple Intelligence features, ensuring a clean and fair testing environment.
 
 ## Pedagogical Recommendations
 

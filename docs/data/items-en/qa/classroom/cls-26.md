@@ -24,12 +24,12 @@ In iOS/iPadOS/macOS 26.2, a 6-digit temporary authorization code can be used to 
 ## Scenario 1: MDM set to 'AirDrop - Receiving Off'
 
 * **Result**: AirDrop is completely disabled.
-***Impact of Code**:**None**. Even if a student generates a code, the AirDrop system remains powered down and unreachable.
+* **Impact of Code**:**None**. Even if a student generates a code, the AirDrop system remains powered down and unreachable.
 
 ## Scenario 2: MDM set to 'AirDrop - Contacts Only'
 
 * **Result**: Students can only swap files with people in their address book.
-***Impact of Code**:**Applicable**. Students can use an AirDrop Code to temporarily treat a classmate as a "Known Contact" for 30 days. This makes a lot of sense for collaborative projects where students don't need to be permanent friends. It is a privacy-friendly way to enable file sharing without relaxing the "Everyone" restriction.
+* **Impact of Code**:**Applicable**. Students can use an AirDrop Code to temporarily treat a classmate as a "Known Contact" for 30 days. This makes a lot of sense for collaborative projects where students don't need to be permanent friends. It is a privacy-friendly way to enable file sharing without relaxing the "Everyone" restriction.
 
 ## Scenario 3: MDM set to 'AirDrop - Everyone for 10 Minutes'
 
@@ -38,6 +38,8 @@ In iOS/iPadOS/macOS 26.2, a 6-digit temporary authorization code can be used to 
 
 ## Administrative Advice
 
-1. **For Exams**: Keep AirDrop set to **'Receiving Off'** via MDM. This renders all codes useless and prevents illicit file sharing.
-1. **For Daily Lessons**: **'Contacts Only'**is the recommended setting. The AirDrop Code feature actually makes this setting*more* useful for schools, as students can share files for class projects without the privacy risk of exchanging personal contact details.
-1. **Governance**: Remind students that an AirDrop Code is a key—only give it to people you trust to send you academic material.
+1.**For Exams**: Keep AirDrop set to**'Receiving Off'**via MDM. This renders all codes useless and prevents illicit file sharing.
+
+1.**For Daily Lessons**:**'Contacts Only'**is the recommended setting. The AirDrop Code feature actually makes this setting*more* useful for schools, as students can share files for class projects without the privacy risk of exchanging personal contact details.
+
+1.**Governance**: Remind students that an AirDrop Code is a key—only give it to people you trust to send you academic material.

@@ -5,7 +5,7 @@ category: ["Core"]
 
 ## Term Definition
 
-**Sites** is a multi-tenancy architecture feature within Jamf Pro.
+**Sites**is a multi-tenancy architecture feature within Jamf Pro.
 
 Functionality:
 
@@ -17,7 +17,7 @@ This is essential for large districts or university systems where different depa
 
 ## Analogy
 
-Think of this as **"Separate Private Offices in a Shared Building."**
+Think of this as**"Separate Private Offices in a Shared Building."**
 
 The school district might own the whole building (the server), but inside, there are locked private offices (Sites) for each individual school.
 

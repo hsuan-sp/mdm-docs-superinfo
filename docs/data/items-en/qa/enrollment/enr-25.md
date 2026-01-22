@@ -41,19 +41,17 @@ tags: ["PreStage", "Setup Assistant", "ADE", "Deployment Speed", "Best Practices
 
 ## Items you should NOT skip (or should keep)
 
-***❌ Remote Management**:**Cannot be skipped**. This is the core Step of ADE that informs the user the device is managed by the school.
-
+* **❌ Remote Management**:**Cannot be skipped**. This is the core Step of ADE that informs the user the device is managed by the school.
 * **⚠️ Biometrics (Touch ID / Face ID)**:
- * **Elementary**: Skip. Prevents confusion for young students.
- * **Middle/High School**: Keep. Enhances local security and convenience.
- * **Staff**: Keep.
- * **⚠️ Apple Account Login**:
- * **Shared iPad**: Skip. Managed via the MDM login screen.
- * **11:1 iPad**: Keep or Skip depending on whether students are expected to use Managed Apple Accounts.
+* **Elementary**: Skip. Prevents confusion for young students.
+* **Middle/High School**: Keep. Enhances local security and convenience.
+* **Staff**: Keep.
+* **⚠️ Apple Account Login**:
+* **Shared iPad**: Skip. Managed via the MDM login screen.
+* **11:1 iPad**: Keep or Skip depending on whether students are expected to use Managed Apple Accounts.
 
 ## Practical Benefits of a Lean PreStage
 
-***Efficiency**: A full Setup Assistant takes 10–15 minutes. An optimized PreStage takes**under 2 minutes**.
-
+* **Efficiency**: A full Setup Assistant takes 10–15 minutes. An optimized PreStage takes**under 2 minutes**.
 * **Support**: Prevents students from getting stuck on "Siri can't hear me" or confusion over Apple Pay prompts.
 * **Uniformity**: Ensures every device in the classroom looks and behaves exactly the same.

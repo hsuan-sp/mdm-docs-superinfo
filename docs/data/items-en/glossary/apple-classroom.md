@@ -5,7 +5,7 @@ category: ["Education"]
 
 ## Term Definition
 
-**Apple Classroom** is a specialized app that provides teachers with powerful classroom management and monitoring tools.
+**Apple Classroom**is a specialized app that provides teachers with powerful classroom management and monitoring tools.
 
 Key capabilities:
 
@@ -17,6 +17,6 @@ Key capabilities:
 
 ## Analogy
 
-Think of this as the **"Classroom Remote Control"** for teachers.
+Think of this as the**"Classroom Remote Control"**for teachers.
 
 On their iPad, a teacher can see exactly what every student is doing. If a student gets distracted, the teacher can instantly lock their screen or switch them to the correct textbook app, ensuring the whole class stays on task during the lesson.

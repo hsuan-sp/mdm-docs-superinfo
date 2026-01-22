@@ -14,7 +14,7 @@ tags: ["Troubleshooting","Reset","Network","Connection Help"]
 
 ## The "unmanaged device" Risk:
 
-If you are in the middle of a Wi-Fi migration (transitioning from an old SSID to a new official school network), **do not delete the old profile first**.
+If you are in the middle of a Wi-Fi migration (transitioning from an old SSID to a new official school network),**do not delete the old profile first**.
 
 * **Correct Process**: Push the new Wi-Fi profile via MDM -> Verify connection -> Only then remove the old setting.
 * **The Danger**: If you reset all network settings and the iPad cannot "auto-join" any available school Wi-Fi, it will lose its connection to Jamf Pro. You will then have to manually reconnect every device by hand to restore management.
@@ -25,10 +25,11 @@ Use this only when the device shows "Unable to Join Network," fails to see any B
 
 ## Steps to Reset:
 
-1. Navigate to **Settings > General > Transfer or Reset iPad > Reset**.
-1. Select **Reset Network Settings**. The iPad will reboot.
-1. **After Reboot**: All saved Wi-Fi passwords and Bluetooth pairings are wiped. Managed Wi-Fi profiles pushed by the school should automatically re-apply once the device is unlocked and detects the campus signal.
+1. Navigate to**Settings > General > Transfer or Reset iPad > Reset**.
+1. Select**Reset Network Settings**. The iPad will reboot.
+
+1.**After Reboot**: All saved Wi-Fi passwords and Bluetooth pairings are wiped. Managed Wi-Fi profiles pushed by the school should automatically re-apply once the device is unlocked and detects the campus signal.
 
 ## Practical Tip:
 
-Before resorting to a full network reset, always try toggling **Airplane Mode** for 10 seconds or performing a hard restart. These solve 90% of connectivity hang-ups without erasing your saved configurations.
+Before resorting to a full network reset, always try toggling**Airplane Mode**for 10 seconds or performing a hard restart. These solve 90% of connectivity hang-ups without erasing your saved configurations.

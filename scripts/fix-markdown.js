@@ -84,6 +84,11 @@ const PROPER_NOUNS = {
   'uuid': 'UUID',
   'udid': 'UDID',
   'url': 'URL',
+  'radius': 'RADIUS',
+  'ssid': 'SSID',
+  'eap': 'EAP',
+  'peap': 'PEAP',
+  'ttls': 'TTLS',
 };
 
 let stats = {
@@ -149,22 +154,42 @@ function normalizeProperNouns(text) {
 
 /**
  * Ensures bold/italic markers have spaces OUTSIDE when adjacent to CJK,
- * but NO spaces INSIDE (which breaks markdown parsing).
+ * and removes spaces INSIDE (standardizes ** text ** to **text**).
  */
 function fixMarkdownSyntaxSpacing(text) {
-  return text
-    // 1. Remove spaces INSIDE bold/italic markers: ** text ** -> **text**
-    .replace(/(\*\*|__)\s+(.*?)\s+(\*\*|__)/g, '$1$2$3')
-    .replace(/(\*|_)\s+(.*?)\s+(\*|_)/g, '$1$2$3')
+  // Regex to find **...** or __...__ blocks
+  // Captures:
+  // 1. Prefix char (to check for CJK)
+  // 2. Marker (** or __)
+  // 3. Content (non-greedy, no newlines)
+  // 4. Closing Marker (must match #2)
+  // 5. Suffix char (to check for CJK)
+  return text.replace(/(^|[\s\S])(\*{2}|_{2})([^\r\n]+?)(\2)([\s\S]|$)/g, (match, prefix, marker, content, closeMarker, suffix) => {
+    // 1. Clean spaces inside the markers
+    const cleanedContent = content.trim();
     
-    // 2. Add spaces OUTSIDE bold markers if adjacent to CJK
-    // CJK**bold** -> CJK **bold**
-    .replace(/([\u4e00-\u9fa5])(\*\*|__)/g, '$1 $2')
-    // **bold**CJK -> **bold** CJK
-    .replace(/(\*\*|__)([\u4e00-\u9fa5])/g, '$1 $2')
+    // Ignore empty content or content that looks like a horizontal rule (e.g. ***)
+    if (!cleanedContent || cleanedContent === '*' || cleanedContent === '_') {
+        return match;
+    }
+
+    // 2. Ensure spacing with CJK
     
-    // 3. Ensure no double spaces created by above rules
-    .replace(/ {2,}/g, ' ');
+    // Check Preceding CJK
+    // We only add space if the prefix is CJK. 
+    // If prefix is space, it's not CJK, so we leave it (space preserved).
+    if (prefix && /[\u4e00-\u9fa5]$/.test(prefix)) {
+      prefix += ' ';
+    }
+    
+    // Check Following CJK
+    // We only add space if the suffix is CJK.
+    if (suffix && /^[\u4e00-\u9fa5]/.test(suffix)) {
+      suffix = ' ' + suffix;
+    }
+    
+    return prefix + marker + cleanedContent + closeMarker + suffix;
+  });
 }
 
 function processFile(filePath) {
@@ -210,6 +235,27 @@ function processFile(filePath) {
       if (inCodeBlock) {
         processedLines.push(line);
         continue;
+      }
+
+      // REPAIR: Fix broken bold from previous run (* *Text -> **Text)
+      line = line.replace(/^(\s*)\* \*([^*])/, '$1**$2');
+
+      // Pre-process: Fix bullet points missing space
+      // Skipped if it looks like a horizontal rule (strong strict check)
+      if (!line.trim().match(/^([*+-])\1{2,}$/)) {
+         // 1. ***Text -> * **Text (Bullet + Bold)
+         if (line.match(/^\s*\*{3}[^*]/)) {
+           line = line.replace(/^(\s*)\*{3}([^*])/, '$1* **$2');
+         }
+         // 2. *Text -> * Text (Only if Text doesn't start with *)
+         // Prevents touching **Bold
+         else if (line.match(/^\s*\*(?=[^*])/)) {
+           line = line.replace(/^(\s*)\*([^*])/, '$1* $2');
+         }
+         // 3. -Text / +Text
+         else if (line.match(/^\s*[-+](?=[^\s])/)) {
+           line = line.replace(/^(\s*)([-+])([^\s])/, '$1$2 $3');
+         }
       }
 
       // B. 標題處理
@@ -292,14 +338,23 @@ function processFile(filePath) {
           const prePrevLine = processedLines[processedLines.length - 2];
           const isPrePrevList = prePrevLine && prePrevLine.match(/^(?:(?:>\s*)+)?(\s*)([*+-]|\d+\.) /);
           if (isPrePrevList) {
-            processedLines.pop(); // Remove the empty line to tighten the list
-            // Update prevLine to the one before the removed empty line
-            const newPrevLine = processedLines[processedLines.length - 1];
-            // Re-evaluate previous list state
-            const isPrevInListUpdated = newPrevLine && newPrevLine.match(/^(?:(?:>\s*)+)?(\s*)([*+-]|\d+\.) /);
-            if (isPrevInListUpdated) {
-                // If it was a list item of the same type, we don't need to do anything special here
-                // as the logic below will handle indentation etc.
+            const prePrevMatchStr = isPrePrevList[2];
+            const prePrevIsOrdered = !!prePrevMatchStr.match(/\d+\./);
+            
+            // Only tighten if types match to avoid conflict with separation logic
+            // Also allow tightening if it looks like a sublist (indent increased)
+            const prePrevIndent = isPrePrevList[1].length;
+            const currIndent = indent.length;
+            
+            if (prePrevIsOrdered === isOrdered || currIndent > prePrevIndent) {
+                processedLines.pop(); // Remove the empty line to tighten the list
+                // Update prevLine to the one before the removed empty line
+                const newPrevLine = processedLines[processedLines.length - 1];
+                // Re-evaluate previous list state
+                const isPrevInListUpdated = newPrevLine && newPrevLine.match(/^(?:(?:>\s*)+)?(\s*)([*+-]|\d+\.) /);
+                if (isPrevInListUpdated) {
+                    // Update indent context if needed (optional, logic below mostly uses local loop vars)
+                }
             }
           }
         }
