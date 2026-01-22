@@ -1,19 +1,16 @@
 ---
-category:
-  - Apple
-term: Accessibility Features （輔助使用功能）
+term: "Accessibility Features (輔助使用功能)"
+category: ["Apple"]
 ---
-## 術語定義***Accessibility Features （輔助使用功能）**是 Apple 生態系統（iOS、iPadOS、macOS、visionOS）中內建的一系列無障礙工具，旨在協助具有各種生理或認知需求的使用者順暢地操作。
+
+## 術語定義**Accessibility Features (輔助使用功能)**是 Apple 生態系統（iOS、iPadOS、macOS、visionOS）中內建的一系列無障礙工具，旨在協助具有各種生理或認知需求的使用者順暢地操作。
 
 關鍵工具包括：
 
-*  **視覺 (Vision)**：VoiceOver（螢幕朗讀）、縮放與放大鏡。
-
-*  **聽覺 (Hearing)**：即時字幕 (Live Captions)、Made for iPhone 助聽設備支援。
-
-*  **動作 (Motor)**：語音控制、切換控制與輔助觸控 (AssistiveTouch)。
-
-*  **認知 (Cognitive)**：輔助存取 (Assisted Access) 與背景聲音。
+***視覺 (Vision)**：VoiceOver（螢幕朗讀）、縮放與放大鏡。
+***聽覺 (Hearing)**：即時字幕 (Live Captions)、Made for iPhone 助聽設備支援。
+***動作 (Motor)**：語音控制、切換控制與輔助觸控 (AssistiveTouch)。
+***認知 (Cognitive)**：輔助存取 (Assisted Access) 與背景聲音。
 
 透過 MDM，管理員可以**預先配置**或鎖定這些設定，確保特教學生在收到裝置的那一刻，專屬的輔助工具就已經準備就緒。
 

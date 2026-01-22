@@ -1,11 +1,16 @@
 ---
-category:
-  - Hardware
-term: Touch ID
+term: "Touch ID"
+category: ["Hardware"]
 ---
-## Term Definition***Touch ID**is Apple's biometric fingerprint identity sensor.
 
-Usage in education:***Unlock**: Teachers and older students can unlock iPads without typing a passcode.***Purchase**: Authorize App Store requests (if allowed).***Security**: MDM settings can mandate that Touch ID is**allowed**to unlock the device but require the passcode after a restart (Biometric Unlock).***Constraint**: On Shared iPads, Touch ID is generally disabled because the sensor cannot store fingerprints for 30 different students.
+## Term Definition**Touch ID**is Apple's biometric fingerprint identity sensor.
+
+Usage in education:
+
+***Unlock**: Teachers and older students can unlock iPads without typing a passcode.
+***Purchase**: Authorize App Store requests (if allowed).
+***Security**: MDM settings can mandate that Touch ID is*allowed* to unlock the device but require the passcode after a restart (Biometric Unlock).
+***Constraint**: On Shared iPads, Touch ID is generally disabled because the sensor cannot store fingerprints for 30 different students.
 
 ## Analogy
 

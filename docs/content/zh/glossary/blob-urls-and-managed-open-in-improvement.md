@@ -1,11 +1,11 @@
 ---
-category:
-  - Security
-term: Blob URLs and Managed Open-In Improvement (Blob URL 與管理式 Open-In 改進）
+term: "Blob URLs and Managed Open-In Improvement (Blob URL 與管理式 Open-In 改進)"
+category: ["Security"]
 ---
-## 術語定義***Blob URLs and Managed Open-In App Improvement**是**iOS 26**的安全性改進。
 
-現在，**Blob URL**（瀏覽器產生的臨時檔案連結）會嚴格遵守**Managed Open-In （管理式開啟）**的限制。這防止了使用者透過將資料壓縮或轉換為 Blob URL 的方式，繞過資料外洩防護機制 (DLP)。
+## 術語定義**Blob URLs and Managed Open-In App Improvement**是**iOS 26**的安全性改進。
+
+現在，**Blob URL**（瀏覽器產生的臨時檔案連結）會嚴格遵守**Managed Open-In (管理式開啟)**的限制。這防止了使用者透過將資料壓縮或轉換為 Blob URL 的方式，繞過資料外洩防護機制 (DLP)。
 
 ## 白話文比喻
 

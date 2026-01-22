@@ -1,12 +1,16 @@
 ---
-category:
-  - Apple
-  - macOS
-term: Universal Control
+term: "Universal Control"
+category: ["Apple", "macOS"]
 ---
-## Term Definition***Universal Control**is a Continuity feature that allows a single keyboard and mouse to control multiple nearby Apple devices.
 
-Functionality:***Zero Setup**: Devices signed into the same iCloud account automatically detect each other.***Cross-Platform**: A cursor can move from a Mac screen onto an iPad screen seamlessly.***Drag & Drop**: Files can be dragged from one device to another.***MDM Control**: Schools often disable this on shared or lab computers to prevent students from accidentally (or intentionally) moving files between machines during exams.
+## Term Definition**Universal Control**is a Continuity feature that allows a single keyboard and mouse to control multiple nearby Apple devices.
+
+Functionality:
+
+***Zero Setup**: Devices signed into the same iCloud account automatically detect each other.
+***Cross-Platform**: A cursor can move from a Mac screen onto an iPad screen seamlessly.
+***Drag & Drop**: Files can be dragged from one device to another.
+***MDM Control**: Schools often disable this on shared or lab computers to prevent students from accidentally (or intentionally) moving files between machines during exams.
 
 ## Analogy
 

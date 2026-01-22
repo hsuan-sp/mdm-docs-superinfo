@@ -1,22 +1,14 @@
 ---
-Section 3: App Distribution & Management (Apps & Books)" Management"
-category: 'Section 3: App Distribution category: '
 id: app-7
+title: "I cannot find the app I want in ASM (due to regional restrictions or removal). How do I solve this?"
+category: "Section 3: App Distribution category: "Section 3: App Distribution & Management (Apps & Books)" Management"
 important: false
-tags:
-  - ASM Search
-  - Regional Restrictions
-  - Developer Settings
-  - App Store
-title: >-
-  I cannot find the app I want in ASM (due to regional restrictions or removal).
-  How do I solve this?
+tags: ["ASM Search","Regional Restrictions","Developer Settings","App Store"]
 ---
+
 ## Q: I cannot find the app I want in ASM (due to regional restrictions or removal). How do I solve this?
 
-## Answer
-
-*  **Search results in Apple School Manager (ASM) can sometimes differ from the consumer App Store. If you cannot find a specific item, check these factors in order:**## 1. Search by Apple ID String (Recommended)
+## Answer**Search results in Apple School Manager (ASM) can sometimes differ from the consumer App Store. If you cannot find a specific item, check these factors in order:**## 1. Search by Apple ID String (Recommended)
 
 Don't search by name. Instead, find the app on the web-based App Store and locate its unique ID (e.g., `id123456789`). Paste this ID directly into the ASM search bar. This is the most accurate way to find a specific entry.
 

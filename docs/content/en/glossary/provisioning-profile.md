@@ -1,14 +1,17 @@
 ---
-category:
-  - Apps
-  - Security
-term: Provisioning Profile
+term: "Provisioning Profile"
+category: ["Apps", "Security"]
 ---
+
 ## Term Definition
 
 A**Provisioning Profile**is a digital signing asset that links a developer's certificate, an App ID, and a device (or list of devices) to authorize an app to run.
 
-Usage contexts:***App Store Apps**: Signed by Apple, valid indefinitely for the user.***In-House Enterprise Apps**: Signed by the organization. These profiles typically expire after**1 year**.***Expiration**: If the profile expires, the app will crash immediately upon launch. It must be renewed and pushed via MDM to restore functionality.
+Usage contexts:
+
+***App Store Apps**: Signed by Apple, valid indefinitely for the user.
+***In-House Enterprise Apps**: Signed by the organization. These profiles typically expire after**1 year**.
+***Expiration**: If the profile expires, the app will crash immediately upon launch. It must be renewed and pushed via MDM to restore functionality.
 
 ## Analogy
 

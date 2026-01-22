@@ -1,13 +1,18 @@
 ---
-category:
-  - Core
-term: Pending Command
+term: "Pending Command"
+category: ["Core"]
 ---
+
 ## Term Definition
 
 A**Pending Command**is an administrative instruction sent by the MDM server that has not yet been executed by the target device.
 
-Common causes for pending status:***Offline**: The device is turned off or has no internet connection.***Sleep**: The device is in a low-power sleep mode and hasn't received the APNs "wakeup" push yet.***Busy**: The device is currently processing other commands (a queue backlog).***Locked**: Some commands (like OS updates) cannot run if the device is passcode-locked.
+Common causes for pending status:
+
+***Offline**: The device is turned off or has no internet connection.
+***Sleep**: The device is in a low-power sleep mode and hasn't received the APNs "wakeup" push yet.
+***Busy**: The device is currently processing other commands (a queue backlog).
+***Locked**: Some commands (like OS updates) cannot run if the device is passcode-locked.
 
 The command remains in the queue and will automatically execute the moment the device checks in again.
 

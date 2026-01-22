@@ -1,15 +1,17 @@
 ---
-category:
-  - Network
-term: Content Caching （內容快取）
+term: "Content Caching (內容快取)"
+category: ["Network"]
 ---
-## 術語定義***Content Caching （內容快取）**是 macOS 內建的頻寬優化服務，可將 Mac 電腦轉變為本地的更新伺服器。
+
+## 術語定義**Content Caching (內容快取)**是 macOS 內建的頻寬優化服務，可將 Mac 電腦轉變為本地的更新伺服器。
 
 當同一區域網路內有開啟此功能的 Mac 時：
 
-1. **自動暫存**：它會自動下載並儲存熱門的 iCloud 資料、App Store 應用程式、GarageBand 音色庫或 iOS 系統更新檔。
-2. **加速下載**：當校內其他 iPad 或 iPhone 需要相同內容時，會直接從這台 Mac 抓取資料。
-3. **節省頻寬**：無需每台裝置都去連線網際網路，極大程度減少對外頻寬的佔用。
+1.**自動暫存**：它會自動下載並儲存熱門的 iCloud 資料、App Store 應用程式、GarageBand 音色庫或 iOS 系統更新檔。
+
+2.**加速下載**：當校內其他 iPad 或 iPhone 需要相同內容時，會直接從這台 Mac 抓取資料。
+
+3.**節省頻寬**：無需每台裝置都去連線網際網路，極大程度減少對外頻寬的佔用。
 
 ## 白話文比喻
 

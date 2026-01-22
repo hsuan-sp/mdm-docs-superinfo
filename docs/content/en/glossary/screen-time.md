@@ -1,12 +1,16 @@
 ---
-category:
-  - Apple
-  - Core
-term: Screen Time
+term: "Screen Time"
+category: ["Apple", "Core"]
 ---
-## Term Definition***Screen Time**is Apple's built-in framework for monitoring device usage and setting digital boundaries.
 
-MDM capabilities:***Downtime**: Scheduling specific blocks of time (e.g., School Hours: 8 AM - 3 PM) where only educational apps are allowed.***App Limits**: Setting daily time allowances for specific categories (e.g., "Social Networking").***Content Usage**: Providing reports to parents and teachers on how much time a student spends in productivity apps versus games.***Communication Safety**: Filtering inappropriate content in Messages.
+## Term Definition**Screen Time**is Apple's built-in framework for monitoring device usage and setting digital boundaries.
+
+MDM capabilities:
+
+***Downtime**: Scheduling specific blocks of time (e.g., School Hours: 8 AM - 3 PM) where only educational apps are allowed.
+***App Limits**: Setting daily time allowances for specific categories (e.g., "Social Networking").
+***Content Usage**: Providing reports to parents and teachers on how much time a student spends in productivity apps versus games.
+***Communication Safety**: Filtering inappropriate content in Messages.
 
 ## Analogy
 

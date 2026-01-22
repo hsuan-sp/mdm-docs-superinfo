@@ -1,8 +1,8 @@
 ---
-category:
-  - Enrollment
-term: User Enrollment
+term: "User Enrollment"
+category: ["Enrollment"]
 ---
+
 ## Definition
 
 User Enrollment is a specialized MDM onboarding mode designed specifically for**Bring Your Own Device (BYOD)**programs. It creates a dedicated "managed volume" for school data (such as school email and managed apps) that is completely separate from the user’s personal data. The school’s IT department has NO access to the user’s personal photos, messages, or apps, and the user can unenroll their device at any time to remove all school data instantly.

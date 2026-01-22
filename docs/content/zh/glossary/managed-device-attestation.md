@@ -1,17 +1,15 @@
 ---
-category:
-  - Security
-term: Managed Device Attestation
+term: "Managed Device Attestation"
+category: ["Security"]
 ---
-## 術語定義***Managed Device Attestation （管理式裝置證明）**是一種高規格的資安驗證機制，用於確認裝置的身分與完整性。
+
+## 術語定義**Managed Device Attestation (管理式裝置證明)**是一種高規格的資安驗證機制，用於確認裝置的身分與完整性。
 
 運作原理：
 
-*  **安全晶片**：利用裝置內建的硬體晶片 (Secure Enclave) 生成一組加密金鑰。
-
-*  **Apple 驗證**：將此金鑰傳送至 Apple 伺服器，驗證這是一台「真正的 Apple 裝置」（非模擬器或改裝機），且未被越獄或竄改。
-
-*  **發證**：驗證通過後，裝置會獲得一張「數位證書」，用來向學校網路或 MDM 證明自己是合規的安全裝置。
+***安全晶片**：利用裝置內建的硬體晶片 (Secure Enclave) 生成一組加密金鑰。
+***Apple 驗證**：將此金鑰傳送至 Apple 伺服器，驗證這是一台「真正的 Apple 裝置」（非模擬器或改裝機），且未被越獄或竄改。
+***發證**：驗證通過後，裝置會獲得一張「數位證書」，用來向學校網路或 MDM 證明自己是合規的安全裝置。
 
 ## 白話文比喻
 

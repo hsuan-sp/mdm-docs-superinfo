@@ -1,9 +1,8 @@
 ---
-category:
-  - Jamf
-  - Security
-term: JamfAAD
+term: "JamfAAD"
+category: ["Jamf","Security"]
 ---
+
 ## Definition
 
 JamfAAD is a background process on macOS responsible for coordinating with Microsoft Entra ID (formerly Azure AD) for device registration and**Compliance**verification. When a user tries to access a protected school resource like Office 365 or Microsoft Teams, JamfAAD provides proof to Microsoft that the Mac is managed and meets all required school security standards before allowing the user to sign in.

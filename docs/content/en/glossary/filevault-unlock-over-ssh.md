@@ -1,13 +1,17 @@
 ---
-category:
-  - Mac
-term: FileVault Unlock over SSH
+term: "FileVault Unlock over SSH"
+category: ["Mac"]
 ---
+
 ## Term Definition
 
 A remote management capability introduced in**macOS Tahoe**that improves troubleshooting workflows for encrypted Macs.
 
-Functional details:***Capability**: Allows an administrator to remotely unlock a**FileVault-encrypted**startup disk using a secure shell (SSH) connection.***Prerequisite**: The Mac must have "Remote Login" enabled via MDM and be connected to the network.***Utility**: Highly useful for remote maintenance on devices that have been rebooted but are stuck at the pre-boot login screen.
+Functional details:
+
+***Capability**: Allows an administrator to remotely unlock a**FileVault-encrypted**startup disk using a secure shell (SSH) connection.
+***Prerequisite**: The Mac must have "Remote Login" enabled via MDM and be connected to the network.
+***Utility**: Highly useful for remote maintenance on devices that have been rebooted but are stuck at the pre-boot login screen.
 
 ## Analogy
 

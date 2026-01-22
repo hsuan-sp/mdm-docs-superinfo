@@ -1,11 +1,16 @@
 ---
-category:
-  - Apps
-term: Single App Mode
+term: "Single App Mode"
+category: ["Apps"]
 ---
-## Term Definition***Single App Mode**(also known as Kiosk Mode or App Lock) is a restrictive state that forces an iOS/iPadOS device to run only one specific application.
 
-Use cases:***Assessment**: Locking the iPad to a test app so students cannot Google answers.***Kiosks**: Using an iPad as a dedicated visitor sign-in station or library catalog.***Ordering**: Restaurant menus.***Behavior**: Teachers using**Apple Classroom**to temporarily lock all student screens to a specific learning app ("Eyes on the textbook").
+## Term Definition**Single App Mode**(also known as Kiosk Mode or App Lock) is a restrictive state that forces an iOS/iPadOS device to run only one specific application.
+
+Use cases:
+
+***Assessment**: Locking the iPad to a test app so students cannot Google answers.
+***Kiosks**: Using an iPad as a dedicated visitor sign-in station or library catalog.
+***Ordering**: Restaurant menus.
+***Behavior**: Teachers using**Apple Classroom**to temporarily lock all student screens to a specific learning app ("Eyes on the textbook").
 
 ## Analogy
 

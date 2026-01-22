@@ -1,9 +1,8 @@
 ---
-category:
-  - macOS
-  - Security
-term: iPhone Mirroring
+term: "iPhone Mirroring"
+category: ["macOS","Security"]
 ---
+
 ## Definition
 
 iPhone Mirroring is a continuity feature introduced in macOS 15 that allows users to view and fully interact with their iPhone directly on their Mac screen. While highly productive, MDM administrators can disable this feature on shared school hardware to prevent personal data leakage or to ensure that users are not bypassing Mac-level security monitoring software by performing tasks within the mirrored iPhone window.

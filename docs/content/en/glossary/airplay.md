@@ -1,11 +1,15 @@
 ---
-category:
-  - Core
-term: AirPlay
+term: "AirPlay"
+category: ["Core"]
 ---
-## Term Definition***AirPlay**is Apple’s wireless streaming protocol that allows for screen mirroring or streaming audio/video to an**Apple TV**or AirPlay-enabled display.
 
-In classroom environments, MDM can:***Pre-configure permissions**: Specify which Apple TV a specific iPad is allowed to use.***Security**: Pre-fill security passwords or set required verification steps.***Automation**: Ensure that teachers can present without navigating complex Wi-Fi or Bluetooth settings.
+## Term Definition**AirPlay**is Apple’s wireless streaming protocol that allows for screen mirroring or streaming audio/video to an**Apple TV**or AirPlay-enabled display.
+
+In classroom environments, MDM can:
+
+***Pre-configure permissions**: Specify which Apple TV a specific iPad is allowed to use.
+***Security**: Pre-fill security passwords or set required verification steps.
+***Automation**: Ensure that teachers can present without navigating complex Wi-Fi or Bluetooth settings.
 
 ## Analogy
 

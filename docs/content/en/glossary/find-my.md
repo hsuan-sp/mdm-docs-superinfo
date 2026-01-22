@@ -1,12 +1,15 @@
 ---
-category:
-  - Apple
-  - Security
-term: Find My
+term: "Find My"
+category: ["Apple", "Security"]
 ---
-## Term Definition***Find My**is Apple’s distributed tracking and recovery network for hardware and accessories.
 
-Organizational capabilities:***Managed Lost Mode**: MDM can remotely trigger a specialized "Lost Mode" on supervised devices. This locks the interface, displays a custom message, and provides coordinates to the IT department.***Activation Lock Bypass**: Even if a student signs in with a personal iCloud account, MDM can generate a bypass code to prevent the device from being "locked" to that student's account after a wipe.***Independence**: Managed Lost Mode does not require the device to be signed into a personal iCloud account to function.
+## Term Definition**Find My**is Apple’s distributed tracking and recovery network for hardware and accessories.
+
+Organizational capabilities:
+
+***Managed Lost Mode**: MDM can remotely trigger a specialized "Lost Mode" on supervised devices. This locks the interface, displays a custom message, and provides coordinates to the IT department.
+***Activation Lock Bypass**: Even if a student signs in with a personal iCloud account, MDM can generate a bypass code to prevent the device from being "locked" to that student's account after a wipe.
+***Independence**: Managed Lost Mode does not require the device to be signed into a personal iCloud account to function.
 
 ## Analogy
 

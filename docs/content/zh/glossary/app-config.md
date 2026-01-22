@@ -1,17 +1,15 @@
 ---
-category:
-  - Apps
-term: App Config (App Configuration)
+term: "App Config (App Configuration)"
+category: ["Apps"]
 ---
-## 術語定義***App Config (App Configuration，受管理應用程式配置）**允許 MDM 在部署應用程式的過程中，直接將特定的設定參數「注入」到 App 內部。
+
+## 術語定義**App Config (App Configuration，受管理應用程式配置)**允許 MDM 在部署應用程式的過程中，直接將特定的設定參數「注入」到 App 內部。
 
 其優點包括：
 
-*  **零接觸設定 (Zero-Touch Setup)**：伺服器網址、授權金鑰或使用者名稱皆已預先填妥。
-
-*  **安全性**：管理員可以選擇鎖定或隱藏 App 內的特定功能。
-
-*  **一致性**：確保所有學生都會自動收到完全相同的 App 設定。
+***零接觸設定 (Zero-Touch Setup)**：伺服器網址、授權金鑰或使用者名稱皆已預先填妥。
+***安全性**：管理員可以選擇鎖定或隱藏 App 內的特定功能。
+***一致性**：確保所有學生都會自動收到完全相同的 App 設定。
 
 這項功能消除了學生或老師手動設定的需求，並能顯著降低因配置錯誤所產生的問題。
 

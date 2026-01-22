@@ -1,13 +1,19 @@
 ---
-category:
-  - Security
-term: Activation Lock Bypass Code
+term: "Activation Lock Bypass Code"
+category: ["Security"]
 ---
+
 ## Term Definition
 
 An**Activation Lock Bypass Code**is a unique alphanumeric string that an MDM server automatically collects from**Supervised**devices.
 
-This code is essential for device lifecycle management:***If a user leaves the organization without signing out of their personal**Apple Account**(leaving the device "locked").***An IT administrator can enter this specific code in the password field to bypass the lock.*****This allows the device to be erased and prepared for a new user.**## Analogy
+This code is essential for device lifecycle management:
+
+* If a user leaves the organization without signing out of their personal**Apple Account**(leaving the device "locked").
+* An IT administrator can enter this specific code in the password field to bypass the lock.
+* This allows the device to be erased and prepared for a new user.
+
+## Analogy
 
 This is the**"Emergency Override Key"**for institution-owned hardware.
 

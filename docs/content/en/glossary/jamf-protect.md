@@ -1,10 +1,8 @@
 ---
-category:
-  - Jamf
-  - Security
-  - macOS
-term: Jamf Protect
+term: "Jamf Protect"
+category: ["Jamf","Security","macOS"]
 ---
+
 ## Definition
 
 Jamf Protect is a specialized endpoint security solution built specifically for the Mac. It uses Apple's native**Endpoint Security Framework**to monitor for malicious behavior, provide real-time threat detection, and automate responses to malware. Because it is built "for Mac, by Jamf," it does not slow down system performance the way traditional cross-platform antivirus software often does, while providing superior visibility into macOS-specific threats.

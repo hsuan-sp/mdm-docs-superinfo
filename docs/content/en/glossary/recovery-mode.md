@@ -1,12 +1,17 @@
 ---
-category:
-  - Apple
-  - macOS
-term: Recovery Mode
+term: "Recovery Mode"
+category: ["Apple", "macOS"]
 ---
-## Term Definition***Recovery Mode**is a special boot partition on Apple devices designed for emergency maintenance and troubleshooting.
 
-Available tools:***Disk Utility**: Repair or erase the hard drive.***Reinstall macOS**: Download and install a fresh copy of the operating system.***Restore from Backup**: Recover data from a Time Machine backup.***Terminal**: Advanced command-line tools for fixing system errors.***Security Utility**: Change startup security policies (e.g., allow booting from external drives).
+## Term Definition**Recovery Mode**is a special boot partition on Apple devices designed for emergency maintenance and troubleshooting.
+
+Available tools:
+
+***Disk Utility**: Repair or erase the hard drive.
+***Reinstall macOS**: Download and install a fresh copy of the operating system.
+***Restore from Backup**: Recover data from a Time Machine backup.
+***Terminal**: Advanced command-line tools for fixing system errors.
+***Security Utility**: Change startup security policies (e.g., allow booting from external drives).
 
 ## Analogy
 

@@ -1,9 +1,8 @@
 ---
-category:
-  - Jamf
-  - Other
-term: Jamf Pro API
+term: "Jamf Pro API"
+category: ["Jamf","Other"]
 ---
+
 ## Definition
 
 The Jamf Pro API (specifically the Pro API v2) is a developer interface that allows IT administrators to automate management tasks via code. Instead of manually clicking through the web interface, administrators can use scripts to perform bulk operations—such as creating hundreds of policies at once, importing large lists of devices, or generating custom reports. It enables a high level of efficiency and integration with other school systems.

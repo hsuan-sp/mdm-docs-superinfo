@@ -1,9 +1,8 @@
 ---
-category:
-  - macOS
-  - Jamf
-term: jamfHelper
+term: "jamfHelper"
+category: ["macOS","Jamf"]
 ---
+
 ## Definition
 
 jamfHelper is a built-in messaging utility for macOS management. IT administrators use it via scripts to display custom dialog boxes, notification windows, or progress bars to the user. It is the primary tool for informing users about required software updates, gathering simple user input, or providing visual feedback during the execution of a management policy.

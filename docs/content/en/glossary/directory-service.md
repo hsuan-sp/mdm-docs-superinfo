@@ -1,13 +1,15 @@
 ---
-category:
-  - Network
-term: Directory Service
+term: "Directory Service"
+category: ["Network"]
 ---
+
 ## Term Definition
 
 A**Directory Service**is a centralized software system that stores, organizes, and provides access to information about a network's users and resources.
 
-Common implementations:***Microsoft Active Directory (AD)*****LDAP (Lightweight Directory Access Protocol)*****Cloud Identity**: Azure AD (Entra ID), Google Workspace, or Okta.***MDM Integration**: By linking MDM to a Directory Service, organizations enable users to enroll devices and access institutional apps using their existing, familiar credentials. This ensures that when a user leaves the organization, their access is revoked across all managed devices simultaneously.
+Common implementations:
+
+***Microsoft Active Directory (AD)*****LDAP (Lightweight Directory Access Protocol)*****Cloud Identity**: Azure AD (Entra ID), Google Workspace, or Okta.**MDM Integration**: By linking MDM to a Directory Service, organizations enable users to enroll devices and access institutional apps using their existing, familiar credentials. This ensures that when a user leaves the organization, their access is revoked across all managed devices simultaneously.
 
 ## Analogy
 

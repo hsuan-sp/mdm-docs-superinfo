@@ -1,11 +1,15 @@
 ---
-category:
-  - Security
-term: ACME (Automated Certificate Management Environment)
+term: "ACME (Automated Certificate Management Environment)"
+category: ["Security"]
 ---
-## Term Definition***Automated Certificate Management Environment (ACME)**is a standard protocol for automating the management of digital certificates.
 
-It allows devices to automatically:***Request**: Ask for a new identity certificate.***Verify**: Prove the device's identity to the Certificate Authority (CA).***Renew**: Refresh expiring certificates without manual IT intervention.
+## Term Definition**Automated Certificate Management Environment (ACME)**is a standard protocol for automating the management of digital certificates.
+
+It allows devices to automatically:
+
+***Request**: Ask for a new identity certificate.
+***Verify**: Prove the device's identity to the Certificate Authority (CA).
+***Renew**: Refresh expiring certificates without manual IT intervention.
 
 In modern Apple management, ACME is increasingly replacing the older**SCEP**protocol to ensure that device identity certificates remain valid and secure indefinitely.
 

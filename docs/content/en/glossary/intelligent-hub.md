@@ -1,8 +1,8 @@
 ---
-category:
-  - Apps
-term: Intelligent Hub
+term: "Intelligent Hub"
+category: ["Apps"]
 ---
+
 ## Definition
 
 Intelligent Hub is the user-facing application for VMware Workspace ONE. While this is a different platform than the Jamf ecosystem used at TES, the concept is identical to**Jamf Self Service**. It serves as a centralized "Productivity Portal" where students and staff can install approved school software, check their device compliance status, and receive important technical notifications from the IT department.

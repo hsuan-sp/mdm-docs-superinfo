@@ -1,17 +1,15 @@
 ---
-category:
-  - Hardware
-term: IMEI
+term: "IMEI"
+category: ["Hardware"]
 ---
-## 術語定義***IMEI (International Mobile Equipment Identity)**是行動通訊裝置的全球唯一識別碼，由 15 位數字組成。
+
+## 術語定義**IMEI (International Mobile Equipment Identity)**是行動通訊裝置的全球唯一識別碼，由 15 位數字組成。
 
 其關鍵特性為：
 
-*  **硬體綁定**：類似身分證字號，出廠後即永久綁定於硬體，無法輕易竄改。
-
-*  **僅限蜂巢版**：只有支援 SIM 卡（行動網路）的 iPad 或 iPhone 才擁有 IMEI。
-
-*  **防盜鎖定**：若裝置遺失，可提供 IMEI 給電信商進行**黑名單鎖定 (Blocklist)**。被鎖定的裝置即使換了 SIM 卡，也無法連接任何行動網路。
+***硬體綁定**：類似身分證字號，出廠後即永久綁定於硬體，無法輕易竄改。
+***僅限蜂巢版**：只有支援 SIM 卡（行動網路）的 iPad 或 iPhone 才擁有 IMEI。
+***防盜鎖定**：若裝置遺失，可提供 IMEI 給電信商進行**黑名單鎖定 (Blocklist)**。被鎖定的裝置即使換了 SIM 卡，也無法連接任何行動網路。
 
 ## 白話文比喻
 

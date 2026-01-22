@@ -1,23 +1,14 @@
 ---
-Section 3: App Distribution & Management (Apps & Books)" Management"
-category: 'Section 3: App Distribution category: '
 id: app-25
+title: "How do I use 'Declarative .pkg Deployment' in macOS 26? How does it differ from Jamf Policies?"
+category: "Section 3: App Distribution category: "Section 3: App Distribution & Management (Apps & Books)" Management"
 important: false
-tags:
-  - macOS 26
-  - Package
-  - DDM
-  - .pkg
-  - Jamf Policy
-title: >-
-  How do I use 'Declarative .pkg Deployment' in macOS 26? How does it differ
-  from Jamf Policies?
+tags: ["macOS 26", "Package", "DDM", ".pkg", "Jamf Policy"]
 ---
+
 ## Q: How do I use 'Declarative .pkg Deployment' in macOS 26? How does it differ from Jamf Policies?
 
-## Answer
-
-*  **macOS 26 (Tahoe) extends Declarative Device Management (DDM) to support non-App Store software (.pkg). This allows you to deploy installation packages via 'Declarations' for a more modern, transparent, and resilient installation experience compared to the legacy Jamf Binary/Policy method.**## DDM Package vs. Jamf Policy
+## Answer**macOS 26 (Tahoe) extends Declarative Device Management (DDM) to support non-App Store software (.pkg). This allows you to deploy installation packages via 'Declarations' for a more modern, transparent, and resilient installation experience compared to the legacy Jamf Binary/Policy method.**## DDM Package vs. Jamf Policy
 
 | Feature | Jamf Policy (Legacy) | DDM Package Declaration (Modern) |
 | :--- | :--- | :--- |
@@ -27,9 +18,18 @@ title: >-
 |**Offline Support**| Must be online to trigger the check-in. | If the declaration is local, the device handles install retries offline. |
 |**Suitability**| Best for complex scripts and .dmg installs. | Best for standard signed**Distribution Packages (.pkg)**. |
 
-## Requirements & Limitations***OS**: macOS 26 (Tahoe) or later.***Package Quality**:***Must be a**Distribution Package**(not a basic component pkg).***Must be**signed**with a valid Apple Developer ID Installer certificate.***Must be**notarized**by Apple. MDM deployment in macOS 26 is extremely strict regarding security; unsigned or un-notarized packages will fail with a `VerificationFailed` error in the status channel.
+## Requirements & Limitations
 
-## When to use each?***Use DDM Packages**: For standard core software (Microsoft Office, Google Chrome, Adobe Acrobat) on macOS 26+ machines where you need high visibility of success rates.***Use Jamf Policies**: For legacy machines (v25 and below), complex workflows (requires post-install scripts or UI interaction), or non-standard installers (DMGs).
+***OS**: macOS 26 (Tahoe) or later.
+***Package Quality**:
+* Must be a**Distribution Package**(not a basic component pkg).
+* Must be**signed**with a valid Apple Developer ID Installer certificate.
+* Must be**notarized**by Apple. MDM deployment in macOS 26 is extremely strict regarding security; unsigned or un-notarized packages will fail with a `VerificationFailed` error in the status channel.
+
+## When to use each?
+
+***Use DDM Packages**: For standard core software (Microsoft Office, Google Chrome, Adobe Acrobat) on macOS 26+ machines where you need high visibility of success rates.
+***Use Jamf Policies**: For legacy machines (v25 and below), complex workflows (requires post-install scripts or UI interaction), or non-standard installers (DMGs).
 
 ## Expert Tip: The Notarization Check
 

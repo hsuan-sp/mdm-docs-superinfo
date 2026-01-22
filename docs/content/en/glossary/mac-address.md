@@ -1,13 +1,16 @@
 ---
-category:
-  - Network
-term: MAC Address
+term: "MAC Address"
+category: ["Network"]
 ---
+
 ## Term Definition
 
 A**MAC Address**(Media Access Control Address) is the unique hardware identifier assigned to a network interface (Wi-Fi or Ethernet card).
 
-Privacy developments:***Hardware MAC**: The permanent, physical ID burned into the chip.***Private Wi-Fi Address**: A feature where the device generates a**randomized**MAC address for each Wi-Fi network it joins. This prevents tracking across different locations (e.g., a coffee shop cannot see that the same device visited yesterday).***MDM Impact**: Schools often need to disable "Private Wi-Fi Address" on their internal networks so they can reliably identify and filter specific devices.
+Privacy developments:
+
+***Hardware MAC**: The permanent, physical ID burned into the chip.
+***Private Wi-Fi Address**: A feature where the device generates a**randomized**MAC address for each Wi-Fi network it joins. This prevents tracking across different locations (e.g., a coffee shop cannot see that the same device visited yesterday).**MDM Impact**: Schools often need to disable "Private Wi-Fi Address" on their internal networks so they can reliably identify and filter specific devices.
 
 ## Analogy
 

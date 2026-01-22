@@ -1,11 +1,16 @@
 ---
-category:
-  - Network
-term: DHCP (Dynamic Host Configuration Protocol)
+term: "DHCP (Dynamic Host Configuration Protocol)"
+category: ["Network"]
 ---
-## Term Definition***DHCP**is a foundational network protocol that automates the assignment of IP addresses and other network parameters to devices.
 
-How it works:***Discovery**: When a device connects to a network (Wi-Fi or Ethernet), it broadcasts a request for an address.***Lease**: The DHCP server "leases" a temporary IP address to the device from a pool.***Renewal**: The device periodically renews its lease to keep using that address.***Efficiency**: Prevents "IP conflicts" where two devices accidentally try to use the same address at the same time.
+## Term Definition**DHCP**is a foundational network protocol that automates the assignment of IP addresses and other network parameters to devices.
+
+How it works:
+
+***Discovery**: When a device connects to a network (Wi-Fi or Ethernet), it broadcasts a request for an address.
+***Lease**: The DHCP server "leases" a temporary IP address to the device from a pool.
+***Renewal**: The device periodically renews its lease to keep using that address.
+***Efficiency**: Prevents "IP conflicts" where two devices accidentally try to use the same address at the same time.
 
 ## Analogy
 

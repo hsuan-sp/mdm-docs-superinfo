@@ -1,11 +1,15 @@
 ---
-category:
-  - Enrollment
-term: BYOD (Bring Your Own Device)
+term: "BYOD (Bring Your Own Device)"
+category: ["Enrollment"]
 ---
-## Term Definition***Bring Your Own Device (BYOD)**is a deployment model where students or staff use their personal hardware to access institutional resources.
 
-Apple’s**User Enrollment**framework facilitates BYOD by:***Work Partitioning**: Creating a separate, encrypted file system for work data.***Privacy Focus**: Institutional management is limited to the work partition.***Separation**: The organization has**no access**to personal photos, messages, location data, or apps on the rest of the device.
+## Term Definition**Bring Your Own Device (BYOD)**is a deployment model where students or staff use their personal hardware to access institutional resources.
+
+Apple’s**User Enrollment**framework facilitates BYOD by:
+
+***Work Partitioning**: Creating a separate, encrypted file system for work data.
+***Privacy Focus**: Institutional management is limited to the work partition.
+***Separation**: The organization has**no access**to personal photos, messages, location data, or apps on the rest of the device.
 
 This achieves a critical balance between maintaining institutional security and protecting personal user privacy.
 

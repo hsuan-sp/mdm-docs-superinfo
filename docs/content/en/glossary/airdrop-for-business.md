@@ -1,11 +1,14 @@
 ---
-category:
-  - Security
-term: AirDrop for Business
+term: "AirDrop for Business"
+category: ["Security"]
 ---
-## Term Definition***AirDrop for Business**(also known as**Managed AirDrop**) is a management capability that allows IT administrators to control data flow via AirDrop.
 
-The system distinguishes between:***Managed Storage**: Organizational apps and data.***Unmanaged Storage**: Personal apps and data.
+## Term Definition**AirDrop for Business**(also known as**Managed AirDrop**) is a management capability that allows IT administrators to control data flow via AirDrop.
+
+The system distinguishes between:
+
+***Managed Storage**: Organizational apps and data.
+***Unmanaged Storage**: Personal apps and data.
 
 IT can prevent users from sharing sensitive school documents with personal devices while still allowing AirDrop for legitimate schoolwork between managed devices.
 

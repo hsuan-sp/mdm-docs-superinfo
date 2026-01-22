@@ -1,11 +1,15 @@
 ---
-category:
-  - Network
-term: Restrict App Downloads over Cellular
+term: "Restrict App Downloads over Cellular"
+category: ["Network"]
 ---
-## Term Definition***Restrict App Downloads over Cellular**is a modern policy configuration available via Declarative Device Management (DDM).
 
-Functionality:***Constraint**: It explicitly forbids the App Store and MDM from downloading or updating apps while using a cellular (4G/5G) connection.***Enforcement**: Downloads will pause and wait until the device connects to a Wi-Fi network.***Purpose**: Prevents students with cellular-enabled iPads from accidentally exhausting the school's data plan quota with large game or OS updates.
+## Term Definition**Restrict App Downloads over Cellular**is a modern policy configuration available via Declarative Device Management (DDM).
+
+Functionality:
+
+***Constraint**: It explicitly forbids the App Store and MDM from downloading or updating apps while using a cellular (4G/5G) connection.
+***Enforcement**: Downloads will pause and wait until the device connects to a Wi-Fi network.
+***Purpose**: Prevents students with cellular-enabled iPads from accidentally exhausting the school's data plan quota with large game or OS updates.
 
 ## Analogy
 

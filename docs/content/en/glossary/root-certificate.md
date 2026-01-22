@@ -1,13 +1,17 @@
 ---
-category:
-  - Security
-term: Root Certificate
+term: "Root Certificate"
+category: ["Security"]
 ---
+
 ## Term Definition
 
 A**Root Certificate**is the fundamental anchor of trust in a Public Key Infrastructure (PKI).
 
-Role in a school:***Trust Anchor**: It is the "Parent" certificate. If a device trusts the Parent, it automatically trusts all "Children" certificates signed by that Parent.***Internal Security**: Schools generate their own internal "School Root CA."***Deployment**: This Root Certificate must be installed on every student iPad. Once installed, the iPad will trust the school's private secure Wi-Fi and internal websites, which otherwise would be rejected as "unsafe."
+Role in a school:
+
+***Trust Anchor**: It is the "Parent" certificate. If a device trusts the Parent, it automatically trusts all "Children" certificates signed by that Parent.
+***Internal Security**: Schools generate their own internal "School Root CA."
+***Deployment**: This Root Certificate must be installed on every student iPad. Once installed, the iPad will trust the school's private secure Wi-Fi and internal websites, which otherwise would be rejected as "unsafe."
 
 ## Analogy
 

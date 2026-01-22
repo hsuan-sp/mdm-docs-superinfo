@@ -1,13 +1,17 @@
 ---
-category:
-  - Core
-term: Kernel Extension (Kext)
+term: "Kernel Extension (Kext)"
+category: ["Core"]
 ---
+
 ## Term Definition
 
 A**Kernel Extension (Kext)**is a specialized bundle of code that extends the native functionality of the macOS kernel.
 
-Key characteristics:***Deep Access**: Operates at the "Ring 0" level, the absolute core of the operating system.***Risk Profile**: Because Kexts run with the highest possible privileges, a bug in a Kext can cause a complete system crash (Kernel Panic), and a vulnerability can compromise the entire machine.***Modern Status**: Apple is actively deprecating Kexts. Modern macOS versions require**System Extensions**(which run in user space) instead. Installing a legacy Kext now requires booting into Recovery Mode and manually downgrading system security settings.
+Key characteristics:
+
+***Deep Access**: Operates at the "Ring 0" level, the absolute core of the operating system.
+***Risk Profile**: Because Kexts run with the highest possible privileges, a bug in a Kext can cause a complete system crash (Kernel Panic), and a vulnerability can compromise the entire machine.
+***Modern Status**: Apple is actively deprecating Kexts. Modern macOS versions require**System Extensions**(which run in user space) instead. Installing a legacy Kext now requires booting into Recovery Mode and manually downgrading system security settings.
 
 ## Analogy
 

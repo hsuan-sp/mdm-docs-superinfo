@@ -1,8 +1,8 @@
 ---
-category:
-  - Network
-term: VLAN
+term: "VLAN"
+category: ["Network"]
 ---
+
 ## Definition
 
 A Virtual Local Area Network (VLAN) is a logical subnetwork within a physical network. Schools often use VLANs to separate different types of traffic—such as "Academic Network," "Administrative Network," and "Guest Wi-Fi"—onto their own isolated channels. This prevents "broadcast noise" from slowing down the network and ensures that guests cannot access sensitive school servers.

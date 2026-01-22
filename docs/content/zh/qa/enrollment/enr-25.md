@@ -1,54 +1,116 @@
 ---
-category: 註冊與自動派送 (Enrollment)
 id: enr-25
-important: false
-tags:
-  - ADE
-  - 設定助理
-  - 部署策略
-  - 最佳實踐
-title: ADE 自動註冊時，IT 應該「跳過」哪些設定助理步驟？
+title: "PreStage 註冊時可以跳過哪些「設定輔助程式」步驟？教育場域的建議設定為何？"
+category: "第二部分：裝置註冊與部署 (Device Enrollment)"
+important: true
+tags: ["PreStage", "設定輔助程式", "ADE", "部署加速", "最佳實務"]
 ---
 
-## Q: ADE 自動註冊時，IT 應該「跳過」哪些設定助理步驟？
+## Q: PreStage 註冊時可以跳過哪些「設定輔助程式」步驟？教育場域的建議設定為何？
 
-## Answer
+## Answer**PreStage Enrollment 可跳過多項設定輔助程式步驟。教育環境建議跳過大部分非必要步驟，以加速部署並減少學生誤操作。**## 建議跳過的步驟（教育環境）
 
-自動裝置註冊 (ADE) 允許 IT 預先設定並跳過 iPad 或 Mac 初始設定時的多個冗長畫面。這能大幅加快部署速度，並防止學生在設定過程中登入個人帳號或設定與學校政策衝突的功能。
+## 隱私與定位相關
 
-### 建議「跳過」的步驟 （在 Jamf Pro 中設為隱藏）
+* ✅ 隱私與定位服務 (Location Services)：建議由 IT 統一開啟
+***✅ App 分析**(App Analytics)：學校代表組織決定即可
+***✅ 螢幕使用時間**(Screen Time)：這是家長控制功能，學校應使用 MDM 限制
 
-為了提供最流暢的開箱即用體驗，我們建議跳過除**「遠端管理」**與**「Wi-Fi」**之外的幾乎所有步驟。
+## Apple 服務相關
 
-*  **✅ App 分析**(App Analytics)：由學校代表組織決定即可。
+***✅ Apple Pay**：學生通常無信用卡，無需設定
+* ✅ Siri / 新版導覽：跳過以加速學生開機
+* ✅ Apple Intelligence (iOS 26)：建議跳過，後續視需要開放
+***✅ iMessage 與 FaceTime**：避免學生登入個人帳號
 
-*  **✅ 螢幕使用時間**(Screen Time)：這是家長控制功能，學校應使用 MDM 限制設定檔來管理，而非讓學生自行設定。
+## 外觀與顯示
 
-*  **✅ Apple Intelligence**(iOS 26)：跳過。這些 AI 功能後續可透過 MDM 統一開啟或導引。
+***✅ 原彩顯示**(True Tone)：非必要功能
+***✅ 顯示大小**(Display Zoom)：建議使用預設值
+***✅ 外觀**(Appearance)：統一使用預設主題
+* ✅ Liquid Glass 外觀設定（iOS 26 新增）：建議跳過以統一介面
 
-*  **✅ Apple Pay**：學生通常無信用卡，無需設定。
+## 其他
 
-*  **✅ iMessage 與 FaceTime**：避免學生在初始設定時登入個人帳號。
+***✅ 服務條款**(Terms and Conditions)：IT 代表組織同意即可
+***✅ 診斷資料**(Diagnostics)：隱私考量，建議跳過
 
-*  **✅ 原彩顯示**(True Tone)：非必要功能，建議跳過以節省時間。
+## 不可跳過或建議保留的項目
 
-*  **✅ 顯示大小**(Display Zoom)：建議使用系統預設值。
+## 必須保留
 
-*  **✅ 外觀**(Appearance)：統一使用預設主題，確保全校介面一致性。
+***❌ 遠端管理**(Remote Management)：無法跳過，這是 ADE 的核心步驟，向使用者說明裝置受組織管理
 
-*  **✅ 服務條款**(Terms and Conditions)：IT 已代表組織在 ASM/ABM 中同意。
+## 建議保留（視情況）
 
-*  **✅ 診斷資料**(Diagnostics)：基於隱私與速度考量，建議跳過。
+***⚠️ Touch ID / Face ID**：
+* 國小低年級：建議跳過（避免指紋辨識設定失敗造成困擾）
+* 國中以上：建議保留（提升解鎖便利性與安全性）
+* 教職員裝置：建議保留
+***⚠️ Apple 帳號登入**：
+* 共享 iPad：由管理者統一設定管理式 Apple 帳號
+* 一對一裝置：視學校政策決定是否讓學生登入
 
-### 必須「顯示」或謹慎處理的步驟***❌ 遠端管理**(Remote Management)：
+## 實務效益
 
-**無法跳過**。這是 ADE 的核心步驟，向使用者說明裝置受組織管理，必須執行才能完成註冊。
+## 部署效率提升
 
-*  **⚠ ️ Touch ID / Face ID**：建議在老師載具或 1:1 個人配發機上顯示，以強化本機安全性；但在充電車的共有機（Shared Device）建議跳過，以免學生亂設導致鎖機。
+***傳統流程**：完整設定輔助程式需 10-15 分鐘
+***優化後流程**：僅需 1-2 分鐘
+***大量部署**：假設需要設定 30 台 iPad，可節省 4-6 小時
 
-*  **⚠ ️ Apple 帳號登入**：若學校使用「受管 Apple 帳號 (Managed Apple Account)」進行 1:1 派送，建議顯示；若為共用載具且無須登入帳號，則應跳過。
+## 減少技術支援需求
 
----
+* 學生不會卡在「Siri 聽不懂我說話」
+* 避免「Apple Pay 沒有卡片」的疑惑
+* 減少定位服務被誤關導致「尋找」功能失效
 
-### 2026 實務建議：
-隨著**DDM （宣告式裝置管理）**的普及，部分設定即使學生事後改動，MDM 也能自動「自癒」回標準狀態。請定期檢查 Jamf Pro 的跳過清單，確保符合最新的資安稽核要求。
+## Jamf Pro 設定範例
+
+## 設定路徑
+
+1. 前往**Devices**>**PreStage Enrollments**（或**Computers**>**PreStage Enrollments**）
+1. 建立或編輯 PreStage
+1. 進入**Account Settings**和**Setup Assistant**分頁
+
+## 建議設定
+
+在**Setup Assistant**分頁中，勾選（跳過）以下項目：
+
+* Location Services
+* Restore（從 iCloud 回復，學校裝置不需要）
+* Apple ID（共享裝置）
+* Terms and Conditions
+* Touch ID / Face ID（視年齡決定）
+* Siri
+* Apple Intelligence
+* Diagnostics
+* App Analytics
+* Screen Time
+* True Tone
+* Appearance
+
+## 不要勾選（保留）的項目
+
+* Remote Management（無法跳過）
+* Biometric（視情況決定）
+
+## 特殊情境考量
+
+## 共享 iPad
+
+* 跳過所有個人化設定
+* 不允許學生登入個人 Apple 帳號
+* 僅保留「遠端管理」步驟
+
+## 一對一配發（教職員）
+
+* 可保留 Touch ID / Face ID
+* 視政策決定是否允許登入 Apple 帳號
+* 可保留 Siri 等個人化功能
+
+## BYOD 裝置
+
+* 建議保留較多設定步驟
+* 讓使用者保有個人化選項
+* 僅跳過明確不需要的項目

@@ -1,9 +1,8 @@
 ---
-category:
-  - Jamf
-  - Security
-term: Jamf Data Policy
+term: "Jamf Data Policy"
+category: ["Jamf","Security"]
 ---
+
 ## Definition
 
 Jamf Data Policy is a Data Loss Prevention (DLP) capability within the Jamf ecosystem. It allows administrators to set specific rules to prevent sensitive institutional data from being leaked via methods like AirDrop, screenshots, or copy-pasting into unauthorized apps. All violations are logged and can be audited by the IT department to ensure compliance with school data security policies.

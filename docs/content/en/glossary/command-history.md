@@ -1,11 +1,15 @@
 ---
-category:
-  - Core
-term: Command History
+term: "Command History"
+category: ["Core"]
 ---
-## Term Definition***Command History**is a comprehensive audit log within the MDM console that tracks every action sent to an individual device.
 
-Administrators use this history to:***Audit**: Verify when a specific command (like "Lock Device" or "Clear Passcode") was issued.***Troubleshoot**: Investigate error codes associated with failed app installations or profile deployments.***Track Status**: Monitor whether a command is currently**Pending**(device offline),**Succeeded**, or**Failed**.
+## Term Definition**Command History**is a comprehensive audit log within the MDM console that tracks every action sent to an individual device.
+
+Administrators use this history to:
+
+***Audit**: Verify when a specific command (like "Lock Device" or "Clear Passcode") was issued.
+***Troubleshoot**: Investigate error codes associated with failed app installations or profile deployments.
+***Track Status**: Monitor whether a command is currently**Pending**(device offline),**Succeeded**, or**Failed**.
 
 ## Analogy
 

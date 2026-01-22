@@ -1,13 +1,17 @@
 ---
-category:
-  - Security
-term: Secure Token
+term: "Secure Token"
+category: ["Security"]
 ---
+
 ## Term Definition
 
 A**Secure Token**is a macOS cryptographic attribute that grants a user account the authority to perform critical security operations.
 
-Key functions:***FileVault**: Only users with a Secure Token can enable encryption or unlock the disk at boot.***Chain of Custody**: The first user created on a Mac (often via automated setup) gets the first token. That user must then "grant" tokens to subsequent users.***MDM Escrow**: In a managed environment, the MDM uses a**Bootstrap Token**to automatically grant Secure Tokens to mobile accounts, preventing students from being locked out of encryption management.
+Key functions:
+
+***FileVault**: Only users with a Secure Token can enable encryption or unlock the disk at boot.
+***Chain of Custody**: The first user created on a Mac (often via automated setup) gets the first token. That user must then "grant" tokens to subsequent users.
+***MDM Escrow**: In a managed environment, the MDM uses a**Bootstrap Token**to automatically grant Secure Tokens to mobile accounts, preventing students from being locked out of encryption management.
 
 ## Analogy
 

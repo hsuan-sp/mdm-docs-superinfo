@@ -1,17 +1,15 @@
 ---
-category:
-  - Security
-term: ACME (Automated Certificate Management Environment)
+term: "ACME (Automated Certificate Management Environment)"
+category: ["Security"]
 ---
-## 術語定義***ACME (Automated Certificate Management Environment，自動憑證管理環境）**是一個用於自動化管理數位憑證的標準協定。
+
+## 術語定義**ACME (Automated Certificate Management Environment，自動憑證管理環境)**是一個用於自動化管理數位憑證的標準協定。
 
 它能讓裝置自動執行以下作業：
 
-*  **申請**：主動要求核發新的身分憑證。
-
-*  **驗證**：向憑證授權單位 (CA) 證明裝置的真實身分。
-
-*  **續期**：在憑證到期前自動更新，完全無需 IT 人員手動介入。
+***申請**：主動要求核發新的身分憑證。
+***驗證**：向憑證授權單位 (CA) 證明裝置的真實身分。
+***續期**：在憑證到期前自動更新，完全無需 IT 人員手動介入。
 
 在現代 Apple 管理架構中，ACME 正在逐漸取代舊有的**SCEP**協定，確保裝置的身分憑證能無限期地維持有效且安全。
 

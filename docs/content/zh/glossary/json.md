@@ -1,9 +1,9 @@
 ---
-category:
-  - Other
-term: JSON (JavaScript Object Notation)
+term: "JSON (JavaScript Object Notation)"
+category: ["Other"]
 ---
-## 術語定義***JSON (JavaScript Object Notation)**是一種輕量級的資料交換格式，其特色在於易於人類閱讀與撰寫，同時也便於機器進行解析與產生。在 MDM 管理領域，JSON 經常被用來撰寫進階的配置架構 (Configuration Schemas)，或是在不同系統之間透過 API 傳輸資料。其結構是建立在「鍵值對 (Key-Value pairs)」的基礎之上。
+
+## 術語定義**JSON (JavaScript Object Notation)**是一種輕量級的資料交換格式，其特色在於易於人類閱讀與撰寫，同時也便於機器進行解析與產生。在 MDM 管理領域，JSON 經常被用來撰寫進階的配置架構 (Configuration Schemas)，或是在不同系統之間透過 API 傳輸資料。其結構是建立在「鍵值對 (Key-Value pairs)」的基礎之上。
 
 ## 白話文比喻
 

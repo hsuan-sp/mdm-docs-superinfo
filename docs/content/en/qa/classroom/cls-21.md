@@ -1,24 +1,19 @@
 ---
-category: 'Section 4: Classroom Management & Instructional Tools'
 id: cls-21
+title: "Can a teacher force a student's screen to project to an Apple TV?"
+category: "Section 4: Classroom Management & Instructional Tools"
 important: false
-tags:
-  - AirPlay
-  - Apple TV
-  - Screen Sharing
-  - Instructional Display
-title: Can a teacher force a student's screen to project to an Apple TV?
+tags: ["AirPlay","Apple TV","Screen Sharing","Instructional Display"]
 ---
+
 ## Q: Can a teacher force a student's screen to project to an Apple TV?
 
-## Answer
-
-*  **Yes. Using the 'Classroom' app, a teacher can direct any student's screen to project via AirPlay without the student needing to take any action.**## Operation:
+## Answer**Yes. Using the 'Classroom' app, a teacher can direct any student's screen to project via AirPlay without the student needing to take any action.**## Operation:
 
 1. In the**Classroom**app, tap on the student.
-2. Tap the**AirPlay**icon.
-3. Select the**Apple TV**or AirPlay-compatible display in the room.
-4. The student's screen will immediately be projected.
+1. Tap the**AirPlay**icon.
+1. Select the**Apple TV**or AirPlay-compatible display in the room.
+1. The student's screen will immediately be projected.
 
 ## Essential Security Settings:
 

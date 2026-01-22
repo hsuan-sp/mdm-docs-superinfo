@@ -1,21 +1,14 @@
 ---
-category: 'Section 8: Education Scenarios & FAQ'
 id: edu-02
+title: "What is 'Shared iPad' and how does it differ from a standard iPad? When should we use it?"
+category: "Section 8: Education Scenarios & FAQ"
 important: false
-tags:
-  - Shared iPad
-  - Multi-User
-  - Deployment Modes
-  - iCloud
-title: >-
-  What is 'Shared iPad' and how does it differ from a standard iPad? When should
-  we use it?
+tags: ["Shared iPad","Multi-User","Deployment Modes","iCloud"]
 ---
+
 ## Q: What is 'Shared iPad' and how does it differ from a standard iPad? When should we use it?"
 
-## Answer
-
-*  **Shared iPad allows multiple students to log into the same physical device using their individual Managed Apple Accounts. Their documents and app data are isolated and synced to iCloud.**This is the ideal solution for computer labs or "trolley systems" where iPads are moved between different year groups throughout the day.
+## Answer**Shared iPad allows multiple students to log into the same physical device using their individual Managed Apple Accounts. Their documents and app data are isolated and synced to iCloud.**This is the ideal solution for computer labs or "trolley systems" where iPads are moved between different year groups throughout the day.
 
 ## Comparison Table:
 
@@ -27,7 +20,11 @@ title: >-
 |**Login Speed**| Instant (FaceID/Passcode) | Slower (Requires User Download) |
 |**Hardware Requirement**| Any modern iPad |**128GB+ Storage Recommended**|
 
-## Modern Features for 2026:***Proximity Login**: Students can now tap their iPhone or Apple Watch near a Shared iPad to instantly select their profile and authenticate, saving time at the start of a lesson.***Return to Service (Return to Service) Optimization**: On**iOS 26**, the system performs an "Instant Flush" of the previous user's local cache when they log out, ensuring the next student has immediate access to maximum storage capacity.***Guest Access**: You can enable a "Guest Mode" where data is completely deleted the moment the student logs out. This is perfect for visiting students or parent demonstration days.
+## Modern Features for 2026:
+
+***Proximity Login**: Students can now tap their iPhone or Apple Watch near a Shared iPad to instantly select their profile and authenticate, saving time at the start of a lesson.
+***Return to Service (RTS) Optimization**: On**iOS 26**, the system performs an "Instant Flush" of the previous user's local cache when they log out, ensuring the next student has immediate access to maximum storage capacity.
+***Guest Access**: You can enable a "Guest Mode" where data is completely deleted the moment the student logs out. This is perfect for visiting students or parent demonstration days.
 
 ## Institutional Advice:
 

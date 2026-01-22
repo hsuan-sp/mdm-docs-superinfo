@@ -1,20 +1,16 @@
 ---
-category:
-  - Education
-  - Jamf
-term: Managed Classes（管理化班級）
+term: "Managed Classes（管理化班級）"
+category: ["Education","Jamf"]
 ---
-## 術語定義***Managed Classes （管理化班級）**是在 MDM 或 Apple School Manager 中定義的教學群組。
+
+## 術語定義**Managed Classes (管理化班級)**是在 MDM 或 Apple School Manager 中定義的教學群組。
 
 資料結構包含：
 
-*  **名冊**：學生的 Managed Apple ID 及其配對的裝置清單。
-
-*  **導師**：被授權管理該班級的教師帳號。
-
-*  **排程**：指定該班級的上課時段（可選）。
-
-*  **自動化**：這些資料會自動匯入教師的**Apple Classroom**App，讓老師無需手動輸入即可開始上課。
+***名冊**：學生的 Managed Apple ID 及其配對的裝置清單。
+***導師**：被授權管理該班級的教師帳號。
+***排程**：指定該班級的上課時段（可選）。
+***自動化**：這些資料會自動匯入教師的**Apple Classroom**App，讓老師無需手動輸入即可開始上課。
 
 ## 白話文比喻
 

@@ -1,13 +1,17 @@
 ---
-category:
-  - macOS
-term: Firmware Password
+term: "Firmware Password"
+category: ["macOS"]
 ---
+
 ## Term Definition
 
 A**Firmware Password**is a foundational security lock designed for Intel-based Macs. (Note: On modern Apple Silicon Macs, this has been superseded by**"Recovery Lock"**).
 
-What it protects:***Boot Control**: Prevents the Mac from booting from anything other than the designated startup disk (e.g., blocks booting from a USB drive).***Recovery Access**: Requires a password to enter macOS Recovery, preventing unauthorized users from wiping the computer or resetting the admin password.***Deep Security**: It acts as a barrier that exists before the operating system even starts to load.
+What it protects:
+
+***Boot Control**: Prevents the Mac from booting from anything other than the designated startup disk (e.g., blocks booting from a USB drive).
+***Recovery Access**: Requires a password to enter macOS Recovery, preventing unauthorized users from wiping the computer or resetting the admin password.
+***Deep Security**: It acts as a barrier that exists before the operating system even starts to load.
 
 ## Analogy
 

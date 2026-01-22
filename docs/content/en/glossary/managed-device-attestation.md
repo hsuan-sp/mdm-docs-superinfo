@@ -1,11 +1,15 @@
 ---
-category:
-  - Security
-term: Managed Device Attestation
+term: "Managed Device Attestation"
+category: ["Security"]
 ---
-## Term Definition***Managed Device Attestation**is a high-security feature that cryptographically verifies the identity and integrity of a device.
 
-How it works:***Secure Enclave**: The device uses its built-in hardware security chip to generate a cryptographic key.***Apple Server**: This key is sent to Apple's attestation servers to verify that the device is a genuine Apple product (not a hackintosh or simulator) and has not been compromised.***Outcome**: The device receives a "certificate of authenticity" that it presents to the MDM or Wi-Fi network to gain access.
+## Term Definition**Managed Device Attestation**is a high-security feature that cryptographically verifies the identity and integrity of a device.
+
+How it works:
+
+***Secure Enclave**: The device uses its built-in hardware security chip to generate a cryptographic key.
+***Apple Server**: This key is sent to Apple's attestation servers to verify that the device is a genuine Apple product (not a hackintosh or simulator) and has not been compromised.
+***Outcome**: The device receives a "certificate of authenticity" that it presents to the MDM or Wi-Fi network to gain access.
 
 ## Analogy
 

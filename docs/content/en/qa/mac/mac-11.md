@@ -1,21 +1,14 @@
 ---
-category: 'Section 7: Mac Management'
 id: mac-11
+title: "Why does my Mac show 'Unidentified Developer' or 'Cannot be opened' when installing software?"
+category: "Section 7: Mac Management"
 important: false
-tags:
-  - Gatekeeper
-  - Security
-  - Notarization
-  - Software Installation
-title: >-
-  Why does my Mac show 'Unidentified Developer' or 'Cannot be opened' when
-  installing software?
+tags: ["Gatekeeper","Security","Notarization","Software Installation"]
 ---
+
 ## Q: Why does my Mac show 'Unidentified Developer' or 'Cannot be opened' when installing software?
 
-## Answer
-
-*  **This is macOS's Gatekeeper security mechanism. For software required for teaching that has not been notarized by Apple, we recommend using 'Right-click to Open' or deploying via MDM to bypass quarantine flags.**Apple requires all macOS software to undergo**Notarization**to ensure it is free of malicious code. If software is older or the developer is not registered with Apple, it will be blocked.
+## Answer**This is macOS's Gatekeeper security mechanism. For software required for teaching that has not been notarized by Apple, we recommend using 'Right-click to Open' or deploying via MDM to bypass quarantine flags.**Apple requires all macOS software to undergo**Notarization**to ensure it is free of malicious code. If software is older or the developer is not registered with Apple, it will be blocked.
 
 ## User-Side Solutions (SOP):
 
@@ -24,21 +17,21 @@ title: >-
 This is the standard way to bypass the block without lowering overall system security.
 
 1. Find the app in**Finder**.
-2. Hold the**Control**key (or right-click) and select**Open**.
-3. The resulting dialog will now include an**Open**button. Once selected, the system adds this app to a local allowlist.
+1. Hold the**Control**key (or right-click) and select**Open**.
+1. The resulting dialog will now include an**Open**button. Once selected, the system adds this app to a local allowlist.
 
 ## Option 2: System Settings Override
 
 1. When the block message appears, click "OK."
-2. Go to**System Settings > Privacy & Security**.
-3. Under the "Security" section, look for "[App Name] was blocked" and click**Open Anyway**.
-4. Authenticate with an administrator password to run the app.
+1. Go to**System Settings > Privacy & Security**.
+1. Under the "Security" section, look for "[App Name] was blocked" and click**Open Anyway**.
+1. Authenticate with an administrator password to run the app.
 
 ## Administrator Solutions (Jamf Pro):
 
 ## Strategy 1: Deploy via Policy (Recommended)
 
-When software is installed via a Jamf Pro Policy, it is written by the Jamf Binary with Root privileges. This typically**does not**apply the "Download Quarantine" attribute (`com.Apple.quarantine`), allowing the app to open without a Gatekeeper warning.
+When software is installed via a Jamf Pro Policy, it is written by the Jamf Binary with Root privileges. This typically**does not**apply the "Download Quarantine" attribute (`com.apple.quarantine`), allowing the app to open without a Gatekeeper warning.
 
 ## Strategy 2: Remove Quarantine Attribute via Script
 

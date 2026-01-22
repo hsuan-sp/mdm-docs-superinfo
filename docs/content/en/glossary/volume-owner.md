@@ -1,13 +1,17 @@
 ---
-category:
-  - Security
-term: Volume Owner
+term: "Volume Owner"
+category: ["Security"]
 ---
+
 ## Term Definition
 
 The**Volume Owner**is a security designation within the macOS architecture on Apple Silicon (M-series) Macs.
 
-Privileges:***Exclusivity**: Only a Volume Owner can authorize software updates, modify startup security settings (e.g., enable booting from external drives), or authorize a factory reset in Recovery Mode.***Creation**: The first user to claim the Mac setup becomes the first Volume Owner.***MDM Role**: MDM uses a**Bootstrap Token**to act as a "Virtual Volume Owner," allowing it to push updates and manage security without needing the physical user's password.
+Privileges:
+
+***Exclusivity**: Only a Volume Owner can authorize software updates, modify startup security settings (e.g., enable booting from external drives), or authorize a factory reset in Recovery Mode.
+***Creation**: The first user to claim the Mac setup becomes the first Volume Owner.
+***MDM Role**: MDM uses a**Bootstrap Token**to act as a "Virtual Volume Owner," allowing it to push updates and manage security without needing the physical user's password.
 
 ## Analogy
 

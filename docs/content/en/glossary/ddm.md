@@ -1,11 +1,15 @@
 ---
-category:
-  - Core
-term: DDM (Declarative Device Management)
+term: "DDM (Declarative Device Management)"
+category: ["Core"]
 ---
-## Term Definition***Declarative Device Management (DDM)**is Apple’s next-generation management architecture designed for a more scaleable and reactive ecosystem.
 
-Core concepts:***Declarations**: Instead of a stream of commands, the server sends "Declarations" (sets of rules and desires) to the device.***Autonomy**: The device manages itself based on these rules. It monitors its own state (e.g., OS version, app presence) without waiting for a server "poke."***Status Channel**: The device proactively reports changes in its state back to the server only when something relevant happens.
+## Term Definition**Declarative Device Management (DDM)**is Apple’s next-generation management architecture designed for a more scaleable and reactive ecosystem.
+
+Core concepts:
+
+***Declarations**: Instead of a stream of commands, the server sends "Declarations" (sets of rules and desires) to the device.
+***Autonomy**: The device manages itself based on these rules. It monitors its own state (e.g., OS version, app presence) without waiting for a server "poke."
+***Status Channel**: The device proactively reports changes in its state back to the server only when something relevant happens.
 
 This shift significantly reduces server load, improves battery life, and makes device management far more responsive to real-world changes.
 

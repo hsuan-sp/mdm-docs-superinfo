@@ -1,11 +1,15 @@
 ---
-category:
-  - Other
-term: Deprecated
+term: "Deprecated"
+category: ["Other"]
 ---
-## Term Definition***Deprecated**is a status indicator signal that a specific technology, feature, or API is slated for removal.
 
-Key points for IT:***Functionality**: A deprecated feature usually still works in the current OS version, but it is no longer being updated.***Future Removal**: It serves as an official warning that the feature will be deleted in a future major OS update.***Action Required**: IT administrators should treat "Deprecated" notices as a deadline to migrate to a newer, supported replacement.
+## Term Definition**Deprecated**is a status indicator signal that a specific technology, feature, or API is slated for removal.
+
+Key points for IT:
+
+***Functionality**: A deprecated feature usually still works in the current OS version, but it is no longer being updated.
+***Future Removal**: It serves as an official warning that the feature will be deleted in a future major OS update.
+***Action Required**: IT administrators should treat "Deprecated" notices as a deadline to migrate to a newer, supported replacement.
 
 ## Analogy
 

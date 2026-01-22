@@ -1,8 +1,8 @@
 ---
-category:
-  - Other
-term: JSON (JavaScript Object Notation)
+term: "JSON (JavaScript Object Notation)"
+category: ["Other"]
 ---
+
 ## Definition
 
 JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. In MDM, JSON is frequently used to write advanced configuration schemas or to transmit data between systems via APIs. Its structure is based on "Key-Value pairs."

@@ -1,11 +1,15 @@
 ---
-category:
-  - Security
-term: FileVault
+term: "FileVault"
+category: ["Security"]
 ---
-## Term Definition***FileVault**is the integrated full-disk encryption (FDE) technology for macOS.
 
-Technical features:***Encryption**: Uses**XTS-AES-128**encryption with a 256-bit key to prevent unauthorized access to data on the startup disk.***Boot Security**: Data is only decrypted once the user successfully logs into an authorized account (or IT uses a recovery key).***Recovery Keys**: Organizations can use MDM to generate and securely store a unique**Personal Recovery Key (PRK)**for every Mac, ensuring IT can always regain access if a user forgets their password.
+## Term Definition**FileVault**is the integrated full-disk encryption (FDE) technology for macOS.
+
+Technical features:
+
+***Encryption**: Uses**XTS-AES-128**encryption with a 256-bit key to prevent unauthorized access to data on the startup disk.
+***Boot Security**: Data is only decrypted once the user successfully logs into an authorized account (or IT uses a recovery key).
+***Recovery Keys**: Organizations can use MDM to generate and securely store a unique**Personal Recovery Key (PRK)**for every Mac, ensuring IT can always regain access if a user forgets their password.
 
 Enforcing FileVault is a cornerstone of modern organizational security and data privacy compliance.
 
