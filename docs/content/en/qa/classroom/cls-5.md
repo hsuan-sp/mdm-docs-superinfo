@@ -14,23 +14,19 @@ title: >-
 
 ## Answer
 
-* **This is usually caused by missing 'Local Network' permissions or an expired teacher certificate.**
+***This is usually caused by missing 'Local Network' permissions or an expired teacher certificate.**## Troubleshooting Checklist:
 
-## Troubleshooting Checklist:
+1.**Check 'Local Network' Privacy (Most Common)**:
 
-1. **Check 'Local Network' Privacy (Most Common)**:
+***On both teacher and student iPads, go to**Settings > Privacy & Security > Local Network**.
+***Ensure the toggle for**Classroom**is turned**ON**. If this is off, the app is blocked from "seeing" other devices on the same Wi-Fi.
 
-* **On both teacher and student iPads, go to ** Settings > Privacy & Security > Local Network**.
-* **Ensure the toggle for ** Classroom**is turned ** ON**. If this is off, the app is blocked from "seeing" other devices on the same Wi-Fi.
+1.**Reset the Bluetooth Stack**:
 
-1. **Reset the Bluetooth Stack**:
+***Toggle Bluetooth OFF and ON for both the teacher and several students. If this fails, a device restart is the next step.**2.**Education Profile Status**:
 
-* **Toggle Bluetooth OFF and ON for both the teacher and several students. If this fails, a device restart is the next step.**
+***If the entire class is showing as offline, the**"Education Configuration Profile"**issued by your MDM (Jamf Pro) may have expired or been revoked. Contact the ICT department to re-push the education settings.
 
-2. **Education Profile Status**:
+1.**Wi-Fi Segmentation**:
 
-* **If the entire class is showing as offline, the **"Education Configuration Profile"** issued by your MDM (Jamf Pro) may have expired or been revoked. Contact the ICT department to re-push the education settings.
-
-1. **Wi-Fi Segmentation**:
-
-* **While devices are discovered via Bluetooth, data is exchanged over Wi-Fi. Ensure everyone is on the same ** SSID**and that "Client Isolation" is disabled on your campus wireless access points.
+***While devices are discovered via Bluetooth, data is exchanged over Wi-Fi. Ensure everyone is on the same**SSID**and that "Client Isolation" is disabled on your campus wireless access points.

@@ -12,16 +12,14 @@ title: macOS 26 是最後支援 Intel Mac 的版本，現有 Intel Mac 可以用
 ---
 ## Q: macOS 26 是最後支援 Intel Mac 的版本，現有 Intel Mac 可以用多久？
 
-* **macOS 26 (Tahoe) 是支援 Intel Mac 的最後一個主要版本（終章版本）。從 2027 年發布的 macOS 27 開始，將僅支援 Apple Silicon（M1-M5 系列）。**
-
-## 支援現況與退場時間表
+***macOS 26 (Tahoe) 是支援 Intel Mac 的最後一個主要版本（終章版本）。從 2027 年發布的 macOS 27 開始，將僅支援 Apple Silicon（M1-M5 系列）。**## 支援現況與退場時間表
 
 ## 1. macOS 26 支援的最後一支 Intel 隊伍
 
-* **iMac (Retina 5K, 27 吋, 2020)**：Intel Mac 的巔峰之作。
-* **MacBook Pro (16 吋, 2019)**。
-* **Mac Pro (2019+)**。
-* **注意**：其餘更舊機型（如 2017 以前）已無法安裝現代 macOS，僅能運作於舊版。
+***iMac (Retina 5K, 27 吋， 2020)**：Intel Mac 的巔峰之作。
+***MacBook Pro (16 吋， 2019)**。
+***Mac Pro (2019+)**。
+***注意**：其餘更舊機型（如 2017 以前）已無法安裝現代 macOS，僅能運作於舊版。
 
 ## macOS 27（2026 下半年）
 
@@ -59,9 +57,9 @@ Jamf Pro 範例：
 
 ## 時間軸參考
 
-* **2026-2027**：Intel Mac 停留在 macOS 26，仍可正常使用
-* **2027-2028**：軟體支援逐步減少
-* **2029 之後**：安全更新結束，建議更換或轉為非連網用途
+***2026-2027**：Intel Mac 停留在 macOS 26，仍可正常使用
+***2027-2028**：軟體支援逐步減少
+***2029 之後**：安全更新結束，建議更換或轉為非連網用途
 
 ## Apple Silicon 特點
 

@@ -15,22 +15,17 @@ title: >-
 
 ## Answer
 
-* **AirDrop is a primary source of classroom distraction. We recommend either constant restrictions via MDM or dynamic control by the teacher.**
+***AirDrop is a primary source of classroom distraction. We recommend either constant restrictions via MDM or dynamic control by the teacher.**## Three Levels of Control:
 
-## Three Levels of Control:
+1.**Fully Disable (Strict - Ideal for Exams)**:
 
-1. **Fully Disable (Strict - Ideal for Exams)**:
+***In a Restrictions profile,**uncheck 'Allow AirDrop'**.
+***Result**: The AirDrop icon disappears from the Control Center, and no one can send or receive files.
 
-* **In a Restrictions profile,** uncheck 'Allow AirDrop'**.
-* **Result**: The AirDrop icon disappears from the Control Center, and no one can send or receive files.
+1.**Force 'Contacts Only' (Balanced)**:
 
-1. **Force 'Contacts Only' (Balanced)**:
+***Check**Force AirDrop to be treated as Unmanaged destination**(or similar "Contacts Only" profile restriction).
 
-* **Check ** Force AirDrop to be treated as Unmanaged destination**(or similar "Contacts Only" profile restriction).
+***Since student iPads typically lack each other's contact info, this blocks pranks from strangers while allowing communication with the teacher (if stored as a contact).**1.**Jamf Teacher Dynamic Control (Most Flexible)**:
 
-* **Since student iPads typically lack each other's contact info, this blocks pranks from strangers while allowing communication with the teacher (if stored as a contact).**
-
-1. **Jamf Teacher Dynamic Control (Most Flexible)**:
-
-* **Keep AirDrop enabled normally for file submissions.**
-* **During a lesson, the teacher can tap ** Disable AirDrop**in the Jamf Teacher app. AirDrop is immediately disabled for the class and automatically restores once the session ends.
+***Keep AirDrop enabled normally for file submissions.*****During a lesson, the teacher can tap**Disable AirDrop**in the Jamf Teacher app. AirDrop is immediately disabled for the class and automatically restores once the session ends.

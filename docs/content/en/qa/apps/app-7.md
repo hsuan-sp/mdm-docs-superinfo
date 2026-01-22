@@ -16,9 +16,7 @@ title: >-
 
 ## Answer
 
-* **Search results in Apple School Manager (ASM) can sometimes differ from the consumer App Store. If you cannot find a specific item, check these factors in order:**
-
-## 1. Search by Apple ID String (Recommended)
+***Search results in Apple School Manager (ASM) can sometimes differ from the consumer App Store. If you cannot find a specific item, check these factors in order:**## 1. Search by Apple ID String (Recommended)
 
 Don't search by name. Instead, find the app on the web-based App Store and locate its unique ID (e.g., `id123456789`). Paste this ID directly into the ASM search bar. This is the most accurate way to find a specific entry.
 
@@ -28,7 +26,7 @@ ASM only searches the App Store associated with your organization's registered r
 
 ## 3. B2B / Custom Apps
 
-Some proprietary or school-specific apps are distributed as "Custom Apps." Ensure the developer has added your **Organization ID** to their distribution list in App Store Connect.
+Some proprietary or school-specific apps are distributed as "Custom Apps." Ensure the developer has added your**Organization ID**to their distribution list in App Store Connect.
 
 ## Risk Warning:
 

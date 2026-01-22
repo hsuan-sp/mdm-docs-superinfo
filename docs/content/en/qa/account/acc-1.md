@@ -16,12 +16,7 @@ title: >-
 
 ### Impact Scope
 
-If you do not agree to the new terms, the following serious consequences will occur:
-
-***New Device Registration Blocked**: Newly purchased devices will fail the Automated Device Enrollment (ADE) process, because Apple's servers will reject registration requests from your organization.
-***VPP Content Sync Paused**: Volume Purchase Program (VPP) content synchronization will pause, and you will be unable to assign new apps or book licenses to your devices.
-***New Features Unavailable**: You will lose access to newer administrative features in ASM, such as**Apple Intelligence controls**and**device AppleCare+ coverage information**.
-***Long-term Risks**: Currently enrolled devices will not be immediately affected, but prolonged delays may prevent you from pushing new configuration profiles or app updates.
+If you do not agree to the new terms, the following serious consequences will occur:***New Device Registration Blocked**: Newly purchased devices will fail the Automated Device Enrollment (ADE) process, because Apple's servers will reject registration requests from your organization.***VPP Content Sync Paused**: Volume Purchase Program (VPP) content synchronization will pause, and you will be unable to assign new apps or book licenses to your devices.***New Features Unavailable**: You will lose access to newer administrative features in ASM, such as**Apple Intelligence controls**and**device AppleCare+ coverage information**.***Long-term Risks**: Currently enrolled devices will not be immediately affected, but prolonged delays may prevent you from pushing new configuration profiles or app updates.
 
 ### Who Can Accept the Terms?
 

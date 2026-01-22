@@ -1,18 +1,18 @@
 ---
 category:
   - Core
-term: Drag and Drop Multitasking (拖放式多工)
+term: Drag and Drop Multitasking （拖放式多工）
 ---
 ## 術語定義
 
-* **Drag and Drop Multitasking (拖放式多工)** 是 iPadOS 26.2 針對生產力強化的操作體驗。
+***Drag and Drop Multitasking （拖放式多工）**是 iPadOS 26.2 針對生產力強化的操作體驗。
 
 使用者可直接透過直覺的手勢操作：
 
-* **快速分頁**：從 Dock 或 Spotlight 直接拖拉 App 圖示到螢幕側邊。
-* **多視窗佈局 **：快速建立** 分割視圖 (Split View) **或** 滑動置前 (Slide Over)**。
+***快速分頁**：從 Dock 或 Spotlight 直接拖拉 App 圖示到螢幕側邊。
+***多視窗佈局**：快速建立**分割視圖 (Split View)**或**滑動置前 (Slide Over)**。
 
-* **內容傳輸**：在兩個並排的 App 之間直接拖曳文字、圖片或檔案。
+***內容傳輸**：在兩個並排的 App 之間直接拖曳文字、圖片或檔案。
 
 這大幅簡化了以往繁瑣的多工切換步驟。
 
@@ -22,4 +22,4 @@ term: Drag and Drop Multitasking (拖放式多工)
 
 以前想同時看兩本書，要把第一本收起來，再去拿第二本。
 
-現在可以 **直接從書架 (Dock) 把書拿下來**，直接往桌上已經攤開的書旁邊一放，兩本書就並排好了，完全不用在那邊開開關關，也不用按煩人的複製貼上。
+現在可以**直接從書架 (Dock) 把書拿下來**，直接往桌上已經攤開的書旁邊一放，兩本書就並排好了，完全不用在那邊開開關關，也不用按煩人的複製貼上。

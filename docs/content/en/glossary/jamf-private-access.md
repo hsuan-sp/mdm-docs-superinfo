@@ -7,7 +7,7 @@ term: Jamf Private Access
 ---
 ## Definition
 
-Jamf Private Access (managed through the **Jamf Trust** app) is a Zero Trust Network Access (ZTNA) solution. It ensures that only authorized, secure, and compliant devices can access private school resources. Unlike a traditional VPN that gives a user full access to a network, Private Access creates a "Micro-tunnel" only for the specific apps required, while also checking the "health" of the device before allowing a connection.
+Jamf Private Access (managed through the**Jamf Trust**app) is a Zero Trust Network Access (ZTNA) solution. It ensures that only authorized, secure, and compliant devices can access private school resources. Unlike a traditional VPN that gives a user full access to a network, Private Access creates a "Micro-tunnel" only for the specific apps required, while also checking the "health" of the device before allowing a connection.
 
 ## Plain English
 

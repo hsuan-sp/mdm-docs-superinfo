@@ -14,18 +14,16 @@ title: How do I manage or disable 'iPhone Mirroring' in macOS Sequoia?
 
 ## Answer
 
-* **While convenient, 'iPhone Mirroring' in macOS 15+ poses Data Loss Prevention (DLP) risks on shared school computers. It should be managed via MDM.**
-
-## The Privacy Risk:
+***While convenient, 'iPhone Mirroring' in macOS 15+ poses Data Loss Prevention (DLP) risks on shared school computers. It should be managed via MDM.**## The Privacy Risk:
 
 When a personal iPhone is mirrored to a school Mac, notifications, photos, and app content are visible on the Mac screen. It also supports file drag-and-drop, which could lead to unauthorized data transfer.
 
 ## Jamf Pro Configuration:
 
-1. Go to **Computers > Configuration Profiles > Restrictions**.
+1. Go to**Computers > Configuration Profiles > Restrictions**.
 2. Navigate to the macOS 26 (Tahoe) section.
-3. **Option A (Full Block) **: Uncheck** Allow iPhone Mirroring**.
-4. **Option B (Granular) **: Use the** View Only **mode or uncheck** Allow file and clipboard sync**.
+3.**Option A (Full Block)**: Uncheck**Allow iPhone Mirroring**.
+4.**Option B (Granular)**: Use the**View Only**mode or uncheck**Allow file and clipboard sync**.
 
 ## Result:
 

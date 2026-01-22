@@ -13,15 +13,9 @@ title: >-
 ---
 ## Q: My school uses Google Workspace / Microsoft 365. Can we use these IDs to sign into Apple services?
 
-## Answer
+## Answer***Yes. This is called "Federated Authentication," and it allows students and staff to use their existing school credentials to create and sign into Managed Apple Accounts.**By linking Apple School Manager (ASM) with your Google Workspace or Microsoft Entra ID (Azure AD), you create a seamless "Single Sign-On" experience across all campus devices.
 
-***Yes. This is called "Federated Authentication," and it allows students and staff to use their existing school credentials to create and sign into Managed Apple Accounts.**By linking Apple School Manager (ASM) with your Google Workspace or Microsoft Entra ID (Azure AD), you create a seamless "Single Sign-On" experience across all campus devices.
-
-## Key Benefits:
-
-***One Password**: Users don't need to remember a separate password for their iPad or Mac. They use their official campus login.
-***Automatic Provisioning**: You can configure a**SCIM**bridge so that when a new student is added to Google or Microsoft, their Apple Account is created automatically in ASM—no CSV imports required.
-***Security Alignment**: Password policies and Multi-Factor Authentication (MFA) are managed by your primary identity provider (Google or Microsoft).
+## Key Benefits:***One Password**: Users don't need to remember a separate password for their iPad or Mac. They use their official campus login.***Automatic Provisioning**: You can configure a**SCIM**bridge so that when a new student is added to Google or Microsoft, their Apple Account is created automatically in ASM—no CSV imports required.***Security Alignment**: Password policies and Multi-Factor Authentication (MFA) are managed by your primary identity provider (Google or Microsoft).
 
 ## Technical Requirements:
 
