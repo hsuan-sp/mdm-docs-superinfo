@@ -2,7 +2,7 @@
 import { computed, ref, onMounted, shallowRef, watch } from 'vue'
 import { useData } from 'vitepress'
 // @ts-ignore
-import { data as rawLogsData } from '../../data/changelog.data'
+import { data as rawLogsData } from '../../data/loaders/changelog.data'
 
 const { lang } = useData()
 const isMounted = ref(false)

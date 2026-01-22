@@ -4,7 +4,7 @@ import { useData } from 'vitepress';
 import { useAppFeatures } from '../theme/composables/useAppFeatures';
 import { useKeyboardShortcuts } from '../theme/composables/useKeyboardShortcuts';
 // @ts-ignore
-import { data as rawLoaderData } from "../../data/all-data.data";
+import { data as rawLoaderData } from '../../data/loaders/all.data';
 
 const { lang } = useData();
 const isMounted = ref(false);

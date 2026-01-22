@@ -1,13 +1,14 @@
+```
 <script setup lang="ts">
 import { ref, computed, onMounted, nextTick, shallowRef } from "vue";
 import { useData } from 'vitepress';
 // @ts-ignore
-import { data as rawLoaderData } from "../../data/all-data.data";
+import { data as _rawDataImported } from '../../data/loaders/all.data';
 
 const { lang } = useData();
 const isMounted = ref(false);
 
-const rawData = shallowRef(rawLoaderData);
+const rawData = shallowRef(_rawDataImported);
 
 const langData = computed(() => {
   const d = rawData.value;
@@ -184,11 +185,11 @@ const getCategoryChipName = (cat: string) => (cat === 'All' ? t.value.allChips :
           <div class="view-status-bar">
             <span class="status-label">{{ selectedCategory === 'All' ? t.allCategories :
               getCategoryName(selectedCategory)
-              }}</span>
+            }}</span>
             <span class="status-count">{{ t.totalTerms.replace('{n}', String(filteredTerms.length)) }}</span>
             <button v-if="!isMobileView" @click="toggleSort" class="desk-sort-btn">{{ sortOrder === 'asc' ? 'A-Z' :
               'Z-A'
-              }}</button>
+            }}</button>
           </div>
         </header>
 

@@ -19,8 +19,8 @@ HELP_TEXT = """
 
 ## 📂 核心架構
 此工具已升級為支援「原子化」Markdown 存儲架構：
-- **術語表**: `docs/data/items[ -en]/glossary/*.md`
-- **問答集**: `docs/data/items[ -en]/qa/[類別]/*.md`
+- **術語表**: `docs/content/[zh|en]/glossary/*.md`
+- **問答集**: `docs/content/[zh|en]/qa/[類別]/*.md`
 
 ## ✨ 核心功能
 1. **目錄管理**: 左側選單可切換中英文不同資料夾。
@@ -49,8 +49,9 @@ class ContentManager:
         
         # 路徑設定
         self.project_root = Path(__file__).parent.parent
-        self.items_root = self.project_root / "docs" / "data" / "items"
-        self.items_en_root = self.project_root / "docs" / "data" / "items-en"
+        self.content_root = self.project_root / "docs" / "content"
+        self.items_root = self.content_root / "zh"
+        self.items_en_root = self.content_root / "en"
         
         # 資料夾映射
         self.sources = {
@@ -404,9 +405,9 @@ class ContentManager:
         """執行更新索引與格式修正的 NodeJS 腳本"""
         try:
             # 1. 修正格式與排版
-            subprocess.run(["npm", "run", "fix-markdown"], cwd=str(self.project_root), check=True)
+            subprocess.run(["node", "scripts/maintenance/fix-markdown.js"], cwd=str(self.project_root), check=True)
             # 2. 更新維護索引
-            subprocess.run(["npm", "run", "update-index"], cwd=str(self.project_root), check=True)
+            subprocess.run(["node", "scripts/maintenance/generate-index.js"], cwd=str(self.project_root), check=True)
         except Exception as e:
             print(f"Update tools failed: {e}")
 
