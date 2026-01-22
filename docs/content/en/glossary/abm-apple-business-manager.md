@@ -3,15 +3,9 @@ category:
   - Apple
 term: ABM (Apple Business Manager)
 ---
-## Term Definition
+## Term Definition***Apple Business Manager (ABM)**is a web-based portal designed for IT administrators to manage Apple deployments at scale. It serves as the foundation for modern device management.
 
-***Apple Business Manager (ABM)**is a web-based portal designed for IT administrators to manage Apple deployments at scale. It serves as the foundation for modern device management.
-
-Key functionalities include:
-
-***Device Management**: Assigning devices to MDM servers via**Automated Device Enrollment (ADE)**.
-***Content Distribution**: Purchasing apps and books in volume through the**Volume Purchase Program (VPP)**.
-***Identity Management**: Creating and managing**Managed Apple Accounts**for employees.
+Key functionalities include:***Device Management**: Assigning devices to MDM servers via**Automated Device Enrollment (ADE)**.***Content Distribution**: Purchasing apps and books in volume through the**Volume Purchase Program (VPP)**.***Identity Management**: Creating and managing**Managed Apple Accounts**for employees.
 
 An MDM server must be linked to ABM to prove organizational ownership of devices and enable**Zero-Touch deployment**.
 

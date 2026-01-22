@@ -3,20 +3,9 @@ category:
   - Core
 term: Apple Intelligence
 ---
-## Term Definition
+## Term Definition***Apple Intelligence**is the personal intelligence system introduced by Apple in**2024 (OS version 18)**and further advanced in**2025 (OS version 26)**. It utilizes on-device large language models (LLMs) to power generative AI features.
 
-***Apple Intelligence**is the personal intelligence system introduced by Apple in**2024 (OS version 18)**and further advanced in**2025 (OS version 26)**. It utilizes on-device large language models (LLMs) to power generative AI features.
-
-Key features include:
-
-***Writing Tools**: Proofreading, rewriting, and summarization of text.
-***Visual Intelligence**: Genmoji (custom emojis) and Image Playground (image generation).
-***Mail & Messages**: Notification prioritization and smart replies.
-
-***Technical Specifications**:
-
-***Privacy**: Most processing occurs locally on-device. Complex tasks use**Private Cloud Compute (PCC)**without storing data.
-***Hardware Requirements**: Requires devices with**M-series**chips (M1 or later) or**A17 Pro**chips and later.
+Key features include:***Writing Tools**: Proofreading, rewriting, and summarization of text.***Visual Intelligence**: Genmoji (custom emojis) and Image Playground (image generation).***Mail & Messages**: Notification prioritization and smart replies.***Technical Specifications**:***Privacy**: Most processing occurs locally on-device. Complex tasks use**Private Cloud Compute (PCC)**without storing data.***Hardware Requirements**: Requires devices with**M-series**chips (M1 or later) or**A17 Pro**chips and later.
 
 ## MDM Context
 

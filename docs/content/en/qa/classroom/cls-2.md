@@ -22,10 +22,6 @@ title: Can I restrict students to using only one specific app during my lesson?
 3. Select the target app from the list.
 4. Toggle on the switch for**"Lock in app after opening."**5. Tap "Done." The student devices will automatically launch the app and disable the Home button and multitasking.
 
-## How to Unlock:
-
-***Tap the**"Unlock"**button in the teacher’s toolbar.
-
-***The devices will also automatically unlock when the teacher ends the class session.**## Practical Tip:
+## How to Unlock:***Tap the**"Unlock"**button in the teacher’s toolbar.***The devices will also automatically unlock when the teacher ends the class session.**## Practical Tip:
 
 This feature triggers a temporary "Single App Mode." If a student device becomes disconnected from the network, the unlock command might be missed. If a device remains stuck after class, a simple restart usually resolves the issue.

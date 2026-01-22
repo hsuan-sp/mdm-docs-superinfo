@@ -3,15 +3,9 @@ category:
   - Hardware
 term: Apple Silicon
 ---
-## Term Definition
+## Term Definition***Apple Silicon**refers to the custom system-on-a-chip (SoC) family (M1, M2, M3, M4, and M5 series) designed by Apple for the Mac and iPad.
 
-***Apple Silicon**refers to the custom system-on-a-chip (SoC) family (M1, M2, M3, M4, and M5 series) designed by Apple for the Mac and iPad.
-
-These chips introduce advanced hardware-level security concepts:
-
-***Volume Owner**: A security model that requires a physical user with an account on the crystal-level secure enclave to authorize certain system actions.
-***Boot Security**: Enhanced verification of the operating system during startup.
-***Authentication**: Certain management tasks (like OS updates or changing security levels) require local credentials (password or Touch ID).
+These chips introduce advanced hardware-level security concepts:***Volume Owner**: A security model that requires a physical user with an account on the crystal-level secure enclave to authorize certain system actions.***Boot Security**: Enhanced verification of the operating system during startup.***Authentication**: Certain management tasks (like OS updates or changing security levels) require local credentials (password or Touch ID).
 
 This represents a significant shift from Intel Macs, where MDM could often perform administrative tasks with broader, purely software-based authority.
 

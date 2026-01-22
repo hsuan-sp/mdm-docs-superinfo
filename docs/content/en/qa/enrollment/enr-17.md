@@ -35,7 +35,7 @@ If the device is in an abnormal state and cannot receive commands:
 
 1. Use**Finder / Apple Configurator**(macOS) or the**Apple Devices app**(Windows).
 2. Enter Recovery Mode and perform a Restore.
-3.**Note**: This clears the data, but the Activation Lock screen may still appear (requiring Option 1 or 2 to unlock).
+3. **Note**: This clears the data, but the Activation Lock screen may still appear (requiring Option 1 or 2 to unlock).
 
 ## Option 4: Contact Apple Support
 

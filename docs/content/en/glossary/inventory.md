@@ -7,13 +7,7 @@ term: Inventory
 
 In a device management context,**Inventory**refers to the comprehensive database containing the current state of every organizational hardware and software asset.
 
-Key inventory data points:
-
-***Hardware details**: Serial number, model, processor type, and total RAM.
-***Software details**: Current OS version and a list of all installed applications.
-***Security status**: Encryption status (FileVault/Activation Lock), security patch level, and passcode compliance.
-***Network status**: Current IP address, MAC address, and last check-in time.
-***User assignment**: Which specific student or staff member is the primary user of the hardware.
+Key inventory data points:***Hardware details**: Serial number, model, processor type, and total RAM.***Software details**: Current OS version and a list of all installed applications.***Security status**: Encryption status (FileVault/Activation Lock), security patch level, and passcode compliance.***Network status**: Current IP address, MAC address, and last check-in time.***User assignment**: Which specific student or staff member is the primary user of the hardware.
 
 This centralized record is essential for IT teams to perform security audits, plan for hardware refresh cycles, and provide fast technical support.
 

@@ -29,6 +29,6 @@ title: What is 'Supervised Mode'? Why is it essential for school-owned devices?
 
 Open**Settings**on the iPad. Look at the very top, just below the user’s name. You should see a line of text:
 >
-> ***"This iPad is supervised and managed by [Your School Name]."***## Institutional Advice:
+>***"This iPad is supervised and managed by [Your School Name]."***## Institutional Advice:
 
 If a school iPad is not Supervised, students can easily bypass web filters, delete management profiles, or factory reset the device. Supervised Mode is the first line of defense in maintaining campus digital standards.

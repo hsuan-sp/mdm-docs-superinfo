@@ -8,11 +8,7 @@ term: Security Update
 
 A**Security Update**is a software patch dedicated solely to fixing vulnerabilities and protecting the operating system integrity.
 
-Characteristics:
-
-***Focus**: Does not add new features (like new Emojis); only closes security holes.
-***Mandate**: MDM policies often force these updates to install immediately (0-day deadline) to protect the network.
-***Invisibility**: Modern**Rapid Security Responses**can sometimes be installed without the user even noticing, as they don't always require a restart.
+Characteristics:***Focus**: Does not add new features (like new Emojis); only closes security holes.***Mandate**: MDM policies often force these updates to install immediately (0-day deadline) to protect the network.***Invisibility**: Modern**Rapid Security Responses**can sometimes be installed without the user even noticing, as they don't always require a restart.
 
 ## Analogy
 

@@ -27,18 +27,9 @@ title: >-
 |**Offline Support**| Must be online to trigger the check-in. | If the declaration is local, the device handles install retries offline. |
 |**Suitability**| Best for complex scripts and .dmg installs. | Best for standard signed**Distribution Packages (.pkg)**. |
 
-## Requirements & Limitations
+## Requirements & Limitations***OS**: macOS 26 (Tahoe) or later.***Package Quality**:***Must be a**Distribution Package**(not a basic component pkg).***Must be**signed**with a valid Apple Developer ID Installer certificate.***Must be**notarized**by Apple. MDM deployment in macOS 26 is extremely strict regarding security; unsigned or un-notarized packages will fail with a `VerificationFailed` error in the status channel.
 
-***OS**: macOS 26 (Tahoe) or later.
-***Package Quality**:
-***Must be a**Distribution Package**(not a basic component pkg).
-***Must be**signed**with a valid Apple Developer ID Installer certificate.
-***Must be**notarized**by Apple. MDM deployment in macOS 26 is extremely strict regarding security; unsigned or un-notarized packages will fail with a `VerificationFailed` error in the status channel.
-
-## When to use each?
-
-***Use DDM Packages**: For standard core software (Microsoft Office, Google Chrome, Adobe Acrobat) on macOS 26+ machines where you need high visibility of success rates.
-***Use Jamf Policies**: For legacy machines (v25 and below), complex workflows (requires post-install scripts or UI interaction), or non-standard installers (DMGs).
+## When to use each?***Use DDM Packages**: For standard core software (Microsoft Office, Google Chrome, Adobe Acrobat) on macOS 26+ machines where you need high visibility of success rates.***Use Jamf Policies**: For legacy machines (v25 and below), complex workflows (requires post-install scripts or UI interaction), or non-standard installers (DMGs).
 
 ## Expert Tip: The Notarization Check
 

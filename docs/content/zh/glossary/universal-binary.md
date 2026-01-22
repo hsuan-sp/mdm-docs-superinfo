@@ -3,15 +3,14 @@ category:
   - macOS
 term: Universal Binary
 ---
-## 術語定義
-
-***Universal Binary （通用二進位檔）**是一種 macOS 應用程式封裝格式，內含適用於多種處理器架構的執行碼。
+## 術語定義***Universal Binary （通用二進位檔）**是一種 macOS 應用程式封裝格式，內含適用於多種處理器架構的執行碼。
 
 結構與優勢：
 
 ***Fat Binary**：在同一個 App 檔案中，同時包含了適用於**Intel**(x86_64) 與**Apple Silicon**(ARM 64) 晶片的程式碼。
 
 ***自動選擇**：當使用者開啟 App 時，macOS 會自動選用最適合該電腦晶片的版本來執行。
+
 ***最佳效能**：確保 App 無論是在最新的 M3 MacBook Air 還是舊款 Intel iMac 上，都能以**原生速度**運行，無需經過 Rosetta 2 轉譯。
 
 ## 白話文比喻
@@ -19,4 +18,5 @@ term: Universal Binary
 就像是一本**「雙語對照書」**。
 
 ***一書兩用**：你不需要分別買中文版和英文版，這本書每一頁都並排印著兩種語言。
+
 ***自動切換**：如果你是中文讀者（Apple Silicon），你就直接讀中文部分；如果你是英文讀者（Intel），就讀英文部分。每個人都能用自己最熟悉的語言閱讀，不需要翻譯人員（Rosetta），效率最高。

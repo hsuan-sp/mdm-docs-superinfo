@@ -4,15 +4,9 @@ category:
   - Jamf
 term: Composer
 ---
-## Term Definition
+## Term Definition***Composer**is a professional software packaging application for macOS provided as part of the Jamf management suite.
 
-***Composer**is a professional software packaging application for macOS provided as part of the Jamf management suite.
-
-Key functionalities:
-
-***Snapshots**: Monitors a Mac's filesystem during a software installation to identify exactly what files were added or modified.
-***Packaging**: Bundles these changes into a standardized**.pkg**or**.dmg**installer.
-***Customization**: Allows administrators to include specific configuration files or licenses within an app installer.
+Key functionalities:***Snapshots**: Monitors a Mac's filesystem during a software installation to identify exactly what files were added or modified.***Packaging**: Bundles these changes into a standardized**.pkg**or**.dmg**installer.***Customization**: Allows administrators to include specific configuration files or licenses within an app installer.
 
 This tool is essential for deploying complex software that doesn't follow standard App Store installation methods.
 

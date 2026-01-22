@@ -4,15 +4,9 @@ category:
   - Apple
 term: iCloud Private Relay
 ---
-## Term Definition
+## Term Definition***iCloud Private Relay**is an Apple privacy service available to iCloud+ subscribers that obscures a user's web browsing behavior.
 
-***iCloud Private Relay**is an Apple privacy service available to iCloud+ subscribers that obscures a user's web browsing behavior.
-
-Technical mechanism:
-
-***Encryption**: DNS requests are encrypted so the ISP/School cannot see where the user is going.
-***Anonymization**: Traffic is routed through two separate internet relays. The first knows**who**you are (IP) but not**where**you are going. The second knows*where*you are going but not*who* you are.
-***Conflict**: This prevents the destination website from seeing the user's IP. However, it also prevents school web filters from identifying the user, which is why it is often blocked on managed networks.
+Technical mechanism:***Encryption**: DNS requests are encrypted so the ISP/School cannot see where the user is going.***Anonymization**: Traffic is routed through two separate internet relays. The first knows**who**you are (IP) but not**where**you are going. The second knows*where*you are going but not*who* you are.***Conflict**: This prevents the destination website from seeing the user's IP. However, it also prevents school web filters from identifying the user, which is why it is often blocked on managed networks.
 
 ## Analogy
 

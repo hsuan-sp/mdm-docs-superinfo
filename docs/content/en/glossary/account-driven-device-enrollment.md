@@ -3,9 +3,7 @@ category:
   - Enrollment
 term: Account-Driven Device Enrollment
 ---
-## Term Definition
-
-***Account-Driven Device Enrollment**is a modernized method for enrolling personal devices in a**Bring Your Own Device (BYOD)**environment.
+## Term Definition***Account-Driven Device Enrollment**is a modernized method for enrolling personal devices in a**Bring Your Own Device (BYOD)**environment.
 
 The process is streamlined:
 

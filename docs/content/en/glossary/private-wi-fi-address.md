@@ -4,16 +4,9 @@ category:
   - Security
 term: Private Wi-Fi Address
 ---
-## Term Definition
+## Term Definition***Private Wi-Fi Address**is a privacy feature in iOS, iPadOS, and macOS that uses MAC address randomization.
 
-***Private Wi-Fi Address**is a privacy feature in iOS, iPadOS, and macOS that uses MAC address randomization.
-
-How it works:
-
-***Randomization**: Instead of using its permanent hardware MAC address, the device generates a unique, random MAC address for each Wi-Fi network (SSID) it joins.
-***Rotation**: In some settings, this address may rotate periodically (e.g., every 24 hours or 2 weeks).
-***Pro**: Prevents marketing trackers in shopping malls from building a profile of your movement.
-***Con**: Breaks education networks that rely on**MAC Address Filtering**or**DHCP Reservations**to identify specific student devices.
+How it works:***Randomization**: Instead of using its permanent hardware MAC address, the device generates a unique, random MAC address for each Wi-Fi network (SSID) it joins.***Rotation**: In some settings, this address may rotate periodically (e.g., every 24 hours or 2 weeks).***Pro**: Prevents marketing trackers in shopping malls from building a profile of your movement.***Con**: Breaks education networks that rely on**MAC Address Filtering**or**DHCP Reservations**to identify specific student devices.
 
 ## Analogy
 

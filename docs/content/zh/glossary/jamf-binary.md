@@ -4,15 +4,14 @@ category:
   - macOS
 term: Jamf binary
 ---
-## 術語定義
-
-***Jamf Binary (`Jamf` 指令）**是 Jamf Pro 安裝在 macOS 裝置上的核心管理代理程式 (Management Agent)。
+## 術語定義***Jamf Binary (`Jamf` 指令）**是 Jamf Pro 安裝在 macOS 裝置上的核心管理代理程式 (Management Agent)。
 
 它負責執行高階管理任務：
 
 ***執行引擎**：它是駐守在 Mac 本機的「大腦」，負責執行來自 Jamf Pro 伺服器的指令。
 
 ***政策執行 (Policies)**：不同於標準 MDM 描述檔，Binary 能夠執行複雜的腳本、安裝套件與進行系統維護。
+
 ***定期回報 (Check-ins)**：定期向伺服器報到，檢查是否有新任務並回報執行結果。
 
 ***注意**：這僅存在於 Mac 電腦上。iOS 裝置受限於系統架構，無法安裝此類代理程式，僅能依靠 Apple 內建的 MDM 框架。

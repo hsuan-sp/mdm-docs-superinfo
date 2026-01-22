@@ -3,15 +3,9 @@ category:
   - Education
 term: AAC (Automatic Assessment Configuration)
 ---
-## Term Definition
+## Term Definition***Automatic Assessment Configuration (AAC)**is a specialized lock-down mode in iOS, iPadOS, and macOS designed for high-stakes standardized testing.
 
-***Automatic Assessment Configuration (AAC)**is a specialized lock-down mode in iOS, iPadOS, and macOS designed for high-stakes standardized testing.
-
-When a student opens a supported testing app, AAC automatically manages the device environment:
-
-***Disables assistive features**: Dictionary, spell check, and lookup.
-***Blocks interruptions**: Screenshots, screen recording, and push notifications are suppressed.
-***Prevents multitasking**: The student is locked into the specific testing app.
+When a student opens a supported testing app, AAC automatically manages the device environment:***Disables assistive features**: Dictionary, spell check, and lookup.***Blocks interruptions**: Screenshots, screen recording, and push notifications are suppressed.***Prevents multitasking**: The student is locked into the specific testing app.
 
 Once the test is completed and the student exits the app, the device automatically restores all features without requiring manual IT intervention.
 

@@ -18,10 +18,6 @@ title: How do I prevent students from 'hiding' or 'locking' Managed Apps in iOS 
 
 Administrators must enable two new restrictions in the**Restrictions**profile for**Supervised**devices:
 
-1.**Disallow Locking Apps (allowLockedApps)**:
-
-***Prevents users from enabling Face ID/Touch ID verification for any app.**Note: Disabling this item also automatically disables the ability to hide apps.**1.**Disallow Hiding Apps (allowHiddenApps)**:
-
-***Prevents users from moving apps into the "Hidden" folder.**## Technical Detail:
+1. **Disallow Locking Apps (allowLockedApps)**:***Prevents users from enabling Face ID/Touch ID verification for any app.**Note: Disabling this item also automatically disables the ability to hide apps.**1.**Disallow Hiding Apps (allowHiddenApps)**:***Prevents users from moving apps into the "Hidden" folder.**## Technical Detail:
 
 These settings are deployed via**Declarative Device Management (DDM)**configurations in iOS 18+, which are more immediate than traditional profiles. Once applied, the options to "Require Face ID" or "Hide and Require Face ID" will be grayed out or removed from the app's long-press menu.

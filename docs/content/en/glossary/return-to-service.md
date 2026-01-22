@@ -3,17 +3,15 @@ category:
   - Enrollment
 term: Return to Service
 ---
-## Term Definition
-
-***Return to Service**is a high-efficiency command for iOS and iPadOS devices that automates the device reset cycle.
+## Term Definition***Return to Service**is a high-efficiency command for iOS and iPadOS devices that automates the device reset cycle.
 
 Workflow:
 
-1.**Wipe**: IT sends the "Erase Device" command.
-2.**Persist**: The command includes a "Return to Service" package (Wi-Fi profile + Language settings).
-3.**Reboot**: The device erases all user data.
-4.**Reconnect**: Instead of stopping at the "Hello" screen, the device automatically connects to Wi-Fi using the saved profile.
-5.**Re-enroll**: It contacts the MDM and re-enrolls itself automatically, ready for the next user.
+1. **Wipe**: IT sends the "Erase Device" command.
+2. **Persist**: The command includes a "Return to Service" package (Wi-Fi profile + Language settings).
+3. **Reboot**: The device erases all user data.
+4. **Reconnect**: Instead of stopping at the "Hello" screen, the device automatically connects to Wi-Fi using the saved profile.
+5. **Re-enroll**: It contacts the MDM and re-enrolls itself automatically, ready for the next user.
 
 ## Analogy
 

@@ -21,13 +21,9 @@ On Supervised devices within the Digital Learning Project, you will typically fi
 
 ## Why Must it be Disabled? (Technical Conflict)
 
-1.**Filtering Failure**: iCloud Private Relay encrypts DNS queries and routes them through Apple's relays. This prevents Jamf Trust from identifying whether a student is visiting inappropriate or malicious sites, effectively bypassing the "Safe Search" features.
-2.**Data Loss**: Because traffic is encrypted and hidden, Jamf Trust cannot calculate traffic volume or usage time. This leads to**anomalous usage data (showing as zero or very low)**on official reports, which affects school KPI evaluations.
+1. **Filtering Failure**: iCloud Private Relay encrypts DNS queries and routes them through Apple's relays. This prevents Jamf Trust from identifying whether a student is visiting inappropriate or malicious sites, effectively bypassing the "Safe Search" features.
+2. **Data Loss**: Because traffic is encrypted and hidden, Jamf Trust cannot calculate traffic volume or usage time. This leads to**anomalous usage data (showing as zero or very low)**on official reports, which affects school KPI evaluations.
 
-## Does this Invade Privacy?
-
-***No.**Disabling Private Relay simply means traffic does not go through Apple's dual-encryption tunnel; it returns to standard network transmission.
-
-***The school's MDM and filtering mechanisms follow strict cybersecurity regulations. They only block harmful sites and track "usage hours." Administrators cannot see specific Google search keywords or private messages.**## Practical Advice:
+## Does this Invade Privacy?***No.**Disabling Private Relay simply means traffic does not go through Apple's dual-encryption tunnel; it returns to standard network transmission.***The school's MDM and filtering mechanisms follow strict cybersecurity regulations. They only block harmful sites and track "usage hours." Administrators cannot see specific Google search keywords or private messages.**## Practical Advice:
 
 If you find a student iPad that**can enable**Private Relay, it means the device has likely**fallen out of management**or**missed the restriction profile.**Ensure you run "Update Inventory" or redeploy the restriction settings in Jamf Pro for that device.

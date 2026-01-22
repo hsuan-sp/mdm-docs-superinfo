@@ -4,14 +4,14 @@ category:
   - Security
 term: iPhone Mirroring (iPhone 鏡像）
 ---
-## 術語定義
-
-***iPhone Mirroring (iPhone 鏡像）**是 macOS 15 推出的接續互通功能，允許使用者直接在 Mac 螢幕上檢視並全面操作自己的 iPhone。
+## 術語定義***iPhone Mirroring (iPhone 鏡像）**是 macOS 15 推出的接續互通功能，允許使用者直接在 Mac 螢幕上檢視並全面操作自己的 iPhone。
 
 雖然能提升生產力，但對 MDM 管理帶來挑戰：
 
 ***資料隱私風險**：可能在公用電腦上顯示個人的私密訊息或照片。
+
 ***規避監控**：使用者可能透過「鏡像視窗」執行未受學校網路過濾或監控的行為。
+
 ***管理對策**：MDM 管理員可透過描述檔停用此功能，以確保公用或教學用 Mac 的合規性與安全性。
 
 ## 白話文比喻

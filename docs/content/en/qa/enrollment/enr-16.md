@@ -28,11 +28,7 @@ title: >-
 
 If remote commands fail:
 
-1.**Manual Wipe**: On the iPad, go to**Settings > General > Transfer or Reset iPad > Erase All Content and Settings**.
-2.**Re-enroll**: Once back at the "Hello" screen, connect to stable Wi-Fi and re-download the "Remote Management" profile during the Setup Assistant.
+1. **Manual Wipe**: On the iPad, go to**Settings > General > Transfer or Reset iPad > Erase All Content and Settings**.
+2. **Re-enroll**: Once back at the "Hello" screen, connect to stable Wi-Fi and re-download the "Remote Management" profile during the Setup Assistant.
 
-## Why does a reset sometimes fail?
-
-***Command Residue**: If you don't clear pending or failed commands in Jamf Pro before re-enrolling, the device might immediately receive the same old error commands upon reconnecting, causing it to hang again.
-***Hardware Limitations**: Older hardware combined with bloated configuration profiles or heavy apps can lead to severe lag.
-***Actionable Advice**: Always click "Cancel Pending/Failed Commands" for that serial number in Jamf Pro before the device re-enrolls.
+## Why does a reset sometimes fail?***Command Residue**: If you don't clear pending or failed commands in Jamf Pro before re-enrolling, the device might immediately receive the same old error commands upon reconnecting, causing it to hang again.***Hardware Limitations**: Older hardware combined with bloated configuration profiles or heavy apps can lead to severe lag.***Actionable Advice**: Always click "Cancel Pending/Failed Commands" for that serial number in Jamf Pro before the device re-enrolls.

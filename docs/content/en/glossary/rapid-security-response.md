@@ -3,16 +3,9 @@ category:
   - Security
 term: Rapid Security Response (RSR)
 ---
-## Term Definition
+## Term Definition***Rapid Security Response (RSR)**is a nimble update mechanism designed by Apple to deploy urgent security fixes.
 
-***Rapid Security Response (RSR)**is a nimble update mechanism designed by Apple to deploy urgent security fixes.
-
-Differences from standard updates:
-
-***Agility**: Delivers important vulnerability patches**between**major software updates.
-***Speed**: RSR files are smaller and install significantly faster than a full OS upgrade.
-***Uptime**: Often requires only a quick restart (or sometimes no restart at all for Safari-only patches), minimizing classroom disruption.
-***Version**: Indicated by a letter after the version number (e.g., iOS 16.4.1 (a)).
+Differences from standard updates:***Agility**: Delivers important vulnerability patches**between**major software updates.***Speed**: RSR files are smaller and install significantly faster than a full OS upgrade.***Uptime**: Often requires only a quick restart (or sometimes no restart at all for Safari-only patches), minimizing classroom disruption.***Version**: Indicated by a letter after the version number (e.g., iOS 16.4.1 (a)).
 
 ## Analogy
 

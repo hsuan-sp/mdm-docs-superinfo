@@ -51,7 +51,6 @@ If software was downloaded or copied manually, you can use a Jamf script to stri
 xattr -r -d com.apple.quarantine /Applications/AppName.app
 ```
 
-
 ## Practical Advice:
 
 If you see a message stating the app is**"Damaged and should be moved to the Trash,"**it often isn't actually corrupt. Instead, its signing certificate may have expired or it hasn't been notarized. Using the script command above often resolves this issue.

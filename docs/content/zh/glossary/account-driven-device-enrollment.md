@@ -3,9 +3,7 @@ category:
   - Enrollment
 term: Account-Driven Device Enrollment
 ---
-## 術語定義
-
-***Account-Driven Device Enrollment （帳號驅動裝置註冊）**是專為「自帶裝置 (BYOD)」環境所設計的現代化註冊方式，大幅簡化了個人裝置加入組織管理的流程。
+## 術語定義***Account-Driven Device Enrollment （帳號驅動裝置註冊）**是專為「自帶裝置 (BYOD)」環境所設計的現代化註冊方式，大幅簡化了個人裝置加入組織管理的流程。
 
 操作流程極度精簡：
 

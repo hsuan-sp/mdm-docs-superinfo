@@ -3,15 +3,9 @@ category:
   - Core
 term: Sites
 ---
-## Term Definition
+## Term Definition***Sites**is a multi-tenancy architecture feature within Jamf Pro.
 
-***Sites**is a multi-tenancy architecture feature within Jamf Pro.
-
-Functionality:
-
-***Segmentation**: Allows a single MDM server to be virtually divided into distinct administrative zones.
-***Granular Access**: "Site Administrators" can only see and manage devices, users, and policies that belong to their specific site.
-***Independence**: Actions taken in "High School Site" do not affect devices in "Primary School Site."
+Functionality:***Segmentation**: Allows a single MDM server to be virtually divided into distinct administrative zones.***Granular Access**: "Site Administrators" can only see and manage devices, users, and policies that belong to their specific site.***Independence**: Actions taken in "High School Site" do not affect devices in "Primary School Site."
 
 This is essential for large districts or university systems where different departments need autonomy but share a central infrastructure.
 

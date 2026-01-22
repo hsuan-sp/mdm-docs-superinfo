@@ -3,15 +3,16 @@ category:
   - Apps
 term: Intelligent Hub
 ---
-## 術語定義
-
-***Intelligent Hub**是 VMware Workspace ONE 解決方案中的使用者端 App。
+## 術語定義***Intelligent Hub**是 VMware Workspace ONE 解決方案中的使用者端 App。
 
 雖然在我們使用的 Jamf 生態系中對應的是**Jamf Self Service**，但兩者概念完全相同：
 
 ***統一入口**：提供單一介面讓學生與員工存取所有企業資源。
+
 ***自助服務**：使用者可自行安裝經學校核准的 App，無需 IT 人員介入。
+
 ***訊息中心**：接收來自 IT 部門的重要公告與通知。
+
 ***合規檢查**：查看裝置是否符合資安規範（如是否設定密碼、是否越獄）。
 
 ## 白話文比喻

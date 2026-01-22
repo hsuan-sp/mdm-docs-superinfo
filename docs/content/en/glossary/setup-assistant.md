@@ -7,11 +7,7 @@ term: Setup Assistant
 
 The**Setup Assistant**is the initial configuration wizard presented on Apple devices (starting with the "Hello" screen).
 
-MDM customization:
-
-***Streamlining**: Using**Automated Device Enrollment (ADE)**, organizations can hide unnecessary panes (e.g., Apple Pay, Siri, True Tone).
-***Mandatory Fields**: Can force the user to connect to Wi-Fi and install the management profile before proceeding.
-***Goal**: Reduces the "Time to Desktop" from 20 minutes of questions down to 30 seconds of waiting.
+MDM customization:***Streamlining**: Using**Automated Device Enrollment (ADE)**, organizations can hide unnecessary panes (e.g., Apple Pay, Siri, True Tone).***Mandatory Fields**: Can force the user to connect to Wi-Fi and install the management profile before proceeding.***Goal**: Reduces the "Time to Desktop" from 20 minutes of questions down to 30 seconds of waiting.
 
 ## Analogy
 

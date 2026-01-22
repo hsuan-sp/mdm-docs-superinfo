@@ -3,16 +3,14 @@ category:
   - Security
 term: SCEP (Simple Certificate Enrollment Protocol)
 ---
-## Term Definition
-
-***Simple Certificate Enrollment Protocol (SCEP)**is a standard allowing devices to request and retrieve digital certificates automatically.
+## Term Definition***Simple Certificate Enrollment Protocol (SCEP)**is a standard allowing devices to request and retrieve digital certificates automatically.
 
 The workflow:
 
-1.**Request**: The MDM pushes a "SCEP Profile" to the device.
-2.**Generation**: The device generates a private key and sends a request to the server.
-3.**Issuance**: The Certificate Authority (CA) verifies the request and issues a signed certificate.
-4.**Access**: The device presents this certificate to the school's Wi-Fi network to prove, "I am a managed, trusted device."
+1. **Request**: The MDM pushes a "SCEP Profile" to the device.
+2. **Generation**: The device generates a private key and sends a request to the server.
+3. **Issuance**: The Certificate Authority (CA) verifies the request and issues a signed certificate.
+4. **Access**: The device presents this certificate to the school's Wi-Fi network to prove, "I am a managed, trusted device."
 
 This automation is critical for zero-touch deployments, removing the need for manual password entry.
 

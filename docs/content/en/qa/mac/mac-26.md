@@ -20,29 +20,13 @@ title: >-
 
 In Jamf Pro, you should establish these baseline groups for accurate deployment:
 
-## Apple Silicon Group (Primary)
+## Apple Silicon Group (Primary)***Criteria**: `Architecture Type`***Operator**: `is`***Value**: `arm 64`(or`Apple Silicon`)
 
-***Criteria**: `Architecture Type`
-***Operator**: `is`
-***Value**: `arm 64`(or`Apple Silicon`)
+## Intel Mac Group (Legacy)***Criteria**: `Architecture Type`***Operator**: `is`***Value**: `x86_64`
 
-## Intel Mac Group (Legacy)
+## Rosetta 2 Status Group***Create a group for "Apple Silicon Macs MISSING Rosetta 2" to automatically trigger the installation of the Rosetta translation environment if you still rely on legacy Intel apps.**## 2. Recommended Deployment Strategy
 
-***Criteria**: `Architecture Type`
-***Operator**: `is`
-***Value**: `x86_64`
+1. **Prioritize Universal Binaries**: If a developer provides a Universal installer (e.g., Google Chrome or Microsoft Office), use it. macOS will automatically run the correct architecture.
+2. **Architecture-Specific .pkgs**:***For professional software (Adobe Creative Cloud, specialized lab tools), upload separate packages**: `App_v1.0_AppleSilicon.pkg`and`App_v1.0_Intel.pkg`.***Scope the former to the Apple Silicon group and the latter to the Intel group.**3.**App Store Apps (VPP)**: This is the most efficient method. Apple’s servers automatically detect the client architecture and download the optimized version. Use VPP whenever possible.
 
-## Rosetta 2 Status Group
-
-***Create a group for "Apple Silicon Macs MISSING Rosetta 2" to automatically trigger the installation of the Rosetta translation environment if you still rely on legacy Intel apps.**## 2. Recommended Deployment Strategy
-
-1.**Prioritize Universal Binaries**: If a developer provides a Universal installer (e.g., Google Chrome or Microsoft Office), use it. macOS will automatically run the correct architecture.
-2.**Architecture-Specific .pkgs**:
-
-***For professional software (Adobe Creative Cloud, specialized lab tools), upload separate packages**: `App_v1.0_AppleSilicon.pkg`and`App_v1.0_Intel.pkg`.
-***Scope the former to the Apple Silicon group and the latter to the Intel group.**3.**App Store Apps (VPP)**: This is the most efficient method. Apple’s servers automatically detect the client architecture and download the optimized version. Use VPP whenever possible.
-
-## 3. Administrative Insight
-
-***System Updates**: macOS 26 handles updates differently for each architecture. Always use**Declarative Device Management (DDM)**for OS updates; the system will autonomously verify and install the correct update files without manual intervention.
-***Asset Tagging**: Add an "Expiring Support 2028" tag to your Intel Smart Group. This helps in visualising budget requirements for the final phase-out of the Intel fleet.
+## 3. Administrative Insight***System Updates**: macOS 26 handles updates differently for each architecture. Always use**Declarative Device Management (DDM)**for OS updates; the system will autonomously verify and install the correct update files without manual intervention.***Asset Tagging**: Add an "Expiring Support 2028" tag to your Intel Smart Group. This helps in visualising budget requirements for the final phase-out of the Intel fleet.

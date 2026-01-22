@@ -3,14 +3,14 @@ category:
   - Security
 term: Volume Owner
 ---
-## 術語定義
-
-***Volume Owner （磁碟擁有者）**是 Apple Silicon Mac 架構中特有的一種高權限安全角色。
+## 術語定義***Volume Owner （磁碟擁有者）**是 Apple Silicon Mac 架構中特有的一種高權限安全角色。
 
 權限與特性：
 
 ***專屬權力**：只有 Owner 有權授權安裝 macOS 軟體更新、修改開機安全性設定（如允許外部磁碟開機），或在復原模式下進行重置。
+
 ***取得身分**：第一位完成 Mac 初始設定的使用者會自動成為 Volume Owner。
+
 ***MDM 角色**：MDM 伺服器可透過**Bootstrap Token**來扮演「虛擬 Volume Owner」，以便在不需要使用者密碼的情況下，遠端執行系統更新。
 
 ## 白話文比喻

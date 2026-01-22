@@ -7,11 +7,7 @@ term: Asset Tag
 
 An**Asset Tag**is a unique identifier assigned by an organization for internal property management and tracking purposes.
 
-MDM interaction with Asset Tags:
-
-***Digital Assignment**: MDM can write this organization-specific number into the device’s system information.
-***Visibility**: The tag can be forced to display on the**Lock Screen**or the Login window.
-***Inventory**: Facilitates physical audits and cross-referencing between the MDM database and physical hardware.
+MDM interaction with Asset Tags:***Digital Assignment**: MDM can write this organization-specific number into the device’s system information.***Visibility**: The tag can be forced to display on the**Lock Screen**or the Login window.***Inventory**: Facilitates physical audits and cross-referencing between the MDM database and physical hardware.
 
 ## Analogy
 

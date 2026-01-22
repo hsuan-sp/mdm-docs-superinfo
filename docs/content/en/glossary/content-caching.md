@@ -3,15 +3,13 @@ category:
   - Network
 term: Content Caching
 ---
-## Term Definition
-
-***Content Caching**is a built-in macOS service that optimizes the delivery of Apple software by storing data locally on the school's network.
+## Term Definition***Content Caching**is a built-in macOS service that optimizes the delivery of Apple software by storing data locally on the school's network.
 
 How it works:
 
-1.**Initial Download**: When the first device on a network downloads a new OS update or app, the "Caching Mac" saves a copy.
-2.**Local Delivery**: When subsequent devices request that same content, they pull it directly from the local Mac at LAN speeds.
-3.**Efficiency**: Dramatically reduces external internet usage and speeds up fleet-wide deployments.
+1. **Initial Download**: When the first device on a network downloads a new OS update or app, the "Caching Mac" saves a copy.
+2. **Local Delivery**: When subsequent devices request that same content, they pull it directly from the local Mac at LAN speeds.
+3. **Efficiency**: Dramatically reduces external internet usage and speeds up fleet-wide deployments.
 
 ## Analogy
 

@@ -7,12 +7,7 @@ term: Keychain
 
 The**Keychain**is Apple’s integrated password management system included in macOS, iOS, and iPadOS.
 
-Stored items include:
-
-***Credentials**: Usernames and passwords for websites, servers, and apps.
-***Certificates**: Digital identities used for Wi-Fi (802.1X) and VPN authentication.
-***Encryption**: Private keys used for secure communication.
-***Secure Notes**: Confidential information entered by the user.
+Stored items include:***Credentials**: Usernames and passwords for websites, servers, and apps.***Certificates**: Digital identities used for Wi-Fi (802.1X) and VPN authentication.***Encryption**: Private keys used for secure communication.***Secure Notes**: Confidential information entered by the user.
 
 Once a user logs in to their device, the Keychain automatically unlocks, providing seamless authentication across the system without requiring constant re-entry of passwords.
 

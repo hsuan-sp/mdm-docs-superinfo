@@ -7,12 +7,7 @@ term: Wi-Fi Payload
 
 A**Wi-Fi Payload**is the section of an MDM Profile that configures wireless connectivity settings.
 
-Contents:
-
-***SSID**: The name of the network to join.
-***Auto-Join**: Whether the device should connect automatically when in range.
-***Security Type**: E.g., WPA 2/WPA 3 Personal (Password) or Enterprise (RADIUS/Certificate).
-***Credentials**: The pre-filled password or identity certificate required to authenticate.
+Contents:***SSID**: The name of the network to join.***Auto-Join**: Whether the device should connect automatically when in range.***Security Type**: E.g., WPA 2/WPA 3 Personal (Password) or Enterprise (RADIUS/Certificate).***Credentials**: The pre-filled password or identity certificate required to authenticate.
 
 By deploying this payload, IT ensures devices connect to the secure network immediately without user intervention.
 

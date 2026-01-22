@@ -4,16 +4,9 @@ category:
   - Apple
 term: Guided Access
 ---
-## Term Definition
+## Term Definition***Guided Access**is a built-in iOS and iPadOS feature designed for accessibility and focused learning.
 
-***Guided Access**is a built-in iOS and iPadOS feature designed for accessibility and focused learning.
-
-Key functionalities:
-
-***App Locking**: Temporarily restricts the device to a single application.
-***Hardware Control**: Disables the Home button or gestures (on newer iPads) to prevent the user from leaving the app.
-***Screen Customization**: Allows an administrator or teacher to disable specific areas of the screen to prevent accidental or unwanted interaction.
-***Time Limits**: Enables the setting of a specific duration for an activity.
+Key functionalities:***App Locking**: Temporarily restricts the device to a single application.***Hardware Control**: Disables the Home button or gestures (on newer iPads) to prevent the user from leaving the app.***Screen Customization**: Allows an administrator or teacher to disable specific areas of the screen to prevent accidental or unwanted interaction.***Time Limits**: Enables the setting of a specific duration for an activity.
 
 Teachers frequently use Guided Access to transform an iPad into a dedicated assessment tool or a specific learning station.
 

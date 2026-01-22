@@ -3,16 +3,14 @@ category:
   - Security
 term: Notarization
 ---
-## Term Definition
-
-***Notarization**is an automated security screening system provided by Apple for macOS software distributed outside the App Store.
+## Term Definition***Notarization**is an automated security screening system provided by Apple for macOS software distributed outside the App Store.
 
 The process:
 
-1.**Submission**: A developer sends their app to Apple's notarization service.
-2.**Scan**: Apple scans the code for known malware and security issues (but does not review the content).
-3.**Ticket**: If clean, Apple issues a digital "ticket" (stapled to the app).
-4.**Execution**: When a user opens the app, macOS**Gatekeeper**checks for this ticket. If present, the app is allowed to run. If missing, it is blocked.
+1. **Submission**: A developer sends their app to Apple's notarization service.
+2. **Scan**: Apple scans the code for known malware and security issues (but does not review the content).
+3. **Ticket**: If clean, Apple issues a digital "ticket" (stapled to the app).
+4. **Execution**: When a user opens the app, macOS**Gatekeeper**checks for this ticket. If present, the app is allowed to run. If missing, it is blocked.
 
 ## Analogy
 

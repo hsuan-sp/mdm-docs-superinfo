@@ -10,7 +10,9 @@ title: Jamf Pro shows that the 'VPP Token' is about to expire. How do we update 
 ---
 ## Q: Jamf Pro shows that the 'VPP Token' is about to expire. How do we update it?
 
-## Answer***The VPP (Volume Purchase Program) Token is the secure bridge that syncs app licenses between Apple School Manager (ASM) and Jamf Pro. It must be renewed annually.**If the token expires, Jamf Pro will lose the ability to fetch new licenses or update existing ones, causing app deployments to fail across the school.
+## Answer
+
+***The VPP (Volume Purchase Program) Token is the secure bridge that syncs app licenses between Apple School Manager (ASM) and Jamf Pro. It must be renewed annually.**If the token expires, Jamf Pro will lose the ability to fetch new licenses or update existing ones, causing app deployments to fail across the school.
 
 ## Renewal Workflow:
 

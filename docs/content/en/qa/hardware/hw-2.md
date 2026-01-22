@@ -23,12 +23,6 @@ title: An iPad isn't charging inside the cart. Is the device faulty or the cart?
 
 1. Remove the iPad from the cart and use a**trusted standalone 20W charger**and cable (direct to a wall outlet).**✅**If it charges**: The issue is with the cart’s internal power distribution or a tripped breaker.**❌**If it still doesn't charge**: The issue is almost certainly a**hardware failure on the iPad**.
 
-## Stage 3: Physical Inspection
+## Stage 3: Physical Inspection***Port Check**: Use a flashlight to inspect the Lightning or USB-C port for lint, dust, or student-inserted debris. Carefully clear it using a non-conductive tool (like a wooden toothpick) or compressed air.***Deep Discharge**: If an iPad has been dead for months, the battery voltage may be critically low. Keep it plugged into a high-wattage wall charger for at least**60 minutes**before declaring it a hardware failure.
 
-***Port Check**: Use a flashlight to inspect the Lightning or USB-C port for lint, dust, or student-inserted debris. Carefully clear it using a non-conductive tool (like a wooden toothpick) or compressed air.
-***Deep Discharge**: If an iPad has been dead for months, the battery voltage may be critically low. Keep it plugged into a high-wattage wall charger for at least**60 minutes**before declaring it a hardware failure.
-
-## Institutional Advice:
-
-***Warranty**: If the device is found to be faulty (e.g., a burned-out charging IC), verify its warranty status before sending it for repair.
-***Spare Parts**: Cables are consumables. IT departments should keep a 5-10% stock of spare cables to quickly swap out damaged ones in classroom carts.
+## Institutional Advice:***Warranty**: If the device is found to be faulty (e.g., a burned-out charging IC), verify its warranty status before sending it for repair.***Spare Parts**: Cables are consumables. IT departments should keep a 5-10% stock of spare cables to quickly swap out damaged ones in classroom carts.

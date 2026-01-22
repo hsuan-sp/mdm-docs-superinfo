@@ -3,15 +3,9 @@ category:
   - Hardware
 term: DFU Mode (Device Firmware Update)
 ---
-## Term Definition
+## Term Definition***DFU (Device Firmware Update)**mode is the lowest-level recovery state for an Apple device, sitting beneath the standard Recovery Mode.
 
-***DFU (Device Firmware Update)**mode is the lowest-level recovery state for an Apple device, sitting beneath the standard Recovery Mode.
-
-Key characteristics:
-
-***Low-Level Access**: Bypasses the standard OS and the iBoot bootloader, allowing for a deep firmware reinstallation.
-***Physical Connection**: Requires the device to be plugged into a Mac running**Apple Configurator**or Finder via a USB cable.
-***Visual State**: In DFU mode, the device's screen remains**entirely black**, providing no visual feedback to the user.
+Key characteristics:***Low-Level Access**: Bypasses the standard OS and the iBoot bootloader, allowing for a deep firmware reinstallation.***Physical Connection**: Requires the device to be plugged into a Mac running**Apple Configurator**or Finder via a USB cable.***Visual State**: In DFU mode, the device's screen remains**entirely black**, providing no visual feedback to the user.
 
 This is the "nuclear option" for restoring a device that is severely corrupted, stuck in a boot loop, or completely unresponsive.
 

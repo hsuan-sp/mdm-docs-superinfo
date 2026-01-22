@@ -3,15 +3,9 @@ category:
   - Network
 term: Wi-Fi 7
 ---
-## Term Definition
+## Term Definition***Wi-Fi 7**(IEEE 802.11be) is the cutting-edge wireless standard designed for extremely high throughput and low latency.
 
-***Wi-Fi 7**(IEEE 802.11be) is the cutting-edge wireless standard designed for extremely high throughput and low latency.
-
-Key innovations for education:
-
-***320 MHz Channels**: Doubles the bandwidth of Wi-Fi 6E, offering massive capacity for 8K video and AR/VR classrooms.
-***Multi-Link Operation (MLO)**: Allows a device (like an iPhone 16) to connect to multiple bands (e.g., 5 GHz and 6 GHz)**simultaneously**to send and receive data. This dramatically reduces latency and connection drops.
-***4K QAM**: Packs 20% more data into each signal transmission for higher peak speeds.
+Key innovations for education:***320 MHz Channels**: Doubles the bandwidth of Wi-Fi 6E, offering massive capacity for 8K video and AR/VR classrooms.***Multi-Link Operation (MLO)**: Allows a device (like an iPhone 16) to connect to multiple bands (e.g., 5 GHz and 6 GHz)**simultaneously**to send and receive data. This dramatically reduces latency and connection drops.***4K QAM**: Packs 20% more data into each signal transmission for higher peak speeds.
 
 ## Analogy
 

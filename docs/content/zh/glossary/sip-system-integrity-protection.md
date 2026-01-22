@@ -3,14 +3,14 @@ category:
   - Security
 term: SIP (System Integrity Protection)
 ---
-## 術語定義
-
-***SIP (System Integrity Protection / 系統完整性保護）**是 macOS 的核心級防護機制，用來保護作業系統檔案不被篡改。
+## 術語定義***SIP (System Integrity Protection / 系統完整性保護）**是 macOS 的核心級防護機制，用來保護作業系統檔案不被篡改。
 
 保護範圍：
 
 ***禁區**：`/System`、`/usr`、`/bin`、`/sbin` 以及所有預裝 App。
+
 ***Root 也沒轍**：即使是擁有最高權限的 "root" 超級使用者，也無法修改這些受保護的位置。
+
 ***防禦**：防止惡意軟體對系統核心進行注入或修改，確保系統的純淨與穩定。
 
 在受管的企業設備上，通常嚴格禁止關閉 SIP，因為這會大開安全後門。
@@ -20,4 +20,5 @@ term: SIP (System Integrity Protection)
 這就像是電腦心臟的**「防彈玻璃罩」**。
 
 ***絕對防護**：就算你是這棟房子的主人（管理員），手裡拿著大鐵鎚，系統還是把它最重要的「大腦零件」放在防彈玻璃後面，誰都不准碰。
+
 ***目的**：這讓病毒或甚至是你自己不小心手滑，都幾乎不可能**「弄壞」**Mac 的核心系統。

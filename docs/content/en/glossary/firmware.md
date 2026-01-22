@@ -3,15 +3,9 @@ category:
   - Hardware
 term: Firmware
 ---
-## Term Definition
+## Term Definition***Firmware**is persistent, low-level software programmed directly into a hardware chip (like the BIOS or iBoot) to control its basic operations.
 
-***Firmware**is persistent, low-level software programmed directly into a hardware chip (like the BIOS or iBoot) to control its basic operations.
-
-Key roles:
-
-***Initialization**: It is the first code that runs when a device is turned on, telling the hardware how to start up.
-***Hardware Control**: Manages the interaction between the physical components (screen, battery, fans) and the higher-level operating system (macOS/iOS).
-***Security Updates**: Apple frequently bundles firmware updates with standard OS updates to patch vulnerabilities that exist at the chip level.
+Key roles:***Initialization**: It is the first code that runs when a device is turned on, telling the hardware how to start up.***Hardware Control**: Manages the interaction between the physical components (screen, battery, fans) and the higher-level operating system (macOS/iOS).***Security Updates**: Apple frequently bundles firmware updates with standard OS updates to patch vulnerabilities that exist at the chip level.
 
 ## Analogy
 

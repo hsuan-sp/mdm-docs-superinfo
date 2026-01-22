@@ -12,7 +12,9 @@ title: How do I batch create Managed Apple Accounts? Should I use SFTP or CSV im
 ---
 ## Q: How do I batch create Managed Apple Accounts? Should I use SFTP or CSV import?
 
-## Answer***According to official Apple documentation, there are three primary ways to create Managed Apple Accounts: SFTP Upload (SIS integration), Manual CSV Import, and Federated Authentication.**## Comparison of Methods
+## Answer
+
+***According to official Apple documentation, there are three primary ways to create Managed Apple Accounts: SFTP Upload (SIS integration), Manual CSV Import, and Federated Authentication.**## Comparison of Methods
 
 | Method | Best For | Key Features |
 | :--- | :--- | :--- |
@@ -24,10 +26,10 @@ title: How do I batch create Managed Apple Accounts? Should I use SFTP or CSV im
 
 If your school uses a Student Information System (SIS), you can upload data via Secure File Transfer Protocol (SFTP).***Supported Formats**:***Apple CSV Format**: Using standard Apple-provided templates.***OneRoster CSV**: Supporting OneRoster version 1.1 specifications.***Workflow**:
 
-1.**Setup Connection**: Obtain your SFTP URL, username, and password from ASM.
-2.**Prepare Files**: Export data and create a**ZIP archive**containing all necessary CSV files.
-3.**Upload**: Use an SFTP client to connect and drag the ZIP file into the**dropbox**folder (this is the default root folder on Apple’s SFTP server).
-4.**Processing**: ASM will process the files automatically. You can download logs to check for errors.***Note: After the initial connection, every subsequent update must include "all" CSV files, even those that haven't changed.**## 2. Manual CSV Upload
+1. **Setup Connection**: Obtain your SFTP URL, username, and password from ASM.
+2. **Prepare Files**: Export data and create a**ZIP archive**containing all necessary CSV files.
+3. **Upload**: Use an SFTP client to connect and drag the ZIP file into the**dropbox**folder (this is the default root folder on Apple’s SFTP server).
+4. **Processing**: ASM will process the files automatically. You can download logs to check for errors.***Note: After the initial connection, every subsequent update must include "all" CSV files, even those that haven't changed.**## 2. Manual CSV Upload
 
 Ideal for scenarios without an SFTP server, performed directly via the browser.***Path**: Log in to ASM > Select CSV options in the sidebar > "Upload CSV."***Process**: Choose your format (Apple or OneRoster) > Upload files > System validates and imports.
 

@@ -8,11 +8,7 @@ term: Student Information System (SIS)
 
 A**Student Information System (SIS)**is the authoritative database used by schools to manage student data.
 
-Key functions:
-
-***Records**: Stores attendance, grades, medical info, and family contacts.
-***Integration**: Syncs with**Apple School Manager (ASM)**to provide accurate, up-to-date rosters for Managed Apple Accounts.
-***Automation**: When a new student is entered into the SIS, their digital identity and class assignments are automatically created in the school's technology systems.
+Key functions:***Records**: Stores attendance, grades, medical info, and family contacts.***Integration**: Syncs with**Apple School Manager (ASM)**to provide accurate, up-to-date rosters for Managed Apple Accounts.***Automation**: When a new student is entered into the SIS, their digital identity and class assignments are automatically created in the school's technology systems.
 
 ## Analogy
 

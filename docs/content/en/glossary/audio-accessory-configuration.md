@@ -7,11 +7,7 @@ term: Audio Accessory Configuration
 
 Introduced in**iOS/iPadOS 26**(`com.Apple.configuration.audio-accessory.settings`), this MDM payload improves audio accessory management in collaborative environments.
 
-Key management features:
-
-***Temporary Pairing**: Allows supervised devices to pair with AirPods or Beats headphones temporarily.
-***iCloud Bypass**: Prevents pairing information from syncing to the user's personal iCloud account.
-***Shared iPad Optimization**: Designed specifically to ensure that accessory connections are cleared when a student logs out.
+Key management features:***Temporary Pairing**: Allows supervised devices to pair with AirPods or Beats headphones temporarily.***iCloud Bypass**: Prevents pairing information from syncing to the user's personal iCloud account.***Shared iPad Optimization**: Designed specifically to ensure that accessory connections are cleared when a student logs out.
 
 ## MDM Context
 

@@ -7,11 +7,7 @@ term: Extension Attribute
 
 An**Extension Attribute**is a powerful customization feature in Jamf Pro that allows administrators to collect data points not covered by the standard MDM inventory protocol.
 
-Capabilities:
-
-***Custom Scripts**: Run Bash, Zsh, or Python scripts to query deep system settings.
-***Specific Monitoring**: Report on unique items like the number of**battery cycles**, the presence of internal company files, or specific hardware daughterboard IDs.
-***Reporting**: The data collected is populated into the device record and can be used to trigger**Smart Groups**.
+Capabilities:***Custom Scripts**: Run Bash, Zsh, or Python scripts to query deep system settings.***Specific Monitoring**: Report on unique items like the number of**battery cycles**, the presence of internal company files, or specific hardware daughterboard IDs.***Reporting**: The data collected is populated into the device record and can be used to trigger**Smart Groups**.
 
 ## Analogy
 

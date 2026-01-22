@@ -19,19 +19,9 @@ title: >-
 
 ## Standard Safe Migration SOP:
 
-1.**Step 1: Push the New Profile**:
+1. **Step 1: Push the New Profile**:***Create a new Wi-Fi configuration profile in Jamf Pro (with the new SSID and password).***Deploy this to all devices. At this point, the iPads will have*both* the old and new Wi-Fi settings.
 
-***Create a new Wi-Fi configuration profile in Jamf Pro (with the new SSID and password).*** Deploy this to all devices. At this point, the iPads will have*both* the old and new Wi-Fi settings.
-
-2.**Step 2: Field Testing**:
-
-***Take a test iPad to various locations in the school. Manually turn off the old SSID (if broadcasting) to confirm the device switches to and successfully connects via the new SSID.**3.**Step 3: Grace Period**:
-
-***Keep both SSIDs active for at least**2 to 3 days**.
-
-***This ensures that devices that were asleep, powered off, or off-site have a chance to wake up and receive the new Wi-Fi profile before the old network disappears.**1.**Step 4: Decommission Old Config**:
-
-***Once you verify that the majority of devices have connected via the new network (checked via inventory reports), remove the "Scope" for the old Wi-Fi profile in Jamf Pro.**## WARNING: Why you should NOT just edit the old profile
+2. **Step 2: Field Testing**:***Take a test iPad to various locations in the school. Manually turn off the old SSID (if broadcasting) to confirm the device switches to and successfully connects via the new SSID.**3.**Step 3: Grace Period**:***Keep both SSIDs active for at least**2 to 3 days**.***This ensures that devices that were asleep, powered off, or off-site have a chance to wake up and receive the new Wi-Fi profile before the old network disappears.**1.**Step 4: Decommission Old Config**:***Once you verify that the majority of devices have connected via the new network (checked via inventory reports), remove the "Scope" for the old Wi-Fi profile in Jamf Pro.**## WARNING: Why you should NOT just edit the old profile
 
 If you simply modify the existing Wi-Fi profile (changing SSID A to SSID B), the iPad will disconnect from A the moment it receives the command. If there is a typo in the password or the APs aren't ready for B, the iPad is now offline and cannot receive the "correction" command you send later. This creates a dead loop.
 

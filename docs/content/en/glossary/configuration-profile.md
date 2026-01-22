@@ -7,12 +7,7 @@ term: Configuration Profile
 
 A**Configuration Profile**is a standardized XML file (`.mobileconfig`) that contains a set of instructions and settings for Apple devices.
 
-Common payloads include:
-
-***Connectivity**: Wi-Fi passwords, VPN configurations, and Cellular settings.
-***Accounts**: Corporate email (Exchange, IMAP) and LDAP settings.
-***Restrictions**: Disabling the camera, blocking the App Store, or limiting Safari content.
-***Security**: Mandatory passcode requirements and FileVault encryption policies.
+Common payloads include:***Connectivity**: Wi-Fi passwords, VPN configurations, and Cellular settings.***Accounts**: Corporate email (Exchange, IMAP) and LDAP settings.***Restrictions**: Disabling the camera, blocking the App Store, or limiting Safari content.***Security**: Mandatory passcode requirements and FileVault encryption policies.
 
 ## Analogy
 

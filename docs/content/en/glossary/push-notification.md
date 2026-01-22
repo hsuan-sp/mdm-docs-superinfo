@@ -9,11 +9,11 @@ A**Push Notification**is a small, efficient data packet sent via the**Apple Push
 
 How MDM uses it:
 
-1.**Trigger**: The admin sends a command (e.g., "Install Microsoft Word").
-2.**Push**: The MDM server sends a "Poke" to APNs.
-3.**Wake**: APNs forwards this small packet to the iPad.
-4.**Check-in**: The iPad wakes up from sleep and contacts the MDM server to ask, "What do you want me to do?"
-5.**Action**: The iPad receives the instruction to install Word.
+1. **Trigger**: The admin sends a command (e.g., "Install Microsoft Word").
+2. **Push**: The MDM server sends a "Poke" to APNs.
+3. **Wake**: APNs forwards this small packet to the iPad.
+4. **Check-in**: The iPad wakes up from sleep and contacts the MDM server to ask, "What do you want me to do?"
+5. **Action**: The iPad receives the instruction to install Word.
 
 ## Analogy
 

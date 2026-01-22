@@ -12,7 +12,9 @@ title: >-
 
 ## Q: The system prompted to agree to 'New Terms and Conditions' when logging into Apple School Manager (ASM). Is this important?
 
-## Answer**Yes, this is extremely important and should be prioritized immediately!**When Apple updates its service terms, a "Terms and Conditions" window will pop up when you log into Apple School Manager (ASM).
+## Answer
+
+**Yes, this is extremely important and should be prioritized immediately!**When Apple updates its service terms, a "Terms and Conditions" window will pop up when you log into Apple School Manager (ASM).
 
 ### Impact Scope
 

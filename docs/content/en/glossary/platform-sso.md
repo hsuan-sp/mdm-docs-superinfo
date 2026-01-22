@@ -4,15 +4,9 @@ category:
   - macOS
 term: Platform SSO
 ---
-## Term Definition
+## Term Definition***Platform Single Sign-On (Platform SSO)**is a framework that deeply integrates a Mac's local user account with an external Identity Provider (IdP).
 
-***Platform Single Sign-On (Platform SSO)**is a framework that deeply integrates a Mac's local user account with an external Identity Provider (IdP).
-
-Capabilities:
-
-***Sync**: Keeps the local Mac password in sync with the cloud password (e.g., Entra ID or Okta).
-***Kerberos/Tokens**: Automatically acquires authentication tickets in the background.
-***Experience**: When a user unlocks their Mac, they are implicitly signed in to Safari, corporate apps, and file shares without needing to re-authenticate.
+Capabilities:***Sync**: Keeps the local Mac password in sync with the cloud password (e.g., Entra ID or Okta).***Kerberos/Tokens**: Automatically acquires authentication tickets in the background.***Experience**: When a user unlocks their Mac, they are implicitly signed in to Safari, corporate apps, and file shares without needing to re-authenticate.
 
 ## Analogy
 

@@ -12,7 +12,11 @@ title: 如何在 ASM 中批次建立管理式 Apple 帳號？使用 SFTP 還是�
 ---
 ## Q: 如何在 ASM 中批次建立管理式 Apple 帳號？使用 SFTP 還是手動 CSV 匯入？
 
-## Answer***根據 Apple 官方資訊，建立管理式 Apple 帳號主要有三種方式：SFTP 上傳 (SIS 整合）、手動 CSV 匯入，以及聯合驗證 (Federated Authentication)。**## 三種方式比較
+## Answer
+
+***根據 Apple 官方資訊，建立管理式 Apple 帳號主要有三種方式：SFTP 上傳 (SIS 整合）、手動 CSV 匯入，以及聯合驗證 (Federated Authentication)。
+
+**## 三種方式比較
 
 | 方式 | 適合對象 | 特點 |
 | :--- | :--- | :--- |
@@ -22,20 +26,42 @@ title: 如何在 ASM 中批次建立管理式 Apple 帳號？使用 SFTP 還是�
 
 ## 1. 透過 SFTP 上傳資料 （自動化/SIS 整合）
 
-若學校有學生資訊系統 (SIS)，可透過安全檔案傳輸通訊協定 (SFTP) 上傳資料。***支援格式**：***Apple CSV 格式**：使用 Apple 提供的標準範本。***OneRoster CSV**：支援 OneRoster 版本 1.1 規格。***操作流程**：
+若學校有學生資訊系統 (SIS)，可透過安全檔案傳輸通訊協定 (SFTP) 上傳資料。
 
-1.**設定連線**：在 ASM 取得 SFTP URL、使用者名稱與密碼。
-2.**準備檔案**：匯出資料並建立包含所有 CSV 檔案的**ZIP 壓縮檔**。
-3.**上傳**：使用 SFTP App 連線，將 ZIP 檔拖入**dropbox**檔案夾（此為 Apple SFTP 伺服器之預設根目錄名稱，與 Dropbox 雲端硬碟服務無關）。
-4.**處理**：上傳後 ASM 會自動處理，若有錯誤可下載記錄檔檢視。***注意**：初次連線後，每次更新都需上傳「所有」CSV 檔案，即使某些檔案未變更。
+***支援格式**：
+
+***Apple CSV 格式**：使用 Apple 提供的標準範本。
+
+***OneRoster CSV**：支援 OneRoster 版本 1.1 規格。
+
+***操作流程**：
+
+1. **設定連線**：在 ASM 取得 SFTP URL、使用者名稱與密碼。
+2. **準備檔案**：匯出資料並建立包含所有 CSV 檔案的**ZIP 壓縮檔**。
+3. **上傳**：使用 SFTP App 連線，將 ZIP 檔拖入**dropbox**檔案夾（此為 Apple SFTP 伺服器之預設根目錄名稱，與 Dropbox 雲端硬碟服務無關）。
+4. **處理**：上傳後 ASM 會自動處理，若有錯誤可下載記錄檔檢視。
+
+***注意**：初次連線後，每次更新都需上傳「所有」CSV 檔案，即使某些檔案未變更。
 
 ## 2. 手動上傳 CSV
 
-適合沒有架設 SFTP 的情境，直接由網頁操作。***路徑**：登入 ASM > 點選上方或側邊欄的 CSV 相關選項 > 「上傳 CSV」。***流程**：選擇 Apple 格式或 OneRoster 格式 > 上傳檔案 > 系統驗證並匯入。
+適合沒有架設 SFTP 的情境，直接由網頁操作。
+
+***路徑**：登入 ASM > 點選上方或側邊欄的 CSV 相關選項 > 「上傳 CSV」。
+
+***流程**：選擇 Apple 格式或 OneRoster 格式 > 上傳檔案 > 系統驗證並匯入。
 
 ## 3. 聯合驗證 （搭配目錄同步）
 
-這是目前最現代化的管理方式，將 ASM 連結至**Google Workspace**或**Microsoft Entra ID**。***優勢**：使用者使用原本的 Email 與密碼即可登入 Managed Apple Account。***混合模式**：***帳號來源**：由聯合驗證 (IdP) 提供。***班級與名冊**：仍可透過 SFTP 上傳 CSV 來建立班級與關聯。
+這是目前最現代化的管理方式，將 ASM 連結至**Google Workspace**或**Microsoft Entra ID**。
+
+***優勢**：使用者使用原本的 Email 與密碼即可登入 Managed Apple Account。
+
+***混合模式**：
+
+***帳號來源**：由聯合驗證 (IdP) 提供。
+
+***班級與名冊**：仍可透過 SFTP 上傳 CSV 來建立班級與關聯。
 
 * 此模式下，SIS 負責課程資料，IdP 負責身分驗證，兩者完美結合。
 

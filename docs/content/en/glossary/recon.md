@@ -4,16 +4,9 @@ category:
   - macOS
 term: Recon
 ---
-## Term Definition
+## Term Definition***Recon**(short for the `Jamf recon` command) is the inventory collection process on managed Macs.
 
-***Recon**(short for the `Jamf recon` command) is the inventory collection process on managed Macs.
-
-What it collects:
-
-***Hardware**: Model, serial number, battery health, and storage capacity.
-***Software**: List of all installed applications and their versions.
-***Identity**: Current logged-in user and local account lists.
-***Custom Data**: Results from any scripts defined as "Extension Attributes" (e.g., checking if SSH is enabled).
+What it collects:***Hardware**: Model, serial number, battery health, and storage capacity.***Software**: List of all installed applications and their versions.***Identity**: Current logged-in user and local account lists.***Custom Data**: Results from any scripts defined as "Extension Attributes" (e.g., checking if SSH is enabled).
 
 Running `sudo Jamf recon` in Terminal forces the Mac to submit this report immediately.
 

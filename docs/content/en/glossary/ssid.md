@@ -7,11 +7,7 @@ term: SSID (Service Set Identifier)
 
 An**SSID (Service Set Identifier)**is the technical term for the name of a Wi-Fi network broadcast by a router.
 
-Common school setup:
-
-***School-Secure**: Encrypted network using WPA 2/WPA 3-Enterprise (802.1X) for managed devices.
-***School-Guest**: Open or password-protected network for visitors, isolated from internal servers.
-***Hidden SSID**: A network that does not broadcast its name (a weak security measure, often discouraged).
+Common school setup:***School-Secure**: Encrypted network using WPA 2/WPA 3-Enterprise (802.1X) for managed devices.***School-Guest**: Open or password-protected network for visitors, isolated from internal servers.***Hidden SSID**: A network that does not broadcast its name (a weak security measure, often discouraged).
 
 ## Analogy
 

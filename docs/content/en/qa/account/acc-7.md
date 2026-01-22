@@ -10,7 +10,9 @@ title: Can I use my personal Apple Account to sign in to a school iPad?
 ---
 ## Q: Can I use my personal Apple Account to sign in to a school iPad?
 
-## Answer***Standard Policy: Not Recommended. School devices should prioritize the use of a 'Managed Apple Account' or remain signed out.**School administrators can now configure specific restrictions via Apple School Manager (ASM) to ensure organization-owned devices can only sign in with managed accounts. Even if your device does not enforce this yet, you should be aware of the following risks.***Why Signing in with Personal Accounts is Discouraged**:
+## Answer
+
+***Standard Policy: Not Recommended. School devices should prioritize the use of a 'Managed Apple Account' or remain signed out.**School administrators can now configure specific restrictions via Apple School Manager (ASM) to ensure organization-owned devices can only sign in with managed accounts. Even if your device does not enforce this yet, you should be aware of the following risks.***Why Signing in with Personal Accounts is Discouraged**:
 
 | Risk Factor | Details |
 | :--- | :--- |

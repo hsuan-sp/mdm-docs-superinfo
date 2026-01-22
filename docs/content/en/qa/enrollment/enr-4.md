@@ -32,7 +32,4 @@ title: >-
 
 Apple now recommends**Account-Driven User Enrollment**. Instead of downloading a profile from a website, the student goes to**Settings > General > VPN & Device Management**and signs in with their**Managed Apple Account**. The device recognizes the campus ID and automatically sets up the school partition.
 
-## Institutional Advice:
-
-***For School iPads**: Never use User Enrollment. You need the ability to lock and track the device if it’s lost.
-***For Staff/Shared personal use**: User Enrollment is the perfect balance for teachers who want to access school email on their personal iPhones without the school being able to see their private data.
+## Institutional Advice:***For School iPads**: Never use User Enrollment. You need the ability to lock and track the device if it’s lost.***For Staff/Shared personal use**: User Enrollment is the perfect balance for teachers who want to access school email on their personal iPhones without the school being able to see their private data.

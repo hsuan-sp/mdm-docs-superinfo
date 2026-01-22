@@ -3,15 +3,13 @@ category:
   - Enrollment
 term: ADE (Automated Device Enrollment)
 ---
-## Term Definition
-
-***Automated Device Enrollment (ADE)**is the gold standard for deploying Apple devices at scale (formerly known as**DEP**).
+## Term Definition***Automated Device Enrollment (ADE)**is the gold standard for deploying Apple devices at scale (formerly known as**DEP**).
 
 The workflow involves:
 
-1.**Purchasing**: Devices are bought through an authorized reseller or Apple directly.
-2.**Assignment**: Serial numbers are automatically added to the organization's**Apple School Manager (ASM)**or**Apple Business Manager (ABM)**account.
-3.**Activation**: The moment the device is turned on and connected to Wi-Fi, it automatically downloads the school's MDM Profile.
+1. **Purchasing**: Devices are bought through an authorized reseller or Apple directly.
+2. **Assignment**: Serial numbers are automatically added to the organization's**Apple School Manager (ASM)**or**Apple Business Manager (ABM)**account.
+3. **Activation**: The moment the device is turned on and connected to Wi-Fi, it automatically downloads the school's MDM Profile.
 
 This process is mandatory and cannot be skipped by the end-user, enabling true**"Zero-Touch"**deployment.
 

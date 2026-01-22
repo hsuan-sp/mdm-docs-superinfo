@@ -3,9 +3,7 @@ category:
   - Security
 term: Activation Lock Bypass Code （啟用鎖定繞過代碼）
 ---
-## 術語定義
-
-***Activation Lock Bypass Code （啟用鎖定繞過代碼）**是一組由 MDM 伺服器自動從**受監管 (Supervised)**裝置中收集的唯一英數隨機字串。
+## 術語定義***Activation Lock Bypass Code （啟用鎖定繞過代碼）**是一組由 MDM 伺服器自動從**受監管 (Supervised)**裝置中收集的唯一英數隨機字串。
 
 這組代碼對於裝置的生命週期管理至關重要：
 

@@ -7,11 +7,7 @@ term: Captive Portal
 
 A**Captive Portal**is a web-based authentication page that intercepts network traffic before granting full internet access.
 
-Common characteristics:
-
-***Locations**: Frequently used in hotels, airports, coffee shops, and public transportation.
-***Interactions**: Users are prompted to enter credentials, pay a fee, or simply click "Agree" to terms of service.
-***MDM Impact**: Managed devices may fail to check in or complete background Enrollment tasks when blocked by a Captive Portal until a user manually interacts with the login page.
+Common characteristics:***Locations**: Frequently used in hotels, airports, coffee shops, and public transportation.***Interactions**: Users are prompted to enter credentials, pay a fee, or simply click "Agree" to terms of service.***MDM Impact**: Managed devices may fail to check in or complete background Enrollment tasks when blocked by a Captive Portal until a user manually interacts with the login page.
 
 ## Analogy
 

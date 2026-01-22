@@ -24,16 +24,11 @@ title: How do I prevent students from entering Recovery Mode to format the compu
 
 ## 1. Recovery Lock (For Apple Silicon)
 
-Starting with macOS 11.5, MDM can set a Recovery Lock. When enabled, the Mac will prompt for the administrator-defined password before allowing entry into Recovery Mode.
-
-***Jamf Pro Action**: Select a computer >**Management > Remote Commands > Set Recovery Lock**.
-***Management Note**: Jamf Pro will escrow the password so you can retrieve it later from the inventory record.
+Starting with macOS 11.5, MDM can set a Recovery Lock. When enabled, the Mac will prompt for the administrator-defined password before allowing entry into Recovery Mode.***Jamf Pro Action**: Select a computer >**Management > Remote Commands > Set Recovery Lock**.***Management Note**: Jamf Pro will escrow the password so you can retrieve it later from the inventory record.
 
 ## 2. Firmware Password (For Intel Macs)
 
-This prevents the Mac from booting from anything other than the designated startup disk without a password.
-
-***Jamf Pro Action**: Create a**Computer Configuration Profile**with the**EFI Password**payload.
+This prevents the Mac from booting from anything other than the designated startup disk without a password.***Jamf Pro Action**: Create a**Computer Configuration Profile**with the**EFI Password**payload.
 
 ## Practical Advice:
 

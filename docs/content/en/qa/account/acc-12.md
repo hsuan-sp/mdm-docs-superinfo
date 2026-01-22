@@ -10,7 +10,9 @@ title: Can I migrate to a new MDM provider without wiping device data?
 ---
 ## Q: Can I migrate to a new MDM provider without wiping device data?
 
-## Answer***While System Version 26 supports 'Automated MDM Migration', it remains 'strongly discouraged' in educational environments due to potential configuration conflicts.**According to the latest updates from WWDC 25, Apple has enhanced the `MigrateDevice` command in**Version 26**(iOS 26 / macOS 26 Tahoe), allowing devices to migrate silently from an old MDM to a new one. However, significant risks remain:
+## Answer
+
+***While System Version 26 supports 'Automated MDM Migration', it remains 'strongly discouraged' in educational environments due to potential configuration conflicts.**According to the latest updates from WWDC 25, Apple has enhanced the `MigrateDevice` command in**Version 26**(iOS 26 / macOS 26 Tahoe), allowing devices to migrate silently from an old MDM to a new one. However, significant risks remain:
 
 ## 1. Educational Environment Constraints:***Profile Residue**: Non-wipe migrations often lead to residual "Restriction Profiles" or "Education Settings" from the old MDM conflicting with the new one, potentially breaking Apple Classroom.***Data Integrity**: Over time, student devices accumulate cache and temporary files. Without a clean reset, new MDM configurations may not apply correctly.***License Sync**: VPP app licenses may fail to transition smoothly, preventing subsequent updates.
 

@@ -4,16 +4,9 @@ category:
   - Enrollment
 term: Shared iPad
 ---
-## Term Definition
+## Term Definition***Shared iPad**is a multi-user Enrollment mode for iPadOS designed for classroom carts.
 
-***Shared iPad**is a multi-user Enrollment mode for iPadOS designed for classroom carts.
-
-How it works:
-
-***Cloud Storage**: Users sign in with their Managed Apple Account. Their personal data is downloaded from iCloud to the device.
-***Caching**: The iPad caches the data locally for the most recent users (e.g., last 5 students) so they can log in instantly next time.
-***Privacy**: Each user's data is encrypted separately. Student A cannot see Student B's photos or files.
-***Guest Mode**: Allows temporary usage without a login for quick research tasks.
+How it works:***Cloud Storage**: Users sign in with their Managed Apple Account. Their personal data is downloaded from iCloud to the device.***Caching**: The iPad caches the data locally for the most recent users (e.g., last 5 students) so they can log in instantly next time.***Privacy**: Each user's data is encrypted separately. Student A cannot see Student B's photos or files.***Guest Mode**: Allows temporary usage without a login for quick research tasks.
 
 ## Analogy
 

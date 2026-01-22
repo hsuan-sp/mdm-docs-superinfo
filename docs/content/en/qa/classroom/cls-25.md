@@ -32,21 +32,4 @@ title: >-
 
 ## Teaching Scenarios
 
-## Scenario 1: Starting the Lesson
-
-***Use Classroom**:
-
-***Use "Navigate" to push the day's news article or website to everyone's iPad.*****Use "Lock" to freeze their screens on that page for a 5-minute introduction.**## Scenario 2: Individual Practice
-
-***Use Schoolwork**:
-
-***Send a "Handout" containing a PDF worksheet and a link to a tutorial video.*****Use Classroom**:
-
-***Unlock the iPads.*****Use "Screen View" to remotely monitor if anyone has drifted off-task to a game or social media.**## Scenario 3: Homework & Assessment
-
-***Use Schoolwork**:
-
-***Students finish their worksheet at home and upload it back to the handout.*****Teacher grades and provides feedback.*****The teacher checks the dashboard and notices a student spent 3 hours on a math problem, indicating a need for intervention.**## Summary Advice
-
-***If you need to manage order, push web pages, and watch screens ➡ ️ Use**Classroom**.
-***If you need to distribute, collect, and grade assignments ➡ ️ Use**Schoolwork**.
+## Scenario 1: Starting the Lesson***Use Classroom**:***Use "Navigate" to push the day's news article or website to everyone's iPad.*****Use "Lock" to freeze their screens on that page for a 5-minute introduction.**## Scenario 2: Individual Practice***Use Schoolwork**:***Send a "Handout" containing a PDF worksheet and a link to a tutorial video.*****Use Classroom**:***Unlock the iPads.*****Use "Screen View" to remotely monitor if anyone has drifted off-task to a game or social media.**## Scenario 3: Homework & Assessment***Use Schoolwork**:***Students finish their worksheet at home and upload it back to the handout.*****Teacher grades and provides feedback.*****The teacher checks the dashboard and notices a student spent 3 hours on a math problem, indicating a need for intervention.**## Summary Advice***If you need to manage order, push web pages, and watch screens ➡ ️ Use**Classroom**.***If you need to distribute, collect, and grade assignments ➡ ️ Use**Schoolwork**.

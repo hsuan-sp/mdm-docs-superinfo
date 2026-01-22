@@ -7,10 +7,7 @@ term: Payload
 
 A**Payload**is the fundamental unit of configuration within an MDM**Configuration Profile**.
 
-Structure:
-
-***A Profile**= The container (e.g., "Student Wi-Fi Policy").
-***A Payload**= The specific setting item inside that container (e.g., "The Wi-Fi Password" or "The Root Certificate").
+Structure:***A Profile**= The container (e.g., "Student Wi-Fi Policy").***A Payload**= The specific setting item inside that container (e.g., "The Wi-Fi Password" or "The Root Certificate").
 
 Multiple payloads can be bundled into a single profile to deliver a complete configuration (e.g., setting up Email, Wi-Fi, and VPN all at once).
 

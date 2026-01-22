@@ -20,15 +20,6 @@ The Apple MDM protocol does not grant permissions to read or modify local alarm 
 
 ## Strategic Solutions:
 
-1.**Hide the Clock App (Most Effective)**:
+1. **Hide the Clock App (Most Effective)**:***In Jamf Pro, add `com.Apple.mobiletimer` (the Clock App Bundle ID) to your**Restricted Software**list or a "Hide Apps" profile.***Result**: The Clock icon disappears. Students cannot set new alarms.***Note: Alarms set before the app was hidden may still ring; see below.**1.**Reset All Settings**:***If an alarm is already set and ringing, perform a remote**Reset All Settings**command (this clears settings/alarms without deleting user data).
 
-***In Jamf Pro, add `com.Apple.mobiletimer` (the Clock App Bundle ID) to your**Restricted Software**list or a "Hide Apps" profile.
-***Result**: The Clock icon disappears. Students cannot set new alarms.
-
-***Note: Alarms set before the app was hidden may still ring; see below.**1.**Reset All Settings**:
-
-***If an alarm is already set and ringing, perform a remote**Reset All Settings**command (this clears settings/alarms without deleting user data).
-
-1.**Jamf Teacher 'App Restrictions'**:
-
-***During class, teachers can use Jamf Teacher to "Allow only Educational Apps," which temporarily hides the Clock app and prevents interference.**
+1. **Jamf Teacher 'App Restrictions'**:***During class, teachers can use Jamf Teacher to "Allow only Educational Apps," which temporarily hides the Clock app and prevents interference.**

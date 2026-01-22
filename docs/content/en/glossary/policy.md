@@ -7,12 +7,7 @@ term: Policy
 
 In**Jamf Pro**, a**Policy**is the primary mechanism for executing management tasks on macOS computers.
 
-A Policy consists of:
-
-***Payload**: What to do (e.g., install Adobe Photoshop, run a script, dock settings).
-***Trigger**: When to do it (e.g., at Startup, at Login, or on a recurring check-in schedule).
-***Scope**: Who to do it to (e.g., "All Staff Macs" but excluding "Student Macs").
-***Frequency**: How often to do it (e.g., "Once per computer" or "Once every week").
+A Policy consists of:***Payload**: What to do (e.g., install Adobe Photoshop, run a script, dock settings).***Trigger**: When to do it (e.g., at Startup, at Login, or on a recurring check-in schedule).***Scope**: Who to do it to (e.g., "All Staff Macs" but excluding "Student Macs").***Frequency**: How often to do it (e.g., "Once per computer" or "Once every week").
 
 ## Analogy
 

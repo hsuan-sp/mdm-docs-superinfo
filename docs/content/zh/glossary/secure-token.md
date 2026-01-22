@@ -3,14 +3,14 @@ category:
   - Security
 term: Secure Token
 ---
-## 術語定義
-
-***Secure Token （安全權標）**是 macOS 上一種加密權限屬性，用來授權使用者帳號執行關鍵的安全操作。
+## 術語定義***Secure Token （安全權標）**是 macOS 上一種加密權限屬性，用來授權使用者帳號執行關鍵的安全操作。
 
 主要功能：
 
 ***FileVault**：只有擁有 Secure Token 的使用者才能啟用磁碟加密，或在開機時解鎖磁碟。
+
 ***信任鏈**：Mac 上建立的第一個使用者（通常是管理員）會自動獲得第一個 Token。之後這名使用者必須「授與」Token 給其他使用者。
+
 ***MDM 託管**：在管理環境中，MDM 會利用**Bootstrap Token**來自動發放 Secure Token 給使用者的行動帳號，避免學生因為沒有 Token 而無法登入或解鎖硬碟。
 
 ## 白話文比喻

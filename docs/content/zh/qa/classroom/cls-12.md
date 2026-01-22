@@ -14,11 +14,14 @@ title: 【考試防弊】如何避免學生用 Apple Intelligence （寫作工�
 
 ## Answer
 
-***針對 iOS 26+ 裝置，管理員應優先透過「宣告式裝置管理 (DDM)」進行即時控管。*****風險功能與控管方式**：
+***針對 iOS 26+ 裝置，管理員應優先透過「宣告式裝置管理 (DDM)」進行即時控管。
+
+*****風險功能與控管方式**：
 
 ***寫作工具 (Writing Tools)**：透過 DDM 的**Restrictions**宣告停用 `allowWritingTools`。
 
 ***數學備忘錄 (Math Notes)**：停用 `allowMathNotes`。
+
 ***Genmoji 與影像遊樂場**：停用 `allowGenmoji` 與 `allowImagePlayground`。
 
 ***設定路徑 (Jamf Pro)**：
@@ -26,7 +29,7 @@ title: 【考試防弊】如何避免學生用 Apple Intelligence （寫作工�
 1. 進入**Blueprints**或**Declarations**。
 2. 新增**Restrictions**宣告。
 3. 針對上述 AI 功能進行封鎖，DDM 具備「即時生效」特性，適合考試前快速派送。
-4.**未納管裝置**：若學生使用個人裝置，管理員可在**ASM (Apple 校務管理）**的「服務存取」中，針對租戶層級關閉管理式 Apple 帳號的 Apple Intelligence 權限。
+4. **未納管裝置**：若學生使用個人裝置，管理員可在**ASM (Apple 校務管理）**的「服務存取」中，針對租戶層級關閉管理式 Apple 帳號的 Apple Intelligence 權限。
 
 ***硬體門檻校對**：
 

@@ -7,13 +7,7 @@ term: Package (.pkg)
 
 A**Package (.pkg)**is the standard flat-file installation format for macOS software deployment.
 
-Components:
-
-***Payload**: The actual files (apps, fonts, scripts) to be installed.
-***Scripts**: "Pre-install" and "Post-install" scripts that run commands to set up the environment (e.g., activate a license key).
-***Receipts**: A record left on the Mac so the system knows what was installed.
-
-***MDM Usage**: Admins wrap complex software (like Microsoft Office or Adobe Creative Cloud) into PKG files to deploy them silently to thousands of Macs at once.
+Components:***Payload**: The actual files (apps, fonts, scripts) to be installed.***Scripts**: "Pre-install" and "Post-install" scripts that run commands to set up the environment (e.g., activate a license key).***Receipts**: A record left on the Mac so the system knows what was installed.***MDM Usage**: Admins wrap complex software (like Microsoft Office or Adobe Creative Cloud) into PKG files to deploy them silently to thousands of Macs at once.
 
 ## Analogy
 

@@ -3,15 +3,9 @@ category:
   - Core
 term: AirDrop
 ---
-## Term Definition
+## Term Definition***AirDrop**is Apple’s proprietary peer-to-peer wireless file-sharing service. It uses**Bluetooth**for discovery and creates a high-speed**Wi-Fi Direct**connection for the actual transfer.
 
-***AirDrop**is Apple’s proprietary peer-to-peer wireless file-sharing service. It uses**Bluetooth**for discovery and creates a high-speed**Wi-Fi Direct**connection for the actual transfer.
-
-Management considerations:
-
-***Collaboration**: Excellent for quick document sharing in classrooms.
-***Security Risks**: Can be used for unsolicited or unauthorized file transfers.
-***Restrictions**: MDM can restrict AirDrop to**"Managed Contacts Only"**or disable it entirely to maintain a safe learning environment.
+Management considerations:***Collaboration**: Excellent for quick document sharing in classrooms.***Security Risks**: Can be used for unsolicited or unauthorized file transfers.***Restrictions**: MDM can restrict AirDrop to**"Managed Contacts Only"**or disable it entirely to maintain a safe learning environment.
 
 ## Analogy
 

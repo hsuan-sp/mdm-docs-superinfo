@@ -3,15 +3,16 @@ category:
   - Security
 term: LAPS (Local Administrator Password Solution)
 ---
-## 術語定義
-
-***Local Administrator Password Solution (LAPS)**是一種強化的資安架構，專門用來管理每台電腦的本機管理員密碼。
+## 術語定義***Local Administrator Password Solution (LAPS)**是一種強化的資安架構，專門用來管理每台電腦的本機管理員密碼。
 
 其運作機制為：
 
 ***唯一性**：確保學校裡每一台電腦的管理員密碼都是獨一無二的。
+
 ***自動輪替**：系統會每隔一段時間（如 30 天）或在密碼被使用後，自動更換新密碼。
+
 ***安全託管**：目前的有效密碼會加密儲存在 MDM 系統中，只有授權的 IT 人員能查詢。
+
 ***防禦擴散**：有效防止**「橫向移動」**攻擊，駭客無法用一組偷來的密碼登入所有電腦。
 
 ## 白話文比喻

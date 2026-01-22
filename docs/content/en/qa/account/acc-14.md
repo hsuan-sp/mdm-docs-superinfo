@@ -12,13 +12,15 @@ title: >-
 ---
 ## Q: Newly purchased devices are not syncing from ASM to Jamf Pro? (ADE Server Token Renewal)
 
-## Answer***If newly purchased devices do not appear in your MDM inventory, the most common reason is an expired 'Server Token' or unassigned devices in Apple School Manager (ASM).**The Server Token acts as the secure bridge between ASM and Jamf Pro for hardware management (formerly known as the DEP process). It is responsible for syncing purchase serial numbers from Apple to your MDM console.
+## Answer
+
+***If newly purchased devices do not appear in your MDM inventory, the most common reason is an expired 'Server Token' or unassigned devices in Apple School Manager (ASM).**The Server Token acts as the secure bridge between ASM and Jamf Pro for hardware management (formerly known as the DEP process). It is responsible for syncing purchase serial numbers from Apple to your MDM console.
 
 ## Troubleshooting Steps:
 
-1.**Token Expiration**: Server Tokens are valid for exactly one year. Once expired, Jamf Pro cannot fetch new serial numbers or update the Enrollment status of existing ones from Apple.
-2.**Unassigned Devices**: New devices must be assigned to your Jamf Pro "MDM Server" within ASM before Jamf Pro can "see" them.
-3.**Unaccepted Terms**: As mentioned in `acc-1`, if new Apple terms and conditions have not been accepted, Apple will suspend all ADE synchronization activities.
+1. **Token Expiration**: Server Tokens are valid for exactly one year. Once expired, Jamf Pro cannot fetch new serial numbers or update the Enrollment status of existing ones from Apple.
+2. **Unassigned Devices**: New devices must be assigned to your Jamf Pro "MDM Server" within ASM before Jamf Pro can "see" them.
+3. **Unaccepted Terms**: As mentioned in `acc-1`, if new Apple terms and conditions have not been accepted, Apple will suspend all ADE synchronization activities.
 
 ## How to Renew the Server Token:
 

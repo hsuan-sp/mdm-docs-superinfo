@@ -13,12 +13,17 @@ title: 我要如何把 iPad 畫面投影到傳統電視或沒有 Apple TV 的教
 
 ## Answer
 
-***可透過 HDMI 轉接器有線連接（最穩定），或使用第三方無線投影軟體（延遲較高）。*****最佳方案仍是建議學校購置 Apple TV。**在沒有 Apple TV 的教室投影 iPad 畫面是常見需求。
+***可透過 HDMI 轉接器有線連接（最穩定），或使用第三方無線投影軟體（延遲較高）。
+
+*****最佳方案仍是建議學校購置 Apple TV。
+
+**在沒有 Apple TV 的教室投影 iPad 畫面是常見需求。
 以下是各種解決方案的比較與操作說明。
 
 ***方案一：HDMI 轉接器（最推薦）*****所需裝置**：
 
 ***Lightning 機型**：Lightning Digital AV 轉接器（Apple 原廠或 MFi 認證）。
+
 ***USB-C 機型**：USB-C Digital AV 多埠轉接器。
 
 * HDMI 線（連接轉接器與電視/投影機）。

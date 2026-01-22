@@ -3,17 +3,15 @@ category:
   - Enrollment
 term: Zero-Touch Deployment
 ---
-## Term Definition
-
-***Zero-Touch Deployment**is a hands-off distribution model for Apple devices.
+## Term Definition***Zero-Touch Deployment**is a hands-off distribution model for Apple devices.
 
 Workflow:
 
-1.**Purchase**: School buys devices from Apple/Reseller.
-2.**Assign**: Devices are automatically added to**Apple School Manager (ASM)**.
-3.**Ship**: Unopened boxes are shipped directly to students' homes.
-4.**Setup**: Student opens the box and connects to Wi-Fi.
-5.**Enroll**: The device checks in with Apple, sees it belongs to the school, downloads the MDM Profile, and installs all apps automatically.
+1. **Purchase**: School buys devices from Apple/Reseller.
+2. **Assign**: Devices are automatically added to**Apple School Manager (ASM)**.
+3. **Ship**: Unopened boxes are shipped directly to students' homes.
+4. **Setup**: Student opens the box and connects to Wi-Fi.
+5. **Enroll**: The device checks in with Apple, sees it belongs to the school, downloads the MDM Profile, and installs all apps automatically.
 
 ## Analogy
 

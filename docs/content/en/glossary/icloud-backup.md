@@ -4,17 +4,9 @@ category:
   - Apple
 term: iCloud Backup
 ---
-## Term Definition
+## Term Definition***iCloud Backup**is an automated cloud service that replicates a device's data and settings to Apple’s secure servers.
 
-***iCloud Backup**is an automated cloud service that replicates a device's data and settings to Apple’s secure servers.
-
-Execution criteria:
-
-***Connectivity**: The device must be connected to Wi-Fi.
-***Power**: The device must be plugged into a power source (charging).
-***State**: The device screen must be locked (usually occurring overnight).
-
-***MDM Governance**: Depending on the school's data privacy policy, IT can either mandate iCloud Backup to ensure student work is never lost, or restrict it if data must remain strictly on-premises for legal reasons.
+Execution criteria:***Connectivity**: The device must be connected to Wi-Fi.***Power**: The device must be plugged into a power source (charging).***State**: The device screen must be locked (usually occurring overnight).***MDM Governance**: Depending on the school's data privacy policy, IT can either mandate iCloud Backup to ensure student work is never lost, or restrict it if data must remain strictly on-premises for legal reasons.
 
 ## Analogy
 

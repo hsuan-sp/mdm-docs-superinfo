@@ -3,16 +3,9 @@ category:
   - Security
 term: Compliance
 ---
-## Term Definition
+## Term Definition***Compliance**measures whether a managed device currently satisfies the organization’s mandatory security and configuration standards.
 
-***Compliance**measures whether a managed device currently satisfies the organization’s mandatory security and configuration standards.
-
-Typical compliance checks include:
-
-***Passcode**: Is a secure passcode set up and active?
-***Version**: Is the device running an approved and patched OS version?
-***Integrity**: Is the device free from unauthorized modifications (e.g., is not "Jailbroken")?
-***Applications**: Are mandatory security apps installed and running?
+Typical compliance checks include:***Passcode**: Is a secure passcode set up and active?***Version**: Is the device running an approved and patched OS version?***Integrity**: Is the device free from unauthorized modifications (e.g., is not "Jailbroken")?***Applications**: Are mandatory security apps installed and running?
 
 If a device drifts out of compliance, MDM can automatically trigger alerts or restrict its access to institutional resources like email or Wi-Fi.
 

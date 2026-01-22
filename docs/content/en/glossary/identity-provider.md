@@ -7,9 +7,7 @@ term: Identity Provider (IdP)
 
 An**Identity Provider (IdP)**is a specialized service that creates, maintains, and manages digital identities and authentication.
 
-Common IdPs in Education:
-
-***Google Workspace*****Microsoft Entra ID (formerly Azure AD)*****Okta*****MDM Role**: In a modern setup, MDM does not manage passwords itself. Instead, it "outsources" authentication to the IdP. When a student tries to enroll an iPad, the MDM sends a request to the IdP (e.g., Google) to verify the password. This enables**Single Sign-On (SSO)**, allowing students to use one single password for their iPad, their email, and their learning portal.
+Common IdPs in Education:***Google Workspace*****Microsoft Entra ID (formerly Azure AD)*****Okta*****MDM Role**: In a modern setup, MDM does not manage passwords itself. Instead, it "outsources" authentication to the IdP. When a student tries to enroll an iPad, the MDM sends a request to the IdP (e.g., Google) to verify the password. This enables**Single Sign-On (SSO)**, allowing students to use one single password for their iPad, their email, and their learning portal.
 
 ## Analogy
 

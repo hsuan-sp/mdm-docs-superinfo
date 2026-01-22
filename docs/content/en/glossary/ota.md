@@ -3,15 +3,9 @@ category:
   - Core
 term: OTA (Over-The-Air)
 ---
-## Term Definition
+## Term Definition***Over-the-Air (OTA)**refers to the wireless transmission method used to distribute software updates, settings, and commands to devices.
 
-***Over-the-Air (OTA)**refers to the wireless transmission method used to distribute software updates, settings, and commands to devices.
-
-Operational benefits:
-
-***No Cables**: Eliminates the need to physically connect devices to a computer (like Apple Configurator) via USB.
-***Remote Management**: Allows IT to manage devices that are off-campus, such as iPads being used for homework at a student's house.
-***Efficiency**: Enables simultaneous updates to thousands of devices across a network without manual intervention.
+Operational benefits:***No Cables**: Eliminates the need to physically connect devices to a computer (like Apple Configurator) via USB.***Remote Management**: Allows IT to manage devices that are off-campus, such as iPads being used for homework at a student's house.***Efficiency**: Enables simultaneous updates to thousands of devices across a network without manual intervention.
 
 ## Analogy
 

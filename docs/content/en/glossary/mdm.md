@@ -3,16 +3,9 @@ category:
   - Core
 term: MDM (Mobile Device Management)
 ---
-## Term Definition
+## Term Definition***Mobile Device Management (MDM)**is the standard framework for managing Apple hardware in an organization.
 
-***Mobile Device Management (MDM)**is the standard framework for managing Apple hardware in an organization.
-
-Core capabilities:
-
-***Configuration**: Pushing settings for Wi-Fi, Email, and VPN.
-***Security**: Enforcing passcodes, encryption, and restricting features like the camera.
-***Deployment**: Installing and updating apps and books remotely.
-***Inventory**: Reporting on device status, OS version, and installed software.
+Core capabilities:***Configuration**: Pushing settings for Wi-Fi, Email, and VPN.***Security**: Enforcing passcodes, encryption, and restricting features like the camera.***Deployment**: Installing and updating apps and books remotely.***Inventory**: Reporting on device status, OS version, and installed software.
 
 MDM relies on the Apple Push Notification service (APNs) to maintain constant contact with devices.
 

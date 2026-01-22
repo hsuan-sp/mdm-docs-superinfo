@@ -3,13 +3,12 @@ category:
   - DDM
 term: Declarative Software Updates （宣告式軟體更新）
 ---
-## 術語定義
-
-***Declarative Software Updates （宣告式軟體更新）**是 Apple 自**2026 年底起強制使用**的軟體更新管理方式。
+## 術語定義***Declarative Software Updates （宣告式軟體更新）**是 Apple 自**2026 年底起強制使用**的軟體更新管理方式。
 
 傳統 MDM 的遠端更新指令將停止支援，所有更新必須透過 DDM 的 Declaration 機制執行。它支援更進階的功能：
 
 ***Beta 註冊**：遠端將裝置註冊到 Beta 測試計畫。
+
 ***分階段推出**：逐步對機隊進行更新，避免同時更新造成網路癱瘓。
 
 ***Enforcement Deadline**：設定強制的更新截止期限。
@@ -30,9 +29,8 @@ term: Declarative Software Updates （宣告式軟體更新）
 
 * 舊版 Policy-based 更新將失效。
 
-## 技術優勢
+## 技術優勢***自主評估**：裝置會依據電量、網路狀況、是否正在使用中，自主決定最佳更新時機。
 
-***自主評估**：裝置會依據電量、網路狀況、是否正在使用中，自主決定最佳更新時機。
 ***即時回報**：透過**Status Channel**即時回報更新進度。
 
 ***跨平台**：支援 iPhone、iPad、Mac、Apple TV 及 Apple Vision Pro。

@@ -4,14 +4,14 @@ category:
   - Core
 term: Location Services（定位服務）
 ---
-## 術語定義
-
-***Location Services （定位服務）**是 Apple 裝置用來判斷其地理位置的系統框架。
+## 術語定義***Location Services （定位服務）**是 Apple 裝置用來判斷其地理位置的系統框架。
 
 定位依據包含：
 
 ***GPS/GLONASS**：衛星訊號（在戶外最準確）。
+
 ***Wi-Fi**：根據周遭 Wi-Fi 基地台的位置進行三角測量。
+
 ***行動網路**：計算與基地台的距離。
 
 ***iBeacons**：用於室內的微定位技術。

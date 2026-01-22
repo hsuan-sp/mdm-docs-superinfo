@@ -4,16 +4,9 @@ category:
   - Apple
 term: Enrollment Customization
 ---
-## Term Definition
+## Term Definition***Enrollment Customization**allows organizations to deliver a tailored onboarding experience during the**Automated Device Enrollment (ADE)**process.
 
-***Enrollment Customization**allows organizations to deliver a tailored onboarding experience during the**Automated Device Enrollment (ADE)**process.
-
-Customization options:
-
-***Branding**: Display school logos, custom welcome text, and contact information.
-***Policies**: Require users to read and accept Apple’s and the school’s**Acceptable Use Policy (AUP)**before proceeding.
-***Authentication**: Use modern identity providers (Azure AD, Okta, Google) to verify the user's identity before Enrollment is completed.
-***Workflow**: Create a multi-step sequence of setup screens that are unique to the organization.
+Customization options:***Branding**: Display school logos, custom welcome text, and contact information.***Policies**: Require users to read and accept Apple’s and the school’s**Acceptable Use Policy (AUP)**before proceeding.***Authentication**: Use modern identity providers (Azure AD, Okta, Google) to verify the user's identity before Enrollment is completed.***Workflow**: Create a multi-step sequence of setup screens that are unique to the organization.
 
 ## Analogy
 

@@ -12,7 +12,11 @@ title: 學生做完的作業（Keynote/Pages）要怎麼交給老師？
 
 ## Answer
 
-***最佳方式是透過雲端硬碟（Google Drive、OneDrive、或 iCloud Drive）繳交。*****也可使用 AirDrop、Google Classroom 作業功能、或 Self Service 指定的繳交平台。**在數位教學環境中，建立順暢的作業繳交流程可大幅提升教學效率。以下是幾種常見方式。
+***最佳方式是透過雲端硬碟（Google Drive、OneDrive、或 iCloud Drive）繳交。
+
+*****也可使用 AirDrop、Google Classroom 作業功能、或 Self Service 指定的繳交平台。
+
+**在數位教學環境中，建立順暢的作業繳交流程可大幅提升教學效率。以下是幾種常見方式。
 
 ***方式一：Google Drive（最推薦）**適合已使用 Google Classroom/Workspace 的學校。
 
@@ -45,7 +49,9 @@ title: 學生做完的作業（Keynote/Pages）要怎麼交給老師？
 4. 老師接收檔案。
 
 ***優點**：快速、不需網路帳號。
+
 ***缺點**：需在藍牙範圍內；收發容易混亂（需一個個接收）。
+
 ***方式四：iCloud Drive（需管理式 Apple 帳號）**若學校使用共用 iPad 或管理式 Apple 帳號：
 
 1. 學生登入自己的管理式 Apple 帳號。
@@ -58,8 +64,8 @@ title: 學生做完的作業（Keynote/Pages）要怎麼交給老師？
 | :--- | :--- |
 |**保留編輯能力**| 原始格式（.key, .pages）或匯出為 Microsoft 格式（.pptx, .docx） |
 |**僅供閱讀/列印**| 匯出為 PDF |
-|**視訊簡報**| 匯出為影片 (.mov) |
+|**視訊簡報**| 匯出為影片 (.mov) |***實務建議：常見問題*****找不到 Google Drive 位置**：開啟「檔案」App > 右上角「...」> 編輯 > 開啟 Google Drive。
 
-***實務建議：常見問題*****找不到 Google Drive 位置**：開啟「檔案」App > 右上角「...」> 編輯 > 開啟 Google Drive。
 ***檔案太大無法上傳**：壓縮影片解析度，或改用雲端連結分享。
+
 ***忘記儲存**：確認在 App 中點選「完成」或「儲存」後再離開。

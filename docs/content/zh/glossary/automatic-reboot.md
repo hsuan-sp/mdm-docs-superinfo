@@ -3,14 +3,14 @@ category:
   - Security
 term: Automatic Reboot （自動重開機）
 ---
-## 術語定義
-
-***Automatic Reboot （自動重開機）**是於**OS version 26**推出的特殊安全設定。
+## 術語定義***Automatic Reboot （自動重開機）**是於**OS version 26**推出的特殊安全設定。
 
 設定細節：
 
 ***觸發條件**：MDM 可設定裝置在閒置或長時間鎖定達到特定時間（例如 72 小時）後，自動重新開機。
+
 ***安全目標**：重開機可清除裝置揮發性記憶體 (RAM) 中的敏感解密金鑰。
+
 ***保護機制**：讓裝置回到**「首次解鎖前 (Before First Unlock, BFU)」**的冷開機狀態，即使遭竊也極難被破解或解密。
 
 ## MDM 管理情境 (MDM Context)

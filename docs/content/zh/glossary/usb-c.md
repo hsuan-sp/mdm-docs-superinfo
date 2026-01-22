@@ -3,15 +3,16 @@ category:
   - Hardware
 term: USB-C
 ---
-## 術語定義
-
-***USB-C**是現今 Apple 全線產品（iPhone 15/16+、iPad、Mac）所使用的通用介面標準。
+## 術語定義***USB-C**是現今 Apple 全線產品（iPhone 15/16+、iPad、Mac）所使用的通用介面標準。
 
 具備能力：
 
 ***供電 (Power)**：支援高瓦數雙向充電 (PD)。
+
 ***數據 (Data)**：支援高速檔案傳輸（Thunderbolt 3/4 最高可達 40 Gbps）。
+
 ***影像 (Video)**：可直接輸出畫面至投影機或外接螢幕。
+
 ***擴充性**：可連接網路轉接器、麥克風、外接硬碟等周邊。
 
 ***MDM 相關**：由於 USB-C 讓接上隨身碟變得非常容易，學校通常會透過 MDM 部署**"USB Restricted Mode"**或限制 USB 配對，以防止學生將學校資料複製到私人隨身碟中。

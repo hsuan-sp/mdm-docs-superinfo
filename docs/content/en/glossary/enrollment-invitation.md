@@ -10,9 +10,9 @@ An**Enrollment Invitation**is a semi-automated method for adding existing or per
 
 The typical process:
 
-1.**Creation**: An administrator generates a unique invitation in the MDM console.
-2.**Delivery**: The invitation is sent to the user via email, SMS, or displayed as a QR code.
-3.**Execution**: The user clicks the link or scans the code, which directs them to a secure portal to install the management profile manually.
+1. **Creation**: An administrator generates a unique invitation in the MDM console.
+2. **Delivery**: The invitation is sent to the user via email, SMS, or displayed as a QR code.
+3. **Execution**: The user clicks the link or scans the code, which directs them to a secure portal to install the management profile manually.
 
 This method is primarily used for**User Enrollment (BYOD)**or for enrolling devices that were not purchased through official Apple corporate channels.
 

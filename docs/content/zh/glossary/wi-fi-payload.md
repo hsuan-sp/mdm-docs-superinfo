@@ -3,15 +3,16 @@ category:
   - Network
 term: Wi-Fi Payload
 ---
-## 術語定義
-
-***Wi-Fi Payload (Wi-Fi 設定單元）**是 MDM 描述檔 (Profile) 中的一個設定區塊，專門用來管理無線網路連線。
+## 術語定義***Wi-Fi Payload (Wi-Fi 設定單元）**是 MDM 描述檔 (Profile) 中的一個設定區塊，專門用來管理無線網路連線。
 
 包含資訊：
 
 ***SSID**：要連線的 Wi-Fi 名稱。
+
 ***安全性**：加密類型（如 WPA 2/WPA 3 Personal 或 Enterprise）。
+
 ***認證憑證**：預先填入的密碼或 802.1X 身份驗證憑證。
+
 ***自動加入**：設定裝置進入範圍後是否自動連線。
 
 透過此設定，裝置在開機後即可自動連上安全的校園網路，無需使用者介入。

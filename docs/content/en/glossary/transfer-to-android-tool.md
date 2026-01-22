@@ -7,11 +7,7 @@ term: Transfer to Android Tool
 
 The**Transfer to Android Tool**is a migration utility introduced in iOS 26.3 to facilitate data portability.
 
-Functionality:
-
-***Direction**: Moves data**from**an iPhone**to**an Android device.
-***Content**: Transfers contacts, message history, photos, videos, and DRM-free music.
-***MDM Restriction**: Administrators can block this feature on supervised devices to prevent corporate or school data (like contacts) from being exported to Unmanaged personal devices.
+Functionality:***Direction**: Moves data**from**an iPhone**to**an Android device.***Content**: Transfers contacts, message history, photos, videos, and DRM-free music.***MDM Restriction**: Administrators can block this feature on supervised devices to prevent corporate or school data (like contacts) from being exported to Unmanaged personal devices.
 
 ## Analogy
 

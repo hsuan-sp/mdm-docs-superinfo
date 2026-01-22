@@ -14,7 +14,9 @@ title: iPadOS 17 以上沒有顯示 VPN 圖示，這樣網路過濾或是使用�
 
 ## Answer
 
-***完全正常運作中。iPadOS 17 之後，Jamf Trust 改用「DNS Proxy」與「內容過濾器」技術，*****不再需要建立 VPN 通道，因此狀態列不會顯示 VPN 圖示。**許多學校在將精進方案平板升級至 iPadOS 17 後，發現螢幕上方的 VPN 圖示消失了，
+***完全正常運作中。iPadOS 17 之後，Jamf Trust 改用「DNS Proxy」與「內容過濾器」技術，*****不再需要建立 VPN 通道，因此狀態列不會顯示 VPN 圖示。
+
+**許多學校在將精進方案平板升級至 iPadOS 17 後，發現螢幕上方的 VPN 圖示消失了，
 因而擔心內容過濾功能失效。這其實是配合教育部架構調整的技術演進，並非故障。
 
 ***技術演進說明**：
@@ -22,19 +24,19 @@ title: iPadOS 17 以上沒有顯示 VPN 圖示，這樣網路過濾或是使用�
 | 版本 | 技術架構 | 狀態列顯示 |
 | :--- | :--- | :--- |
 | iPadOS 16 及以前 | Per-App VPN / Always-On VPN | 顯示 VPN 圖示 |
-| iPadOS 17 ~ 26 | DNS Proxy + Content Filter |**不顯示**VPN 圖示 |
-
-***2026 年新技術：Return to Service (Return to Service) 網路保留**在 iOS 26 中，即便進行遠端重置，透過 Jamf Pro 部署的網路過濾配置會受到**Return to Service 系統保護**，確保裝置重啟後第一時間即處於受管網路環境。
+| iPadOS 17 ~ 26 | DNS Proxy + Content Filter |**不顯示**VPN 圖示 |***2026 年新技術：Return to Service (Return to Service) 網路保留**在 iOS 26 中，即便進行遠端重置，透過 Jamf Pro 部署的網路過濾配置會受到**Return to Service 系統保護**，確保裝置重啟後第一時間即處於受管網路環境。
 
 ***新架構的優點**：
 
 ***更省電**：不需維持持續的 VPN 連線。
+
 ***更穩定**：DNS 層級過濾較少連線中斷問題。
+
 ***更低延遲**：網路流量不需繞道 VPN 伺服器。
 
 ***如何驗證過濾功能正常**：
 
-1.**開啟 Jamf Trust App**：
+1. **開啟 Jamf Trust App**：
 
 ***若顯示**綠色盾牌 (Protected)**，表示過濾功能正常運作中。
 
@@ -42,12 +44,12 @@ title: iPadOS 17 以上沒有顯示 VPN 圖示，這樣網路過濾或是使用�
 
  如果 Jamf Trust 顯示警告，但內容是關於系統版本過舊或未設鎖定密碼則無需太擔心。
 
-1.**實際測試**：
+1. **實際測試**：
 
 * 嘗試用 Safari 前往一個已知被封鎖的網站（例如：遊戲網站）。
 * 若顯示「無法連接」或 Jamf 的封鎖頁面，表示過濾器正常運作。
 
-2.**在 Jamf Pro 確認**：
+2. **在 Jamf Pro 確認**：
 
 * 登入 Jamf Pro，查看該裝置的設定描述檔列表。
 * 確認 Jamf Trust 相關描述檔（DNS Proxy、Content Filter）皆已安裝。
@@ -61,6 +63,7 @@ title: iPadOS 17 以上沒有顯示 VPN 圖示，這樣網路過濾或是使用�
  Apple 課堂背後使用一組**教育身分憑證**，效期通常為兩年。
 
 ***症狀**：全班突然都無法連線課堂，描述檔狀態顯示「無效」。
+
 ***對策**：需在 Jamf Pro 的「全域管理」>「Apple 教育支援」中重新產生憑證，
 
  並「重新部署」描述檔至所有裝置。

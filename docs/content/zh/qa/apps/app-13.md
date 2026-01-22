@@ -13,7 +13,9 @@ title: 什麼是「受管理的應用程式設定 (Managed App Configuration)」
 
 ## Answer
 
-***「受管理的應用程式設定」是利用 MDM 協定，將 XML 格式的設定檔注入至支援 AppConfig 標準的應用程式中，*****實現「免接觸設定 (Zero-touch Configuration)」。**這不只是單純的預填資料，而是能強制鎖定 App 的特定行為，防止使用者修改。
+***「受管理的應用程式設定」是利用 MDM 協定，將 XML 格式的設定檔注入至支援 AppConfig 標準的應用程式中，*****實現「免接觸設定 (Zero-touch Configuration)」。
+
+**這不只是單純的預填資料，而是能強制鎖定 App 的特定行為，防止使用者修改。
 
 ***技術實作與 Jamf Pro 變數應用**：
 
@@ -42,7 +44,4 @@ title: 什麼是「受管理的應用程式設定 (Managed App Configuration)」
     <string>$EMAIL</string>
 </dict>
 
-```
-
-
-***（注意：具體的 Key 值必須參閱該 App 開發商（如 Zoom, Chrome, Microsoft）的官方管理手冊。)**
+```***（注意：具體的 Key 值必須參閱該 App 開發商（如 Zoom, Chrome, Microsoft）的官方管理手冊。)**

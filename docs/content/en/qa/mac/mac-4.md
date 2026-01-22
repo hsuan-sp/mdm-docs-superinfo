@@ -29,19 +29,11 @@ title: >-
 
 ## 2026 Standard Operating Procedure for IT:
 
-1.**Set an Enforcement Deadline**:
+1. **Set an Enforcement Deadline**:***Major Updates (e.g., 26.1)**: Set a deadline for**14-21 days**after release. This gives everyone time to choose a convenient moment.***Security Patches (RSR)**: Set a deadline for**48 hours**. Critical security shouldn't wait.***The Result**: Users get multiple gentle reminders. If they haven't updated by the deadline, the Mac will**force a restart and install**automatically at the specified time.
 
-***Major Updates (e.g., 26.1)**: Set a deadline for**14-21 days**after release. This gives everyone time to choose a convenient moment.
-***Security Patches (RSR)**: Set a deadline for**48 hours**. Critical security shouldn't wait.
-***The Result**: Users get multiple gentle reminders. If they haven't updated by the deadline, the Mac will**force a restart and install**automatically at the specified time.
+1. **Utilize Background Caching**:***Ensure each administrative or classroom building has at least one Mac mini acting as a**"Content Caching"**server. This ensures the update files are downloaded from the school's local network rather than hitting your external internet line 500 times simultaneously.
 
-1.**Utilize Background Caching**:
-
-***Ensure each administrative or classroom building has at least one Mac mini acting as a**"Content Caching"**server. This ensures the update files are downloaded from the school's local network rather than hitting your external internet line 500 times simultaneously.
-
-1.**Blackout Dates**:
-
-***Use the "Update Delay" feature in Jamf Pro during**Assessment Weeks**or Final Exams. You don't want a student's Mac to trigger a forced restart in the middle of a high-stakes digital exam because a deadline was reached.
+1. **Blackout Dates**:***Use the "Update Delay" feature in Jamf Pro during**Assessment Weeks**or Final Exams. You don't want a student's Mac to trigger a forced restart in the middle of a high-stakes digital exam because a deadline was reached.
 
 ## Institutional Advice:
 

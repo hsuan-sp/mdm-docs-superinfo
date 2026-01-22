@@ -3,18 +3,9 @@ category:
   - Enrollment
 term: User-Initiated Enrollment (UIE)
 ---
-## Term Definition
+## Term Definition***User-Initiated Enrollment (UIE)**is a voluntary onboarding workflow for Apple devices.
 
-***User-Initiated Enrollment (UIE)**is a voluntary onboarding workflow for Apple devices.
-
-Characteristics:
-
-***Trigger**: The user manually visits an Enrollment URL or scans a QR code.
-***Ownership**: Often implies the device is "User Owned" (BYOD), though sometimes used for organization-owned devices that were not purchased via Apple/Reseller channels.
-***Supervision**: By default, UIE devices are**not**Supervised (unless enrolled via Apple Configurator).
-***Control**: The user retains the ability to remove the MDM Profile (and thus unenroll the device) at any time.
-
-***Education Context**: Generally not recommended for student-owned 1:1 programs because students can easily remove the management profile to bypass restrictions.
+Characteristics:***Trigger**: The user manually visits an Enrollment URL or scans a QR code.***Ownership**: Often implies the device is "User Owned" (BYOD), though sometimes used for organization-owned devices that were not purchased via Apple/Reseller channels.***Supervision**: By default, UIE devices are**not**Supervised (unless enrolled via Apple Configurator).***Control**: The user retains the ability to remove the MDM Profile (and thus unenroll the device) at any time.***Education Context**: Generally not recommended for student-owned 1:1 programs because students can easily remove the management profile to bypass restrictions.
 
 ## Analogy
 

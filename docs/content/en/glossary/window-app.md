@@ -3,15 +3,9 @@ category:
   - Core
 term: Window App
 ---
-## Term Definition
+## Term Definition***Window App**is the advanced windowing environment introduced in iPadOS 26, evolving from Stage Manager.
 
-***Window App**is the advanced windowing environment introduced in iPadOS 26, evolving from Stage Manager.
-
-Capabilities:
-
-***Floating Windows**: Apps can be resized, overlapped, and moved freely, similar to macOS.
-***Grouping**: Users can create "App Pairs" or workspaces (e.g., Safari + Notes for research) that are saved together.
-***External Display**: Full support for extending the desktop to a monitor (up to 6K) rather than just mirroring, effectively turning the iPad into a desktop workstation.
+Capabilities:***Floating Windows**: Apps can be resized, overlapped, and moved freely, similar to macOS.***Grouping**: Users can create "App Pairs" or workspaces (e.g., Safari + Notes for research) that are saved together.***External Display**: Full support for extending the desktop to a monitor (up to 6K) rather than just mirroring, effectively turning the iPad into a desktop workstation.
 
 ## Analogy
 

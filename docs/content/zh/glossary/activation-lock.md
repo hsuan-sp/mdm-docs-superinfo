@@ -3,9 +3,7 @@ category:
   - Security
 term: Activation Lock （啟用鎖定）
 ---
-## 術語定義
-
-***Activation Lock （啟用鎖定）**是 Apple 的防盜機制，旨在防止遺失或遭竊的裝置被未經授權使用。它是**「尋找 (Find My)」**服務的一部分。
+## 術語定義***Activation Lock （啟用鎖定）**是 Apple 的防盜機制，旨在防止遺失或遭竊的裝置被未經授權使用。它是**「尋找 (Find My)」**服務的一部分。
 
 運作方式：
 

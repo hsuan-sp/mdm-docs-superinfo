@@ -3,14 +3,14 @@ category:
   - Apps
 term: Bundle ID
 ---
-## 術語定義
-
-***Bundle ID (Bundle Identifier)**是 App 在作業系統中的唯一識別碼（例如 `com.google.chrome` 或 `com.Apple.calculator`）。
+## 術語定義***Bundle ID (Bundle Identifier)**是 App 在作業系統中的唯一識別碼（例如 `com.google.chrome` 或 `com.Apple.calculator`）。
 
 MDM 在執行以下管理任務時，必須精確使用此 ID 來指定目標 App，而非使用 App 的顯示名稱：
 
 ***派送 App**：準確安裝特定的應用程式。
+
 ***黑白名單**：設定禁用或隱藏的 App 列表。
+
 ***VPN 設定**：指定哪些 App 需走特定的 VPN 通道。
 
 ## 白話文比喻

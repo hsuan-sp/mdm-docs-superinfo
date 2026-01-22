@@ -7,11 +7,7 @@ term: Camera Access Control per App
 
 A granular MDM restriction key introduced in**OS version 26**(`allowedCameraRestrictionBundleIDs`) that provides precise hardware governance.
 
-Functional capabilities:
-
-***Granularity**: Allows administrators to grant or deny camera access for specific apps individually.
-***Improved Security**: Replaces the older global "Allow/Disallow Camera" toggle.
-***Privacy Compliance**: Ensures that only approved educational apps can use the camera and microphone, even on a fully managed device.
+Functional capabilities:***Granularity**: Allows administrators to grant or deny camera access for specific apps individually.***Improved Security**: Replaces the older global "Allow/Disallow Camera" toggle.***Privacy Compliance**: Ensures that only approved educational apps can use the camera and microphone, even on a fully managed device.
 
 ## MDM Context
 
