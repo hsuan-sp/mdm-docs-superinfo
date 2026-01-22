@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-**When a device displays 'iPad Unavailable' or 'Security Lockout,' it must be erased before it can be used again. If the device is MDM-managed, the solution depends on its connectivity status.**
+* *When a device displays 'iPad Unavailable' or 'Security Lockout,' it must be erased before it can be used again. If the device is MDM-managed, the solution depends on its connectivity status.**
 
 A security mechanism is triggered when a user enters the wrong passcode multiple times. In newer OS versions, the screen will show "iPad Unavailable" or "Security Lockout" instead of the older "Disabled" message.
 

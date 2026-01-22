@@ -5,7 +5,7 @@ term: Activation Lock
 ---
 ## Term Definition
 
-**Activation Lock**is an Apple security feature designed to prevent unauthorized use of a lost or stolen device. It is a part of the**"Find My"**service.
+* *Activation Lock**is an Apple security feature designed to prevent unauthorized use of a lost or stolen device. It is a part of the**"Find My"**service.
 
 How it works:
 

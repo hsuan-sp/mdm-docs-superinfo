@@ -13,7 +13,7 @@ Common implementations:
 * **LDAP (Lightweight Directory Access Protocol)**
 * **Cloud Identity**: Azure AD (Entra ID), Google Workspace, or Okta.
 
-**MDM Integration**: By linking MDM to a Directory Service, organizations enable users to enroll devices and access institutional apps using their existing, familiar credentials. This ensures that when a user leaves the organization, their access is revoked across all managed devices simultaneously.
+* *MDM Integration**: By linking MDM to a Directory Service, organizations enable users to enroll devices and access institutional apps using their existing, familiar credentials. This ensures that when a user leaves the organization, their access is revoked across all managed devices simultaneously.
 
 ## Analogy
 

@@ -5,7 +5,7 @@ term: Unified Logging
 ---
 ## Term Definition
 
-**Unified Logging**is the central system for capturing and storing diagnostic messages on Apple platforms.
+* *Unified Logging**is the central system for capturing and storing diagnostic messages on Apple platforms.
 
 Key features:
 

@@ -5,13 +5,13 @@ term: Intel Mac End-of-Support Milestone (Intel Mac 支援終止里程碑)
 ---
 ## 術語定義
 
-**Intel Mac 支援終止里程碑** 指的是 Apple 作業系統轉型的關鍵轉折點。自此之後，現代 macOS 將不再相容於搭載 Intel 處理器的舊款 Mac 電腦。
+* *Intel Mac 支援終止里程碑** 指的是 Apple 作業系統轉型的關鍵轉折點。自此之後，現代 macOS 將不再相容於搭載 Intel 處理器的舊款 Mac 電腦。
 
 關鍵時間軸與影響：
 
 * **最後支援版本**：**macOS Tahoe (版本 26)** 是支援 Intel 硬體的最後一個主要作業系統版本。
 * **受影響硬體**：包含 Apple 售出的最後一批 Intel 機型，如 2020 年款 iMac 與 2019 年款 Mac Pro。
-* **管理層級影響**：自 2027 年發布的 macOS 版本起，許多現代化 MDM 指令和進階資安功能將強制要求具備 **Apple Silicon**（M 系列晶片）才能執行。
+* **管理層級影響**：自 2027 年發布的 macOS 版本起，許多現代化 MDM 指令和進階資安功能將強制要求具備**Apple Silicon**（M 系列晶片）才能執行。
 
 ## 白話文比喻
 

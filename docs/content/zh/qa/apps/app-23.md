@@ -14,15 +14,15 @@ title: 什麼是「Declarative App Management (宣告式 App 管理)」？與傳
 
 ## Answer
 
-**Declarative App Management (宣告式 App 管理) 是 iOS 26、iPadOS 26 與 macOS 26 引入的全新機制，讓裝置能夠「自主」管理 App 的安裝與更新狀態，取代傳統依賴 MDM 伺服器頻繁發送指令的模式。**
+* *Declarative App Management (宣告式 App 管理) 是 iOS 26、iPadOS 26 與 macOS 26 引入的全新機制，讓裝置能夠「自主」管理 App 的安裝與更新狀態，取代傳統依賴 MDM 伺服器頻繁發送指令的模式。**
 
 ## 傳統 VPP vs. 宣告式 App 管理
 
 | 特性 | 傳統 MDM (InstallApplication Command) | 宣告式 App 管理 (App Declaration) |
 | :--- | :--- | :--- |
-| **觸發機制** | MDM 伺服器必須「主動」發送安裝指令，若失敗需伺服器重試 | MDM 只需傳送「宣告 (Declaration)」，裝置會 **自主** 嘗試安裝直到成功 |
+| **觸發機制** | MDM 伺服器必須「主動」發送安裝指令，若失敗需伺服器重試 | MDM 只需傳送「宣告 (Declaration)」，裝置會**自主** 嘗試安裝直到成功 |
 | **狀態回報** | 被動。MDM 需定期輪詢 (Check-in) 才能知道安裝進度 | **即時 (Real-time)**。安裝成功、失敗或下載中，裝置會透過 Status Channel 立即主動回報 |
-| **更新控制** | 只能設定全域「自動更新」或手動推送更新 | 可針對 **個別 App** 設定：強制更新、延遲更新、或依循使用者偏好設定 |
+| **更新控制** | 只能設定全域「自動更新」或手動推送更新 | 可針對**個別 App** 設定：強制更新、延遲更新、或依循使用者偏好設定 |
 | **部署範圍** | App Store App、VPP App | App Store App、VPP App、Custom App，macOS 也支援 .pkg 安裝檔 |
 
 ## 適用平台與版本

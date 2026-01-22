@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-**As your school transitions to newer hardware, managing a mixed fleet of Lightning (iPad 9 and older) and USB-C (iPad 10 and newer) devices requires careful planning regarding peripherals and charging infrastructure.**
+* *As your school transitions to newer hardware, managing a mixed fleet of Lightning (iPad 9 and older) and USB-C (iPad 10 and newer) devices requires careful planning regarding peripherals and charging infrastructure.**
 
 ## Apple Pencil Compatibility:
 

@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-**Yes. Without a caching mechanism, 30 iPads requesting data individually from the internet will likely saturate your school's outbound bandwidth.**
+* *Yes. Without a caching mechanism, 30 iPads requesting data individually from the internet will likely saturate your school's outbound bandwidth.**
 
 ## The Role of Content Caching:
 

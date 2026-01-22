@@ -5,7 +5,7 @@ term: Identity Provider (IdP)
 ---
 ## 術語定義
 
-**Identity Provider (IdP)** 是負責建立、維護與管理數位身分驗證的集中式服務。
+* *Identity Provider (IdP)** 是負責建立、維護與管理數位身分驗證的集中式服務。
 
 常見的教育版 IdP 包括 **Google Workspace**、**Microsoft Entra ID**(前稱 Azure AD) 與 **Okta**。
 

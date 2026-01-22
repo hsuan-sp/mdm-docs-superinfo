@@ -6,7 +6,7 @@ term: PPPC (Privacy Preferences Policy Control)
 ---
 ## 術語定義
 
-**PPPC (隱私偏好設定控制)** 是一種讓 MDM 預先授權應用程式權限的機制。
+* *PPPC (隱私偏好設定控制)** 是一種讓 MDM 預先授權應用程式權限的機制。
 
 它的特性包括：
 

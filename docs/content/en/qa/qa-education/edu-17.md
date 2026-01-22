@@ -12,7 +12,7 @@ title: Why is the 'Screen Recording' button missing or grayed out on student iPa
 
 ## Answer
 
-**This is typically because 'Screen Recording' is restricted in the school's MDM Profile, or the button simply hasn't been added to the Control Center.**
+* *This is typically because 'Screen Recording' is restricted in the school's MDM Profile, or the button simply hasn't been added to the Control Center.**
 
 ## Troubleshooting Steps:
 

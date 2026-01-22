@@ -6,7 +6,7 @@ term: Private Wi-Fi Address
 ---
 ## Term Definition
 
-**Private Wi-Fi Address**is a privacy feature in iOS, iPadOS, and macOS that uses MAC address randomization.
+* *Private Wi-Fi Address**is a privacy feature in iOS, iPadOS, and macOS that uses MAC address randomization.
 
 How it works:
 

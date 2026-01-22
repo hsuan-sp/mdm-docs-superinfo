@@ -15,13 +15,13 @@ title: >-
 
 ## Answer
 
-**Yes. As long as the device belongs to your organization, you can now self-service Activation Lock removal directly through the Apple School Manager (ASM) interface.**
+* *Yes. As long as the device belongs to your organization, you can now self-service Activation Lock removal directly through the Apple School Manager (ASM) interface.**
 
 This eliminates the need to call support or provide invoices for managed hardware, significantly streamlining school administration.
 
 ## Self-Service Unlocking Steps:
 
-1. Log in to**[Apple School Manager (ASM)](https://school.Apple.com)**.
+1. Log in to**[Apple School Manager (ASM)](https://school.apple.com)**.
 2. Select**Devices**from the sidebar and search for the target serial number.
 3. Open the device details and look for the toolbar button (or "More" menu).
 4. Click**Turn Off Activation Lock**and confirm.

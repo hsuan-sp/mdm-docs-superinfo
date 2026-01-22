@@ -12,7 +12,7 @@ title: Why is the App Store missing? How do I download apps?
 
 ## Answer
 
-**This is an intentional setting by the school. The App Store is hidden to prevent students from downloading unauthorized apps. Use the 'Self Service' app to install school-approved applications instead.**
+* *This is an intentional setting by the school. The App Store is hidden to prevent students from downloading unauthorized apps. Use the 'Self Service' app to install school-approved applications instead.**
 
 Finding the App Store missing is a result of MDM restrictions, not a malfunction.
 
@@ -27,8 +27,8 @@ Finding the App Store missing is a result of MDM restrictions, not a malfunction
 
 ## How to Install Apps: Using Self Service
 
-**Self Service**is Jamf's "School App Store." Administrators choose which apps are available for students and staff.
-**Steps**:
+* *Self Service**is Jamf's "School App Store." Administrators choose which apps are available for students and staff.
+* *Steps**:
 
 1. Find the**Self Service**app on the Home Screen (usually the school logo or Jamf icon).
 2. Open the app and browse available resources.

@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-**macOS 26 (Tahoe) has been confirmed as the final major version of macOS to support Intel-based Macs. Starting with macOS 27 in 2027, the operating system will exclusively support Apple Silicon (M1–M5 series).**
+* *macOS 26 (Tahoe) has been confirmed as the final major version of macOS to support Intel-based Macs. Starting with macOS 27 in 2027, the operating system will exclusively support Apple Silicon (M1–M5 series).**
 
 ## Timeline and Support Expectations
 
@@ -26,14 +26,14 @@ title: >-
 *    MacBook Pro (16-inch, 2019)
 *    Mac Pro (2019)
 
-**Note: Older models (2017 and prior) are already unsupported by macOS 26.*
+* *Note: Older models (2017 and prior) are already unsupported by macOS 26.*
 
-1. **OS Support Lifecycle**:
+2. **OS Support Lifecycle**:
 
 * **2026–2027**: Intel Macs running macOS 26 remain fully functional with all current security patches.
 * **2027–2029**: While macOS 27 will not install, Apple typically provides**2 additional years of Security Updates**for the previous version. We expect Intel Macs on macOS 26 to be safe for school use until approximately**late 2028 or early 2029**.
 
-2. **Software App Support**:
+3. **Software App Support**:
 
 *    Major developers (Adobe, Microsoft, Google) usually support the current OS plus two versions back. Once security updates for macOS 26 cease in 2029, these vendors will likely stop releasing Intel-compatible versions of their software.
 

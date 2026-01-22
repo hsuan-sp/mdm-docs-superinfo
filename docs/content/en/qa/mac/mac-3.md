@@ -13,7 +13,7 @@ title: 'How do we distribute non-App Store software like Chrome, Adobe CC, or Of
 
 ## Answer
 
-**Move away from manual packaging. Use Jamf Pro's "App Installers" for high-frequency apps, and DDM-based distribution for mission-critical software.**
+* *Move away from manual packaging. Use Jamf Pro's "App Installers" for high-frequency apps, and DDM-based distribution for mission-critical software.**
 
 Managing Mac software used to involve a tedious cycle of downloading DMGs, repackaging them into PKGs, and uploading them. Today, there are much more efficient pathways.
 

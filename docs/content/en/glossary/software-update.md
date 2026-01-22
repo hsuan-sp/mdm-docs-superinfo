@@ -6,7 +6,7 @@ term: Software Update
 ---
 ## Term Definition
 
-**Software Update**is the system mechanism for downloading and installing new versions of the operating system (macOS/iOS) and its built-in apps (Safari).
+* *Software Update**is the system mechanism for downloading and installing new versions of the operating system (macOS/iOS) and its built-in apps (Safari).
 
 Management controls (via DDM):
 

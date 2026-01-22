@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-**This is because Apple enables the 'Private Wi-Fi Address' feature by default.**
+* *This is because Apple enables the 'Private Wi-Fi Address' feature by default.**
 
 In newer versions of iOS/iPadOS, this feature offers two modes:
 
@@ -39,4 +39,4 @@ Since the device broadcasts a virtual MAC, traditional network management system
 
 When the device connects to the *specific SSID*(e.g., School-Student) defined in the profile, it will be forced to use its**Real Hardware MAC Address.**
 
-**Note: This only applies to the Wi-Fi network specified in that profile. When students connect to their home Wi-Fi, the privacy feature will automatically re-enable.*
+* *Note: This only applies to the Wi-Fi network specified in that profile. When students connect to their home Wi-Fi, the privacy feature will automatically re-enable.*

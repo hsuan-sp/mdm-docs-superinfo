@@ -5,7 +5,7 @@ term: AirDrop for Business
 ---
 ## 術語定義
 
-**AirDrop for Business**（也稱為 **受管理 AirDrop**）是一項管理功能，允許 IT 管理員控管透過 AirDrop 傳輸的資料流向。
+* *AirDrop for Business**（也稱為**受管理 AirDrop**）是一項管理功能，允許 IT 管理員控管透過 AirDrop 傳輸的資料流向。
 
 系統會精確區分以下兩者：
 

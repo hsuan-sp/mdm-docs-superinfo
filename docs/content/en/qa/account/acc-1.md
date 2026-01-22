@@ -13,9 +13,9 @@ title: >-
 
 ## Answer
 
-**Yes, this is extremely important and should be prioritized immediately.**
+* *Yes, this is extremely important and should be prioritized immediately.**
 
-When Apple updates its service terms, a "Terms and Conditions" window will pop up when you log into [Apple School Manager (ASM)](https://school.Apple.com). Ignoring this will impact several critical management functions.
+When Apple updates its service terms, a "Terms and Conditions" window will pop up when you log into [Apple School Manager (ASM)](https://school.apple.com). Ignoring this will impact several critical management functions.
 
 ## The Impact of Not Agreeing
 
@@ -30,7 +30,7 @@ Only users with the**"Administrator"**role in ASM have the authority to accept t
 
 ## Practical Steps
 
-1. Log in to [school.Apple.com](https://school.Apple.com) using your Administrator account.
+1. Log in to [school.apple.com](https://school.apple.com) using your Administrator account.
 2. Follow the prompts in the banner or popup window.
 3. Read the terms, check the "I have read and agree..." boxes, and click**"Agree."**
 

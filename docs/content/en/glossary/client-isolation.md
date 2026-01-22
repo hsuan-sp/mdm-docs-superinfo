@@ -5,7 +5,7 @@ term: Client Isolation
 ---
 ## Term Definition
 
-**Client Isolation**(also known as**AP Isolation**or Wireless Isolation) is a network security configuration on a wireless access point (AP).
+* *Client Isolation**(also known as**AP Isolation**or Wireless Isolation) is a network security configuration on a wireless access point (AP).
 
 Effect on Managed Devices:
 

@@ -12,8 +12,8 @@ title: What should I do if I forget the Jamf Pro administrator password?
 
 ## Answer
 
-**The recovery method depends on your Jamf Pro deployment (Cloud vs. On-Premise) and whether SSO is enabled.**
-**Scenario 1: Jamf Pro Cloud (Jamf Cloud)**
+* *The recovery method depends on your Jamf Pro deployment (Cloud vs. On-Premise) and whether SSO is enabled.**
+* *Scenario 1: Jamf Pro Cloud (Jamf Cloud)**
 
 1. **Use the Login Page Link**:
 
@@ -30,24 +30,24 @@ title: What should I do if I forget the Jamf Pro administrator password?
 *    If you are the sole administrator and cannot access your email, log a support case via**[Jamf Account](https://account.Jamf.com)**.
 *    The Jamf team can assist in restoring access to the primary admin account after verifying your identity.
 
-**Scenario 2: Jamf Pro On-Premise**
+* *Scenario 2: Jamf Pro On-Premise**
 
-1. **Database Operation**:
+4. **Database Operation**:
 
 *    Requires MySQL access. You can run a specific SQL command to update the admin password hash back to a default value.
 *    This is typically the last resort for on-premise deployments.
 
-2. **Jamf Pro Server Tools**:
+5. **Jamf Pro Server Tools**:
 
 *    On the server hosting Jamf Pro, run the Jamf Pro Server Backup/Restore utilities.
 *    Some versions support resetting specific admin privileges via the command line.
 
-**Scenario 3: SSO / Multi-Factor Authentication (MFA) Enabled**
+* *Scenario 3: SSO / Multi-Factor Authentication (MFA) Enabled**
 
 * **SSO Integration**: If your Jamf Pro uses**Microsoft Entra ID**or**Google Workspace**, reset your password directly on that provider's platform.
 * **Lost MFA**: If you know your password but lost your MFA authenticator (e.g., new phone), ask another admin to "disable MFA temporarily" or "reset MFA registration" for your account.
 
-**Best Practices**:
+* *Best Practices**:
 
 * **Create a Break-glass Account**:
 *    Set up a local administrator account that is**not**bound to a personal email, uses a strong password, and is excluded from SSO policies.

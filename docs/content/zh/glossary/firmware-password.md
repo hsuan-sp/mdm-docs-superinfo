@@ -5,7 +5,7 @@ term: Firmware Password
 ---
 ## 術語定義
 
-**Firmware Password (韌體密碼)** 是 Intel 架構 Mac 特有的底層安全鎖。（註：在 Apple Silicon Mac 上已被 **Recovery Lock** 取代）。
+* *Firmware Password (韌體密碼)** 是 Intel 架構 Mac 特有的底層安全鎖。（註：在 Apple Silicon Mac 上已被**Recovery Lock** 取代）。
 
 這道密碼存在於作業系統載入之前，保護範圍包括：
 

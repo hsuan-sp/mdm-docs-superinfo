@@ -5,7 +5,7 @@ term: Supervision
 ---
 ## Term Definition
 
-**Supervision**is a higher level of device management ownership available for institutional Apple devices.
+* *Supervision**is a higher level of device management ownership available for institutional Apple devices.
 
 Capabilities unlocked by Supervision:
 

@@ -5,7 +5,7 @@ term: LAPS (Local Administrator Password Solution)
 ---
 ## Term Definition
 
-**Local Administrator Password Solution (LAPS)**is a security framework designed to manage and rotate local admin credentials on fleet devices.
+* *Local Administrator Password Solution (LAPS)**is a security framework designed to manage and rotate local admin credentials on fleet devices.
 
 Security mechanism:
 

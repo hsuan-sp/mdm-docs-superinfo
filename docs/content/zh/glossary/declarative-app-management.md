@@ -5,7 +5,7 @@ term: Declarative App Management (宣告式 App 管理)
 ---
 ## 術語定義
 
-**Declarative App Management (宣告式 App 管理)** 是 iOS 26、iPadOS 26、macOS Tahoe 的新一代 App 管理機制。
+* *Declarative App Management (宣告式 App 管理)** 是 iOS 26、iPadOS 26、macOS Tahoe 的新一代 App 管理機制。
 
 它可以部署 App Store App、Custom App 及 .pkg 套件，並具備以下優勢：
 
@@ -18,8 +18,9 @@ term: Declarative App Management (宣告式 App 管理)
 
 現在像 **「訂閱服務」**，更有彈性且智慧：
 
-* 你可以設定 **自動續訂**（自動更新）。
-* 也可以設定 **暫停服務**（鎖定版本）。
+* 你可以設定**自動續訂**（自動更新）。
+* 也可以設定**暫停服務**（鎖定版本）。
+
 * 服務商會隨時告訴你目前的訂閱狀態。
 
 ## MDM 相關
@@ -30,6 +31,6 @@ term: Declarative App Management (宣告式 App 管理)
 * **Optional Apps (選用 App)**：出現在 Self Service 中，使用者可選擇安裝。
 * **Per-App Update Control**：可針對個別 App 設定是否自動更新。
 
-**Jamf Pro 設定路徑**：
+* *Jamf Pro 設定路徑**：
 
 `Blueprints > App Management > Declarative App Configuration`

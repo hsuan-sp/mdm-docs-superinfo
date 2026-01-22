@@ -5,7 +5,7 @@ term: Device Name（裝置名稱）
 ---
 ## 術語定義
 
-**Device Name (裝置名稱)** 是顯示在 MDM 管理介面、AirDrop 列表與裝置設定中的友善識別名稱。
+* *Device Name (裝置名稱)** 是顯示在 MDM 管理介面、AirDrop 列表與裝置設定中的友善識別名稱。
 
 IT 管理員可透過 MDM 遠端設定統一的命名規則（例如：`賬務部-王小明-iPad`），其好處包括：
 

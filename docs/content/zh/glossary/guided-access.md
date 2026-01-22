@@ -6,7 +6,7 @@ term: Guided Access（引導使用模式）
 ---
 ## 術語定義
 
-**Guided Access (引導使用模式)** 是 iOS/iPadOS 內建的專注與輔助功能，常被教師用於課堂管理或考試情境。
+* *Guided Access (引導使用模式)** 是 iOS/iPadOS 內建的專注與輔助功能，常被教師用於課堂管理或考試情境。
 
 其核心功能包括：
 

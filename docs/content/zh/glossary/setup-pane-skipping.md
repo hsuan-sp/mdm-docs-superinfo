@@ -5,7 +5,7 @@ term: Setup Pane Skipping (跳過設定輔助程式面板)
 ---
 ## 術語定義
 
-**Setup Pane Skipping (跳過設定輔助程式面板)** 是 **DDM (宣告式裝置管理)** 中的一項設定功能，用來抑制不必要的 UI 干擾。
+* *Setup Pane Skipping (跳過設定輔助程式面板)** 是**DDM (宣告式裝置管理)** 中的一項設定功能，用來抑制不必要的 UI 干擾。
 
 macOS Tahoe 的 DDM 改進：
 

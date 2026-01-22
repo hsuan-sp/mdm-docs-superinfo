@@ -5,7 +5,7 @@ term: DHCP (Dynamic Host Configuration Protocol)
 ---
 ## Term Definition
 
-**DHCP**is a foundational network protocol that automates the assignment of IP addresses and other network parameters to devices.
+* *DHCP**is a foundational network protocol that automates the assignment of IP addresses and other network parameters to devices.
 
 How it works:
 

@@ -15,13 +15,13 @@ title: >-
 
 ## Answer
 
-**If the Mac is a school asset (enrolled in ASM), administrators can bypass Activation Lock directly from the Apple School Manager portal without the original user's password.**
+* *If the Mac is a school asset (enrolled in ASM), administrators can bypass Activation Lock directly from the Apple School Manager portal without the original user's password.**
 
 This is a critical failsafe for when staff leave or students graduate without signing out of their personal accounts.
 
 ## Standard Recovery SOP:
 
-1. **Log in to ASM**: Use your administrator account at [school.Apple.com](https://school.Apple.com).
+1. **Log in to ASM**: Use your administrator account at [school.apple.com](https://school.apple.com).
 2. **Search Device**: Click**Devices**in the sidebar and enter the Mac's serial number.
 3. **Execute Unlock**:
 

@@ -5,7 +5,7 @@ term: Handoff
 ---
 ## Term Definition
 
-**Handoff**is a primary component of Apple’s**Continuity**framework that enables users to transfer an active task between nearby devices seamlessly.
+* *Handoff**is a primary component of Apple’s**Continuity**framework that enables users to transfer an active task between nearby devices seamlessly.
 
 How it works:
 
@@ -13,7 +13,7 @@ How it works:
 * **Continuity**: A nearby device (Mac, iPad, or iPhone) detects the broadcast and displays a Handoff icon.
 * **Resumption**: Clicking the icon instantly opens the same app on the second device, at the exact same point in the task.
 
-**Requirements**: Both devices must be signed in to the same**Apple Account**, have Bluetooth and Wi-Fi enabled, and be within close proximity.
+* *Requirements**: Both devices must be signed in to the same**Apple Account**, have Bluetooth and Wi-Fi enabled, and be within close proximity.
 
 ## Analogy
 

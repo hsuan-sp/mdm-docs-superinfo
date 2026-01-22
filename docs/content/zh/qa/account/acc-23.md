@@ -14,21 +14,21 @@ title: WWDC 2025 宣布的「防止個人 Apple 帳號登入組織裝置」功�
 
 ## Answer
 
-**Apple 在 WWDC 2025 宣布「限制僅使用管理式 Apple 帳號登入」功能，可在組織擁有的裝置上強制僅允許管理式 Apple 帳號登入。此功能在系統層級運作，涵蓋「設定輔助程式」及「系統偏好設定」中的登入流程，且不依賴 MDM 即可生效，為教育與企業環境提供更完善的資料分離與安全控管。**
+* *Apple 在 WWDC 2025 宣布「限制僅使用管理式 Apple 帳號登入」功能，可在組織擁有的裝置上強制僅允許管理式 Apple 帳號登入。此功能在系統層級運作，涵蓋「設定輔助程式」及「系統偏好設定」中的登入流程，且不依賴 MDM 即可生效，為教育與企業環境提供更完善的資料分離與安全控管。**
 
 ## 設定步驟（Apple School Manager / Apple Business Manager）
 
 此功能為組織層級的安全性原則，需由 **「管理者」** 職務在管理後台開啟：
 
-1. 登入 **Apple School Manager (ASM)** 或 **Apple Business Manager (ABM)**
+1. 登入 **Apple School Manager (ASM)**或**Apple Business Manager (ABM)**
 2. 前往 **「權限管理」(Access Management)**
 3. 選取 **「Apple 服務」(Apple Services)**
 4. 找到 **「Apple Account on Organization Devices」** 選項
 
-*（中文暫譯：「組織裝置上的 Apple 帳號」，實際名稱請以介面顯示為準）*
+* （中文暫譯：「組織裝置上的 Apple 帳號」，實際名稱請以介面顯示為準）*
 
-1. 啟用 **「僅限管理式 Apple 帳號登入」** 相關選項
-2. 儲存設定
+5. 啟用 **「僅限管理式 Apple 帳號登入」** 相關選項
+6. 儲存設定
 
 設定完成後，將自動套用至組織內所有符合條件的裝置。
 

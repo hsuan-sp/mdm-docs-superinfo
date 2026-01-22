@@ -5,7 +5,7 @@ term: Window App
 ---
 ## Term Definition
 
-**Window App**is the advanced windowing environment introduced in iPadOS 26, evolving from Stage Manager.
+* *Window App**is the advanced windowing environment introduced in iPadOS 26, evolving from Stage Manager.
 
 Capabilities:
 

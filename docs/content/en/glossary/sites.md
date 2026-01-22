@@ -5,7 +5,7 @@ term: Sites
 ---
 ## Term Definition
 
-**Sites**is a multi-tenancy architecture feature within Jamf Pro.
+* *Sites**is a multi-tenancy architecture feature within Jamf Pro.
 
 Functionality:
 

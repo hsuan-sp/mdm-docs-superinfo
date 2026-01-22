@@ -5,12 +5,12 @@ term: TLS / SSL
 ---
 ## Term Definition
 
-**TLS (Transport Layer Security)**and its predecessor**SSL (Secure Sockets Layer)**are the cryptographic protocols that secure internet communications.
+* *TLS (Transport Layer Security)**and its predecessor**SSL (Secure Sockets Layer)**are the cryptographic protocols that secure internet communications.
 
 Function:
 
 * **Encryption**: Scrambles data so it cannot be read by anyone except the sender and receiver.
-* **Identity**: Uses**Certificates**to prove that the server you are talking to is the real one (e.g., verifying that `Apple.com` is really Apple).
+* **Identity**: Uses**Certificates**to prove that the server you are talking to is the real one (e.g., verifying that `apple.com` is really Apple).
 * **Usage**: Critical for MDM commands, Wi-Fi authentication, and secure web browsing (HTTPS).
 
 ## Analogy

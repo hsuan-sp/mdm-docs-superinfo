@@ -5,7 +5,7 @@ term: Platform SSO in Setup Assistant
 ---
 ## Term Definition
 
-**Platform SSO in Setup Assistant**is a streamlined deployment feature introduced in**macOS Tahoe**.
+* *Platform SSO in Setup Assistant**is a streamlined deployment feature introduced in**macOS Tahoe**.
 
 Workflow improvements:
 

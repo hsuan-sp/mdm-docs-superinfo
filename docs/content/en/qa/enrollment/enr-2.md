@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-**Yes, you can, but manual Enrollment (User-Initiated) provides significantly less administrative control compared to Automated Device Enrollment (ADE).**
+* *Yes, you can, but manual Enrollment (User-Initiated) provides significantly less administrative control compared to Automated Device Enrollment (ADE).**
 
 Manual Enrollment is typically reserved for personal "Bring Your Own Device" (BYOD) scenarios or donated legacy hardware that cannot be added to Apple School Manager (ASM).
 

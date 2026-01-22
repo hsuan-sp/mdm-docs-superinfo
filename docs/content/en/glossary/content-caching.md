@@ -5,7 +5,7 @@ term: Content Caching
 ---
 ## Term Definition
 
-**Content Caching**is a built-in macOS service that optimizes the delivery of Apple software by storing data locally on the school's network.
+* *Content Caching**is a built-in macOS service that optimizes the delivery of Apple software by storing data locally on the school's network.
 
 How it works:
 

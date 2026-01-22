@@ -12,7 +12,7 @@ title: Why can't iPads install 'APKs' (or third-party apps) like Android devices
 
 ## Answer
 
-**To ensure device security and stability, Apple restricts app installation to the App Store or trusted organizational MDM channels (preventing 'Sideloading').**
+* *To ensure device security and stability, Apple restricts app installation to the App Store or trusted organizational MDM channels (preventing 'Sideloading').**
 
 ## Rationale:
 

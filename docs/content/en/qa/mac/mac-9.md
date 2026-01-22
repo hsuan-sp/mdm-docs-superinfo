@@ -15,7 +15,7 @@ title: What can Jamf Scripts do? How do I create and run them?
 
 ## Answer
 
-**Scripts allow administrators to execute shell commands with Root privileges on a Mac, enabling advanced customization that standard MDM payloads cannot achieve.**
+* *Scripts allow administrators to execute shell commands with Root privileges on a Mac, enabling advanced customization that standard MDM payloads cannot achieve.**
 
 Jamf Pro's power lies in its proprietary binary. When combined with**Policies**, you can achieve the following advanced scenarios:
 
@@ -43,22 +43,22 @@ While scripts were previously used to check system states periodically, macOS 26
 
 *    Use**Zsh**(`#!/bin/zsh`), the default shell for modern macOS.
 
-**Note: Python 2.7 has been removed since macOS 12.3; you must deploy your own interpreter to run Python scripts.*
+* *Note: Python 2.7 has been removed since macOS 12.3; you must deploy your own interpreter to run Python scripts.*
 
-1. **Upload to Jamf Pro**:
+2. **Upload to Jamf Pro**:
 
 *    Go to**Settings > Computer Management > Scripts**.
 *    Click**+ New**, enter a name, and paste your script content.
 * **Parameters**: You can set labels for variables `$4`through`$11`, allowing the same script to take different inputs (e.g., a printer IP) via different policies.
 
-2. **Execute via Policy**:
+3. **Execute via Policy**:
 
 *    Go to**Computers > Policies > + New**.
 *    Set a**Trigger**(e.g., Recurring Check-in, Login).
 *    Add the**Scripts**payload and select your uploaded script.
 *    Set the**Scope**for the target computers.
 
-3. **Execution Frequency**:
+4. **Execution Frequency**:
 
 *    Define the frequency (e.g.,**Once per computer**or**Ongoing**for every trigger).
 

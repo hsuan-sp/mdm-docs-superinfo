@@ -5,7 +5,7 @@ term: DDM (Declarative Device Management)
 ---
 ## Term Definition
 
-**Declarative Device Management (DDM)**is Apple’s next-generation management architecture designed for a more scaleable and reactive ecosystem.
+* *Declarative Device Management (DDM)**is Apple’s next-generation management architecture designed for a more scaleable and reactive ecosystem.
 
 Core concepts:
 

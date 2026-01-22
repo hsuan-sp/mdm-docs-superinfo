@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-**Teacher and Student devices are usually assigned different management profiles, app catalogs, and restriction levels to provide teachers with the flexibility needed for classroom instruction.**
+* *Teacher and Student devices are usually assigned different management profiles, app catalogs, and restriction levels to provide teachers with the flexibility needed for classroom instruction.**
 
 In Jamf Pro, we use Smart Groups to separate these roles and ensure that the right rules are applied to the right person.
 

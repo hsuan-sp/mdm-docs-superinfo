@@ -6,7 +6,7 @@ term: Jamf Pro API
 ---
 ## 術語定義
 
-**Jamf Pro API**(特別是 API v2) 是開發者與系統管理員用來與 Jamf Pro 伺服器溝通的程式介面。
+* *Jamf Pro API**(特別是 API v2) 是開發者與系統管理員用來與 Jamf Pro 伺服器溝通的程式介面。
 
 它允許將繁瑣的人工操作轉化為程式碼自動化：
 

@@ -6,7 +6,7 @@ term: Jamf Teacher
 ---
 ## Term Definition
 
-**Jamf Teacher**is a classroom management application that empowers educators to manage student technology directly and instantly.
+* *Jamf Teacher**is a classroom management application that empowers educators to manage student technology directly and instantly.
 
 Core capabilities:
 

@@ -14,7 +14,7 @@ title: Boosting classroom productivity with iPadOS 26.2 'Windowed Apps' multitas
 
 ## Answer
 
-**iPadOS 26.2 matures the 'Windowed Apps' system, allowing the iPad to behave more like a traditional computer. For students and teachers who need to cross-reference materials, this is a significant productivity boost.**
+* *iPadOS 26.2 matures the 'Windowed Apps' system, allowing the iPad to behave more like a traditional computer. For students and teachers who need to cross-reference materials, this is a significant productivity boost.**
 
 ## Core Operations for Education:
 

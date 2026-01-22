@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-**macOS 26 explicitly labels privacy permissions (Camera, Mic, Screen Recording) that are managed by the organization in System Settings.**
+* *macOS 26 explicitly labels privacy permissions (Camera, Mic, Screen Recording) that are managed by the organization in System Settings.**
 
 ## The Interface Change:
 

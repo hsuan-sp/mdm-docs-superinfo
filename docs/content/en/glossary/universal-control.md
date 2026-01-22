@@ -6,7 +6,7 @@ term: Universal Control
 ---
 ## Term Definition
 
-**Universal Control**is a Continuity feature that allows a single keyboard and mouse to control multiple nearby Apple devices.
+* *Universal Control**is a Continuity feature that allows a single keyboard and mouse to control multiple nearby Apple devices.
 
 Functionality:
 

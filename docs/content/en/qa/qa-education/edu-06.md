@@ -12,7 +12,7 @@ title: Can I sign into my personal Apple Account to download games I bought befo
 
 ## Answer
 
-**This is strongly discouraged, and most school policies explicitly forbid it. Signing into a personal Apple Account can lead to data mixing, Activation Lock risks, and VPP licensing conflicts.**
+* *This is strongly discouraged, and most school policies explicitly forbid it. Signing into a personal Apple Account can lead to data mixing, Activation Lock risks, and VPP licensing conflicts.**
 
 This is a common question from students and even some teachers. From a management and technical perspective, doing so introduces multiple risks.
 
@@ -31,7 +31,7 @@ In the iOS 26 environment, teachers and students are advised to use school-provi
 
 ## If you absolutely must use a personally purchased app:
 
-> ⚠️**Exception Handling (Requires Administrator Approval)**
+> ⚠ ️**Exception Handling (Requires Administrator Approval)**
 >
 > 1.**Sign in to the App Store ONLY**: Go to**Settings > App Store**and sign in with your personal account.**DO NOT**sign in to the main iCloud account at the top of the Settings app.
 >

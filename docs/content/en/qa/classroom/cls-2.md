@@ -13,7 +13,7 @@ title: Can I restrict students to using only one specific app during my lesson?
 
 ## Answer
 
-**Yes. Teachers can use Apple Classroom to temporarily "lock" students into a specific application.**
+* *Yes. Teachers can use Apple Classroom to temporarily "lock" students into a specific application.**
 
 This is particularly useful for assessments (e.g., Kahoot, Quizlet), focused writing tasks, or ensuring everyone is on the same page during a science lab.
 

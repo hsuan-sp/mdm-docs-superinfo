@@ -5,12 +5,12 @@ term: TLS / SSL
 ---
 ## 術語定義
 
-**TLS (Transport Layer Security)** 及其前身 **SSL (Secure Sockets Layer)** 是用於保護網路通訊安全的加密協定。
+* *TLS (Transport Layer Security)** 及其前身**SSL (Secure Sockets Layer)** 是用於保護網路通訊安全的加密協定。
 
 核心功能：
 
 * **加密 (Encryption)**：將資料打亂，除了寄件者和收件者之外，沒人看得懂。
-* **身分驗證 (Identity)**：使用 **憑證 (Certificate)** 來證明伺服器的真實身分（例如：確認你連上的 `Apple.com` 真的是 Apple 官網）。
+* **身分驗證 (Identity)**：使用**憑證 (Certificate)** 來證明伺服器的真實身分（例如：確認你連上的 `apple.com` 真的是 Apple 官網）。
 
 * **用途**：對於 MDM 指令傳輸、Wi-Fi 認證以及安全網頁瀏覽 (HTTPS) 至關重要。
 

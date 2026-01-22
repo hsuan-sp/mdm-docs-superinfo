@@ -14,7 +14,7 @@ title: What is 'Declarative App Management' (DDM)?
 
 ## Answer
 
-**Declarative Device Management (DDM) is a major evolution of the Apple MDM protocol, allowing devices to autonomously maintain their state based on 'Declarations' from the server.**
+* *Declarative Device Management (DDM) is a major evolution of the Apple MDM protocol, allowing devices to autonomously maintain their state based on 'Declarations' from the server.**
 
 ## Core Differences from Traditional MDM:
 

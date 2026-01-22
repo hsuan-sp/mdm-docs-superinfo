@@ -14,7 +14,7 @@ title: >-
 
 ## Answer
 
-**Both products are Apple-validated MDM solutions, but they differ significantly in design philosophy, language support, and depth of management capabilities.**
+* *Both products are Apple-validated MDM solutions, but they differ significantly in design philosophy, language support, and depth of management capabilities.**
 
 Based on official technical specifications, here is an objective comparison:
 

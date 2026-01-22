@@ -13,7 +13,7 @@ title: How do teachers manage Apple Intelligence 'Writing Tools' in the classroo
 
 ## Answer
 
-**Apple Intelligence's 'Writing Tools' are powerful assistants, but they raise concerns about academic integrity during composition or language exams. Teachers can manage these through MDM restrictions or real-time monitoring via the Classroom app.**
+* *Apple Intelligence's 'Writing Tools' are powerful assistants, but they raise concerns about academic integrity during composition or language exams. Teachers can manage these through MDM restrictions or real-time monitoring via the Classroom app.**
 
 ## Three Management Strategies
 

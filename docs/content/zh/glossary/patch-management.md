@@ -6,7 +6,7 @@ term: Patch Management
 ---
 ## 術語定義
 
-**Patch Management (修補程式管理)** 是透過 MDM 來自動化更新軟体與作業系統的機制。
+* *Patch Management (修補程式管理)** 是透過 MDM 來自動化更新軟体與作業系統的機制。
 
 它的特性包括：
 

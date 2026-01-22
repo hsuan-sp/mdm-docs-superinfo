@@ -5,7 +5,7 @@ term: SSID (Service Set Identifier)
 ---
 ## 術語定義
 
-**SSID (Service Set Identifier / 服務集識別碼)** 是無線網路路由器廣播出來的網路名稱（技術術語）。
+* *SSID (Service Set Identifier / 服務集識別碼)** 是無線網路路由器廣播出來的網路名稱（技術術語）。
 
 學校常見設定：
 

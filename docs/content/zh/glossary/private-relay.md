@@ -6,7 +6,7 @@ term: Private Relay (私密轉送)
 ---
 ## 術語定義
 
-**iCloud Private Relay (私密轉送)** 是 Apple 提供給 iCloud+ 訂閱用戶的隱私保護服務。
+* *iCloud Private Relay (私密轉送)** 是 Apple 提供給 iCloud+ 訂閱用戶的隱私保護服務。
 
 它的特性包括：
 

@@ -13,7 +13,7 @@ title: A Mac returned from repair is locked by Activation Lock. How do I fix it?
 
 ## Answer
 
-**Activation Lock for Macs with Apple Silicon (M1-M5) or the Apple T2 Security Chip is fully integrated into Apple School Manager (ASM).**
+* *Activation Lock for Macs with Apple Silicon (M1-M5) or the Apple T2 Security Chip is fully integrated into Apple School Manager (ASM).**
 
 The key to unlocking it depends on which organization currently owns the serial number in Apple's database.
 
@@ -39,7 +39,7 @@ If the repair shop used a "pre-owned" or "test" board that is still managed by a
 
 * **Symptom**: Apple Configurator will throw an error saying "This device is owned by another organization."
 * **Risk**:**You cannot unlock this yourself.**Legally and technically, the hardware ownership remains with another entity.
-* **Fix**: Demand that the repair vendor either contacts the original owner for a "Release" in ASM or replaces the board with a clean, unmanaged unit.
+* **Fix**: Demand that the repair vendor either contacts the original owner for a "Release" in ASM or replaces the board with a clean, Unmanaged unit.
 
 ## Last Resort: DFU Mode Restore
 

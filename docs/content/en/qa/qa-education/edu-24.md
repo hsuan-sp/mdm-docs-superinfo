@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-**The 'Writing Tools' in Apple Intelligence can rewrite, proofread, and summarize text even while offline. This poses a significant risk for language and composition exams. On AI-capable devices, these features must be managed via MDM during assessments.**
+* *The 'Writing Tools' in Apple Intelligence can rewrite, proofread, and summarize text even while offline. This poses a significant risk for language and composition exams. On AI-capable devices, these features must be managed via MDM during assessments.**
 
 ## Potential for Misuse:
 
@@ -26,7 +26,7 @@ title: >-
 
 ## Management Solutions:
 
-**Strategy A: The Exam Configuration Profile**
+* *Strategy A: The Exam Configuration Profile**
 
 Create a Jamf Pro profile specifically for the exam period:
 
@@ -34,7 +34,7 @@ Create a Jamf Pro profile specifically for the exam period:
 * **Optional**: Also disable**'Allow Math Notes'**to prevent cheating in mathematics exams.
 * **Deployment**: Push this profile 15 minutes before the exam and remove it immediately after.
 
-**Strategy B: App Lock (Single App Mode)**
+* *Strategy B: App Lock (Single App Mode)**
 
 Using the**Classroom**app's**'App Lock'**feature is the most secure method:
 

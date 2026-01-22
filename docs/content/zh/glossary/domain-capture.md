@@ -6,7 +6,7 @@ term: Domain Capture (域名擷取)
 ---
 ## 術語定義
 
-**Domain Capture (域名擷取)** 是 Apple Business Manager (ABM) 的一項高階安全性功能。
+* *Domain Capture (域名擷取)** 是 Apple Business Manager (ABM) 的一項高階安全性功能。
 
 當企業驗證了 Email 網域（如 `@company.com`）的所有權後，可以強制接管所有使用該網域註冊的 **「個人 Apple ID」**。
 

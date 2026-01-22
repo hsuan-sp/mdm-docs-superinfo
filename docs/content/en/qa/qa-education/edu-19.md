@@ -12,7 +12,7 @@ title: 'MOE Cybersecurity Audit: How does MDM help comply with NIST standards?'
 
 ## Answer
 
-**Educational devices must comply with NIST (National Institute of Standards and Technology) 800-63 guidelines to ensure identity security and data privacy.**
+* *Educational devices must comply with NIST (National Institute of Standards and Technology) 800-63 guidelines to ensure identity security and data privacy.**
 
 ## NIST Standards in MDM:
 

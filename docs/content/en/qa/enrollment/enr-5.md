@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-**Account-Driven Enrollment relies on "Service Discovery," allowing users to enroll simply by entering their school email address.**
+* *Account-Driven Enrollment relies on "Service Discovery," allowing users to enroll simply by entering their school email address.**
 
 ## How it Works:
 

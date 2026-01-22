@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-**'Pending' means the command has been sent to Apple's servers, but the device has not yet contacted the server to report its status.**
+* *'Pending' means the command has been sent to Apple's servers, but the device has not yet contacted the server to report its status.**
 
 In the current architecture where**Declarative Device Management (DDM)**runs alongside traditional MDM protocols, command status updates rely heavily on device response. If commands stall, check these core factors:
 
@@ -39,7 +39,7 @@ In the current architecture where**Declarative Device Management (DDM)**runs alo
 
 *    If the device time drifts by more than a few minutes, the SSL secure connection fails. Ensure "Set Automatically" is enabled in Settings.
 
-**Practical Advice**:
+* *Practical Advice**:
 
 If a single device is frequently Pending, it's usually a local network or hardware sleep issue.
 If devices across the entire school are Pending simultaneously, prioritize checking if the**APNs Certificate**in Jamf Pro is still valid.

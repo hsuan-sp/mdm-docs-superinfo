@@ -11,7 +11,7 @@ Functionality:
 
 * **Direction**: Moves data*from*an iPhone*to* an Android device.
 * **Content**: Transfers contacts, message history, photos, videos, and DRM-free music.
-* **MDM Restriction**: Administrators can block this feature on supervised devices to prevent corporate or school data (like contacts) from being exported to unmanaged personal devices.
+* **MDM Restriction**: Administrators can block this feature on supervised devices to prevent corporate or school data (like contacts) from being exported to Unmanaged personal devices.
 
 ## Analogy
 

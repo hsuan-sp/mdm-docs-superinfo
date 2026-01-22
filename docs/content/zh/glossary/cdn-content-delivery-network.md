@@ -5,7 +5,7 @@ term: CDN (Content Delivery Network)
 ---
 ## 術語定義
 
-**CDN (Content Delivery Network)** 在這裡指的是 Apple 與教育部（TANet）合作建置的 **內容傳遞網路**。
+* *CDN (Content Delivery Network)** 在這裡指的是 Apple 與教育部（TANet）合作建置的**內容傳遞網路**。
 
 其運作原理與效益如下：
 

@@ -5,7 +5,7 @@ term: Content Caching (內容快取)
 ---
 ## 術語定義
 
-**Content Caching (內容快取)** 是 macOS 內建的頻寬優化服務，可將 Mac 電腦轉變為本地的更新伺服器。
+* *Content Caching (內容快取)** 是 macOS 內建的頻寬優化服務，可將 Mac 電腦轉變為本地的更新伺服器。
 
 當同一區域網路內有開啟此功能的 Mac 時：
 

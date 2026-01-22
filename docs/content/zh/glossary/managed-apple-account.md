@@ -5,11 +5,11 @@ term: Managed Apple Account (管理式 Apple 帳號)
 ---
 ## 術語定義
 
-**管理式 Apple 帳號 (Managed Apple Account)**，前身為管理式 Apple ID，是由組織（而非個人）擁有並管控的專業身分識別。
+* *管理式 Apple 帳號 (Managed Apple Account)**，前身為管理式 Apple ID，是由組織（而非個人）擁有並管控的專業身分識別。
 
 與個人帳號的主要差異如下：
 
-* **所有權**：由機構透過 **Apple 校務管理 (ASM)** 或 Apple 商務管理 (ABM) 批量建立與管理。
+* **所有權**：由機構透過**Apple 校務管理 (ASM)** 或 Apple 商務管理 (ABM) 批量建立與管理。
 
 * **服務存取**：提供核心協作工具的存取權限，例如 iCloud 雲端硬碟、備忘錄，以及「課業」與「課堂」App。
 * **功能限制**：使用者無法進行私人的 App Store 購買，且「尋找」功能已被停用（組織改由 MDM 的「遺失模式」進行資產定位）。

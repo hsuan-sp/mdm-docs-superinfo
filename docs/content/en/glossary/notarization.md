@@ -5,7 +5,7 @@ term: Notarization
 ---
 ## Term Definition
 
-**Notarization**is an automated security screening system provided by Apple for macOS software distributed outside the App Store.
+* *Notarization**is an automated security screening system provided by Apple for macOS software distributed outside the App Store.
 
 The process:
 

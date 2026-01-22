@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-**This policy ensures that 'Jamf Trust' functions correctly. Enabling this feature would disable the school's content filtering and stop usage data reporting.**
+* *This policy ensures that 'Jamf Trust' functions correctly. Enabling this feature would disable the school's content filtering and stop usage data reporting.**
 
 ## Current Situation:
 

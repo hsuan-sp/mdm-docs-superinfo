@@ -6,7 +6,7 @@ term: Remote Management
 ---
 ## 術語定義
 
-**Remote Management (遠端管理畫面)** 是 Apple 裝置在執行 **ADE (自動裝置註冊)** 過程中，在「設定輔助程式」裡會出現的一個關鍵畫面。
+* *Remote Management (遠端管理畫面)** 是 Apple 裝置在執行**ADE (自動裝置註冊)** 過程中，在「設定輔助程式」裡會出現的一個關鍵畫面。
 
 它的意義包括：
 

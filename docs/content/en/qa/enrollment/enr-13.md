@@ -14,7 +14,7 @@ title: How do I prevent students from removing the MDM management profile?
 
 ## Answer
 
-**The key to preventing profile removal is using the 'Automated Device Enrollment (ADE)' process and enabling mandatory locking in the 'PreStage Enrollment' settings.**
+* *The key to preventing profile removal is using the 'Automated Device Enrollment (ADE)' process and enabling mandatory locking in the 'PreStage Enrollment' settings.**
 
 If a device is enrolled manually (e.g., via a manual link or temporary Apple Configurator Enrollment), students can remove the profile at any time under**Settings > VPN & Device Management**.
 

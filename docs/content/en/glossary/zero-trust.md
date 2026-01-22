@@ -5,7 +5,7 @@ term: Zero Trust
 ---
 ## Term Definition
 
-**Zero Trust**is a modern security architecture based on the principle:**"Never Trusted, Always Verified."**
+* *Zero Trust**is a modern security architecture based on the principle:**"Never Trusted, Always Verified."**
 
 Key concepts:
 

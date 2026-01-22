@@ -5,7 +5,7 @@ term: Managed Open In
 ---
 ## Term Definition
 
-**Managed Open In**is a foundational Data Loss Prevention (DLP) for iOS and iPadOS.
+* *Managed Open In**is a foundational Data Loss Prevention (DLP) for iOS and iPadOS.
 
 Functionality:
 

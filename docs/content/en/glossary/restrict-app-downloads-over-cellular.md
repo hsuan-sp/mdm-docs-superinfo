@@ -5,7 +5,7 @@ term: Restrict App Downloads over Cellular
 ---
 ## Term Definition
 
-**Restrict App Downloads over Cellular**is a modern policy configuration available via Declarative Device Management (DDM).
+* *Restrict App Downloads over Cellular**is a modern policy configuration available via Declarative Device Management (DDM).
 
 Functionality:
 

@@ -16,13 +16,13 @@ title: >-
 
 ## Answer
 
-**When you configure 'Install Apps' in PreStage Enrollment, the device waits for apps to download before allowing access to the Home Screen.**
-**Any network issues or VPP license failures will cause a deadlock.**
+* *When you configure 'Install Apps' in PreStage Enrollment, the device waits for apps to download before allowing access to the Home Screen.**
+* *Any network issues or VPP license failures will cause a deadlock.**
 
 This is extremely common during**Automated Device Enrollment (ADE)**.
 Admins often want students to see essential apps immediately upon boot, but if the environment isn't perfect, it leads to disaster during mass deployments.
 
-**Core Causes**:
+* *Core Causes**:
 
 1. **Insufficient VPP Licenses or Invalid Token**:
 
@@ -43,7 +43,7 @@ Admins often want students to see essential apps immediately upon boot, but if t
 
 *    In Jamf Pro's PreStage settings, if an app is marked as "Required" and cannot be skipped, the student cannot click "Continue" until the download finishes.
 
-**Best Practices**:
+* *Best Practices**:
 
 * **Minimize Initial Payload**: PreStage should only enforce critical configuration profiles or extremely small "Guide Apps".
 * **Background Install**: Set main educational apps to deploy*after* Enrollment is complete, rather than intercepting the user during the Setup Assistant.

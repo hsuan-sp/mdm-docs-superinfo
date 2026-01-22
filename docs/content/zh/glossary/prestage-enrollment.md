@@ -6,7 +6,7 @@ term: PreStage Enrollment
 ---
 ## 術語定義
 
-**PreStage Enrollment (部署前註冊)** 是針對「自動裝置註冊 (ADE)」裝置的初始設定檔。
+* *PreStage Enrollment (部署前註冊)** 是針對「自動裝置註冊 (ADE)」裝置的初始設定檔。
 
 它的特性包括：
 

@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-**In iOS 26.2, iPadOS 26.2, and macOS 26.2, the 'AirDrop Code' mechanism means that first-time transfers between people not in each other's contacts require a 6-digit code. This changes the 'Everyone open AirDrop' workflow but can be managed effectively.**
+* *In iOS 26.2, iPadOS 26.2, and macOS 26.2, the 'AirDrop Code' mechanism means that first-time transfers between people not in each other's contacts require a 6-digit code. This changes the 'Everyone open AirDrop' workflow but can be managed effectively.**
 
 ## The New Workflow:
 
@@ -44,7 +44,7 @@ title: >-
 
 3. **Cloud Relay**:
 
-*Upload the material to Google Drive or a school NAS and push the*link* via Classroom. Students can then download at their own pace without worrying about peer-to-peer pairing.
+* Upload the material to Google Drive or a school NAS and push the*link* via Classroom. Students can then download at their own pace without worrying about peer-to-peer pairing.
 
 ## Advice for Teachers:
 

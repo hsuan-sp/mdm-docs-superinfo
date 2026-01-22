@@ -15,7 +15,7 @@ title: How to push system updates (iOS/iPadOS/macOS) via Jamf Pro?
 
 ## Answer
 
-**By 2026, software update management in Jamf Pro has fully transitioned to the "Declarative Device Management (DDM)" framework.**
+* *By 2026, software update management in Jamf Pro has fully transitioned to the "Declarative Device Management (DDM)" framework.**
 
 This approach is more stable than legacy remote commands and allows devices to autonomously handle the download and installation process, significantly reducing server load.
 

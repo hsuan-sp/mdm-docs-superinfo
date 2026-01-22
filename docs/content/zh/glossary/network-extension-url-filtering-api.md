@@ -5,7 +5,7 @@ term: Network Extension URL Filtering API (網路擴充功能 URL 過濾 API)
 ---
 ## 術語定義
 
-**Network Extension URL Filtering API** 是 Apple 在 macOS 與 iOS 引入的現代化網路過濾架構。
+* *Network Extension URL Filtering API** 是 Apple 在 macOS 與 iOS 引入的現代化網路過濾架構。
 
 它的特性包括：
 
@@ -17,8 +17,8 @@ term: Network Extension URL Filtering API (網路擴充功能 URL 過濾 API)
 
 這是內建在車上的 **「智慧導航禁區」**。
 
-* **舊方法 (VPN)**：像是在路上設 **「檢查哨」**。所有車子都要先開到檢查哨停下來，檢查完才能通過，容易塞車（網速慢）。
-* **新方法 (API)**：像是直接更新車上的 **「導航圖資」**。車子（裝置）自己就知道哪條路（網址）是禁區不能走。不用停車檢查，既省油（省電）又順暢。
+* **舊方法 (VPN)**：像是在路上設**「檢查哨」**。所有車子都要先開到檢查哨停下來，檢查完才能通過，容易塞車（網速慢）。
+* **新方法 (API)**：像是直接更新車上的**「導航圖資」**。車子（裝置）自己就知道哪條路（網址）是禁區不能走。不用停車檢查，既省油（省電）又順暢。
 
 ## MDM 相關
 

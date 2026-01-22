@@ -5,7 +5,7 @@ term: Wi-Fi 7
 ---
 ## Term Definition
 
-**Wi-Fi 7**(IEEE 802.11be) is the cutting-edge wireless standard designed for extremely high throughput and low latency.
+* *Wi-Fi 7**(IEEE 802.11be) is the cutting-edge wireless standard designed for extremely high throughput and low latency.
 
 Key innovations for education:
 

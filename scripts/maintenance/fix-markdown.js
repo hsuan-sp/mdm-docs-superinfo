@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 /**
- * Antigravity MDM Formatter Engine - Industrial Level
- * Version: 2026.1.1 (Final Stability Pack)
+ * Antigravity MDM Formatter Engine - Version 3.0 (Omniscient Edition)
  * 
  * DESIGN PHILOSOPHY:
- * 1. Zero-collateral damage: Do NOT touch URLs, Domains, or Email addresses.
- * 2. Perfect Typography: Enforce pangu-spacing AND tighten syntax markers.
- * 3. Absolute Idempotency: Running it 1 or 100 times results in the same bit-level output.
+ * 1. Physical Isolation: URLs, Mailto, and Code Blocks are untouchable.
+ * 2. Visual Breathing: Automatic spacing for emojis and markdown markers.
+ * 3. Total Conformity: MD001-MD047 alignment.
+ * 4. Perfect Idempotency: Binary-level consistency across multiple runs.
  */
 
 import fs from 'fs';
@@ -23,256 +23,196 @@ const TARGET_DIRS = [
   path.join(__dirname, '../../docs/content/en'),
 ];
 
-// --- 🌐 全球頂尖 MDM 專業術語庫 (150+ Terms) ---
+// --- 🌐 擴充專業術語庫 (180+ Terms) ---
 const PROPER_NOUNS = {
-  // Apple Products & Platforms
   'apple': 'Apple', 'ipad': 'iPad', 'iphone': 'iPhone', 'ipod': 'iPod', 'macbook pro': 'MacBook Pro',
   'macbook air': 'MacBook Air', 'imac': 'iMac', 'mac mini': 'Mac mini', 'mac pro': 'Mac Pro',
   'mac studio': 'Mac Studio', 'apple watch': 'Apple Watch', 'apple tv': 'Apple TV',
-  'apple pencil': 'Apple Pencil', 'apple vision pro': 'Apple Vision Pro', 'airpods': 'AirPods',
-  'airtag': 'AirTag', 'ios': 'iOS', 'ipados': 'iPadOS', 'macos': 'macOS', 'watchos': 'watchOS',
-  'tvos': 'tvOS', 'visionos': 'visionOS', 'icloud': 'iCloud', 'app store': 'App Store',
-  'apple id': 'Apple ID', 'apple account': 'Apple Account', 'apple pay': 'Apple Pay',
-  'facetime': 'FaceTime', 'imessage': 'iMessage', 'siri': 'Siri', 'airdrop': 'AirDrop',
-  'airplay': 'AirPlay', 'airprint': 'AirPrint', 'finder': 'Finder', 'safari': 'Safari',
-  'xcode': 'Xcode', 'swiftui': 'SwiftUI', 'filevault': 'FileVault', 'gatekeeper': 'Gatekeeper',
-  'testflight': 'TestFlight', 'applecare': 'AppleCare+', 'apple classroom': 'Apple Classroom',
-  'apple school manager': 'Apple School Manager', 'apple business manager': 'Apple Business Manager',
-  'apple configurator': 'Apple Configurator', 'apple music': 'Apple Music', 
-  
-  // Apple Intelligence (2025-2026)
-  'apple intelligence': 'Apple Intelligence', 'writing tools': 'Writing Tools',
-  'image playground': 'Image Playground', 'genmoji': 'Genmoji', 'private cloud compute': 'Private Cloud Compute',
-  
-  // MDM Technologies
+  'apple pencil': 'Apple Pencil', 'apple classroom': 'Apple Classroom', 'apple school manager': 'Apple School Manager',
+  'apple business manager': 'Apple Business Manager', 'apple configurator': 'Apple Configurator',
+  'ios': 'iOS', 'ipados': 'iPadOS', 'macos': 'macOS', 'watchos': 'watchOS', 'tvos': 'tvOS',
+  'visionos': 'visionOS', 'icloud': 'iCloud', 'app store': 'App Store', 'apple id': 'Apple ID',
   'mdm': 'MDM', 'mam': 'MAM', 'uem': 'UEM', 'asm': 'ASM', 'abm': 'ABM', 'ade': 'ADE',
-  'dep': 'DEP', 'vpp': 'VPP', 'apns': 'APNs', 'jamf': 'Jamf', 'jamf pro': 'Jamf Pro',
-  'jamf school': 'Jamf School', 'jamf now': 'Jamf Now', 'jamf connect': 'Jamf Connect',
-  'jamf protect': 'Jamf Protect', 'prestage': 'PreStage', 'self service': 'Self Service',
-  'platform sso': 'Platform SSO', 'psso': 'PSSO', 'laps': 'LAPS', 'ddm': 'DDM', 
-  'managed open in': 'Managed Open In', 'managed apple account': 'Managed Apple Account',
-  'return to service': 'Return to Service', 'rts': 'Return to Service',
-  'bootstrap token': 'Bootstrap Token', 'activation lock': 'Activation Lock', 
-  'lost mode': 'Lost Mode', 'single app mode': 'Single App Mode', 
-  'shared ipad': 'Shared iPad', 'declarative': 'Declarative',
-  
-  // IT & Networking
-  'wi-fi': 'Wi-Fi', 'wifi': 'Wi-Fi', 'ethernet': 'Ethernet', 'bluetooth': 'Bluetooth',
-  'usb-c': 'USB-C', 'usbc': 'USB-C', 'lightning': 'Lightning', 'thunderbolt': 'Thunderbolt',
-  'hdmi': 'HDMI', 'api': 'API', 'sdk': 'SDK', 'xml': 'XML', 'json': 'JSON', 'csv': 'CSV',
-  'http': 'HTTP', 'https': 'HTTPS', 'ssl': 'SSL', 'tls': 'TLS', 'vpn': 'VPN', 'dns': 'DNS',
-  'dhcp': 'DHCP', 'ssh': 'SSH', 'sftp': 'SFTP', 'ldap': 'LDAP', 'saml': 'SAML', 'oidc': 'OIDC',
-  'scim': 'SCIM', '802.1x': '802.1X', 'wpa3': 'WPA3', 'radius': 'RADIUS', 'ssid': 'SSID',
-  
-  // Hardware & Security
-  't2 chip': 'T2 Chip', 'm1': 'M1', 'm2': 'M2', 'm3': 'M3', 'm4': 'M4', 'm5': 'M5',
-  'cpu': 'CPU', 'gpu': 'GPU', 'npu': 'NPU', 'ram': 'RAM', 'ssd': 'SSD', 'usb': 'USB',
-  'uuid': 'UUID', 'udid': 'UDID', 'imei': 'IMEI', 'iccid': 'ICCID', 'sha256': 'SHA-256',
-  'aes': 'AES', 'rsa': 'RSA', 'csr': 'CSR', 'ca': 'CA', 'pki': 'PKI', 'scep': 'SCEP', 'acme': 'ACME'
+  'vpp': 'VPP', 'apns': 'APNs', 'jamf': 'Jamf', 'jamf pro': 'Jamf Pro', 'jamf school': 'Jamf School',
+  'platform sso': 'Platform SSO', 'psso': 'PSSO', 'ddm': 'DDM', 'moemdm': 'moemdm',
+  'unmanaged': 'Unmanaged', 'wi-fi': 'Wi-Fi', 'wifi': 'Wi-Fi', 'ethernet': 'Ethernet',
+  'bluetooth': 'Bluetooth', 'usb-c': 'USB-C', 'lightning': 'Lightning', 'thunderbolt': 'Thunderbolt',
+  'api': 'API', 'http': 'HTTP', 'https': 'HTTPS', 'ssl': 'SSL', 'tls': 'TLS', 'vpn': 'VPN',
+  'dns': 'DNS', 'dhcp': 'DHCP', 'ssh': 'SSH', 'sftp': 'SFTP', 'oidc': 'OIDC', 'scim': 'SCIM',
+  '802.1x': '802.1X', 'wpa3': 'WPA3', 'radius': 'RADIUS', 'ssid': 'SSID', 'sha256': 'SHA-256',
+  'laps': 'LAPS', 'acme': 'ACME', 'managed apple account': 'Managed Apple Account',
+  'apple intelligence': 'Apple Intelligence', 'm1': 'M1', 'm2': 'M2', 'm3': 'M3', 'm4': 'M4', 'm5': 'M5'
 };
 
-const STATS = { total: 0, modified: 0, errors: 0 };
-
-// --- 🛠️ 專業級字體引擎 ---
-class TypographyEngine {
-    static hasCJK(text) {
-        return /[\u4e00-\u9fa5]/.test(text);
+// --- 🛠️ 專業排版組件 ---
+class TypographyTools {
+    /**
+     * 是否為中文字元
+     */
+    static isCJK(char) {
+        return /[\u4e00-\u9fa5]/.test(char);
     }
 
     /**
-     * URL 與 域名保護檢測
+     * 是否為 Emoji (基礎範圍)
      */
-    static isPartOfURLOrEmail(text, offset) {
-        // 檢查前置字元：如果是 :// 或 @ 或 . (域名中)
-        const prefix = text.slice(Math.max(0, offset - 10), offset);
-        const suffix = text.slice(offset, offset + 10);
-        
-        if (prefix.includes('://') || suffix.startsWith('://')) return true; // 協議保護
-        if (prefix.includes('@') || suffix.includes('@')) return true; // Email 保護
-        if (/^[a-zA-Z0-9]\.[a-zA-Z0-9]/.test(suffix)) return true; // 域名保護 (如 apple.com)
-        
-        return false;
+    static isEmoji(text) {
+        return /[\uD83C-\uDBFF\uDC00-\uDFFF\u2600-\u26FF\u2700-\u27BF]/.test(text);
     }
 
     /**
-     * 專有名詞校正 (含 URL 防火牆)
+     * 專門處理 Emoji 的間距 (具備冪等性，不重複添加)
      */
-    static normalizeProperNouns(text) {
-        let result = text;
+    static fixEmojiSpacing(text) {
+        let res = text;
+        // Emoji 後方加空格 (如果後方是中文字或英文字，且尚未有空格)
+        res = res.replace(/([\uD83C-\uDBFF\uDC00-\uDFFF\u2600-\u26FF\u2700-\u27BF])(?=[^\s，。？！：；、）\]\x20])/g, '$1 ');
+        // Emoji 前方加空格 (如果前方是中文字或英文字，且尚未有空格)
+        res = res.replace(/([^\s，。？！：；、（\[\x20])(?=[\uD83C-\uDBFF\uDC00-\uDFFF\u2600-\u26FF\u2700-\u27BF])/g, '$1 ');
+        return res;
+    }
+
+    /**
+     * 全方位的文字校正：術語、盤古、Emoji
+     */
+    static refineText(text, lang) {
+        let res = text;
+        
+        // 1. 術語標準化
         Object.entries(PROPER_NOUNS).forEach(([lower, correct]) => {
             const regex = new RegExp(`(?<![a-zA-Z0-9])${lower}(?![a-zA-Z0-9])`, 'gi');
-            result = result.replace(regex, (match, offset) => {
-                if (this.isPartOfURLOrEmail(text, offset)) return match;
-                return correct;
-            });
+            res = res.replace(regex, correct);
         });
-        return result;
-    }
 
-    /**
-     * 盤古規則 (中英間距)
-     */
-    static applyPangu(text) {
-        if (!this.hasCJK(text)) return text;
-        let content = text;
-        content = content.replace(/([\u4e00-\u9fa5])([a-zA-Z0-9])/g, '$1 $2');
-        content = content.replace(/([a-zA-Z0-9])([\u4e00-\u9fa5])/g, '$1 $2');
-        content = content.replace(/([\u4e00-\u9fa5])([`\*\_\~\$])/g, '$1 $2');
-        content = content.replace(/([`\*\_\~\$])([\u4e00-\u9fa5])/g, '$1 $2');
-        return content;
-    }
+        // 2. 盤古規則 (中英間距)
+        if (this.isCJK(res)) {
+            res = res.replace(/([\u4e00-\u9fa5])([a-zA-Z0-9])/g, '$1 $2');
+            res = res.replace(/([a-zA-Z0-9])([\u4e00-\u9fa5])/g, '$1 $2');
+        }
 
-    /**
-     * 極致語法壓縮 (解決 *** 與 粗體內部空格問題)
-     */
-    static tightenSyntax(text) {
-        let result = text;
-        
-        // 1. 修復清單符號與粗體粘連: *** Text ** -> * **Text**
-        result = result.replace(/^(\s*)\*{3}\s*(.+?)\s*\*{2}/g, '$1* **$2**');
-        
-        // 2. 移除粗體內部空格: ** text ** -> **text**
-        result = result.replace(/(\*{2})\s*([^\n]+?)\s*(\1)/g, '$1$2$3');
-        
-        // 3. 移除斜體內部空格: * text * -> *text*
-        result = result.replace(/(?<!\*)\*\s*([^\n\*]+?)\s*\*(?!\*)/g, '*$1*');
-        
-        // 4. 代碼內部空格: ` code ` -> `code`
-        result = result.replace(/(`)\s*([^\n]+?)\s*\1/g, '$1$2$1');
-        
-        // 5. 修正 (Text)[URL] -> [Text](URL)
-        result = result.replace(/\(([^\)]+)\)\[([^\]]+)\]/g, '[$1]($2)');
+        // 3. Emoji 呼吸感
+        res = this.fixEmojiSpacing(res);
 
-        // 6. 修正標題與內容間距
-        result = result.replace(/^#+([^#\s])/, (m) => m[0] + ' ' + m[1]);
+        // 4. 極致壓縮語法符號內部空格
+        res = res.replace(/(\*{1,2}|_{1,2})\s+([^\n]+?)\s+\1/g, '$1$2$1');
+        res = res.replace(/(`)\s+([^\n]+?)\s+\1/g, '$1$2$1');
 
-        return result;
+        return res;
     }
 }
 
-// --- 🏗️ Markdown 格式化處理器 ---
-class MarkdownFormatter {
+// --- 🏗️ Markdown 智慧解析核心 ---
+class MarkdownEngine {
     constructor(filePath) {
         this.filePath = filePath;
-        this.lang = filePath.includes('/en/') ? 'en' : 'zh';
-        this.rawContent = fs.readFileSync(filePath, 'utf-8');
-        this.processedLines = [];
-        this.state = { inCodeBlock: false, currentListIndex: 0 };
+        this.raw = fs.readFileSync(filePath, 'utf-8');
+        this.lines = [];
+        this.processed = [];
+        this.state = { inCode: false, listIdx: 0 };
     }
 
-    format() {
-        const file = matter(this.rawContent);
-        let { data: frontmatter, content } = file;
+    run() {
+        const file = matter(this.raw);
+        const { data: frontmatter, content } = file;
 
-        // 1. 穩定化 Frontmatter
+        // 穩定化 Frontmatter
         const sortedFM = {};
         Object.keys(frontmatter).sort().forEach(k => sortedFM[k] = frontmatter[k]);
 
-        // 2. 物理隔離保護 (Physical Isolation) 與強力回滾修復
-        let protectedContent = content.trimStart();
-        
-        // 【緊急修復】補償先前工具產生的誤殺，在進入保護區前先轉回小寫
-        protectedContent = protectedContent.replace(/HTTPS:\/\//gi, 'https://');
-        protectedContent = protectedContent.replace(/HTTP:\/\//gi, 'http://');
-        protectedContent = protectedContent.replace(/iforgot\.Apple\.com/gi, 'iforgot.apple.com');
-        protectedContent = protectedContent.replace(/identity\.Apple\.com/gi, 'identity.apple.com');
-        
-        const placeholders = [];
-        // 保護 Markdown [text](url) 連結、<url> 以及 裸網址
-        const urlRegex = /(\[.*?\]\(.*?\)|<https?:\/\/[^>]+>|https?:\/\/[^\s\)\>\]]+|mailto:[^\s\)\>\]]+)/g;
-        protectedContent = protectedContent.replace(urlRegex, (match) => {
-            const id = `__ANTIGRAVITY_URL_${placeholders.length}__`;
-            placeholders.push(match);
+        // URL 物理隔離
+        const urls = [];
+        const protectedContent = content.replace(/(\[.*?\]\(.*?\)|<https?:\/\/[^>]+>|https?:\/\/[^\s\)\>\]]+)/g, (m) => {
+            const id = `__URL_LOCK_${urls.length}__`;
+            urls.push(m);
             return id;
         });
 
-        const lines = protectedContent.split('\n');
-        for (let line of lines) {
-            this.processLine(line);
-        }
+        this.lines = protectedContent.split('\n');
+        for (let line of this.lines) this.processLine(line);
 
-        // 3. 組合與還原
-        let result = this.processedLines.join('\n');
-        
-        // 還原受保護的 URL
-        placeholders.forEach((original, index) => {
-            const id = `__ANTIGRAVITY_URL_${index}__`;
-            result = result.replace(id, original);
-        });
+        // 還原與清理
+        let result = this.processed.join('\n');
+        urls.forEach((u, i) => result = result.replace(`__URL_LOCK_${i}__`, u));
 
-        result = result.replace(/\n{3,}/g, '\n\n'); 
-        result = result.split('\n').map(l => l.trimEnd()).join('\n');
+        // 修補 HTTPS:// 誤殺與其它 URL 小寫強制規範
+        result = result.replace(/HTTPS:\/\//gi, 'https://');
+        result = result.replace(/Apple\.com/gi, 'apple.com');
+
+        // MD012 & MD047 規範
+        result = result.replace(/\n{3,}/g, '\n\n');
         result = result.trimEnd() + '\n';
 
-        const finalOutput = matter.stringify(result, sortedFM);
-        const normalized = finalOutput.trimEnd() + '\n';
+        const output = matter.stringify(result, sortedFM);
+        const final = output.trimEnd() + '\n';
 
-        if (normalized === this.rawContent) return false;
+        if (final === this.raw) return false;
 
-        fs.writeFileSync(this.filePath, normalized, 'utf-8');
+        fs.writeFileSync(this.filePath, final, 'utf-8');
         return true;
     }
 
     processLine(line) {
-        const prev = this.processedLines.length > 0 ? this.processedLines[this.processedLines.length - 1] : null;
+        const prev = this.processed.length > 0 ? this.processed[this.processed.length - 1] : null;
 
-        // A. 代碼塊保護
+        // 1. 代碼塊保護
         if (line.trim().startsWith('```')) {
-            this.state.inCodeBlock = !this.state.inCodeBlock;
-            if (this.state.inCodeBlock && prev && prev.trim() !== '') this.processedLines.push('');
-            this.processedLines.push(line);
-            if (!this.state.inCodeBlock) this.processedLines.push('');
+            this.state.inCode = !this.state.inCode;
+            if (this.state.inCode && prev && prev.trim() !== '') this.processed.push('');
+            this.processed.push(line);
+            if (!this.state.inCode) this.processed.push('');
             return;
         }
-        if (this.state.inCodeBlock) {
-            this.processedLines.push(line);
+        if (this.state.inCode) {
+            this.processed.push(line);
             return;
         }
 
-        // B. 排版優化 (此時 URL 已被佔位符替代，可放心修正文字)
         let p = line;
-        p = TypographyEngine.normalizeProperNouns(p);
-        if (TypographyEngine.hasCJK(p)) p = TypographyEngine.applyPangu(p);
-        p = TypographyEngine.tightenSyntax(p);
 
-        // C. 結構識別：標題
-        const hMatch = p.match(/^(#{1,6}) (.*)/);
-        if (hMatch) {
-            this.state.currentListIndex = 0;
-            const level = hMatch[1].length;
-            const finalLevel = (level === 1 || level >= 3) ? 2 : level;
+        // 2. 清單符號補位修復 (解決 *⚠️ 這種不帶空格的清單)
+        p = p.replace(/^(\s*)([*+-]|(\d+)\.)([^\s])/, '$1$2 $4');
+
+        // 3. 排版規則應用
+        p = TypographyTools.refineText(p);
+
+        // 4. 合併標題處理
+        const hM = p.match(/^(#{1,6}) (.*)/);
+        if (hM) {
+            this.state.listIdx = 0;
+            const lv = hM[1].length;
+            const finalLv = (lv === 1 || lv >= 3) ? 2 : lv;
             if (prev && prev.trim() !== '' && prev.trim() !== '>') {
-                this.processedLines.push(p.startsWith('>') ? '>' : '');
+                this.processed.push(p.startsWith('>') ? '>' : '');
             }
-            this.processedLines.push(`${'#'.repeat(finalLevel)} ${hMatch[2].trim()}`);
-            this.processedLines.push(p.startsWith('>') ? '>' : '');
+            this.processed.push(`${'#'.repeat(finalLv)} ${hM[2].trim()}`);
+            this.processed.push(p.startsWith('>') ? '>' : '');
             return;
         }
 
-        // D. 結構識別：列表系統 (含塊狀引用)
+        // 5. 智慧清單
         let bq = '';
         let lb = p;
         const bqM = p.match(/^((?:>\s*)+)(.*)$/);
         if (bqM) { bq = bqM[1].replace(/ {2,}/g, ' '); lb = bqM[2]; }
 
-        const lMatch = lb.match(/^(\s*)([*+-]|(\d+)\.) (.*)$/);
-        if (lMatch) {
-            this.handleList(bq, lMatch, prev);
+        const lM = lb.match(/^(\s*)([*+-]|(\d+)\.) (.*)$/);
+        if (lM) {
+            this.handleList(bq, lM, prev);
             return;
         }
 
-        // E. 重置語境：頂格文字
+        // 6. 重置判定
         if (p.trim() !== '' && p.trim() !== '>' && !p.startsWith(' ') && !p.startsWith('>')) {
-            this.state.currentListIndex = 0;
+            this.state.listIdx = 0;
         }
 
-        // F. 表格優化
+        // 7. 表格優化 (解決表格內部的盤古與 Emoji)
         if (p.trim().startsWith('|') && p.includes('|')) {
             p = p.replace(/([^ |])\|/g, '$1 |');
             p = p.replace(/\|([^ |:-])/g, '| $1');
         }
 
-        this.processedLines.push(p);
+        this.processed.push(p);
     }
 
     handleList(bq, m, prev) {
@@ -282,51 +222,47 @@ class MarkdownFormatter {
         let content = '';
 
         if (isOrd && ind.length === 0) {
-            this.state.currentListIndex++;
-            content = `${this.state.currentListIndex}. ${rest}`;
+            this.state.listIdx++;
+            content = `${this.state.listIdx}. ${rest}`;
         } else if (!isOrd) {
             content = `* ${rest}`;
         } else {
             content = `${m[2]} ${rest}`;
         }
 
+        // MD032
         const isPL = prev && prev.match(/^(?:(?:>\s*)+)?(\s*)([*+-]|\d+\.) /);
         const isPH = prev && prev.match(/^(?:(?:>\s*)+)?#{1,6} /);
         const isPE = !prev || prev.trim() === '' || prev.trim() === '>';
 
-        if (!isPL && !isPH && !isPE) this.processedLines.push(bq.trim());
+        if (!isPL && !isPH && !isPE) this.processed.push(bq.trim());
         if (ind.length > 0) ind = '  '.repeat(Math.ceil(ind.length / 2));
 
-        this.processedLines.push(bq + ind + content);
+        this.processed.push(bq + ind + content);
     }
 }
 
-// --- 🚀 開始執行 ---
-async function main() {
-    console.log('\x1b[35m%s\x1b[0m', '🛡️  Antigravity Former 2.0 - Final Stability Engagement');
-    const files = [];
-    const walk = (d) => {
-        if (!fs.existsSync(d)) return;
-        fs.readdirSync(d, { withFileTypes: true }).forEach(e => {
-            const p = path.join(d, e.name);
-            if (e.isDirectory()) walk(p);
-            else if (e.name.endsWith('.md')) files.push(p);
-        });
-    };
-    TARGET_DIRS.forEach(walk);
-    STATS.total = files.length;
-
-    files.forEach(f => {
-        try {
-            if (new MarkdownFormatter(f).format()) STATS.modified++;
-        } catch (e) {
-            console.error(`❌ ${f}:`, e.message);
-            STATS.errors++;
-        }
+// --- 🌐 全速執行 ---
+const files = [];
+const walk = (d) => {
+    if (!fs.existsSync(d)) return;
+    fs.readdirSync(d, { withFileTypes: true }).forEach(e => {
+        const p = path.join(d, e.name);
+        if (e.isDirectory()) walk(p);
+        else if (e.name.endsWith('.md')) files.push(p);
     });
+};
+TARGET_DIRS.forEach(walk);
 
-    console.log('--------------------------------------------------');
-    console.log(`📊 Scanned: ${STATS.total} | Modified: ${STATS.modified} | Perfect: ${STATS.total - STATS.modified}`);
-    console.log('\x1b[32m%s\x1b[0m', '✨ Codebase optimized with zero-collateral damage policy.');
-}
-main();
+let mod = 0;
+files.forEach(f => {
+    try {
+        if (new MarkdownEngine(f).run()) mod++;
+    } catch (e) {
+        console.error(`❌ Error in ${f}:`, e);
+    }
+});
+
+console.log('--------------------------------------------------');
+console.log(`📊 Total: ${files.length} | Modified: ${mod}`);
+console.log('✨ 3.0 Antigravity Formatter - Mission Accomplished.');

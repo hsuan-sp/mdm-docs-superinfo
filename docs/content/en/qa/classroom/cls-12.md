@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-**For devices running iOS 26+, administrators should use 'Declarative Device Management (DDM)' for real-time control.**
+* *For devices running iOS 26+, administrators should use 'Declarative Device Management (DDM)' for real-time control.**
 
 ## Risk Features and Controls:
 
@@ -35,4 +35,4 @@ title: >-
 
 *    Apple Intelligence is only supported on devices with**M-series chips**or**A17 Pro and later**.
 
-**Note: Entry-level iPads (e.g., 10th and 11th Gen with A14/A16 chips) do not support these AI features natively. Focus your management efforts on iPad Air and iPad Pro models with M-series chips.*
+* *Note: Entry-level iPads (e.g., 10th and 11th Gen with A14/A16 chips) do not support these AI features natively. Focus your management efforts on iPad Air and iPad Pro models with M-series chips.*

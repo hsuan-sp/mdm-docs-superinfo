@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-**The primary differences lie in administrative permissions, feature rollout speed, and 'Global Toggle' control. While assets can be moved between them, the daily management experience varies significantly.**
+* *The primary differences lie in administrative permissions, feature rollout speed, and 'Global Toggle' control. While assets can be moved between them, the daily management experience varies significantly.**
 
 ## Three Levels of Administrative Access
 

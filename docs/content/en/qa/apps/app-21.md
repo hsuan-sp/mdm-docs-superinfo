@@ -14,7 +14,7 @@ title: How do I prevent students from 'hiding' or 'locking' Managed Apps in iOS 
 
 ## Answer
 
-**The privacy features in iOS 18 allow users to lock or hide apps behind Face ID. This can interfere with classroom asset audits and instructional management.**
+* *The privacy features in iOS 18 allow users to lock or hide apps behind Face ID. This can interfere with classroom asset audits and instructional management.**
 
 ## MDM Countermeasures (Requires Jamf Pro 11.9+ and iOS 18+):
 

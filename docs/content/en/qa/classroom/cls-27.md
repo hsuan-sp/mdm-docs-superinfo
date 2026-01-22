@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-**In a 'Shared iPad' environment, pairing Bluetooth headsets has historically been a major pain point. Previously, AirPods would try to sync to a student's iCloud account, leading to disconnections or cross-room interference when the next student used the same iPad.**
+* *In a 'Shared iPad' environment, pairing Bluetooth headsets has historically been a major pain point. Previously, AirPods would try to sync to a student's iCloud account, leading to disconnections or cross-room interference when the next student used the same iPad.**
 
 ## The 'Audio Accessory Configuration' Solution
 

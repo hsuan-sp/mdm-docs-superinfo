@@ -5,7 +5,7 @@ term: Schoolwork App
 ---
 ## Term Definition
 
-**Schoolwork**is an iPad app developed by Apple to streamline the assignment and collection of digital work.
+* *Schoolwork**is an iPad app developed by Apple to streamline the assignment and collection of digital work.
 
 Key features:
 

@@ -5,7 +5,7 @@ term: Automatic Reboot
 ---
 ## Term Definition
 
-**Automatic Reboot**is a specialized security configuration introduced in**OS version 26**.
+* *Automatic Reboot**is a specialized security configuration introduced in**OS version 26**.
 
 Configuration details:
 

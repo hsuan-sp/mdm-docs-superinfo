@@ -5,7 +5,7 @@ term: Pending Command
 ---
 ## 術語定義
 
-**Pending Command (待處理指令)** 指的是 MDM 已經送出，但裝置尚未執行或回報結果的指令。
+* *Pending Command (待處理指令)** 指的是 MDM 已經送出，但裝置尚未執行或回報結果的指令。
 
 它的特性包括：
 

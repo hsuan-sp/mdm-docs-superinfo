@@ -6,7 +6,7 @@ term: Guided Access
 ---
 ## Term Definition
 
-**Guided Access**is a built-in iOS and iPadOS feature designed for accessibility and focused learning.
+* *Guided Access**is a built-in iOS and iPadOS feature designed for accessibility and focused learning.
 
 Key functionalities:
 

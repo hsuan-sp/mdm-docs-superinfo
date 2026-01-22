@@ -7,7 +7,7 @@ term: Jamf Protect
 ---
 ## 術語定義
 
-**Jamf Protect** 是一套專為 Mac 打造的端點安全防護 (Endpoint Security) 解決方案。
+* *Jamf Protect** 是一套專為 Mac 打造的端點安全防護 (Endpoint Security) 解決方案。
 
 它利用 Apple 原生的 **Endpoint Security Framework** 來運作，特點包括：
 

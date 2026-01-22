@@ -14,7 +14,7 @@ title: >-
 
 ## Answer
 
-**Administrators can determine whether to allow AI features through the 'Service Access' settings in Apple School Manager (ASM).**
+* *Administrators can determine whether to allow AI features through the 'Service Access' settings in Apple School Manager (ASM).**
 
 As Apple expands**Apple Intelligence**through 2024 and 2025, ASM provides account-level toggles that complement MDM device restrictions.
 
@@ -25,4 +25,4 @@ As Apple expands**Apple Intelligence**through 2024 and 2025, ASM provides accoun
 
 ## Why configure at the account level?
 
-If you disable the service in ASM, the student will be unable to use Apple Intelligence cloud-based features even if they sign into their Managed Apple Account on a personal, unmanaged device. This ensures the educational institution maintains absolute control over data flow.
+If you disable the service in ASM, the student will be unable to use Apple Intelligence cloud-based features even if they sign into their Managed Apple Account on a personal, Unmanaged device. This ensures the educational institution maintains absolute control over data flow.

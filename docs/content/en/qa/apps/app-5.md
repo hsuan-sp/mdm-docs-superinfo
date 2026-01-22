@@ -13,7 +13,7 @@ title: How do we balance automated app installs with limited school bandwidth?
 
 ## Answer
 
-**During large-scale deployments (e.g., the first day of the school year), having hundreds of iPads simultaneously downloading the same apps can paralyze the campus network.**
+* *During large-scale deployments (e.g., the first day of the school year), having hundreds of iPads simultaneously downloading the same apps can paralyze the campus network.**
 
 To manage this, we recommend a "Tiered Deployment" strategy.
 

@@ -5,7 +5,7 @@ term: SIP (System Integrity Protection)
 ---
 ## Term Definition
 
-**System Integrity Protection (SIP)**is a kernel-level security feature in macOS that protects operating system files from modification.
+* *System Integrity Protection (SIP)**is a kernel-level security feature in macOS that protects operating system files from modification.
 
 Protection scope:
 

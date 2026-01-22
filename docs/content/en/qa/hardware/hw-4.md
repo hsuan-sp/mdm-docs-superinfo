@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-**Apple hardware inspections follow the "Visual Mechanical Inspection (VMI)" standard to determine if a repair is covered by the limited warranty or considered out-of-warranty accidental damage.**
+* *Apple hardware inspections follow the "Visual Mechanical Inspection (VMI)" standard to determine if a repair is covered by the limited warranty or considered out-of-warranty accidental damage.**
 
 ## How Damage is Classified:
 

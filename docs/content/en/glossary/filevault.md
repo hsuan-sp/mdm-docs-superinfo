@@ -5,7 +5,7 @@ term: FileVault
 ---
 ## Term Definition
 
-**FileVault**is the integrated full-disk encryption (FDE) technology for macOS.
+* *FileVault**is the integrated full-disk encryption (FDE) technology for macOS.
 
 Technical features:
 

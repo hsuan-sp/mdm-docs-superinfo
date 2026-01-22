@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-**Incomplete usage data is usually caused by the Jamf Trust agent being closed, devices staying offline, or missing configuration profiles.**
+* *Incomplete usage data is usually caused by the Jamf Trust agent being closed, devices staying offline, or missing configuration profiles.**
 
 For institutional compliance, the Jamf Trust app must remain active in the background to report student engagement. If a device shows zero activity, follow these steps:
 

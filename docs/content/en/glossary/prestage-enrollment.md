@@ -6,7 +6,7 @@ term: PreStage Enrollment
 ---
 ## Term Definition
 
-**PreStage Enrollment**is the Jamf Pro configuration profile that controls the**Automated Device Enrollment (ADE)**experience.
+* *PreStage Enrollment**is the Jamf Pro configuration profile that controls the**Automated Device Enrollment (ADE)**experience.
 
 Customization options:
 

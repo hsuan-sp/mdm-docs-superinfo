@@ -13,7 +13,7 @@ title: '''Allow App Deletion'' is enabled, but students still can''t delete apps
 
 ## Answer
 
-**This is usually due to a 'System Permission Conflict' or specific 'App Management Attributes.' Check the following three areas in order:**
+* *This is usually due to a 'System Permission Conflict' or specific 'App Management Attributes.' Check the following three areas in order:**
 
 ## 1. Distinguish between "Remove from Home Screen" and "Delete"
 

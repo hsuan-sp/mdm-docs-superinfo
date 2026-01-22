@@ -13,7 +13,7 @@ title: 管理式 Apple 帳號的 iCloud 儲存空間配額如何管理？學生�
 
 ## Answer
 
-**管理式 Apple 帳號預設提供 200GB iCloud 儲存空間（教育版），且「無法」由學校管理者自行調整個別帳號的配額或購買擴充。**
+* *管理式 Apple 帳號預設提供 200GB iCloud 儲存空間（教育版），且「無法」由學校管理者自行調整個別帳號的配額或購買擴充。**
 
 ## 儲存空間配額說明
 
@@ -27,7 +27,7 @@ title: 管理式 Apple 帳號的 iCloud 儲存空間配額如何管理？學生�
 1. **使用「課業」(Schoolwork) App 繳交作業**：
 
 * 透過「課業」繳交的檔案（如 Pages 文件、Keynote 簡報、錄影檔案）儲存機制與個人 iCloud 空間分開管理，有助於減輕單一學生的空間壓力。
-* 更重要的是引導學生 **「不要把所有東西都存入 iCloud」**，建立良好的檔案管理習慣。
+* 更重要的是引導學生**「不要把所有東西都存入 iCloud」**，建立良好的檔案管理習慣。
 
 2. **清理與備份資料 (SOP)**：
 
@@ -37,7 +37,7 @@ title: 管理式 Apple 帳號的 iCloud 儲存空間配額如何管理？學生�
 
 3. **使用替代雲端服務**：
 
-* 若學校有建置 **Google Workspace for Education** 或 **Microsoft 365**，可引導學生將大型靜態檔案（如畢業製作影片）存放在 Google 雲端硬碟或 OneDrive，iCloud 僅用於同步 App 設定與當前學期文件。
+* 若學校有建置**Google Workspace for Education**或**Microsoft 365**，可引導學生將大型靜態檔案（如畢業製作影片）存放在 Google 雲端硬碟或 OneDrive，iCloud 僅用於同步 App 設定與當前學期文件。
 
 ## 專家提醒
 

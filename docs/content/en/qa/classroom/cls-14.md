@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-**AirDrop is a primary source of classroom distraction. We recommend either constant restrictions via MDM or dynamic control by the teacher.**
+* *AirDrop is a primary source of classroom distraction. We recommend either constant restrictions via MDM or dynamic control by the teacher.**
 
 ## Three Levels of Control:
 
@@ -26,7 +26,7 @@ title: >-
 
 2. **Force 'Contacts Only' (Balanced)**:
 
-*    Check**Force AirDrop to be treated as unmanaged destination**(or similar "Contacts Only" profile restriction).
+*    Check**Force AirDrop to be treated as Unmanaged destination**(or similar "Contacts Only" profile restriction).
 *    Since student iPads typically lack each other's contact info, this blocks pranks from strangers while allowing communication with the teacher (if stored as a contact).
 
 3. **Jamf Teacher Dynamic Control (Most Flexible)**:

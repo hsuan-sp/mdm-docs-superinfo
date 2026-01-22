@@ -5,7 +5,7 @@ term: Apple Silicon
 ---
 ## Term Definition
 
-**Apple Silicon**refers to the custom system-on-a-chip (SoC) family (M1, M2, M3, M4, and M5 series) designed by Apple for the Mac and iPad.
+* *Apple Silicon**refers to the custom system-on-a-chip (SoC) family (M1, M2, M3, M4, and M5 series) designed by Apple for the Mac and iPad.
 
 These chips introduce advanced hardware-level security concepts:
 

@@ -14,7 +14,7 @@ title: macOS 26 的「宣告式 .pkg 部署」如何使用？與傳統 Jamf Poli
 
 ## Answer
 
-**macOS 26 (Tahoe) 將非 App Store 軟體 (.pkg) 納入宣告式裝置管理 (DDM) 範疇，允許透過 Declaration 部署軟體包，提供比傳統 Jamf Policy 更現代化、更透明的安裝體驗。**
+* *macOS 26 (Tahoe) 將非 App Store 軟體 (.pkg) 納入宣告式裝置管理 (DDM) 範疇，允許透過 Declaration 部署軟體包，提供比傳統 Jamf Policy 更現代化、更透明的安裝體驗。**
 
 ## DDM Package vs. Jamf Policy
 
@@ -24,30 +24,31 @@ title: macOS 26 的「宣告式 .pkg 部署」如何使用？與傳統 Jamf Poli
 | **觸發時機** | 需設定觸發器 (Trigger)，如 Login、Startup、Recurring Check-in | **自主評估**(Autonomous)。只要符合宣告條件，系統即刻嘗試安裝 |
 | **狀態回報** | 回報至 Jamf Pro logs，有延遲 | **即時回報** 安裝進度、錯誤代碼至 MDM |
 | **離線支援** | 需連線 MDM 才能觸發 Policy | 只要 Declaration 已下達，裝置可在背景自行處理 |
-| **適用軟體** | 所有類型的安裝檔、腳本 (.pkg、.dmg、.sh) | 標準簽署的 **.pkg (Distribution Package)** |
+| **適用軟體** | 所有類型的安裝檔、腳本 (.pkg、.dmg、.sh) | 標準簽署的**.pkg (Distribution Package)** |
 
 ## 適用條件與限制
 
-**macOS 版本需求：**
+* *macOS 版本需求：**
 
 * macOS 26 (Tahoe) 或更新版本
 
-**.pkg 檔案要求：**
+* *.pkg 檔案要求：**
 
-* 必須由 **Apple Developer ID Installer certificate** 正確簽署
+* 必須由**Apple Developer ID Installer certificate** 正確簽署
+
 * 必須為標準的 Distribution Package 格式
 * 安裝路徑需符合 macOS 安全性要求（通常為 `/Applications` 資料夾）
 
 ## 何時該用哪一個？
 
-**優先使用 DDM Package：**
+* *優先使用 DDM Package：**
 
 * 標準軟體安裝（如 Microsoft Office、Google Chrome、Adobe Acrobat）
 * 需要即時確認安裝成功率的關鍵軟體
 * macOS 26 以上的新電腦
 * 希望減少對 Jamf binary 依賴的環境
 
-**繼續使用 Jamf Policy：**
+* *繼續使用 Jamf Policy：**
 
 * 複雜的安裝流程（如：安裝後需執行 script 修改設定、需互動視窗）
 * 非標準 .pkg 格式的軟體（如拖曳式 .dmg、需要特殊處理的安裝檔）

@@ -5,11 +5,11 @@ term: eSIM
 ---
 ## 術語定義
 
-**eSIM (Embedded SIM)** 是一種直接焊接在裝置電路板上的數位 SIM 卡技術。
+* *eSIM (Embedded SIM)** 是一種直接焊接在裝置電路板上的數位 SIM 卡技術。
 
 與傳統實體卡不同，eSIM 允許透過軟體方式寫入電信設定。在 MDM 管理中，這帶來了巨大的便利：
 
-* **無線部署**：企業可透過 MDM 將電信資費方案 (Carrier Plan) 以 **OTA (Over-the-Air)** 方式推送到成千上萬台 iPad 或 iPhone。
+* **無線部署**：企業可透過 MDM 將電信資費方案 (Carrier Plan) 以**OTA (Over-the-Air)** 方式推送到成千上萬台 iPad 或 iPhone。
 
 * **防竊防丟**：沒有實體卡槽，不怕 SIM 卡被學生拔出來搞丟或拿去別台手機用。
 * **雙卡雙待**：支援在一台裝置上同時使用私人門號與公務門號。

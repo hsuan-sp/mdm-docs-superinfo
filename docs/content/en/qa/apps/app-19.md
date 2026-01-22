@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-**Standard 'Single App Mode' cannot be exited by the user. If you need exit flexibility, you should use 'Autonomous Single App Mode (ASAM)'.**
+* *Standard 'Single App Mode' cannot be exited by the user. If you need exit flexibility, you should use 'Autonomous Single App Mode (ASAM)'.**
 
 Choosing the wrong mode is a leading cause of "bricked" devices during school deployments:
 

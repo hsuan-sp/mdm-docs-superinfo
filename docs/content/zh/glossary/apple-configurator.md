@@ -5,12 +5,12 @@ term: Apple Configurator
 ---
 ## 術語定義
 
-**Apple Configurator** 是 macOS 上的實體管理與診斷工具。
+* *Apple Configurator** 是 macOS 上的實體管理與診斷工具。
 
 其主要用途包括：
 
 * **大量配置 (Bulk Provisioning)**：透過有線連接批量設定裝置。
-* **加入 ABM (ABM Addition)**：將非透過企業經銷商購買的裝置，手動加入 **Apple Business Manager**。
+* **加入 ABM (ABM Addition)**：將非透過企業經銷商購買的裝置，手動加入**Apple Business Manager**。
 
 * **裝置復原 (Restoration)**：重新安裝韌體 (IPSW) 或救援「死機 (Bricked)」的裝置。
 

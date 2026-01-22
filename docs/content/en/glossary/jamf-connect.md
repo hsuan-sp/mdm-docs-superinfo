@@ -7,7 +7,7 @@ term: Jamf Connect
 ---
 ## Term Definition
 
-**Jamf Connect**is a security and identity solution designed to synchronize local Mac accounts with cloud-based identity providers.
+* *Jamf Connect**is a security and identity solution designed to synchronize local Mac accounts with cloud-based identity providers.
 
 Key benefits:
 

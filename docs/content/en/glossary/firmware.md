@@ -5,7 +5,7 @@ term: Firmware
 ---
 ## Term Definition
 
-**Firmware**is persistent, low-level software programmed directly into a hardware chip (like the BIOS or iBoot) to control its basic operations.
+* *Firmware**is persistent, low-level software programmed directly into a hardware chip (like the BIOS or iBoot) to control its basic operations.
 
 Key roles:
 

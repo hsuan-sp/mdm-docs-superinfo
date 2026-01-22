@@ -14,7 +14,7 @@ title: How do I deploy multiple network printers to teacher Macs using Jamf Pro?
 
 ## Answer
 
-**Modern Mac printing should prioritize the 'AirPrint (driverless)' protocol. For advanced configurations, use 'Policies' or Shell scripts executing the `lpadmin` command.**
+* *Modern Mac printing should prioritize the 'AirPrint (driverless)' protocol. For advanced configurations, use 'Policies' or Shell scripts executing the `lpadmin` command.**
 
 Since macOS 12 Monterey, Apple has shifted towards IPP/AirPrint, significantly reducing the need for vendor-specific PPD drivers.
 
@@ -56,4 +56,4 @@ echo "Printer $DISPLAY_NAME installed successfully."
 
 ## Practical Advice:
 
-**Use Self Service**. Deploying dozens of printers automatically creates a cluttered menu for teachers. By placing printers in Self Service with clear names (e.g., "Install - 2F Staff Room Printer"), you minimize confusion and support calls.
+* *Use Self Service**. Deploying dozens of printers automatically creates a cluttered menu for teachers. By placing printers in Self Service with clear names (e.g., "Install - 2F Staff Room Printer"), you minimize confusion and support calls.

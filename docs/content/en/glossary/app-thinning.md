@@ -5,7 +5,7 @@ term: App Thinning
 ---
 ## Term Definition
 
-**App Thinning**is an Apple optimization technology designed to minimize the storage footprint of applications. It consists of three pillars:
+* *App Thinning**is an Apple optimization technology designed to minimize the storage footprint of applications. It consists of three pillars:
 
 * **Slicing**: The system only downloads the specific assets (e.g., graphics for that specific retina scale) required for the target device.
 * **Bitcode**: Allows Apple to re-optimize an app binary for future hardware updates without the developer resubmitting the app.

@@ -14,7 +14,7 @@ title: iOS 26 的「寫作工具」(Writing Tools) 在正式評量或正式評�
 
 ## Answer
 
-**Apple Intelligence 的「寫作工具」即使離線也能運作，能自動改寫、校對與摘要，對語文類考試構成作弊風險。支援 Apple Intelligence 的裝置必須透過 MDM 強制禁用。**
+* *Apple Intelligence 的「寫作工具」即使離線也能運作，能自動改寫、校對與摘要，對語文類考試構成作弊風險。支援 Apple Intelligence 的裝置必須透過 MDM 強制禁用。**
 
 ## 作弊風險分析
 
@@ -29,7 +29,7 @@ title: iOS 26 的「寫作工具」(Writing Tools) 在正式評量或正式評�
 建議在 Jamf Pro 或其他 MDM 中建立專用的考試描述檔：
 
 1. 建立 **Configuration Profile**，命名為「考試限制模式」
-2. 前往 **Restrictions (限制)**>**Intelligence** 或 **Siri** 相關分類
+2. 前往 **Restrictions (限制)**>**Intelligence**或**Siri** 相關分類
 3. 啟用以下限制（設為 Restrict 或取消 Allow）：
 
 * **Allow Writing Tools (允許寫作工具)**

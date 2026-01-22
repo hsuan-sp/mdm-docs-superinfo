@@ -5,7 +5,7 @@ term: Declarative Software Updates
 ---
 ## Term Definition
 
-**Declarative Software Updates**is the mandatory, modern method for managing OS updates in Apple's ecosystem.
+* *Declarative Software Updates**is the mandatory, modern method for managing OS updates in Apple's ecosystem.
 
 Fundamental changes:
 
@@ -14,7 +14,7 @@ Fundamental changes:
 * **Betas**: Allows administrators to remotely enroll or restrict devices in Apple’s**Beta Software Programs**.
 * **Reporting**: Provides real-time progress updates through the**Status Channel**(e.g., "Downloading," "Verifying," "Installing").
 
-**Note**: Organizations had to transition to this method starting in late 2024 to maintain update control over modern versions of iOS and macOS.
+* *Note**: Organizations had to transition to this method starting in late 2024 to maintain update control over modern versions of iOS and macOS.
 
 ## Analogy
 

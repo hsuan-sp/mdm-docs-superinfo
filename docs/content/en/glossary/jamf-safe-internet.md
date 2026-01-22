@@ -7,7 +7,7 @@ term: Jamf Safe Internet
 ---
 ## Term Definition
 
-**Jamf Safe Internet**is a comprehensive network security and content filtering service designed specifically for educational institutions.
+* *Jamf Safe Internet**is a comprehensive network security and content filtering service designed specifically for educational institutions.
 
 Protective features:
 

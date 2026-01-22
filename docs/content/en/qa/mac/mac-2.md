@@ -13,7 +13,7 @@ title: How do we manage Local Admin privileges for staff and students on Macs?
 
 ## Answer
 
-**The Gold Standard is to provide "Standard User" accounts for daily tasks, supplemented by a "just-in-time" Admin elevation tool or a Managed LAPS solution.**
+* *The Gold Standard is to provide "Standard User" accounts for daily tasks, supplemented by a "just-in-time" Admin elevation tool or a Managed LAPS solution.**
 
 Granting permanent Admin rights to students or teachers is a major security risk. It allows for the disabling of security software, the installation of unauthorized apps, and makes the campus network more vulnerable to ransomware.
 

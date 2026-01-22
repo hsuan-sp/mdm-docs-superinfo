@@ -5,7 +5,7 @@ term: ACME (Automated Certificate Management Environment)
 ---
 ## 術語定義
 
-**ACME (Automated Certificate Management Environment，自動憑證管理環境)** 是一個用於自動化管理數位憑證的標準協定。
+* *ACME (Automated Certificate Management Environment，自動憑證管理環境)** 是一個用於自動化管理數位憑證的標準協定。
 
 它能讓裝置自動執行以下作業：
 

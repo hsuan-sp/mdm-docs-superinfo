@@ -5,7 +5,7 @@ term: ARD (Apple Remote Desktop)
 ---
 ## 術語定義
 
-**Apple Remote Desktop (ARD)** 是一套專為 macOS 設計的強大桌面管理應用程式，適用於區域網路管理。
+* *Apple Remote Desktop (ARD)** 是一套專為 macOS 設計的強大桌面管理應用程式，適用於區域網路管理。
 
 雖然 MDM 負責廣泛且持久的設定，但 ARD 專精於 **即時性任務 (Real-time Tasks)**：
 

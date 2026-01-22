@@ -14,7 +14,7 @@ title: >-
 
 ## Answer
 
-**Once a school verifies its domain in Apple School Manager (ASM), the system automatically identifies 'Personal Apple Accounts' registered with school email addresses and initiates a migration process.**
+* *Once a school verifies its domain in Apple School Manager (ASM), the system automatically identifies 'Personal Apple Accounts' registered with school email addresses and initiates a migration process.**
 
 This process, known as handling "Domain Conflicts," is designed to protect user privacy while ensuring organizational security.
 

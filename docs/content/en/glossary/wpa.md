@@ -6,7 +6,7 @@ term: WPA / WPA2 / WPA3
 ---
 ## Term Definition
 
-**WPA (Wi-Fi Protected Access)**is the family of security protocols used to secure wireless networks.
+* *WPA (Wi-Fi Protected Access)**is the family of security protocols used to secure wireless networks.
 
 Generations:
 

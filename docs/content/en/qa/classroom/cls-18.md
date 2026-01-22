@@ -14,7 +14,7 @@ title: >-
 
 ## Answer
 
-**These are complementary tools. Apple Classroom excels at 'Close-range Monitoring,' while Jamf Teacher is built for 'Remote Restriction'.**
+* *These are complementary tools. Apple Classroom excels at 'Close-range Monitoring,' while Jamf Teacher is built for 'Remote Restriction'.**
 
 ## Feature Comparison:
 

@@ -5,7 +5,7 @@ term: Zero-Wipe MDM Migration
 ---
 ## Term Definition
 
-**Zero-Wipe MDM Migration**is a transition feature in iOS/iPadOS and macOS that allows devices to switch MDM servers without erasing user data.
+* *Zero-Wipe MDM Migration**is a transition feature in iOS/iPadOS and macOS that allows devices to switch MDM servers without erasing user data.
 
 Mechanism (Declarative Device Management):
 
@@ -14,7 +14,7 @@ Mechanism (Declarative Device Management):
 3. **Re-enroll**: It immediately enrolls into the *new* MDM server designated in Apple School Manager.
 4. **Takeover**: The new server takes ownership of the existing managed apps.
 
-**Warning for Schools**: While promising, this process can be risky for**Shared iPads**or devices with complex profiles, often leading to "zombie" apps that cannot be updated.
+* *Warning for Schools**: While promising, this process can be risky for**Shared iPads**or devices with complex profiles, often leading to "zombie" apps that cannot be updated.
 
 ## Analogy
 

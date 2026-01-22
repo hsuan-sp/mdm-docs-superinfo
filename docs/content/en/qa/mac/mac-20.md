@@ -14,7 +14,7 @@ title: How do I configure 'Unlock FileVault via SSH' in macOS 26?
 
 ## Answer
 
-**macOS 26 introduces the ability to unlock FileVault at the 'Pre-boot' stage via SSH, solving a major pain point for headless server management.**
+* *macOS 26 introduces the ability to unlock FileVault at the 'Pre-boot' stage via SSH, solving a major pain point for headless server management.**
 
 ## The Problem:
 

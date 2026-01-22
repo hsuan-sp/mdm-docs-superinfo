@@ -6,7 +6,7 @@ term: Jamf Remote
 ---
 ## 術語定義
 
-**Jamf Remote Assist** 是 Jamf Pro 內建的遠端桌面支援工具。
+* *Jamf Remote Assist** 是 Jamf Pro 內建的遠端桌面支援工具。
 
 它讓 IT 管理員能透過瀏覽器安全地連線到使用者的 Mac，功能包括：
 

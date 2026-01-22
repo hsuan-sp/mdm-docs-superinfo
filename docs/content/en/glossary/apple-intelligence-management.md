@@ -5,7 +5,7 @@ term: Apple Intelligence Management
 ---
 ## Term Definition
 
-**Apple Intelligence Management**refers to the MDM controls introduced in**iOS 18.1**and**macOS 15.1**to govern generative AI capabilities.
+* *Apple Intelligence Management**refers to the MDM controls introduced in**iOS 18.1**and**macOS 15.1**to govern generative AI capabilities.
 
 Organizations can manage:
 

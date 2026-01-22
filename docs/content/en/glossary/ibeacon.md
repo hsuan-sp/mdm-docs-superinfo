@@ -5,7 +5,7 @@ term: iBeacon
 ---
 ## Term Definition
 
-**iBeacon**is Apple's location-aware technology that uses**Bluetooth Low Energy (BLE)**to detect proximity and trigger location-specific actions on mobile devices.
+* *iBeacon**is Apple's location-aware technology that uses**Bluetooth Low Energy (BLE)**to detect proximity and trigger location-specific actions on mobile devices.
 
 Educational applications:
 

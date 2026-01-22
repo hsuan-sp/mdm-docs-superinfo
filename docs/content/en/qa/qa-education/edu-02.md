@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-**Shared iPad allows multiple students to log into the same physical device using their individual Managed Apple Accounts. Their documents and app data are isolated and synced to iCloud.**
+* *Shared iPad allows multiple students to log into the same physical device using their individual Managed Apple Accounts. Their documents and app data are isolated and synced to iCloud.**
 
 This is the ideal solution for computer labs or "trolley systems" where iPads are moved between different year groups throughout the day.
 

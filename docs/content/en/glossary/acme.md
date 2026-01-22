@@ -5,7 +5,7 @@ term: ACME (Automated Certificate Management Environment)
 ---
 ## Term Definition
 
-**Automated Certificate Management Environment (ACME)**is a standard protocol for automating the management of digital certificates.
+* *Automated Certificate Management Environment (ACME)**is a standard protocol for automating the management of digital certificates.
 
 It allows devices to automatically:
 

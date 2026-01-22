@@ -13,7 +13,7 @@ title: 'If a student iPad fails and they use a loaner, will their data still be 
 
 ## Answer
 
-**This depends on whether the data is stored 'Locally' or in the 'Cloud'.**
+* *This depends on whether the data is stored 'Locally' or in the 'Cloud'.**
 
 ## Fate of Data Types:
 

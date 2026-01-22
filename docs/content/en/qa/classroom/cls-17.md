@@ -12,7 +12,7 @@ title: How do I prevent students from manually deleting apps?
 
 ## Answer
 
-**You can disable 'Allow App Removal' in a Restrictions profile, but be mindful of the difference between 'Deleting' and 'Removing from Home Screen'.**
+* *You can disable 'Allow App Removal' in a Restrictions profile, but be mindful of the difference between 'Deleting' and 'Removing from Home Screen'.**
 
 ## Configuration:
 

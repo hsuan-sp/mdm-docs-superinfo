@@ -5,7 +5,7 @@ term: Touch ID
 ---
 ## Term Definition
 
-**Touch ID**is Apple's biometric fingerprint identity sensor.
+* *Touch ID**is Apple's biometric fingerprint identity sensor.
 
 Usage in education:
 

@@ -6,7 +6,7 @@ term: Bonjour
 ---
 ## 術語定義
 
-**Bonjour** 是 Apple 開發的 **零組態網路協定 (Zero Configuration Networking)**。
+* *Bonjour** 是 Apple 開發的**零組態網路協定 (Zero Configuration Networking)**。
 
 其主要功能讓 Apple 裝置能自動發現同一區域網路內的服務，包括：
 

@@ -5,7 +5,7 @@ term: Profile (Configuration Profile)
 ---
 ## 術語定義
 
-**Configuration Profile (設定描述檔)** 是一個標準化的 XML 檔案 (通常副檔名為 `.mobileconfig`)，它包含了這台 Apple 裝置該如何運作的「指令集」。
+* *Configuration Profile (設定描述檔)** 是一個標準化的 XML 檔案 (通常副檔名為 `.mobileconfig`)，它包含了這台 Apple 裝置該如何運作的「指令集」。
 
 它的常見內容 (Payload) 包括：
 
@@ -16,7 +16,7 @@ term: Profile (Configuration Profile)
 
 ## 白話文比喻
 
-這是給裝置的 **「預填好的註冊表」** 或 **「操作手冊」**。
+這是給裝置的 **「預填好的註冊表」**或**「操作手冊」**。
 
 * **舊方法**：想像要 500 位學生每個人自己動手輸入 20 個字的超長 Wi-Fi 密碼，一定會有人打錯或放棄。
 * **新方法**：學校直接發給每人一張「智慧卡」（Profile）。卡片一插（安裝），裝置就知道該怎麼連 Wi-Fi、去哪裡收信、哪些事不能做。這是一把「萬能鑰匙」，幫大家省時間又避免手誤。

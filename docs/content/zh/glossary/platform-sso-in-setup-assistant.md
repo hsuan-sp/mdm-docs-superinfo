@@ -5,7 +5,7 @@ term: Platform SSO in Setup Assistant (設定輔助程式中的 Platform SSO)
 ---
 ## 術語定義
 
-**Platform SSO in Setup Assistant** 是 macOS Tahoe 針對自動裝置註冊 (ADE) 所推出的強化身分驗證功能。
+* *Platform SSO in Setup Assistant** 是 macOS Tahoe 針對自動裝置註冊 (ADE) 所推出的強化身分驗證功能。
 
 它的特性包括：
 

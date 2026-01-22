@@ -6,7 +6,7 @@ term: Composer
 ---
 ## Term Definition
 
-**Composer**is a professional software packaging application for macOS provided as part of the Jamf management suite.
+* *Composer**is a professional software packaging application for macOS provided as part of the Jamf management suite.
 
 Key functionalities:
 

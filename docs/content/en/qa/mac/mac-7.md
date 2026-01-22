@@ -13,7 +13,7 @@ title: What special restrictions apply to managing Apple Silicon (M-series) Macs
 
 ## Answer
 
-**The security architecture of Apple Silicon (M1-M5) is fundamentally different from Intel Macs. The core of management lies in the "Bootstrap Token" and "Volume Ownership."**
+* *The security architecture of Apple Silicon (M1-M5) is fundamentally different from Intel Macs. The core of management lies in the "Bootstrap Token" and "Volume Ownership."**
 
 Without proper configuration, MDM will be unable to perform software updates or install kernel plugins.
 

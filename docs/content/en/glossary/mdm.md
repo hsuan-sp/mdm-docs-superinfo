@@ -5,7 +5,7 @@ term: MDM (Mobile Device Management)
 ---
 ## Term Definition
 
-**Mobile Device Management (MDM)**is the standard framework for managing Apple hardware in an organization.
+* *Mobile Device Management (MDM)**is the standard framework for managing Apple hardware in an organization.
 
 Core capabilities:
 

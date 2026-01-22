@@ -5,7 +5,7 @@ term: App Config (App Configuration)
 ---
 ## 術語定義
 
-**App Config (App Configuration，受管理應用程式配置)** 允許 MDM 在部署應用程式的過程中，直接將特定的設定參數「注入」到 App 內部。
+* *App Config (App Configuration，受管理應用程式配置)** 允許 MDM 在部署應用程式的過程中，直接將特定的設定參數「注入」到 App 內部。
 
 其優點包括：
 

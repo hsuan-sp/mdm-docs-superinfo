@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-**Managed Apple Accounts for education default to a 200GB iCloud storage quota. Administrators cannot adjust individual quotas or purchase additional space for specific users.**
+* *Managed Apple Accounts for education default to a 200GB iCloud storage quota. Administrators cannot adjust individual quotas or purchase additional space for specific users.**
 
 ## Storage Quotas by Organization Type
 

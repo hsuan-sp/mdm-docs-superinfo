@@ -5,7 +5,7 @@ term: Install Application
 ---
 ## 術語定義
 
-**"Install Application"** 是 MDM 伺服器發送給裝置的標準指令，用以啟動軟體部署流程。
+* *"Install Application"** 是 MDM 伺服器發送給裝置的標準指令，用以啟動軟體部署流程。
 
 其運作流程如下：
 

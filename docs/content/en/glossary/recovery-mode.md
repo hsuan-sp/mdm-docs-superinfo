@@ -6,7 +6,7 @@ term: Recovery Mode
 ---
 ## Term Definition
 
-**Recovery Mode**is a special boot partition on Apple devices designed for emergency maintenance and troubleshooting.
+* *Recovery Mode**is a special boot partition on Apple devices designed for emergency maintenance and troubleshooting.
 
 Available tools:
 

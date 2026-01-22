@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-**'Invalid Profile' typically indicates that the 'Trust Anchor' (the identity chain between the device and the MDM server) has been broken.**
+* *'Invalid Profile' typically indicates that the 'Trust Anchor' (the identity chain between the device and the MDM server) has been broken.**
 
 In this state, the device appears managed but has lost its ability to communicate. Instructions and configurations cannot be delivered correctly.
 

@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-**Yes. Apple allows 'Managed Apple Accounts' to act as TestFlight testers, but permissions must first be enabled within Apple School Manager (ASM).**
+* *Yes. Apple allows 'Managed Apple Accounts' to act as TestFlight testers, but permissions must first be enabled within Apple School Manager (ASM).**
 
 ## Prerequisites (ASM Side):
 

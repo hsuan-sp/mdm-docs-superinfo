@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-**It depends on the "purchaser" identity and the "management attributes" of the app. App licenses and the data inside them should be considered separately.**
+* *It depends on the "purchaser" identity and the "management attributes" of the app. App licenses and the data inside them should be considered separately.**
 
 In a managed environment, apps are categorized as either "Managed" or "Personal," each with a completely different lifecycle:
 

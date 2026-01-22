@@ -13,9 +13,9 @@ title: 新架構：什麼是「宣告式 App 管理 (Declarative App Management)
 
 ## Answer
 
-**這是 Apple MDM 協定的重大演進，讓裝置能根據伺服器發出的「宣告 (Declarations)」，**
-**自主維持 App 的安裝狀態。**
-**與傳統 MDM 的核心差異**：
+* *這是 Apple MDM 協定的重大演進，讓裝置能根據伺服器發出的「宣告 (Declarations)」，**
+* *自主維持 App 的安裝狀態。**
+* *與傳統 MDM 的核心差異**：
 
 1. **預期狀態管理 (Desired State Management)**：
 

@@ -5,7 +5,7 @@ term: SCEP (Simple Certificate Enrollment Protocol)
 ---
 ## 術語定義
 
-**SCEP (Simple Certificate Enrollment Protocol / 簡易憑證註冊協定)** 是一種讓裝置自動獲取數位憑證的標準與工作流程。
+* *SCEP (Simple Certificate Enrollment Protocol / 簡易憑證註冊協定)** 是一種讓裝置自動獲取數位憑證的標準與工作流程。
 
 它的流程如下：
 
@@ -21,4 +21,4 @@ term: SCEP (Simple Certificate Enrollment Protocol)
 這是 **「自動辦證機」**。
 
 * **傳統方式**：想像以前學生要辦借書證，都要親自去圖書館櫃檯，填表格、排隊、等阿姨蓋章。
-* **SCEP 方式**：現在 MDM 直接發一張 **「兌換券」** 給學生的 iPad。iPad 自己拿著兌換券去跟 **「自動發證機」**(CA) 溝通，機器「嗶」一聲就吐出一張 **「數位通行證」**。iPad 拿到證件後，就能自己刷卡進出圖書館（連 Wi-Fi），學生本人什麼事都不用做。
+* **SCEP 方式**：現在 MDM 直接發一張**「兌換券」**給學生的 iPad。iPad 自己拿著兌換券去跟**「自動發證機」**(CA) 溝通，機器「嗶」一聲就吐出一張**「數位通行證」**。iPad 拿到證件後，就能自己刷卡進出圖書館（連 Wi-Fi），學生本人什麼事都不用做。

@@ -7,7 +7,7 @@ term: Jamf Connect
 ---
 ## 術語定義
 
-**Jamf Connect** 是 Jamf 開發的身分認證與帳號同步解決方案，旨在解決 Mac 本機帳號與雲端身分不同步的問題。
+* *Jamf Connect** 是 Jamf 開發的身分認證與帳號同步解決方案，旨在解決 Mac 本機帳號與雲端身分不同步的問題。
 
 其核心優勢包括：
 

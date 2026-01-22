@@ -12,7 +12,7 @@ title: The device is locked by 'Activation Lock'. How do I unlock it?
 
 ## Answer
 
-**Activation Lock is an Apple security feature. If you have ownership of the device, there are several technical pathways to unlock it.**
+* *Activation Lock is an Apple security feature. If you have ownership of the device, there are several technical pathways to unlock it.**
 
 When an iPad is erased, if it previously had "Find My" enabled, it will request the original Apple Account login. As a school administrator, your options are:
 
@@ -26,7 +26,7 @@ If the device was Supervised and managed by Jamf Pro before being locked:
 
 ## Option 2: Remove via Apple School Manager (The New Standard)
 
-1. Log in to [Apple School Manager (ASM)](https://school.Apple.com).
+1. Log in to [Apple School Manager (ASM)](https://school.apple.com).
 2. Click**Devices**and search for the serial number.
 3. If the device belongs to your organization, click**Turn off Activation Lock**.
 4. Wait a few moments, then restart the iPad to enter the setup screen normally.

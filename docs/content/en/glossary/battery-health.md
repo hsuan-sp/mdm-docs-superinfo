@@ -5,7 +5,7 @@ term: Battery Health
 ---
 ## Term Definition
 
-**Battery Health**is a metric that indicates the current maximum capacity of a device’s battery relative to its capacity when new.
+* *Battery Health**is a metric that indicates the current maximum capacity of a device’s battery relative to its capacity when new.
 
 MDM integration allows:
 

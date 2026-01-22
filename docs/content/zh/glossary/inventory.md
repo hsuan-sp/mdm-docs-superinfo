@@ -5,7 +5,7 @@ term: Inventory
 ---
 ## 術語定義
 
-**Inventory (資產清單)** 是 MDM 資料庫中記錄的所有受管裝置之詳細資訊總表。
+* *Inventory (資產清單)** 是 MDM 資料庫中記錄的所有受管裝置之詳細資訊總表。
 
 每次裝置執行 Inventory Update 時，會更新以下關鍵資料：
 

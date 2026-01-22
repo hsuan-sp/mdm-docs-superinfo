@@ -5,7 +5,7 @@ term: VPP (Volume Purchase Program)
 ---
 ## Term Definition
 
-**VPP (Volume Purchase Program)**is the Apple licensing framework for bulk app and book distribution.
+* *VPP (Volume Purchase Program)**is the Apple licensing framework for bulk app and book distribution.
 
 Mechanics:
 

@@ -5,7 +5,7 @@ term: Restrict App Downloads over Cellular (限制透過行動網路下載 App)
 ---
 ## 術語定義
 
-**Restrict App Downloads over Cellular (限制透過行動網路下載 App)** 是一項透過 DDM (宣告式裝置管理) 實現的現代化政策。
+* *Restrict App Downloads over Cellular (限制透過行動網路下載 App)** 是一項透過 DDM (宣告式裝置管理) 實現的現代化政策。
 
 它的功能：
 

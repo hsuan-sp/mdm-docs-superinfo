@@ -6,7 +6,7 @@ term: iCloud Private Relay
 ---
 ## Term Definition
 
-**iCloud Private Relay**is an Apple privacy service available to iCloud+ subscribers that obscures a user's web browsing behavior.
+* *iCloud Private Relay**is an Apple privacy service available to iCloud+ subscribers that obscures a user's web browsing behavior.
 
 Technical mechanism:
 

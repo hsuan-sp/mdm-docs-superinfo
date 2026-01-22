@@ -16,12 +16,12 @@ title: >-
 
 ## Answer
 
-**While 'Erase All Content and Settings (EACS)' is highly stable, school environments with captive-portal Wi-Fi or strict firewalls can cause the Mac to hang at the 'Remote Management' Enrollment screen.**
+* *While 'Erase All Content and Settings (EACS)' is highly stable, school environments with captive-portal Wi-Fi or strict firewalls can cause the Mac to hang at the 'Remote Management' Enrollment screen.**
 
 ## 1. Initial Diagnosis: Why is it hanging?
 
 1. **Time Sync (Most Common)**: If the Mac's system time differs significantly from the Apple servers, SSL certificate validation will fail.
-2. **Network Restrictions**: The school Wi-Fi requires a certificate that hasn't been deployed yet, or the firewall is blocking port 443 to `*Apple.com`.
+2. **Network Restrictions**: The school Wi-Fi requires a certificate that hasn't been deployed yet, or the firewall is blocking port 443 to `*apple.com`.
 3. **ASM Assignment**: The serial number in Apple School Manager has not been properly assigned to the target MDM server.
 
 ## 2. Recovery Techniques (SOP)

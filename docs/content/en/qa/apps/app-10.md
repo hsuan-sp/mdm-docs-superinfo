@@ -14,7 +14,7 @@ title: Why does the iPad prompt for an Apple ID password when opening an app?
 
 ## Answer
 
-**This usually happens because the "License Source" does not match the "Installation Identity," causing the system to attempt to verify the original purchaser's ID.**
+* *This usually happens because the "License Source" does not match the "Installation Identity," causing the system to attempt to verify the original purchaser's ID.**
 
 On managed iPads, these prompts typically stem from three types of technical conflicts:
 

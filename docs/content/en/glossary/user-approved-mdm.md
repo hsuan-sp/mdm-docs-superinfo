@@ -6,7 +6,7 @@ term: User Approved MDM
 ---
 ## Term Definition
 
-**User Approved MDM (UAMDM)**is a trusted status for macOS enrollments.
+* *User Approved MDM (UAMDM)**is a trusted status for macOS enrollments.
 
 Distinction:
 

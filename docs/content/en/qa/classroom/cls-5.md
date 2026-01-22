@@ -14,7 +14,7 @@ title: >-
 
 ## Answer
 
-**This is usually caused by missing 'Local Network' permissions or an expired teacher certificate.**
+* *This is usually caused by missing 'Local Network' permissions or an expired teacher certificate.**
 
 ## Troubleshooting Checklist:
 

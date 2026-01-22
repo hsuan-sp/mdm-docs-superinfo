@@ -5,7 +5,7 @@ term: DFU Mode (Device Firmware Update)
 ---
 ## 術語定義
 
-**DFU Mode (Device Firmware Update)** 是 iOS 裝置最底層的救援模式。
+* *DFU Mode (Device Firmware Update)** 是 iOS 裝置最底層的救援模式。
 
 它的權限位階低於一般的 **復原模式 (Recovery Mode)**，主要用於極端情況：
 
@@ -13,7 +13,7 @@ term: DFU Mode (Device Firmware Update)
 * **卡在白蘋果**：開機過程無限循環。
 * **降級系統**：在特定條件下強制重刷舊版韌體。
 
-進入此模式時，裝置螢幕會保持 **全黑**，且必須連接電腦透過 **Apple Configurator** 或 **Finder** 進行操作。
+進入此模式時，裝置螢幕會保持 **全黑**，且必須連接電腦透過 **Apple Configurator**或**Finder** 進行操作。
 
 ## 白話文比喻
 

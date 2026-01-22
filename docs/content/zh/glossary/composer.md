@@ -6,7 +6,7 @@ term: Composer
 ---
 ## 術語定義
 
-**Composer** 是 Jamf 專屬的 macOS 軟體封裝工具，用於製作 .pkg 或 .dmg 安裝包。
+* *Composer** 是 Jamf 專屬的 macOS 軟體封裝工具，用於製作 .pkg 或 .dmg 安裝包。
 
 其核心功能為 **快照 (Snapshot)** 技術：
 

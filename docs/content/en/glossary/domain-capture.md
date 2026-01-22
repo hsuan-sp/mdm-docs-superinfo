@@ -6,7 +6,7 @@ term: Domain Capture
 ---
 ## Term Definition
 
-**Domain Capture**is a powerful security feature within**Apple Business/School Manager**that allows an organization to assert authority over its email domain.
+* *Domain Capture**is a powerful security feature within**Apple Business/School Manager**that allows an organization to assert authority over its email domain.
 
 Requirements and Outcomes:
 

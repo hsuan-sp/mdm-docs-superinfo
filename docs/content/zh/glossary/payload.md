@@ -5,11 +5,11 @@ term: Payload
 ---
 ## 術語定義
 
-**Payload (設定承載)** 是 MDM 描述檔 (Configuration Profile) 中的最小設定單位。
+* *Payload (設定承載)** 是 MDM 描述檔 (Configuration Profile) 中的最小設定單位。
 
 它的特性包括：
 
-* **積木結構**：一個描述檔就像是用樂高堆出的城堡，而每一個 Payload 就是一塊這類的 **「積木」**。
+* **積木結構**：一個描述檔就像是用樂高堆出的城堡，而每一個 Payload 就是一塊這類的**「積木」**。
 
 * **功能單一**：每一塊積木只負責一件事，例如「Wi-Fi Payload」只管連線，「Passcode Payload」只管密碼規則。
 * **組合彈性**：管理者可以將多個 Payload 組合在同一個描述檔中一起派送。

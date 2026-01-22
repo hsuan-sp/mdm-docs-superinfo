@@ -5,7 +5,7 @@ term: ADE (Automated Device Enrollment)
 ---
 ## Term Definition
 
-**Automated Device Enrollment (ADE)**is the gold standard for deploying Apple devices at scale (formerly known as**DEP**).
+* *Automated Device Enrollment (ADE)**is the gold standard for deploying Apple devices at scale (formerly known as**DEP**).
 
 The workflow involves:
 

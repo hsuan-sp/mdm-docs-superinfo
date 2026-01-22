@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-**By default, no. Apple Classroom relies on Bonjour (mDNS) broadcast packets, which do not cross different subnets or VLANs.**
+* *By default, no. Apple Classroom relies on Bonjour (mDNS) broadcast packets, which do not cross different subnets or VLANs.**
 
 If your school network separates teachers (e.g., 192.168.10.x) and students (e.g., 192.168.20.x), you must implement a specific network configuration.
 

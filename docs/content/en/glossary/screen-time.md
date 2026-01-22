@@ -6,7 +6,7 @@ term: Screen Time
 ---
 ## Term Definition
 
-**Screen Time**is Apple's built-in framework for monitoring device usage and setting digital boundaries.
+* *Screen Time**is Apple's built-in framework for monitoring device usage and setting digital boundaries.
 
 MDM capabilities:
 

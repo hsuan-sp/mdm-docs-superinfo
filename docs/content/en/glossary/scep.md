@@ -5,7 +5,7 @@ term: SCEP (Simple Certificate Enrollment Protocol)
 ---
 ## Term Definition
 
-**Simple Certificate Enrollment Protocol (SCEP)**is a standard allowing devices to request and retrieve digital certificates automatically.
+* *Simple Certificate Enrollment Protocol (SCEP)**is a standard allowing devices to request and retrieve digital certificates automatically.
 
 The workflow:
 

@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-**This is a common student deflection tactic. Administrators can use MDM to prevent students from 'modifying' these settings, but the logic differs between Wi-Fi and Bluetooth.**
+* *This is a common student deflection tactic. Administrators can use MDM to prevent students from 'modifying' these settings, but the logic differs between Wi-Fi and Bluetooth.**
 
 ## MDM Countermeasures (Restrictions Profile):
 
@@ -30,7 +30,7 @@ In the Jamf Pro**Restrictions**payload, there are two key options:
 
 *    Uncheck**Allow modifying Bluetooth settings**.
 * **Result**: This "freezes" the Bluetooth toggle in its**current state**.
-* **⚠️ Severe Risk**: If you push this restriction while a student's Bluetooth is**OFF**, that device’s Bluetooth will be**permanently locked in the off state**. The student cannot turn it on, and the teacher cannot connect via Apple Classroom.
+* ** ⚠ ️ Severe Risk**: If you push this restriction while a student's Bluetooth is**OFF**, that device’s Bluetooth will be**permanently locked in the off state**. The student cannot turn it on, and the teacher cannot connect via Apple Classroom.
 
 ## Practical Advice:
 

@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-**Search results in Apple School Manager (ASM) can sometimes differ from the consumer App Store. If you cannot find a specific item, check these factors in order:**
+* *Search results in Apple School Manager (ASM) can sometimes differ from the consumer App Store. If you cannot find a specific item, check these factors in order:**
 
 ## 1. Search by Apple ID String (Recommended)
 

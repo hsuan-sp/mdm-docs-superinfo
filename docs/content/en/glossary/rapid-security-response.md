@@ -5,7 +5,7 @@ term: Rapid Security Response (RSR)
 ---
 ## Term Definition
 
-**Rapid Security Response (RSR)**is a nimble update mechanism designed by Apple to deploy urgent security fixes.
+* *Rapid Security Response (RSR)**is a nimble update mechanism designed by Apple to deploy urgent security fixes.
 
 Differences from standard updates:
 

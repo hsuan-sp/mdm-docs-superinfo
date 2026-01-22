@@ -14,7 +14,7 @@ title: >-
 
 ## Answer
 
-**This is typically caused by the expiration of the 'Education Identity Certificate', which has a fixed validity period of 2 years.**
+* *This is typically caused by the expiration of the 'Education Identity Certificate', which has a fixed validity period of 2 years.**
 
 ## Symptoms:
 

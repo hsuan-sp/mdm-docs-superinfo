@@ -17,7 +17,7 @@ title: 如何透過 Jamf Pro 統一推送系統更新 (iOS/iPadOS/macOS)？
 
 ## Answer
 
-**在 2026 年的 Jamf Pro 中，推送系統更新（iOS/iPadOS/macOS）已全面轉向「宣告式管理 (DDM)」模式。**
+* *在 2026 年的 Jamf Pro 中，推送系統更新（iOS/iPadOS/macOS）已全面轉向「宣告式管理 (DDM)」模式。**
 
 這不僅比舊式的遠端指令更穩定，還能讓裝置「自主」處理下載與安裝流程，大幅降低伺服器負載。
 
@@ -39,7 +39,7 @@ title: 如何透過 Jamf Pro 統一推送系統更新 (iOS/iPadOS/macOS)？
 
 若需要對特定搜尋結果的裝置立即發送更新：
 
-1. 在 `Mobile Devices` 或 `Computers` 的搜尋結果頁面，點選右下角的 **`Action (對所有裝置採取行動)`**。
+1. 在 `Mobile Devices`或`Computers` 的搜尋結果頁面，點選右下角的 **`Action (對所有裝置採取行動)`**。
 2. 選擇 **`Send Remote Commands (傳送遠端命令)`**。
 3. 在遠端命令清單中，選擇 **「更新受監管裝置上的 OS 版」**。
 4. 在 **「更新 OS 選項」** 頁面中，您可以根據需求選擇：
@@ -52,7 +52,7 @@ title: 如何透過 Jamf Pro 統一推送系統更新 (iOS/iPadOS/macOS)？
 
 ## 3. 2026 年管理重點：macOS 26 Tahoe 與 Intel Mac
 
-* **Legacy 支援**：macOS 26 是最後一個支援 Intel 處理器 Mac 的版本，對於老舊 Mac，更新時建議預留兩倍的下載時間，並確認 **Bootstrap Token** 已正確代管。
+* **Legacy 支援**：macOS 26 是最後一個支援 Intel 處理器 Mac 的版本，對於老舊 Mac，更新時建議預留兩倍的下載時間，並確認**Bootstrap Token** 已正確代管。
 
 * **DDM 自主性**：在最新的系統中，裝置會根據 DDM 宣告，自動在夜間充電且閒置時執行更新，成功率明顯高於以往的推送指令。
 

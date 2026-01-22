@@ -15,7 +15,7 @@ title: Why does MDM require FileVault? How do I recover a forgotten login passwo
 
 ## Answer
 
-**FileVault is macOS's built-in "Full Disk Encryption" technology, ensuring that data cannot be stolen if the computer is lost. By escrowing the "Recovery Key" to MDM, administrators can help unlock the device if a user forgets their password.**
+* *FileVault is macOS's built-in "Full Disk Encryption" technology, ensuring that data cannot be stolen if the computer is lost. By escrowing the "Recovery Key" to MDM, administrators can help unlock the device if a user forgets their password.**
 
 ## Technical Principles:
 

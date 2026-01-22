@@ -5,7 +5,7 @@ term: AppleCare+
 ---
 ## Term Definition
 
-**AppleCare+++++++++++++**is Apple’s official extended warranty and accidental damage insurance service for hardware.
+* *AppleCare+++++++++++++**is Apple’s official extended warranty and accidental damage insurance service for hardware.
 
 Key benefits for organizations:
 

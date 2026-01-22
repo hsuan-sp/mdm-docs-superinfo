@@ -6,7 +6,7 @@ term: Enrollment Customization (註冊自訂內容)
 ---
 ## 術語定義
 
-**Enrollment Customization (註冊自訂內容)** 是 Automated Device Enrollment (前稱 DEP) 過程中的進階功能。
+* *Enrollment Customization (註冊自訂內容)** 是 Automated Device Enrollment (前稱 DEP) 過程中的進階功能。
 
 它允許管理員在標準的開箱設定流程中，插入 **客製化的網頁介面**，常見用途包括：
 

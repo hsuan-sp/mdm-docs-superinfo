@@ -12,12 +12,13 @@ title: 忘記 Jamf Pro 的管理員登入密碼怎麼辦？
 
 ## Answer
 
-**重置方式取決於您的 Jamf Pro 部署環境（雲端版或地端版），以及是否啟用了 SSO。**
-**情境一：Jamf Pro 雲端版 (Jamf Cloud)**
+* *重置方式取決於您的 Jamf Pro 部署環境（雲端版或地端版），以及是否啟用了 SSO。**
+* *情境一：Jamf Pro 雲端版 (Jamf Cloud)**
 
 1. **使用登入頁面連結**：
 
-* 在 Jamf Pro 登入畫面點選 **「Forgot password?」**。
+* 在 Jamf Pro 登入畫面點選**「Forgot password?」**。
+
 * 輸入您的管理員 Email，系統會寄送密碼重置郵件。
 
 2. **尋求其他管理員協助**：
@@ -29,27 +30,27 @@ title: 忘記 Jamf Pro 的管理員登入密碼怎麼辦？
 
 3. **聯絡 Jamf 客戶成功團隊 (Support)**：
 
-* 若您是唯一的管理員且無法收信，請前往 **[Jamf Account](https://account.Jamf.com)** 提交支援案例。
+* 若您是唯一的管理員且無法收信，請前往**[Jamf Account](https://account.Jamf.com)** 提交支援案例。
 
  Jamf 團隊在驗證您的機構身分後，可協助恢復主管理員帳號的存取權。
 
-**情境二：Jamf Pro 地端版 (On-Premise)**
+* *情境二：Jamf Pro 地端版 (On-Premise)**
 
-1. **資料庫層級操作**：
+4. **資料庫層級操作**：
 
 * 需具備 MySQL 存取權限。透過 SQL 指令直接將管理員密碼雜湊值更新為預設值。
 
  這通常是地端版最後的救援手段。
 
-2. **使用 Jamf Pro 控制台工具**：
+5. **使用 Jamf Pro 控制台工具**：
 
 * 在安裝 Jamf Pro 的伺服器上，運行 Jamf Pro Server 備份/恢復工具，
 
  某些版本支援透過命令列重置特定的管理員權限。
 
-**情境三：使用了 SSO / 多重身分驗證 (MFA)**
+* *情境三：使用了 SSO / 多重身分驗證 (MFA)**
 
-* **SSO 整合**：若您的 Jamf Pro 介接了 **Microsoft Entra ID** 或 **Google Workspace**，
+* **SSO 整合**：若您的 Jamf Pro 介接了**Microsoft Entra ID**或**Google Workspace**，
 
  請直接重置該平台的密碼。
 
@@ -57,7 +58,7 @@ title: 忘記 Jamf Pro 的管理員登入密碼怎麼辦？
 
  請聯繫其他管理員為您「暫時停用 MFA」或「重置 MFA 註冊狀態」。
 
-**實務建議**：
+* *實務建議**：
 
 * **設置緊急備用帳號 (Break-glass Account)**：
 

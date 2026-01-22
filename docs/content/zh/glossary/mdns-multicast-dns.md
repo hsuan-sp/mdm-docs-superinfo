@@ -5,13 +5,13 @@ term: mDNS (Multicast DNS)
 ---
 ## 術語定義
 
-**mDNS (Multicast DNS)** 是 Apple**Bonjour** 技術的底層通訊協定，用於在沒有 DNS 伺服器的區域網路中尋找裝置。
+* *mDNS (Multicast DNS)** 是 Apple**Bonjour** 技術的底層通訊協定，用於在沒有 DNS 伺服器的區域網路中尋找裝置。
 
 它的特性包括：
 
 * **自動廣播**：讓裝置（如 Apple TV、印表機）能自動向周圍廣播「我在這裡」以及「我提供什麼服務」。
 * **區域限制**：預設僅限於同一個網段（VLAN）內有效，使用 UDP 5353 連接埠。
-* **跨網段需求**：若要讓教師 iPad 在 A 網段投影到 B 網段的 Apple TV，學校網路必須設定 **mDNS Gateway**(Bonjour Gateway) 來轉送這些廣播訊號。
+* **跨網段需求**：若要讓教師 iPad 在 A 網段投影到 B 網段的 Apple TV，學校網路必須設定**mDNS Gateway**(Bonjour Gateway) 來轉送這些廣播訊號。
 
 ## 白話文比喻
 

@@ -5,7 +5,7 @@ term: Client Isolation (使用者隔離)
 ---
 ## 術語定義
 
-**Client Isolation (使用者隔離)** 是無線基地台 (AP) 的一項安全設定，啟用後會禁止連上同一 Wi-Fi SSIS 的裝置互相通訊。
+* *Client Isolation (使用者隔離)** 是無線基地台 (AP) 的一項安全設定，啟用後會禁止連上同一 Wi-Fi SSIS 的裝置互相通訊。
 
 雖然這能防止病毒在內網橫向傳播，但也會直接導致以下 Apple 關鍵教育功能 **失效**：
 

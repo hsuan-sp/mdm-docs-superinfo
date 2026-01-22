@@ -5,7 +5,7 @@ term: Always-on VPN
 ---
 ## 術語定義
 
-**Always-on VPN (全時 VPN)** 是一項針對受控裝置（Managed Devices）的強制性網路安全政策，確保所有數據流量都必須經由組織的安全閘道傳輸。
+* *Always-on VPN (全時 VPN)** 是一項針對受控裝置（Managed Devices）的強制性網路安全政策，確保所有數據流量都必須經由組織的安全閘道傳輸。
 
 其核心特性包括：
 

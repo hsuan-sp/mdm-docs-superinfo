@@ -5,7 +5,7 @@ term: Directory Service (目錄服務)
 ---
 ## 術語定義
 
-**Directory Service (目錄服務)** 是企業集中儲存與管理使用者身分、電腦資訊與存取權限的資料庫系統。
+* *Directory Service (目錄服務)** 是企業集中儲存與管理使用者身分、電腦資訊與存取權限的資料庫系統。
 
 常見的服務包括 Microsoft Active Directory (AD) 或 LDAP。透過與 MDM 的整合，企業可以達成：
 

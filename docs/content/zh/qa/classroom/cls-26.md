@@ -14,7 +14,7 @@ title: iOS 26.2 的「AirDrop 代碼」會影響學校的 AirDrop 管理政策�
 
 ## Answer
 
-**AirDrop 代碼是 iOS 26.2 新增的隱私增強功能，並不會讓學生繞過 MDM 的「停用 AirDrop」設定。學校既有的 AirDrop 管理政策依然有效，無需過度擔憂。**
+* *AirDrop 代碼是 iOS 26.2 新增的隱私增強功能，並不會讓學生繞過 MDM 的「停用 AirDrop」設定。學校既有的 AirDrop 管理政策依然有效，無需過度擔憂。**
 
 ## AirDrop 代碼運作機制
 

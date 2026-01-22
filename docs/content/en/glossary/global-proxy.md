@@ -13,7 +13,7 @@ Typical organizational goals:
 * **Auditing**: Maintaining centralized logs of all internet usage for compliance and digital citizenship monitoring.
 * **Bypass Prevention**: Ensuring that filtering remains active even when the device leaves the campus network.
 
-**Technical Consideration**: While excellent for security, some high-bandwidth applications (like video conferencing or heavy streaming) may experience latency or connection issues if the proxy server is underpowered or misconfigured.
+* *Technical Consideration**: While excellent for security, some high-bandwidth applications (like video conferencing or heavy streaming) may experience latency or connection issues if the proxy server is underpowered or misconfigured.
 
 ## Analogy
 

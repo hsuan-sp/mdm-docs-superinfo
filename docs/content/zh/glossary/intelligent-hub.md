@@ -5,7 +5,7 @@ term: Intelligent Hub
 ---
 ## 術語定義
 
-**Intelligent Hub** 是 VMware Workspace ONE 解決方案中的使用者端 App。
+* *Intelligent Hub** 是 VMware Workspace ONE 解決方案中的使用者端 App。
 
 雖然在我們使用的 Jamf 生態系中對應的是 **Jamf Self Service**，但兩者概念完全相同：
 
@@ -16,7 +16,7 @@ term: Intelligent Hub
 
 ## 白話文比喻
 
-這是學校專屬的 **「私有 App Store」** 兼 **「數位佈告欄」**。
+這是學校專屬的 **「私有 App Store」**兼**「數位佈告欄」**。
 
 如果你上課需要用某個 App，不需要去外面的 App Store 搜尋下載，而是打開這個 **「校園中心」**(Hub)，裡面只會列出學校買好、檢查過、確認安全的軟體讓你安裝。
 

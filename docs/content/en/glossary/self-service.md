@@ -6,7 +6,7 @@ term: Self Service
 ---
 ## Term Definition
 
-**Self Service**is a custom app portal provided by Jamf Pro, acting as a corporate "App Store."
+* *Self Service**is a custom app portal provided by Jamf Pro, acting as a corporate "App Store."
 
 Benefits:
 

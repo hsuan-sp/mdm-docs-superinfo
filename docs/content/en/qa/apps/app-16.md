@@ -13,7 +13,7 @@ title: Can I standardize the iPad Home Screen layout for students?
 
 ## Answer
 
-**Yes. Using a 'Home Screen Layout' configuration profile, administrators can precisely define the placement of apps on student devices.**
+* *Yes. Using a 'Home Screen Layout' configuration profile, administrators can precisely define the placement of apps on student devices.**
 
 ## Configuration Method:
 

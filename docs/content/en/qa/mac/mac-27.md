@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-**In the past, school IT wanted computers ON for updates, while the facility manager wanted them OFF to save electricity. macOS 26 and DDM provide a perfect automated balance.**
+* *In the past, school IT wanted computers ON for updates, while the facility manager wanted them OFF to save electricity. macOS 26 and DDM provide a perfect automated balance.**
 
 ## 1. DDM Power Configuration Strategy (SOP)
 

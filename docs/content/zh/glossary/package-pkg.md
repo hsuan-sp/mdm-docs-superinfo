@@ -5,7 +5,7 @@ term: Package (.pkg)
 ---
 ## 術語定義
 
-**Package (.pkg)** 是 macOS 的標準軟體安裝包格式，類似 Windows 的 .msi。
+* *Package (.pkg)** 是 macOS 的標準軟體安裝包格式，類似 Windows 的 .msi。
 
 它的特性包括：
 

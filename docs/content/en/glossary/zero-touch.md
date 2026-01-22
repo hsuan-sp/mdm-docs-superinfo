@@ -5,7 +5,7 @@ term: Zero-Touch Deployment
 ---
 ## Term Definition
 
-**Zero-Touch Deployment**is a hands-off distribution model for Apple devices.
+* *Zero-Touch Deployment**is a hands-off distribution model for Apple devices.
 
 Workflow:
 

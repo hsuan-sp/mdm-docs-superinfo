@@ -13,7 +13,7 @@ title: I heard MDM drains the battery quickly. Is this true?
 
 ## Answer
 
-**This is a myth. MDM itself consumes very little resources and does not significantly impact battery life. The real battery drainers are typically screen brightness, video streaming, and GPS navigation.**
+* *This is a myth. MDM itself consumes very little resources and does not significantly impact battery life. The real battery drainers are typically screen brightness, video streaming, and GPS navigation.**
 
 Actually, MDM operates in an extremely energy-efficient way.
 
@@ -32,10 +32,10 @@ The Jamf Trust app, which handles content filtering and data reporting, also use
 
 | Factor | Impact | Solution |
 | :--- | :--- | :--- |
-| **Max Screen Brightness** | ⚡⚡⚡ Very High | Lower brightness to 50% or enable "Auto-Brightness." |
-| **Long Video Streaming (YouTube, Netflix)** | ⚡⚡⚡ Very High | Limit usage time. |
-| **GPS Navigation Apps** | ⚡⚡⚡ Very High | Close when not in use. |
-| **Background App Refresh** | ⚡⚡ Medium | Disable in**Settings > General > Background App Refresh**. |
+| **Max Screen Brightness** | ⚡ ⚡ ⚡ Very High | Lower brightness to 50% or enable "Auto-Brightness." |
+| **Long Video Streaming (YouTube, Netflix)** | ⚡ ⚡ ⚡ Very High | Limit usage time. |
+| **GPS Navigation Apps** | ⚡ ⚡ ⚡ Very High | Close when not in use. |
+| **Background App Refresh** | ⚡ ⚡ Medium | Disable in**Settings > General > Background App Refresh**. |
 | **Email Push** | ⚡ Low | Change to "Fetch" mode. |
 | **AirDrop Searching** | ⚡ Low | Set to "Contacts Only" or "Off." |
 

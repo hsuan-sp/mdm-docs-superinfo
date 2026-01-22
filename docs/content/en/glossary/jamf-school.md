@@ -6,7 +6,7 @@ term: Jamf School
 ---
 ## Term Definition
 
-**Jamf School**is a specialized MDM solution tailored explicitly for the K-12 educational landscape.
+* *Jamf School**is a specialized MDM solution tailored explicitly for the K-12 educational landscape.
 
 Focus areas:
 

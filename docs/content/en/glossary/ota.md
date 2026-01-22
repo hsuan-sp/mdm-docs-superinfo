@@ -5,7 +5,7 @@ term: OTA (Over-The-Air)
 ---
 ## Term Definition
 
-**Over-the-Air (OTA)**refers to the wireless transmission method used to distribute software updates, settings, and commands to devices.
+* *Over-the-Air (OTA)**refers to the wireless transmission method used to distribute software updates, settings, and commands to devices.
 
 Operational benefits:
 

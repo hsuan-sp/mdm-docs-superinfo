@@ -6,7 +6,7 @@ term: Patch Management
 ---
 ## Term Definition
 
-**Patch Management**is the automated workflow for identifying, distributing, and installing software updates for third-party applications.
+* *Patch Management**is the automated workflow for identifying, distributing, and installing software updates for third-party applications.
 
 Jamf Pro capabilities:
 

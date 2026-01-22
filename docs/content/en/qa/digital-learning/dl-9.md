@@ -13,7 +13,7 @@ title: Does MDM monitor the student's location (GPS) at all times?
 
 ## Answer
 
-**No. Apple's privacy architecture strictly limits MDM's location permissions. Under normal conditions, schools cannot obtain a device's GPS coordinates.**
+* *No. Apple's privacy architecture strictly limits MDM's location permissions. Under normal conditions, schools cannot obtain a device's GPS coordinates.**
 
 ## The Only Exception: Lost Mode
 

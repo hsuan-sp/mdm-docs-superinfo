@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-**A 'Service Replacement' unit has a brand-new serial number. To automate the setup, you must handle the serial transfer and use Automated Device Enrollment (ADE).**
+* *A 'Service Replacement' unit has a brand-new serial number. To automate the setup, you must handle the serial transfer and use Automated Device Enrollment (ADE).**
 
 Note:**Return to Service (Return to Service)**only applies to devices already in management and is not for unboxing new replacement units.
 
