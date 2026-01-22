@@ -6,9 +6,9 @@ important: false
 tags: ["網路","有線連接","Ethernet","Lightning","iPad 9"]
 ---
 
-** 可以。無論是傳統 Lightning 還是新款 USB-C 介面的 iPad，皆支援透過轉接器連接有線網路。
+**可以。無論是傳統 Lightning 還是新款 USB-C 介面的 iPad，皆支援透過轉接器連接有線網路。
 
-**** 硬體需求與選擇 ** ：
+** 硬體需求與選擇 ** ：
 
 1. **Lightning 機型 (精進方案多數載具，如 iPad 9 代)** ：
 

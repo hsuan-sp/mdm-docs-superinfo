@@ -1,7 +1,7 @@
 ---
 id: enr-24
 title: "How do I set an 'Enforcement Deadline' for MDM enrollment or system updates?"
-category: "Section 2: Device Enrollment"
+category: "Section 2: Device Enrollment & Deployment"
 important: true
 tags: ["Enforcement Deadline", "DDM", "Enforcement", "Deadline", "Compliance"]
 ---
@@ -16,22 +16,20 @@ tags: ["Enforcement Deadline", "DDM", "Enforcement", "Deadline", "Compliance"]
 
 ## Scope
 
-- **OS Versions** : iOS 26, iPadOS 26, macOS 26, visionOS 26, tvOS 26.
-- **Applications** : Software Update enforcement, MDM Migration deadlines, and Configuration Profile installations.
+- **OS Versions**: iOS 26, iPadOS 26, macOS 26, visionOS 26, tvOS 26.
+- **Applications**: Software Update enforcement, MDM Migration deadlines, and Configuration Profile installations.
 
 ## Implementation (Jamf Pro Example)
 
-## Software Update Deadline:
+### Software Update Deadline:
 
-1. Go to **Devices > Blueprints** or **Computers > Blueprints** .
-1. Create/Edit a **Software Update Declaration** .
-1. Set the **Target Version** (e.g., Latest version).
-1. Enable **Enforcement Deadline** .
-
-- Set the specific date and time (e.g., 2026-02-28 17:00).
-- Choose the time zone (Local device time is recommended).
-
-1. Deploy to the target group.
+1. Go to **Devices > Blueprints** or **Computers > Blueprints**.
+2. Create/Edit a **Software Update Declaration**.
+3. Set the **Target Version** (e.g., Latest version).
+4. Enable **Enforcement Deadline**.
+   - Set the specific date and time (e.g., 2026-02-28 17:00).
+   - Choose the time zone (Local device time is recommended).
+5. Deploy to the target group.
 
 ## User Experience Timeline
 
@@ -43,19 +41,19 @@ tags: ["Enforcement Deadline", "DDM", "Enforcement", "Deadline", "Compliance"]
 | 24 Hours | Once per hour | Can select "Later" |
 | **At Deadline** | **Immediate Enforcement** | **No "Later" option** |
 
-## Behavior at Deadline:
+### Behavior at Deadline:
 
-- **Power On** : Immediately begins download and installation.
-- **Power Off** : Provides a 1-hour grace period upon the next boot, then forces the action.
-- **Restart** : If a restart is required, the user may be given a brief warning, but the system will eventually force the reboot.
+- **Power On**: Immediately begins download and installation.
+- **Power Off**: Provides a 1-hour grace period upon the next boot, then forces the action.
+- **Restart**: If a restart is required, the user may be given a brief warning, but the system will eventually force the reboot.
 
 ## Deployment Advice for Schools
 
-- **Buffer Time** : Provide 2–4 weeks for users to update voluntarily.
-- **Scheduling** : Avoid exam weeks or major school events. Friday afternoons or weekends are often best.
-- **Capacity** : Ensure school bandwidth can handle the concurrent downloads if a large number of devices reach the deadline at once.
+- **Buffer Time**: Provide 2–4 weeks for users to update voluntarily.
+- **Scheduling**: Avoid exam weeks or major school events. Friday afternoons or weekends are often best.
+- **Capacity**: Ensure school bandwidth can handle the concurrent downloads if a large number of devices reach the deadline at once.
 
 ## Communication:
 
-- **Teachers** : Explain*why* the update is necessary (security/new features) and encourage them to update manually before the deadline to avoid interruptions.
-- **Students** : Remind them to leave their iPads connected to power at home to allow for automatic background updates.
+- **Teachers**: Explain *why* the update is necessary (security/new features) and encourage them to update manually before the deadline to avoid interruptions.
+- **Students**: Remind them to leave their iPads connected to power at home to allow for automatic background updates.

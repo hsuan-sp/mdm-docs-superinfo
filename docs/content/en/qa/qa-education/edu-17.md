@@ -10,16 +10,16 @@ tags: ["Screen Recording","Restrictions","Control Center"]
 
 ## Troubleshooting Steps:
 
-1. **Check MDM Restrictions (Most Common)** :
+### 1. Check MDM Restrictions (Most Common)
 
 - Many schools disable **Allow screen recording** in the **Restrictions** profile to prevent students from recording lessons or non-educational content.
-- **Fix** : If a teacher requires this for a project, the IT Coordinator must enable it in Jamf Pro for that specific classroom group.
+- **Fix**: If a teacher requires this for a project, the IT Coordinator must enable it in Jamf Pro for that specific classroom group.
 
-1. **Check Control Center Settings** :
+### 2. Check Control Center Settings
 
 - If not restricted but still missing, the button might not be in the menu.
-- **Fix** : Go to **Settings > Control Center** and tap the green **+** next to **Screen Recording** .
+- **Fix**: Go to **Settings > Control Center** and tap the green **+** next to **Screen Recording**.
 
-1. **Check Screen Time** :
+### 3. Check Screen Time
 
-- If a student (or parent) enabled local Screen Time restrictions, this can also block the feature. Check **Settings > Screen Time > Content & Privacy Restrictions** .
+- If a student (or parent) enabled local Screen Time restrictions, this can also block the feature. Check **Settings > Screen Time > Content & Privacy Restrictions**.

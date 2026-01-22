@@ -6,9 +6,11 @@ important: true
 tags: ["Software Updates", "DDM", "macOS 26", "Compliance", "IT Strategy"]
 ---
 
-**In the macOS 26 (Tahoe) era, Apple has fully transitioned to Declarative Device Management (DDM) for software updates. IT teams no longer "send a command" to update; they "declare a state."** This shift solves the old problem of update commands being ignored or failing due to network timing.
+**In the macOS 26 (Tahoe) era, Apple has fully transitioned to Declarative Device Management (DDM) for software updates. IT teams no longer "send a command" to update; they "declare a state."**
 
-## Comparison: Traditional vs. Declarative (DDM)
+This shift solves the old problem of update commands being ignored or failing due to network timing.
+
+## I. Traditional vs. Declarative (DDM) Updates
 
 | Feature | Old MDM Command | New DDM (macOS 23+) |
 | :--- | :--- | :--- |
@@ -17,21 +19,27 @@ tags: ["Software Updates", "DDM", "macOS 26", "Compliance", "IT Strategy"]
 | **User Experience** | Random popups | Clear countdowns and notifications |
 | **Visibility** | "Unknown" status until done | Real-time status: "Downloading," "Ready" |
 
-## 2026 Standard Operating Procedure for IT:
+## II. 2026 Standard Operating Procedure for IT
 
-1. **Set an Enforcement Deadline** :
+### 1. Set Enforcement Deadlines
 
-- **Major Updates (e.g., 26.1)** : Set a deadline for **14-21 days** after release. This gives everyone time to choose a convenient moment.
-- **Security Patches (RSR)** : Set a deadline for **48 hours** . Critical security shouldn't wait.
-- **The Result** : Users get multiple gentle reminders. If they haven't updated by the deadline, the Mac will **force a restart and install** automatically at the specified time.
+- **Major Updates (e.g., 26.1)**: Set a deadline for **14-21 days** after release. This gives everyone time to choose a convenient moment.
+- **Security Patches (RSR)**: Set a deadline for **48 hours**. Critical security shouldn't wait.
+- **The Result**: Users get multiple gentle reminders. If they haven't updated by the deadline, the Mac will **force a restart and install** automatically at the specified time.
 
-1. **Utilize Background Caching** :
+### 2. Utilize DDM Status Channels
 
-- Ensure each administrative or classroom building has at least one Mac mini acting as a **"Content Caching"** server. This ensures the update files are downloaded from the school's local network rather than hitting your external internet line 500 times simultaneously.
+- Administrators no longer need to manually "Scan for Inventory" to see who is updated.
+- DDM actively reports its progress: "I have downloaded the update and scheduled installation for 17:00."
 
-1. **Blackout Dates** :
+### 3. Campus Network Infrastructure
 
-- Use the "Update Delay" feature in Jamf Pro during **Assessment Weeks** or Final Exams. You don't want a student's Mac to trigger a forced restart in the middle of a high-stakes digital exam because a deadline was reached.
+- Massive simultaneous DDM updates place extreme stress on school bandwidth.
+- **Key Infrastructure**: Ensure each administrative or classroom building has at least one Mac mini acting as a **"Content Caching"** server. This ensures 90% of the update traffic stays on the local network.
+
+## III. Practical Reminders
+
+- **Avoid Exam Weeks**: DDM enforcement is highly strictly. During assessment weeks or high-stakes exams, please temporarily unassign the update profile to prevent a student's Mac from automatically restarting mid-exam because a deadline was reached.
 
 ## Institutional Advice:
 

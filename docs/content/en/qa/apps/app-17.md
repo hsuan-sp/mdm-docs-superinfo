@@ -1,7 +1,7 @@
 ---
 id: app-17
 title: "I 'purchased' an app in ASM, but it's not appearing in my Jamf Pro list. Why?"
-category: "Section 3: App Distribution category: "Section 3: App Distribution & Management (Apps & Books)" Management"
+category: "Section 3: App Management & Distribution"
 important: false
 tags: ["VPP Sync","ASM","Troubleshooting","Volume Purchase"]
 ---
@@ -15,10 +15,10 @@ By default, Jamf Pro usually syncs with Apple School Manager (ASM) once a day (o
 ## Solution (Force Manual Sync):
 
 1. Log in to Jamf Pro.
-1. Navigate to **Settings > Global Management > Volume Purchasing** .
-1. Click on the **Location** associated with the app purchase.
-1. Switch to the **Content** tab and click the **Force Update** or **Update** button at the bottom.
-1. Wait 1-2 minutes and refresh the page; the newly purchased apps should appear.
+2. Navigate to **Settings > Global Management > Volume Purchasing**.
+3. Click on the **Location** associated with the app purchase.
+4. Switch to the **Content** tab and click the **Force Update** or **Update** button at the bottom.
+5. Wait 1-2 minutes and refresh the page; the newly purchased apps should appear.
 
 ## Checkpoint:
 

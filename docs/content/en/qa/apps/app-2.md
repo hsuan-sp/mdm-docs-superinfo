@@ -1,18 +1,20 @@
 ---
 id: app-2
 title: "Can we install apps on iPads without signing into an Apple ID?"
-category: "Section 3: App Distribution category: "Section 3: App Management & Distribution" Management"
+category: "Section 3: App Management & Distribution"
 important: true
 tags: ["VPP","Device-based Assignment","Apple ID","Managed Apple Account"]
 ---
 
-**Yes. This is called "Device-based Assignment," and it is the standard and most efficient method for school environments.** By using the **Volume Purchase Program (VPP)** within Apple School Manager (ASM), the school links app licenses to the device’s **Serial Number** rather than a specific student’s Apple ID.
+**Yes. This is called "Device-based Assignment," and it is the standard and most efficient method for school environments.**
+
+By using the **Volume Purchase Program (VPP)** within Apple School Manager (ASM), the school links app licenses to the device’s **Serial Number** rather than a specific student’s Apple ID.
 
 ## Advantages for the School:
 
-- **Zero-Login Deployment** : Students can receive all necessary classroom apps immediately upon unboxing the device without ever needing a personal or Managed Apple Account.
-- **Asset Reclamation** : App licenses remain school property. When a student graduates or an iPad is erased, the license is automatically "returned" to your school’s pool, ready to be redistributed to another device.
-- **Simplified Maintenance** : There are no prompts for passwords when apps need to be updated or reinstalled.
+- **Zero-Login Deployment**: Students can receive all necessary classroom apps immediately upon unboxing the device without ever needing a personal or Managed Apple Account.
+- **Asset Reclamation**: App licenses remain school property. When a student graduates or an iPad is erased, the license is automatically "returned" to your school’s pool, ready to be redistributed to another device.
+- **Simplified Maintenance**: There are no prompts for passwords when apps need to be updated or reinstalled.
 
 ## Important Limitation: In-App Purchases
 

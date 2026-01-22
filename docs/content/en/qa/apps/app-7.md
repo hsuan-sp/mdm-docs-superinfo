@@ -1,7 +1,7 @@
 ---
 id: app-7
 title: "I cannot find the app I want in ASM (due to regional restrictions or removal). How do I solve this?"
-category: "Section 3: App Distribution category: "Section 3: App Distribution & Management (Apps & Books)" Management"
+category: "Section 3: App Management & Distribution"
 important: false
 tags: ["ASM Search","Regional Restrictions","Developer Settings","App Store"]
 ---

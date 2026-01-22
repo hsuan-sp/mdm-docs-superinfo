@@ -6,7 +6,9 @@ important: true
 tags: ["Supervised","Management Levels","ADE"]
 ---
 
-**Supervised Mode is a special state that gives the school "Institutional Ownership" over the device's operating system.** A standard iPad bought from a store is "Unsupervised" (private). A school-owned device, however, should always be in Supervised Mode—enabled through **ADE** or **Apple Configurator** —to ensure a safe and focused learning environment.
+**Supervised Mode is a special state that gives the school "Institutional Ownership" over the device's operating system.**
+
+A standard iPad bought from a store is "Unsupervised" (private). A school-owned device, however, should always be in Supervised Mode—enabled through **ADE** or **Apple Configurator**—to ensure a safe and focused learning environment.
 
 ## Critical Differences:
 
@@ -22,8 +24,8 @@ tags: ["Supervised","Management Levels","ADE"]
 ## How to Check the Status:
 
 Open **Settings** on the iPad. Look at the very top, just below the user’s name. You should see a line of text:
->
-> * *"This iPad is supervised and managed by [Your School Name]." **
+
+> *This iPad is supervised and managed by [Your School Name].*
 
 ## Institutional Advice:
 

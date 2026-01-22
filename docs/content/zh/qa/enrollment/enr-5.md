@@ -6,9 +6,9 @@ important: false
 tags: ["帳號驅動註冊","服務偵測",".well-known","BYOD"]
 ---
 
-**帳號驅動註冊 (Account-driven Enrollment) 依賴 Apple 的「服務偵測 (Service Discovery)」機制，**** 讓使用者只需輸入管理式 Apple 帳號即可引導註冊。
+**帳號驅動註冊 (Account-driven Enrollment) 依賴 Apple 的「服務偵測 (Service Discovery)」機制，** 讓使用者只需輸入管理式 Apple 帳號即可引導註冊。
 
-**** 運作原理與挑戰 ** ：
+** 運作原理與挑戰 ** ：
 
 當使用者在裝置登入時，裝置會嘗試存取該 Email 網域下的 **.well-known** 資源檔案。
 具體流程如下：

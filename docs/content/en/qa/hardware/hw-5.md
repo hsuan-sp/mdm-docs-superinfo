@@ -10,18 +10,15 @@ tags: ["Battery Health","Storage","Summer Break","Prevention"]
 
 ## The Three Golden Rules for Storage:
 
-1. **Charge to ~50%** :
+1. **Charge to ~50%**:
+   - **Do not store at 0%**: This can lead to the battery falling into a deep discharge state, making the device impossible to turn on come September.
+   - **Do not store at 100%**: Keeping a battery at maximum capacity for months can cause it to lose some of its total lifespan permanently.
 
-- **Do not store at 0%** : This can lead to the battery falling into a deep discharge state, making the device impossible to turn on come September.
-- **Do not store at 100%** : Keeping a battery at maximum capacity for months can cause it to lose some of its total lifespan permanently.
+2. **Power Off Completely**:
+   - After reaching 50%, go to **Settings > General > Shut Down**. This ensures the device isn't slowly draining power while sitting in the cart.
 
-1. **Power Off Completely** :
-
-- After reaching 50%, go to **Settings > General > Shut Down** . This ensures the device isn't slowly draining power while sitting in the cart.
-
-1. **Cool, Dry Environment** :
-
-- Store the iPads (and the charging cart) in a temperature-controlled room. Excessive heat (like a non-air-conditioned classroom in the height of summer) accelerated chemical degradation.
+3. **Cool, Dry Environment**:
+   - Store the iPads (and the charging cart) in a temperature-controlled room. Excessive heat (like a non-air-conditioned classroom in the height of summer) accelerated chemical degradation.
 
 ## Operational Advice for IT:
 

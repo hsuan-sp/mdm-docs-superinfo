@@ -1,13 +1,25 @@
 /* ============================================================
    MDM Support Site - Premium Typography System (2026)
    Designed for: Legibility, Hierarchy, and Visual Excellence
+   Updated: 2026-01-23 (Aligned with Markdown Standards)
    ============================================================ */
 
 /* --- Base Variables & Core Layout --- */
 .vp-doc {
   max-width: 800px; /* Slightly narrower for better reading comfort */
   margin: 0 auto;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
   line-height: 1.75;
   color: var(--vp-c-text-1);
 }
@@ -33,7 +45,7 @@
 .vp-doc h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-top: 3.5rem; /* Breathable spacing */
+  margin-top: 3.5rem; /* Breathable spacing, matches blank line enforcement */
   margin-bottom: 1.25rem;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid var(--vp-c-divider);
@@ -44,7 +56,7 @@
 
 /* Add a subtle indicator for H2 to guide the eye */
 .vp-doc h2::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 6px;
   height: 24px;
@@ -73,8 +85,10 @@
 }
 
 /* Lists - fixing the "ugly" list rendering */
-.vp-doc ul, .vp-doc ol,
-.markdown-body ul, .markdown-body ol {
+.vp-doc ul,
+.vp-doc ol,
+.markdown-body ul,
+.markdown-body ol {
   padding-left: 1.5rem;
   margin-bottom: 1.5rem;
   list-style-position: outside;
@@ -88,6 +102,7 @@
 }
 
 /* List markers styling - Unified for Doc and Apps */
+/* Note: This styles the output regardless of whether '*' or '-' is used in source */
 .vp-doc ul > li,
 .markdown-body ul > li {
   list-style-type: none;
@@ -132,7 +147,7 @@
   margin: 2rem 0;
   color: var(--vp-c-text-2);
   font-style: normal; /* Remove italic */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
 /* Specific styling for "Analogy" (白話文比喻) often found in Glossary */
@@ -142,16 +157,16 @@
 
 /* Interactive/Important Badges */
 .important-badge {
-    background-color: var(--vp-c-danger-soft);
-    color: var(--vp-c-danger-1);
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 0.25rem 0.6rem;
-    border-radius: 999px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    vertical-align: middle;
-    margin-right: 0.5rem;
+  background-color: var(--vp-c-danger-soft);
+  color: var(--vp-c-danger-1);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  vertical-align: middle;
+  margin-right: 0.5rem;
 }
 
 /* --- 4. Tables --- */
@@ -205,9 +220,6 @@
   color: var(--vp-c-text-1);
 }
 
-/* Special Highlighting - mimicking a marker */
-/* If you want to use it manually via HTML or specific markdown patterns, keeping it simple for now */
-
 /* Special Highlighting - Q&A Answer Card */
 .vp-doc h2 + p > strong:first-child {
   display: block;
@@ -220,7 +232,7 @@
   border-left: 4px solid var(--vp-c-brand-1);
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
 }
 
 /* --- 7. Images --- */
