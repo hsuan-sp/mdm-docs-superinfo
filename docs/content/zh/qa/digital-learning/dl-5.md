@@ -37,5 +37,5 @@ title: 學生刪除了 Jamf Trust App，會影響使用率計算嗎？該如何�
 * **實務建議**：
 
 建議建立一個 **「缺少 Jamf Trust」** 的智慧型群組
-（條件：Application Title**does not have**Jamf Trust）。
+（條件：Application Title **does not have** Jamf Trust）。
 若此群組的裝置數量 > 0，代表有裝置脫離監控，需立即處理。

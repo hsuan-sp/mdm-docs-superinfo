@@ -6,7 +6,7 @@ term: NIST Benchmarks
 ---
 ## Term Definition
 
-The**NIST (National Institute of Standards and Technology) Benchmarks**are a globally recognized set of cybersecurity best practices.
+The **NIST (National Institute of Standards and Technology) Benchmarks** are a globally recognized set of cybersecurity best practices.
 
 Educational adoption:
 
@@ -16,8 +16,8 @@ Educational adoption:
 
 ## Analogy
 
-Think of this as the**"Digital Safety Inspection Certificate."**
+Think of this as the **"Digital Safety Inspection Certificate."**
 
-Just as a school building has to pass a fire safety inspection (checking for fire extinguishers and clear exits), every iPad must pass this**"Digital Inspection"**to prove it is safe enough for students to use.
+Just as a school building has to pass a fire safety inspection (checking for fire extinguishers and clear exits), every iPad must pass this **"Digital Inspection"** to prove it is safe enough for students to use.
 
 It ensures that the tablet has strong locks, stays up-to-date, and keeps your private work safe from hackers, just like a building code keeps you safe from fires.

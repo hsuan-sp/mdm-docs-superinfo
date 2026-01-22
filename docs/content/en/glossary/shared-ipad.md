@@ -6,7 +6,7 @@ term: Shared iPad
 ---
 ## Term Definition
 
-* **Shared iPad**is a multi-user Enrollment mode for iPadOS designed for classroom carts.
+* **Shared iPad** is a multi-user Enrollment mode for iPadOS designed for classroom carts.
 
 How it works:
 
@@ -17,8 +17,8 @@ How it works:
 
 ## Analogy
 
-Shared iPad is like a**"Library Computer Terminal"**but for tablets.
+Shared iPad is like a **"Library Computer Terminal"** but for tablets.
 
 Many different students sit at the computer throughout the week. When you log in with your ID, your specific folders and desktop background appear.
 
-When you log off, the computer resets for the next student, but all your hard work is safely**"on the server"**(iCloud) waiting for your next visit.
+When you log off, the computer resets for the next student, but all your hard work is safely **"on the server"** (iCloud) waiting for your next visit.

@@ -21,18 +21,18 @@ title: 'Troubleshooting: Apple Pencil won''t pair or write. How do I fix it?'
 
 * **1st Gen (Lightning)**: Does not work with common USB-C iPads (unless using an adapter).
 * **2nd Gen (Magnetic)**: Only for iPad Air/Pro models with the magnetic charging strip.
-* **USB-C Model**: Does not support magnetic pairing; must be connected via**cable**for initial setup.
+* **USB-C Model **: Does not support magnetic pairing; must be connected via** cable**for initial setup.
 
 1. **Reset Bluetooth**:
 
-* **Go to**Settings > Bluetooth**, find the old Apple Pencil entry, and select**Forget This Device**.
+* **Go to ** Settings > Bluetooth**, find the old Apple Pencil entry, and select ** Forget This Device**.
 
 * **Re-attach or re-plug the Apple Pencil to re-pair.**
 
 1. **Check the Tip**:
 
-* **If it pairs but won't write, the**tip is often loose**. Try tightening it by turning it clockwise.
+* **If it pairs but won't write, the ** tip is often loose**. Try tightening it by turning it clockwise.
 
 1. **MDM Restrictions**:
 
-* **Ensure the MDM "Restrictions" profile does not have**Disallow modifying Bluetooth settings**checked, as this may block new pairing attempts.
+* **Ensure the MDM "Restrictions" profile does not have ** Disallow modifying Bluetooth settings**checked, as this may block new pairing attempts.

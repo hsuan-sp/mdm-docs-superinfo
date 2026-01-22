@@ -5,7 +5,7 @@ term: Captive Portal
 ---
 ## Term Definition
 
-A**Captive Portal**is a web-based authentication page that intercepts network traffic before granting full internet access.
+A **Captive Portal** is a web-based authentication page that intercepts network traffic before granting full internet access.
 
 Common characteristics:
 
@@ -15,7 +15,7 @@ Common characteristics:
 
 ## Analogy
 
-Think of this as a**"Security Questionnaire at the Front Door."**
+Think of this as a **"Security Questionnaire at the Front Door."**
 
 Before you can enter the coffee shop's Wi-Fi "building," you have to answer a few questions or sign a visitor log.
 

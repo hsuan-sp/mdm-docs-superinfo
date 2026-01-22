@@ -5,7 +5,7 @@ term: IP Address
 ---
 ## Term Definition
 
-An**IP Address**(Internet Protocol Address) is a unique numerical label assigned to every device connected to a computer network.
+An **IP Address** (Internet Protocol Address) is a unique numerical label assigned to every device connected to a computer network.
 
 It serves two primary functions:
 
@@ -21,8 +21,8 @@ It serves two primary functions:
 
 ## Analogy
 
-Think of this as your device's**"Digital Street Address."**
+Think of this as your device's **"Digital Street Address."**
 
-Just like a mail carrier needs a physical address to deliver a letter to your house, the internet needs an**IP address**to send data to your specific iPad.
+Just like a mail carrier needs a physical address to deliver a letter to your house, the internet needs an **IP address** to send data to your specific iPad.
 
-Some addresses are owned forever (**Static**), while others are like a hotel room number (**Dynamic**)—you use it while you're checked in, but it might be given to someone else after you "check out" and leave the network.
+Some addresses are owned forever (**Static **), while others are like a hotel room number (** Dynamic**)—you use it while you're checked in, but it might be given to someone else after you "check out" and leave the network.

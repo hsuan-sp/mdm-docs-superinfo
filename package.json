@@ -5,11 +5,11 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "npm run update-index && vitepress dev docs",
+    "docs:dev": "npm run update-index && vitepress dev docs --port 4000",
     "build": "vitepress build docs && npm run update-index",
     "preview": "vitepress preview docs",
     "update-index": "node scripts/maintenance/generate-index.js",
-    "fix-markdown": "node scripts/maintenance/fix-markdown.js"
+    "fix-markdown": "node scripts/maintenance/unified-formatter.js"
   },
   "keywords": [],
   "author": "",

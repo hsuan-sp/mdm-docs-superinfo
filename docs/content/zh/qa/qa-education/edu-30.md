@@ -25,7 +25,7 @@ title: 學校 Wi-Fi 斷網或不穩定時，MDM 管理的 iPad 還能上課嗎�
 
 ## 2. 斷網當下的操作建議
 
-* **Apple 課堂 (Classroom)**：只要 iPad 與 教師端 Mac/iPad 在同一個教室內（開啟藍牙與 Peer-to-Peer Wi-Fi），**即使斷開網際網路，課堂 App 仍可正常派送 PDF、網頁書籤與監控畫面**。
+* **Apple 課堂 (Classroom) **：只要 iPad 與 教師端 Mac/iPad 在同一個教室內（開啟藍牙與 Peer-to-Peer Wi-Fi），** 即使斷開網際網路，課堂 App 仍可正常派送 PDF、網頁書籤與監控畫面**。
 * **離線 App 使用**：Keynote, Pages, Numbers, GarageBand 等專業軟體均支援離線編輯。
 
 ## 3. MDM 策略配置：離線存取
@@ -37,7 +37,7 @@ title: 學校 Wi-Fi 斷網或不穩定時，MDM 管理的 iPad 還能上課嗎�
 ## ICT 資訊支援團隊長的備援 SOP
 
 1. **藍牙與 Peer-to-Peer**：提醒老師，斷網時「課堂」功能需依賴藍牙配對與對點 Wi-Fi。
-2. **USB 手動修復**：若裝置因為斷網導致 MDM 指令卡死，準備一組手動連接線，透過 **Apple Configurator** 直接注入 Wi-Fi 描述檔。
+2. **USB 手動修復 **：若裝置因為斷網導致 MDM 指令卡死，準備一組手動連接線，透過** Apple Configurator**直接注入 Wi-Fi 描述檔。
 3. **離線清冊**：平時將 MDM 的「資產序號與 Wi-Fi MAC 位址」列印成冊。
 
 * **實務建議：**

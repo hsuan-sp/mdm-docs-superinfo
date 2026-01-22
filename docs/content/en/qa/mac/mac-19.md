@@ -25,13 +25,13 @@ title: '2026 macOS Deployment: Advanced strategies for large-scale enrollment.'
 
 1. **Declarative Enrollment (DDM)**:
 
-* **macOS 26**supports a more resilient Enrollment engine.
+* **macOS 26** supports a more resilient Enrollment engine.
 * **Feature**: Instead of waiting for the server to push commands, the device "declares" its target state the moment it joins. This improves software install success rates by approx. 30% on shaky Wi-Fi.
 
 1. **Hybrid 'Pre-load' Strategy**:
 
-* **For schools with poor internet, use an external SSD to pre-load large**.pkg**files (like Adobe CC). Use a post-Enrollment script to call `/usr/sbin/installer` locally from the internal drive to finish the setup quickly.
+* **For schools with poor internet, use an external SSD to pre-load large **.pkg** files (like Adobe CC). Use a post-Enrollment script to call `/usr/sbin/installer` locally from the internal drive to finish the setup quickly.
 
 ## 2026 NPU Considerations:
 
-The**M4/M5**chips feature powerful Neural Engines. During your initial deployment, ensure you aren't over-restricting background tasks, as macOS uses this time to initialize local AI models (for Writing Tools and Siri). Allowing this process to finish during setup ensures students have a smooth "Day One" experience.
+The **M4/M5** chips feature powerful Neural Engines. During your initial deployment, ensure you aren't over-restricting background tasks, as macOS uses this time to initialize local AI models (for Writing Tools and Siri). Allowing this process to finish during setup ensures students have a smooth "Day One" experience.

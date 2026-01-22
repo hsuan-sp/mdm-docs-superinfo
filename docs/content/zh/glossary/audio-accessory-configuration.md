@@ -5,7 +5,7 @@ term: Audio Accessory Configuration (音訊配件設定)
 ---
 ## 術語定義
 
-此 MDM 設定 (**com.Apple.configuration.audio-accessory.settings**) 於 **iOS/iPadOS 26** 推出，旨在改善協作環境中的音訊配件管理。
+此 MDM 設定 (**com.Apple.configuration.audio-accessory.settings **) 於** iOS/iPadOS 26**推出，旨在改善協作環境中的音訊配件管理。
 
 關鍵管理功能：
 

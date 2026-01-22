@@ -30,7 +30,7 @@ title: 新架構：什麼是「宣告式 App 管理 (Declarative App Management)
 
 1. **狀態通道 (Status Channel)**：
 
-* **裝置會透過輕量級的狀態通道，**主動** 向 Jamf Pro 回報 App 的詳細安裝進度
+* **裝置會透過輕量級的狀態通道，** 主動**向 Jamf Pro 回報 App 的詳細安裝進度
 
  （如：等待中、安裝中、驗證失敗）。這比傳統的「伺服器輪詢 (Polling)」更即時且節省網路流量。
 

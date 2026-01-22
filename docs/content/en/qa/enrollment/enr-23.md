@@ -20,13 +20,13 @@ title: >-
 
 ## How it Works
 
-1. Configure the target (new) MDM in**Apple School Manager (ASM)**.
-2. Set an**Enrollment Deadline**.
+1. Configure the target (new) MDM in **Apple School Manager (ASM)**.
+2. Set an **Enrollment Deadline**.
 3. The device notifies the user as the deadline approaches.
 4. At the deadline, the device automatically:
 
 * **Removes the old MDM management profile.**
-* **Preserves**user data, apps, and settings.
+* **Preserves** user data, apps, and settings.
 
 * **Registry automatically with the new MDM.**
 
@@ -59,7 +59,7 @@ title: >-
 
 ## Recommended Alternative: Return to Service (Return to Service)
 
-For student devices that require periodic resets,**Return to Service**remains the gold standard.
+For student devices that require periodic resets,**Return to Service** remains the gold standard.
 
 * **Total Wipe**: Ensures the device starts from a 100% clean state.
 * **Wi-Fi Persistence**: Reconnects to Wi-Fi automatically after the wipe.

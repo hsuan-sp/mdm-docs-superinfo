@@ -5,7 +5,7 @@ term: Liquid Glass (液態玻璃設計)
 ---
 ## 術語定義
 
-* **Liquid Glass (液態玻璃設計)** 是 Apple 於**OS version 26**推出的全新視覺設計語言，深受**visionOS** 空間運算的啟發。
+* **Liquid Glass (液態玻璃設計) ** 是 Apple 於**OS version 26 ** 推出的全新視覺設計語言，深受**visionOS** 空間運算的啟發。
 
 其視覺特性包括：
 

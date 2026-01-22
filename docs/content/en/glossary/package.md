@@ -5,7 +5,7 @@ term: Package (.pkg)
 ---
 ## Term Definition
 
-A**Package (.pkg)**is the standard flat-file installation format for macOS software deployment.
+A **Package (.pkg)** is the standard flat-file installation format for macOS software deployment.
 
 Components:
 
@@ -17,8 +17,8 @@ Components:
 
 ## Analogy
 
-Think of this as a**"Digital IKEA Box."**
+Think of this as a **"Digital IKEA Box."**
 
-It doesn't just contain the furniture (the software); it also includes the tools and an**"Instruction Manual"**(scripts) for the computer.
+It doesn't just contain the furniture (the software); it also includes the tools and an **"Instruction Manual"** (scripts) for the computer.
 
 When the school sends this box to a Mac, the Mac opens it, reads the manual, and puts every piece in exactly the right place automatically—building the furniture while the student is busy doing something else.

@@ -41,7 +41,7 @@ title: 裝置被「啟用鎖定 (Activation Lock)」鎖住了，該如何解除�
 
 若裝置狀態異常，無法接收遠端指令：
 
-1. 使用 Mac 的 **Finder / Apple Configurator**，或 Windows 的 **Apple 裝置 App**。
+1. 使用 Mac 的 **Finder / Apple Configurator**，或 Windows 的 ** Apple 裝置 App**。
 2. 將裝置進入復原模式進行回復。
 
  注意：此動作會清除資料，且完成後仍可能出現啟動鎖定畫面（需搭配方案一或二解鎖）。

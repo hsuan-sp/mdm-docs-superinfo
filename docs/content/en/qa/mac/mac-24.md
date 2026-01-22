@@ -33,9 +33,9 @@ title: >-
 
 1. **Assessment Mode (AAC)**:
 
-* **For high-stakes exams, use a specialized testing app or a managed browser that invokes Apple’s**'Assessment Mode.'**
+* **For high-stakes exams, use a specialized testing app or a managed browser that invokes Apple’s **'Assessment Mode.'**
 * **Effect**: This automatically suppresses Distraction Control, Siri, notifications, and all multitasking features without needing a specific configuration profile.
 
 ## IT Strategy:
 
-Create a**"Testing Mode" Smart Group**in Jamf Pro. Use a script to verify that `DistractionControl` is disabled 15 minutes before the exam begins. We recommend also disabling Safari "Translation" features during the same period to prevent unapproved language assistance.
+Create a **"Testing Mode" Smart Group** in Jamf Pro. Use a script to verify that `DistractionControl` is disabled 15 minutes before the exam begins. We recommend also disabling Safari "Translation" features during the same period to prevent unapproved language assistance.

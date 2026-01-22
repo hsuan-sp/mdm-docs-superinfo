@@ -7,7 +7,7 @@ term: Jamf Trust (Jamf Private Access)
 ---
 ## 術語定義
 
-* **Jamf Private Access**(透過**Jamf Trust**App 管理) 是一種**零信任網路存取 (ZTNA)** 解決方案。
+* **Jamf Private Access ** (透過**Jamf Trust ** App 管理) 是一種**零信任網路存取 (ZTNA)** 解決方案。
 
 它確保只有經過授權、安全且合規的裝置才能存取學校的內部資源。與傳統 VPN 給予使用者完整網路權限不同，Private Access 具有以下特點：
 

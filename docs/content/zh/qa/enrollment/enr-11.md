@@ -43,7 +43,7 @@ title: 已開啟「允許刪除 App」，為什麼學生長按仍無法「刪除
 
 * **同步問題**：有時裝置在安裝完描述檔後未即時刷新權限，
 
- 請嘗試發送一個 **「發送空白推播 (Send Blank Push)」**或**「更新資產 (Update Inventory)」** 指令。
+ 請嘗試發送一個 **「發送空白推播 (Send Blank Push)」** 或 **「更新資產 (Update Inventory)」** 指令。
 
 * **系統 App 限制**：請注意，某些 Apple 原生 App（如：設定、App Store、訊息）在任何情況下都無法被刪除，
 

@@ -27,8 +27,8 @@ title: >-
 ## AirPlay Troubleshooting (Network-Based):
 
 1. **VLAN Consistency**: This is the most common campus issue. If a teacher’s iPad is on the `Staff-Wi-Fi`network but the Apple TV is on the`Student-IoT` network, and those networks are isolated, AirPlay packets cannot find their destination.
-2. **Multicast/mDNS Filtering**: AirPlay uses the**Bonjour (mDNS)**protocol on UDP port 5353. If the school’s wireless access points have "Client Isolation" enabled, or if the firewall blocks Multicast traffic, the Apple TV won't appear in the list.
-3. **Network Optimization (mDNS Gateway)**: For complex campus networks with multiple VLANs, IT should enable an**mDNS Gateway (or Bonjour Proxy)**on the core switch or firewall. This allows discovery packets to "jump" across different network segments.
+2. **Multicast/mDNS Filtering **: AirPlay uses the** Bonjour (mDNS)**protocol on UDP port 5353. If the school’s wireless access points have "Client Isolation" enabled, or if the firewall blocks Multicast traffic, the Apple TV won't appear in the list.
+3. **Network Optimization (mDNS Gateway) **: For complex campus networks with multiple VLANs, IT should enable an** mDNS Gateway (or Bonjour Proxy)**on the core switch or firewall. This allows discovery packets to "jump" across different network segments.
 
 ## Institutional Advice:
 

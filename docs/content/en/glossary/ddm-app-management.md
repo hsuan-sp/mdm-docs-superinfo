@@ -5,7 +5,7 @@ term: DDM App Management
 ---
 ## Term Definition
 
-* **DDM App Management**is a modernized method for deploying and governing applications using the**Declarative Device Management**(DDM) framework.
+* **DDM App Management ** is a modernized method for deploying and governing applications using the**Declarative Device Management** (DDM) framework.
 
 Key differences from legacy MDM:
 
@@ -17,6 +17,6 @@ This ensures that critical learning tools are always present on the device witho
 
 ## Analogy
 
-Think of this as an**"Automatic Restocking"**system for your apps.
+Think of this as an **"Automatic Restocking"** system for your apps.
 
 It’s like a smart vending machine that knows exactly what should be on each shelf. If someone takes an app off the "shelf" (deletes it), the machine immediately sees the empty spot and puts a new one back right away, ensuring the students always have the tools they need.

@@ -1,0 +1,14 @@
+🚀 Starting Dual Editor Launcher...
+✅ Virtual environment found.
+⬇️ Dependencies missing or broken. Installing (tkhtmlview, markdown)...
+Requirement already satisfied: tkhtmlview in ./scripts/maintenance/.venv/lib/python3.14/site-packages (0.3.1)
+Requirement already satisfied: markdown in ./scripts/maintenance/.venv/lib/python3.14/site-packages (3.10.1)
+Requirement already satisfied: Pillow<11,>=10 in ./scripts/maintenance/.venv/lib/python3.14/site-packages (from tkhtmlview) (10.4.0)
+Requirement already satisfied: requests<3.0.0,>=2.28.2 in ./scripts/maintenance/.venv/lib/python3.14/site-packages (from tkhtmlview) (2.32.5)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./scripts/maintenance/.venv/lib/python3.14/site-packages (from requests<3.0.0,>=2.28.2->tkhtmlview) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./scripts/maintenance/.venv/lib/python3.14/site-packages (from requests<3.0.0,>=2.28.2->tkhtmlview) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./scripts/maintenance/.venv/lib/python3.14/site-packages (from requests<3.0.0,>=2.28.2->tkhtmlview) (2.6.3)
+Requirement already satisfied: certifi>=2017.4.17 in ./scripts/maintenance/.venv/lib/python3.14/site-packages (from requests<3.0.0,>=2.28.2->tkhtmlview) (2026.1.4)
+🖥️ Launching DualEditor...
+❌ Critical Error: Dependencies (tkhtmlview, markdown) not found and .venv missing.
+Please run: python3 -m venv scripts/maintenance/.venv && scripts/maintenance/.venv/bin/pip install tkhtmlview markdown

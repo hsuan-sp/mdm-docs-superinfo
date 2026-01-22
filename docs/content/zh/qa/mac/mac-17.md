@@ -20,7 +20,7 @@ title: 【硬體部署】學校電腦教室改用 Mac mini (M4) 有什麼優勢�
 1. **告別 Ghost 還原與零抹除遷移**：
 
 * **傳統 PC**：需製作龐大的映像檔 (Image)，透過網路派送還原。
-* **Mac mini (M5)**：支援 macOS 26 的**「零抹除 MDM 遷移 (Zero-Wipe Migration)」**。
+* **Mac mini (M5) **：支援 macOS 26 的**「零抹除 MDM 遷移 (Zero-Wipe Migration)」**。
 
  這代表若學校未來要更換 MDM 品牌（如從中央版轉為學校自建版），無需清除重灌，即可在不影響教學軟體的情況下原地完成移轉。
 

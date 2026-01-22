@@ -50,7 +50,7 @@ title: 【維修 SOP】廠商繳回 ICT 資訊支援團隊來的維修替換機�
 * **第四步：未來重置（這時才用 Return to Service）**
 
 * 當這台替換機完成上述註冊後，它就成為了一台「受管裝置」。
-* **下次** 若需要為了下一位使用者重置這台機器時，您才可以發送**Return to Service (Return to Service)** 指令，
+* **下次 ** 若需要為了下一位使用者重置這台機器時，您才可以發送**Return to Service (Return to Service)** 指令，
 
  讓它達成全自動抹除並重連 Wi-Fi。
 

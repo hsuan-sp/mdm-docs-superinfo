@@ -5,7 +5,7 @@ term: DHCP (Dynamic Host Configuration Protocol)
 ---
 ## Term Definition
 
-* **DHCP**is a foundational network protocol that automates the assignment of IP addresses and other network parameters to devices.
+* **DHCP** is a foundational network protocol that automates the assignment of IP addresses and other network parameters to devices.
 
 How it works:
 
@@ -16,8 +16,8 @@ How it works:
 
 ## Analogy
 
-Think of this as a**"Valet Parking Attendant"**for the internet.
+Think of this as a **"Valet Parking Attendant"** for the internet.
 
-When you drive your car (your iPad) into the school's parking garage (the Wi-Fi network), the attendant automatically points you to an**available parking spot**(an IP address).
+When you drive your car (your iPad) into the school's parking garage (the Wi-Fi network), the attendant automatically points you to an **available parking spot** (an IP address).
 
 You don't have to wander around looking for an empty spot yourself, and you'll never accidentally try to park in a space that another car is already using. The attendant makes sure everyone has a place to park so they can join the party.

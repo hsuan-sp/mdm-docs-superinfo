@@ -5,7 +5,7 @@ term: QR Code Enrollment
 ---
 ## Term Definition
 
-* **QR Code Enrollment**is a streamlined method for enrolling mobile devices into an MDM environments.
+* **QR Code Enrollment** is a streamlined method for enrolling mobile devices into an MDM environments.
 
 The process:
 
@@ -18,7 +18,7 @@ This reduces typing errors and significantly speeds up "User-Initiated Enrollmen
 
 ## Analogy
 
-Think of this as**"Scan-to-Check-In."**
+Think of this as **"Scan-to-Check-In."**
 
 Instead of requiring a student to manually type a long, complicated web address like `https://enroll.myschool.edu/manage/enroll` into Safari, they just open the Camera and scan a square code.
 

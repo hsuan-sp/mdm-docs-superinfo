@@ -23,7 +23,7 @@ This approach is more stable than legacy remote commands and allows devices to a
 
 This is the recommended and most professional method:
 
-1. Navigate to**`Settings`>`Device Management`>`Software Update Blueprints`**.
+1. Navigate to **`Settings`>`Device Management`>`Software Update Blueprints`**.
 2. Click `New` and set the target version (e.g., iOS 26.x or macOS 26 Tahoe).
 3. **Key Setting: Enforcement Deadline**:
 
@@ -37,10 +37,10 @@ This is the recommended and most professional method:
 
 If you need to send an update immediately to a specific set of search results:
 
-1. On the search results page for `Mobile Devices`or`Computers`, click**`Action`**at the bottom right.
-2. Choose**`Send Remote Commands`**.
-3. Select**"Update OS version on supervised devices"**from the list.
-4. On the**"Update OS Options"**page, choose your desired settings:
+1. On the search results page for `Mobile Devices`or`Computers`, click **`Action`** at the bottom right.
+2. Choose **`Send Remote Commands`**.
+3. Select **"Update OS version on supervised devices"** from the list.
+4. On the **"Update OS Options"** page, choose your desired settings:
 
 * **Target Version**: Recommended to select "Latest version based on device eligibility."
 * **Action**:
@@ -49,7 +49,7 @@ If you need to send an update immediately to a specific set of search results:
 
 ## 3. Management Highlights for 2026: macOS 26 Tahoe and Intel Macs
 
-* **Legacy Support**: macOS 26 is the final version to support Intel-based Macs. For these older devices, allow double the download time and ensure the**Bootstrap Token**is correctly escrowed.
+* **Legacy Support **: macOS 26 is the final version to support Intel-based Macs. For these older devices, allow double the download time and ensure the** Bootstrap Token**is correctly escrowed.
 * **DDM Autonomy**: In the latest systems, devices use DDM declarations to automatically perform updates when connected to power and idle (e.g., overnight), with much higher success rates than traditional push commands.
 
 ## Best Practices:

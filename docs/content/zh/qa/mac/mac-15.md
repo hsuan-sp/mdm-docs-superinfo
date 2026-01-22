@@ -24,11 +24,11 @@ title: 如何大量部署 Microsoft Office 並啟用授權？電腦教室與行�
 
 電腦教室必須讓學生「坐下即用」，不能要求學生登入微軟帳號。
 
-1. **安裝主程式**：透過 Jamf Pro 的 **「App Installers」** 派送 Microsoft Office 365。
+1. **安裝主程式 **：透過 Jamf Pro 的**「App Installers」** 派送 Microsoft Office 365。
 2. **啟用授權 (關鍵)**：
 
-* **前往微軟大量授權中心 (VLSC) 下載**「Volume License Serializer (VL Serializer)」** 的 .pkg 檔。
-* **將此 .pkg 上傳至 Jamf Pro 並建立**「政策 (Policy)」** 安裝。
+* **前往微軟大量授權中心 (VLSC) 下載 **「Volume License Serializer (VL Serializer)」** 的 .pkg 檔。
+* **將此 .pkg 上傳至 Jamf Pro 並建立 **「政策 (Policy)」** 安裝。
 
 * **效果**：安裝後，Office 會認證「這台電腦」的授權，
 
@@ -38,7 +38,7 @@ title: 如何大量部署 Microsoft Office 並啟用授權？電腦教室與行�
 
 行政同仁通常擁有個人的 Microsoft 365 (A3/A5) 帳號。
 
-1. **安裝主程式**：同樣透過 **「App Installers」** 派送，確保軟體永遠保持最新。
+1. **安裝主程式 **：同樣透過**「App Installers」** 派送，確保軟體永遠保持最新。
 2. **啟用授權**：
 
 * 不需安裝 Serializer。
@@ -62,5 +62,5 @@ title: 如何大量部署 Microsoft Office 並啟用授權？電腦教室與行�
 * **實務建議：專家提示**
 
 若發生「授權衝突」，通常是因為電腦同時殘留了舊版的 Serializer 與新版登入資訊。
-建議使用微軟官方的 **License Removal Tool**(可包裝成腳本透過 Jamf 執行)
+建議使用微軟官方的 **License Removal Tool** (可包裝成腳本透過 Jamf 執行)
 清除乾淨後再重新部署。

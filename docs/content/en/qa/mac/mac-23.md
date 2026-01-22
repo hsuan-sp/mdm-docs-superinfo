@@ -20,7 +20,7 @@ title: >-
 
 ## Management Modes (SOP)
 
-Using Jamf Pro's**Restrictions**payload, you should apply one of these three strategies based on the machine's location:
+Using Jamf Pro's **Restrictions** payload, you should apply one of these three strategies based on the machine's location:
 
 1. **Full Disable (High Security labs)**:
 
@@ -42,4 +42,4 @@ Using Jamf Pro's**Restrictions**payload, you should apply one of these three str
 
 ## Administrative Insight:
 
-Don't forget the**Purple indicator**! macOS 26 shows a prominent purple bar in the menu bar whenever iPhone Mirroring is active. During classroom rounds, teachers can easily spot if a student is mirroring a device that shouldn't be.
+Don't forget the **Purple indicator**! macOS 26 shows a prominent purple bar in the menu bar whenever iPhone Mirroring is active. During classroom rounds, teachers can easily spot if a student is mirroring a device that shouldn't be.

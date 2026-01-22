@@ -26,7 +26,7 @@ Apple 強制要求所有 macOS 軟體必須經過 **「公證 (Notarization)」*
 這是最快速且不降低系統安全性的標準做法。
 
 1. 在 Finder 中找到該 App 圖示。
-2. 按住鍵盤 **Control 鍵**(或滑鼠右鍵) 點選該 App。
+2. 按住鍵盤 **Control 鍵** (或滑鼠右鍵) 點選該 App。
 3. 在選單中點選 **「打開 (Open)」**。
 4. 此時跳出的視窗會多出一個 **「打開」** 按鈕，點選後系統會將其加入信任允許名單。
 
@@ -57,6 +57,7 @@ Apple 強制要求所有 macOS 軟體必須經過 **「公證 (Notarization)」*
 xattr -r -d com.apple.quarantine /Applications/AppName.app
 
 ```
+
 
 * **策略三：調整 Gatekeeper 政策 (不推薦)**
 

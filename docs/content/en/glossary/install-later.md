@@ -5,7 +5,7 @@ term: Install Later
 ---
 ## Term Definition
 
-* **"Install Later"**is a smart deployment strategy used for macOS and iOS system updates to minimize user disruption.
+* **"Install Later"** is a smart deployment strategy used for macOS and iOS system updates to minimize user disruption.
 
 Workflow details:
 
@@ -17,8 +17,8 @@ This strategy ensures that critical security patches are delivered without sudde
 
 ## Analogy
 
-Think of this as**"Scheduling a Home Renovation."**
+Think of this as **"Scheduling a Home Renovation."**
 
-The school IT team**"delivers the building materials"**(downloads the update) while the student is busy using the iPad for class. However, the actually noisy and disruptive**"construction work"**(the installation and restart) doesn't start until the student is finished with their homework and has gone to sleep.
+The school IT team **"delivers the building materials"** (downloads the update) while the student is busy using the iPad for class. However, the actually noisy and disruptive **"construction work"** (the installation and restart) doesn't start until the student is finished with their homework and has gone to sleep.
 
 This way, the iPad is fully updated and ready to go the next morning without ever interrupting a single minute of learning.

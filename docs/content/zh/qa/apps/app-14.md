@@ -24,14 +24,14 @@ title: 【TestFlight】可以讓老師使用「管理式 Apple 帳號」測試�
 
 1. **App Store Connect 設定**：
 
-* **校內開發者將老師的「管理式 Apple 帳號」加入**「外部測試群組 (External Testing)」**。
+* **校內開發者將老師的「管理式 Apple 帳號」加入 **「外部測試群組 (External Testing)」**。
 
 * 系統會發送邀請郵件至老師的信箱。
 
 1. **派送 TestFlight App**：
 
-* **管理員需在 ASM 採購免費的**TestFlight App** 授權。
-* **透過 Jamf Pro 將 TestFlight 以**「裝置型分派」** 方式安裝至老師的 iPad。
+* **管理員需在 ASM 採購免費的 ** TestFlight App**授權。
+* **透過 Jamf Pro 將 TestFlight 以 **「裝置型分派」** 方式安裝至老師的 iPad。
 
 1. **兌換邀請**：
 

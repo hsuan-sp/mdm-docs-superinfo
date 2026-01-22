@@ -50,7 +50,7 @@ title: AirDrop 找不到其他裝置，或 AirPlay 找不到電視與投影機�
  教師 iPad 若連線至教職員 SSID（如 `Staff-Wi-Fi`），而 Apple TV 連線至教室載具專用網段，
  若兩者 VLAN 隔離且無跨網段路由，AirPlay 封包將無法到達。
 
-2. **mDNS (Bonjour) 協定放行**：AirPlay 使用 **UDP 5353 埠** 進行服務廣播。
+2. **mDNS (Bonjour) 協定放行 **：AirPlay 使用** UDP 5353 埠**進行服務廣播。
 
  若學校防火牆或無線基地台 (AP) 啟用了 **「使用者隔離 (Client Isolation)」**，
  會阻擋裝置間的橫向通訊。

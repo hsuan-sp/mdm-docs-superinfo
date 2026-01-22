@@ -19,7 +19,7 @@ title: >-
 * **When you configure 'Install Apps' in PreStage Enrollment, the device waits for apps to download before allowing access to the Home Screen.**
 * **Any network issues or VPP license failures will cause a deadlock.**
 
-This is extremely common during**Automated Device Enrollment (ADE)**.
+This is extremely common during **Automated Device Enrollment (ADE)**.
 Admins often want students to see essential apps immediately upon boot, but if the environment isn't perfect, it leads to disaster during mass deployments.
 
 * **Core Causes**:
@@ -36,8 +36,8 @@ Admins often want students to see essential apps immediately upon boot, but if t
 
 1. **Declarative Device Management (DDM) State Changes**:
 
-* **In modern architectures, app deployment is handled by**DDM**.
-* **If your**Service Access**terms haven't been accepted in ASM, DDM may fail to trigger the silent download from the App Store.
+* **In modern architectures, app deployment is handled by ** DDM**.
+* **If your ** Service Access**terms haven't been accepted in ASM, DDM may fail to trigger the silent download from the App Store.
 
 1. **Configuration Error: Mandatory Install**:
 
@@ -46,5 +46,5 @@ Admins often want students to see essential apps immediately upon boot, but if t
 * **Best Practices**:
 
 * **Minimize Initial Payload**: PreStage should only enforce critical configuration profiles or extremely small "Guide Apps".
-* **Background Install**: Set main educational apps to deploy **after** Enrollment is complete, rather than intercepting the user during the Setup Assistant.
+* **Background Install **: Set main educational apps to deploy** after**Enrollment is complete, rather than intercepting the user during the Setup Assistant.
 * **Pilot Test**: Before unboxing remotely, take one device through the full process to verify VPP sync and download speeds.

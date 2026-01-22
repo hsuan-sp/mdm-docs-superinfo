@@ -22,14 +22,14 @@ title: >-
 
 ## 1. Hardware Longevity
 
-* **The primary project device is the**iPad (9th Gen, A13 chip)**.
-* **Follow-on purchases may include the**iPad (10th Gen, A14 chip)**or the**iPad (11th Gen, A16 chip)**.
+* **The primary project device is the ** iPad (9th Gen, A13 chip)**.
+* **Follow-on purchases may include the ** iPad (10th Gen, A14 chip)**or the ** iPad (11th Gen, A16 chip)**.
 * **All three models fully support iPadOS 26**.
 * **Note**: While these models cannot run "Apple Intelligence" features due to hardware limitations, they still benefit from critical security updates and performance optimizations (like the improved Return to Service).
 
 ## 2. MDM Compatibility
 
-* **Centralized Instance**: If your devices are managed by the Ministry’s central**Jamf Pro**, verify that the central server has been updated to a version that supports iPadOS 26.
+* **Centralized Instance **: If your devices are managed by the Ministry’s central** Jamf Pro**, verify that the central server has been updated to a version that supports iPadOS 26.
 * **Self-Managed**: If your school manages its own server (Mosyle, Intune, or a private Jamf instance), verify compatibility before a mass rollout.
 * **Pilot Test**: Always upgrade one test unit to iPadOS 26 first. Verify that app distribution, restriction profiles, and Wi-Fi certificates function as expected before upgrading the whole fleet.
 

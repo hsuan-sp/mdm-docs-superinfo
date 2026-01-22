@@ -5,7 +5,7 @@ term: Directory Service
 ---
 ## Term Definition
 
-A**Directory Service**is a centralized software system that stores, organizes, and provides access to information about a network's users and resources.
+A **Directory Service** is a centralized software system that stores, organizes, and provides access to information about a network's users and resources.
 
 Common implementations:
 
@@ -17,7 +17,7 @@ Common implementations:
 
 ## Analogy
 
-This is the school's**"Master Registry"**or**"Digital Office Book."**
+This is the school's **"Master Registry"** or **"Digital Office Book."**
 
 It contains a centralized record of every student and staff member—who they are, what department they belong to, and what they are allowed to do.
 

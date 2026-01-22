@@ -5,7 +5,7 @@ term: Policy
 ---
 ## Term Definition
 
-In**Jamf Pro**, a**Policy**is the primary mechanism for executing management tasks on macOS computers.
+In **Jamf Pro**, a ** Policy**is the primary mechanism for executing management tasks on macOS computers.
 
 A Policy consists of:
 
@@ -16,8 +16,8 @@ A Policy consists of:
 
 ## Analogy
 
-A Policy is like a**"School Bell Schedule"**combined with a**"Lesson Plan."**
+A Policy is like a **"School Bell Schedule"** combined with a **"Lesson Plan."**
 
-You don't have to announce "Go to Math Class" to every student individually. The bell (**Trigger**) automatically signals to the students (**Scope**) that it is time to do a specific task (**Payload**).
+You don't have to announce "Go to Math Class" to every student individually. The bell (**Trigger **) automatically signals to the students (** Scope **) that it is time to do a specific task (** Payload**).
 
 Similarly, a policy tells the computer: *"Every time you wake up (Trigger), check if the printer is installed (Payload)."*

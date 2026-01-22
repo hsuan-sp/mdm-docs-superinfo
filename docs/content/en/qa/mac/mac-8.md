@@ -27,9 +27,9 @@ title: Why does MDM require FileVault? How do I recover a forgotten login passwo
 
 1. **Create Configuration Profile**:
 
-* **Go to**Configuration Profiles > New > FileVault**.
-* **Set to**Require FileVault**.
-* **Crucial Step**: Set to**Create Personal Recovery Key**and choose**Escrow Personal Recovery Key to MDM**.
+* **Go to ** Configuration Profiles > New > FileVault**.
+* **Set to ** Require FileVault**.
+* **Crucial Step **: Set to** Create Personal Recovery Key **and choose** Escrow Personal Recovery Key to MDM**.
 
 1. **User-Side Activation**:
 
@@ -43,19 +43,19 @@ If a user forgets their password, the administrator must retrieve the key from t
 1. **Navigate to Inventory**:
 
 * **Log in to Jamf Pro and search for the computer.**
-* **Go to the detail page and select the**Inventory**tab >**Disk Encryption**.
+* **Go to the detail page and select the ** Inventory**tab >** Disk Encryption**.
 
 1. **Verify Encryption and Key**:
 
-* **First, check if**FileVault 2 Enabled**is set to**Encrypted**or**Enabled**.
-* **If Encrypted**: You will see a**Personal Recovery Key**field. Click**Show Key**to reveal the code.
+* **First, check if ** FileVault 2 Enabled**is set to ** Encrypted**or ** Enabled**.
+* **If Encrypted **: You will see a** Personal Recovery Key **field. Click** Show Key**to reveal the code.
 * **If Not Encrypted**: This field will not appear, meaning encryption is incomplete or the key was not successfully reported. Recovery via MDM is not possible in this state.
 
 1. **Perform the Unlock**:
 
-* **On the Mac login screen, click the question mark (?) or enter the wrong password three times. Select**Reset password using Recovery Key**and enter the code.
+* **On the Mac login screen, click the question mark (?) or enter the wrong password three times. Select ** Reset password using Recovery Key**and enter the code.
 
 ## Practical Advice & Warnings:
 
-* **Data Loss Risk**: If FileVault is enabled but Jamf Pro shows "Unknown" or no key, the escrow failed. If the password is forgotten in this state,**data is permanently unrecoverable**, and the device must be wiped.
+* **Data Loss Risk **: If FileVault is enabled but Jamf Pro shows "Unknown" or no key, the escrow failed. If the password is forgotten in this state,** data is permanently unrecoverable**, and the device must be wiped.
 * **Institutional Recovery Key (IRK)**: Modern management favors the "Personal Recovery Key (PRK)" mechanism for higher security.

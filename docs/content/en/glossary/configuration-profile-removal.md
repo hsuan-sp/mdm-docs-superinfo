@@ -5,7 +5,7 @@ term: Configuration Profile Removal
 ---
 ## Term Definition
 
-* **Configuration Profile Removal**is an MDM directive that remotely uninstalls a specific management profile and its associated payload from a device.
+* **Configuration Profile Removal** is an MDM directive that remotely uninstalls a specific management profile and its associated payload from a device.
 
 Consequences of removal:
 
@@ -15,6 +15,6 @@ Consequences of removal:
 
 ## Analogy
 
-This is the**"Take It Back"**button for IT.
+This is the **"Take It Back"** button for IT.
 
-When a student graduates or an employee leaves the company, IT can click one button to remotely**"reclaim"**all the school’s digital property—like the secret Wi-Fi password and specific campus settings—leaving the device clean and ready for its next owner.
+When a student graduates or an employee leaves the company, IT can click one button to remotely **"reclaim"** all the school’s digital property—like the secret Wi-Fi password and specific campus settings—leaving the device clean and ready for its next owner.

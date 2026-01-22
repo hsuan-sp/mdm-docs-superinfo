@@ -5,7 +5,7 @@ term: Camera Access Control per App
 ---
 ## Term Definition
 
-A granular MDM restriction key introduced in**OS version 26**(`allowedCameraRestrictionBundleIDs`) that provides precise hardware governance.
+A granular MDM restriction key introduced in **OS version 26** (`allowedCameraRestrictionBundleIDs`) that provides precise hardware governance.
 
 Functional capabilities:
 
@@ -19,6 +19,6 @@ In a classroom, IT can allow a specific science app to use the camera for captur
 
 ## Analogy
 
-In the past, camera access was like a**"Main Front Door Key"**—it was either all open or all locked.
+In the past, camera access was like a **"Main Front Door Key"**—it was either all open or all locked.
 
-Now, it's like a**"Hotel Keycard System."**IT can program the card to let you into the "Science Lab" (the classroom app), while simultaneously keeping the "Game Room" (distracting apps) locked, protecting your privacy and focus.
+Now, it's like a **"Hotel Keycard System."** IT can program the card to let you into the "Science Lab" (the classroom app), while simultaneously keeping the "Game Room" (distracting apps) locked, protecting your privacy and focus.

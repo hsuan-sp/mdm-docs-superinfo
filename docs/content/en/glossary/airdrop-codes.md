@@ -5,7 +5,7 @@ term: AirDrop Codes
 ---
 ## Term Definition
 
-Introduced in**iOS 26.2**,**AirDrop Codes**add an extra layer of privacy and security for wireless file sharing.
+Introduced in **iOS 26.2**,** AirDrop Codes**add an extra layer of privacy and security for wireless file sharing.
 
 Key features include:
 
@@ -18,6 +18,6 @@ Schools should evaluate how this affects their AirDrop policies. While it increa
 
 ## Analogy
 
-In the past, AirDrop was like an**"Open Mailbox"**—anyone nearby could try to drop something in.
+In the past, AirDrop was like an **"Open Mailbox"**—anyone nearby could try to drop something in.
 
-With**AirDrop Codes**, it's like adding a**"Combination Lock"**to your mailbox. Only the people you give the code to can send you files, making the experience much more private and secure.
+With **AirDrop Codes**, it's like adding a **"Combination Lock"** to your mailbox. Only the people you give the code to can send you files, making the experience much more private and secure.

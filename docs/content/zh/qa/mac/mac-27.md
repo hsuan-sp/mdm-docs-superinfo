@@ -28,7 +28,7 @@ title: 【自動化維管】利用 macOS 26 DDM 設定「智慧能源管理」�
 1. **更新優先喚醒 (Update-Initiated Wake)**：
 
 * **設定**：啟用 DDM 中的 `Allow Wake for Managed Activity`。
-* **效果**：即使 Mac 處於睡眠狀態，當 Jamf Pro 推送**安全性更新 (Rapid Security Response)**或**DDM 軟體配給** 時，Mac 會自動短暫喚醒、完成安裝後再度進入深度睡眠。
+* **效果 **：即使 Mac 處於睡眠狀態，當 Jamf Pro 推送** 安全性更新 (Rapid Security Response) **或** DDM 軟體配給**時，Mac 會自動短暫喚醒、完成安裝後再度進入深度睡眠。
 
 1. **節能回報 (Energy Status Channel)**：
 

@@ -23,21 +23,21 @@ iPad 9（Lightning 介面）以前的裝置，與 iPad 10（USB-C 介面）以�
 
 * **Apple Pencil 相容性與轉接方案：**
 
-1. **iPad 9 (Lightning) 世代**：僅支援 **Apple Pencil (第 1 代)**。
+1. **iPad 9 (Lightning) 世代 **：僅支援** Apple Pencil (第 1 代)**。
 
 * 配對與充電方式是直接將筆頭插入 iPad 底部的 Lightning 埠。
 
 2. **iPad 10 (USB-C 基礎款)**：
 
-* **若沿用**Apple Pencil (第 1 代)**：必須額外購買**「USB-C 對 Apple Pencil 轉接器」**。配對時需透過 USB-C 線接上轉接器與筆，過程較為繁瑣，建議由老師統一保管轉接器，避免學生遺失。
-* **若新購**Apple Pencil (USB-C)**：可直接透過 USB-C 線進行配對與充電，但要注意此款筆**不具備壓力感應功能**。
+* **若沿用 ** Apple Pencil (第 1 代)**：必須額外購買 **「USB-C 對 Apple Pencil 轉接器」**。配對時需透過 USB-C 線接上轉接器與筆，過程較為繁瑣，建議由老師統一保管轉接器，避免學生遺失。
+* **若新購 ** Apple Pencil (USB-C)**：可直接透過 USB-C 線進行配對與充電，但要注意此款筆 ** 不具備壓力感應功能**。
 
 1. **iPad Pro (M4)、iPad Air (M2/M3)、iPad mini 7 (A17 Pro) 高階機型**：
 
-* **重大變更**：這些機型改用新磁吸結構，**不再支援 Apple Pencil (第 2 代)**。
+* **重大變更 **：這些機型改用新磁吸結構，** 不再支援 Apple Pencil (第 2 代)**。
 * **僅支援**：
 
-* **Apple Pencil Pro**（建議）：具備側壓 (Squeeze)、陀螺儀旋轉、觸覺回饋，並支援「尋找網路 (Find My)」，遺失時可定位追蹤，對校園管理極為重要。
+* **Apple Pencil Pro** （建議）：具備側壓 (Squeeze)、陀螺儀旋轉、觸覺回饋，並支援「尋找網路 (Find My)」，遺失時可定位追蹤，對校園管理極為重要。
 * **Apple Pencil (USB-C)**：預算有限時的選項，但無壓力感應與進階功能。
 * **採購提醒**：若學校有 M4 iPad Pro，千萬不要採購 Apple Pencil 2，會完全無法使用。
 
@@ -45,7 +45,7 @@ iPad 9（Lightning 介面）以前的裝置，與 iPad 10（USB-C 介面）以�
 
 * **充電車與佈線管理建議：**
 
-1. **分區管理**：強烈建議將充電車進行 **「硬體分區佈線」**。
+1. **分區管理 **：強烈建議將充電車進行**「硬體分區佈線」**。
 
  例如：前 15 孔位設定 Lightning 線材專供 iPad 9；
  後 15 孔位設定 USB-C 線材專供 iPad 10，並在車體外側貼上明顯標籤。

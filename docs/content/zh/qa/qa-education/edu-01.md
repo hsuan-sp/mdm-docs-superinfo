@@ -25,7 +25,7 @@ title: iPadOS 17 以上沒有顯示 VPN 圖示，這樣網路過濾或是使用�
 | 版本 | 技術架構 | 狀態列顯示 |
 | :--- | :--- | :--- |
 | iPadOS 16 及以前 | Per-App VPN / Always-On VPN | 顯示 VPN 圖示 |
-| iPadOS 17 ~ 26 | DNS Proxy + Content Filter | **不顯示**VPN 圖示 |
+| iPadOS 17 ~ 26 | DNS Proxy + Content Filter |**不顯示** VPN 圖示 |
 
 * **2026 年新技術：Return to Service (Return to Service) 網路保留**
 
@@ -41,7 +41,7 @@ title: iPadOS 17 以上沒有顯示 VPN 圖示，這樣網路過濾或是使用�
 
 1. **開啟 Jamf Trust App**：
 
-* **若顯示**綠色盾牌 (Protected)**，表示過濾功能正常運作中。
+* **若顯示 ** 綠色盾牌 (Protected)**，表示過濾功能正常運作中。
 
 * 若顯示黃色或紅色，可能有連線問題，需進一步排查。
 

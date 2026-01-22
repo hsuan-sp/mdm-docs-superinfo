@@ -5,7 +5,7 @@ term: Pending Command
 ---
 ## Term Definition
 
-A**Pending Command**is an administrative instruction sent by the MDM server that has not yet been executed by the target device.
+A **Pending Command** is an administrative instruction sent by the MDM server that has not yet been executed by the target device.
 
 Common causes for pending status:
 
@@ -18,8 +18,8 @@ The command remains in the queue and will automatically execute the moment the d
 
 ## Analogy
 
-Think of this as a**"Letter Waiting in the Mailbox."**
+Think of this as a **"Letter Waiting in the Mailbox."**
 
 The school's main computer (the MDM) has already "mailed" the task to your iPad. However, if your iPad is turned off or unconnected, it can't "open the mail" yet.
 
-As soon as you turn your iPad on and connect to Wi-Fi, it**"checks the mail"**and does whatever work (installing apps, locking screen) is waiting for it.
+As soon as you turn your iPad on and connect to Wi-Fi, it **"checks the mail"** and does whatever work (installing apps, locking screen) is waiting for it.

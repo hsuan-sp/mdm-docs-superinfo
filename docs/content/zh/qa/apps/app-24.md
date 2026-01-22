@@ -22,7 +22,7 @@ title: iOS 26 如何限制學生只能透過 Wi-Fi 下載 App，避免消耗行�
 
 * **Jamf Pro：**
 
-1. 進入 **Blueprints**或**App Declarations**
+1. 進入 **Blueprints** 或 **App Declarations**
 2. 針對個別受管 App 進行定義
 3. 在部署宣告中設定 **「CellularDataPolicy」**：
 

@@ -7,7 +7,7 @@ term: Jamf Connect
 ---
 ## Term Definition
 
-* **Jamf Connect**is a security and identity solution designed to synchronize local Mac accounts with cloud-based identity providers.
+* **Jamf Connect** is a security and identity solution designed to synchronize local Mac accounts with cloud-based identity providers.
 
 Key benefits:
 
@@ -18,8 +18,8 @@ Key benefits:
 
 ## Analogy
 
-This is the**"Cloud ID Portal"**for your Mac.
+This is the **"Cloud ID Portal"** for your Mac.
 
-Instead of having a separate, confusing password just for your laptop,**Jamf Connect**lets you log in using your regular school email and password.
+Instead of having a separate, confusing password just for your laptop,**Jamf Connect** lets you log in using your regular school email and password.
 
-It's like having a**"Single Master Key"**—if you change your school password in your browser, your Mac password automatically updates to match, so you only ever have to remember one single set of login details for everything you do at school.
+It's like having a **"Single Master Key"**—if you change your school password in your browser, your Mac password automatically updates to match, so you only ever have to remember one single set of login details for everything you do at school.

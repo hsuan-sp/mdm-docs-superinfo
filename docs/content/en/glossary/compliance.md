@@ -5,7 +5,7 @@ term: Compliance
 ---
 ## Term Definition
 
-* **Compliance**measures whether a managed device currently satisfies the organization’s mandatory security and configuration standards.
+* **Compliance** measures whether a managed device currently satisfies the organization’s mandatory security and configuration standards.
 
 Typical compliance checks include:
 
@@ -18,8 +18,8 @@ If a device drifts out of compliance, MDM can automatically trigger alerts or re
 
 ## Analogy
 
-Think of this as a**"Digital Security Health Check."**
+Think of this as a **"Digital Security Health Check."**
 
 Before entering a high-security lab, you must be checked for proper gear (safety goggles, ID badge). Similarly, the system checks every device to see if it is "healthy" and following the rules.
 
-If a device has an old, unpatched system or no password, it’s**"out of compliance"**and might be blocked from the school network until it is "healed" and following the security rules again.
+If a device has an old, unpatched system or no password, it’s **"out of compliance"** and might be blocked from the school network until it is "healed" and following the security rules again.

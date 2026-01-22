@@ -27,7 +27,7 @@ title: 如何讓 iPad 重置後自動連上 Wi-Fi 並完成註冊 (Return to Ser
 * **前提條件**：
 
 * **硬體要求**：iPad 需搭載 iPadOS 17 或更新版本。
-* **管理狀態**：裝置必須已透過 ADE 註冊為**「受監管 (Supervised)」** 狀態。
+* **管理狀態 **：裝置必須已透過 ADE 註冊為**「受監管 (Supervised)」** 狀態。
 
 * **設定準備**：Jamf Pro 中必須已準備好對應的 PreStage 註冊，且該 PreStage 已設定 Wi-Fi 內容。
 

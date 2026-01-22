@@ -26,8 +26,8 @@ In the app details page within Jamf Pro,**uncheck 'Automatically update app'**. 
 
 ## 2. Establish a 'Maintenance Window'
 
-Coordinate a fixed time with the school (e.g., every Friday after 5 PM). Use Jamf Pro's**Mass Actions**to select the target device groups and manually send the**Update Application**command.
+Coordinate a fixed time with the school (e.g., every Friday after 5 PM). Use Jamf Pro's **Mass Actions** to select the target device groups and manually send the **Update Application** command.
 
 ## 3. Leverage Version Pinning
 
-If your environment uses**Volume Purchase (VPP)**, while you cannot technically "downgrade" an app, you can choose not to trigger the update command. This keeps all devices on a stable, current version until a planned upgrade during breaks.
+If your environment uses **Volume Purchase (VPP)**, while you cannot technically "downgrade" an app, you can choose not to trigger the update command. This keeps all devices on a stable, current version until a planned upgrade during breaks.

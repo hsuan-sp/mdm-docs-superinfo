@@ -22,7 +22,7 @@ However, you can still distribute your own PDFs or ePub files to students using 
 
 1. **Upload to Jamf Pro**: In the "eBooks" section of Jamf Pro, you can directly upload PDF or ePub files.
 2. **Assign to Devices**: Scope these custom e-books to your target device groups.
-3. **Student Access**: Students will find these materials ready for reading in the native**Books**app on their iPads.
+3. **Student Access **: Students will find these materials ready for reading in the native** Books**app on their iPads.
 
 ## Option 2: Using the 'Files' App or Cloud Storage
 

@@ -22,10 +22,10 @@ While Apple releases updates every few weeks for security and features, "newest"
 
 | Potential Risk | Description |
 | :--- | :--- |
-| **App Compatibility** | Third-party teaching apps may not be optimized for the new version, leading to crashes. |
-| **MDM Instability** | In rare cases, new versions may have temporary issues with certain Jamf Pro commands. |
-| **Unexpected Bugs** | New versions may have bugs that Apple hasn't discovered yet; fixes often come weeks later. |
-| **Update Failures** | Interruptions (low battery, network loss) during update can leave the device in Recovery Mode. |
+|**App Compatibility**| Third-party teaching apps may not be optimized for the new version, leading to crashes. |
+|**MDM Instability**| In rare cases, new versions may have temporary issues with certain Jamf Pro commands. |
+|**Unexpected Bugs**| New versions may have bugs that Apple hasn't discovered yet; fixes often come weeks later. |
+|**Update Failures**| Interruptions (low battery, network loss) during update can leave the device in Recovery Mode. |
 
 ## The "N-1" Principle:
 

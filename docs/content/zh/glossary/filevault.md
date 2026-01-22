@@ -5,14 +5,14 @@ term: FileVault
 ---
 ## 術語定義
 
-* **FileVault** 是 macOS 內建的**全磁碟加密 (Full Disk Encryption)** 技術。
+* **FileVault ** 是 macOS 內建的**全磁碟加密 (Full Disk Encryption)** 技術。
 
 它是現代企業資安的基石，主要功能包括：
 
-* **高強度加密**：使用**XTS-AES-128** 加密演算法搭配 256 位元金鑰，防止未經授權的資料存取。
+* **高強度加密 **：使用** XTS-AES-128**加密演算法搭配 256 位元金鑰，防止未經授權的資料存取。
 
 * **開機保護**：必須輸入正確的密碼登入後，硬碟資料才會被解密讀取。
-* **金鑰託管**：MDM 可以強制啟用 FileVault，並自動收集**個人復原金鑰 (Personal Recovery Key, PRK)**。當員工忘記密碼時，IT 人員可透過此金鑰協助解鎖。
+* **金鑰託管 **：MDM 可以強制啟用 FileVault，並自動收集** 個人復原金鑰 (Personal Recovery Key, PRK)**。當員工忘記密碼時，IT 人員可透過此金鑰協助解鎖。
 
 ## 白話文比喻
 

@@ -5,7 +5,7 @@ term: Wi-Fi Payload
 ---
 ## Term Definition
 
-A**Wi-Fi Payload**is the section of an MDM Profile that configures wireless connectivity settings.
+A **Wi-Fi Payload** is the section of an MDM Profile that configures wireless connectivity settings.
 
 Contents:
 
@@ -18,8 +18,8 @@ By deploying this payload, IT ensures devices connect to the secure network imme
 
 ## Analogy
 
-Think of this as an**"Automatic Login Sheet."**
+Think of this as an **"Automatic Login Sheet."**
 
-Instead of a teacher having to shout the Wi-Fi password across the room 30 times, IT**"whispers"**the password directly into the iPad's memory through the MDM.
+Instead of a teacher having to shout the Wi-Fi password across the room 30 times, IT **"whispers"** the password directly into the iPad's memory through the MDM.
 
-The iPad**"reads"**the password and connects to the internet automatically, so you're ready to start working the moment you walk into the building.
+The iPad **"reads"** the password and connects to the internet automatically, so you're ready to start working the moment you walk into the building.

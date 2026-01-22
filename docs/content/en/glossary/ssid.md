@@ -5,7 +5,7 @@ term: SSID (Service Set Identifier)
 ---
 ## Term Definition
 
-An**SSID (Service Set Identifier)**is the technical term for the name of a Wi-Fi network broadcast by a router.
+An **SSID (Service Set Identifier)** is the technical term for the name of a Wi-Fi network broadcast by a router.
 
 Common school setup:
 
@@ -15,8 +15,8 @@ Common school setup:
 
 ## Analogy
 
-An SSID is the**"Name Above the Classroom Door."**
+An SSID is the **"Name Above the Classroom Door."**
 
 When you walk through the hallway, you see "Year 5", "Year 6", and "Staff Room." You choose the room that matches your badge.
 
-On your iPad, you choose the Wi-Fi**"Room"**(the SSID) that matches your actual campus role to get the right level of internet access.
+On your iPad, you choose the Wi-Fi **"Room"** (the SSID) that matches your actual campus role to get the right level of internet access.

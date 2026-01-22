@@ -32,7 +32,7 @@ If handled incorrectly, iPads will lose contact with the old Wi-Fi and be unable
 
 3. **Step 3: Grace Period**:
 
-* **Keep both SSIDs active for at least**2 to 3 days**.
+* **Keep both SSIDs active for at least ** 2 to 3 days**.
 
 * **This ensures that devices that were asleep, powered off, or off-site have a chance to wake up and receive the new Wi-Fi profile before the old network disappears.**
 

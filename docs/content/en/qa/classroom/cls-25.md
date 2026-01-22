@@ -22,15 +22,15 @@ title: >-
 
 | Feature | Classroom (v6.0+) | Schoolwork |
 | :--- | :--- | :--- |
-| **Primary Goal** | Classroom order and guidance. | Handing out materials, collecting work, grading. |
-| **Real-time Level**|**High**(Immediate). | **Low**(Asynchronous). |
-| **Proximity**| Supports local and remote classes (Cloud classes). |**Unlimited**(Distance learning). |
-| **Screen View** | ✅ (View student screens in real-time). | ❌ |
-| **Device Lock** | ✅ (Lock screen or lock into a specific app). | ❌ |
-| **File Exchange** | AirDrop or Cloud share. | ✅ End-to-end assignment workflow. |
-| **Tracking** | Current app usage only. | ✅ Progress down to the minute. |
-| **Teacher Device** | iPhone, iPad, Mac. | iPad. |
-| **Student Device**| iPad, Mac. |**iPad**(Optimized for Apple Pencil). |
+|**Primary Goal**| Classroom order and guidance. | Handing out materials, collecting work, grading. |
+|**Real-time Level** | **High** (Immediate). |**Low** (Asynchronous). |
+|**Proximity**| Supports local and remote classes (Cloud classes). |**Unlimited** (Distance learning). |
+|**Screen View**| ✅ (View student screens in real-time). | ❌ |
+|**Device Lock**| ✅ (Lock screen or lock into a specific app). | ❌ |
+|**File Exchange**| AirDrop or Cloud share. | ✅ End-to-end assignment workflow. |
+|**Tracking**| Current app usage only. | ✅ Progress down to the minute. |
+|**Teacher Device**| iPhone, iPad, Mac. | iPad. |
+|**Student Device**| iPad, Mac. |**iPad** (Optimized for Apple Pencil). |
 
 ## Teaching Scenarios
 
@@ -61,5 +61,5 @@ title: >-
 
 ## Summary Advice
 
-* **If you need to manage order, push web pages, and watch screens ➡ ️ Use**Classroom**.
-* **If you need to distribute, collect, and grade assignments ➡ ️ Use**Schoolwork**.
+* **If you need to manage order, push web pages, and watch screens ➡ ️ Use ** Classroom**.
+* **If you need to distribute, collect, and grade assignments ➡ ️ Use ** Schoolwork**.

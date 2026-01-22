@@ -19,16 +19,16 @@ These two methods are often confused, but they serve different purposes:
 
 ## Feature Comparison:
 
-| Feature | **Guided Access**|**Single App Mode (ASAM)** |
+| Feature |**Guided Access** | **Single App Mode (ASAM)**|
 | :--- | :--- | :--- |
-| **Activation** | Manual (Triple-click Power/Home button) | Remote MDM command or App-triggered |
-| **Primary Use**| Classroom focus, early childhood |**High-stakes Testing (CBT)**, Kiosks |
-| **Student Exit**| Possible (if PIN is known) |**Impossible to exit manually** |
-| **AI Feature Control**| Requires manual Accessibility adjustment |**Automatically disables system AI**(e.g., Writing Tools) |
-| **After Reboot**| Disables (must be restarted) |**Remains Locked** |
-| **MDM Required** | ❌ No | ✅ Yes |
+|**Activation**| Manual (Triple-click Power/Home button) | Remote MDM command or App-triggered |
+|**Primary Use**| Classroom focus, early childhood |**High-stakes Testing (CBT)**, Kiosks |
+|**Student Exit**| Possible (if PIN is known) |**Impossible to exit manually**|
+|**AI Feature Control**| Requires manual Accessibility adjustment |**Automatically disables system AI** (e.g., Writing Tools) |
+|**After Reboot**| Disables (must be restarted) |**Remains Locked**|
+|**MDM Required**| ❌ No | ✅ Yes |
 
 ## Practical Advice:
 
-* **Use Guided Access**for quick, low-stakes classroom management where a teacher needs students to stay in one app for a short duration.
-* **Use Single App Mode**for formal exams or public-facing informational kiosks where manual tampering must be completely prevented.
+* **Use Guided Access** for quick, low-stakes classroom management where a teacher needs students to stay in one app for a short duration.
+* **Use Single App Mode** for formal exams or public-facing informational kiosks where manual tampering must be completely prevented.

@@ -25,11 +25,11 @@ By synchronizing the local Mac login with organizational cloud accounts (Microso
 ## 1. Configure PSSO in MDM
 
 * **Set up the Platform SSO configuration in Jamf Pro.**
-* **Select the authentication mode:**'Shared Secret'**(standard) or**'Hardware Bound Key'**(highest security using the Secure Enclave).
+* **Select the authentication mode:**'Shared Secret'** (standard) or **'Hardware Bound Key'** (highest security using the Secure Enclave).
 
 ## 2. Enable Boot-to-Desktop
 
-* **Enable**'FileVault Login & PSSO Synchronization.'**
+* **Enable **'FileVault Login & PSSO Synchronization.'**
 * **Result**: When the teacher enters their password at the initial FileVault disk-unlock screen, the system automatically uses those credentials to complete the cloud authentication in the background. The Mac loads straight to the desktop without asking for a second password.
 
 ## 3. Enforce Strong Policies via IdP

@@ -5,7 +5,7 @@ term: Proxy
 ---
 ## Term Definition
 
-A**Proxy Server**acts as an intermediary gateway between a user's device and the internet.
+A **Proxy Server** acts as an intermediary gateway between a user's device and the internet.
 
 Functions:
 
@@ -16,8 +16,8 @@ Functions:
 
 ## Analogy
 
-Think of a Proxy as a**"Personal Shopper"**for the internet.
+Think of a Proxy as a **"Personal Shopper"** for the internet.
 
-Instead of you going directly to a store (a website) yourself, you hand a shopping list to your device, which gives it to the**Personal Shopper**(the Proxy).
+Instead of you going directly to a store (a website) yourself, you hand a shopping list to your device, which gives it to the **Personal Shopper** (the Proxy).
 
 They go out, verify the store is safe, buy the item, and bring it back to you. This ensures that no "forbidden items" are brought onto campus because the shopper checks everything first.

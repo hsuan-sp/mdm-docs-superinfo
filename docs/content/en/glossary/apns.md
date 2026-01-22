@@ -6,7 +6,7 @@ term: APNs (Apple Push Notification service)
 ---
 ## Term Definition
 
-* **Apple Push Notification service (APNs)**is the critical "Messenger" between an MDM server and an Apple device.
+* **Apple Push Notification service (APNs)** is the critical "Messenger" between an MDM server and an Apple device.
 
 Because an MDM server cannot communicate directly with a device (due to firewalls and battery-saving sleeps), it follows this workflow:
 
@@ -18,7 +18,7 @@ Because an MDM server cannot communicate directly with a device (due to firewall
 
 ## Analogy
 
-APNs is the**"Tap on the Shoulder"**for your iPad.
+APNs is the **"Tap on the Shoulder"** for your iPad.
 
 When the school’s management system wants to install an app, it can't just shout—it has to ask Apple to "tap" the iPad's shoulder and say, "Hey, go check the school server for a new mission."
 

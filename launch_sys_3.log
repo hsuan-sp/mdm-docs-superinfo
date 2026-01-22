@@ -1,0 +1,36 @@
+🚀 Starting Dual Editor (MacOS System Python 3.9)...
+⬇️ Ensures dependencies (tkhtmlview, markdown) for /usr/bin/python3...
+Collecting tkhtmlview
+  Downloading tkhtmlview-0.3.1-py3-none-any.whl (10 kB)
+Collecting markdown
+  Downloading markdown-3.9-py3-none-any.whl (107 kB)
+Collecting pillow
+  Downloading pillow-11.3.0-cp39-cp39-macosx_11_0_arm64.whl (4.7 MB)
+  Downloading pillow-10.4.0-cp39-cp39-macosx_11_0_arm64.whl (3.4 MB)
+Collecting requests<3.0.0,>=2.28.2
+  Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+Collecting importlib-metadata>=4.4
+  Downloading importlib_metadata-8.7.1-py3-none-any.whl (27 kB)
+Collecting zipp>=3.20
+  Downloading zipp-3.23.0-py3-none-any.whl (10 kB)
+Collecting idna<4,>=2.5
+  Downloading idna-3.11-py3-none-any.whl (71 kB)
+Collecting charset_normalizer<4,>=2
+  Downloading charset_normalizer-3.4.4-cp39-cp39-macosx_10_9_universal2.whl (209 kB)
+Collecting certifi>=2017.4.17
+  Downloading certifi-2026.1.4-py3-none-any.whl (152 kB)
+Collecting urllib3<3,>=1.21.1
+  Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+Installing collected packages: zipp, urllib3, idna, charset-normalizer, certifi, requests, pillow, importlib-metadata, tkhtmlview, markdown
+  WARNING: The script normalizer is installed in '/Users/superinfo/Library/Python/3.9/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script markdown_py is installed in '/Users/superinfo/Library/Python/3.9/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed certifi-2026.1.4 charset-normalizer-3.4.4 idna-3.11 importlib-metadata-8.7.1 markdown-3.9 pillow-10.4.0 requests-2.32.5 tkhtmlview-0.3.1 urllib3-2.6.3 zipp-3.23.0
+WARNING: You are using pip version 21.2.4; however, version 25.3 is available.
+You should consider upgrading via the '/Library/Developer/CommandLineTools/usr/bin/python3 -m pip install --upgrade pip' command.
+🖥️ Launching DualEditor...
+/Users/superinfo/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+macOS 26 (2602) or later required, have instead 16 (1602) !
+./scripts/maintenance/DualEditorStart.sh: line 17: 94718 Abort trap: 6           "$PYTHON_BIN" "$EDITOR_SCRIPT"

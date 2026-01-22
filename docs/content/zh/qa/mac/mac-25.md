@@ -23,11 +23,11 @@ title: 【資安稽核】如何利用 PSSO 實現「開機即登入」，並自�
 1. **整合雲端帳號**：
 
 * 在 Jamf Pro 中設定 PSSO 配置。
-* **選取驗證模式為**「分層式加密 (Shared Secret)」**或**「硬體金鑰 (Hardware Bound Key)」**。
+* **選取驗證模式為 **「分層式加密 (Shared Secret)」** 或 **「硬體金鑰 (Hardware Bound Key)」**。
 
 1. **開機即登入 (Boot to Desktop)**：
 
-* **啟用**「FileVault 登入與 PSSO 同步」** 功能。
+* **啟用 **「FileVault 登入與 PSSO 同步」** 功能。
 
 * **效果**：使用者在開機第一個畫面（FileVault）輸入密碼後，系統會自動在後台完成組織驗證，直接載入桌面，不再跳出第二次登入視窗。
 

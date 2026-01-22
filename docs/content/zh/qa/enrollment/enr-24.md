@@ -36,7 +36,7 @@ title: 如何設定「強制執行截止日期」(Enforcement Deadline) 確保�
 
 ## 軟體更新截止日設定
 
-1. 進入 **Devices**>**Blueprints**或**Computers**>**Blueprints**
+1. 進入 **Devices**>** Blueprints **或** Computers **>** Blueprints**
 2. 建立或編輯 **Software Update Declaration**
 3. 設定更新目標：
 
@@ -99,7 +99,7 @@ title: 如何設定「強制執行截止日期」(Enforcement Deadline) 確保�
 * 建議提前手動更新以避免被強制中斷
 * 遇到問題時的聯繫管道
 
-* **向學生說明**（假設需要）：
+* **向學生說明** （假設需要）：
 
 * iPad 需要更新以保持安全
 * 建議在家中充電時讓裝置自動更新

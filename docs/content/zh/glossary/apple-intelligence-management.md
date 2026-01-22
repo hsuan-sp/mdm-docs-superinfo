@@ -5,12 +5,12 @@ term: Apple Intelligence Management
 ---
 ## 術語定義
 
-* **Apple Intelligence Management (Apple Intelligence 管理)** 指的是於**iOS 18.1**與**macOS 15.1** 中推出的 MDM 控制項，旨在規範生成式 AI 功能的使用權限。
+* **Apple Intelligence Management (Apple Intelligence 管理) ** 指的是於**iOS 18.1 ** 與**macOS 15.1** 中推出的 MDM 控制項，旨在規範生成式 AI 功能的使用權限。
 
 機構可以透過 MDM 管理以下項目：
 
 * **內容分析**：決定 AI 工具是否能分析使用者內容（如電子郵件、文件與錄音逐字稿）。
-* **資料傳輸**：控管資料傳送至**私有雲端運算 (PCC)** 層級的規則。
+* **資料傳輸 **：控管資料傳送至** 私有雲端運算 (PCC)**層級的規則。
 
 * **隱私合規**：確保敏感的校務資料不會被用於模型訓練，或在未經授權的情況下被處理。
 

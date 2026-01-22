@@ -1,0 +1,13 @@
+🚀 Starting Dual Editor (System Python)...
+⬇️ Ensuring dependencies...
+Requirement already satisfied: tkhtmlview in /opt/homebrew/lib/python3.14/site-packages (0.3.1)
+Requirement already satisfied: markdown in /opt/homebrew/lib/python3.14/site-packages (3.10.1)
+Requirement already satisfied: Pillow<11,>=10 in /opt/homebrew/lib/python3.14/site-packages (from tkhtmlview) (10.4.0)
+Requirement already satisfied: requests<3.0.0,>=2.28.2 in /opt/homebrew/lib/python3.14/site-packages (from tkhtmlview) (2.32.5)
+Requirement already satisfied: charset_normalizer<4,>=2 in /opt/homebrew/lib/python3.14/site-packages (from requests<3.0.0,>=2.28.2->tkhtmlview) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in /opt/homebrew/lib/python3.14/site-packages (from requests<3.0.0,>=2.28.2->tkhtmlview) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /opt/homebrew/lib/python3.14/site-packages (from requests<3.0.0,>=2.28.2->tkhtmlview) (2.6.3)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/homebrew/lib/python3.14/site-packages (from requests<3.0.0,>=2.28.2->tkhtmlview) (2026.1.4)
+🖥️ Launching DualEditor...
+❌ Dependency Error: No module named '_tkinter'
+Please run: pip3 install tkhtmlview markdown --break-system-packages

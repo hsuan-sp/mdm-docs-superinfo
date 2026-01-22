@@ -16,7 +16,7 @@ title: Can we install apps on iPads without signing into an Apple ID?
 
 * **Yes. This is called "Device-based Assignment," and it is the standard and most efficient method for school environments.**
 
-By using the**Volume Purchase Program (VPP)**within Apple School Manager (ASM), the school links app licenses to the device’s**Serial Number**rather than a specific student’s Apple ID.
+By using the **Volume Purchase Program (VPP)** within Apple School Manager (ASM), the school links app licenses to the device’s **Serial Number** rather than a specific student’s Apple ID.
 
 ## Advantages for the School:
 
@@ -26,8 +26,8 @@ By using the**Volume Purchase Program (VPP)**within Apple School Manager (ASM), 
 
 ## Important Limitation: In-App Purchases
 
-Since the device is not signed into a personal account,**In-App Purchases (IAP) are not supported**in this mode. If your curriculum requires premium features within an app, we strongly recommend choosing apps that offer a "Pro" or "Full" version available as a one-time VPP purchase.
+Since the device is not signed into a personal account,**In-App Purchases (IAP) are not supported** in this mode. If your curriculum requires premium features within an app, we strongly recommend choosing apps that offer a "Pro" or "Full" version available as a one-time VPP purchase.
 
 ## Technical Requirement:
 
-In the Jamf Pro App settings, ensure the**"Assign VPP Content"**checkbox is selected and the distribution method is set to**"Install Automatically/Prompt users to install."**
+In the Jamf Pro App settings, ensure the **"Assign VPP Content"** checkbox is selected and the distribution method is set to **"Install Automatically/Prompt users to install."**

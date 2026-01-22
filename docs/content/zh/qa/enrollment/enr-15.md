@@ -37,8 +37,8 @@ title: iPad 顯示「無法使用」或因密碼輸入錯誤太多次鎖死，�
 
 1. **準備電腦工具**：
 
-* **macOS**：使用內建的**Finder**或**Apple Configurator**。
-* **Windows**：請安裝微軟商店提供的**Apple 裝置 App (Apple Devices app)**；若環境較舊則使用 iTunes。
+* **macOS **：使用內建的** Finder **或** Apple Configurator**。
+* **Windows **：請安裝微軟商店提供的** Apple 裝置 App (Apple Devices app)**；若環境較舊則使用 iTunes。
 
 1. **進入復原模式 (Recovery Mode)**：
 

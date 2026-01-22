@@ -27,13 +27,13 @@ This solves the problem of student data (Safari history, projects, etc.) getting
 
 ## How to Configure (via Jamf Pro):
 
-1. **Navigate**: Go to**Mobile Devices > PreStage Enrollments**.
-2. **Enable**: In your PreStage profile, find and check the**Shared iPad**option.
-3. **Set User Capacity**: Define the**Maximum Number of Users**.
+1. **Navigate **: Go to** Mobile Devices > PreStage Enrollments**.
+2. **Enable **: In your PreStage profile, find and check the** Shared iPad**option.
+3. **Set User Capacity **: Define the** Maximum Number of Users**.
 
 * **Storage Tip**: While iPadOS supports "Dynamic Quota," we recommend no more than 3 users for 64GB models. Larger models (128GB+) can accommodate more users.
 
-1. **Wipe and Re-enroll**: If the device is not currently in Shared Mode, you**must wipe the device**and re-enroll it via the updated PreStage profile for the feature to take effect.
+1. **Wipe and Re-enroll **: If the device is not currently in Shared Mode, you** must wipe the device**and re-enroll it via the updated PreStage profile for the feature to take effect.
 
 ## Pros and Cons:
 

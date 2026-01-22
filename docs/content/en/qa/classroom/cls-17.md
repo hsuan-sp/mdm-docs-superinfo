@@ -16,15 +16,15 @@ title: How do I prevent students from manually deleting apps?
 
 ## Configuration:
 
-In the Jamf Pro**Restrictions**profile, uncheck**Allow removing apps**.
+In the Jamf Pro **Restrictions** profile, uncheck **Allow removing apps**.
 
 ## Practical Effects:
 
-1. **Deletion Blocked**: When a student long-presses an app icon, the red "Delete App" option will**not appear**in the menu.
+1. **Deletion Blocked **: When a student long-presses an app icon, the red "Delete App" option will** not appear**in the menu.
 2. **Removal from Home Screen (Critical Detail)**:
 
-* **Even if deletion is blocked, students can still select**Remove from Home Screen**, which hides the app in the "App Library" on the far right.
-* **Solution**: To prevent "hidden apps," pair this with a**Home Screen Layout**profile to pin icons permanently to the desktop.
+* **Even if deletion is blocked, students can still select ** Remove from Home Screen**, which hides the app in the "App Library" on the far right.
+* **Solution **: To prevent "hidden apps," pair this with a** Home Screen Layout**profile to pin icons permanently to the desktop.
 
 ## Practical Advice:
 

@@ -31,7 +31,7 @@ title: >-
 2. **OS Support Lifecycle**:
 
 * **2026–2027**: Intel Macs running macOS 26 remain fully functional with all current security patches.
-* **2027–2029**: While macOS 27 will not install, Apple typically provides**2 additional years of Security Updates**for the previous version. We expect Intel Macs on macOS 26 to be safe for school use until approximately**late 2028 or early 2029**.
+* **2027–2029 **: While macOS 27 will not install, Apple typically provides** 2 additional years of Security Updates **for the previous version. We expect Intel Macs on macOS 26 to be safe for school use until approximately** late 2028 or early 2029**.
 
 1. **Software App Support**:
 
@@ -39,6 +39,6 @@ title: >-
 
 ## Advice for School IT Managers:
 
-* **Inventory Audit**: Use your MDM (Jamf Pro) to identify all Intel-based Macs. Set a "Retirement Target" of**Summer 2028**.
+* **Inventory Audit **: Use your MDM (Jamf Pro) to identify all Intel-based Macs. Set a "Retirement Target" of** Summer 2028**.
 * **Performance Gap**: Native Apple Silicon features (like on-device AI, high-efficiency video encoding, and iPhone Mirroring) are increasingly crippled or unavailable on Intel hardware.
-* **Procurement**: For any new purchases in 2026,**avoid second-hand Intel Macs**regardless of the price. The transition to M4/M5 Mac mini or MacBook Air is essential for long-term curriculum compatibility.
+* **Procurement **: For any new purchases in 2026,** avoid second-hand Intel Macs**regardless of the price. The transition to M4/M5 Mac mini or MacBook Air is essential for long-term curriculum compatibility.

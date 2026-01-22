@@ -17,22 +17,22 @@ title: >-
 
 * **User Enrollment is a privacy-first management mode specifically designed for "Bring Your Own Device" (BYOD) scenarios.**
 
-Unlike standard Enrollment used for school-owned iPads, User Enrollment (User-Driven) creates a**secure partition**on the device to separate school data from the student's personal photos, messages, and apps.
+Unlike standard Enrollment used for school-owned iPads, User Enrollment (User-Driven) creates a **secure partition** on the device to separate school data from the student's personal photos, messages, and apps.
 
 ## Comparison Table:
 
 | Feature | Device Enrollment (Standard/ADE) | User Enrollment (BYOD) |
 | :--- | :--- | :--- |
-| **Ownership** | Institutional Asset | Personal Property |
-| **Supervision** | Mandatory (Supervised) | Prohibited |
-| **Data Isolation**| Full Device control |**Managed Data Partition only** |
-| **Privacy Protection**| Standard school visibility |**Strict User Privacy**(IT cannot see personal apps or location) |
-| **Remote Wipe**| Wipes the entire device |**Wipes school data only**(Personal photos remain safe) |
-| **Removal**| Can be prevented by IT |**User can opt-out anytime** |
+|**Ownership**| Institutional Asset | Personal Property |
+|**Supervision**| Mandatory (Supervised) | Prohibited |
+|**Data Isolation**| Full Device control |**Managed Data Partition only**|
+|**Privacy Protection**| Standard school visibility |**Strict User Privacy** (IT cannot see personal apps or location) |
+|**Remote Wipe**| Wipes the entire device |**Wipes school data only** (Personal photos remain safe) |
+|**Removal**| Can be prevented by IT |**User can opt-out anytime**|
 
 ## Modern Approach (Account-Driven):
 
-Apple now recommends**Account-Driven User Enrollment**. Instead of downloading a profile from a website, the student goes to**Settings > General > VPN & Device Management**and signs in with their**Managed Apple Account**. The device recognizes the campus ID and automatically sets up the school partition.
+Apple now recommends **Account-Driven User Enrollment**. Instead of downloading a profile from a website, the student goes to ** Settings > General > VPN & Device Management**and signs in with their ** Managed Apple Account**. The device recognizes the campus ID and automatically sets up the school partition.
 
 ## Institutional Advice:
 

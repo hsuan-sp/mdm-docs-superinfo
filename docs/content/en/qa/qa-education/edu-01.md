@@ -23,17 +23,17 @@ This architectural shift is intentional and was implemented to improve device ba
 ## Why the Icon is Gone:
 
 * **Legacy (iOS 16 & older)**: Used "Always-On VPN" which displayed a permanent VPN icon.
-* **Modern (iOS 17 - 26)**: Uses native**Content Filtering APIs**. These operate at the system level without needing a separate VPN connection, so the icon is no longer displayed in the status bar.
+* **Modern (iOS 17 - 26) **: Uses native** Content Filtering APIs**. These operate at the system level without needing a separate VPN connection, so the icon is no longer displayed in the status bar.
 
 ## How to Verify Protection is Active:
 
-1. **Open the Jamf Trust App**: If it shows a**Green Shield (Protected)**, your data is being recorded and filtered correctly.
+1. **Open the Jamf Trust App **: If it shows a** Green Shield (Protected)**, your data is being recorded and filtered correctly.
 2. **Test the Filter**: Try navigating to a known blocked category (e.g., a gaming site) in Safari. If the page is blocked, the filter is active.
 3. **Check Jamf Pro**: Reconfirm that the "DNS Proxy" and "Content Filter" profiles are marked as "Installed" in the device inventory.
 
 ## New for 2026: Return to Service (Return to Service) Protection
 
-In macOS and**iOS 26**, these network filters are now protected by**Return to Service (Return to Service)**. Even if a device is erased, the management configuration is baked into the reactivation process, ensuring the device is "Born Protected" the moment it joins a network.
+In macOS and **iOS 26**, these network filters are now protected by ** Return to Service (Return to Service)**. Even if a device is erased, the management configuration is baked into the reactivation process, ensuring the device is "Born Protected" the moment it joins a network.
 
 ## Institutional Advice:
 

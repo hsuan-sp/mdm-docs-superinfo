@@ -58,7 +58,7 @@ title: macOS 26 的「透過 SSH 解鎖 FileVault」如何設定？有什麼安�
 
 * **⚠ ️ 重要警告：**
 
-在搭載 **M5 晶片**的 Mac 上，Apple 進一步強化了**Secure Enclave** 的保護機制。
+在搭載 **M5 晶片** 的 Mac 上，Apple 進一步強化了 **Secure Enclave** 的保護機制。
 
 * 若您在 macOS 26 中啟用了「極限安全模式」，SSH 遠端解鎖 FileVault 可能會失效。
 * **建議**：對於需要 SSH 遙測解鎖的機房機台，請在 MDM 限制中取消勾選「進階資料保護」相關的強制選項，以確保 Pre-boot 階段的網路棧能正常啟動。

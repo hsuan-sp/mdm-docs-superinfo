@@ -23,7 +23,7 @@ title: 如何防止學生利用 iOS 18 的功能「隱藏」或「鎖定」管�
 
 1. **不允許鎖定 App (allowLockedApps)**：
 
-* **禁止使用者對任何 App 啟用 Face ID/Touch ID 驗證鎖定。**註：若停用此項，系統會自動併同停用隱藏 App 的功能。**
+* **禁止使用者對任何 App 啟用 Face ID/Touch ID 驗證鎖定。** 註：若停用此項，系統會自動併同停用隱藏 App 的功能。**
 
 1. **不允許隱藏 App (allowHiddenApps)**：
 
@@ -31,4 +31,4 @@ title: 如何防止學生利用 iOS 18 的功能「隱藏」或「鎖定」管�
 
 * **技術細節**：
 
-上述設定在 iOS 18 以上版本可透過 **宣告式裝置管理 (DDM)**的**Configurations** 進行部署，比傳統 Profile 更具即時性。套用此限制後，學生長按 App Icon 時，選單中的「需要 Face ID」或「隱藏並需要 Face ID」選項將會反灰或消失。
+上述設定在 iOS 18 以上版本可透過 **宣告式裝置管理 (DDM)** 的 **Configurations** 進行部署，比傳統 Profile 更具即時性。套用此限制後，學生長按 App Icon 時，選單中的「需要 Face ID」或「隱藏並需要 Face ID」選項將會反灰或消失。

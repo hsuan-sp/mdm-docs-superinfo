@@ -21,7 +21,7 @@ title: What are the advantages of using the Mac mini (M4/M5) for school labs?
 1. **Zero-Wipe Migration**:
 
 * **Traditional PC**: Requires "Ghosting" or heavy image deployment via network.
-* **Mac mini (M5)**: Supports**Zero-Wipe MDM Migration**in macOS 26. This means if you change MDM providers, you can migrate the machine's ownership "in place" without wiping the drive or reinstalling educational software.
+* **Mac mini (M5) **: Supports** Zero-Wipe MDM Migration**in macOS 26. This means if you change MDM providers, you can migrate the machine's ownership "in place" without wiping the drive or reinstalling educational software.
 * **ADE Automation**: Unbox, plug in, and the machine automatically installs Office, Adobe, and network settings based on its serial number.
 
 1. **Space and Energy Efficiency**:

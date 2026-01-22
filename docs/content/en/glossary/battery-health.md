@@ -5,7 +5,7 @@ term: Battery Health
 ---
 ## Term Definition
 
-* **Battery Health**is a metric that indicates the current maximum capacity of a device’s battery relative to its capacity when new.
+* **Battery Health** is a metric that indicates the current maximum capacity of a device’s battery relative to its capacity when new.
 
 MDM integration allows:
 
@@ -15,6 +15,6 @@ MDM integration allows:
 
 ## Analogy
 
-This is the**"Physical Exam Report"**for a battery.
+This is the **"Physical Exam Report"** for a battery.
 
-A brand-new battery has 100% capacity, but it "loses its stamina" over time as it is used and recharged. IT doesn't need to manually check every iPad; they can just look at a digital report to see which students have**"tired" batteries**that need to be replaced, preventing a dead iPad in the middle of a lesson.
+A brand-new battery has 100% capacity, but it "loses its stamina" over time as it is used and recharged. IT doesn't need to manually check every iPad; they can just look at a digital report to see which students have **"tired" batteries** that need to be replaced, preventing a dead iPad in the middle of a lesson.

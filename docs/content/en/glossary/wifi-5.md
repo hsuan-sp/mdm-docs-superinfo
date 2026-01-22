@@ -5,7 +5,7 @@ term: Wi-Fi 5
 ---
 ## Term Definition
 
-* **Wi-Fi 5**(IEEE 802.11ac) is an older wireless standard introduced in 2014, operating exclusively in the 5 GHz frequency band.
+* **Wi-Fi 5** (IEEE 802.11ac) is an older wireless standard introduced in 2014, operating exclusively in the 5 GHz frequency band.
 
 Key characteristics:
 
@@ -15,8 +15,8 @@ Key characteristics:
 
 ## Analogy
 
-Think of this as a**"Wide Highway."**
+Think of this as a **"Wide Highway."**
 
-Before Wi-Fi 5 (Wi-Fi 4), we drove on narrow country roads (2.4 GHz). Wi-Fi 5 built a**wide, fast highway**(5 GHz) that allowed cars to drive much faster.
+Before Wi-Fi 5 (Wi-Fi 4), we drove on narrow country roads (2.4 GHz). Wi-Fi 5 built a **wide, fast highway** (5 GHz) that allowed cars to drive much faster.
 
 However, as more cars (Ipads) joined the road, the highway started to get congested because the traffic lights (router) weren't smart enough to manage the flow efficiently.

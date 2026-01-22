@@ -16,7 +16,7 @@ title: How can a teacher 'Log Out' all students from Shared iPads after class?
 
 ## How to Operate:
 
-In the**Classroom**app, tap**End Class**in the top left and confirm**Log Out Students**.
+In the **Classroom** app, tap **End Class** in the top left and confirm **Log Out Students**.
 
 ## Technical Logic (Based on Apple Official Specs):
 
@@ -27,13 +27,13 @@ In the**Classroom**app, tap**End Class**in the top left and confirm**Log Out Stu
 
 ## 2. Intelligent Caching
 
-* **Definition**: Data is**not**immediately deleted from the device after log-out; it is retained in the iPad's local storage.
-* **Purpose**: If the same student happens to use the**same iPad**next time, the system reads the local cache, enabling a "near-instant login."
+* **Definition **: Data is** not**immediately deleted from the device after log-out; it is retained in the iPad's local storage.
+* **Purpose **: If the same student happens to use the** same iPad**next time, the system reads the local cache, enabling a "near-instant login."
 * **OS 26 Enhancement**: Under the latest architecture, hardware-accelerated user switching has reduced log-in/out cycle times by approximately 30% compared to older versions.
 
 ## 3. Cloud Sync
 
-* **Correction**: Syncing data happens continuously in the background; it is**not**triggered by the log-out action itself.
+* **Correction **: Syncing data happens continuously in the background; it is** not**triggered by the log-out action itself.
 
 * **Even if the network is unstable during log-out, data remains safely cached locally. Once the device is connected to Wi-Fi and idle, the system automatically completes the iCloud upload.**
 

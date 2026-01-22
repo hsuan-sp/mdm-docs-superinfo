@@ -33,9 +33,9 @@ For institutional compliance, the Jamf Trust app must remain active in the backg
 
 1. **Profile Desynchronization**:
 
-* **The Issue**: The app is installed, but the**DNS Proxy**or**Content Filter**profile is missing or inactive.
-* **The Fix**: Send an**"Update Inventory"**command via Jamf Pro. If the problem persists, re-push the Jamf Trust configuration profile to the affected devices.
+* **The Issue **: The app is installed, but the** DNS Proxy **or** Content Filter**profile is missing or inactive.
+* **The Fix **: Send an**"Update Inventory"** command via Jamf Pro. If the problem persists, re-push the Jamf Trust configuration profile to the affected devices.
 
 ## Operational Note:
 
-Usage dashboards often have a**T+1 delay**(24-hour lag). If you fix a device today, you likely won't see the updated status in the official MOE portal until the following day.
+Usage dashboards often have a **T+1 delay** (24-hour lag). If you fix a device today, you likely won't see the updated status in the official MOE portal until the following day.

@@ -18,9 +18,9 @@ title: >-
 
 ## Features and Limitations:
 
-1. **Login**: Tap the**Guest**button below the user icons on the sign-in screen.
+1. **Login **: Tap the** Guest**button below the user icons on the sign-in screen.
 2. **Temporary Storage**: Any Safari history, photos, or documents created during the session are only stored locally.
-3. **Wipe on Logout**: This is the most important feature.**Once the user logs out, all guest data is permanently wiped and cannot be recovered.**
+3. **Wipe on Logout **: This is the most important feature.** Once the user logs out, all guest data is permanently wiped and cannot be recovered.**
 
 ## Use Cases:
 
@@ -29,4 +29,4 @@ title: >-
 
 ## Configuration:
 
-In the Jamf Pro**PreStage Enrollment**settings, find the "Shared iPad" section and check**Allow Temporary Session**(previously known as Guest Login).
+In the Jamf Pro **PreStage Enrollment** settings, find the "Shared iPad" section and check **Allow Temporary Session** (previously known as Guest Login).

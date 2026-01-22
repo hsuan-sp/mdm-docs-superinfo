@@ -29,12 +29,12 @@ In addition to traditional inventory updates, macOS 26 recommends using the DDM 
 
 ## Setup Steps (SOP):
 
-1. **Navigate**: Go to**Settings > Computer Management > Extension Attributes**.
-2. **Add**: Click**+ New**.
+1. **Navigate **: Go to** Settings > Computer Management > Extension Attributes**.
+2. **Add **: Click**+ New**.
 3. **Configure**:
 
 * **Display Name**: e.g., "Last Reboot Time".
-* **Input Type**: Select**Script**.
+* **Input Type **: Select** Script**.
 * **Data Type**: String, Integer, or Date. This affects Smart Group logic (e.g., "greater than/less than" vs. "contains").
 
 1. **Write Script**:
@@ -56,11 +56,12 @@ days=$(uptime | awk '{ print $3 }')
 echo "<result>$days</result>"
 ```
 
+
 ## Advanced Application Scenarios:
 
 * **Compliance Check**: Use a script to check if a security daemon (like CrowdStrike or SentinelOne) is running. If it returns "Stopped," the computer can automatically fall into a "Non-Compliant Group" and trigger a remediation policy.
-* **Administrative Management**: Set Input Type to**Pop-up Menu**for fields like "Department" (e.g., Academic, Administrative, IT). This allows admins to manually assign units during device issuance for easier group management.
+* **Administrative Management **: Set Input Type to** Pop-up Menu**for fields like "Department" (e.g., Academic, Administrative, IT). This allows admins to manually assign units during device issuance for easier group management.
 
 ## Practical Advice: Expert Tips
 
-* **Execution Performance**: Extension Attribute scripts run during**every**inventory update. Avoid time-consuming scripts (like `find /` scanning the whole drive), as they can slow down inventory reporting across the school or cause system lag.
+* **Execution Performance **: Extension Attribute scripts run during** every**inventory update. Avoid time-consuming scripts (like `find /` scanning the whole drive), as they can slow down inventory reporting across the school or cause system lag.

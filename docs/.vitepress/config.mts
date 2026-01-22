@@ -8,7 +8,7 @@ const base = process.env.GITHUB_ACTIONS === 'true'
   : (process.env.BASE_PATH || '/')
 
 export default defineConfig({
-  base: base,
+  base: process.env.GITHUB_ACTIONS === 'true' ? '/mdm-support-site/' : '/',
 
   locales: {
     root: {

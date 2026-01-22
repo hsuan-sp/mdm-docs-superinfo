@@ -21,11 +21,11 @@ title: 購買的機器沒有出現在 ASM 中，可以用 Apple Configurator 手
 
 1. **硬體需求**：
 
-* **需要一台 Mac，並安裝最新版的**Apple Configurator**。
-* **或者是使用 iPhone 下載**Apple Configurator App**（此方法適用於將 Mac 加入 ASM）。
+* **需要一台 Mac，並安裝最新版的 ** Apple Configurator**。
+* **或者是使用 iPhone 下載 ** Apple Configurator App**（此方法適用於將 Mac 加入 ASM）。
 
 1. **帳號權限**：操作者需具備 ASM 的「裝置註冊經理」或「管理員」等權限。
-2. **裝置狀態**：iPad 必須處於 **「設定輔助程式 (Setup Assistant)」** 階段（即哈囉畫面）。
+2. **裝置狀態 **：iPad 必須處於**「設定輔助程式 (Setup Assistant)」** 階段（即哈囉畫面）。
 
  若已進入系統，需先抹除裝置。
 
@@ -40,7 +40,7 @@ title: 購買的機器沒有出現在 ASM 中，可以用 Apple Configurator 手
 
 * **重要限制提醒**：
 
-* **Windows 平台限制**：Windows 版的**「Apple 裝置 App」** 僅能執行回復與備份，
+* **Windows 平台限制 **：Windows 版的**「Apple 裝置 App」** 僅能執行回復與備份，
 
 * **無法** 將裝置手動加入 ASM 組織。若學校無 Mac 裝置，建議與維修廠商或具備 Mac 的單位協作處理。
 

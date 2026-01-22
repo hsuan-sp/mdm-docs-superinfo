@@ -31,9 +31,9 @@ title: 【番外篇-實務採購常見狀況】以 Procreate 與 Procreate Pocke
 
 1. **VPP 退款申請**：
 
-* **管理員登入**Apple 校務管理**，前往**「偏好設定」>「付款與帳單」>「檢視購買記錄」**。
+* **管理員登入 ** Apple 校務管理**，前往 **「偏好設定」>「付款與帳單」>「檢視購買記錄」**。
 
-* **或是直接登入**reportaproblem.apple.com**，使用 ASM 管理式帳號登入。
+* **或是直接登入 ** reportaproblem.apple.com**，使用 ASM 管理式帳號登入。
 
 * 選擇該筆訂單，提出「要求退款 (Request a refund)」請求，理由註明「購買了錯誤的版本 (Purchased wrong version)」。
 

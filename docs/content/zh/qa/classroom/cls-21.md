@@ -23,6 +23,6 @@ title: 老師可以強制將學生的畫面投影到 Apple TV 或大螢幕嗎？
 
 * **關鍵設定 (防止搶頻)**：
 
-為了避免學生惡作劇隨意投影干擾上課，建議管理員在 **Apple TV**設定中開啟**「需要驗證碼」**或**「僅限同網域」**。
+為了避免學生惡作劇隨意投影干擾上課，建議管理員在 **Apple TV** 設定中開啟 **「需要驗證碼」** 或 **「僅限同網域」**。
 同時，在 Jamf Pro 的限制描述檔中，可以設定 **「強制 AirPlay 請求 (Force AirPlay outgoing requests to accept pairing password)」**，
 讓老師擁有主控權。

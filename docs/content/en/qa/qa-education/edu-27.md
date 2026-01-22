@@ -17,22 +17,22 @@ title: 'If a school changes MDM providers, is it mandatory to wipe all iPads?'
 
 ## Comparison: Traditional vs. Zero-Wipe Migration
 
-| Feature | **Traditional Migration (Legacy)**|**Zero-Wipe Migration (iOS 26+)** |
+| Feature |**Traditional Migration (Legacy)** | **Zero-Wipe Migration (iOS 26+)**|
 | :--- | :--- | :--- |
-| **Data Retention**| All data wiped (must backup). |**Full Retention**(files, settings, apps). |
-| **User Experience**| Must redo the Setup Assistant. |**Silent Background Process**(needs internet). |
-| **Network Impact**| Massive (GBs of app downloads). |**Minimal**(Management permission swap only). |
-| **Time per Device**| 30–60 minutes. |**2–5 minutes**. |
+|**Data Retention**| All data wiped (must backup). |**Full Retention** (files, settings, apps). |
+|**User Experience**| Must redo the Setup Assistant. |**Silent Background Process** (needs internet). |
+|**Network Impact**| Massive (GBs of app downloads). |**Minimal** (Management permission swap only). |
+|**Time per Device**| 30–60 minutes. |**2–5 minutes**. |
 
 ## Requirements for Zero-Wipe Migration
 
-1. **OS Version**: All devices must be on**iOS/macOS 26**or later.
-2. **DEP/ADE Support**: Devices must be owned in**Apple School Manager (ASM)**with Automated Device Enrollment.
-3. **DDM Support**: Both the old and new MDM servers must support the**MDM Migration Payload**(Declarative Device Management).
+1. **OS Version **: All devices must be on** iOS/macOS 26**or later.
+2. **DEP/ADE Support **: Devices must be owned in** Apple School Manager (ASM)**with Automated Device Enrollment.
+3. **DDM Support **: Both the old and new MDM servers must support the** MDM Migration Payload**(Declarative Device Management).
 
 ## Why 'Zero-Wipe' can be Risky (The Expert View)
 
-Even though the feature is available, education technology experts often consider it a**last resort**rather than a best practice.
+Even though the feature is available, education technology experts often consider it a **last resort** rather than a best practice.
 
 1. **'Profile Ghosting'**: Legacy settings from the old MDM (like specific Wi-Fi certificates or restrictions) can sometimes linger, creating "conflicts" with the new MDM policies that are difficult to troubleshoot.
 2. **VPP Licensing Lock**: Handing off app management is fragile. If the old MDM doesn't release the VPP license cleanly before the new one takes over, apps may stop updating or prompt students for a password.
@@ -41,8 +41,8 @@ Even though the feature is available, education technology experts often conside
 ## Expert Recommendation:
 
 * **Use Zero-Wipe WHEN**: You must migrate in the middle of a semester with zero downtime and the devices contain critical teacher data that cannot be backed up.
-* **Use Wipe & Re-enroll WHEN**: It is the summer break. A clean reset via**EACS (Erase All Content and Settings)**is the only way to guarantee 100% policy compliance and peak device performance for the new school year.
+* **Use Wipe & Re-enroll WHEN **: It is the summer break. A clean reset via** EACS (Erase All Content and Settings)**is the only way to guarantee 100% policy compliance and peak device performance for the new school year.
 
 ## Summary
 
-While technology has made "Zero-Wipe" possible, a**clean start**remains the gold standard for IT management stability.
+While technology has made "Zero-Wipe" possible, a **clean start** remains the gold standard for IT management stability.

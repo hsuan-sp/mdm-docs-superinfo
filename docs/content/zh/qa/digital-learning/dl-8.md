@@ -19,14 +19,14 @@ title: 學校 Wi-Fi 訊號很差，精進方案的 iPad 可以接有線網路 (E
 
 1. **Lightning 機型 (精進方案多數載具，如 iPad 9 代)**：
 
-* **專用轉接器**：推薦使用**Belkin Ethernet + Power Adapter with Lightning Connector**。
+* **專用轉接器 **：推薦使用** Belkin Ethernet + Power Adapter with Lightning Connector**。
 
 * **限制**：Lightning 接口供電能力極弱，務必使用「帶有充電孔」的轉接頭並接上電源完成供電，否則常會顯示「配件耗電量過高」而無法運作。
 
 1. **USB-C 機型 (如 iPad 10 代、iPad Air、iPad Pro)**：
 
 * **通用型 USB-C 轉 RJ45**：標準 USB-C 網卡通常可「隨插即用」。
-* **建議方案**：即便不需要額外供電即可驅動，仍建議使用**「帶有 PD 充電孔的轉接頭/Hub」**，確保邊充電邊上網，避免教學途中斷電。
+* **建議方案 **：即便不需要額外供電即可驅動，仍建議使用**「帶有 PD 充電孔的轉接頭/Hub」**，確保邊充電邊上網，避免教學途中斷電。
 
 1. **RJ-45 網路線**：連接至教室牆上的資訊插座。
 

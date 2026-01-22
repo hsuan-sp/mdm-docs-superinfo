@@ -6,7 +6,7 @@ term: Remote Management
 ---
 ## Term Definition
 
-* **Remote Management**is the specific screen presented by the Setup Assistant on a new Apple device during the**Automated Device Enrollment**process.
+* **Remote Management ** is the specific screen presented by the Setup Assistant on a new Apple device during the**Automated Device Enrollment** process.
 
 Signifies:
 
@@ -16,7 +16,7 @@ Signifies:
 
 ## Analogy
 
-Remote Management is the**"School’s Digital Stamp."**
+Remote Management is the **"School’s Digital Stamp."**
 
 When you first open a brand new iPad box, this screen is like the device holding up a badge saying:**"I belong to Taipei European School."**
 

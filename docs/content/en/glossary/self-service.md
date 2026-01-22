@@ -6,7 +6,7 @@ term: Self Service
 ---
 ## Term Definition
 
-* **Self Service**is a custom app portal provided by Jamf Pro, acting as a corporate "App Store."
+* **Self Service** is a custom app portal provided by Jamf Pro, acting as a corporate "App Store."
 
 Benefits:
 
@@ -16,8 +16,8 @@ Benefits:
 
 ## Analogy
 
-Self Service is the**"Campus Supply Store."**
+Self Service is the **"Campus Supply Store."**
 
 If a student needs a specific calculator app or a teacher needs a new version of Zoom, they don't have to fill out a request form and wait for IT.
 
-They just**"walk into the store"**(open the app), click install, and the item is delivered to their device immediately—all pre-approved, free, and safe to use.
+They just **"walk into the store"** (open the app), click install, and the item is delivered to their device immediately—all pre-approved, free, and safe to use.

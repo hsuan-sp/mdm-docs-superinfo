@@ -5,7 +5,7 @@ term: Return to Service
 ---
 ## Term Definition
 
-* **Return to Service**is a high-efficiency command for iOS and iPadOS devices that automates the device reset cycle.
+* **Return to Service** is a high-efficiency command for iOS and iPadOS devices that automates the device reset cycle.
 
 Workflow:
 
@@ -17,8 +17,8 @@ Workflow:
 
 ## Analogy
 
-Think of this as**"Reincarnation with Memory."**
+Think of this as **"Reincarnation with Memory."**
 
 Usually, when you wipe an iPad, it "forgets" everything and acts like it was just born.
 
-With**Return to Service**, the iPad is wiped clean, but it keeps a**"sticky note in its pocket"**(the Wi-Fi password). When it wakes up, it reads the note, connects to the internet, and reports back to the office for its duties immediately—without a human needing to touch it.
+With **Return to Service**, the iPad is wiped clean, but it keeps a **"sticky note in its pocket"** (the Wi-Fi password). When it wakes up, it reads the note, connects to the internet, and reports back to the office for its duties immediately—without a human needing to touch it.

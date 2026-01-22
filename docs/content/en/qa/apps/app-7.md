@@ -28,7 +28,7 @@ ASM only searches the App Store associated with your organization's registered r
 
 ## 3. B2B / Custom Apps
 
-Some proprietary or school-specific apps are distributed as "Custom Apps." Ensure the developer has added your**Organization ID**to their distribution list in App Store Connect.
+Some proprietary or school-specific apps are distributed as "Custom Apps." Ensure the developer has added your **Organization ID** to their distribution list in App Store Connect.
 
 ## Risk Warning:
 

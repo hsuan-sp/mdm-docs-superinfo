@@ -7,7 +7,7 @@ term: Jamf Safe Internet
 ---
 ## Term Definition
 
-* **Jamf Safe Internet**is a comprehensive network security and content filtering service designed specifically for educational institutions.
+* **Jamf Safe Internet** is a comprehensive network security and content filtering service designed specifically for educational institutions.
 
 Protective features:
 
@@ -20,8 +20,8 @@ Because it operates at the DNS level, it protects students whether they are usin
 
 ## Analogy
 
-Think of this as your**"Digital Bodyguard."**
+Think of this as your **"Digital Bodyguard."**
 
-Before you load any website, the bodyguard quickly checks the "address" to make sure it isn't a scam or a dangerous hidden site. If it's a**"bad neighborhood"**on the internet, the bodyguard steps in and blocks the site immediately.
+Before you load any website, the bodyguard quickly checks the "address" to make sure it isn't a scam or a dangerous hidden site. If it's a **"bad neighborhood"** on the internet, the bodyguard steps in and blocks the site immediately.
 
 It works everywhere—protecting you and the school's private data from hackers and harmful content whether you're in the classroom or at the park.

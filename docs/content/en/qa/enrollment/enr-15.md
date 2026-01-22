@@ -27,8 +27,8 @@ A security mechanism is triggered when a user enters the wrong passcode multiple
 If the iPad is still connected to Wi-Fi or a cellular network (previously joined networks usually remain active even while locked):
 
 1. Log in to Jamf Pro and find the device record.
-2. Click**Management > Remote Commands > Wipe Device**.
-3. **Benefit**: This is the fastest method. If the device was enrolled via**Automated Device Enrollment (ADE)**, it will reboot and immediately enter the automated setup process without further manual intervention.
+2. Click **Management > Remote Commands > Wipe Device**.
+3. **Benefit **: This is the fastest method. If the device was enrolled via** Automated Device Enrollment (ADE)**, it will reboot and immediately enter the automated setup process without further manual intervention.
 
 ## Option 2: Restore using a Computer
 
@@ -36,15 +36,15 @@ If the device cannot connect to the network or the MDM command cannot reach it:
 
 1. **Prepare Tools**:
 
-* **macOS**: Use the built-in**Finder**or**Apple Configurator**.
-* **Windows**: Install the**Apple Devices app**from the Microsoft Store (or use iTunes for older environments).
+* **macOS **: Use the built-in** Finder **or** Apple Configurator**.
+* **Windows **: Install the** Apple Devices app**from the Microsoft Store (or use iTunes for older environments).
 
 1. **Enter Recovery Mode**:
 
 * **Models without a Home Button (iPad 10, Air, Pro M-series)**: Press and quickly release Volume Up, press and quickly release Volume Down, then hold the Top Button until the computer connection icon appears.
 * **Models with a Home Button (iPad 9)**: Hold both the Home Button and the Top Button simultaneously until the computer connection icon appears.
 
-1. Click**Restore**on your computer. This will download the latest system software and erase all device content.
+1. Click **Restore** on your computer. This will download the latest system software and erase all device content.
 
 ## Option 3: DFU Mode Restore (Advanced Troubleshooting)
 

@@ -26,7 +26,7 @@ Storing a device improperly for 2-3 months can lead to "Deep Discharge," where t
 
 1. **Power Off Completely**:
 
-* **After reaching 50%, go to**Settings > General > Shut Down**. This ensures the device isn't slowly draining power while sitting in the cart.
+* **After reaching 50%, go to ** Settings > General > Shut Down**. This ensures the device isn't slowly draining power while sitting in the cart.
 
 1. **Cool, Dry Environment**:
 

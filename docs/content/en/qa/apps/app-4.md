@@ -24,7 +24,7 @@ title: What details should we keep in mind when 'purchasing' free apps in bulk?
 
 2. **Sync Lag**:
 
-* **After hitting "Get" in ASM, the licenses don't appear in Jamf Pro instantly. There is usually a**2-10 minute synchronization delay**between Apple’s servers and your MDM dashboard.
+* **After hitting "Get" in ASM, the licenses don't appear in Jamf Pro instantly. There is usually a ** 2-10 minute synchronization delay**between Apple’s servers and your MDM dashboard.
 
 1. **Purchase Quantity**:
 
@@ -32,4 +32,4 @@ title: What details should we keep in mind when 'purchasing' free apps in bulk?
 
 ## Troubleshooting Tip:
 
-If an app is showing a "0 available" count in Jamf Pro despite being purchased in ASM, check the Location settings first and then manually trigger a**"Sync VPP Content"**in the Jamf Global Management settings.
+If an app is showing a "0 available" count in Jamf Pro despite being purchased in ASM, check the Location settings first and then manually trigger a **"Sync VPP Content"** in the Jamf Global Management settings.

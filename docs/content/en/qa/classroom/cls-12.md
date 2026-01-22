@@ -20,19 +20,19 @@ title: >-
 
 ## Risk Features and Controls:
 
-* **Writing Tools**: Disable via the DDM**Restrictions**declaration using `allowWritingTools`.
+* **Writing Tools **: Disable via the DDM** Restrictions**declaration using `allowWritingTools`.
 * **Math Notes**: Disable using `allowMathNotes`.
 * **Genmoji and Image Playground**: Disable using `allowGenmoji`and`allowImagePlayground`.
 
 ## Setup Path (Jamf Pro):
 
-1. Go to**Blueprints**or**Declarations**.
-2. Add a**Restrictions**declaration.
+1. Go to **Blueprints** or **Declarations**.
+2. Add a **Restrictions** declaration.
 3. Block the AI features listed above. DDM is "instant," making it ideal for deployment right before an exam.
-4. **Unmanaged Devices**: If students use personal devices, administrators can turn off Apple Intelligence permissions for Managed Apple Accounts at the tenant level in**ASM (Apple School Manager) > Service Access**.
+4. **Unmanaged Devices **: If students use personal devices, administrators can turn off Apple Intelligence permissions for Managed Apple Accounts at the tenant level in** ASM (Apple School Manager) > Service Access**.
 
 ## Hardware Requirements:
 
-* **Apple Intelligence is only supported on devices with**M-series chips**or**A17 Pro and later**.
+* **Apple Intelligence is only supported on devices with ** M-series chips**or ** A17 Pro and later**.
 
 * **Note: Entry-level iPads (e.g., 10th and 11th Gen with A14/A16 chips) do not support these AI features natively. Focus your management efforts on iPad Air and iPad Pro models with M-series chips.**

@@ -5,7 +5,7 @@ term: TestFlight
 ---
 ## Term Definition
 
-* **TestFlight**is Apple's platform for beta testing pre-release applications.
+* **TestFlight** is Apple's platform for beta testing pre-release applications.
 
 Workflow:
 
@@ -18,8 +18,8 @@ This is useful for schools piloting new ed-tech apps before deploying them to th
 
 ## Analogy
 
-Think of this as a**"Sneak Peek Movie Screening."**
+Think of this as a **"Sneak Peek Movie Screening."**
 
-Before a movie (an app) comes out in theaters (the App Store), the filmmakers might show a**"work-in-progress"**version to a small group of fans to get their advice.
+Before a movie (an app) comes out in theaters (the App Store), the filmmakers might show a **"work-in-progress"** version to a small group of fans to get their advice.
 
-TestFlight is the**"private theater"**where students and teachers can try out new educational tools and help fix the bugs before the app is released to the whole world.
+TestFlight is the **"private theater"** where students and teachers can try out new educational tools and help fix the bugs before the app is released to the whole world.

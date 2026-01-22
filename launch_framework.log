@@ -1,0 +1,41 @@
+🚀 Starting Dual Editor (Python 3.12 Framework)...
+⬇️ Ensuring dependencies...
+Collecting tkhtmlview
+  Using cached tkhtmlview-0.3.1-py3-none-any.whl.metadata (5.3 kB)
+Collecting markdown
+  Using cached markdown-3.10.1-py3-none-any.whl.metadata (5.1 kB)
+Collecting pillow
+  Downloading pillow-12.1.0-cp312-cp312-macosx_11_0_arm64.whl.metadata (8.8 kB)
+  Downloading pillow-10.4.0-cp312-cp312-macosx_11_0_arm64.whl.metadata (9.2 kB)
+Collecting requests<3.0.0,>=2.28.2 (from tkhtmlview)
+  Using cached requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Collecting charset_normalizer<4,>=2 (from requests<3.0.0,>=2.28.2->tkhtmlview)
+  Downloading charset_normalizer-3.4.4-cp312-cp312-macosx_10_13_universal2.whl.metadata (37 kB)
+Collecting idna<4,>=2.5 (from requests<3.0.0,>=2.28.2->tkhtmlview)
+  Using cached idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+Collecting urllib3<3,>=1.21.1 (from requests<3.0.0,>=2.28.2->tkhtmlview)
+  Using cached urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+Collecting certifi>=2017.4.17 (from requests<3.0.0,>=2.28.2->tkhtmlview)
+  Using cached certifi-2026.1.4-py3-none-any.whl.metadata (2.5 kB)
+Using cached tkhtmlview-0.3.1-py3-none-any.whl (10 kB)
+Using cached markdown-3.10.1-py3-none-any.whl (107 kB)
+Downloading pillow-10.4.0-cp312-cp312-macosx_11_0_arm64.whl (3.4 MB)
+   ━━━━━ 3.4/… 10.0 eta 0:00:…
+         MB    MB/s           
+Using cached requests-2.32.5-py3-none-any.whl (64 kB)
+Using cached certifi-2026.1.4-py3-none-any.whl (152 kB)
+Downloading charset_normalizer-3.4.4-cp312-cp312-macosx_10_13_universal2.whl (208 kB)
+Using cached idna-3.11-py3-none-any.whl (71 kB)
+Using cached urllib3-2.6.3-py3-none-any.whl (131 kB)
+Installing collected packages: urllib3, pillow, markdown, idna, charset_normalizer, certifi, requests, tkhtmlview
+  WARNING: The script markdown_py is installed in '/Users/superinfo/Library/Python/3.12/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script normalizer is installed in '/Users/superinfo/Library/Python/3.12/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed certifi-2026.1.4 charset_normalizer-3.4.4 idna-3.11 markdown-3.10.1 pillow-10.4.0 requests-2.32.5 tkhtmlview-0.3.1 urllib3-2.6.3
+
+[notice] A new release of pip is available: 25.0.1 -> 25.3
+[notice] To update, run: /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 -m pip install --upgrade pip
+🖥️ Launching DualEditor...
+2026-01-22 15:59:53.835 Python[95591:989651] TSM AdjustCapsLockLEDForKeyTransitionHandling - _ISSetPhysicalKeyboardCapsLockLED Inhibit
+2026-01-22 16:01:07.426 Python[95591:989651] error messaging the mach port for IMKCFRunLoopWakeUpReliable

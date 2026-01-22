@@ -6,7 +6,7 @@ term: Blueprints
 ---
 ## Term Definition
 
-* **Blueprints**are an advanced automation framework within Jamf management tools used to maintain device consistency.
+* **Blueprints** are an advanced automation framework within Jamf management tools used to maintain device consistency.
 
 Key features:
 
@@ -18,8 +18,8 @@ This proactive mechanism ensures that devices remain compliant with the organiza
 
 ## Analogy
 
-Think of this as**"Autopilot Mode"**for computer management.
+Think of this as **"Autopilot Mode"** for computer management.
 
 You set the destination (e.g., "This device must always have the security app and disk encryption turned on"), and the system automatically keeps the device on track.
 
-If the device**"veers off course"**because someone changed a setting, the Blueprint pulls it back into alignment instantly, without IT needing to step in.
+If the device **"veers off course"** because someone changed a setting, the Blueprint pulls it back into alignment instantly, without IT needing to step in.

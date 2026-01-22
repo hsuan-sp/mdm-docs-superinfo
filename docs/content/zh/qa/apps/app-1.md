@@ -31,7 +31,7 @@ title: iPad 上的 App 一直顯示「等待中 (Waiting)」或無法安裝，�
 
 1. **網路環境阻擋**：
 
-* **App 下載需連向 Apple 的**Content Delivery Network (CDN)**。
+* **App 下載需連向 Apple 的 ** Content Delivery Network (CDN)**。
 
  若學校防火牆阻擋了相關網域，下載會卡在 0%。
 
@@ -39,7 +39,7 @@ title: iPad 上的 App 一直顯示「等待中 (Waiting)」或無法安裝，�
 
 1. **Apple 帳號衝突**：
 
-* **確認該 App 的分派模式是否設定為**「指派給裝置 (Assign to Device)」**。
+* **確認該 App 的分派模式是否設定為 **「指派給裝置 (Assign to Device)」**。
 
  若錯誤設為「指派給使用者」，系統會等待使用者登入 Apple 帳號，導致卡住。
 
@@ -47,7 +47,7 @@ title: iPad 上的 App 一直顯示「等待中 (Waiting)」或無法安裝，�
 
 * 在最新的 iPadOS 中，App 安裝狀態由 DDM 回報。
 
- 若狀態不同步，請在 Jamf Pro 發送 **「取消所有擱置指令」**並執行**「更新資產」**。
+ 若狀態不同步，請在 Jamf Pro 發送 **「取消所有擱置指令」** 並執行 **「更新資產」**。
 
 2. **儲存空間不足**：
 

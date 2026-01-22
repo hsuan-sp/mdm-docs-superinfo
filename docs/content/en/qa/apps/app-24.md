@@ -21,16 +21,16 @@ title: >-
 
 ## Configuration
 
-This feature is implemented via**DDM**configurations. In**Jamf Pro**:
+This feature is implemented via **DDM** configurations. In **Jamf Pro**:
 
-1. Go to**Blueprints**or**App Declarations**.
+1. Go to **Blueprints** or **App Declarations**.
 2. Define the policy for individual managed apps or a group of apps.
-3. Set the**'CellularDataPolicy'**in the deployment declaration:
+3. Set the **'CellularDataPolicy'** in the deployment declaration:
 
 * **Disallow**: Forces download/update to happen only over Wi-Fi.
 * **Allow**: Permits installation over any available network.
 
-1. Deploy to the target group (Requires**iOS 18+**and a**Supervised**device).
+1. Deploy to the target group (Requires **iOS 18+** and a **Supervised** device).
 
 ## Use Cases and Benefits
 

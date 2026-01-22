@@ -23,7 +23,7 @@ title: 學生做完的作業（Keynote/Pages）要怎麼交給老師？
 
 * **操作步驟**：
 
-1. 確認 iPad 已安裝 **「Google 雲端硬碟」**App 或 **「Google 文件/簡報」** 相關 App。
+1. 確認 iPad 已安裝 **「Google 雲端硬碟」** App 或 **「Google 文件/簡報」** 相關 App。
 2. 在 Keynote/Pages 中完成作業，點選「分享」（右上角分享按鈕）。
 3. 選擇「儲存到檔案 (Save to Files)」。
 4. 在「檔案」App 中，選擇 **「Google Drive」** 位置
@@ -67,9 +67,9 @@ title: 學生做完的作業（Keynote/Pages）要怎麼交給老師？
 
 | 目的 | 建議格式 |
 | :--- | :--- |
-| **保留編輯能力** | 原始格式（.key, .pages）或匯出為 Microsoft 格式（.pptx, .docx） |
-| **僅供閱讀/列印** | 匯出為 PDF |
-| **視訊簡報** | 匯出為影片 (.mov) |
+|**保留編輯能力**| 原始格式（.key, .pages）或匯出為 Microsoft 格式（.pptx, .docx） |
+|**僅供閱讀/列印**| 匯出為 PDF |
+|**視訊簡報**| 匯出為影片 (.mov) |
 
 * **實務建議：常見問題**
 

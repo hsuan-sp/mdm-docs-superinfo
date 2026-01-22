@@ -46,5 +46,5 @@ title: ASM 現在可以直接解除啟用鎖定嗎？還需要聯絡 Apple 客�
 * **實務建議**：
 
 若解鎖後需要重新安裝系統，Windows 使用者請使用 **「Apple 裝置 App (Apple Devices app)」**，
-Mac 使用者請使用 **Finder**或**Apple Configurator** 進行還原。
+Mac 使用者請使用 **Finder** 或 **Apple Configurator** 進行還原。
 還原完成後，原本的啟用鎖定將不復存在。

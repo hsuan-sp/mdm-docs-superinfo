@@ -23,17 +23,17 @@ title: 如何建立「精進方案」專用的智慧型群組？
 1. **依命名規則篩選 (推薦)**：
 
 * 若您在 PreStage 註冊時已設定命名規則（如：`114-SchoolCode-001`）。
-* **條件設定**：Device Name**like**`114-%`。
+* **條件設定 **：Device Name** like**`114-%`。
 * **效果**：所有 114 年度入庫的裝置會自動進入此群組。
 
 1. **依資產標籤 (Asset Tag) 篩選**：
 
 * 若您有在 Jamf Pro 中匯入資產標籤。
-* **條件設定**：Asset Tag**is**`MOE-2025-001` ...等。
+* **條件設定 **：Asset Tag** is**`MOE-2025-001` ...等。
 
 1. **依 Jamf Trust 安裝狀態 (監控用)**：
 
-* **條件設定**：Application Title**has**`Jamf Trust`。
+* **條件設定 **：Application Title** has**`Jamf Trust`。
 * **用途**：可用來反向篩選「未安裝 Jamf Trust」的裝置，作為異常排除清單。
 
 * **操作路徑**：

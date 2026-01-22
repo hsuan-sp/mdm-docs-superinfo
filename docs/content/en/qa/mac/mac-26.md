@@ -50,5 +50,5 @@ In Jamf Pro, you should establish these baseline groups for accurate deployment:
 
 ## 3. Administrative Insight
 
-* **System Updates**: macOS 26 handles updates differently for each architecture. Always use**Declarative Device Management (DDM)**for OS updates; the system will autonomously verify and install the correct update files without manual intervention.
+* **System Updates **: macOS 26 handles updates differently for each architecture. Always use** Declarative Device Management (DDM)**for OS updates; the system will autonomously verify and install the correct update files without manual intervention.
 * **Asset Tagging**: Add an "Expiring Support 2028" tag to your Intel Smart Group. This helps in visualising budget requirements for the final phase-out of the Intel fleet.

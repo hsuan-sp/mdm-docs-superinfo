@@ -24,4 +24,4 @@ title: Why is the web navigation failing when I try to push a URL to student iPa
 
 ## Best Practice for Teachers:
 
-Save your frequently used teaching links in your own iPad’s**Safari Bookmarks**. When using the "Navigate" tool in Classroom, you can select these bookmarks directly, reducing the chance of typing errors or formatting issues.
+Save your frequently used teaching links in your own iPad’s **Safari Bookmarks**. When using the "Navigate" tool in Classroom, you can select these bookmarks directly, reducing the chance of typing errors or formatting issues.

@@ -18,7 +18,7 @@ title: >-
 * **This indicates a communication delay or interruption while the device attempts to fetch the MDM configuration profile from Apple's servers.**
 * **It is usually related to the network environment or MDM server response.**
 
-"Retrieving remote management configuration" is a key step in**Automated Device Enrollment (ADE)**.
+"Retrieving remote management configuration" is a key step in **Automated Device Enrollment (ADE)**.
 Ideally, it should complete within 30 seconds to 2 minutes. If it hangs for more than 5 minutes, proceed with the following checks:
 
 * **Cause 1: Network Restrictions**

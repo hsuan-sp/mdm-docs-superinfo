@@ -32,18 +32,18 @@ title: >-
 Younger students may find the windowed interface confusing or use it to hide apps from the teacher.
 
 * **Path**: Jamf Pro > Configuration Profiles > Restrictions > Functionality.
-* **Action**: Uncheck**Allow Multitasking**.
+* **Action **: Uncheck** Allow Multitasking**.
 * **Effect**: The iPad returns to a strict single-app-at-a-time interface. Simple and intuitive.
 
 ## Strategy 2: Temporary Lock during Lessons (Best for middle/high school)
 
 Allow multitasking normally, but lock it down when focus is required.
 
-* **Tool**:**Apple Classroom**or**Jamf Teacher**.
+* **Tool **:** Apple Classroom **or** Jamf Teacher**.
 * **Action**:
 
 1. Select the class or specific students.
-2. Select**Open App**and check**Lock in App after opening**.
+2. Select **Open App** and check **Lock in App after opening**.
 3. Select the required app (e.g., Keynote).
 
 * **Effect**: The student’s iPad is locked into that specific app in Full Screen mode. They cannot switch to windows or other apps until the teacher clicks "Unlock."
@@ -60,6 +60,6 @@ Maintain multitasking but enforce class norms.
 
 | Strategy | Ideal For | Management Effort |
 | :--- | :--- | :--- |
-| **Fully Disable** | Elementary, strict labs | Low (One-time setup) |
-| **Temporary Lock** | Middle school, mixed-use | Medium (Requires teacher action) |
-| **Guided Use** | High school, BYU/1:1 | High (Requires ongoing education) |
+|**Fully Disable**| Elementary, strict labs | Low (One-time setup) |
+|**Temporary Lock**| Middle school, mixed-use | Medium (Requires teacher action) |
+|**Guided Use**| High school, BYU/1:1 | High (Requires ongoing education) |

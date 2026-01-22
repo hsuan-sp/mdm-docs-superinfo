@@ -5,7 +5,7 @@ term: Inventory
 ---
 ## Term Definition
 
-In a device management context,**Inventory**refers to the comprehensive database containing the current state of every organizational hardware and software asset.
+In a device management context,**Inventory** refers to the comprehensive database containing the current state of every organizational hardware and software asset.
 
 Key inventory data points:
 
@@ -19,7 +19,7 @@ This centralized record is essential for IT teams to perform security audits, pl
 
 ## Analogy
 
-This is the school IT's**"Central Asset Registry"**or**"Master List."**
+This is the school IT's **"Central Asset Registry"** or **"Master List."**
 
 Just as a school library keeps a detailed list of every book it owns, where it's shelved, and who has currently borrowed it, the IT inventory is a centralized record of every iPad and Mac in the school.
 

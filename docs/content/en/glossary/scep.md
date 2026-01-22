@@ -5,7 +5,7 @@ term: SCEP (Simple Certificate Enrollment Protocol)
 ---
 ## Term Definition
 
-* **Simple Certificate Enrollment Protocol (SCEP)**is a standard allowing devices to request and retrieve digital certificates automatically.
+* **Simple Certificate Enrollment Protocol (SCEP)** is a standard allowing devices to request and retrieve digital certificates automatically.
 
 The workflow:
 
@@ -18,8 +18,8 @@ This automation is critical for zero-touch deployments, removing the need for ma
 
 ## Analogy
 
-Think of this as an**"Automatic ID Booth."**
+Think of this as an **"Automatic ID Booth."**
 
-Instead of every single student having to go to the office and wait in line to get their ID badge printed, the MDM sends them a digital**"Voucher."**
+Instead of every single student having to go to the office and wait in line to get their ID badge printed, the MDM sends them a digital **"Voucher."**
 
-The student's iPad takes that voucher to a machine (the CA), and the machine prints out their official ID card instantly. It allows the iPad to get its own**"Hall Pass"**for the school Wi-Fi without you lifting a finger.
+The student's iPad takes that voucher to a machine (the CA), and the machine prints out their official ID card instantly. It allows the iPad to get its own **"Hall Pass"** for the school Wi-Fi without you lifting a finger.

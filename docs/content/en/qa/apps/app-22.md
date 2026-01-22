@@ -19,19 +19,19 @@ title: >-
 
 * **Buying the wrong version of a high-profile app is a common clerical error in educational procurement.**
 
-These two apps are distinct product lines and do**not**support "Universal Purchase."
+These two apps are distinct product lines and do **not** support "Universal Purchase."
 
 ## Specification Comparison:
 
-* **Procreate (iPad version)**: Designed specifically for iPadOS and Apple Pencil. Supports large canvases and the full brush engine. This is the industry standard for art classes.**Higher price point**.
-* **Procreate Pocket (iPhone version)**: Designed for the smaller iPhone interface. While it**can**be installed on an iPad (via compatibility mode), it will have black bars around the interface and lacks support for Pencil pressure sensitivity and tilt.**Lower price point**.
+* **Procreate (iPad version) **: Designed specifically for iPadOS and Apple Pencil. Supports large canvases and the full brush engine. This is the industry standard for art classes.** Higher price point**.
+* **Procreate Pocket (iPhone version) **: Designed for the smaller iPhone interface. While it** can **be installed on an iPad (via compatibility mode), it will have black bars around the interface and lacks support for Pencil pressure sensitivity and tilt.** Lower price point**.
 
 ## Standard Process for Correction:
 
 1. **Request a VPP Refund**:
 
-* **The administrator should log in to**Apple School Manager**, go to**Settings > Payments and Billing > View Purchase History**.
-* **Alternatively, log in to**reportaproblem.apple.com**using the Managed Apple Account used for the purchase.
+* **The administrator should log in to ** Apple School Manager**, go to ** Settings > Payments and Billing > View Purchase History**.
+* **Alternatively, log in to ** reportaproblem.apple.com**using the Managed Apple Account used for the purchase.
 
 * **Select the order and "Request a refund," citing "Purchased wrong version."**
 

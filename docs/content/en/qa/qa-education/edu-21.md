@@ -16,5 +16,5 @@ title: How do I manage the new 'Notification Summary' AI feature in iOS 18?
 
 ## Management Strategies:
 
-* **MDM Restriction**: Administrators can use the Restrictions payload to disable**'Allow Intelligent Notification Preview'**. This prevents the AI from summarizing notifications.
+* **MDM Restriction **: Administrators can use the Restrictions payload to disable**'Allow Intelligent Notification Preview'**. This prevents the AI from summarizing notifications.
 * **Classroom Tip**: Instead of a full block, encourage students to configure this within a "Classroom Focus" mode. This allows the AI to only show urgent educational alerts while summarizing distracting social notifications until the end of the school day.

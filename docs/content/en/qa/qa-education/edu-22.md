@@ -34,7 +34,7 @@ title: >-
 
 1. **Prioritize the 'Classroom' App (Recommended)**:
 
-* **The**Classroom**app bypasses the AirDrop Code requirement entirely.
+* **The ** Classroom**app bypasses the AirDrop Code requirement entirely.
 * **Action**: Teachers should use the "Navigate" or "Share" function within the Classroom app to push PDFs and URLs. It's faster, requires no student confirmation, and works for the whole class simultaneously.
 
 1. **'Pairing Day' Routine**:
@@ -48,4 +48,4 @@ title: >-
 
 ## Advice for Teachers:
 
-Inform your staff that the AirDrop Code is a**Security Feature**to prevent "Airdropping" of inappropriate images from strangers. While it adds a small step to the first interaction, it creates a much safer digital environment for the students.
+Inform your staff that the AirDrop Code is a **Security Feature** to prevent "Airdropping" of inappropriate images from strangers. While it adds a small step to the first interaction, it creates a much safer digital environment for the students.

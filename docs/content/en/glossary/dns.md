@@ -5,7 +5,7 @@ term: DNS (Domain Name System)
 ---
 ## Term Definition
 
-* **DNS**is the foundational "Address Book" of the internet that translates human-readable domain names into numeric IP addresses.
+* **DNS** is the foundational "Address Book" of the internet that translates human-readable domain names into numeric IP addresses.
 
 Functional roles:
 
@@ -15,6 +15,6 @@ Functional roles:
 
 ## Analogy
 
-This is the internet's**"Directory Assistance"**or**"GPS."**
+This is the internet's **"Directory Assistance"** or **"GPS."**
 
 You know the name of the store you want to visit (e.g., "Apple Support"), but you don't know exactly where it's located (the IP Address). You "call" the DNS server, it gives you the specific coordinates, and then your device can navigate directly to the correct destination and load the website.

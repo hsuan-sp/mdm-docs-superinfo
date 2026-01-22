@@ -35,9 +35,9 @@ To provide the fastest out-of-box experience, we recommend skipping almost every
 
 ### Required Steps to SHOW
 
-* **❌ Remote Management**: **Cannot be skipped**. This is the core step of ADE that informs the user the device is managed by the school.
-* **⚠️ Biometrics (Touch ID / Face ID)**: We recommend showing this step for staff devices or personal-use faculty iPads to ensure security. For shared student carts, it is safer to skip it to avoid confusion or local lockouts.
-* **⚠️ Apple Account Login**: Typically shown for 1:1 deployments where Managed Apple Accounts are used, but skipped for shared classroom iPads where no user login is required at the initial setup.
+* **❌ Remote Management **:** Cannot be skipped**. This is the core step of ADE that informs the user the device is managed by the school.
+* **⚠ ️ Biometrics (Touch ID / Face ID)**: We recommend showing this step for staff devices or personal-use faculty iPads to ensure security. For shared student carts, it is safer to skip it to avoid confusion or local lockouts.
+* **⚠ ️ Apple Account Login**: Typically shown for 1:1 deployments where Managed Apple Accounts are used, but skipped for shared classroom iPads where no user login is required at the initial setup.
 
 ---
 

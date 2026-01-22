@@ -5,7 +5,7 @@ term: AppleCare+
 ---
 ## Term Definition
 
-* **AppleCare+++++++++++++**is Apple’s official extended warranty and accidental damage insurance service for hardware.
+* **AppleCare+++++++++++++** is Apple’s official extended warranty and accidental damage insurance service for hardware.
 
 Key benefits for organizations:
 
@@ -15,8 +15,8 @@ Key benefits for organizations:
 
 ## Analogy
 
-Think of this as**"Original Equipment Insurance."**
+Think of this as **"Original Equipment Insurance."**
 
 While every device comes with a basic 1-year guarantee, AppleCare+++++++++++++ goes much further. If an iPad is accidentally dropped in the hallway and the screen shatters, the school doesn't have to buy a whole new device.
 
-Instead, they pay a small**"Processing Fee"**and Apple repairs or replaces the iPad with a fresh one, keeping the fleet healthy and operational.
+Instead, they pay a small **"Processing Fee"** and Apple repairs or replaces the iPad with a fresh one, keeping the fleet healthy and operational.

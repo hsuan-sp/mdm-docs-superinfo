@@ -6,7 +6,7 @@ term: Software Update
 ---
 ## Term Definition
 
-* **Software Update**is the system mechanism for downloading and installing new versions of the operating system (macOS/iOS) and its built-in apps (Safari).
+* **Software Update** is the system mechanism for downloading and installing new versions of the operating system (macOS/iOS) and its built-in apps (Safari).
 
 Management controls (via DDM):
 
@@ -16,8 +16,8 @@ Management controls (via DDM):
 
 ## Analogy
 
-Think of this as**"Device Schooling."**
+Think of this as **"Device Schooling."**
 
-Every once in a while, your device needs to**"go back to class"**to learn new skills (new features) or get stronger (security fixes).
+Every once in a while, your device needs to **"go back to class"** to learn new skills (new features) or get stronger (security fixes).
 
-IT is the**Teacher**who decides when it’s the best time for all school iPads to learn these new things, making sure they are ready for the next lesson without surprising you in the middle of an exam.
+IT is the **Teacher** who decides when it’s the best time for all school iPads to learn these new things, making sure they are ready for the next lesson without surprising you in the middle of an exam.

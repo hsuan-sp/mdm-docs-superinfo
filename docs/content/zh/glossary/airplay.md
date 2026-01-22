@@ -5,7 +5,7 @@ term: AirPlay
 ---
 ## 術語定義
 
-* **AirPlay** 是 Apple 的無線影音串流協定，可將畫面鏡像輸出或串流影音到**Apple TV** 或支援 AirPlay 的螢幕。
+* **AirPlay ** 是 Apple 的無線影音串流協定，可將畫面鏡像輸出或串流影音到**Apple TV** 或支援 AirPlay 的螢幕。
 
 在教室環境中，MDM 可以實現：
 

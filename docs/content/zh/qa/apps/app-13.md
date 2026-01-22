@@ -21,7 +21,7 @@ title: 什麼是「受管理的應用程式設定 (Managed App Configuration)」
 * **技術實作與 Jamf Pro 變數應用**：
 
 在 Jamf Pro 的行動裝置 App 詳細資訊頁面中，切換至 **「App Configuration」** 分頁。
-您需要貼入符合該 App 開發者規範的 **Plist (Property List)**XML 代碼。
+您需要貼入符合該 App 開發者規範的 **Plist (Property List)** XML 代碼。
 
 * **Jamf Pro 獨家優勢：變數代換 (Variable Substitution)**
 
@@ -48,5 +48,6 @@ title: 什麼是「受管理的應用程式設定 (Managed App Configuration)」
 </dict>
 
 ```
+
 
 * **(注意：具體的 Key 值必須參閱該 App 開發商（如 Zoom, Chrome, Microsoft）的官方管理手冊。)**

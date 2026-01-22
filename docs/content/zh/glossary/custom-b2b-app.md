@@ -5,12 +5,12 @@ term: Custom B2B App
 ---
 ## 術語定義
 
-* **Custom B2B App (自訂企業 App)** 是企業自行開發（或委外開發），並透過 Apple 的 VPP (大量採購計畫) 進行**私密發佈** 的應用程式。
+* **Custom B2B App (自訂企業 App) ** 是企業自行開發（或委外開發），並透過 Apple 的 VPP (大量採購計畫) 進行**私密發佈** 的應用程式。
 
 其特點為：
 
-* **私密性**：這些 App**不會** 出現在公開的 App Store 上讓一般大眾搜尋或下載。
-* **定向發佈**：僅限特定的企業或學校，透過**Apple Business Manager (ABM)**或**Apple School Manager (ASM)** 進行購買。
+* **私密性 **：這些 App** 不會**出現在公開的 App Store 上讓一般大眾搜尋或下載。
+* **定向發佈 **：僅限特定的企業或學校，透過** Apple Business Manager (ABM) **或** Apple School Manager (ASM)**進行購買。
 
 * **管理部署**：購買後需透過 MDM 派發給內部的員工使用。
 
