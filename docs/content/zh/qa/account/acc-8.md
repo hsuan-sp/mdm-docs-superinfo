@@ -6,10 +6,6 @@ important: false
 tags: ["密碼重置","Jamf Pro","災難復原"]
 ---
 
-## Q: 忘記 Jamf Pro 的管理員登入密碼怎麼辦？
-
-## Answer
-
 ** 重置方式取決於您的 Jamf Pro 部署環境（雲端版或地端版），以及是否啟用了 SSO。
 
 **** 情境一：Jamf Pro 雲端版 (Jamf Cloud) **1.** 使用登入頁面連結 ** ：

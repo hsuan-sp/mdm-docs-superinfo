@@ -6,10 +6,6 @@ important: false
 tags: ["Automation","Shell Script","Zsh","Policies","Scripts","jamfHelper"]
 ---
 
-## Q: What can Jamf Scripts do? How do I create and run them?"
-
-## Answer
-
 **Scripts allow administrators to execute shell commands with Root privileges on a Mac, enabling advanced customization that standard MDM payloads cannot achieve.** Jamf Pro's power lies in its proprietary binary. When combined with **Policies** , you can achieve the following advanced scenarios:
 
 ## Common Application Scenarios:

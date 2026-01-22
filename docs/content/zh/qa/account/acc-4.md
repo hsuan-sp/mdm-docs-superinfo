@@ -6,10 +6,6 @@ important: false
 tags: ["VPP","Token","大量採購"]
 ---
 
-## Q: Jamf Pro 顯示「VPP Token」即將過期，如何更新？
-
-## Answer
-
 **VPP (大量採購方案) Token 是 Jamf Pro 與 Apple 校務管理之間同步 App 授權的橋梁，每年需更新一次。** 當 Token 過期後，Jamf Pro 將無法從 ASM 取得最新的授權資訊，
 導致新購買的 App 無法派送、現有授權狀態無法更新。
 

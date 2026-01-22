@@ -6,11 +6,9 @@ important: false
 tags: ["Charging Issues","Diagnostics","Hardware Maintenance"]
 ---
 
-## Q: An iPad isn't charging inside the cart. Is the device faulty or the cart?
+**When an iPad fails to charge, we recommend a "Systematic Cross-Testing" approach to isolate the failure point between the device, the cable, and the cart’s power module.**
 
-## Answer
-
-**When an iPad fails to charge, we recommend a "Systematic Cross-Testing" approach to isolate the failure point between the device, the cable, and the cart’s power module.** ## Cross-Testing Workflow:
+## Cross-Testing Workflow:
 
 ## Stage 1: Slot and Cable Test
 

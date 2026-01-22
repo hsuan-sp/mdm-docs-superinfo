@@ -6,10 +6,6 @@ important: false
 tags: ["Shared iPad","Multi-User","Deployment Modes","iCloud"]
 ---
 
-## Q: What is 'Shared iPad' and how does it differ from a standard iPad? When should we use it?"
-
-## Answer
-
 **Shared iPad allows multiple students to log into the same physical device using their individual Managed Apple Accounts. Their documents and app data are isolated and synced to iCloud.** This is the ideal solution for computer labs or "trolley systems" where iPads are moved between different year groups throughout the day.
 
 ## Comparison Table:

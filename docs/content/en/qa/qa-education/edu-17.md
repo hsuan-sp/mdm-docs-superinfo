@@ -6,11 +6,9 @@ important: true
 tags: ["Screen Recording","Restrictions","Control Center"]
 ---
 
-## Q: Why is the 'Screen Recording' button missing or grayed out on student iPads?
+**This is typically because 'Screen Recording' is restricted in the school's MDM profile, or the button simply hasn't been added to the Control Center.**
 
-## Answer
-
-**This is typically because 'Screen Recording' is restricted in the school's MDM profile, or the button simply hasn't been added to the Control Center.** ## Troubleshooting Steps:
+## Troubleshooting Steps:
 
 1. **Check MDM Restrictions (Most Common)** :
 

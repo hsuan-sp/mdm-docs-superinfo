@@ -6,10 +6,6 @@ important: false
 tags: ["作業繳交","檔案分享","Google Drive"]
 ---
 
-## Q: 學生做完的作業（Keynote/Pages）要怎麼交給老師？
-
-## Answer
-
 ** 最佳方式是透過雲端硬碟（Google Drive、OneDrive、或 iCloud Drive）繳交。
 
 **** 也可使用 AirDrop、Google Classroom 作業功能、或 Self Service 指定的繳交平台。 **在數位教學環境中，建立順暢的作業繳交流程可大幅提升教學效率。以下是幾種常見方式。** 方式一：Google Drive（最推薦） **適合已使用 Google Classroom/Workspace 的學校。** 操作步驟 ** ：

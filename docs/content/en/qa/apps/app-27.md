@@ -6,10 +6,6 @@ important: true
 tags: ["App Update","Jamf Pro","Manual Update","Auto Update","DDM"]
 ---
 
-## Q: How do I update apps via Jamf Pro? Can I force an update manually?
-
-## Answer
-
 **In Jamf Pro, app updates are primarily managed through "Automated Enforcement" and the "Force Update" button.** To ensure classroom iPads remain up-to-date, it is recommended to combine automated checking with manual enforcement when necessary.
 
 ## 1. Configuring Automated Updates and Sync Schedules
@@ -26,7 +22,9 @@ For urgent updates, navigate to **Devices > Mobile Device Apps** and select the 
 
 1. Go to the detailed information page for the app.
 1. Scroll down to the **「強制應用程式更新」** (Force App Update) section.
-1. Click the **`Force Update`** button. Jamf Pro will immediately send a force update command to all devices within the app's **"Scope."** ## 3. Considerations for 2026: DDM and Update Constraints
+1. Click the **`Force Update`** button. Jamf Pro will immediately send a force update command to all devices within the app's **"Scope."**
+
+## 3. Considerations for 2026: DDM and Update Constraints
 
 In iOS 26 and the latest system environments, update execution is still subject to the following rules:
 

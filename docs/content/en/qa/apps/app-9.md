@@ -6,11 +6,9 @@ important: false
 tags: ["App Updates","Device-based Assignment","Automated Updates","DDM"]
 ---
 
-## Q: Do I need the student's Apple ID password to update apps? How can I achieve silent updates?
+**No password is required. As long as you use "Device-based Assignment," the update process is completely hands-off.**
 
-## Answer
-
-**No password is required. As long as you use "Device-based Assignment," the update process is completely hands-off.** ## The Preferred 2026 Method: Declarative Device Management (DDM)
+## The Preferred 2026 Method: Declarative Device Management (DDM)
 
 Under the latest OS architecture, **DDM** is the best path for silent updates:
 

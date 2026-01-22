@@ -6,10 +6,6 @@ important: true
 tags: ["Passcode","Forgot Password","Jamf Pro","Remote Commands","Troubleshooting"]
 ---
 
-## Q: What should I do if a student forgets their iPad passcode? Can a teacher help reset it?
-
-## Answer
-
 **Yes. As long as the iPad is managed by the school's MDM (Jamf Pro) and remains connected to the internet, a teacher or IT administrator can "Clear Passcode" remotely without needing to wipe the device.** This is a very common scenario in the classroom.
 
 ## Method 1: Using Jamf Teacher (Recommended for Teachers)

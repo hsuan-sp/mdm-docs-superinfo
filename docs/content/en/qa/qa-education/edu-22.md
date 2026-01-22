@@ -6,11 +6,9 @@ important: false
 tags: ["AirDrop", "System Update", "File Transfer", "Classroom", "Operations"]
 ---
 
-## Q: The AirDrop Code Mechanism: Practical impact on classroom file sharing and how to adapt.
+**In iOS 26.2, iPadOS 26.2, and macOS 26.2, the 'AirDrop Code' mechanism means that first-time transfers between people not in each other's contacts require a 6-digit code. This changes the 'Everyone open AirDrop' workflow but can be managed effectively.**
 
-## Answer
-
-**In iOS 26.2, iPadOS 26.2, and macOS 26.2, the 'AirDrop Code' mechanism means that first-time transfers between people not in each other's contacts require a 6-digit code. This changes the 'Everyone open AirDrop' workflow but can be managed effectively.** ## The New Workflow:
+## The New Workflow:
 
 1. **Sender** : Selects the file and clicks the student's name in AirDrop.
 

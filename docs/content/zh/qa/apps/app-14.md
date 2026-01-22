@@ -6,10 +6,6 @@ important: false
 tags: ["TestFlight","App Store Connect","管理式 Apple 帳號","服務存取"]
 ---
 
-## Q: 【TestFlight】可以讓老師使用「管理式 Apple 帳號」測試校內開發的 Beta 版 App 嗎？
-
-## Answer
-
 **可以。Apple 已允許「管理式 Apple 帳號 (Managed Apple Account)」作為 TestFlight 的測試者，**** 但必須先在 ASM 端開放權限。
 
 **** 前置需求檢查 (ASM 端) ** ：

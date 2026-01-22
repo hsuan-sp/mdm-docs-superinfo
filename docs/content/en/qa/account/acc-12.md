@@ -6,10 +6,6 @@ important: true
 tags: ["Migration","MDM Transfer","OS 26"]
 ---
 
-## Q: Can I migrate to a new MDM provider without wiping device data?
-
-## Answer
-
 **While System Version 26 supports 'Automated MDM Migration', it remains 'strongly discouraged' in educational environments due to potential configuration conflicts.** According to the latest updates from WWDC 25, Apple has enhanced the `MigrateDevice` command in **Version 26** (iOS 26 / macOS 26 Tahoe), allowing devices to migrate silently from an old MDM to a new one. However, significant risks remain:
 
 ## 1. Educational Environment Constraints:

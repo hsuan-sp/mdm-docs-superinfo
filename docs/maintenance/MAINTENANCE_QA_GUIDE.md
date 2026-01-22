@@ -42,10 +42,6 @@ important: true/false
 tags: ["關鍵字1", "關鍵字2", "關鍵字3"]
 ---
 
-## Q: [重複問題標題]
-
-## Answer
-
 **核心答案（粗體開場，一句話總結問題解答）**
 
 詳細說明段落，解釋背景脈絡...
@@ -82,10 +78,6 @@ tags: ["標籤1", "標籤2", "標籤3"]  # 3-6個精確標籤
 **內容架構**（基於現有優秀範例分析）：
 
 ```markdown
-
-## Q: [重複問題標題]
-
-## Answer
 
 **核心答案（粗體開場，一句話總結）**
 
@@ -297,10 +289,6 @@ category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["MDM 遷移", "零抹除", "iOS 26", "macOS Tahoe", "風險評估"]
 ---
-
-## Q: 什麼是「Zero-Wipe MDM Migration (零抹除 MDM 遷移)」？iOS 26 的新功能學校該用嗎？
-
-## Answer
 
 **iOS 26/macOS Tahoe 支援零抹除 MDM 遷移，但教育環境「強烈不建議」使用，應優先使用 Return to Service。**
 

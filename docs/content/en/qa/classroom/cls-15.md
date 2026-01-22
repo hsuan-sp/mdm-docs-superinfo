@@ -6,11 +6,9 @@ important: false
 tags: ["Backup","Loaner Device","iCloud","Data Restore"]
 ---
 
-## Q: If a student iPad fails and they use a loaner, will their data still be there?
+**This depends on whether the data is stored 'Locally' or in the 'Cloud'.**
 
-## Answer
-
-**This depends on whether the data is stored 'Locally' or in the 'Cloud'.** ## Fate of Data Types:
+## Fate of Data Types:
 
 1. **Cloud Data (Safe)** :
 

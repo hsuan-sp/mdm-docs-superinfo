@@ -6,11 +6,9 @@ important: true
 tags: ["MOE Instance", "Private Instance", "Permission Differences", "Integration", "IT Coordinator"]
 ---
 
-## Q: What is the difference between the 'MOE Managed Jamf Pro' and 'School-Purchased Jamf Pro'?
+**The primary differences lie in administrative permissions, feature rollout speed, and 'Global Toggle' control. While assets can be moved between them, the daily management experience varies significantly.**
 
-## Answer
-
-**The primary differences lie in administrative permissions, feature rollout speed, and 'Global Toggle' control. While assets can be moved between them, the daily management experience varies significantly.** ## Three Levels of Administrative Access
+## Three Levels of Administrative Access
 
 In the **MOE Managed Jamf Pro** architecture, permissions are layered to balance security with local flexibility:
 

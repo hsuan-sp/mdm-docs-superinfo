@@ -6,11 +6,9 @@ important: false
 tags: ["Projection","Adapters","AirPlay","HDMI"]
 ---
 
-## Q: How do I project my iPad screen to a traditional TV or a classroom without Apple TV?
+**You can use a wired HDMI adapter (most stable) or third-party wireless projection software. For the best experience, we recommend the school acquire an Apple TV.**
 
-## Answer
-
-**You can use a wired HDMI adapter (most stable) or third-party wireless projection software. For the best experience, we recommend the school acquire an Apple TV.** ## Option 1: HDMI Adapters (Highly Recommended)
+## Option 1: HDMI Adapters (Highly Recommended)
 
 **Required Equipment** :
 

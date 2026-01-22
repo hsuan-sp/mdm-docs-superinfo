@@ -6,10 +6,6 @@ important: false
 tags: ["System Updates","DDM","Nudge","IT Operations"]
 ---
 
-## Q: How do I force a Mac to perform system updates? Students keep clicking 'Remind Me Later'.
-
-## Answer
-
 **The modern solution is to use "Declarative Device Management (DDM)." If you need more visual urgency, you can supplement this with the open-source tool "Nudge."** Unlike iPads, Mac updates often require a lengthy restart, which leads students to postpone them indefinitely, creating a fragmented and insecure fleet.
 
 ## Path 1: DDM Enforced Updates (Recommended for macOS 14+)

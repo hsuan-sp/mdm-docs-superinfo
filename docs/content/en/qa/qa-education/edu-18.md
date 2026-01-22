@@ -6,11 +6,9 @@ important: false
 tags: ["DNS","DHCP","Network Failure","Troubleshooting"]
 ---
 
-## Q: The iPad shows it's connected to Wi-Fi, but I can't open any web pages. Why?
+**This is often a 'False IP' or 'DNS failure' rather than a hardware defect in the iPad.**
 
-## Answer
-
-**This is often a 'False IP' or 'DNS failure' rather than a hardware defect in the iPad.** ## Troubleshooting Steps:
+## Troubleshooting Steps:
 
 1. **Verify IP Address** :
 

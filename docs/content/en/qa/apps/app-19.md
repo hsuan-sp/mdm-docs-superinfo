@@ -6,10 +6,6 @@ important: true
 tags: ["Single App Mode","ASAM","Assessment Mode","Risk Warning"]
 ---
 
-## Q: How do I lock an iPad into a 'Single App' for exams? Can students exit themselves?
-
-## Answer
-
 **Standard 'Single App Mode' cannot be exited by the user. If you need exit flexibility, you should use 'Autonomous Single App Mode (ASAM)'.** Choosing the wrong mode is a leading cause of "bricked" devices during school deployments:
 
 ## Mode 1: MDM-Enforced Single App Mode

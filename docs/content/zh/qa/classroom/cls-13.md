@@ -6,10 +6,6 @@ important: false
 tags: ["共用 iPad","訪客模式","Shared iPad","圖書館"]
 ---
 
-## Q: 【共用 iPad】不想要每節課都輸入帳號密碼，有「訪客模式」嗎？
-
-## Answer
-
 ** 有。Shared iPad 支援「訪客工作階段 (Guest Session)」，使用者無需帳號即可登入。
 
 **** 特性與限制 ** ：

@@ -6,11 +6,9 @@ important: true
 tags: ["MDM Migration", "Zero-Wipe", "iOS 26", "macOS 26", "Risk Assessment"]
 ---
 
-## Q: What is 'Zero-Wipe MDM Migration'? Is this new iOS 26 feature suitable for schools?
+**iOS 26, iPadOS 26, and macOS 26 support 'Zero-Wipe MDM Migration,' allowing for the change of MDM systems without resetting the device. While impressive, we recommend schools prioritize 'Return to Service' to ensure devices remain clean and stable.**
 
-## Answer
-
-**iOS 26, iPadOS 26, and macOS 26 support 'Zero-Wipe MDM Migration,' allowing for the change of MDM systems without resetting the device. While impressive, we recommend schools prioritize 'Return to Service' to ensure devices remain clean and stable.** ## How it Works
+## How it Works
 
 1. Configure the target (new) MDM in **Apple School Manager (ASM)** .
 1. Set an **Enrollment Deadline** .

@@ -6,10 +6,6 @@ important: true
 tags: ["App Store","Self Service","Restrictions"]
 ---
 
-## Q: Why is the App Store missing? How do I download apps?
-
-## Answer
-
 **This is an intentional setting by the school. The App Store is hidden to prevent students from downloading unauthorized apps. Use the 'Self Service' app to install school-approved applications instead.** Finding the App Store missing is a result of MDM restrictions, not a malfunction.
 
 ## Why the App Store is Hidden:

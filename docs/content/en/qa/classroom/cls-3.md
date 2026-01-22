@@ -6,11 +6,9 @@ important: false
 tags: ["Web Navigation","Safari","Content Filtering","Troubleshooting"]
 ---
 
-## Q: Why is the web navigation failing when I try to push a URL to student iPads?
+**Navigation failures are typically caused by browser restrictions, content filters, or excessive open tabs.**
 
-## Answer
-
-**Navigation failures are typically caused by browser restrictions, content filters, or excessive open tabs.** ## Troubleshooting Checklist:
+## Troubleshooting Checklist:
 
 1. **Safari is Disabled** : Verify if Safari has been hidden or disabled via a management profile. If the browser is unavailable, the push command has nowhere to go.
 

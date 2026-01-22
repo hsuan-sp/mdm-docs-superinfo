@@ -6,10 +6,6 @@ important: true
 tags: ["硬體管理","Lightning","USB-C","Apple Pencil","轉接器","充電車"]
 ---
 
-## Q: 學校同時有 iPad 9 (Lightning) 以前的載具，與 iPad 10 (USB-C) 以後的載具，配件或 Apple Pencil 如何相容？
-
-## Answer
-
 **隨著精進方案進入後期，學校開始採購新 iPad，校內常出現不同介面的 iPad 併存。****管理員需特別注意介面轉換、Apple Pencil 的配對機制以及充電車的佈線設定。** iPad 9（Lightning 介面）以前的裝置，與 iPad 10（USB-C 介面）以後的裝置，
 在硬體連接埠物理特性上有顯著差異，這直接影響了周邊配件的採購與共用性： **Apple Pencil 相容性與轉接方案：** 1. **iPad 9 (Lightning) 世代** ：僅支援 **Apple Pencil (第 1 代)** 。
 

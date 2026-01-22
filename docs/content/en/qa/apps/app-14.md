@@ -6,11 +6,9 @@ important: false
 tags: ["TestFlight","App Store Connect","Managed Apple Account","Service Access"]
 ---
 
-## Q: Can teachers use Managed Apple Accounts to test school-developed Beta apps in TestFlight?
+**Yes. Apple allows 'Managed Apple Accounts' to act as TestFlight testers, but permissions must first be enabled within Apple School Manager (ASM).**
 
-## Answer
-
-**Yes. Apple allows 'Managed Apple Accounts' to act as TestFlight testers, but permissions must first be enabled within Apple School Manager (ASM).** ## Prerequisites (ASM Side):
+## Prerequisites (ASM Side):
 
 The administrator must log into **Apple School Manager** and go to **Settings > User Assignments > Service Access** . Ensure that the **TestFlight** service is set to **On** . If this toggle is off, users will be unable to sign in to TestFlight even if they receive an invitation.
 

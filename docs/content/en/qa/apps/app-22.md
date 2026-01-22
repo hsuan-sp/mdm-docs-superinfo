@@ -6,10 +6,6 @@ important: false
 tags: ["Procreate","App Purchasing","VPP","Universal Purchase","Refund"]
 ---
 
-## Q: Purchasing Procreate vs. Procreate Pocket: What's the difference, and what if we bought the wrong version?
-
-## Answer
-
 **Buying the wrong version of a high-profile app is a common clerical error in educational procurement.** These two apps are distinct product lines and do **not** support "Universal Purchase."
 
 ## Specification Comparison:

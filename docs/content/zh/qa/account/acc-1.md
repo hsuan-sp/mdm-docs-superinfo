@@ -6,10 +6,6 @@ important: true
 tags: ["ASM","條款更新"]
 ---
 
-## Q: 登入 Apple 校務管理 (ASM) 時，系統提示需同意新的條款與約定，這很重要嗎？
-
-## Answer
-
 **非常重要，請優先處理。** 當 Apple 更新服務條款時，系統會在登入 Apple 校務管理 (Apple School Manager, ASM) 時，
 跳出「條款與約定」的彈出視窗。請注意以下重點： **影響範圍** ：
 

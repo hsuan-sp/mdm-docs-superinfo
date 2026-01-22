@@ -6,10 +6,6 @@ important: false
 tags: ["ADE","ASM","Enrollment Failure","Automated Device Enrollment"]
 ---
 
-## Q: My new iPad didn't show the 'Remote Management' screen during setup. How do I fix this?
-
-## Answer
-
 **If your iPad goes straight to the standard personal setup screens instead of the school's "Remote Management" prompt, it usually means the device serial number hasn't been linked to your MDM server by Apple.** This automated process—known as **Automated Device Enrollment (ADE)** —relies on the device "checking in" with Apple's servers the moment it connects to Wi-Fi. If no assignment is found, Apple treats it as a private retail device.
 
 ## Troubleshooting Steps:

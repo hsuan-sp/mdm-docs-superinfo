@@ -6,11 +6,9 @@ important: false
 tags: ["macOS 26", "Package", "DDM", ".pkg", "Jamf Policy"]
 ---
 
-## Q: macOS 26 的「宣告式 .pkg 部署」如何使用？與傳統 Jamf Policy 有何不同？
+**macOS 26 (Tahoe) 將非 App Store 軟體 (.pkg) 納入宣告式裝置管理 (DDM) 範疇，允許透過 Declaration 部署軟體包，提供比傳統 Jamf Policy 更現代化、更透明的安裝體驗。**
 
-## Answer
-
-**macOS 26 (Tahoe) 將非 App Store 軟體 (.pkg) 納入宣告式裝置管理 (DDM) 範疇，允許透過 Declaration 部署軟體包，提供比傳統 Jamf Policy 更現代化、更透明的安裝體驗。** ## DDM Package vs. Jamf Policy
+## DDM Package vs. Jamf Policy
 
 | 特性 | Jamf Policy (傳統) | DDM Package Declaration (新) |
 | :--- | :--- | :--- |

@@ -6,11 +6,9 @@ important: false
 tags: ["Clock App","Alarm Restrictions","Classroom Order"]
 ---
 
-## Q: Students are using the 'Clock' app for pranks (alarms/timers). Can MDM control this?
+**MDM cannot detect or block the 'setting' of specific alarms, but you can solve the problem by 'Hiding the App'.**
 
-## Answer
-
-**MDM cannot detect or block the 'setting' of specific alarms, but you can solve the problem by 'Hiding the App'.** ## Why can't we manage alarms directly?
+## Why can't we manage alarms directly?
 
 The Apple MDM protocol does not grant permissions to read or modify local alarm settings. Therefore, an administrator cannot remotely delete a student's set alarms or prevent them from ringing.
 

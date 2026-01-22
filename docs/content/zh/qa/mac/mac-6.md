@@ -6,10 +6,6 @@ important: false
 tags: ["重置","EACS","抹除所有內容","電腦教室","Imaging"]
 ---
 
-## Q: Mac 電腦教室如何像還原卡一樣，快速清除重置 (Wipe)？
-
-## Answer
-
 **Apple Silicon (M 系列) 時代已不建議，而且可能也無法使用「還原卡」或「Ghost」。****請改用「清除所有內容和設定 (EACS)」指令。** 傳統的磁碟映像檔部署 (Monolithic Imaging) 已被 Apple 徹底淘汰。
 現在的重置邏輯是「清除使用者資料 + 保留作業系統 + 自動重新註冊」。
 

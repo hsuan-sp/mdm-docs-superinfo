@@ -6,10 +6,6 @@ important: false
 tags: ["Reset","EACS","Erase All Content and Settings","Computer Lab","Imaging"]
 ---
 
-## Q: How can I quickly reset (wipe) a Mac lab, similar to using recovery cards?
-
-## Answer
-
 **In the era of Apple Silicon (M-series), using "recovery cards" or "Ghost" imaging is no longer recommended and often not even possible. Instead, use the "Erase All Content and Settings (EACS)" command.** Traditional monolithic imaging has been completely retired by Apple. The modern reset logic is "Clear user data + Keep operating system + Automatically re-enroll."
 
 ## Comparison of Methods:

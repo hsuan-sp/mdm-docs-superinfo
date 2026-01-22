@@ -6,10 +6,6 @@ important: false
 tags: ["電子書","教材派送","PDF","限制"]
 ---
 
-## Q: 如何派送「電子書 (PDF/ePub)」教材到學生 iPad？
-
-## Answer
-
 ** 在台灣，Apple 校務管理 (ASM) 目前不支援直接採購或分發「Apple Books」商店內的內容。
 
 **但您仍有多種方法將學校自製或購買的電子教材（如 PDF、ePub 檔案）派送至學生 iPad：** 方案一：透過 MDM 派送自製或授權的檔案 **1.** 上傳至 Jamf Pro ** ：在 Jamf Pro 的「電子書」管理項目中，

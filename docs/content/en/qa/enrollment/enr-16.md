@@ -6,10 +6,6 @@ important: false
 tags: ["Invalid Profile","Troubleshooting","Wipe Device","Declarative Management"]
 ---
 
-## Q: The device shows 'Invalid Profile' or is running extremely slow, even after a reset. Why?
-
-## Answer
-
 **'Invalid Profile' typically indicates that the 'Trust Anchor' (the identity chain between the device and the MDM server) has been broken.** In this state, the device appears managed but has lost its ability to communicate. Instructions and configurations cannot be delivered correctly.
 
 ## Recommended Solutions:

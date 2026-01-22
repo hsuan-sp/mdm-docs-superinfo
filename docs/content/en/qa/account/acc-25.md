@@ -6,11 +6,9 @@ important: false
 tags: ["API", "Automation", "ABM", "ASM", "Advanced Management"]
 ---
 
-## Q: What automation tasks can be performed using ABM/ASM APIs? Does it require development skills?
+**Apple provides APIs for ASM/ABM that allow developers to interact directly with organizational data, enabling advanced automations like "automated account creation," "device inventory queries," and "bulk MDM reassignment."**
 
-## Answer
-
-**Apple provides APIs for ASM/ABM that allow developers to interact directly with organizational data, enabling advanced automations like "automated account creation," "device inventory queries," and "bulk MDM reassignment."** ## Key API Use Cases
+## Key API Use Cases
 
 1. **Roster Automation** :
 

@@ -6,10 +6,6 @@ important: false
 tags: ["資料回報","安全性","Jamf Trust","限制描述檔"]
 ---
 
-## Q: 學生刪除了 Jamf Trust App，會影響使用率計算嗎？該如何防範？
-
-## Answer
-
 **會嚴重影響。Jamf Trust 是流量回報的唯一感應器，一旦被刪除，****該裝置在教育部報表中將被視為「未使用」。** 為了保證學校的 KPI 達標，管理員必須採取強硬的防護措施： **防範措施一：禁止刪除 App (最有效)** 1. 在 Jamf Pro 編輯該批裝置的 **「限制 (Restrictions)」** 描述檔。
 
 1. **取消勾選****「允許移除 App (Allow removing apps)」** 。

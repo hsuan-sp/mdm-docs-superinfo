@@ -6,10 +6,6 @@ important: true
 tags: ["ASM","Terms Update"]
 ---
 
-## Q: The system prompted to agree to 'New Terms and Conditions' when logging into Apple School Manager (ASM). Is this important?
-
-## Answer
-
 **Yes, this is extremely important and should be prioritized immediately.** When Apple updates its service terms, a "Terms and Conditions" window will pop up when you log into [Apple School Manager (ASM)](https://school.apple.com). Ignoring this will impact several critical management functions.
 
 ## The Impact of Not Agreeing
@@ -27,6 +23,8 @@ Only users with the **"Administrator"** role in ASM have the authority to accept
 
 1. Log in to [school.apple.com](https://school.apple.com) using your Administrator account.
 1. Follow the prompts in the banner or popup window.
-1. Read the terms, check the "I have read and agree..." boxes, and click **"Agree."** ## Institutional Advice:
+1. Read the terms, check the "I have read and agree..." boxes, and click **"Agree."**
+
+## Institutional Advice:
 
 We recommend that every school has at least **two separate Administrator accounts** (e.g., the ICT Director and a designated systems administrator). This ensures that if one person is unavailable or leaves the school, global management of your Apple fleet can continue without interruption.

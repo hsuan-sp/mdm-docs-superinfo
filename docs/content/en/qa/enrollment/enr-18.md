@@ -6,10 +6,6 @@ important: true
 tags: ["Activation Lock","ASM","Automated Device Enrollment","Unlock"]
 ---
 
-## Q: Can I remove Activation Lock directly in ASM now? Do I still need Apple Support?
-
-## Answer
-
 **Yes. As long as the device belongs to your organization, you can now self-service Activation Lock removal directly through the Apple School Manager (ASM) interface.** This eliminates the need to call support or provide invoices for managed hardware, significantly streamlining school administration.
 
 ## Self-Service Unlocking Steps:

@@ -6,10 +6,6 @@ important: true
 tags: ["ADE","Server Token","自動裝置註冊"]
 ---
 
-## Q: ASM 中新採購的裝置無法同步到 Jamf Pro？（ADE 伺服器代號續約）
-
-## Answer
-
 **新採購的裝置若未出現在清單中，最常見的原因是「伺服器代號 (Server Token)」過期或裝置未指派。** 這是連結 Apple 校務管理 (ASM) 與 Jamf Pro 之間關於「硬體裝置」的橋梁（即原 DEP 流程）。
 它負責將 Apple 端的採購序號同步至 MDM 後台。
 

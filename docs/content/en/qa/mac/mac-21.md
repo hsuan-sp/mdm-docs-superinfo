@@ -6,11 +6,9 @@ important: false
 tags: ["Privacy Permissions", "Transparency", "PPPC", "macOS 26", "Communication"]
 ---
 
-## Q: macOS 26 Transparency: Students can see MDM privacy settings. How do I handle questions?
+**macOS 26 explicitly labels privacy permissions (Camera, Mic, Screen Recording) that are managed by the organization in System Settings.**
 
-## Answer
-
-**macOS 26 explicitly labels privacy permissions (Camera, Mic, Screen Recording) that are managed by the organization in System Settings.** ## The Interface Change:
+## The Interface Change:
 
 * **Pre-macOS 26** : Users saw toggles as grayed out but often didn't know*why*.
 * **macOS 26** : Displays a badge: **"Managed by [School Name]"** . Users can see what has been authorized but cannot change it.

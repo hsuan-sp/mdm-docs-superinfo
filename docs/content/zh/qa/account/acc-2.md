@@ -6,10 +6,6 @@ important: true
 tags: ["APNs","憑證","災難預防"]
 ---
 
-## Q: 推播憑證 (APNs Certificate) 過期會發生什麼事？如何續約？
-
-## Answer
-
 **後果極為嚴重：MDM 系統將完全失效，無法推送任何新命令以管理裝置。** Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APNs Certificate)
 是 MDM 與 Apple 伺服器溝通的「身分證」，
 所有 MDM 指令都必須透過此憑證簽章才能被 Apple 伺服器轉發至裝置。

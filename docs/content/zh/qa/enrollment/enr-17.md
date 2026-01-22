@@ -6,10 +6,6 @@ important: false
 tags: ["啟用鎖定","Activation Lock","解鎖代碼","Apple 裝置 App"]
 ---
 
-## Q: 裝置被「啟用鎖定 (Activation Lock)」鎖住了，該如何解除？
-
-## Answer
-
 **啟用鎖定是 Apple 的資安防護機制，若您擁有該裝置的所有權，可透過多種技術途徑解除鎖定。** 當 iPad 被清除（Erase）後，若系統偵測到其曾開啟「尋找」功能，會要求輸入原 Apple 帳號密碼。
 身為學校管理員，您的解鎖方案如下： **方案一：使用解鎖代碼 (Bypass Code) —— 最快速** 若裝置在鎖定前已受 Jamf Pro 管理且為受監管狀態：
 

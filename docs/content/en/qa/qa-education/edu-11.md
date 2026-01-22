@@ -6,10 +6,6 @@ important: false
 tags: ["Locking","Comparison","Guided Access","Single App Mode"]
 ---
 
-## Q: What is the difference between 'Guided Access' and 'Single App Mode'?
-
-## Answer
-
 **Both features lock the iPad into a single application, but they offer different levels of control: Guided Access is manually enabled by a user (e.g., a teacher), while Single App Mode is enforced remotely via MDM.** These two methods are often confused, but they serve different purposes:
 
 ## Feature Comparison:

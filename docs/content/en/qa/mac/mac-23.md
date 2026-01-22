@@ -6,11 +6,9 @@ important: false
 tags: ["iPhone Mirroring", "Classroom Management", "Restrictions", "macOS 26", "Security"]
 ---
 
-## Q: Classroom Order: How to manage or disable 'iPhone Mirroring' to prevent student distractions.
+**macOS 26 provides granular MDM controls for 'iPhone Mirroring.' IT coordinators can set different permission levels for 'Shared Lab Macs' versus 'Teacher Presentation Macs.'**
 
-## Answer
-
-**macOS 26 provides granular MDM controls for 'iPhone Mirroring.' IT coordinators can set different permission levels for 'Shared Lab Macs' versus 'Teacher Presentation Macs.'** ## Management Modes (SOP)
+## Management Modes (SOP)
 
 Using Jamf Pro's **Restrictions** payload, you should apply one of these three strategies based on the machine's location:
 

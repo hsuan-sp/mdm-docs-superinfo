@@ -6,10 +6,6 @@ important: false
 tags: ["帳號驅動註冊","服務偵測",".well-known","BYOD"]
 ---
 
-## Q: 如何在學校網域環境下，順利進行「帳號驅動註冊」的服務偵測？
-
-## Answer
-
 **帳號驅動註冊 (Account-driven Enrollment) 依賴 Apple 的「服務偵測 (Service Discovery)」機制，**** 讓使用者只需輸入管理式 Apple 帳號即可引導註冊。
 
 **** 運作原理與挑戰 ** ：

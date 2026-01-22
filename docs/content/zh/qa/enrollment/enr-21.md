@@ -6,10 +6,6 @@ important: false
 tags: ["Apple Configurator","手動加入 ASM","過渡期"]
 ---
 
-## Q: 購買的機器沒有出現在 ASM 中，可以用 Apple Configurator 手動加入嗎？
-
-## Answer
-
 **可以。對於非透過教育授權經銷商管道購買的裝置，**** 可以使用 Apple Configurator 將其手動納入 Apple 校務管理 (ASM) 組織。
 
 **此方法可讓原本屬於「零售通路」的 iPad 或 Mac，獲得與「自動裝置註冊 (ADE)」相同的管理等級（受監管狀態）。** 操作前提與準備 ** ：

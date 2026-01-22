@@ -6,11 +6,9 @@ important: false
 tags: ["App Deletion","Restrictions","Home Screen Management"]
 ---
 
-## Q: How do I prevent students from manually deleting apps?
+**You can disable 'Allow App Removal' in a Restrictions profile, but be mindful of the difference between 'Deleting' and 'Removing from Home Screen'.**
 
-## Answer
-
-**You can disable 'Allow App Removal' in a Restrictions profile, but be mindful of the difference between 'Deleting' and 'Removing from Home Screen'.** ## Configuration:
+## Configuration:
 
 In the Jamf Pro **Restrictions** profile, uncheck **Allow removing apps** .
 

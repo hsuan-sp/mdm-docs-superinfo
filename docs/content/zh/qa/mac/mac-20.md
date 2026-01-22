@@ -6,11 +6,9 @@ important: false
 tags: ["FileVault", "SSH", "遠端解鎖", "macOS 26", "遠端管理"]
 ---
 
-## Q: macOS 26 的「透過 SSH 解鎖 FileVault」如何設定？有什麼安全考量？
+**macOS 26 新增在 Pre-boot 階段透過 SSH 解鎖 FileVault 的功能，解決遠端管理無螢幕主機的痛點。**
 
-## Answer
-
-**macOS 26 新增在 Pre-boot 階段透過 SSH 解鎖 FileVault 的功能，解決遠端管理無螢幕主機的痛點。** ## 問題背景
+## 問題背景
 
 啟用 FileVault 的 Mac 重開機後：
 

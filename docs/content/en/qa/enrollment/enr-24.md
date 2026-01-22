@@ -6,11 +6,9 @@ important: true
 tags: ["Enforcement Deadline", "DDM", "Enforcement", "Deadline", "Compliance"]
 ---
 
-## Q: How do I set an 'Enforcement Deadline' for MDM enrollment or system updates?
+**Using Declarative Device Management (DDM), you can set 'Enforcement Deadlines.' The device will autonomously manage notifications and, once the deadline is reached, remove the 'Later' option to force the update or enrollment.**
 
-## Answer
-
-**Using Declarative Device Management (DDM), you can set 'Enforcement Deadlines.' The device will autonomously manage notifications and, once the deadline is reached, remove the 'Later' option to force the update or enrollment.** ## Key Principles
+## Key Principles
 
 * The device receives a **Declaration** containing the deadline.
 * The device manages its own notification frequency locally.

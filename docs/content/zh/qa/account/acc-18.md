@@ -6,10 +6,6 @@ important: false
 tags: ["VPP","MDM 遷移","授權回收"]
 ---
 
-## Q: 更換 MDM 廠商時，VPP App 授權如何平順轉移？需要重新購買嗎？
-
-## Answer
-
 ** 不需要重新購買。App 授權是綁定在 ASM 的「位置 (Location)」上，而非特定的 MDM 軟體。
 
 **只要您的 App 授權仍在 Apple 校務管理的後台內，就可以在不同 MDM 之間流轉。** 標準轉移流程 ** ：

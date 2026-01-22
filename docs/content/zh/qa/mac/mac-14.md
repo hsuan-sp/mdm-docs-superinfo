@@ -6,10 +6,6 @@ important: false
 tags: ["印表機","AirPrint","lpadmin","政策","自助服務","驅動程式"]
 ---
 
-## Q: 學校有多台網路印表機，如何透過 Jamf Pro 派送設定給老師的 Mac？
-
-## Answer
-
 **現代化 Mac 列印部署應優先採用「AirPrint (免驅動)」協定。****若需進階設定，則透過「政策 (Policies)」或 Shell 腳本執行 `lpadmin` 指令。** 在過去，Mac 管理員需花費大量時間打包驅動程式 (PPD)。但在 macOS 12 Monterey 之後，
 Apple 大力推動 IPP/AirPrint 通用協定，大幅簡化了流程。 **部署策略三部曲：****方法一：Jamf Pro 原生政策 (最適合初學者)** Jamf Pro 內建了印表機對應介面，適合標準的網路印表機。
 

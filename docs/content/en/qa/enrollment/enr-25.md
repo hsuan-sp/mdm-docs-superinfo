@@ -6,11 +6,9 @@ important: true
 tags: ["PreStage", "Setup Assistant", "ADE", "Deployment Speed", "Best Practices"]
 ---
 
-## Q: Which Setup Assistant steps should I skip during PreStage Enrollment? What are the best practices for schools?
+**PreStage Enrollment allows you to suppress multiple steps during the initial device setup. For educational settings, we recommend skipping most non-essential steps to accelerate deployment and prevent students from misconfiguring the device.**
 
-## Answer
-
-**PreStage Enrollment allows you to suppress multiple steps during the initial device setup. For educational settings, we recommend skipping most non-essential steps to accelerate deployment and prevent students from misconfiguring the device.** ## Recommended Steps to SKIP (Education)
+## Recommended Steps to SKIP (Education)
 
 ## Privacy and Location
 

@@ -6,11 +6,9 @@ important: false
 tags: ["VPP","ASM","Location Tokens","Inventory Management"]
 ---
 
-## Q: What details should we keep in mind when 'purchasing' free apps in bulk?
+**In the Apple ecosystem, even $0 free apps must go through the "Purchase" workflow in Apple School Manager (ASM) to be authorized for school distribution.**
 
-## Answer
-
-**In the Apple ecosystem, even $0 free apps must go through the "Purchase" workflow in Apple School Manager (ASM) to be authorized for school distribution.** ## Key Details to Consider:
+## Key Details to Consider:
 
 1. **Location Token (VPP Token) Match** :
 

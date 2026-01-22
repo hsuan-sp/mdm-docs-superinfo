@@ -6,11 +6,9 @@ important: true
 tags: ["Hardware Compatibility","Lightning","USB-C","Apple Pencil","Charging Carts"]
 ---
 
-## Q: We have both older Lightning iPads and newer USB-C models. How do we manage accessories and Apple Pencils?
+**As your school transitions to newer hardware, managing a mixed fleet of Lightning (iPad 9 and older) and USB-C (iPad 10 and newer) devices requires careful planning regarding peripherals and charging infrastructure.**
 
-## Answer
-
-**As your school transitions to newer hardware, managing a mixed fleet of Lightning (iPad 9 and older) and USB-C (iPad 10 and newer) devices requires careful planning regarding peripherals and charging infrastructure.** ## Apple Pencil Compatibility:
+## Apple Pencil Compatibility:
 
 1. **iPad 9 (Lightning)** : Only compatible with **Apple Pencil (1st Generation)** . It pairs by plugging the pencil directly into the iPad's Lightning port.
 

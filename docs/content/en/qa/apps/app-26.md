@@ -6,11 +6,9 @@ important: true
 tags: ["AI","Apple Intelligence","App Management","Privacy","Exam Security"]
 ---
 
-## Q: How do I manage the AI-assisted teaching apps in 2024–2025 (e.g., Writing Tools, Image Playground)?
+**With Apple Intelligence reaching full maturity in 2024–2025, teaching apps have entered the "AI-Assisted Era."****For schools, the primary challenge is balancing the productivity gains of AI with academic integrity, data privacy, and security.****iOS 26/iPadOS 26 provides granular MDM controls to manage these features.**
 
-## Answer
-
-**With Apple Intelligence reaching full maturity in 2024–2025, teaching apps have entered the "AI-Assisted Era."****For schools, the primary challenge is balancing the productivity gains of AI with academic integrity, data privacy, and security.****iOS 26/iPadOS 26 provides granular MDM controls to manage these features.** ## 1. Controlling Core AI Features
+## 1. Controlling Core AI Features
 
 Administrators can manage these via a "Restrictions" profile in Jamf Pro:
 

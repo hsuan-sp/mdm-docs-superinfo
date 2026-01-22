@@ -6,10 +6,6 @@ important: false
 tags: ["VPP Locations","Resource Sharing","ASM"]
 ---
 
-## Q: Can paid app licenses be shared between different schools? (Cross-school VPP)
-
-## Answer
-
 **Yes. This is achieved through 'Location' management within Apple School Manager (ASM).** This is highly effective for centralized procurement by a school district or a main campus.
 
 ## How it Works:

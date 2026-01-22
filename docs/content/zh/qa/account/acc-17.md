@@ -6,10 +6,6 @@ important: false
 tags: ["PSSO","FileVault","macOS 15+","身分驗證"]
 ---
 
-## Q: 如何結合 Platform SSO (PSSO) 實現 Mac 開機即解鎖 FileVault？
-
-## Answer
-
 **在 macOS 15 (Sequoia) 以上版本，Platform SSO 支援了與 FileVault 的深度整合，**** 真正解決了「二次密碼」的痛點。
 
 **** 解決方案 ** ：

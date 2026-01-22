@@ -6,10 +6,6 @@ important: false
 tags: ["自動化","Shell Script","Zsh","政策","腳本","jamfHelper"]
 ---
 
-## Q: Jamf 的 Script (腳本) 功能可以做什麼？如何建立與執行？
-
-## Answer
-
 **腳本 (Scripts) 讓管理員能以 Root 權限在 Mac 上執行 Shell 指令，****實現標準 MDM 描述檔 (Payload) 無法達成的進階客製化功能。** Jamf Pro 的強大之處在於其專屬的二進位檔案 (Binary)，配合 **「政策 (Policies)」** 使用，
 可達成以下進階場景： **常見應用場景：** | 場景 | 腳本功能範例 |
 | :--- | :--- |

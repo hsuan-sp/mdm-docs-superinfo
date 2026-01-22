@@ -6,10 +6,6 @@ important: false
 tags: ["Apple Intelligence","服務存取","ASM"]
 ---
 
-## Q: 如何控管「管理式 Apple 帳號」是否能使用 Apple Intelligence 功能？
-
-## Answer
-
 **管理員可透過 Apple 校務管理 (ASM) 的服務存取設定，決定是否開放 AI 相關功能。** 隨著 Apple 於 2024 年底至 2025 年全面推廣 **Apple Intelligence** ，
 ASM 提供了帳號層級的開關，這與 MDM 的裝置限制是相輔相成的。
 

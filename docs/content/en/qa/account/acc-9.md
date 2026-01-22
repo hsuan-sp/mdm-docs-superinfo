@@ -6,10 +6,6 @@ important: false
 tags: ["Connection Issues","APNs","Network","Troubleshooting"]
 ---
 
-## Q: The device shows 'Connection Failed' or won't update Inventory. How do I fix it?
-
-## Answer
-
 **This usually indicates a breakdown in communication between the device and the MDM server or Apple's services. Please check the following four core areas in order:****Check 1: APNs Certificate Status*** Log in to Jamf Pro and navigate to **Settings > Global Management > Push Certificates** .
 * Ensure the certificate status is **Verified** (or Valid).
 * **Note** : If the certificate has expired, the MDM completely loses control over devices and it must be renewed immediately. **Check 2: Network Connectivity & Firewall Rules** The device needs to reach both the Jamf server and Apple's servers. Ensure the campus firewall is not blocking:

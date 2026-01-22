@@ -6,10 +6,6 @@ important: false
 tags: ["安全","側載","Sideloading"]
 ---
 
-## Q: 【軟體安裝】為什麼 iPad 不能像 Android 一樣安裝 APK（或第三方來源 App）？
-
-## Answer
-
 **這是為了確保裝置的安全與穩定。Apple 限制僅能從 App Store 或受信任的企業 MDM 管道安裝軟體**** （防止「側載」）。
 
 **** 原因說明 ** ：

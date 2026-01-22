@@ -6,10 +6,6 @@ important: false
 tags: ["啟用鎖定","Activation Lock","ASM","解除鎖定","資產回收"]
 ---
 
-## Q: 【資產救援】Mac 送修回來或離職交接時被舊 Apple 帳號鎖住 (啟用鎖定)，怎麼辦？
-
-## Answer
-
 **只要該 Mac 屬於學校資產（已加入 ASM），管理員可直接在 Apple School Manager 後台強制解除鎖定，**** 無需聯絡原使用者。
 
 **這是 Apple 針對教育與企業提供的最高權限救援機制，解決「人員離職/畢業後帳號未登出」導致電腦變磚的問題。** 標準解鎖 SOP： **1.** 登入 ASM ** ：使用管理員帳號登入 [school.apple.com](https://school.apple.com)。

@@ -6,10 +6,6 @@ important: false
 tags: ["Account Lifecycle","Graduation","Data Retention"]
 ---
 
-## Q: Students have graduated or left the school. How should I handle their Managed Apple Accounts?
-
-## Answer
-
 **It is recommended to first 'Deactivate' the account, and strictly proceed to 'Delete' only after confirming the student has completed any necessary data migration.****Please note that deletion is permanent and irreversible.** The lifecycle of a Managed Apple Account should align with your school's administrative processes. Proper management ensures VPP licenses are reclaimed and complies with educational data retention regulations. **Recommended Workflow** : **Phase 1: Deactivate Account** 1. Log in to Apple School Manager ([school.apple.com](https://school.apple.com)).
 1. Click **Users** in the sidebar, then search for and select the student.
 1. In the details panel on the right, click **Change Account Status** (or click "Edit"/"Change" next to the status).

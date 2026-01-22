@@ -6,10 +6,6 @@ important: false
 tags: ["Office","Microsoft 365","Serializer","Volume License","Jamf App Installers"]
 ---
 
-## Q: How do I mass-deploy Microsoft Office and activate licenses? Lab vs. Administrative Macs?
-
-## Answer
-
 **The best practice is to use 'Jamf App Installers' for automated deployment, combined with either the 'Volume License Serializer' or 'User-based Login' depending on the scenario.** Always use the Microsoft CDNs or Jamf-provided installers. **Avoid the Mac App Store versions** , as they do not support Volume Licensing (VL) features correctly for all scenarios.
 
 ## Scenario 1: Computer Labs / Shared Kiosks (Device-Based)

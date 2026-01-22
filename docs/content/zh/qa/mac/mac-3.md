@@ -6,10 +6,6 @@ important: false
 tags: ["軟體派送","App Installers","PKG","自動更新"]
 ---
 
-## Q: 如何派送非 App Store 的軟體（如 Chrome, Adobe, Office）？
-
-## Answer
-
 **放棄手動打包。請優先使用 Jamf Pro 的「App Installers」服務，****實現「隨選即裝」與「自動更新」。** 在 Mac 管理中，軟體派送曾經是最繁瑣的工作（下載 DMG -> 封裝成 PKG -> 上傳 -> 測試）。
 現在有更聰明的方法。
 

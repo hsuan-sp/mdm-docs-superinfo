@@ -6,11 +6,9 @@ important: false
 tags: ["混合環境", "Intel Mac", "Apple Silicon", "Smart Group", "部署策略"]
 ---
 
-## Q: 【新舊互通】2026 混合環境管理：如何設定 Smart Group 正確區分 Intel 與 Apple Silicon 的軟體包？
+**2026 年是 Intel Mac 邁向生命週期終點的關鍵年。校內同時存在「x86_64 (Intel)」與「arm 64 (M1-M5)」兩種架構，若派錯軟體包，輕則軟體無法執行，重則導致系統不穩。**
 
-## Answer
-
-**2026 年是 Intel Mac 邁向生命週期終點的關鍵年。校內同時存在「x86_64 (Intel)」與「arm 64 (M1-M5)」兩種架構，若派錯軟體包，輕則軟體無法執行，重則導致系統不穩。** ## 一、 建立精準的 Smart Group (SOP)
+## 一、 建立精準的 Smart Group (SOP)
 
 ICT 資訊支援團隊應在 Jamf Pro 中建立以下基準群組：
 

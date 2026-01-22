@@ -6,10 +6,6 @@ important: false
 tags: ["Platform SSO", "Passwordless", "Security Standards", "MOE Requirements", "Authentication"]
 ---
 
-## Q: Security Auditing: Using PSSO 2.0 to achieve 'Boot-to-Desktop' and meet strong password requirements.
-
-## Answer
-
 **In 2026, Platform SSO (PSSO) 2.0 allows schools to solve two major operational problems: weak teacher passwords and the 'double login' (FileVault + OS) frustration.** By synchronizing the local Mac login with organizational cloud accounts (Microsoft Entra ID or Google Workspace), you can enforce compliant strong password policies while providing a streamlined single-entry experience for the user.
 
 ## Implementation Workflow (SOP)

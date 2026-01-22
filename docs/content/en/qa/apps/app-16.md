@@ -6,11 +6,9 @@ important: false
 tags: ["Home Screen Layout","Restrictions","Folders"]
 ---
 
-## Q: Can I standardize the iPad Home Screen layout for students?
+**Yes. Using a 'Home Screen Layout' configuration profile, administrators can precisely define the placement of apps on student devices.**
 
-## Answer
-
-**Yes. Using a 'Home Screen Layout' configuration profile, administrators can precisely define the placement of apps on student devices.** ## Configuration Method:
+## Configuration Method:
 
 1. In Jamf Pro, go to **Mobile Devices > Configuration Profiles** .
 1. Select the **Home Screen Layout** payload.

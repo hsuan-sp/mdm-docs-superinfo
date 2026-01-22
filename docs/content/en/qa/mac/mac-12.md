@@ -6,10 +6,6 @@ important: false
 tags: ["Tamper Proofing","Recovery Lock","Firmware Password","Security"]
 ---
 
-## Q: How do I prevent students from entering Recovery Mode to format the computer?
-
-## Answer
-
 **The protection mechanism differs depending on the Mac architecture: Intel-based Macs require a 'Firmware Password,' while Apple Silicon (M-series) Macs require a 'Recovery Lock.' Both can be deployed via Jamf Pro.** Recovery Mode is powerful. If left unprotected, anyone with physical access can "Erase Disk" or "Reinstall OS" to bypass school management.
 
 ## Comparison of Mechanisms:

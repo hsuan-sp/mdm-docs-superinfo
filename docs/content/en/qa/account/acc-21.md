@@ -6,10 +6,6 @@ important: true
 tags: ["moemdm","MOE","Jamf Pro","Architecture"]
 ---
 
-## Q: Is 'moemdm' the same as 'Jamf Pro'? Why does the school need two accounts?
-
-## Answer
-
 **They are completely different. Jamf Pro is the actual 'Remote Control' (the management system), while moemdm is the MOE 'Dashboard' (the reporting platform).** Many school administrators find this confusing. Please clarify the following roles:
 
 ## 1. Jamf Pro (School Management Core):

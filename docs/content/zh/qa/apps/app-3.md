@@ -6,10 +6,6 @@ important: false
 tags: ["Self Service","App Store","限制描述檔","自主學習"]
 ---
 
-## Q: 如果隱藏了 App Store，學生要如何獲取教學所需的 App？
-
-## Answer
-
 **即使透過限制描述檔隱藏了官方 App Store，**** 學生仍能透過「Self Service (自助服務)」App 安全地獲取 App。
 
 **** Self Service 的角色 ** ：

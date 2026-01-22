@@ -6,10 +6,6 @@ important: true
 tags: ["憑證過期","Apple 課堂","教育描述檔"]
 ---
 
-## Q: 【憑證陷阱】Apple 課堂突然全校失靈，顯示「描述檔無效」？
-
-## Answer
-
 ** 這通常是「教育身分憑證 (Education Identity Certificate)」過期所致，該憑證效期固定為 2 年。
 
 **** 故障症狀 ** ：

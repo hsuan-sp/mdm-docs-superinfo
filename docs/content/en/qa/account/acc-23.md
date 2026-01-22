@@ -6,11 +6,9 @@ important: true
 tags: ["Managed Apple Account", "DLP", "iOS 26", "Organizational Devices", "WWDC 2025"]
 ---
 
-## Q: How do I configure the feature to prevent personal Apple Account logins on organizational devices?
+**Announced at WWDC 2025, the 'Restrict Apple Account to Managed Only' feature allows organizations to enforce that only Managed Apple Accounts can sign into organizational devices. This works at the system level, covering the Setup Assistant and System Settings, and provides robust data separation without relying solely on MDM profiles.**
 
-## Answer
-
-**Announced at WWDC 2025, the 'Restrict Apple Account to Managed Only' feature allows organizations to enforce that only Managed Apple Accounts can sign into organizational devices. This works at the system level, covering the Setup Assistant and System Settings, and provides robust data separation without relying solely on MDM profiles.** ## Configuration Steps (Apple School Manager / Apple Business Manager)
+## Configuration Steps (Apple School Manager / Apple Business Manager)
 
 This is an organization-level security policy that must be enabled by an **Administrator** :
 

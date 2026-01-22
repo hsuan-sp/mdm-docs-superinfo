@@ -6,10 +6,6 @@ important: true
 tags: ["FileVault","全磁碟加密","資料安全","復原密鑰","Jamf Pro","資產"]
 ---
 
-## Q: 為什麼 MDM 要求開啟 FileVault？使用者忘記登入密碼時該如何救援？
-
-## Answer
-
 ** FileVault 是 macOS 內建的「全磁碟加密」技術，能確保電腦遺失時資料無法被竊取。
 
 **** 透過 MDM 託管「復原密鑰 (Recovery Key)」，管理員可在使用者忘記密碼時協助解鎖。 **** 技術原理： ***** XTS-AES-128 加密 ** ：未登入前，硬碟資料處於加密亂碼狀態。

@@ -6,10 +6,6 @@ important: false
 tags: ["AirDrop","限制","課堂秩序","Jamf Teacher"]
 ---
 
-## Q: 如何管理 AirDrop？避免學生上課亂傳梗圖雜圖干擾秩序？
-
-## Answer
-
 ** AirDrop 是課堂干擾源之首。建議透過 MDM 進行常態限制，或由老師進行動態控管。
 
 **** 三種管制層級 ** ：

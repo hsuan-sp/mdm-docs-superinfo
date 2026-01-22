@@ -6,10 +6,6 @@ important: false
 tags: ["E-books","Material Distribution","PDF","Restrictions"]
 ---
 
-## Q: How do I distribute E-books (PDF/ePub) to student iPads?
-
-## Answer
-
 **Apple School Manager (ASM) in many regions (including Taiwan) does not support the direct purchase or distribution of content from the Apple Books Store.** However, you can still distribute your own PDFs or ePub files to students using several methods:
 
 ## Option 1: Distribution via MDM

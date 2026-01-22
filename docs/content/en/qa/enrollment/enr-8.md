@@ -6,10 +6,6 @@ important: false
 tags: ["Troubleshooting","Network","Declarative Management","Profile"]
 ---
 
-## Q: Enrollment fails with 'Profile Installation Failed'. Why?
-
-## Answer
-
 **This error typically stems from the device's inability to establish a stable, trusted secure connection with the MDM server or Apple servers.** If you encounter this prompt during Enrollment, check the following common causes in order: **Check 1: Verify Date and Time Precision** SSL certificate validation relies heavily on correct time. If the iPad's clock is off by more than a few minutes, the connection is treated as invalid.
 
 * **Solution** : On the device, check **Settings > General > Date & Time** . Ensure **Set Automatically** is on and it has connected to the network to fetch the time zone. **Check 2: Check Campus Firewall and Network Filtering** MDM commands are delivered via **Apple Push Notification service (APNs)** . If the school network blocks specific hosts, enrollment fails.

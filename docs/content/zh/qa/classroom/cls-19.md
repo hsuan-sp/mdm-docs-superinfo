@@ -6,10 +6,6 @@ important: false
 tags: ["Apple Pencil","藍牙","硬體相容性","故障排除"]
 ---
 
-## Q: 【實務排錯】Apple Pencil 無法配對或寫不出字，該如何排除？
-
-## Answer
-
 ** Apple Pencil 的問題通常源於「型號不相容」或「藍牙配對快取」卡住。
 
 **** 排錯流程 (由簡入深) ** ：

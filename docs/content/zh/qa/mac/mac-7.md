@@ -6,10 +6,6 @@ important: false
 tags: ["Apple Silicon","Bootstrap Token","安全啟動","核心延伸功能"]
 ---
 
-## Q: M 系列晶片 (Apple Silicon) 的 Mac 在管理上有什麼特殊限制？
-
-## Answer
-
 ** Apple Silicon (M1-M5) 的安全性架構與 Intel Mac 完全不同。
 
 **** 管理核心在於「Bootstrap Token」與「擁有權 (Ownership)」。 **若未正確設定，MDM 將無法執行軟體更新或安裝核心外掛。** 關鍵技術指標： **1.** Bootstrap Token (引導代令) ** ：

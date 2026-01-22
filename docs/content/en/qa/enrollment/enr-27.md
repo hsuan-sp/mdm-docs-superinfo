@@ -6,11 +6,9 @@ important: true
 tags: ["iOS 26", "MDM Migration", "Zero-Wipe", "Asset Transfer", "Jamf Pro"]
 ---
 
-## Q: Zero-Wipe MDM Migration: Moving devices from MOE Managed Jamf Pro to an In-House MDM.
+**As educational projects evolve, many schools look to migrate devices from a centrally managed instance (like Taiwan's MOE Jamf Pro) to their own in-house MDM server. Prior to iOS 26, this required a full erase, which was a barrier for students with extensive learning data. iOS 26 solves this with 'Zero-Wipe MDM Migration.'**
 
-## Answer
-
-**As educational projects evolve, many schools look to migrate devices from a centrally managed instance (like Taiwan's MOE Jamf Pro) to their own in-house MDM server. Prior to iOS 26, this required a full erase, which was a barrier for students with extensive learning data. iOS 26 solves this with 'Zero-Wipe MDM Migration.'** ## The Migration Workflow (SOP)
+## The Migration Workflow (SOP)
 
 ## 1. Preparation in ASM/ABM
 

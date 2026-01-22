@@ -6,11 +6,9 @@ important: false
 tags: ["AirDrop","Restrictions","Classroom Order","Jamf Teacher"]
 ---
 
-## Q: How do I manage AirDrop to prevent students from sending distracting images during class?
+**AirDrop is a primary source of classroom distraction. We recommend either constant restrictions via MDM or dynamic control by the teacher.**
 
-## Answer
-
-**AirDrop is a primary source of classroom distraction. We recommend either constant restrictions via MDM or dynamic control by the teacher.** ## Three Levels of Control:
+## Three Levels of Control:
 
 1. **Fully Disable (Strict - Ideal for Exams)** :
 

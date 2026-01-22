@@ -6,11 +6,9 @@ important: false
 tags: ["Lost Mode","Privacy","Location Tracking"]
 ---
 
-## Q: Does enabling 'Lost Mode' infringe on my privacy?
+**No. Lost Mode is designed specifically for asset recovery. Location services are only activated while the device is officially marked as 'Lost' by an administrator.**
 
-## Answer
-
-**No. Lost Mode is designed specifically for asset recovery. Location services are only activated while the device is officially marked as 'Lost' by an administrator.** ## How it Works:
+## How it Works:
 
 1. **Enforcement** : Even if a user has disabled Location Services, the MDM forcibly enables them upon receiving the "Lost Mode" command.
 

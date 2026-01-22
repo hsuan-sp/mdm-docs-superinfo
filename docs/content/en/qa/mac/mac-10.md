@@ -6,10 +6,6 @@ important: false
 tags: ["Extension Attributes","Scripts","Inventory","Custom Fields"]
 ---
 
-## Q: Default Jamf Pro inventory lacks specific info (like file versions or last reboot). How do I collect custom data?
-
-## Answer
-
 **Use the "Computer Extension Attributes" feature. This is the core tool in Jamf Pro for expanding database fields and collecting non-standard hardware/software information.** While standard inventory includes specs, OS versions, and app lists, specific needs (such as checking if a config file was tampered with, battery cycle counts, or custom asset tags) require Extension Attributes.
 
 ## 2026 Model: DDM Status Channel

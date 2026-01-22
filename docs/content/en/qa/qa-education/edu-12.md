@@ -6,10 +6,6 @@ important: false
 tags: ["Submission","File Sharing","Google Drive"]
 ---
 
-## Q: How do students submit their work (Keynote/Pages) to the teacher?
-
-## Answer
-
 **The best method is via cloud storage (Google Drive, OneDrive, or iCloud Drive). Other options include AirDrop, Google Classroom assignments, or a school-designated submission portal.** In a digital learning environment, a smooth submission flow is key to efficiency.
 
 ## Method 1: Google Drive (Highly Recommended)

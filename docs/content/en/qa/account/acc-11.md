@@ -6,11 +6,9 @@ important: true
 tags: ["Certificate Expiration","Apple Classroom","Education Profile"]
 ---
 
-## Q: Troubleshooting: Apple Classroom fails school-wide with 'Invalid Profile' (The Certificate Trap)
+**This is typically caused by the expiration of the 'Education Identity Certificate', which has a fixed validity period of 2 years.**
 
-## Answer
-
-**This is typically caused by the expiration of the 'Education Identity Certificate', which has a fixed validity period of 2 years.** ## Symptoms:
+## Symptoms:
 
 Teachers report that all students appear "Offline" or are unable to join classes in the Apple Classroom app. Upon checking the student device under **Settings > General > VPN & Device Management** , the "Education Configuration" profile appears in red or shows as "Invalid."
 

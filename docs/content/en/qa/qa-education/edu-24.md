@@ -6,11 +6,9 @@ important: true
 tags: ["Writing Tools", "Apple Intelligence", "Exam Security", "iOS 26", "AI"]
 ---
 
-## Q: Managing 'Writing Tools' (AI) during exams: Which features should be restricted?
+**The 'Writing Tools' in Apple Intelligence can rewrite, proofread, and summarize text even while offline. This poses a significant risk for language and composition exams. On AI-capable devices, these features must be managed via MDM during assessments.**
 
-## Answer
-
-**The 'Writing Tools' in Apple Intelligence can rewrite, proofread, and summarize text even while offline. This poses a significant risk for language and composition exams. On AI-capable devices, these features must be managed via MDM during assessments.** ## Potential for Misuse:
+## Potential for Misuse:
 
 * **Rewrite** : A student enters fragmented notes, and the AI expands them into a polished, professional paragraph.
 * **Proofread** : Automatically corrects grammar and syntax errors, making it impossible to grade a student's actual writing proficiency.

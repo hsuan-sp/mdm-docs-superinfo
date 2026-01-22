@@ -6,11 +6,9 @@ important: true
 tags: ["MDM 遷移", "Zero-Wipe", "系統維護", "2026 新技術"]
 ---
 
-## Q: 學校如果想更換 MDM 廠商，一定要把 iPad 全部重灌 (Wipe) 嗎？
+**在 2026 年以前是肯定的，但在 iOS 26 後，Apple 引入了「Zero-Wipe MDM Migration」技術。****只要符合特定條件，學校可以在不清除裝置資料、不重灌 App 的情況下，將裝置從 A 廠商遷移至 B 廠商。**
 
-## Answer
-
-**在 2026 年以前是肯定的，但在 iOS 26 後，Apple 引入了「Zero-Wipe MDM Migration」技術。****只要符合特定條件，學校可以在不清除裝置資料、不重灌 App 的情況下，將裝置從 A 廠商遷移至 B 廠商。** ## 傳統遷移 vs. 2026 Zero-Wipe 遷移
+## 傳統遷移 vs. 2026 Zero-Wipe 遷移
 
 | 特性 | **傳統遷移 (舊方式)** | **Zero-Wipe 遷移 (iOS 26+)** |
 | :--- | :--- | :--- |

@@ -6,11 +6,9 @@ important: false
 tags: ["Account-Driven","Service Discovery",".well-known","Technical Setup"]
 ---
 
-## Q: How do we set up 'Service Discovery' for Account-Driven Enrollment on the campus network?
+**Account-Driven Enrollment relies on "Service Discovery," allowing users to enroll simply by entering their school email address.**
 
-## Answer
-
-**Account-Driven Enrollment relies on "Service Discovery," allowing users to enroll simply by entering their school email address.** ## How it Works:
+## How it Works:
 
 When a user enters their email (e.g., `student@tes.tp.edu.tw`) during the enrollment process, the device attempts to find a secret instruction file on the school’s web domain.
 

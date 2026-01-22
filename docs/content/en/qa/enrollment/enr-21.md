@@ -6,10 +6,6 @@ important: false
 tags: ["Apple Configurator","Manual ASM Addition","Provisional Period"]
 ---
 
-## Q: Can I use Apple Configurator to manually add devices that don't appear in ASM?
-
-## Answer
-
 **Yes. For devices not purchased through an authorized education reseller, you can use Apple Configurator to manually enroll them into your Apple School Manager (ASM) organization.** This allows "retail" iPads or Macs to achieve the same management status (Supervised) as those purchased through official channels.
 
 ## Preparation:

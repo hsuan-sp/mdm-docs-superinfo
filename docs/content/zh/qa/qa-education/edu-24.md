@@ -6,11 +6,9 @@ important: true
 tags: ["Writing Tools", "Apple Intelligence", "考試防弊", "iOS 26", "AI"]
 ---
 
-## Q: iOS 26 的「寫作工具」(Writing Tools) 在正式評量或正式評量或正式評量或正式評量或考試時該如何管理？哪些功能需要禁用？
+**Apple Intelligence 的「寫作工具」即使離線也能運作，能自動改寫、校對與摘要，對語文類考試構成作弊風險。支援 Apple Intelligence 的裝置必須透過 MDM 強制禁用。**
 
-## Answer
-
-**Apple Intelligence 的「寫作工具」即使離線也能運作，能自動改寫、校對與摘要，對語文類考試構成作弊風險。支援 Apple Intelligence 的裝置必須透過 MDM 強制禁用。** ## 作弊風險分析
+## 作弊風險分析
 
 * **改寫 (Rewrite)** ：學生輸入零碎關鍵字，AI 自動潤飾成完整通順的段落
 * **校對 (Proofread)** ：自動修正錯別字與文法錯誤，影響英文或國文測驗的鑑別度

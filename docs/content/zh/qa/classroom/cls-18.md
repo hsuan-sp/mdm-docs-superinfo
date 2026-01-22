@@ -6,10 +6,6 @@ important: false
 tags: ["Jamf Teacher","Apple Classroom","工具比較","教學管理"]
 ---
 
-## Q: 「Jamf Teacher」與「Apple 課堂」有什麼不同？老師該用哪一個？
-
-## Answer
-
 ** 這兩者是互補的工具。Apple 課堂擅長「近端監控」，Jamf Teacher 擅長「遠端限制」。
 
 **** 核心差異對照 ** ：

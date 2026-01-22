@@ -6,10 +6,6 @@ important: false
 tags: ["Activation Lock","ASM","Unlocking","Asset Recovery"]
 ---
 
-## Q: A Mac is locked by a former user's Apple ID (Activation Lock). How do I recover it?
-
-## Answer
-
 **If the Mac is a school asset (enrolled in ASM), administrators can bypass Activation Lock directly from the Apple School Manager portal without the original user's password.** This is a critical failsafe for when staff leave or students graduate without signing out of their personal accounts.
 
 ## Standard Recovery SOP:

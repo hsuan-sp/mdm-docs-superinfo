@@ -6,10 +6,6 @@ important: true
 tags: ["System Updates","Jamf Pro","DDM","Software Update Blueprints","iOS Update","macOS Update"]
 ---
 
-## Q: How do I push system updates via Jamf Pro? Can I set a deadline for enforced installation?
-
-## Answer
-
 **By 2026, software update management in Jamf Pro has fully transitioned to the "Declarative Device Management (DDM)" framework.** This approach is more stable than legacy remote commands and allows devices to autonomously handle the download and installation process, significantly reducing server load.
 
 ## 1. Using "Software Update Blueprints"

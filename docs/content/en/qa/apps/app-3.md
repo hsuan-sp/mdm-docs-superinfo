@@ -6,11 +6,9 @@ important: false
 tags: ["Self Service","App Store","Restrictions","Student Autonomy"]
 ---
 
-## Q: If the App Store is hidden, how can students get the apps they need for class?
+**Even when the official App Store is disabled via a management profile, students can still safely acquire apps through the "Self Service" app.**
 
-## Answer
-
-**Even when the official App Store is disabled via a management profile, students can still safely acquire apps through the "Self Service" app.** ## The Role of Self Service:
+## The Role of Self Service:
 
 Self Service is the school’s private, curated app portal. Instead of giving students access to the millions of apps on the public App Store, IT "publishes" specific, pre-approved titles into Self Service.
 

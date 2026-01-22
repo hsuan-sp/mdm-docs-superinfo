@@ -6,10 +6,6 @@ important: false
 tags: ["Apple Intelligence","Service Access","ASM"]
 ---
 
-## Q: How do I control access to Apple Intelligence features for Managed Apple Accounts?
-
-## Answer
-
 **Administrators can determine whether to allow AI features through the 'Service Access' settings in Apple School Manager (ASM).** As Apple expands **Apple Intelligence** through 2024 and 2025, ASM provides account-level toggles that complement MDM device restrictions.
 
 ## Configuration Methods:

@@ -6,11 +6,9 @@ important: false
 tags: ["AirDrop", "Code", "Privacy", "Policy Adjustment", "iOS 26.2"]
 ---
 
-## Q: Will the 'AirDrop Code' in iOS 26.2 affect school management policies? Can students use it to bypass restrictions?
+**The 'AirDrop Code' is a privacy enhancement in iOS 26.2. It does NOT allow students to bypass MDM-enforced 'Disable AirDrop' settings. Your existing security policies remain effective.**
 
-## Answer
-
-**The 'AirDrop Code' is a privacy enhancement in iOS 26.2. It does NOT allow students to bypass MDM-enforced 'Disable AirDrop' settings. Your existing security policies remain effective.** ## How AirDrop Codes Work
+## How AirDrop Codes Work
 
 In iOS/iPadOS/macOS 26.2, a 6-digit temporary authorization code can be used to establish a "trusted relationship" between two people who are not in each other's contacts.
 

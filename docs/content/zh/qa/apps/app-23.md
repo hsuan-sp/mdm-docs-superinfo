@@ -6,11 +6,9 @@ important: true
 tags: ["DDM", "App 管理", "宣告式", "自動更新", "iOS 26"]
 ---
 
-## Q: 什麼是「Declarative App Management (宣告式 App 管理)」？與傳統 VPP App 指派有什麼不同？
+**Declarative App Management (宣告式 App 管理) 是 iOS 26、iPadOS 26 與 macOS 26 引入的全新機制，讓裝置能夠「自主」管理 App 的安裝與更新狀態，取代傳統依賴 MDM 伺服器頻繁發送指令的模式。**
 
-## Answer
-
-**Declarative App Management (宣告式 App 管理) 是 iOS 26、iPadOS 26 與 macOS 26 引入的全新機制，讓裝置能夠「自主」管理 App 的安裝與更新狀態，取代傳統依賴 MDM 伺服器頻繁發送指令的模式。** ## 傳統 VPP vs. 宣告式 App 管理
+## 傳統 VPP vs. 宣告式 App 管理
 
 | 特性 | 傳統 MDM (InstallApplication Command) | 宣告式 App 管理 (App Declaration) |
 | :--- | :--- | :--- |

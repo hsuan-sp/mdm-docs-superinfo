@@ -6,10 +6,6 @@ important: true
 tags: ["VPP","裝置型分派","Apple 帳號","管理式 Apple 帳號"]
 ---
 
-## Q: 不用登入 Apple 帳號也可以在 iPad 上安裝 App 嗎？
-
-## Answer
-
 **可以。這在技術上稱為「裝置型分派 (Device-based Assignment)」，****是校園環境中分發 App 的首選方案。** 透過 **Apple 校務管理 (ASM)** 的大量採購計畫與 MDM 結合，
 管理員可以將 App 授權直接與裝置的「硬體序號」綁定，而非與「Apple 帳號」綁定。
 

@@ -6,10 +6,6 @@ important: false
 tags: ["Manual Enrollment","Account-Driven","Supervised","Apple Configurator"]
 ---
 
-## Q: Can we just install a profile manually? What is the difference between Manual and Automated Enrollment?
-
-## Answer
-
 **Yes, you can, but manual enrollment (User-Initiated) provides significantly less administrative control compared to Automated Device Enrollment (ADE).** Manual enrollment is typically reserved for personal "Bring Your Own Device" (BYOD) scenarios or donated legacy hardware that cannot be added to Apple School Manager (ASM).
 
 ## Key Differences:

@@ -6,11 +6,9 @@ important: false
 tags: ["Password Management","Account Security","Troubleshooting"]
 ---
 
-## Q: Troubleshooting: A student used the same password for their iPad and Apple Account, and now both are locked.
+**This is a common 'Serial Lock' risk. If a student tries the wrong password too many times, both the device and the account may be locked out simultaneously.**
 
-## Answer
-
-**This is a common 'Serial Lock' risk. If a student tries the wrong password too many times, both the device and the account may be locked out simultaneously.** ## Recovery SOP:
+## Recovery SOP:
 
 1. **Unlock the Device** : First, send the **Clear Passcode** command via Jamf Pro.
 

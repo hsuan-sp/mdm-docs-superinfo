@@ -6,11 +6,9 @@ important: false
 tags: ["iCloud","Private Relay","Digital Learning Project","Policy Info"]
 ---
 
-## Q: Why is 'iCloud Private Relay' forced off on school iPads? Does this affect privacy?
+**This policy ensures that 'Jamf Trust' functions correctly. Enabling this feature would disable the school's content filtering and stop usage data reporting.**
 
-## Answer
-
-**This policy ensures that 'Jamf Trust' functions correctly. Enabling this feature would disable the school's content filtering and stop usage data reporting.** ## Current Situation:
+## Current Situation:
 
 On Supervised devices within the Digital Learning Project, you will typically find the "Private Relay" switch under **Settings > iCloud** is **greyed out and set to 'Off'.** This is a mandatory restriction enforced via MDM configuration profiles.
 

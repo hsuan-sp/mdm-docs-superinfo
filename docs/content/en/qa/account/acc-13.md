@@ -6,10 +6,6 @@ important: false
 tags: ["Password Reset","ASM","Administrator Action"]
 ---
 
-## Q: Can users reset their own Managed Apple Account passwords?
-
-## Answer
-
 **Standard Apple School Manager (ASM) accounts do not currently offer a global 'Self-Service Password Reset' toggle for end-users.** Apple maintains strict permission levels for Managed Apple Account security. Password reset logic depends on your setup:
 
 ## 1. Federated Authentication (Google / Microsoft)

@@ -6,10 +6,6 @@ important: false
 tags: ["Domain Change","Account Management","Major Migration"]
 ---
 
-## Q: Our school email domain has changed (e.g., from .edu.tw to .xh.edu.tw). How do I update the Managed Apple Accounts?
-
-## Answer
-
 **This involves a major underlying system change.****Since the format of a Managed Apple Account changes with the domain, it directly affects user login identities.****Pre-Migration Assessment** :
 
 * **Timing** : Strongly recommended to perform this during **long breaks (Summer/Winter)** . After the change, old accounts on all devices will become invalid, requiring re-login.

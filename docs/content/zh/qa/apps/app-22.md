@@ -6,10 +6,6 @@ important: false
 tags: ["Procreate","App 採購","VPP","通用購買","退款"]
 ---
 
-## Q: 【番外篇-實務採購常見狀況】以 Procreate 與 Procreate Pocket 為例，這兩者有什麼差別？學校買錯了怎麼辦？
-
-## Answer
-
 ** 買錯 App 版本，是教育採購很常發生的錯誤。
 
 **** 這兩款 App 屬於不同的產品線，且不支援「通用購買 (Universal Purchase)」。 **** 規格對照 ** ：

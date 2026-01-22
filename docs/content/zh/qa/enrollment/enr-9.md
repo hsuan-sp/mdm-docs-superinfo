@@ -6,10 +6,6 @@ important: false
 tags: ["指令卡住","推播通知服務","APNs","宣告式管理","空白推播"]
 ---
 
-## Q: Jamf Pro 指令一直顯示「擱置中 (Pending)」，但裝置明明有連網？
-
-## Answer
-
 **「擱置中 (Pending)」表示指令已傳送至 Apple 的伺服器，****但裝置端尚未與伺服器進行 Check-in 聯絡並回報執行狀態。** 在當前的 **宣告式裝置管理 (Declarative Device Management, DDM)** 與傳統 MDM 協定並行的架構下，
 指令狀態的更新極度依賴裝置端的響應。若指令卡住，請檢查以下核心因素：
 

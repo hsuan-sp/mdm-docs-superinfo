@@ -6,10 +6,6 @@ important: true
 tags: ["AirDrop","AirPlay","網路管理","mDNS Relay","投影故障排除"]
 ---
 
-## Q: AirDrop 找不到其他裝置，或 AirPlay 找不到電視與投影機？
-
-## Answer
-
 **AirDrop 與 AirPlay 的運作原理不同，前者主要依賴點對點（P2P）通訊，**** 後者則高度仰賴校園區域網路（LAN）的穩定性與協定放行。
 
 **在「中小學數位學習精進方案」的應用環境中，若發生連線失敗，請依下列技術維度進行排查：** AirDrop 故障排除 (P2P 點對點通訊)： **1.** 通訊介面狀態 ** ：AirDrop 需同時啟動藍牙（用於裝置發現與握手）與 Wi-Fi（用於建立傳輸通道）。

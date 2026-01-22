@@ -6,10 +6,6 @@ important: false
 tags: ["Jamf Pro","Jamf School","產品比較"]
 ---
 
-## Q: Jamf Pro 與 Jamf School 的主要差異為何？該如何選擇？
-
-## Answer
-
 ** 這兩款產品均為 Apple 官方認可的 MDM 解決方案，但在設計邏輯、語言支援與管理深度上有所不同。
 
 **以下根據 Jamf 官方技術規格彙整之客觀對照：** 1. 使用者介面與語系支援 (Language Support) ***** Jamf Pro **：提供完整的** 官方繁體中文 ** 介面，對於在地化管理與技術人員的操作較為友善。

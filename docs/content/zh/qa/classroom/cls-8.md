@@ -6,10 +6,6 @@ important: false
 tags: ["網路優化","內容快取","頻寬管理","iCloud"]
 ---
 
-## Q: 全班同時下載教材會讓網路癱瘓嗎？什麼是「內容快取 (Content Caching)」？
-
-## Answer
-
 ** 會。若沒有快取機制，30 台 iPad 會各自向互聯網索取資料，極易塞爆出口頻寬。
 
 **** 內容快取 (Content Caching) 的真實作用 ** ：

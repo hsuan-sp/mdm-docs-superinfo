@@ -6,10 +6,6 @@ important: false
 tags: ["Office","Microsoft 365","Serializer","大量授權","Jamf App Installers"]
 ---
 
-## Q: 如何大量部署 Microsoft Office 並啟用授權？電腦教室與行政機有何不同？
-
-## Answer
-
 **最佳實踐是使用「Jamf App Installers」自動部署安裝檔，****並依據使用場景區分「序列化 (Serializer)」或「使用者登入」兩種啟用方式。** 請務必使用 Microsoft 官方 CDN 版本（或透過 Jamf 派送）， **嚴禁使用 Mac App Store 版本** ，
 否則將無法支援大量授權功能。 **場景一：電腦教室 / 公用電腦 (Device-Based Licensing)** 電腦教室必須讓學生「坐下即用」，不能要求學生登入微軟帳號。
 

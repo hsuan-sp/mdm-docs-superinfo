@@ -6,10 +6,6 @@ important: false
 tags: ["PreStage Enrollment","App Deployment","ADE","DDM","Troubleshooting"]
 ---
 
-## Q: Why does the device get stuck on 'Installing Apps' during PreStage enrollment/Setup Assistant?
-
-## Answer
-
 **When you configure 'Install Apps' in PreStage enrollment, the device waits for apps to download before allowing access to the Home Screen.****Any network issues or VPP license failures will cause a deadlock.** This is extremely common during **Automated Device Enrollment (ADE)** .
 Admins often want students to see essential apps immediately upon boot, but if the environment isn't perfect, it leads to disaster during mass deployments. **Core Causes** :
 

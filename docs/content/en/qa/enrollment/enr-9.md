@@ -6,10 +6,6 @@ important: false
 tags: ["Stuck Commands","Push Notification Service","APNs","Declarative Management","Blank Push"]
 ---
 
-## Q: Jamf Pro commands are stuck in 'Pending', but the device is definitely online. Why?
-
-## Answer
-
 **'Pending' means the command has been sent to Apple's servers, but the device has not yet contacted the server to report its status.** In the current architecture where **Declarative Device Management (DDM)** runs alongside traditional MDM protocols, command status updates rely heavily on device response. If commands stall, check these core factors:
 
 1. **APNs Communication Blocked** :

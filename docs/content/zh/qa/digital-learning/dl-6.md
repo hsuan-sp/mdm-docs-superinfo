@@ -6,10 +6,6 @@ important: false
 tags: ["內容過濾","例外開放","YouTube","Jamf Trust","DNS Proxy"]
 ---
 
-## Q: 教學需要用到某些網站，如何暫時解除封鎖？
-
-## Answer
-
 **精進方案的過濾規則由上級單位（教育局）控管。極度不建議做更動，****但若真的臨時急需使用，建議採取「排除」策略而非修改阻擋名單。** 在不影響全校政策的前提下，可依需求選擇解法： **方法一：暫時將裝置排除 (Jamf Trust Scope Exclusion)** 1. 登入 Jamf Pro。
 1. 找到 Jamf Trust 的 **「設定描述檔 (DNS Proxy / Content Filter)」** 。
 1. 進入 **「範圍 (Scope)」>「排除 (Exclusion)」** 。

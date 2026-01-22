@@ -6,11 +6,9 @@ important: true
 tags: ["ASM", "批次作業", "SFTP", "CSV", "管理式 Apple 帳號"]
 ---
 
-## Q: 如何在 ASM 中批次建立管理式 Apple 帳號？使用 SFTP 還是手動 CSV 匯入？
+**根據 Apple 官方資訊，建立管理式 Apple 帳號主要有三種方式：SFTP 上傳 (SIS 整合)、手動 CSV 匯入，以及聯合驗證 (Federated Authentication)。**
 
-## Answer
-
-**根據 Apple 官方資訊，建立管理式 Apple 帳號主要有三種方式：SFTP 上傳 (SIS 整合)、手動 CSV 匯入，以及聯合驗證 (Federated Authentication)。** ## 三種方式比較
+## 三種方式比較
 
 | 方式 | 適合對象 | 特點 |
 | :--- | :--- | :--- |

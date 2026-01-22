@@ -6,10 +6,6 @@ important: true
 tags: ["iPadOS 17","VPN","Jamf Trust","精進方案","架構調整"]
 ---
 
-## Q: 升級 iPadOS 17 後，螢幕上的 VPN 圖示消失了，這樣正常嗎？
-
-## Answer
-
 **完全正常。這是配合教育部「臺灣學術網路內容傳遞網路 (CDN)」服務政策，****Jamf Trust 架構調整後的正常現象。** 根據教育部精進方案政策，為最佳化連線效率並減少對 CDN 服務的干擾，Jamf Trust 主要採用 **「DNS Proxy」** 與 **「內容過濾 (Content Filter)」** 架構。
 （技術補充：在 **iOS 26** 中，部分過濾服務可能進一步結合 **「URL Filtering API」** 提供更細緻的網址辨識能力，但其核心運作邏輯仍符合教育部的規範。）
 

@@ -6,11 +6,9 @@ important: false
 tags: ["Hybrid Environment", "Intel Mac", "Apple Silicon", "Smart Group", "Deployment Strategy"]
 ---
 
-## Q: Mixed Fleet Management: Using Smart Groups to distinguish between Intel and Apple Silicon software packages.
+**2026 is the sunset year for Intel Macs. Most schools have a hybrid environment containing both 'x86_64 (Intel)' and 'arm 64 (M1–M5)' architectures. Assigning the wrong software package can lead to non-functional apps or system instability.**
 
-## Answer
-
-**2026 is the sunset year for Intel Macs. Most schools have a hybrid environment containing both 'x86_64 (Intel)' and 'arm 64 (M1–M5)' architectures. Assigning the wrong software package can lead to non-functional apps or system instability.** ## 1. Creating Precise Smart Groups (SOP)
+## 1. Creating Precise Smart Groups (SOP)
 
 In Jamf Pro, you should establish these baseline groups for accurate deployment:
 

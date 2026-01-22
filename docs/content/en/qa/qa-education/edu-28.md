@@ -6,11 +6,9 @@ important: false
 tags: ["Device Retirement", "ESG", "Data Sanitization", "Asset Management"]
 ---
 
-## Q: How should MDM administrators handle the 'Retirement' process for iPad/Mac hardware?
+**Device retirement is more than just turning off the power. It involves data sanitization and the secure return of ownership rights in Apple School Manager (ASM). A proper retirement process ensures student privacy and meets ESG (Environmental, Social, and Governance) sustainability standards.**
 
-## Answer
-
-**Device retirement is more than just turning off the power. It involves data sanitization and the secure return of ownership rights in Apple School Manager (ASM). A proper retirement process ensures student privacy and meets ESG (Environmental, Social, and Governance) sustainability standards.** ## Retirement SOP (Standard Operating Procedure)
+## Retirement SOP (Standard Operating Procedure)
 
 ## 1. Secure Data Wipe (Zero-Touch Cleanup)
 

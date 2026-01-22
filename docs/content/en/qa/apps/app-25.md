@@ -6,11 +6,9 @@ important: false
 tags: ["macOS 26", "Package", "DDM", ".pkg", "Jamf Policy"]
 ---
 
-## Q: How do I use 'Declarative .pkg Deployment' in macOS 26? How does it differ from Jamf Policies?
+**macOS 26 (Tahoe) extends Declarative Device Management (DDM) to support non-App Store software (.pkg). This allows you to deploy installation packages via 'Declarations' for a more modern, transparent, and resilient installation experience compared to the legacy Jamf Binary/Policy method.**
 
-## Answer
-
-**macOS 26 (Tahoe) extends Declarative Device Management (DDM) to support non-App Store software (.pkg). This allows you to deploy installation packages via 'Declarations' for a more modern, transparent, and resilient installation experience compared to the legacy Jamf Binary/Policy method.** ## DDM Package vs. Jamf Policy
+## DDM Package vs. Jamf Policy
 
 | Feature | Jamf Policy (Legacy) | DDM Package Declaration (Modern) |
 | :--- | :--- | :--- |

@@ -6,10 +6,6 @@ important: false
 tags: ["Renaming","Name Sync","Inventory Preload","PreStage","The MUT"]
 ---
 
-## Q: I changed the device name in Jamf Pro, but the iPad still shows the old name locally. Why?
-
-## Answer
-
 **This is usually because you only modified the 'text record' in the Jamf Pro database but haven't sent the 'Remote Rename Command' to the physical device.** Changing the name field directly in Jamf Pro's "General Search" or device details only updates the backend label; it does not actively trigger a change on the device.
 To ensure the local name matches, successful admins use three correct methods: **1. Automatic Naming via 'PreStage Enrollment'** This is the recommended automated solution, naming the device the moment it activates:
 

@@ -6,11 +6,9 @@ important: false
 tags: ["Bluetooth","Wi-Fi","Restrictions","Classroom Management"]
 ---
 
-## Q: Students are disabling Wi-Fi or Bluetooth to avoid Apple Classroom monitoring. What can I do?
+**This is a common student deflection tactic. Administrators can use MDM to prevent students from 'modifying' these settings, but the logic differs between Wi-Fi and Bluetooth.**
 
-## Answer
-
-**This is a common student deflection tactic. Administrators can use MDM to prevent students from 'modifying' these settings, but the logic differs between Wi-Fi and Bluetooth.** ## MDM Countermeasures (Restrictions Profile):
+## MDM Countermeasures (Restrictions Profile):
 
 In the Jamf Pro **Restrictions** payload, there are two key options:
 

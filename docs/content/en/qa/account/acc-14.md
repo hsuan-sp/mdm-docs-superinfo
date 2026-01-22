@@ -6,10 +6,6 @@ important: true
 tags: ["ADE","Server Token","Automated Device Enrollment"]
 ---
 
-## Q: Newly purchased devices are not syncing from ASM to Jamf Pro? (ADE Server Token Renewal)
-
-## Answer
-
 **If newly purchased devices do not appear in your MDM inventory, the most common reason is an expired 'Server Token' or unassigned devices in Apple School Manager (ASM).** The Server Token acts as the secure bridge between ASM and Jamf Pro for hardware management (formerly known as the DEP process). It is responsible for syncing purchase serial numbers from Apple to your MDM console.
 
 ## Troubleshooting Steps:

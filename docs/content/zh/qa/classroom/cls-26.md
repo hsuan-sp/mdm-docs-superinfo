@@ -6,11 +6,9 @@ important: false
 tags: ["AirDrop", "代碼", "隱私", "政策調整", "iOS 26.2"]
 ---
 
-## Q: iOS 26.2 的「AirDrop 代碼」會影響學校的 AirDrop 管理政策嗎？學生會利用此功能繞過管控嗎？
+**AirDrop 代碼是 iOS 26.2 新增的隱私增強功能，並不會讓學生繞過 MDM 的「停用 AirDrop」設定。學校既有的 AirDrop 管理政策依然有效，無需過度擔憂。**
 
-## Answer
-
-**AirDrop 代碼是 iOS 26.2 新增的隱私增強功能，並不會讓學生繞過 MDM 的「停用 AirDrop」設定。學校既有的 AirDrop 管理政策依然有效，無需過度擔憂。** ## AirDrop 代碼運作機制
+## AirDrop 代碼運作機制
 
 iOS 26.2、iPadOS 26.2 與 macOS 26.2 允許使用者產生一組「臨時授權代碼」(AirDrop 代碼)，有效期為 30 天。
 

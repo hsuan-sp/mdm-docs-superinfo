@@ -6,11 +6,9 @@ important: true
 tags: ["EACS", "ADE Troubleshooting", "Network Auth", "Terminal Commands", "Recovery Mode"]
 ---
 
-## Q: First-Aid: What to do if Mac Enrollment hangs after a 'Wipe All Content and Settings' (EACS) reset.
+**While 'Erase All Content and Settings (EACS)' is highly stable, school environments with captive-portal Wi-Fi or strict firewalls can cause the Mac to hang at the 'Remote Management' enrollment screen.**
 
-## Answer
-
-**While 'Erase All Content and Settings (EACS)' is highly stable, school environments with captive-portal Wi-Fi or strict firewalls can cause the Mac to hang at the 'Remote Management' enrollment screen.** ## 1. Initial Diagnosis: Why is it hanging?
+## 1. Initial Diagnosis: Why is it hanging?
 
 1. **Time Sync (Most Common)** : If the Mac's system time differs significantly from the Apple servers, SSL certificate validation will fail.
 

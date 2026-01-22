@@ -6,10 +6,6 @@ important: false
 tags: ["Command Latency","Network Environment","Bluetooth","Client Isolation"]
 ---
 
-## Q: The teacher iPad shows 'Waiting for devices...' or 'Offline'. Why aren't commands sending?
-
-## Answer
-
 **This is usually caused by a "Bluetooth Discovery Failure" or "Wi-Fi LAN communication being blocked."** Apple Classroom relies on two layers of communication to function:
 
 1. **Bluetooth (Discovery)** : Used to find nearby students.

@@ -6,10 +6,6 @@ important: false
 tags: ["Activation Lock","Bypass Code","Apple Devices App"]
 ---
 
-## Q: The device is locked by 'Activation Lock'. How do I unlock it?
-
-## Answer
-
 **Activation Lock is an Apple security feature. If you have ownership of the device, there are several technical pathways to unlock it.** When an iPad is erased, if it previously had "Find My" enabled, it will request the original Apple Account login. As a school administrator, your options are:
 
 ## Option 1: Use an Activation Lock Bypass Code (Fastest)

@@ -58,10 +58,6 @@ term: ADE (Automated Device Enrollment)  # 必須，術語名稱（含英文縮�
 ### QA 檔案標題層級
 
 ```markdown
-## Q: 問題標題
-
-## Answer
-
 正文內容...
 
 ### 子標題（如有需要）
@@ -296,10 +292,6 @@ tags:
   - 設定助理
 title: ADE 自動註冊時，IT 應該「跳過」哪些設定助理步驟？
 ---
-
-## Q: ADE 自動註冊時，IT 應該「跳過」哪些設定助理步驟？
-
-## Answer
 
 自動裝置註冊 (ADE) 允許 IT 預先設定並跳過 iPad 或 Mac 初始設定時的多個冗長畫面。
 

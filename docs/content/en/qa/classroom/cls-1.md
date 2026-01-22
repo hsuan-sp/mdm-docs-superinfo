@@ -6,11 +6,9 @@ important: true
 tags: ["Classroom App","Screen View","Privacy","AirPlay"]
 ---
 
-## Q: Can teachers see every student's screen using the Apple Classroom app?
+**Yes. This is a core feature of the Apple Classroom app, though it includes built-in privacy safeguards to ensure student awareness.**
 
-## Answer
-
-**Yes. This is a core feature of the Apple Classroom app, though it includes built-in privacy safeguards to ensure student awareness.** ## How it Works:
+## How it Works:
 
 * **Real-time Monitoring** : From their iPad or Mac, the teacher can view live thumbnails of every student's screen in the class.
 * **Individual Inspection** : Tapping a thumbnail allows the teacher to zoom in and view a specific student's work or progress in detail.

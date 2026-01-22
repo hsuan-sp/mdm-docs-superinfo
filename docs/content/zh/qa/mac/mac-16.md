@@ -6,10 +6,6 @@ important: false
 tags: ["macOS 15","iPhone Mirroring","隱私","限制","DLP"]
 ---
 
-## Q: 【Sequoia 新功能】如何管理或禁用「iPhone 鏡像輸出 (iPhone Mirroring)」？
-
-## Answer
-
 **macOS 15 Sequoia 引入的「iPhone 鏡像輸出」雖然方便，****但在校園公用電腦或高機密行政機上存在資料外洩 (DLP) 風險，建議透過 MDM 限制。****資安風險：** 當使用者將個人 iPhone 與學校 Mac 配對後，iPhone 的通知、照片與 App 內容可直接投射在 Mac 螢幕上，
 甚至支援檔案拖曳。這可能導致個資外洩或學生在上課時偷玩手機遊戲。
 

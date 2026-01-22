@@ -6,10 +6,6 @@ important: true
 tags: ["Troubleshooting","App Installation","VPP","DDM"]
 ---
 
-## Q: Apps on the iPad are stuck on 'Waiting' or failing to install. How do I troubleshoot this?
-
-## Answer
-
 **A 'Waiting' status usually indicates that the installation process is stalled at either the 'License Verification' or the 'Download Queue' stage.** When an MDM sends an installation command, a complex handshake occurs between the device and Apple’s servers. Please check these common failure points:
 
 ## Common Causes & Solutions:

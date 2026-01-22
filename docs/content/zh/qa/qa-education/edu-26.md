@@ -6,11 +6,9 @@ important: true
 tags: ["Apple Intelligence", "寫作工具", "AI 管理", "測驗安全"]
 ---
 
-## Q: 老師如何管理 iOS 26 的 Apple Intelligence「寫作工具」？
+**Apple Intelligence 的「寫作工具 (Writing Tools)」是強大的輔助，但在作文課或語言測驗中可能涉及學術誠信。****老師可以透過 MDM 完全關閉、部分限制，或在「課堂」App 中即時監控使用狀態。**
 
-## Answer
-
-**Apple Intelligence 的「寫作工具 (Writing Tools)」是強大的輔助，但在作文課或語言測驗中可能涉及學術誠信。****老師可以透過 MDM 完全關閉、部分限制，或在「課堂」App 中即時監控使用狀態。** ## 管理三策略
+## 管理三策略
 
 ## 1. MDM 端的行政控管 (強制性)
 

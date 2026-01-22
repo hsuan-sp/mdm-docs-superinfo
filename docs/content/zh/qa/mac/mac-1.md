@@ -6,10 +6,6 @@ important: true
 tags: ["AD","身分認證","Jamf Connect","Platform SSO","No-Bind"]
 ---
 
-## Q: Mac 需要綁定 AD (Active Directory) 嗎？現代化的建議是什麼？
-
-## Answer
-
 **高度建議不要綁定 AD (No-Bind 策略)。****請改用「平台單一登入 (Platform SSO)」或 Jamf Connect。** 傳統將 Mac「綁定 (Bind)」至 AD 網域的做法，
 在行動辦公與資安零信任（Zero Trust）架構下已顯得笨重且不可靠。
 

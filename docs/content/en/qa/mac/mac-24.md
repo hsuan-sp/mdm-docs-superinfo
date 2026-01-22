@@ -6,11 +6,9 @@ important: true
 tags: ["Safari", "Distraction Control", "Exam Security", "macOS 26", "Proctoring"]
 ---
 
-## Q: Exam Security: Managing Safari 'Distraction Control' to prevent cheating during web-based tests.
+**Safari in macOS 26 introduces 'Distraction Control,' which allows users to hide specific web elements (like ads or sidebars). However, in a Computer-Based Testing (CBT) environment, students could abuse this to hide timers, navigation menus, or proctoring warnings.**
 
-## Answer
-
-**Safari in macOS 26 introduces 'Distraction Control,' which allows users to hide specific web elements (like ads or sidebars). However, in a Computer-Based Testing (CBT) environment, students could abuse this to hide timers, navigation menus, or proctoring warnings.** ## Risks in the Classroom:
+## Risks in the Classroom:
 
 * **Hiding the Clock** : A student hides the countdown timer and then claims they didn't know the exam was ending.
 * **Hiding Instructions** : Students could hide critical rules or "Hints" buttons that are part of the testing UI.

@@ -6,10 +6,6 @@ important: false
 tags: ["PPPC","Privacy","TCC","Screen Recording","Standard Users"]
 ---
 
-## Q: Google Meet or Zoom keeps asking for 'Screen Recording' permissions. Can MDM enable this automatically?
-
-## Answer
-
 **This is governed by macOS TCC (Transparency, Consent, and Control) privacy mechanisms. For 'Screen Recording,' 'Microphone,' and 'Camera,' Apple mandates that the user must 'personally click to allow.'** MDM cannot forcibly "turn on" these permissions. However, you can use a **PPPC (Privacy Preferences Policy Control)** profile in Jamf Pro to authorize "Standard Users" (teachers) to approve these requests without needing an administrator password.
 
 ## MDM Control Capability Matrix (2026 Edition)

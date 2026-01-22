@@ -6,10 +6,6 @@ important: false
 tags: ["Managed Apps","License Ownership","VPP","Data Protection"]
 ---
 
-## Q: What is the difference between Managed Apps and personally installed apps? Can students take their apps with them after graduation?
-
-## Answer
-
 **It depends on the "purchaser" identity and the "management attributes" of the app. App licenses and the data inside them should be considered separately.** In a managed environment, apps are categorized as either "Managed" or "Personal," each with a completely different lifecycle:
 
 ## 1. School-assigned "Managed Apps"

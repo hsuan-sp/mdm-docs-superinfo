@@ -6,10 +6,6 @@ important: true
 tags: ["AD","Identity","Jamf Connect","Platform SSO","No-Bind"]
 ---
 
-## Q: Should we still bind our Macs to Active Directory (AD)? What is the modern recommendation?
-
-## Answer
-
 **We strongly recommend a "No-Bind" strategy. Instead of traditional AD binding, schools should adopt Platform SSO or Jamf Connect.** The traditional method of "Binding" a Mac to a Domain Controller (DC) is increasingly unreliable in a modern campus environment characterized by mobile laptops and Zero Trust security.
 
 ## Why Move Away from AD Binding?

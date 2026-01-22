@@ -6,11 +6,9 @@ important: false
 tags: ["Apple Pencil","Bluetooth","Hardware Compatibility","Troubleshooting"]
 ---
 
-## Q: Troubleshooting: Apple Pencil won't pair or write. How do I fix it?
+**Apple Pencil issues are usually caused by 'Model Incompatibility' or 'Bluetooth Pairing Cache' errors.**
 
-## Answer
-
-**Apple Pencil issues are usually caused by 'Model Incompatibility' or 'Bluetooth Pairing Cache' errors.** ## Troubleshooting Flow:
+## Troubleshooting Flow:
 
 1. **Verify Compatibility (Most Common Error)** :
 
