@@ -5,7 +5,7 @@ term: iBeacon
 ---
 ## 術語定義
 
-* *iBeacon** 是 Apple 開發的室內定位技術，利用**藍牙低功耗 (BLE)** 訊號來偵測裝置的微定位 (Micro-location)。
+* **iBeacon** 是 Apple 開發的室內定位技術，利用**藍牙低功耗 (BLE)** 訊號來偵測裝置的微定位 (Micro-location)。
 
 在教育場景的應用包括：
 

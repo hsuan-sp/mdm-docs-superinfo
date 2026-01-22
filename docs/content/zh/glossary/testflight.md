@@ -5,7 +5,7 @@ term: TestFlight
 ---
 ## 術語定義
 
-* *TestFlight** 是 Apple 官方用於測試「發布前」軟體的平台。
+* **TestFlight** 是 Apple 官方用於測試「發布前」軟體的平台。
 
 運作流程：
 

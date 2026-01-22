@@ -14,7 +14,7 @@ title: How do I prevent students from removing the MDM management profile?
 
 ## Answer
 
-* *The key to preventing profile removal is using the 'Automated Device Enrollment (ADE)' process and enabling mandatory locking in the 'PreStage Enrollment' settings.**
+* **The key to preventing profile removal is using the 'Automated Device Enrollment (ADE)' process and enabling mandatory locking in the 'PreStage Enrollment' settings.**
 
 If a device is enrolled manually (e.g., via a manual link or temporary Apple Configurator Enrollment), students can remove the profile at any time under**Settings > VPN & Device Management**.
 
@@ -24,7 +24,7 @@ If a device is enrolled manually (e.g., via a manual link or temporary Apple Con
 2. **Enable Mandatory Supervision**: Under the**Supervised Devices**section, ensure**Supervise Devices**is checked. This is the foundation for all advanced management; unsupervised devices cannot lock profiles.
 3. **Lock the Profile (Crucial Step)**:
 
-*    Check**Prevent Unenrollment**.
+* **Check**Prevent Unenrollment**.
 * **Result**: The "Remove Management" button will disappear from the iPad settings. Unless the device was added via Apple Configurator (which has a 30-day grace period), the student cannot manually remove the MDM Profile.
 
 ## Supporting Security Measures:
@@ -35,5 +35,5 @@ If a device is enrolled manually (e.g., via a manual link or temporary Apple Con
 
 ## Practical Advice:
 
-* **Cannot be Retroactive**: If a student has*already* removed the profile, you cannot fix it remotely. You must wipe the device and have it go through the PreStage process with "Prevent Unenrollment" enabled.
+* **Cannot be Retroactive**: If a student has**already* removed the profile, you cannot fix it remotely. You must wipe the device and have it go through the PreStage process with "Prevent Unenrollment" enabled.
 * **Version Requirements**: For modern environments, we recommend setting a**Minimum Required iPadOS Version**(e.g., iPadOS 17+) in PreStage to ensure "Return to Service" and latest security features function correctly.

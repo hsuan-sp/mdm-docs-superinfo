@@ -13,7 +13,7 @@ title: How do I manage 'Screen Brightness' and 'Auto-Lock' on student iPads?
 
 ## Answer
 
-* *MDM can enforce an 'Auto-Lock' timeout, but it 'cannot' directly control screen brightness.**
+* **MDM can enforce an 'Auto-Lock' timeout, but it 'cannot' directly control screen brightness.**
 
 According to Apple's MDM protocol specifications:
 
@@ -25,7 +25,8 @@ According to Apple's MDM protocol specifications:
 ## 2. Screen Brightness
 
 * **NOT Manageable**: Currently, there is no MDM command to lock brightness at a specific percentage (e.g., 50%).
-*    This is by design to ensure accessibility and visibility across varying lighting environments.
+
+* **This is by design to ensure accessibility and visibility across varying lighting environments.**
 * **Advice**: Teachers should instruct students to enable "Auto-Brightness" or manually adjust it via Control Center.
 
 ## 3. Wallpaper

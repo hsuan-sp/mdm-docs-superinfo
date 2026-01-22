@@ -5,7 +5,7 @@ term: mDNS (Multicast DNS)
 ---
 ## 術語定義
 
-* *mDNS (Multicast DNS)** 是 Apple**Bonjour** 技術的底層通訊協定，用於在沒有 DNS 伺服器的區域網路中尋找裝置。
+* **mDNS (Multicast DNS)** 是 Apple**Bonjour** 技術的底層通訊協定，用於在沒有 DNS 伺服器的區域網路中尋找裝置。
 
 它的特性包括：
 

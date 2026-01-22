@@ -5,7 +5,7 @@ term: Bootstrap Token
 ---
 ## 術語定義
 
-* *Bootstrap Token (引導代幣)** 是 macOS 用於安全啟動與加密管理的自動化授權憑證。
+* **Bootstrap Token (引導代幣)** 是 macOS 用於安全啟動與加密管理的自動化授權憑證。
 
 運作機制：
 

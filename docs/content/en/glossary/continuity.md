@@ -5,7 +5,7 @@ term: Continuity
 ---
 ## Term Definition
 
-* *Continuity**is the collective name for Apple's deep integration features that allow different devices to work together as a single ecosystem.
+* **Continuity**is the collective name for Apple's deep integration features that allow different devices to work together as a single ecosystem.
 
 Core features include:
 
@@ -14,7 +14,7 @@ Core features include:
 * **Sidecar & Mirroring**: Use an iPad as a second display for a Mac.
 * **Universal Control**: Use a single mouse and keyboard to control multiple iPads and Macs.
 
-* *Technical Requirement**: Devices must be signed in to the same**Managed Apple Account**or personal Apple ID and have Bluetooth and Wi-Fi enabled.
+* **Technical Requirement**: Devices must be signed in to the same**Managed Apple Account**or personal Apple ID and have Bluetooth and Wi-Fi enabled.
 
 ## Analogy
 

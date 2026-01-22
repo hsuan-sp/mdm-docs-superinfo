@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-* *The modern solution is to use "Declarative Device Management (DDM)." If you need more visual urgency, you can supplement this with the open-source tool "Nudge."**
+* **The modern solution is to use "Declarative Device Management (DDM)." If you need more visual urgency, you can supplement this with the open-source tool "Nudge."**
 
 Unlike iPads, Mac updates often require a lengthy restart, which leads students to postpone them indefinitely, creating a fragmented and insecure fleet.
 
@@ -32,7 +32,7 @@ Unlike iPads, Mac updates often require a lengthy restart, which leads students 
 
 ## Path 2: Nudge (Visual Urgency)
 
-*    If the subtle system notifications aren't enough,**Nudge**is the industry standard for gettings users to take action.
+* **If the subtle system notifications aren't enough,**Nudge**is the industry standard for gettings users to take action.
 * **The Experience**: It pops up a non-dismissible window (which can be branded with the school logo) that clearly states: "Your Mac is out of date and insecure. Please update now."
 * **Escalation**: As the deadline nears, Nudge can dim the screen or blur the background, making it impossible for the student to ignore the update while they try to use other apps.
 

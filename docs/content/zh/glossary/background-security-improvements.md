@@ -5,7 +5,7 @@ term: Background Security Improvements (背景安全改良)
 ---
 ## 術語定義
 
-* *Background Security Improvements (背景安全改良)** 是 iOS 26.3 引入的模組化安全修補機制。
+* **Background Security Improvements (背景安全改良)** 是 iOS 26.3 引入的模組化安全修補機制。
 
 其核心功能包括：
 
@@ -14,7 +14,7 @@ term: Background Security Improvements (背景安全改良)
 * **無縫更新**：更新過程在背景靜默進行，完全不需要重開機。
 * **零時差防護**：一旦 Apple 釋出修正檔，裝置能即刻獲得針對最新攻擊的防護。
 
-* *MDM 觀點**：學校 IT 管理員應注意這些更新是自動且無干擾的。這大幅提升了裝置群的安全性，且完全不會打斷課堂教學。
+* **MDM 觀點**：學校 IT 管理員應注意這些更新是自動且無干擾的。這大幅提升了裝置群的安全性，且完全不會打斷課堂教學。
 
 ## 白話文比喻
 

@@ -12,7 +12,7 @@ title: Does enabling 'Lost Mode' infringe on my privacy?
 
 ## Answer
 
-* *No. Lost Mode is designed specifically for asset recovery. Location services are only activated while the device is officially marked as 'Lost' by an administrator.**
+* **No. Lost Mode is designed specifically for asset recovery. Location services are only activated while the device is officially marked as 'Lost' by an administrator.**
 
 ## How it Works:
 

@@ -5,7 +5,7 @@ term: Apple Configurator
 ---
 ## 術語定義
 
-* *Apple Configurator** 是 macOS 上的實體管理與診斷工具。
+* **Apple Configurator** 是 macOS 上的實體管理與診斷工具。
 
 其主要用途包括：
 

@@ -5,7 +5,7 @@ term: Automatic Reboot (自動重開機)
 ---
 ## 術語定義
 
-* *Automatic Reboot (自動重開機)** 是於**OS version 26** 推出的特殊安全設定。
+* **Automatic Reboot (自動重開機)** 是於**OS version 26** 推出的特殊安全設定。
 
 設定細節：
 

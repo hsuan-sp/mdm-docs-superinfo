@@ -12,7 +12,7 @@ title: How do I transfer VPP App licenses smoothly when changing MDM providers?
 
 ## Answer
 
-* *You do not need to repurchase anything. App licenses are tied to the 'Location' in Apple School Manager (ASM), not to a specific MDM software.**
+* **You do not need to repurchase anything. App licenses are tied to the 'Location' in Apple School Manager (ASM), not to a specific MDM software.**
 
 As long as your licenses are in your ASM backend, you can rotate them between different MDM servers.
 

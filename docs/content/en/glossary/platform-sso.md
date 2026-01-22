@@ -6,7 +6,7 @@ term: Platform SSO
 ---
 ## Term Definition
 
-* *Platform Single Sign-On (Platform SSO)**is a framework that deeply integrates a Mac's local user account with an external Identity Provider (IdP).
+* **Platform Single Sign-On (Platform SSO)**is a framework that deeply integrates a Mac's local user account with an external Identity Provider (IdP).
 
 Capabilities:
 

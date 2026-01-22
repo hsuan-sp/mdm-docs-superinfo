@@ -12,7 +12,7 @@ title: How do I reset a student's 'Managed Apple Account' password?
 
 ## Answer
 
-* *Password resets for Managed Apple Accounts are handled by administrators within Apple School Manager (ASM).**
+* **Password resets for Managed Apple Accounts are handled by administrators within Apple School Manager (ASM).**
 
 Because these are school-managed assets, students cannot use the standard "I forgot my password" link on their own.
 

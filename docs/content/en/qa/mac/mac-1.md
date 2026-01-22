@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-* *We strongly recommend a "No-Bind" strategy. Instead of traditional AD binding, schools should adopt Platform SSO or Jamf Connect.**
+* **We strongly recommend a "No-Bind" strategy. Instead of traditional AD binding, schools should adopt Platform SSO or Jamf Connect.**
 
 The traditional method of "Binding" a Mac to a Domain Controller (DC) is increasingly unreliable in a modern campus environment characterized by mobile laptops and Zero Trust security.
 

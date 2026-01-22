@@ -6,7 +6,7 @@ term: Enrollment Invitation
 ---
 ## 術語定義
 
-* *Enrollment Invitation (註冊邀請)** 是 MDM 中針對「使用者主動註冊」的一種機制。
+* **Enrollment Invitation (註冊邀請)** 是 MDM 中針對「使用者主動註冊」的一種機制。
 
 管理員可透過 Email 或簡訊，發送一個 **專屬連結**或**QR Code** 給使用者。使用者點擊後，依照引導步驟安裝 MDM 描述檔，即可將裝置納入管理。
 

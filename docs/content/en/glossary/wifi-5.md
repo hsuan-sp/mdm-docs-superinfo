@@ -5,7 +5,7 @@ term: Wi-Fi 5
 ---
 ## Term Definition
 
-* *Wi-Fi 5**(IEEE 802.11ac) is an older wireless standard introduced in 2014, operating exclusively in the 5 GHz frequency band.
+* **Wi-Fi 5**(IEEE 802.11ac) is an older wireless standard introduced in 2014, operating exclusively in the 5 GHz frequency band.
 
 Key characteristics:
 

@@ -6,7 +6,7 @@ term: Provisioning Profile
 ---
 ## 術語定義
 
-* *Provisioning Profile (佈建描述檔)** 是一個數位簽章檔案，它將「開發者憑證」、「App ID」與「裝置」連結起來，用來授權一個 App 在 Apple 裝置上執行。
+* **Provisioning Profile (佈建描述檔)** 是一個數位簽章檔案，它將「開發者憑證」、「App ID」與「裝置」連結起來，用來授權一個 App 在 Apple 裝置上執行。
 
 它的應用場景：
 

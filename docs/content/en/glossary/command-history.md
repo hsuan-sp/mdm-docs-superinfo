@@ -5,7 +5,7 @@ term: Command History
 ---
 ## Term Definition
 
-* *Command History**is a comprehensive audit log within the MDM console that tracks every action sent to an individual device.
+* **Command History**is a comprehensive audit log within the MDM console that tracks every action sent to an individual device.
 
 Administrators use this history to:
 

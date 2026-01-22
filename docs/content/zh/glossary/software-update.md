@@ -6,7 +6,7 @@ term: Software Update
 ---
 ## 術語定義
 
-* *Software Update (軟體更新)** 是指下載並安裝作業系統 (macOS/iOS) 與內建 App (Safari) 新版本的系統機制。
+* **Software Update (軟體更新)** 是指下載並安裝作業系統 (macOS/iOS) 與內建 App (Safari) 新版本的系統機制。
 
 MDM 的管理控制 (透過 DDM)：
 

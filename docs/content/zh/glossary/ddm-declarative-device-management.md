@@ -5,7 +5,7 @@ term: DDM (Declarative Device Management)
 ---
 ## 術語定義
 
-* *DDM (Declarative Device Management)** 是 Apple 推出的新一代 MDM 架構。
+* **DDM (Declarative Device Management)** 是 Apple 推出的新一代 MDM 架構。
 
 不同於傳統 MDM 由伺服器持續輪詢指令，DDM 帶來了革命性的改變：
 

@@ -5,7 +5,7 @@ term: Apple Intelligence Reports
 ---
 ## Term Definition
 
-* *Apple Intelligence Reports**(and associated AI Management tools) provide auditing and restriction capabilities within MDM to maintain academic integrity.
+* **Apple Intelligence Reports**(and associated AI Management tools) provide auditing and restriction capabilities within MDM to maintain academic integrity.
 
 Administrators can use MDM to:
 

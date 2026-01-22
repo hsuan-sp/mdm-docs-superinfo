@@ -13,7 +13,7 @@ title: Why is the web navigation failing when I try to push a URL to student iPa
 
 ## Answer
 
-* *Navigation failures are typically caused by browser restrictions, content filters, or excessive open tabs.**
+* **Navigation failures are typically caused by browser restrictions, content filters, or excessive open tabs.**
 
 ## Troubleshooting Checklist:
 

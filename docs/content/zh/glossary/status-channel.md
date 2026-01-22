@@ -5,7 +5,7 @@ term: Status Channel
 ---
 ## 術語定義
 
-* *Status Channel (狀態通道)** 是**DDM (宣告式裝置管理)** 用來即時通訊的專屬管道。
+* **Status Channel (狀態通道)** 是**DDM (宣告式裝置管理)** 用來即時通訊的專屬管道。
 
 與傳統 MDM 的差異：
 

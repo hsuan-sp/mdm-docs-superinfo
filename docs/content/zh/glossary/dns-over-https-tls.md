@@ -5,7 +5,7 @@ term: DNS over HTTPS/TLS (DNS 加密協定)
 ---
 ## 術語定義
 
-* *DNS over HTTPS/TLS (DNS 加密協定)** 是一種保護 DNS 查詢隱私的加密技術。
+* **DNS over HTTPS/TLS (DNS 加密協定)** 是一種保護 DNS 查詢隱私的加密技術。
 
 傳統 DNS 查詢是明文傳輸的，容易被 ISP 或中間人監聽。加密協定則提供了保護：
 
@@ -24,7 +24,7 @@ DoH/DoT 就像寄 **「密封掛號信」**，信封封得死死的，郵差只�
 
 Jamf Safe Internet 使用 Jamf 專屬的 DoH Gateway 實現內容過濾，同時兼顧隱私與安全。但若學生自行安裝第三方 DoH App（如 Cloudflare 1.1.1.1），可能會繞過學校的防護網。
 
-* *應對策略**：
+* **應對策略**：
 
 1. **使用 Network Extension**：利用 iOS 26 的新功能，在系統層級進行過濾。
 2. **限制 App 安裝**：禁止學生安裝已知的 VPN 或 DNS 更改工具。

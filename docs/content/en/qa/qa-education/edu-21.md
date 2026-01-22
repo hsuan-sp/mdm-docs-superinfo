@@ -12,7 +12,7 @@ title: How do I manage the new 'Notification Summary' AI feature in iOS 18?
 
 ## Answer
 
-* *iOS 18 introduces AI-powered notification summaries. While useful for filtering noise, it may cause students to miss critical full-context messages during class.**
+* **iOS 18 introduces AI-powered notification summaries. While useful for filtering noise, it may cause students to miss critical full-context messages during class.**
 
 ## Management Strategies:
 

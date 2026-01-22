@@ -5,7 +5,7 @@ term: iPaaS
 ---
 ## 術語定義
 
-* *iPaaS (Integration Platform as a Service)** 是一套雲端整合服務，旨在連結企業內互不相通的應用程式、資料來源與工作流程。
+* **iPaaS (Integration Platform as a Service)** 是一套雲端整合服務，旨在連結企業內互不相通的應用程式、資料來源與工作流程。
 
 在教育與企業環境中，其主要功能包括：
 

@@ -5,7 +5,7 @@ term: Recovery Lock
 ---
 ## 術語定義
 
-* *Recovery Lock (復原鎖)** 是 Apple Silicon Mac 上的一項硬體級安全功能 (Intel Mac 則稱為 Firmware Password)。
+* **Recovery Lock (復原鎖)** 是 Apple Silicon Mac 上的一項硬體級安全功能 (Intel Mac 則稱為 Firmware Password)。
 
 它的功能包括：
 

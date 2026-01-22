@@ -5,7 +5,7 @@ term: BYOD (Bring Your Own Device)
 ---
 ## 術語定義
 
-* *BYOD (Bring Your Own Device)** 指員工或學生攜帶私人裝置到工作場所或學校處理公務。
+* **BYOD (Bring Your Own Device)** 指員工或學生攜帶私人裝置到工作場所或學校處理公務。
 
 透過 Apple 的 **「使用者註冊 (User Enrollment)」** 模式，企業可以在私人裝置上實現隱私與管理的平衡：
 

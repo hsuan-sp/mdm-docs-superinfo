@@ -5,7 +5,7 @@ term: LAPS (Local Administrator Password Solution)
 ---
 ## 術語定義
 
-* *Local Administrator Password Solution (LAPS)** 是一種強化的資安架構，專門用來管理每台電腦的本機管理員密碼。
+* **Local Administrator Password Solution (LAPS)** 是一種強化的資安架構，專門用來管理每台電腦的本機管理員密碼。
 
 其運作機制為：
 

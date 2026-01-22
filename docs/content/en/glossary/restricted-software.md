@@ -5,7 +5,7 @@ term: Restricted Software
 ---
 ## Term Definition
 
-* *Restricted Software**is a blocking mechanism in Jamf Pro used to prohibit specific applications from running.
+* **Restricted Software**is a blocking mechanism in Jamf Pro used to prohibit specific applications from running.
 
 Capabilities:
 

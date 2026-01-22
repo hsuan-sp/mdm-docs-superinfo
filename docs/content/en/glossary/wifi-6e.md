@@ -5,7 +5,7 @@ term: Wi-Fi 6E
 ---
 ## Term Definition
 
-* *Wi-Fi 6E**is the extension of the Wi-Fi 6 standard into the 6 GHz frequency band.
+* **Wi-Fi 6E**is the extension of the Wi-Fi 6 standard into the 6 GHz frequency band.
 
 Advantages for schools:
 

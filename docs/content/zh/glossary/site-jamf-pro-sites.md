@@ -5,7 +5,7 @@ term: Site (Jamf Pro Sites)
 ---
 ## 術語定義
 
-* *Sites (分站)** 是 Jamf Pro 的多租戶架構功能。
+* **Sites (分站)** 是 Jamf Pro 的多租戶架構功能。
 
 功能特色：
 

@@ -5,7 +5,7 @@ term: Temporary Session (Guest Mode)
 ---
 ## 術語定義
 
-* *Temporary Session (臨時工作階段)**，常稱為**Guest Mode (訪客模式)**，是**Shared iPad** 環境中的一種功能。
+* **Temporary Session (臨時工作階段)**，常稱為**Guest Mode (訪客模式)**，是**Shared iPad** 環境中的一種功能。
 
 使用流程：
 

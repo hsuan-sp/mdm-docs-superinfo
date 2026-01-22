@@ -6,7 +6,7 @@ term: Inventory Collection
 ---
 ## 術語定義
 
-* *Inventory Collection (清單收集)** 是 MDM 管理的核心機制，負責定期回報裝置的詳細狀態。
+* **Inventory Collection (清單收集)** 是 MDM 管理的核心機制，負責定期回報裝置的詳細狀態。
 
 Jamf Pro 預設每天會自動執行一次，收集的資料包括：
 

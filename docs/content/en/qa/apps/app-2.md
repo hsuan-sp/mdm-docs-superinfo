@@ -14,7 +14,7 @@ title: Can we install apps on iPads without signing into an Apple ID?
 
 ## Answer
 
-* *Yes. This is called "Device-based Assignment," and it is the standard and most efficient method for school environments.**
+* **Yes. This is called "Device-based Assignment," and it is the standard and most efficient method for school environments.**
 
 By using the**Volume Purchase Program (VPP)**within Apple School Manager (ASM), the school links app licenses to the device’s**Serial Number**rather than a specific student’s Apple ID.
 

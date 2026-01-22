@@ -17,15 +17,15 @@ title: >-
 
 ## Answer
 
-* *macOS 26 (Tahoe) extends Declarative Device Management (DDM) to support non-App Store software (.pkg). This allows you to deploy installation packages via 'Declarations' for a more modern, transparent, and resilient installation experience compared to the legacy Jamf Binary/Policy method.**
+* **macOS 26 (Tahoe) extends Declarative Device Management (DDM) to support non-App Store software (.pkg). This allows you to deploy installation packages via 'Declarations' for a more modern, transparent, and resilient installation experience compared to the legacy Jamf Binary/Policy method.**
 
 ## DDM Package vs. Jamf Policy
 
 | Feature | Jamf Policy (Legacy) | DDM Package Declaration (Modern) |
 | :--- | :--- | :--- |
 | **Execution** | Relies on the `Jamf` binary to run scripts and installers. | Relies on the macOS native MDM framework. |
-| **Trigger** | Requires a trigger (e.g., Login, Recurring Check-in). | **Autonomous**. Device installs as soon as conditions are met. |
-| **Status Channel** | Reported through Jamf logs with potential delay. | **Real-time**reporting of progress and error codes to MDM. |
+| **Trigger**| Requires a trigger (e.g., Login, Recurring Check-in). |**Autonomous**. Device installs as soon as conditions are met. |
+| **Status Channel**| Reported through Jamf logs with potential delay. |**Real-time**reporting of progress and error codes to MDM. |
 | **Offline Support** | Must be online to trigger the check-in. | If the declaration is local, the device handles install retries offline. |
 | **Suitability** | Best for complex scripts and .dmg installs. | Best for standard signed**Distribution Packages (.pkg)**. |
 
@@ -33,9 +33,9 @@ title: >-
 
 * **OS**: macOS 26 (Tahoe) or later.
 * **Package Quality**:
-*    Must be a**Distribution Package**(not a basic component pkg).
-*    Must be**signed**with a valid Apple Developer ID Installer certificate.
-*    Must be**notarized**by Apple. MDM deployment in macOS 26 is extremely strict regarding security; unsigned or un-notarized packages will fail with a `VerificationFailed` error in the status channel.
+* **Must be a**Distribution Package**(not a basic component pkg).
+* **Must be**signed**with a valid Apple Developer ID Installer certificate.
+* **Must be**notarized**by Apple. MDM deployment in macOS 26 is extremely strict regarding security; unsigned or un-notarized packages will fail with a `VerificationFailed` error in the status channel.
 
 ## When to use each?
 

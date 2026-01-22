@@ -5,7 +5,7 @@ term: ABM (Apple Business Manager)
 ---
 ## 術語定義
 
-* *Apple Business Manager (ABM)** 是企業管理 Apple 裝置與數位資產的中央入口網站。它是現代化裝置管理的基礎。
+* **Apple Business Manager (ABM)** 是企業管理 Apple 裝置與數位資產的中央入口網站。它是現代化裝置管理的基礎。
 
 關鍵功能包括：
 

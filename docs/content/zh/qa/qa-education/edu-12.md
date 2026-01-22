@@ -12,16 +12,16 @@ title: 學生做完的作業（Keynote/Pages）要怎麼交給老師？
 
 ## Answer
 
-* *最佳方式是透過雲端硬碟（Google Drive、OneDrive、或 iCloud Drive）繳交。**
-* *也可使用 AirDrop、Google Classroom 作業功能、或 Self Service 指定的繳交平台。**
+* **最佳方式是透過雲端硬碟（Google Drive、OneDrive、或 iCloud Drive）繳交。**
+* **也可使用 AirDrop、Google Classroom 作業功能、或 Self Service 指定的繳交平台。**
 
 在數位教學環境中，建立順暢的作業繳交流程可大幅提升教學效率。以下是幾種常見方式。
 
-* *方式一：Google Drive（最推薦）**
+* **方式一：Google Drive（最推薦）**
 
 適合已使用 Google Classroom/Workspace 的學校。
 
-* *操作步驟**：
+* **操作步驟**：
 
 1. 確認 iPad 已安裝 **「Google 雲端硬碟」**App 或 **「Google 文件/簡報」** 相關 App。
 2. 在 Keynote/Pages 中完成作業，點選「分享」（右上角分享按鈕）。
@@ -35,7 +35,7 @@ title: 學生做完的作業（Keynote/Pages）要怎麼交給老師？
 
 老師可在 Google Drive 或 Google Classroom 中查看繳交的作業。
 
-* *方式二：Google Classroom 作業功能**
+* **方式二：Google Classroom 作業功能**
 
 若老師已在 Google Classroom 中建立「作業」：
 
@@ -44,7 +44,7 @@ title: 學生做完的作業（Keynote/Pages）要怎麼交給老師？
 3. 選擇要繳交的檔案（從檔案 App 選取 Keynote/Pages 匯出的 PDF 或原始檔）。
 4. 點選「繳交」。
 
-* *方式三：AirDrop（面對面繳交）**
+* **方式三：AirDrop（面對面繳交）**
 
 適合小班或當面收集作業。
 
@@ -53,9 +53,9 @@ title: 學生做完的作業（Keynote/Pages）要怎麼交給老師？
 3. 找到老師的 iPad 名稱並點選。
 4. 老師接收檔案。
 
-* *優點**：快速、不需網路帳號。
-* *缺點**：需在藍牙範圍內；收發容易混亂（需一個個接收）。
-* *方式四：iCloud Drive（需管理式 Apple 帳號）**
+* **優點**：快速、不需網路帳號。
+* **缺點**：需在藍牙範圍內；收發容易混亂（需一個個接收）。
+* **方式四：iCloud Drive（需管理式 Apple 帳號）**
 
 若學校使用共用 iPad 或管理式 Apple 帳號：
 
@@ -63,7 +63,7 @@ title: 學生做完的作業（Keynote/Pages）要怎麼交給老師？
 2. 作品儲存至 iCloud Drive。
 3. 老師可在 ASM 或透過共用資料夾存取。
 
-* *匯出格式建議**：
+* **匯出格式建議**：
 
 | 目的 | 建議格式 |
 | :--- | :--- |
@@ -71,7 +71,7 @@ title: 學生做完的作業（Keynote/Pages）要怎麼交給老師？
 | **僅供閱讀/列印** | 匯出為 PDF |
 | **視訊簡報** | 匯出為影片 (.mov) |
 
-* *實務建議：常見問題**
+* **實務建議：常見問題**
 
 * **找不到 Google Drive 位置**：開啟「檔案」App > 右上角「...」> 編輯 > 開啟 Google Drive。
 * **檔案太大無法上傳**：壓縮影片解析度，或改用雲端連結分享。

@@ -14,7 +14,7 @@ title: 'If school Wi-Fi is poor, can I connect the iPad to a wired network (Ethe
 
 ## Answer
 
-* *Yes. Whether it's an older Lightning-based iPad or a newer USB-C model, they all support wired network connections via adapters.**
+* **Yes. Whether it's an older Lightning-based iPad or a newer USB-C model, they all support wired network connections via adapters.**
 
 ## Hardware Requirements & Choices:
 

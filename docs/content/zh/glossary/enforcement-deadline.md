@@ -5,7 +5,7 @@ term: Enforcement Deadline (強制執行截止日)
 ---
 ## 術語定義
 
-* *Enforcement Deadline (強制執行截止日)** 是宣告式裝置管理 (DDM) 中的強制執行機制。
+* **Enforcement Deadline (強制執行截止日)** 是宣告式裝置管理 (DDM) 中的強制執行機制。
 
 管理員可針對 **軟體更新**或**MDM 註冊** 設定一個絕對的截止日期。系統會依據剩餘時間自動調整使用者體驗：
 

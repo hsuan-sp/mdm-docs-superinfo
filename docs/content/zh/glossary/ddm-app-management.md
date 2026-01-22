@@ -5,7 +5,7 @@ term: DDM App Management (宣告式 App 管理)
 ---
 ## 術語定義
 
-* *DDM App Management (宣告式 App 管理)** 是基於 DDM 架構的先進應用程式部署方式。
+* **DDM App Management (宣告式 App 管理)** 是基於 DDM 架構的先進應用程式部署方式。
 
 其特點是由 **裝置端** 全權負責 App 的管理工作，包括：
 

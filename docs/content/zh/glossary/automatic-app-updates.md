@@ -5,7 +5,7 @@ term: Automatic App Updates（自動更新 App）
 ---
 ## 術語定義
 
-* *Automatic App Updates (自動更新 App)** 是系統的背景機制，確保應用程式保持在最新狀態。
+* **Automatic App Updates (自動更新 App)** 是系統的背景機制，確保應用程式保持在最新狀態。
 
 功能層面：
 

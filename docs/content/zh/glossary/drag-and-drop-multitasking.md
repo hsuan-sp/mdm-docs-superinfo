@@ -5,7 +5,7 @@ term: Drag and Drop Multitasking (拖放式多工)
 ---
 ## 術語定義
 
-* *Drag and Drop Multitasking (拖放式多工)** 是 iPadOS 26.2 針對生產力強化的操作體驗。
+* **Drag and Drop Multitasking (拖放式多工)** 是 iPadOS 26.2 針對生產力強化的操作體驗。
 
 使用者可直接透過直覺的手勢操作：
 

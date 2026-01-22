@@ -5,7 +5,7 @@ term: Recovery Lock
 ---
 ## Term Definition
 
-* *Recovery Lock**is a hardware-level security feature for Mac computers with Apple Silicon.
+* **Recovery Lock**is a hardware-level security feature for Mac computers with Apple Silicon.
 
 Functionality:
 

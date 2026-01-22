@@ -14,7 +14,7 @@ title: >-
 
 ## Answer
 
-* *This is a common 'Serial Lock' risk. If a student tries the wrong password too many times, both the device and the account may be locked out simultaneously.**
+* **This is a common 'Serial Lock' risk. If a student tries the wrong password too many times, both the device and the account may be locked out simultaneously.**
 
 ## Recovery SOP:
 

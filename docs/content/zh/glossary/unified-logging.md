@@ -5,7 +5,7 @@ term: Unified Logging
 ---
 ## 術語定義
 
-* *Unified Logging** 是 Apple 平台上的中央系統日誌機制，用於捕捉與儲存診斷訊息。
+* **Unified Logging** 是 Apple 平台上的中央系統日誌機制，用於捕捉與儲存診斷訊息。
 
 主要功能：
 

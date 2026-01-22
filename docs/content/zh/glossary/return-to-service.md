@@ -5,7 +5,7 @@ term: Return to Service
 ---
 ## 術語定義
 
-* *Return to Service (快速重置部署)** 是一個針對 iOS 與 iPadOS 的高效率指令，它能自動化整個裝置重置與重新註冊的流程。
+* **Return to Service (快速重置部署)** 是一個針對 iOS 與 iPadOS 的高效率指令，它能自動化整個裝置重置與重新註冊的流程。
 
 流程步驟：
 

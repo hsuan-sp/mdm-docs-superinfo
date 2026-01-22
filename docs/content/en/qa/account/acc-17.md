@@ -13,7 +13,7 @@ title: How do I use Platform SSO (PSSO) to unlock FileVault at system boot?
 
 ## Answer
 
-* *Starting with macOS 15 (Sequoia), Platform SSO supports deep integration with FileVault, effectively eliminating the 'dual-password' friction point during startup.**
+* **Starting with macOS 15 (Sequoia), Platform SSO supports deep integration with FileVault, effectively eliminating the 'dual-password' friction point during startup.**
 
 ## The Solution:
 

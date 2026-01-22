@@ -5,7 +5,7 @@ term: AirPrint
 ---
 ## 術語定義
 
-* *AirPrint** 是 Apple 開發的免驅動程式列印技術。它能讓 Apple 裝置（iOS、iPadOS、macOS）在不需下載特定軟體的情況下，直接透過相同的區域網路將文件傳送到支援的印表機。
+* **AirPrint** 是 Apple 開發的免驅動程式列印技術。它能讓 Apple 裝置（iOS、iPadOS、macOS）在不需下載特定軟體的情況下，直接透過相同的區域網路將文件傳送到支援的印表機。
 
 對於資訊人員（IT）的核心優勢包括：
 

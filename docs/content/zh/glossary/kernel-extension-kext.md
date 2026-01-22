@@ -5,7 +5,7 @@ term: Kernel Extension (Kext)
 ---
 ## 術語定義
 
-* *Kernel Extension (Kext)** 是 macOS 的核心擴充功能（類似 Windows 的驅動程式）。
+* **Kernel Extension (Kext)** 是 macOS 的核心擴充功能（類似 Windows 的驅動程式）。
 
 它的特性包括：
 

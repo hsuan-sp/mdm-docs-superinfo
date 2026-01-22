@@ -5,7 +5,7 @@ term: Certificate Authority (CA)
 ---
 ## 術語定義
 
-* *Certificate Authority (CA)** 是負責簽發與管理數位憑證的**可信第三方機構**。
+* **Certificate Authority (CA)** 是負責簽發與管理數位憑證的**可信第三方機構**。
 
 在數位憑證的信任鏈中：
 

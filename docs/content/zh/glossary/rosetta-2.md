@@ -5,7 +5,7 @@ term: Rosetta 2
 ---
 ## 術語定義
 
-* *Rosetta 2** 是 Apple 為了從 Intel 晶片過渡到 Apple Silicon (M 系列晶片) 所開發的一種動態二進位轉譯器。
+* **Rosetta 2** 是 Apple 為了從 Intel 晶片過渡到 Apple Silicon (M 系列晶片) 所開發的一種動態二進位轉譯器。
 
 它的功能：
 

@@ -5,7 +5,7 @@ term: TLS / SSL
 ---
 ## Term Definition
 
-* *TLS (Transport Layer Security)**and its predecessor**SSL (Secure Sockets Layer)**are the cryptographic protocols that secure internet communications.
+* **TLS (Transport Layer Security)**and its predecessor**SSL (Secure Sockets Layer)**are the cryptographic protocols that secure internet communications.
 
 Function:
 

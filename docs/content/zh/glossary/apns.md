@@ -6,7 +6,7 @@ term: APNs (Apple Push Notification service)
 ---
 ## 術語定義
 
-* *Apple Push Notification service (APNs)** 是 MDM 伺服器與 Apple 裝置之間不可或缺的「通訊傳令兵」。
+* **Apple Push Notification service (APNs)** 是 MDM 伺服器與 Apple 裝置之間不可或缺的「通訊傳令兵」。
 
 由於 MDM 伺服器無法在裝置省電休眠時直接進行通訊，且常受限於網路防火牆，因此必須遵循以下工作流程：
 
@@ -14,7 +14,7 @@ term: APNs (Apple Push Notification service)
 2. **喚醒裝置**：APNs 透過一條持續維持的低耗能連線「喚醒」目標裝置。
 3. **主動報到**：裝置收到指令後，隨即向 MDM 伺服器報到（Check-in）以領取待辦任務。
 
-* *關鍵提醒**：如果通往 APNs 的連線被阻斷（例如被學校防火牆擋下或網路設定錯誤），該環境下的裝置管理功能將會徹底失效。
+* **關鍵提醒**：如果通往 APNs 的連線被阻斷（例如被學校防火牆擋下或網路設定錯誤），該環境下的裝置管理功能將會徹底失效。
 
 ## 白話文比喻
 

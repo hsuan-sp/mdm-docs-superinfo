@@ -13,7 +13,7 @@ title: I heard MDM drains the battery quickly. Is this true?
 
 ## Answer
 
-* *This is a myth. MDM itself consumes very little resources and does not significantly impact battery life. The real battery drainers are typically screen brightness, video streaming, and GPS navigation.**
+* **This is a myth. MDM itself consumes very little resources and does not significantly impact battery life. The real battery drainers are typically screen brightness, video streaming, and GPS navigation.**
 
 Actually, MDM operates in an extremely energy-efficient way.
 
@@ -24,9 +24,9 @@ Actually, MDM operates in an extremely energy-efficient way.
 
 The Jamf Trust app, which handles content filtering and data reporting, also uses very little power:
 
-*    It uses DNS Proxy technology at the system level.
-*    Background processes are highly optimized.
-*    Under**Settings > Battery**, Jamf Trust typically accounts for less than 1% of usage.
+* **It uses DNS Proxy technology at the system level.**
+* **Background processes are highly optimized.**
+* **Under**Settings > Battery**, Jamf Trust typically accounts for less than 1% of usage.
 
 ## The Real Battery Killers:
 

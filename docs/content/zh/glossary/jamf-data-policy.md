@@ -6,7 +6,7 @@ term: Jamf Data Policy
 ---
 ## 術語定義
 
-* *Jamf Data Policy** 是 Jamf 生態系中的**資料外洩防護 (DLP)** 功能，用於監控與攔截敏感資料的流動。
+* **Jamf Data Policy** 是 Jamf 生態系中的**資料外洩防護 (DLP)** 功能，用於監控與攔截敏感資料的流動。
 
 管理員可設定規則來防止：
 

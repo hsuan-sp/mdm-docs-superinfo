@@ -5,7 +5,7 @@ term: Setup Pane Skipping
 ---
 ## Term Definition
 
-* *Setup Pane Skipping**is a configuration feature within**Declarative Device Management (DDM)**that suppresses specific UI interruptions.
+* **Setup Pane Skipping**is a configuration feature within**Declarative Device Management (DDM)**that suppresses specific UI interruptions.
 
 DDM Improvements in macOS Tahoe:
 

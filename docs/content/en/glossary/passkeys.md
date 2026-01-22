@@ -5,7 +5,7 @@ term: Passkeys
 ---
 ## Term Definition
 
-* *Passkeys**are a next-generation authentication standard developed by Apple and the FIDO Alliance to replace traditional passwords.
+* **Passkeys**are a next-generation authentication standard developed by Apple and the FIDO Alliance to replace traditional passwords.
 
 Security advantages:
 

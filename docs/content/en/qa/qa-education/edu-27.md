@@ -13,16 +13,16 @@ title: 'If a school changes MDM providers, is it mandatory to wipe all iPads?'
 
 ## Answer
 
-* *Prior to 2026, the answer was yes. However, with the release of iOS 26 (Tahoe), Apple introduced 'Zero-Wipe MDM Migration.' If specific conditions are met, schools can migrate from Provider A to Provider B without erasing data or re-downloading apps.**
+* **Prior to 2026, the answer was yes. However, with the release of iOS 26 (Tahoe), Apple introduced 'Zero-Wipe MDM Migration.' If specific conditions are met, schools can migrate from Provider A to Provider B without erasing data or re-downloading apps.**
 
 ## Comparison: Traditional vs. Zero-Wipe Migration
 
-| Feature | **Traditional Migration (Legacy)** | **Zero-Wipe Migration (iOS 26+)** |
+| Feature | **Traditional Migration (Legacy)**|**Zero-Wipe Migration (iOS 26+)** |
 | :--- | :--- | :--- |
-| **Data Retention** | All data wiped (must backup). | **Full Retention**(files, settings, apps). |
-| **User Experience** | Must redo the Setup Assistant. | **Silent Background Process**(needs internet). |
-| **Network Impact** | Massive (GBs of app downloads). | **Minimal**(Management permission swap only). |
-| **Time per Device** | 30–60 minutes. | **2–5 minutes**. |
+| **Data Retention**| All data wiped (must backup). |**Full Retention**(files, settings, apps). |
+| **User Experience**| Must redo the Setup Assistant. |**Silent Background Process**(needs internet). |
+| **Network Impact**| Massive (GBs of app downloads). |**Minimal**(Management permission swap only). |
+| **Time per Device**| 30–60 minutes. |**2–5 minutes**. |
 
 ## Requirements for Zero-Wipe Migration
 

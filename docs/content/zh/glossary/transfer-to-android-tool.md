@@ -5,7 +5,7 @@ term: Transfer to Android Tool (移轉至 Android 工具)
 ---
 ## 術語定義
 
-* *Transfer to Android Tool (移轉至 Android 工具)** 是 iOS 26.3 新增的系統工具，旨在簡化使用者從 iPhone 轉換至 Android 裝置的流程。
+* **Transfer to Android Tool (移轉至 Android 工具)** 是 iOS 26.3 新增的系統工具，旨在簡化使用者從 iPhone 轉換至 Android 裝置的流程。
 
 主要功能：
 

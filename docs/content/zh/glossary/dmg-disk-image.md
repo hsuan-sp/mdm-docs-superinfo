@@ -5,7 +5,7 @@ term: DMG (Disk Image)
 ---
 ## 術語定義
 
-* *DMG (Disk Image)** 是 macOS 特有的磁碟映像檔格式。
+* **DMG (Disk Image)** 是 macOS 特有的磁碟映像檔格式。
 
 其特性如下：
 

@@ -5,7 +5,7 @@ term: Accessibility Features
 ---
 ## Term Definition
 
-* *Accessibility Features**are built-in tools across the Apple ecosystem (iOS, iPadOS, macOS, visionOS) designed to assist users with various physical or cognitive needs.
+* **Accessibility Features**are built-in tools across the Apple ecosystem (iOS, iPadOS, macOS, visionOS) designed to assist users with various physical or cognitive needs.
 
 Key tools include:
 

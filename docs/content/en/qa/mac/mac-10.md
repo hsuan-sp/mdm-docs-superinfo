@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-* *Use the "Computer Extension Attributes" feature. This is the core tool in Jamf Pro for expanding database fields and collecting non-standard hardware/software information.**
+* **Use the "Computer Extension Attributes" feature. This is the core tool in Jamf Pro for expanding database fields and collecting non-standard hardware/software information.**
 
 While standard inventory includes specs, OS versions, and app lists, specific needs (such as checking if a config file was tampered with, battery cycle counts, or custom asset tags) require Extension Attributes.
 
@@ -37,9 +37,9 @@ In addition to traditional inventory updates, macOS 26 recommends using the DDM 
 * **Input Type**: Select**Script**.
 * **Data Type**: String, Integer, or Date. This affects Smart Group logic (e.g., "greater than/less than" vs. "contains").
 
-4. **Write Script**:
+1. **Write Script**:
 
-*    Paste your Shell Script in the editor.
+* **Paste your Shell Script in the editor.**
 * **Crucial Syntax**: Jamf Pro only reads values enclosed in `<result>`and`</result>`tags. Any other`echo` output will only appear in debug logs and won't be written to the database.
 
 ## Practical Example: Collecting "System Uptime Days"

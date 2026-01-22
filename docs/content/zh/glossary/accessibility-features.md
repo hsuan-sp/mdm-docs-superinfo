@@ -5,7 +5,7 @@ term: Accessibility Features (輔助使用功能)
 ---
 ## 術語定義
 
-* *Accessibility Features (輔助使用功能)** 是 Apple 生態系統（iOS、iPadOS、macOS、visionOS）中內建的一系列無障礙工具，旨在協助具有各種生理或認知需求的使用者順暢地操作。
+* **Accessibility Features (輔助使用功能)** 是 Apple 生態系統（iOS、iPadOS、macOS、visionOS）中內建的一系列無障礙工具，旨在協助具有各種生理或認知需求的使用者順暢地操作。
 
 關鍵工具包括：
 

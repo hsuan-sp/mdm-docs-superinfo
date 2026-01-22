@@ -6,7 +6,7 @@ term: Bonjour
 ---
 ## Term Definition
 
-* *Bonjour**is Apple’s implementation of**Zero Configuration Networking (zeroconf)**. It enables devices to discover services on a local network without manual setup.
+* **Bonjour**is Apple’s implementation of**Zero Configuration Networking (zeroconf)**. It enables devices to discover services on a local network without manual setup.
 
 Common use cases in schools:
 

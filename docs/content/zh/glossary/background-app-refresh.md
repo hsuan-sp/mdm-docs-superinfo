@@ -5,7 +5,7 @@ term: Background App Refresh（背景 App 重新整理）
 ---
 ## 術語定義
 
-* *Background App Refresh (背景 App 重新整理)** 允許應用程式在待機或未主動使用的狀態下，定期抓取新內容與更新。
+* **Background App Refresh (背景 App 重新整理)** 允許應用程式在待機或未主動使用的狀態下，定期抓取新內容與更新。
 
 MDM 管理層面：
 

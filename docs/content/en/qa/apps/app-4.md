@@ -14,7 +14,7 @@ title: What details should we keep in mind when 'purchasing' free apps in bulk?
 
 ## Answer
 
-* *In the Apple ecosystem, even $0 free apps must go through the "Purchase" workflow in Apple School Manager (ASM) to be authorized for school distribution.**
+* **In the Apple ecosystem, even $0 free apps must go through the "Purchase" workflow in Apple School Manager (ASM) to be authorized for school distribution.**
 
 ## Key Details to Consider:
 
@@ -24,11 +24,11 @@ title: What details should we keep in mind when 'purchasing' free apps in bulk?
 
 2. **Sync Lag**:
 
-*    After hitting "Get" in ASM, the licenses don't appear in Jamf Pro instantly. There is usually a**2-10 minute synchronization delay**between Apple’s servers and your MDM dashboard.
+* **After hitting "Get" in ASM, the licenses don't appear in Jamf Pro instantly. There is usually a**2-10 minute synchronization delay**between Apple’s servers and your MDM dashboard.
 
-3. **Purchase Quantity**:
+1. **Purchase Quantity**:
 
-*    Since the licenses are free, we recommend "purchasing" a quantity that far exceeds your current needs (e.g., if you have 500 iPads, buy 2,000 licenses). This prevents deployment failures if you add more devices later.
+* **Since the licenses are free, we recommend "purchasing" a quantity that far exceeds your current needs (e.g., if you have 500 iPads, buy 2,000 licenses). This prevents deployment failures if you add more devices later.**
 
 ## Troubleshooting Tip:
 

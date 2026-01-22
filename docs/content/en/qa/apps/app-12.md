@@ -13,7 +13,7 @@ title: Can paid app licenses be shared between different schools? (Cross-school 
 
 ## Answer
 
-* *Yes. This is achieved through 'Location' management within Apple School Manager (ASM).**
+* **Yes. This is achieved through 'Location' management within Apple School Manager (ASM).**
 
 This is highly effective for centralized procurement by a school district or a main campus.
 

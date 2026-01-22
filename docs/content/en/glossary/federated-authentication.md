@@ -5,7 +5,7 @@ term: Federated Authentication
 ---
 ## Term Definition
 
-* *Federated Authentication**is an identity bridge that connects Apple Business/School Manager to an external**Identity Provider (IdP)**.
+* **Federated Authentication**is an identity bridge that connects Apple Business/School Manager to an external**Identity Provider (IdP)**.
 
 Supported Providers:
 

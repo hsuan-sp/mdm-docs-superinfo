@@ -5,7 +5,7 @@ term: OIDC (OpenID Connect)
 ---
 ## Term Definition
 
-* *OpenID Connect (OIDC)**is a modern identity authentication protocol built on top of the OAuth 2.0 framework.
+* **OpenID Connect (OIDC)**is a modern identity authentication protocol built on top of the OAuth 2.0 framework.
 
 Key features:
 

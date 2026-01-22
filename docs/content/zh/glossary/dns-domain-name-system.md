@@ -5,7 +5,7 @@ term: DNS (Domain Name System)
 ---
 ## 術語定義
 
-* *DNS (Domain Name System)** 是網際網路的電話簿服務。
+* **DNS (Domain Name System)** 是網際網路的電話簿服務。
 
 其功能是將人類容易記憶的 **網址**（如 `apple.com`）翻譯成電腦看得懂的 **IP 位址**（如 `17.253.144.10`）。
 

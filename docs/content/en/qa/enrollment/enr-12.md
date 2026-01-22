@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-* *'Shared iPad' is an Apple feature designed for non-1:1 environments. It allows multiple students to sign in to the same iPad using their 'Managed Apple Accounts' while maintaining independent workspaces.**
+* **'Shared iPad' is an Apple feature designed for non-1:1 environments. It allows multiple students to sign in to the same iPad using their 'Managed Apple Accounts' while maintaining independent workspaces.**
 
 This solves the problem of student data (Safari history, projects, etc.) getting mixed up when sharing devices.
 
@@ -33,7 +33,7 @@ This solves the problem of student data (Safari history, projects, etc.) getting
 
 * **Storage Tip**: While iPadOS supports "Dynamic Quota," we recommend no more than 3 users for 64GB models. Larger models (128GB+) can accommodate more users.
 
-4. **Wipe and Re-enroll**: If the device is not currently in Shared Mode, you**must wipe the device**and re-enroll it via the updated PreStage profile for the feature to take effect.
+1. **Wipe and Re-enroll**: If the device is not currently in Shared Mode, you**must wipe the device**and re-enroll it via the updated PreStage profile for the feature to take effect.
 
 ## Pros and Cons:
 

@@ -5,7 +5,7 @@ term: App Config (App Configuration)
 ---
 ## Term Definition
 
-* *App Configuration**(Managed App Config) allows MDM to inject specific settings directly into an application during its deployment.
+* **App Configuration**(Managed App Config) allows MDM to inject specific settings directly into an application during its deployment.
 
 The benefits include:
 

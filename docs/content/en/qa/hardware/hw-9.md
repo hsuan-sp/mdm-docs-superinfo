@@ -14,7 +14,7 @@ title: The Smart or Magic Keyboard is not responding. How do I troubleshoot it?
 
 ## Answer
 
-* *Keyboard failures typically stem from model incompatibility, oxidized contacts, or physical misalignment of the magnets. Since original Apple keyboards do not require Bluetooth pairing, if cleaning doesn't work, it usually involves a hardware circuit failure.**
+* **Keyboard failures typically stem from model incompatibility, oxidized contacts, or physical misalignment of the magnets. Since original Apple keyboards do not require Bluetooth pairing, if cleaning doesn't work, it usually involves a hardware circuit failure.**
 
 In a 2026 classroom environment where iPad 9th, 10th, and 11th generations coexist, the keyboard structures are not always interchangeable. Follow these professional steps to troubleshoot:
 
@@ -42,8 +42,8 @@ In a 2026 classroom environment where iPad 9th, 10th, and 11th generations coexi
 ## Phase 4: Administrator Cross-Testing
 
 * **Cross-Validation**: Try a known-working keyboard of the same model with the iPad.
-*    If it still doesn't work, the**iPad's internal Smart Connector IC**is likely at fault.
-*    If it works with a different keyboard, the**internal ribbon cable**of the original keyboard is likely broken (common at the hinge).
+* **If it still doesn't work, the**iPad's internal Smart Connector IC**is likely at fault.
+* **If it works with a different keyboard, the**internal ribbon cable**of the original keyboard is likely broken (common at the hinge).
 * **Repair Reminder**: Apple keyboards are covered under the project's hardware warranty. If there are no signs of accidental damage (like spills or tears) before the 2026 warranty expires, contact your vendor for a replacement.
 
 ## Practical Advice:

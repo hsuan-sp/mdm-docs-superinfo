@@ -13,7 +13,7 @@ title: How do I prevent students from entering Recovery Mode to format the compu
 
 ## Answer
 
-* *The protection mechanism differs depending on the Mac architecture: Intel-based Macs require a 'Firmware Password,' while Apple Silicon (M-series) Macs require a 'Recovery Lock.' Both can be deployed via Jamf Pro.**
+* **The protection mechanism differs depending on the Mac architecture: Intel-based Macs require a 'Firmware Password,' while Apple Silicon (M-series) Macs require a 'Recovery Lock.' Both can be deployed via Jamf Pro.**
 
 Recovery Mode is powerful. If left unprotected, anyone with physical access can "Erase Disk" or "Reinstall OS" to bypass school management.
 
@@ -21,8 +21,8 @@ Recovery Mode is powerful. If left unprotected, anyone with physical access can 
 
 | Architecture | Protection Mechanism | Deployment Method |
 | :--- | :--- | :--- |
-| **Apple Silicon (M1-M5)** | **Recovery Lock** | Configured via**MDM Remote Command**only |
-| **Intel Mac** | **Firmware Password** | Configured via**Configuration Profile**or Command |
+| **Apple Silicon (M1-M5)**|**Recovery Lock** | Configured via**MDM Remote Command**only |
+| **Intel Mac**|**Firmware Password** | Configured via**Configuration Profile**or Command |
 
 ## 1. Recovery Lock (For Apple Silicon)
 

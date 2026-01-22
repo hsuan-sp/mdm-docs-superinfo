@@ -5,7 +5,7 @@ term: Federated Authentication (聯合驗證)
 ---
 ## 術語定義
 
-* *Federated Authentication (聯合驗證)** 是一種連接 Apple Business/School Manager 與外部**身分識別提供者 (IdP)** 的身分整合機制。
+* **Federated Authentication (聯合驗證)** 是一種連接 Apple Business/School Manager 與外部**身分識別提供者 (IdP)** 的身分整合機制。
 
 支援的服務包括 **Microsoft Entra ID (Azure AD)**與**Google Workspace**。
 

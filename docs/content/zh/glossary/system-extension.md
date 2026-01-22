@@ -5,7 +5,7 @@ term: System Extension
 ---
 ## 術語定義
 
-* *System Extension (系統擴充功能)** 是 macOS 的現代化框架，允許軟體在不危及系統穩定性的前提下，擴充作業系統的功能。
+* **System Extension (系統擴充功能)** 是 macOS 的現代化框架，允許軟體在不危及系統穩定性的前提下，擴充作業系統的功能。
 
 與舊式 Kernel Extensions (Kexts) 的比較：
 

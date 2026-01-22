@@ -6,7 +6,7 @@ term: WPA / WPA2 / WPA3
 ---
 ## 術語定義
 
-* *WPA / WPA 2 / WPA 3** 是 Wi-Fi 網路的安全加密標準系列。
+* **WPA / WPA 2 / WPA 3** 是 Wi-Fi 網路的安全加密標準系列。
 
 等級區分：
 

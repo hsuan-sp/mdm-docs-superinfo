@@ -6,7 +6,7 @@ term: Jamf Pro
 ---
 ## Term Definition
 
-* *Jamf Pro**is an enterprise-grade Apple device management (MDM) solution, considered the flagship of the Jamf ecosystem.
+* **Jamf Pro**is an enterprise-grade Apple device management (MDM) solution, considered the flagship of the Jamf ecosystem.
 
 Distinguishing features:
 

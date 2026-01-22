@@ -6,7 +6,7 @@ term: User Approved MDM（使用者核准的 MDM）
 ---
 ## 術語定義
 
-* *User Approved MDM (UAMDM)**，即**使用者核准的 MDM**，是 macOS 的一項高信任級別狀態。
+* **User Approved MDM (UAMDM)**，即**使用者核准的 MDM**，是 macOS 的一項高信任級別狀態。
 
 區別：
 

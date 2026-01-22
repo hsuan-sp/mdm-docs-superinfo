@@ -6,7 +6,7 @@ term: Jamf Student
 ---
 ## Term Definition
 
-* *Jamf Student**is a dedicated companion application for student iPads that facilitates a managed learning environment.
+* **Jamf Student**is a dedicated companion application for student iPads that facilitates a managed learning environment.
 
 Key functions:
 

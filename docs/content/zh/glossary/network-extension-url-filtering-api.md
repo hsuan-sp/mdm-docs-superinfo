@@ -5,7 +5,7 @@ term: Network Extension URL Filtering API (網路擴充功能 URL 過濾 API)
 ---
 ## 術語定義
 
-* *Network Extension URL Filtering API** 是 Apple 在 macOS 與 iOS 引入的現代化網路過濾架構。
+* **Network Extension URL Filtering API** 是 Apple 在 macOS 與 iOS 引入的現代化網路過濾架構。
 
 它的特性包括：
 

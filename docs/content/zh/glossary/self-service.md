@@ -6,7 +6,7 @@ term: Self Service
 ---
 ## 術語定義
 
-* *Self Service (自助服務)** 是 Jamf Pro 提供的一個專屬 App 傳送門，扮演著企業內部的「App Store」角色。
+* **Self Service (自助服務)** 是 Jamf Pro 提供的一個專屬 App 傳送門，扮演著企業內部的「App Store」角色。
 
 它的優點：
 

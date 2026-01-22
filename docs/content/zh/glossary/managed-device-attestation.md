@@ -5,7 +5,7 @@ term: Managed Device Attestation
 ---
 ## 術語定義
 
-* *Managed Device Attestation (管理式裝置證明)** 是一種高規格的資安驗證機制，用於確認裝置的身分與完整性。
+* **Managed Device Attestation (管理式裝置證明)** 是一種高規格的資安驗證機制，用於確認裝置的身分與完整性。
 
 運作原理：
 

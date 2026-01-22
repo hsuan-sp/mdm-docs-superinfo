@@ -14,7 +14,7 @@ title: Can I clean the iPad screen with alcohol? Is there a risk of damage?
 
 ## Answer
 
-* *Yes, Apple explicitly allows the use of specific alcohol concentrations to clean iPads. According to the latest official guidelines, you can use 70% Isopropyl Alcohol, 75% Ethyl Alcohol, or disinfectant wipes on the hard, non-porous surfaces of the device.**
+* **Yes, Apple explicitly allows the use of specific alcohol concentrations to clean iPads. According to the latest official guidelines, you can use 70% Isopropyl Alcohol, 75% Ethyl Alcohol, or disinfectant wipes on the hard, non-porous surfaces of the device.**
 
 In a classroom environment with multiple users, a proper disinfection routine is essential. Here is the Standard Operating Procedure (SOP) based on Apple's recommendations:
 
@@ -25,13 +25,7 @@ In a classroom environment with multiple users, a proper disinfection routine is
 * **Clorox Disinfecting Wipes.**
 * **A soft, lint-free microfiber cloth dampened with water**(for basic cleaning only).
 
-## 2. Prohibited Substances & Tools:
-
-*❌**Bleach**or products containing**Hydrogen Peroxide**.
-*❌**Window cleaners or household detergents**.
-*❌**Aerosols, solvents, or abrasives**.
-*❌**Compressed air**sprayed directly into openings (can damage microphone or speaker membranes).
-*❌**Rough fabrics, paper towels, or napkins**(may cause micro-scratches).
+## 2. Prohibited Substances & Tools: **❌** Bleach**or products containing**Hydrogen Peroxide**. **❌** Window cleaners or household detergents**. **❌** Aerosols, solvents, or abrasives**. **❌** Compressed air**sprayed directly into openings (can damage microphone or speaker membranes). **❌** Rough fabrics, paper towels, or napkins**(may cause micro-scratches).
 
 ## 3. Standard Cleaning Steps:
 

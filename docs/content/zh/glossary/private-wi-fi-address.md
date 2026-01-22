@@ -6,7 +6,7 @@ term: Private Wi-Fi Address (私有 Wi-Fi 位址)
 ---
 ## 術語定義
 
-* *Private Wi-Fi Address (私有 Wi-Fi 位址)** 是 iOS 與 macOS 為了保護隱私而設計的一項功能。
+* **Private Wi-Fi Address (私有 Wi-Fi 位址)** 是 iOS 與 macOS 為了保護隱私而設計的一項功能。
 
 它的特性包括：
 

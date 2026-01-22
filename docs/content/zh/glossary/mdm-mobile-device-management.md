@@ -5,7 +5,7 @@ term: MDM (Mobile Device Management)
 ---
 ## 術語定義
 
-* *Mobile Device Management (MDM)** 是管理組織內 Apple 裝置的標準技術架構。
+* **Mobile Device Management (MDM)** 是管理組織內 Apple 裝置的標準技術架構。
 
 核心能力：
 

@@ -6,7 +6,7 @@ term: Managed Classes
 ---
 ## Term Definition
 
-* *Managed Classes**are pedagogical groupings defined within the MDM or synchronized from Apple School Manager.
+* **Managed Classes**are pedagogical groupings defined within the MDM or synchronized from Apple School Manager.
 
 Data structure includes:
 

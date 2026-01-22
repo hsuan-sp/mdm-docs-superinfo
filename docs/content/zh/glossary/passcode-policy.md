@@ -6,7 +6,7 @@ term: Passcode Policy（密碼原則）
 ---
 ## 術語定義
 
-* *Passcode Policy (密碼原則)** 是企業或學校透過 MDM 強制執行的一套密碼設定規範。
+* **Passcode Policy (密碼原則)** 是企業或學校透過 MDM 強制執行的一套密碼設定規範。
 
 它的特性包括：
 

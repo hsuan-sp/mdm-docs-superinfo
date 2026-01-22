@@ -5,7 +5,7 @@ term: DNS over HTTPS/TLS (DoH/DoT)
 ---
 ## Term Definition
 
-* *DNS over HTTPS (DoH)**and**DNS over TLS (DoT)**are encrypted protocols designed to secure the "last mile" of a DNS query between a device and a DNS resolver.
+* **DNS over HTTPS (DoH)**and**DNS over TLS (DoT)**are encrypted protocols designed to secure the "last mile" of a DNS query between a device and a DNS resolver.
 
 Technical details:
 
@@ -21,4 +21,4 @@ While beneficial for privacy, DoH can be used to bypass school content filters. 
 
 Traditional DNS is like a**"Postcard"**—anyone handling the mail (like the ISP or a hacker on public Wi-Fi) can easily see exactly which website you are looking for.
 
-* *DoH/DoT**is like placing that same request inside a**"Sealed Security Envelope."**The people handling the mail know you sent a message, but they have no way of knowing exactly which "address" you are looking for inside the envelope.
+* **DoH/DoT**is like placing that same request inside a**"Sealed Security Envelope."**The people handling the mail know you sent a message, but they have no way of knowing exactly which "address" you are looking for inside the envelope.

@@ -5,7 +5,7 @@ term: Lost Mode
 ---
 ## Term Definition
 
-* *Lost Mode**is a powerful recovery protocol available for supervised iOS and iPadOS devices.
+* **Lost Mode**is a powerful recovery protocol available for supervised iOS and iPadOS devices.
 
 When activated by IT:
 

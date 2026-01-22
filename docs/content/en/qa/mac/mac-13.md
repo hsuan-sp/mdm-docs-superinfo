@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-* *This is governed by macOS TCC (Transparency, Consent, and Control) privacy mechanisms. For 'Screen Recording,' 'Microphone,' and 'Camera,' Apple mandates that the user must 'personally click to allow.'**
+* **This is governed by macOS TCC (Transparency, Consent, and Control) privacy mechanisms. For 'Screen Recording,' 'Microphone,' and 'Camera,' Apple mandates that the user must 'personally click to allow.'**
 
 MDM cannot forcibly "turn on" these permissions. However, you can use a**PPPC (Privacy Preferences Policy Control)**profile in Jamf Pro to authorize "Standard Users" (teachers) to approve these requests without needing an administrator password.
 
@@ -39,7 +39,7 @@ MDM cannot forcibly "turn on" these permissions. However, you can use a**PPPC (P
 * **Setting**: Set `Screen Recording` to**Allow Standard Users to allow access**.
 * **Result**: When the teacher clicks allow, the system**no longer asks for an admin password**.
 
-2. **Silent Authorization**
+1. **Silent Authorization**
 
  For specialized tools, set**Accessibility**to**Allow**to reduce pop-up fatigue for your users.
 
@@ -47,4 +47,4 @@ MDM cannot forcibly "turn on" these permissions. However, you can use a**PPPC (P
 
 If your PPPC profile isn't working, check your**Bundle ID**and**Code Requirement**. Use the "PPPC Utility" (free open-source tool) to generate exact signature codes for Jamf Pro.
 
-* *Note**: macOS 26 has increased the frequency of "Screen Recording" persistence notifications. Even when authorized, the system will occasionally remind users that an app is observing the screen. Inform staff that this is a normal security feature.
+* **Note**: macOS 26 has increased the frequency of "Screen Recording" persistence notifications. Even when authorized, the system will occasionally remind users that an app is observing the screen. Inform staff that this is a normal security feature.

@@ -5,7 +5,7 @@ term: AirPrint
 ---
 ## Term Definition
 
-* *AirPrint**is Apple’s driverless printing technology. It allows Apple devices to print directly to supported printers on the same local network.
+* **AirPrint**is Apple’s driverless printing technology. It allows Apple devices to print directly to supported printers on the same local network.
 
 Key advantages for IT:
 

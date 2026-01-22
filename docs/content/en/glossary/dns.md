@@ -5,7 +5,7 @@ term: DNS (Domain Name System)
 ---
 ## Term Definition
 
-* *DNS**is the foundational "Address Book" of the internet that translates human-readable domain names into numeric IP addresses.
+* **DNS**is the foundational "Address Book" of the internet that translates human-readable domain names into numeric IP addresses.
 
 Functional roles:
 

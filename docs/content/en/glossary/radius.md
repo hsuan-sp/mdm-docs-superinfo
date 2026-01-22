@@ -5,7 +5,7 @@ term: RADIUS
 ---
 ## Term Definition
 
-* *RADIUS**(Remote Authentication Dial-In User Service) is a networking protocol that enables centralized Authentication, Authorization, and Accounting (AAA).
+* **RADIUS**(Remote Authentication Dial-In User Service) is a networking protocol that enables centralized Authentication, Authorization, and Accounting (AAA).
 
 Use cases in education:
 

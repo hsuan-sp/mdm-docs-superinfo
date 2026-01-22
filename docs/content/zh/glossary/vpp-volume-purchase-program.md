@@ -5,7 +5,7 @@ term: VPP (Volume Purchase Program)
 ---
 ## 術語定義
 
-* *VPP (Volume Purchase Program)**，是 Apple 用於大量採購與分發 App 和書籍的授權架構（現已整合至**Apple School Manager** 的「App 與書籍」功能中）。
+* **VPP (Volume Purchase Program)**，是 Apple 用於大量採購與分發 App 和書籍的授權架構（現已整合至**Apple School Manager** 的「App 與書籍」功能中）。
 
 運作機制：
 

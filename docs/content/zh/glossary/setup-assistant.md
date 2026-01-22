@@ -5,7 +5,7 @@ term: Setup Assistant
 ---
 ## 術語定義
 
-* *Setup Assistant (設定輔助程式)** 是 Apple 裝置首次開機（從「Hello」畫面開始）時出現的初始設定精靈。
+* **Setup Assistant (設定輔助程式)** 是 Apple 裝置首次開機（從「Hello」畫面開始）時出現的初始設定精靈。
 
 MDM 客製化功能：
 

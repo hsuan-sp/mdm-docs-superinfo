@@ -5,7 +5,7 @@ term: ADE (Automated Device Enrollment)
 ---
 ## 術語定義
 
-* *Automated Device Enrollment (ADE)** 是大規模部署 Apple 裝置的黃金標準（前身為**DEP**）。
+* **Automated Device Enrollment (ADE)** 是大規模部署 Apple 裝置的黃金標準（前身為**DEP**）。
 
 運作流程包括：
 

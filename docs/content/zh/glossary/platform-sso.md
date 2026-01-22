@@ -6,7 +6,7 @@ term: Platform SSO (平台單一登入)
 ---
 ## 術語定義
 
-* *Platform SSO (平台單一登入)** 是 macOS 13 Ventura 引入的現代化身分驗證架構。
+* **Platform SSO (平台單一登入)** 是 macOS 13 Ventura 引入的現代化身分驗證架構。
 
 它的特性包括：
 

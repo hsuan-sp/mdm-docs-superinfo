@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-* *User Enrollment is a privacy-first management mode specifically designed for "Bring Your Own Device" (BYOD) scenarios.**
+* **User Enrollment is a privacy-first management mode specifically designed for "Bring Your Own Device" (BYOD) scenarios.**
 
 Unlike standard Enrollment used for school-owned iPads, User Enrollment (User-Driven) creates a**secure partition**on the device to separate school data from the student's personal photos, messages, and apps.
 
@@ -25,10 +25,10 @@ Unlike standard Enrollment used for school-owned iPads, User Enrollment (User-Dr
 | :--- | :--- | :--- |
 | **Ownership** | Institutional Asset | Personal Property |
 | **Supervision** | Mandatory (Supervised) | Prohibited |
-| **Data Isolation** | Full Device control | **Managed Data Partition only** |
-| **Privacy Protection** | Standard school visibility | **Strict User Privacy**(IT cannot see personal apps or location) |
-| **Remote Wipe** | Wipes the entire device | **Wipes school data only**(Personal photos remain safe) |
-| **Removal** | Can be prevented by IT | **User can opt-out anytime** |
+| **Data Isolation**| Full Device control |**Managed Data Partition only** |
+| **Privacy Protection**| Standard school visibility |**Strict User Privacy**(IT cannot see personal apps or location) |
+| **Remote Wipe**| Wipes the entire device |**Wipes school data only**(Personal photos remain safe) |
+| **Removal**| Can be prevented by IT |**User can opt-out anytime** |
 
 ## Modern Approach (Account-Driven):
 

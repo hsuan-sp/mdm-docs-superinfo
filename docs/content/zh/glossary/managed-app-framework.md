@@ -5,7 +5,7 @@ term: Managed App Framework (管理式 App 框架)
 ---
 ## 術語定義
 
-* *Managed App Framework**(於 WWDC 2025 發表) 是傳統「受管理應用程式配置 (Managed App Configuration)」標準的現代化接班人。
+* **Managed App Framework**(於 WWDC 2025 發表) 是傳統「受管理應用程式配置 (Managed App Configuration)」標準的現代化接班人。
 
 其核心能力包括：
 

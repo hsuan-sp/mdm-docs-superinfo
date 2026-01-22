@@ -13,12 +13,12 @@ title: 我們學校有使用 Google Workspace / Microsoft 365，可以用這些�
 
 ## Answer
 
-* *可以，這稱為「聯合驗證 (Federated Authentication)」，能讓師生使用學校現有的 Google 或 Microsoft 帳號登入 Apple 服務。**
+* **可以，這稱為「聯合驗證 (Federated Authentication)」，能讓師生使用學校現有的 Google 或 Microsoft 帳號登入 Apple 服務。**
 
 聯合驗證是 Apple 校務管理 (ASM) 的核心整合功能，
 讓學校可以將 Google Workspace 或 Microsoft Entra ID 的帳號系統與「管理式 Apple 帳號」串接。
 
-* *優點**：
+* **優點**：
 
 * **免背新密碼**：師生只需記住原有的 Google/Microsoft 帳號密碼，
 
@@ -33,7 +33,7 @@ title: 我們學校有使用 Google Workspace / Microsoft 365，可以用這些�
 
  使用者在 Mac 登入畫面輸入組織帳號後，即可同時完成系統與所有 Apple 服務的授權，實現極佳的使用者體驗。
 
-* *設定需求（需 IT 管理員操作）**：
+* **設定需求（需 IT 管理員操作）**：
 
 1. **網域驗證**：在 ASM 中新增學校的 Email 網域（如 @school.edu.tw），
 
@@ -51,7 +51,7 @@ title: 我們學校有使用 Google Workspace / Microsoft 365，可以用這些�
 
  Apple 會提供 60 天的寬限期供使用者變更個人帳號的 Email。
 
-* *注意事項**：
+* **注意事項**：
 
 * **單一來源**：每個網域僅能關聯一個身分提供者（Google 或 Microsoft 擇一）。
 * **網路依賴**：由於密碼是向 Google/Microsoft 驗證，
@@ -62,7 +62,7 @@ title: 我們學校有使用 Google Workspace / Microsoft 365，可以用這些�
 
  以確保具備正確的權限。
 
-* *適用情境**：
+* **適用情境**：
 
 特別適合已全面使用 Google Classroom 或 Microsoft Teams 的學校，
 可達成「一組帳號走遍校園」的目標，大幅減輕 IT 負擔。

@@ -14,7 +14,7 @@ title: >-
 
 ## Answer
 
-* *Yes. Shared iPad supports 'Guest Sessions', allowing users to log in without an account.**
+* **Yes. Shared iPad supports 'Guest Sessions', allowing users to log in without an account.**
 
 ## Features and Limitations:
 
@@ -24,8 +24,8 @@ title: >-
 
 ## Use Cases:
 
-*    Public kiosks in the library.
-*    Temporary sessions for younger students who haven't yet received Managed Apple Accounts.
+* **Public kiosks in the library.**
+* **Temporary sessions for younger students who haven't yet received Managed Apple Accounts.**
 
 ## Configuration:
 

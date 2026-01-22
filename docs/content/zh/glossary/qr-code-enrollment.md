@@ -5,7 +5,7 @@ term: QR Code Enrollment
 ---
 ## 術語定義
 
-* *QR Code Enrollment (QR Code 註冊)** 是一種簡化的裝置註冊方式，專為行動裝置 (iPad/iOS) 設計。
+* **QR Code Enrollment (QR Code 註冊)** 是一種簡化的裝置註冊方式，專為行動裝置 (iPad/iOS) 設計。
 
 它的流程包括：
 

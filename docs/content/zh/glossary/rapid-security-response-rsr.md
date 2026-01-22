@@ -5,7 +5,7 @@ term: Rapid Security Response (RSR)
 ---
 ## 術語定義
 
-* *Rapid Security Response (RSR / 快速安全回應)** 是 Apple 設計的一種敏捷更新機制，專門用來修補緊急的安全漏洞。
+* **Rapid Security Response (RSR / 快速安全回應)** 是 Apple 設計的一種敏捷更新機制，專門用來修補緊急的安全漏洞。
 
 它與一般更新的不同之處：
 

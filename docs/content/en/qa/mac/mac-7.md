@@ -13,7 +13,7 @@ title: What special restrictions apply to managing Apple Silicon (M-series) Macs
 
 ## Answer
 
-* *The security architecture of Apple Silicon (M1-M5) is fundamentally different from Intel Macs. The core of management lies in the "Bootstrap Token" and "Volume Ownership."**
+* **The security architecture of Apple Silicon (M1-M5) is fundamentally different from Intel Macs. The core of management lies in the "Bootstrap Token" and "Volume Ownership."**
 
 Without proper configuration, MDM will be unable to perform software updates or install kernel plugins.
 
@@ -27,11 +27,12 @@ Without proper configuration, MDM will be unable to perform software updates or 
 
 ## 2. Volume Ownership
 
-*    Only users designated as "Owners" can perform system resets or updates.
-*    The first account created through ADE Enrollment automatically gains ownership. MDM escorts this privilege via the Bootstrap Token.
+* **Only users designated as "Owners" can perform system resets or updates.**
+* **The first account created through ADE Enrollment automatically gains ownership. MDM escorts this privilege via the Bootstrap Token.**
 
 ## 3. Kernel Extensions (KEXTs)
 
-*    Apple Silicon**blocks**all third-party KEXTs by default.
-*    If they must be installed (e.g., for older antivirus software), the device must be rebooted into Recovery Mode to lower the security setting to "Reduced Security."
+* **Apple Silicon**blocks**all third-party KEXTs by default.
+
+* **If they must be installed (e.g., for older antivirus software), the device must be rebooted into Recovery Mode to lower the security setting to "Reduced Security."**
 * **Modern Recommendation**: Use**System Extensions**instead. This is Apple's recommended architecture, which can be authorized directly via MDM configuration profiles without lowering system security.

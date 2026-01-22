@@ -5,7 +5,7 @@ term: Volume Owner
 ---
 ## 術語定義
 
-* *Volume Owner (磁碟擁有者)** 是 Apple Silicon Mac 架構中特有的一種高權限安全角色。
+* **Volume Owner (磁碟擁有者)** 是 Apple Silicon Mac 架構中特有的一種高權限安全角色。
 
 權限與特性：
 

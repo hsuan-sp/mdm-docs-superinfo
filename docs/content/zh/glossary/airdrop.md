@@ -5,7 +5,7 @@ term: AirDrop
 ---
 ## 術語定義
 
-* *AirDrop** 是 Apple 專有的點對點（peer-to-peer）無線檔案分享服務。它利用**藍牙**進行裝置偵測，並建立高速的**Wi-Fi 直連 (Wi-Fi Direct)** 進行實際的資料傳輸。
+* **AirDrop** 是 Apple 專有的點對點（peer-to-peer）無線檔案分享服務。它利用**藍牙**進行裝置偵測，並建立高速的**Wi-Fi 直連 (Wi-Fi Direct)** 進行實際的資料傳輸。
 
 管理上的考量事項：
 

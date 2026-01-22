@@ -6,7 +6,7 @@ term: Universal Control（通用控制）
 ---
 ## 術語定義
 
-* *Universal Control (通用控制)** 是 Apple 的一項「接續互通」功能，允許使用者使用**單一組** 鍵盤與滑鼠，同時操控多台鄰近的 Apple 裝置。
+* **Universal Control (通用控制)** 是 Apple 的一項「接續互通」功能，允許使用者使用**單一組** 鍵盤與滑鼠，同時操控多台鄰近的 Apple 裝置。
 
 功能亮點：
 

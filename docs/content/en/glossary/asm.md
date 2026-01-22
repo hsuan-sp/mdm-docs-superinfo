@@ -5,7 +5,7 @@ term: ASM (Apple School Manager)
 ---
 ## Term Definition
 
-* *Apple School Manager (ASM)**is the centralized web portal for education administrators to manage people, devices, and content.
+* **Apple School Manager (ASM)**is the centralized web portal for education administrators to manage people, devices, and content.
 
 It serves as the foundation for modern digital education:
 

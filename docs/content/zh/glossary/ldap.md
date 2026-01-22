@@ -5,7 +5,7 @@ term: LDAP
 ---
 ## 術語定義
 
-* *Lightweight Directory Access Protocol (LDAP)** 是一種開放標準的網路協定，用於存取和維護分散式目錄資訊服務。
+* **Lightweight Directory Access Protocol (LDAP)** 是一種開放標準的網路協定，用於存取和維護分散式目錄資訊服務。
 
 在 MDM 管理中的常見應用包括：
 

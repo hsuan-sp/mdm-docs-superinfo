@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-* *'Return to Service' is a command feature introduced by Apple in iOS 17. It allows a device to automatically bypass the initial setup screens, connect to Wi-Fi, and re-enroll after a remote wipe.**
+* **'Return to Service' is a command feature introduced by Apple in iOS 17. It allows a device to automatically bypass the initial setup screens, connect to Wi-Fi, and re-enroll after a remote wipe.**
 
 This feature eliminates the need for technicians to manually select language, region, and Wi-Fi settings after a device is cleared.
 

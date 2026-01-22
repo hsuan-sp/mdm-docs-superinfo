@@ -12,7 +12,7 @@ title: How can a teacher 'Log Out' all students from Shared iPads after class?
 
 ## Answer
 
-* *When using 'Shared iPad' deployments, teachers should trigger a 'Log Out' action at the end of class to prepare the devices for the next group of users.**
+* **When using 'Shared iPad' deployments, teachers should trigger a 'Log Out' action at the end of class to prepare the devices for the next group of users.**
 
 ## How to Operate:
 
@@ -22,8 +22,8 @@ In the**Classroom**app, tap**End Class**in the top left and confirm**Log Out Stu
 
 ## 1. Session Termination
 
-*    The log-out command forces the device back to the login screen.
-*    This prevents upcoming users from accessing the previous student's app windows or local drafts, ensuring data privacy.
+* **The log-out command forces the device back to the login screen.**
+* **This prevents upcoming users from accessing the previous student's app windows or local drafts, ensuring data privacy.**
 
 ## 2. Intelligent Caching
 
@@ -34,7 +34,8 @@ In the**Classroom**app, tap**End Class**in the top left and confirm**Log Out Stu
 ## 3. Cloud Sync
 
 * **Correction**: Syncing data happens continuously in the background; it is**not**triggered by the log-out action itself.
-*    Even if the network is unstable during log-out, data remains safely cached locally. Once the device is connected to Wi-Fi and idle, the system automatically completes the iCloud upload.
+
+* **Even if the network is unstable during log-out, data remains safely cached locally. Once the device is connected to Wi-Fi and idle, the system automatically completes the iCloud upload.**
 
 ## Practical Advice:
 

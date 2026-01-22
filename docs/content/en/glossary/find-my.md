@@ -6,7 +6,7 @@ term: Find My
 ---
 ## Term Definition
 
-* *Find My**is Apple’s distributed tracking and recovery network for hardware and accessories.
+* **Find My**is Apple’s distributed tracking and recovery network for hardware and accessories.
 
 Organizational capabilities:
 

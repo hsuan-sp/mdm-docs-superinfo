@@ -5,7 +5,7 @@ term: Managed Open In
 ---
 ## 術語定義
 
-* *Managed Open In (管理式開啟)** 是 iOS 與 iPadOS 內建的基礎資料外洩防護 (DLP) 功能。
+* **Managed Open In (管理式開啟)** 是 iOS 與 iPadOS 內建的基礎資料外洩防護 (DLP) 功能。
 
 功能運作：
 

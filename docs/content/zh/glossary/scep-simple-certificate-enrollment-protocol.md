@@ -5,7 +5,7 @@ term: SCEP (Simple Certificate Enrollment Protocol)
 ---
 ## 術語定義
 
-* *SCEP (Simple Certificate Enrollment Protocol / 簡易憑證註冊協定)** 是一種讓裝置自動獲取數位憑證的標準與工作流程。
+* **SCEP (Simple Certificate Enrollment Protocol / 簡易憑證註冊協定)** 是一種讓裝置自動獲取數位憑證的標準與工作流程。
 
 它的流程如下：
 

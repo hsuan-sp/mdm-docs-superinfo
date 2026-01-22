@@ -21,4 +21,4 @@ Think of this as a**"Digital Tap on the Shoulder."**
 
 To save battery, your iPad sleeps whenever it can. When the tech team wants to give you a new app, they can't shout at a sleeping iPad.
 
-Instead, they send a**Push Notification**. It’s like a gentle tap that wakes the iPad up and whispers, *"Hey, the teacher has some new work for you; go call the server to get it!"*
+Instead, they send a**Push Notification**. It’s like a gentle tap that wakes the iPad up and whispers, **"Hey, the teacher has some new work for you; go call the server to get it!"**

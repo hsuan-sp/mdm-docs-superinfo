@@ -5,7 +5,7 @@ term: IMEI
 ---
 ## 術語定義
 
-* *IMEI (International Mobile Equipment Identity)** 是行動通訊裝置的全球唯一識別碼，由 15 位數字組成。
+* **IMEI (International Mobile Equipment Identity)** 是行動通訊裝置的全球唯一識別碼，由 15 位數字組成。
 
 其關鍵特性為：
 

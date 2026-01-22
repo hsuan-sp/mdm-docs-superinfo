@@ -5,7 +5,7 @@ term: Lightning Connector
 ---
 ## 術語定義
 
-* *Lightning Connector (閃電連接埠)** 是 Apple 專有的 8-pin 實體連接介面。
+* **Lightning Connector (閃電連接埠)** 是 Apple 專有的 8-pin 實體連接介面。
 
 硬體特性背景：
 

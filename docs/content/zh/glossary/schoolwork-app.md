@@ -5,7 +5,7 @@ term: Schoolwork App
 ---
 ## 術語定義
 
-* *Schoolwork (功課 App)** 是 Apple 專為 K-12 教育設計的 iPad 應用程式，用來簡化作業指派與收集流程。
+* **Schoolwork (功課 App)** 是 Apple 專為 K-12 教育設計的 iPad 應用程式，用來簡化作業指派與收集流程。
 
 它的核心功能：
 

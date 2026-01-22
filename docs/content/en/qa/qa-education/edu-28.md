@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-* *Device retirement is more than just turning off the power. It involves data sanitization and the secure return of ownership rights in Apple School Manager (ASM). A proper retirement process ensures student privacy and meets ESG (Environmental, Social, and Governance) sustainability standards.**
+* **Device retirement is more than just turning off the power. It involves data sanitization and the secure return of ownership rights in Apple School Manager (ASM). A proper retirement process ensures student privacy and meets ESG (Environmental, Social, and Governance) sustainability standards.**
 
 ## Retirement SOP (Standard Operating Procedure)
 
@@ -28,14 +28,15 @@ title: >-
 
 This is the most critical step. It prevents the device from trying to enroll back in the school MDM if it is resold or recycled:
 
-*    Log in to**Apple School Manager**.
-*    Search for the serial number and select**"Release Device."**
+* **Log in to**Apple School Manager**.
+* **Search for the serial number and select**"Release Device."**
 * **WARNING**: Once released, a device cannot be re-added to ADE/DEP without physical access and a tethered connection to Apple Configurator. Only release devices that are permanently leaving the organization.
 
 ## 3. Inventory Archiving
 
-*    Do not immediately delete the record from your MDM. Move it to a**"Retired/Decommissioned"**group for 12 months.
-*    Export a final report (Serial, Purchase Date, Retirement Date) to serve as an audit trail for asset disposal.
+* **Do not immediately delete the record from your MDM. Move it to a**"Retired/Decommissioned"**group for 12 months.
+
+* **Export a final report (Serial, Purchase Date, Retirement Date) to serve as an audit trail for asset disposal.**
 
 ## 4. Sustainability & ESG
 

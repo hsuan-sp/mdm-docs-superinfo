@@ -5,7 +5,7 @@ term: Apple Classroom
 ---
 ## Term Definition
 
-* *Apple Classroom**is a specialized app that provides teachers with powerful classroom management and monitoring tools.
+* **Apple Classroom**is a specialized app that provides teachers with powerful classroom management and monitoring tools.
 
 Key capabilities:
 
@@ -13,7 +13,7 @@ Key capabilities:
 * **App Lock**: Lock devices into a specific app or website for focused learning.
 * **Resource Sharing**: Instantly share documents, web links, or students' screens to an Apple TV.
 
-* *Technical Note**: Because it operates over local Bluetooth and Wi-Fi, it is highly responsive and does not rely on the MDM server for its real-time interactions.
+* **Technical Note**: Because it operates over local Bluetooth and Wi-Fi, it is highly responsive and does not rely on the MDM server for its real-time interactions.
 
 ## Analogy
 

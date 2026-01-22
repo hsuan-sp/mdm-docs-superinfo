@@ -5,7 +5,7 @@ term: Device Group (裝置群組)
 ---
 ## 術語定義
 
-* *Device Group (裝置群組)** 是 MDM 中用來分類與管理裝置的容器。所有管理政策 (Policy) 與設定檔 (Profile) 都必須指定派發給某個群組。
+* **Device Group (裝置群組)** 是 MDM 中用來分類與管理裝置的容器。所有管理政策 (Policy) 與設定檔 (Profile) 都必須指定派發給某個群組。
 
 群組主要分為兩種類型：
 

@@ -5,7 +5,7 @@ term: Return to Service
 ---
 ## Term Definition
 
-* *Return to Service**is a high-efficiency command for iOS and iPadOS devices that automates the device reset cycle.
+* **Return to Service**is a high-efficiency command for iOS and iPadOS devices that automates the device reset cycle.
 
 Workflow:
 

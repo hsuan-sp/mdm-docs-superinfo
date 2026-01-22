@@ -5,7 +5,7 @@ term: App Store
 ---
 ## 術語定義
 
-* *App Store** 是 Apple 官方的應用程式下載與更新平台。
+* **App Store** 是 Apple 官方的應用程式下載與更新平台。
 
 在受管理的校園環境中：
 

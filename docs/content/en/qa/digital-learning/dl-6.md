@@ -14,7 +14,7 @@ title: How can I temporarily unblock certain websites needed for teaching?
 
 ## Answer
 
-* *Filtering rules for the Digital Learning Project are typically managed by higher-level authorities (Educational Bureaus). Modifying the blocklist is not recommended, but if an immediate exception is required for teaching, an "Exclusion" strategy is preferred.**
+* **Filtering rules for the Digital Learning Project are typically managed by higher-level authorities (Educational Bureaus). Modifying the blocklist is not recommended, but if an immediate exception is required for teaching, an "Exclusion" strategy is preferred.**
 
 Depending on your specific needs, you can choose one of the following solutions:
 
@@ -29,7 +29,7 @@ Depending on your specific needs, you can choose one of the following solutions:
 
 ## Method 2: AirPlay via Teacher Device
 
-*    If students only need to "view" content rather than "interact" with it, it is recommended that the teacher play the video on their own device (which typically has less restrictive filtering) and project it to the classroom Apple TV via AirPlay.
+* **If students only need to "view" content rather than "interact" with it, it is recommended that the teacher play the video on their own device (which typically has less restrictive filtering) and project it to the classroom Apple TV via AirPlay.**
 
 ## Practical Advice: Risk Management
 

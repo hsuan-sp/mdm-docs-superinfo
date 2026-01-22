@@ -5,7 +5,7 @@ term: Notarization (公證)
 ---
 ## 術語定義
 
-* *Notarization (公證)** 是 Apple 針對 macOS 軟體實施的安全掃描機制，旨在防止惡意程式碼散播。
+* **Notarization (公證)** 是 Apple 針對 macOS 軟體實施的安全掃描機制，旨在防止惡意程式碼散播。
 
 它的特性包括：
 

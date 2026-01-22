@@ -5,7 +5,7 @@ term: Apple Configurator
 ---
 ## Term Definition
 
-* *Apple Configurator**is a physical management and diagnostic tool for macOS.
+* **Apple Configurator**is a physical management and diagnostic tool for macOS.
 
 It is primarily used for:
 

@@ -13,7 +13,7 @@ title: Can I use a mouse or a Bluetooth keyboard with my iPad?
 
 ## Answer
 
-* *Yes. iPadOS 13.4 and later fully support mice, trackpads, and Bluetooth/USB keyboards, providing a laptop-like experience.**
+* **Yes. iPadOS 13.4 and later fully support mice, trackpads, and Bluetooth/USB keyboards, providing a laptop-like experience.**
 
 ## Keyboard Support:
 

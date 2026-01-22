@@ -5,7 +5,7 @@ term: DMG (Disk Image)
 ---
 ## Term Definition
 
-* *DMG**is a proprietary Apple Disk Image file format used primarily for software distribution on macOS.
+* **DMG**is a proprietary Apple Disk Image file format used primarily for software distribution on macOS.
 
 Key characteristics:
 

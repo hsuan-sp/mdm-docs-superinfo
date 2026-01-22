@@ -6,7 +6,7 @@ term: Blueprints
 ---
 ## 術語定義
 
-* *Blueprints** 是 Jamf Pro 的進階自動化配置框架。
+* **Blueprints** 是 Jamf Pro 的進階自動化配置框架。
 
 功能特點：
 

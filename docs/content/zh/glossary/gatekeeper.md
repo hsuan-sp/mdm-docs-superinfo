@@ -5,7 +5,7 @@ term: Gatekeeper
 ---
 ## 術語定義
 
-* *Gatekeeper** 是 macOS 的核心安全防護技術，旨在保護使用者免受惡意軟體侵害。
+* **Gatekeeper** 是 macOS 的核心安全防護技術，旨在保護使用者免受惡意軟體侵害。
 
 其防護機制包含三道關卡：
 

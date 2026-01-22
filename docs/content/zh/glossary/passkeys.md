@@ -5,7 +5,7 @@ term: Passkeys
 ---
 ## 術語定義
 
-* *Passkeys (通行密鑰)** 是由 FIDO 聯盟與 Apple 共同推動的新一代「無密碼」登入標準。
+* **Passkeys (通行密鑰)** 是由 FIDO 聯盟與 Apple 共同推動的新一代「無密碼」登入標準。
 
 它的特性包括：
 

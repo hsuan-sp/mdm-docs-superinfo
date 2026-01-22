@@ -5,7 +5,7 @@ term: Script
 ---
 ## 術語定義
 
-* *Script (腳本)** 是一段在受管 Mac 上執行的客製化程式碼（通常是用 Bash, zsh 或 Python 寫的）。
+* **Script (腳本)** 是一段在受管 Mac 上執行的客製化程式碼（通常是用 Bash, zsh 或 Python 寫的）。
 
 它的威力：
 

@@ -5,7 +5,7 @@ term: mDNS (Multicast DNS)
 ---
 ## Term Definition
 
-* *Multicast DNS (mDNS)**is the underlying "zero-configuration" network protocol that powers Apple’s**Bonjour**service.
+* **Multicast DNS (mDNS)**is the underlying "zero-configuration" network protocol that powers Apple’s**Bonjour**service.
 
 How it works:
 

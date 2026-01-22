@@ -6,7 +6,7 @@ term: Location Services
 ---
 ## Term Definition
 
-* *Location Services**is the framework that allows Apple devices to determine their geographical position.
+* **Location Services**is the framework that allows Apple devices to determine their geographical position.
 
 Inputs used for positioning:
 
@@ -15,7 +15,7 @@ Inputs used for positioning:
 * **Cellular**: Proximity to cell towers.
 * **iBeacons**: Micro-location awareness indoors.
 
-* *MDM Policy**: For school-owned devices, administrators often force Location Services to be**"On"**to ensure that**Lost Mode**functions correctly if a device goes missing.
+* **MDM Policy**: For school-owned devices, administrators often force Location Services to be**"On"**to ensure that**Lost Mode**functions correctly if a device goes missing.
 
 ## Analogy
 

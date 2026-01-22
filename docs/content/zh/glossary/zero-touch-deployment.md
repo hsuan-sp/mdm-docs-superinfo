@@ -5,7 +5,7 @@ term: Zero-Touch Deployment
 ---
 ## 術語定義
 
-* *Zero-Touch Deployment (零接觸部署)** 是現代化 IT 管理的最高境界，指新裝置從拆封那一刻起，完全無需 IT 人員手動操作，即可自動完成設定。
+* **Zero-Touch Deployment (零接觸部署)** 是現代化 IT 管理的最高境界，指新裝置從拆封那一刻起，完全無需 IT 人員手動操作，即可自動完成設定。
 
 流程：
 

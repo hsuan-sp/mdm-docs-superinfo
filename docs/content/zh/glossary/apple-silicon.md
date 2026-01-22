@@ -5,7 +5,7 @@ term: Apple Silicon
 ---
 ## 術語定義
 
-* *Apple Silicon** 指的是 Apple 為 Mac 與 iPad 設計的客製化單晶片系統 (SoC) 系列 (M1, M2, M3, M4, M5 系列)。
+* **Apple Silicon** 指的是 Apple 為 Mac 與 iPad 設計的客製化單晶片系統 (SoC) 系列 (M1, M2, M3, M4, M5 系列)。
 
 這些晶片引入了先進的硬體級安全概念：
 

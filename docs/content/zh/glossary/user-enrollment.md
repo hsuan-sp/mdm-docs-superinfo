@@ -5,7 +5,7 @@ term: User Enrollment
 ---
 ## 術語定義
 
-* *User Enrollment (使用者註冊)** 是專為**BYOD (自帶載具)** 計畫設計的 MDM 註冊模式。
+* **User Enrollment (使用者註冊)** 是專為**BYOD (自帶載具)** 計畫設計的 MDM 註冊模式。
 
 特點：
 

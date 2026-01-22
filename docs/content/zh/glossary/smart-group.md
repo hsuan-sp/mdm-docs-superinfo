@@ -6,7 +6,7 @@ term: Smart Group
 ---
 ## 術語定義
 
-* *Smart Group (智慧型群組)** 是 Jamf Pro 中依據即時條件自動更新的動態裝置集合。
+* **Smart Group (智慧型群組)** 是 Jamf Pro 中依據即時條件自動更新的動態裝置集合。
 
 運作原理：
 

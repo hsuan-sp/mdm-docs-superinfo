@@ -6,7 +6,7 @@ term: Enrollment Customization
 ---
 ## Term Definition
 
-* *Enrollment Customization**allows organizations to deliver a tailored onboarding experience during the**Automated Device Enrollment (ADE)**process.
+* **Enrollment Customization**allows organizations to deliver a tailored onboarding experience during the**Automated Device Enrollment (ADE)**process.
 
 Customization options:
 

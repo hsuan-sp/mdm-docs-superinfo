@@ -5,7 +5,7 @@ term: FileVault
 ---
 ## 術語定義
 
-* *FileVault** 是 macOS 內建的**全磁碟加密 (Full Disk Encryption)** 技術。
+* **FileVault** 是 macOS 內建的**全磁碟加密 (Full Disk Encryption)** 技術。
 
 它是現代企業資安的基石，主要功能包括：
 

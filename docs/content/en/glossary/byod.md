@@ -5,7 +5,7 @@ term: BYOD (Bring Your Own Device)
 ---
 ## Term Definition
 
-* *Bring Your Own Device (BYOD)**is a deployment model where students or staff use their personal hardware to access institutional resources.
+* **Bring Your Own Device (BYOD)**is a deployment model where students or staff use their personal hardware to access institutional resources.
 
 Apple’s**User Enrollment**framework facilitates BYOD by:
 

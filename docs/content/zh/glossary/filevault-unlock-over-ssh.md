@@ -5,7 +5,7 @@ term: FileVault Unlock over SSH (透過 SSH 解鎖 FileVault)
 ---
 ## 術語定義
 
-* *FileVault Unlock over SSH** 是**macOS Tahoe** 引入的遠端管理功能，大幅改善了加密裝置的維護流程。
+* **FileVault Unlock over SSH** 是**macOS Tahoe** 引入的遠端管理功能，大幅改善了加密裝置的維護流程。
 
 * **功能**：允許管理員透過安全的**SSH 連線**，遠端解鎖處於 Pre-boot 畫面（剛開機尚未登入）的 FileVault 加密磁碟。
 

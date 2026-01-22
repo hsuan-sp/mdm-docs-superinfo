@@ -5,7 +5,7 @@ term: Configuration Profile Removal（描述檔移除）
 ---
 ## 術語定義
 
-* *Configuration Profile Removal (描述檔移除)** 指 MDM 系統向裝置下達的遠端清理指令，用於卸載包含設定的描述檔 (Payload)。
+* **Configuration Profile Removal (描述檔移除)** 指 MDM 系統向裝置下達的遠端清理指令，用於卸載包含設定的描述檔 (Payload)。
 
 執行後會連帶移除該描述檔所包含的所有資源：
 

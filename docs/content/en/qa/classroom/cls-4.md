@@ -12,7 +12,7 @@ title: The class is too loud! How do I 'Lock' all student screens at once?
 
 ## Answer
 
-* *By using the "Lock" feature in Apple Classroom, you can instantly turn all student iPad screens black to get the class’s attention.**
+* **By using the "Lock" feature in Apple Classroom, you can instantly turn all student iPad screens black to get the class’s attention.**
 
 This is a favorite "Eyes on Me" tool for teachers when they need the class to stop working and look at the front of the room.
 

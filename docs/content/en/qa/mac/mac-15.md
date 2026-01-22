@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-* *The best practice is to use 'Jamf App Installers' for automated deployment, combined with either the 'Volume License Serializer' or 'User-based Login' depending on the scenario.**
+* **The best practice is to use 'Jamf App Installers' for automated deployment, combined with either the 'Volume License Serializer' or 'User-based Login' depending on the scenario.**
 
 Always use the Microsoft CDNs or Jamf-provided installers.**Avoid the Mac App Store versions**, as they do not support Volume Licensing (VL) features correctly for all scenarios.
 

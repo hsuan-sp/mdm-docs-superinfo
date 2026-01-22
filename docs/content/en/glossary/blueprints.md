@@ -6,7 +6,7 @@ term: Blueprints
 ---
 ## Term Definition
 
-* *Blueprints**are an advanced automation framework within Jamf management tools used to maintain device consistency.
+* **Blueprints**are an advanced automation framework within Jamf management tools used to maintain device consistency.
 
 Key features:
 

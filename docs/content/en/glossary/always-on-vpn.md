@@ -5,7 +5,7 @@ term: Always-on VPN
 ---
 ## Term Definition
 
-* *Always-on VPN**is a mandatory network security policy for managed devices that ensures all traffic is tunnelled through a secure gateway.
+* **Always-on VPN**is a mandatory network security policy for managed devices that ensures all traffic is tunnelled through a secure gateway.
 
 Key characteristics:
 

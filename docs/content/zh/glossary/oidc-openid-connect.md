@@ -5,7 +5,7 @@ term: OIDC (OpenID Connect)
 ---
 ## 術語定義
 
-* *OIDC (OpenID Connect)** 是基於 OAuth 2.0 架構的新一代身分認證標準。
+* **OIDC (OpenID Connect)** 是基於 OAuth 2.0 架構的新一代身分認證標準。
 
 它的特性包括：
 

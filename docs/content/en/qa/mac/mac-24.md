@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-* *Safari in macOS 26 introduces 'Distraction Control,' which allows users to hide specific web elements (like ads or sidebars). However, in a Computer-Based Testing (CBT) environment, students could abuse this to hide timers, navigation menus, or proctoring warnings.**
+* **Safari in macOS 26 introduces 'Distraction Control,' which allows users to hide specific web elements (like ads or sidebars). However, in a Computer-Based Testing (CBT) environment, students could abuse this to hide timers, navigation menus, or proctoring warnings.**
 
 ## Risks in the Classroom:
 
@@ -31,9 +31,9 @@ title: >-
 * **Payload**: Set `AllowDistractionControl`to`false`.
 * **Effect**: The "Distraction Control" option in the Safari menu will be grayed out and unavailable, ensuring the website UI remains exactly as intended by the test publisher.
 
-2. **Assessment Mode (AAC)**:
+1. **Assessment Mode (AAC)**:
 
-*    For high-stakes exams, use a specialized testing app or a managed browser that invokes Apple’s**'Assessment Mode.'**
+* **For high-stakes exams, use a specialized testing app or a managed browser that invokes Apple’s**'Assessment Mode.'**
 * **Effect**: This automatically suppresses Distraction Control, Siri, notifications, and all multitasking features without needing a specific configuration profile.
 
 ## IT Strategy:

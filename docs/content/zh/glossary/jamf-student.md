@@ -6,7 +6,7 @@ term: Jamf Student
 ---
 ## 術語定義
 
-* *Jamf Student** 是安裝在學生 iPad 上的專用 App，旨在促進受管環境下的學習互動。
+* **Jamf Student** 是安裝在學生 iPad 上的專用 App，旨在促進受管環境下的學習互動。
 
 關鍵功能包括：
 

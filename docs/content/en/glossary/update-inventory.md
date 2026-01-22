@@ -5,7 +5,7 @@ term: Update Inventory
 ---
 ## Term Definition
 
-* *Update Inventory**is the standard MDM command that forces a device to refresh its data record on the server.
+* **Update Inventory**is the standard MDM command that forces a device to refresh its data record on the server.
 
 Data points refreshed:
 

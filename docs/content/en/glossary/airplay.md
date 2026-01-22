@@ -5,7 +5,7 @@ term: AirPlay
 ---
 ## Term Definition
 
-* *AirPlay**is Apple’s wireless streaming protocol that allows for screen mirroring or streaming audio/video to an**Apple TV**or AirPlay-enabled display.
+* **AirPlay**is Apple’s wireless streaming protocol that allows for screen mirroring or streaming audio/video to an**Apple TV**or AirPlay-enabled display.
 
 In classroom environments, MDM can:
 

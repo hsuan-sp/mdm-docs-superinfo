@@ -5,7 +5,7 @@ term: Firmware
 ---
 ## 術語定義
 
-* *Firmware (韌體)** 是燒錄在硬體晶片（如 BIOS 或 iBoot）中的持久性低階控制軟體。
+* **Firmware (韌體)** 是燒錄在硬體晶片（如 BIOS 或 iBoot）中的持久性低階控制軟體。
 
 它負責控制硬體的最基本運作：
 

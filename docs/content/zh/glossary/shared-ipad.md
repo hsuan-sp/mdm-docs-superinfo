@@ -6,7 +6,7 @@ term: Shared iPad (共用 iPad)
 ---
 ## 術語定義
 
-* *Shared iPad (共用 iPad)** 是 iPadOS 專為學校行動車設計的「多使用者」模式。
+* **Shared iPad (共用 iPad)** 是 iPadOS 專為學校行動車設計的「多使用者」模式。
 
 運作方式：
 

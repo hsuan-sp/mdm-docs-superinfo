@@ -5,7 +5,7 @@ term: Apple Pencil
 ---
 ## Term Definition
 
-* *Apple Pencil**is an active stylus designed specifically for supported iPad models. It features high precision, low latency, and pressure sensitivity.
+* **Apple Pencil**is an active stylus designed specifically for supported iPad models. It features high precision, low latency, and pressure sensitivity.
 
 In specialized assessment or highly controlled classroom scenarios, MDM can be used to:
 

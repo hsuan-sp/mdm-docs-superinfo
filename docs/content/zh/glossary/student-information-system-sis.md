@@ -6,7 +6,7 @@ term: Student Information System（SIS，學生資訊系統）
 ---
 ## 術語定義
 
-* *Student Information System (SIS / 學生資訊系統)** 是學校用來管理學生資料的權威資料庫。
+* **Student Information System (SIS / 學生資訊系統)** 是學校用來管理學生資料的權威資料庫。
 
 主要功能：
 

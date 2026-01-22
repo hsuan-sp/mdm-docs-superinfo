@@ -14,7 +14,7 @@ title: 如何在 ASM 中批次建立管理式 Apple 帳號？使用 SFTP 還是�
 
 ## Answer
 
-* *根據 Apple 官方資訊，建立管理式 Apple 帳號主要有三種方式：SFTP 上傳 (SIS 整合)、手動 CSV 匯入，以及聯合驗證 (Federated Authentication)。**
+* **根據 Apple 官方資訊，建立管理式 Apple 帳號主要有三種方式：SFTP 上傳 (SIS 整合)、手動 CSV 匯入，以及聯合驗證 (Federated Authentication)。**
 
 ## 三種方式比較
 
@@ -22,7 +22,7 @@ title: 如何在 ASM 中批次建立管理式 Apple 帳號？使用 SFTP 還是�
 | :--- | :--- | :--- |
 | **手動 CSV 匯入** | 小規模學校、無 SIS 系統或臨時批次作業 | 直接透過網頁介面上傳，操作簡單，適合初次設定。 |
 | **SFTP 上傳** | 擁有 SIS 的學校、需定期自動更新資料 | 支援 Apple 範本與 OneRoster 格式，自動化程度高，適合大量資料處理。 |
-| **聯合驗證** | 使用 Google Workspace / Microsoft Entra ID 的學校 | **最推薦方式**。使用現有帳號登入即自動建立 Apple 帳號，可達成「單一登入」。 |
+| **聯合驗證**| 使用 Google Workspace / Microsoft Entra ID 的學校 |**最推薦方式**。使用現有帳號登入即自動建立 Apple 帳號，可達成「單一登入」。 |
 
 ## 1. 透過 SFTP 上傳資料 (自動化/SIS 整合)
 

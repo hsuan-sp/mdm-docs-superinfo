@@ -11,7 +11,7 @@ Structure:
 
 * **Fat Binary**: It includes code for both**Intel**(x86_64) and**Apple Silicon**(ARM 64) chips inside a single app file.
 * **Workflow**: When the user double-clicks the app, macOS automatically chooses the correct code for the computer's chip.
-* **Benefit**: Ensures the app runs at maximum native speed on an M3 MacBook Air*and*an old Intel iMac, without needing**Rosetta 2**.
+* **Benefit**: Ensures the app runs at maximum native speed on an M3 MacBook Air**and**an old Intel iMac, without needing**Rosetta 2**.
 
 ## Analogy
 

@@ -5,7 +5,7 @@ term: Root Certificate
 ---
 ## 術語定義
 
-* *Root Certificate (根憑證)** 是公開金鑰基礎建設 (PKI) 中信任鏈的最頂層，也就是「信任的錨點」。
+* **Root Certificate (根憑證)** 是公開金鑰基礎建設 (PKI) 中信任鏈的最頂層，也就是「信任的錨點」。
 
 在學校的應用：
 

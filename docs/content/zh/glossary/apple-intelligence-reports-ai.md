@@ -5,7 +5,7 @@ term: Apple Intelligence Reports (Apple Intelligence 報告與管理)
 ---
 ## 術語定義
 
-* *Apple Intelligence 報告與管理工具** 是行動裝置管理 (MDM) 中提供的一系列稽核與限制功能，旨在維護校園的**學術倫理與誠信**。
+* **Apple Intelligence 報告與管理工具** 是行動裝置管理 (MDM) 中提供的一系列稽核與限制功能，旨在維護校園的**學術倫理與誠信**。
 
 管理員可以透過 MDM 執行以下操作：
 

@@ -5,7 +5,7 @@ term: Intel Mac End-of-Support Milestone (Intel Mac 支援終止里程碑)
 ---
 ## 術語定義
 
-* *Intel Mac 支援終止里程碑** 指的是 Apple 作業系統轉型的關鍵轉折點。自此之後，現代 macOS 將不再相容於搭載 Intel 處理器的舊款 Mac 電腦。
+* **Intel Mac 支援終止里程碑** 指的是 Apple 作業系統轉型的關鍵轉折點。自此之後，現代 macOS 將不再相容於搭載 Intel 處理器的舊款 Mac 電腦。
 
 關鍵時間軸與影響：
 

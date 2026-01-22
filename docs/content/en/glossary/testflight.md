@@ -5,7 +5,7 @@ term: TestFlight
 ---
 ## Term Definition
 
-* *TestFlight**is Apple's platform for beta testing pre-release applications.
+* **TestFlight**is Apple's platform for beta testing pre-release applications.
 
 Workflow:
 

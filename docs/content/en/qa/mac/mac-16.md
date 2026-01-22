@@ -14,7 +14,7 @@ title: How do I manage or disable 'iPhone Mirroring' in macOS Sequoia?
 
 ## Answer
 
-* *While convenient, 'iPhone Mirroring' in macOS 15+ poses Data Loss Prevention (DLP) risks on shared school computers. It should be managed via MDM.**
+* **While convenient, 'iPhone Mirroring' in macOS 15+ poses Data Loss Prevention (DLP) risks on shared school computers. It should be managed via MDM.**
 
 ## The Privacy Risk:
 

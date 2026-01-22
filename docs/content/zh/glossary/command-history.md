@@ -5,7 +5,7 @@ term: Command History
 ---
 ## 術語定義
 
-* *Command History (指令歷史)** 詳實記錄了 MDM 對特定裝置發送過的所有指令流程。
+* **Command History (指令歷史)** 詳實記錄了 MDM 對特定裝置發送過的所有指令流程。
 
 管理員可透過此紀錄追蹤裝置的操作歷程與狀態：
 

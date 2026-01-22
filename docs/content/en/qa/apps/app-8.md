@@ -14,7 +14,7 @@ title: Can I deploy Web Clips to student home screens? Are they considered apps?
 
 ## Answer
 
-* *Yes. A Web Clip is not a true app; rather, it is a bookmark icon on the home screen that points to a specific URL. This is highly effective for guiding students to specific learning portals.**
+* **Yes. A Web Clip is not a true app; rather, it is a bookmark icon on the home screen that points to a specific URL. This is highly effective for guiding students to specific learning portals.**
 
 ## Technical Details & Configuration Advice:
 

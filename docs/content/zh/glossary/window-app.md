@@ -5,7 +5,7 @@ term: Window App (視窗化 App)
 ---
 ## 術語定義
 
-* *Window App (視窗化 App)** 是 iPadOS 26 引入的進階多工系統（前身為 Stage Manager），允許 iPad 像 Mac 一樣以自由浮動的視窗形式運行 App。
+* **Window App (視窗化 App)** 是 iPadOS 26 引入的進階多工系統（前身為 Stage Manager），允許 iPad 像 Mac 一樣以自由浮動的視窗形式運行 App。
 
 功能特色：
 

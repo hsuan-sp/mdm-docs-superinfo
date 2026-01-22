@@ -5,7 +5,7 @@ term: Automatic App Updates
 ---
 ## Term Definition
 
-* *Automatic App Updates**is a background system mechanism that ensures applications are always current.
+* **Automatic App Updates**is a background system mechanism that ensures applications are always current.
 
 Functional aspects:
 

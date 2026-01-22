@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-* *One of the iPad’s greatest strengths is its 'Offline Productivity.' Even without Wi-Fi, most pre-installed apps and downloaded content remain fully functional. The role of MDM is to pre-configure 'Offline Grace Periods' and 'Local Caching' to ensure teaching never stops.**
+* **One of the iPad’s greatest strengths is its 'Offline Productivity.' Even without Wi-Fi, most pre-installed apps and downloaded content remain fully functional. The role of MDM is to pre-configure 'Offline Grace Periods' and 'Local Caching' to ensure teaching never stops.**
 
 ## Strategies for Offline Teaching
 

@@ -5,7 +5,7 @@ term: Universal Binary
 ---
 ## 術語定義
 
-* *Universal Binary (通用二進位檔)** 是一種 macOS 應用程式封裝格式，內含適用於多種處理器架構的執行碼。
+* **Universal Binary (通用二進位檔)** 是一種 macOS 應用程式封裝格式，內含適用於多種處理器架構的執行碼。
 
 結構與優勢：
 

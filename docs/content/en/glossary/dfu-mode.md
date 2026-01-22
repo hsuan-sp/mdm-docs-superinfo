@@ -5,7 +5,7 @@ term: DFU Mode (Device Firmware Update)
 ---
 ## Term Definition
 
-* *DFU (Device Firmware Update)**mode is the lowest-level recovery state for an Apple device, sitting beneath the standard Recovery Mode.
+* **DFU (Device Firmware Update)**mode is the lowest-level recovery state for an Apple device, sitting beneath the standard Recovery Mode.
 
 Key characteristics:
 

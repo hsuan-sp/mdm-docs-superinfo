@@ -5,7 +5,7 @@ term: Managed Apple Account (管理式 Apple 帳號)
 ---
 ## 術語定義
 
-* *管理式 Apple 帳號 (Managed Apple Account)**，前身為管理式 Apple ID，是由組織（而非個人）擁有並管控的專業身分識別。
+* **管理式 Apple 帳號 (Managed Apple Account)**，前身為管理式 Apple ID，是由組織（而非個人）擁有並管控的專業身分識別。
 
 與個人帳號的主要差異如下：
 

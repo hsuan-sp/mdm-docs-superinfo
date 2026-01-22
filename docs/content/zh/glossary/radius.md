@@ -5,7 +5,7 @@ term: RADIUS
 ---
 ## 術語定義
 
-* *RADIUS (遠端認證撥號使用者服務)** 是一種網路協定，負責集中處理使用者的**「認證 (Authentication)、授權 (Authorization) 與 紀錄 (Accounting)」**(簡稱 AAA)。
+* **RADIUS (遠端認證撥號使用者服務)** 是一種網路協定，負責集中處理使用者的**「認證 (Authentication)、授權 (Authorization) 與 紀錄 (Accounting)」**(簡稱 AAA)。
 
 在校園中的應用：
 

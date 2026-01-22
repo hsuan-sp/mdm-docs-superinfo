@@ -6,7 +6,7 @@ term: Recon
 ---
 ## 術語定義
 
-* *Recon (偵察指令)** 是 `Jamf recon` 指令的簡稱，它是 Jamf 管理下 Mac 電腦進行**「資產盤點 (Inventory Collection)」** 的核心動作。
+* **Recon (偵察指令)** 是 `Jamf recon` 指令的簡稱，它是 Jamf 管理下 Mac 電腦進行**「資產盤點 (Inventory Collection)」** 的核心動作。
 
 它的工作內容：
 

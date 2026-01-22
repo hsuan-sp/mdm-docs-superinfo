@@ -5,7 +5,7 @@ term: Managed Device Attestation
 ---
 ## Term Definition
 
-* *Managed Device Attestation**is a high-security feature that cryptographically verifies the identity and integrity of a device.
+* **Managed Device Attestation**is a high-security feature that cryptographically verifies the identity and integrity of a device.
 
 How it works:
 

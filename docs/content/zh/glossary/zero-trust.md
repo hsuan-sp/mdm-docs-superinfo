@@ -5,7 +5,7 @@ term: Zero Trust
 ---
 ## 術語定義
 
-* *Zero Trust (零信任)** 是一種現代資安架構理念，其核心原則是**「永不信任，始終驗證 (Never Trust, Always Verify)」**。
+* **Zero Trust (零信任)** 是一種現代資安架構理念，其核心原則是**「永不信任，始終驗證 (Never Trust, Always Verify)」**。
 
 核心概念：
 

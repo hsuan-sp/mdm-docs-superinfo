@@ -5,7 +5,7 @@ term: DHCP (Dynamic Host Configuration Protocol)
 ---
 ## 術語定義
 
-* *DHCP (Dynamic Host Configuration Protocol)** 是一種自動分配 IP 位址的網路協定。
+* **DHCP (Dynamic Host Configuration Protocol)** 是一種自動分配 IP 位址的網路協定。
 
 其運作流程如下：
 

@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-* *In the past, school IT wanted computers ON for updates, while the facility manager wanted them OFF to save electricity. macOS 26 and DDM provide a perfect automated balance.**
+* **In the past, school IT wanted computers ON for updates, while the facility manager wanted them OFF to save electricity. macOS 26 and DDM provide a perfect automated balance.**
 
 ## 1. DDM Power Configuration Strategy (SOP)
 
@@ -34,7 +34,7 @@ Using macOS 26**System Configurations**, you can set the following intelligent l
 
 ## Energy Auditing (Status Channel)
 
-*    You can monitor "Battery Cycle Counts" or "Up-time in High Performance Mode" via the DDM Status Channel to use as quantitative data for future hardware replacement cycles.
+* **You can monitor "Battery Cycle Counts" or "Up-time in High Performance Mode" via the DDM Status Channel to use as quantitative data for future hardware replacement cycles.**
 
 ## 2. Operational Recommendations
 

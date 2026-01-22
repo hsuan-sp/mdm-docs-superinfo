@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-* *macOS 26 provides granular MDM controls for 'iPhone Mirroring.' IT coordinators can set different permission levels for 'Shared Lab Macs' versus 'Teacher Presentation Macs.'**
+* **macOS 26 provides granular MDM controls for 'iPhone Mirroring.' IT coordinators can set different permission levels for 'Shared Lab Macs' versus 'Teacher Presentation Macs.'**
 
 ## Management Modes (SOP)
 
@@ -28,13 +28,13 @@ Using Jamf Pro's**Restrictions**payload, you should apply one of these three str
 * **Setting**: Uncheck `Allow iPhone Mirroring`.
 * **Effect**: If a student tries to pair their iPhone, they will see a message: "This feature is disabled by your organization." This prevents students from showing social media or personal photos on school monitors.
 
-2. **Forced View-Only (Presentation Focus)**:
+1. **Forced View-Only (Presentation Focus)**:
 
 * **Best For**: Classroom podium Macs used by teachers.
 * **Setting**: Enable `Force View-Only Mirroring`.
 * **Effect**: The iPhone screen can be displayed on the Mac (perfect for demonstrating a student's mobile project), but the teacher's Mac keyboard and mouse cannot control the iPhone. This prevents accidental interaction with the student's personal notifications.
 
-3. **Restricted Data Transfer (DLP Focus)**:
+1. **Restricted Data Transfer (DLP Focus)**:
 
 * **Best For**: Faculty/Staff administrative computers.
 * **Setting**: Disable `Allow File and Clipboard Sync with iPhone Mirroring`.

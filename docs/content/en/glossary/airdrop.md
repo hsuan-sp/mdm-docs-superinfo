@@ -5,7 +5,7 @@ term: AirDrop
 ---
 ## Term Definition
 
-* *AirDrop**is Apple’s proprietary peer-to-peer wireless file-sharing service. It uses**Bluetooth**for discovery and creates a high-speed**Wi-Fi Direct**connection for the actual transfer.
+* **AirDrop**is Apple’s proprietary peer-to-peer wireless file-sharing service. It uses**Bluetooth**for discovery and creates a high-speed**Wi-Fi Direct**connection for the actual transfer.
 
 Management considerations:
 

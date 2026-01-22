@@ -5,7 +5,7 @@ term: AAC (Automatic Assessment Configuration)
 ---
 ## 術語定義
 
-* *AAC (Automatic Assessment Configuration，自動評量配置)** 是 Apple 裝置（iOS、iPadOS 與 macOS）中一項專為高風險標準化測驗（High-stakes testing）設計的「自動鎖定模式」。
+* **AAC (Automatic Assessment Configuration，自動評量配置)** 是 Apple 裝置（iOS、iPadOS 與 macOS）中一項專為高風險標準化測驗（High-stakes testing）設計的「自動鎖定模式」。
 
 當學生開啟支援此功能的測驗 App 時，AAC 會自動接管並優化裝置環境，確保測驗的安全性與公正：
 

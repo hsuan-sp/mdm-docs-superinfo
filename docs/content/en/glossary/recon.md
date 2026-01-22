@@ -6,7 +6,7 @@ term: Recon
 ---
 ## Term Definition
 
-* *Recon**(short for the `Jamf recon` command) is the inventory collection process on managed Macs.
+* **Recon**(short for the `Jamf recon` command) is the inventory collection process on managed Macs.
 
 What it collects:
 

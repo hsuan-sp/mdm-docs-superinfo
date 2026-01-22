@@ -14,7 +14,7 @@ title: >-
 
 ## Answer
 
-* *Yes, the teacher can 'Mute' the whole class with one click, but they cannot 'Unmute' them remotely.**
+* **Yes, the teacher can 'Mute' the whole class with one click, but they cannot 'Unmute' them remotely.**
 
 ## Operation:
 

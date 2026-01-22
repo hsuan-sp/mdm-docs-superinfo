@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-* *Resetting network settings is a powerful way to solve stubborn Wi-Fi issues, but it carries the risk of making the device an "Unmanaged device" if not handled carefully.**
+* **Resetting network settings is a powerful way to solve stubborn Wi-Fi issues, but it carries the risk of making the device an "Unmanaged device" if not handled carefully.**
 
 ## The "Unmanaged device" Risk:
 

@@ -6,7 +6,7 @@ term: Security Update
 ---
 ## 術語定義
 
-* *Security Update (安全性更新)** 是專門用來修補漏洞、保護作業系統完整性的軟體修補程式。
+* **Security Update (安全性更新)** 是專門用來修補漏洞、保護作業系統完整性的軟體修補程式。
 
 它的特性：
 

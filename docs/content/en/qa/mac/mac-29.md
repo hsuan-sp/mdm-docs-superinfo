@@ -15,7 +15,7 @@ title: How to push system updates (iOS/iPadOS/macOS) via Jamf Pro?
 
 ## Answer
 
-* *By 2026, software update management in Jamf Pro has fully transitioned to the "Declarative Device Management (DDM)" framework.**
+* **By 2026, software update management in Jamf Pro has fully transitioned to the "Declarative Device Management (DDM)" framework.**
 
 This approach is more stable than legacy remote commands and allows devices to autonomously handle the download and installation process, significantly reducing server load.
 
@@ -27,11 +27,11 @@ This is the recommended and most professional method:
 2. Click `New` and set the target version (e.g., iOS 26.x or macOS 26 Tahoe).
 3. **Key Setting: Enforcement Deadline**:
 
-*    Set a specific date and time (e.g., Three days from now at 5:00 PM).
-*    Before the deadline, users will receive gentle system notifications.
+* **Set a specific date and time (e.g., Three days from now at 5**:00 PM).
+* **Before the deadline, users will receive gentle system notifications.**
 * **Once the deadline is reached, the device will ignore the user's state, force a restart, and install the update.**
 
-4. Assign this blueprint to the target device group.
+1. Assign this blueprint to the target device group.
 
 ## 2. Using Mass Actions for Remote Commands (Legacy Way)
 

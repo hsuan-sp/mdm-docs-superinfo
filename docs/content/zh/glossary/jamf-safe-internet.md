@@ -7,7 +7,7 @@ term: Jamf Safe Internet
 ---
 ## 術語定義
 
-* *Jamf Safe Internet** 是一套專為教育機構設計的綜合網路安全與內容過濾服務。
+* **Jamf Safe Internet** 是一套專為教育機構設計的綜合網路安全與內容過濾服務。
 
 它的防護功能包括：
 

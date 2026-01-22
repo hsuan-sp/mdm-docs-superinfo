@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-* *No password is required. As long as you use "Device-based Assignment," the update process is completely hands-off.**
+* **No password is required. As long as you use "Device-based Assignment," the update process is completely hands-off.**
 
 ## The Preferred 2026 Method: Declarative Device Management (DDM)
 
@@ -31,7 +31,7 @@ Under the latest OS architecture,**DDM**is the best path for silent updates:
 2. **Supervised Mode**: The iPad must be in a "Supervised" state.
 3. **Jamf Configuration**: In the app's distribution settings, enable**"Automatically Update App."**
 
-* *Note: On DDM-supported devices, this checkbox automatically triggers a DDM declaration.*
+* **Note: On DDM-supported devices, this checkbox automatically triggers a DDM declaration.**
 
 ## Common Troubleshooting for Failed Updates:
 
@@ -39,4 +39,4 @@ Under the latest OS architecture,**DDM**is the best path for silent updates:
 * **Insufficient Storage**: Updates require temporary space to download the installer. If the device is full, the update will fail.
 * **Stuck Commands**: If you see many pending update commands, try sending a**"Blank Push"**to force the device to check in with Apple servers.
 
-* *Note**: DDM makes the device more proactive in scheduling updates, reducing its real-time dependency on the MDM server for simple maintenance tasks.
+* **Note**: DDM makes the device more proactive in scheduling updates, reducing its real-time dependency on the MDM server for simple maintenance tasks.

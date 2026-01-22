@@ -5,7 +5,7 @@ term: Ethernet
 ---
 ## Term Definition
 
-* *Ethernet**is the standard technology for wired local area network (LAN) connections, typically utilizing**RJ45**cables.
+* **Ethernet**is the standard technology for wired local area network (LAN) connections, typically utilizing**RJ45**cables.
 
 Deployment advantages:
 
@@ -19,4 +19,4 @@ Think of Ethernet as a**"High-Speed Private Train Track."**
 
 Wi-Fi is like driving on a busy public highway—it's convenient and mobile, but it can get congested with traffic or lose signal in tunnels.
 
-* *Ethernet**is a direct, solid, and dedicated line that is much faster and more reliable. It ensures that when the school is updating 100 iPads at once, the internet doesn't "stutter" or drop out, delivering the data directly to each station without delays.
+* **Ethernet**is a direct, solid, and dedicated line that is much faster and more reliable. It ensures that when the school is updating 100 iPads at once, the internet doesn't "stutter" or drop out, delivering the data directly to each station without delays.

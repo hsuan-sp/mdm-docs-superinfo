@@ -6,7 +6,7 @@ term: Jamf School
 ---
 ## 術語定義
 
-* *Jamf School** 是專為 K-12 教育環境量身打造的 MDM 解決方案。
+* **Jamf School** 是專為 K-12 教育環境量身打造的 MDM 解決方案。
 
 其設計核心聚焦於：
 

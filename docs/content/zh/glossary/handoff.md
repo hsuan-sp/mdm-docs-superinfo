@@ -5,7 +5,7 @@ term: Handoff（接力）
 ---
 ## 術語定義
 
-* *Handoff (接力)** 是 Apple**Continuity (接續互通)** 框架的核心功能，讓工作能在不同裝置間無縫流轉。
+* **Handoff (接力)** 是 Apple**Continuity (接續互通)** 框架的核心功能，讓工作能在不同裝置間無縫流轉。
 
 它需要雙方裝置登入相同的 Apple 帳號並開啟藍牙/Wi-Fi：
 

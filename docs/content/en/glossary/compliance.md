@@ -5,7 +5,7 @@ term: Compliance
 ---
 ## Term Definition
 
-* *Compliance**measures whether a managed device currently satisfies the organization’s mandatory security and configuration standards.
+* **Compliance**measures whether a managed device currently satisfies the organization’s mandatory security and configuration standards.
 
 Typical compliance checks include:
 

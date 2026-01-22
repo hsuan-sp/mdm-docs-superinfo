@@ -5,7 +5,7 @@ term: Face ID
 ---
 ## Term Definition
 
-* *Face ID**is Apple’s advanced facial recognition biometric authentication system.
+* **Face ID**is Apple’s advanced facial recognition biometric authentication system.
 
 Technical security:
 

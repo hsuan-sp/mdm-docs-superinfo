@@ -5,11 +5,11 @@ term: Restricted Software
 ---
 ## 術語定義
 
-* *Restricted Software (受限軟體)** 是 Jamf Pro 中的一種黑名單機制，用來禁止特定的應用程式執行。
+* **Restricted Software (受限軟體)** 是 Jamf Pro 中的一種黑名單機制，用來禁止特定的應用程式執行。
 
 它的運作方式：
 
-* **監控**：系統會持續監控是否有被列入黑名單的程式（例如 `Steam.app`或`Install macOS Beta.app`）正在執行。
+* **監控**：系統會持續監控是否有被列入黑名單的程式（例如 `Steam.app` 或 `Install macOS Beta.app`）正在執行。
 * **強制關閉**：一旦使用者嘗試打開這些 App，系統會立刻將其**「強制結束 (Kill)」**。
 
 * **處置與警告**：管理員還可以設定是否要直接刪除該 App，並跳出一個警告視窗告訴使用者為什麼不能用（例如：「校規禁止安裝遊戲」）。

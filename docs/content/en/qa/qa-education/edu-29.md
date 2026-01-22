@@ -15,7 +15,7 @@ title: >-
 
 ## Answer
 
-* *MDM should not just be a 'restrictor,' but a 'guardrail' for Digital Citizenship education. With the features in iOS 26, administrators can guide students toward responsible AI and technology habits.**
+* **MDM should not just be a 'restrictor,' but a 'guardrail' for Digital Citizenship education. With the features in iOS 26, administrators can guide students toward responsible AI and technology habits.**
 
 ## The New Role of MDM in Behavior Management
 

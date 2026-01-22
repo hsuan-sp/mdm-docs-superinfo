@@ -5,7 +5,7 @@ term: Install Application
 ---
 ## Term Definition
 
-* *"Install Application"**is the fundamental MDM command sent to a device to initiate software deployment.
+* **"Install Application"**is the fundamental MDM command sent to a device to initiate software deployment.
 
 Operational flow:
 

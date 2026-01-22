@@ -5,7 +5,7 @@ term: Casper Suite
 ---
 ## Term Definition
 
-* *Casper Suite**was the original product name for the enterprise Apple management platform now known as**Jamf Pro**.
+* **Casper Suite**was the original product name for the enterprise Apple management platform now known as**Jamf Pro**.
 
 Historical context:
 

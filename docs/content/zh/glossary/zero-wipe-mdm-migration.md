@@ -5,7 +5,7 @@ term: Zero-Wipe MDM Migration (零抹除 MDM 遷移)
 ---
 ## 術語定義
 
-* *Zero-Wipe MDM Migration (零抹除 MDM 遷移)** 是現代化作業系統（iOS 26+ / macOS Tahoe+）支援的進階功能，允許裝置在「保留使用者資料」的情況下，從舊 MDM 伺服器無痛轉移至新 MDM 伺服器。
+* **Zero-Wipe MDM Migration (零抹除 MDM 遷移)** 是現代化作業系統（iOS 26+ / macOS Tahoe+）支援的進階功能，允許裝置在「保留使用者資料」的情況下，從舊 MDM 伺服器無痛轉移至新 MDM 伺服器。
 
 運作方式：
 

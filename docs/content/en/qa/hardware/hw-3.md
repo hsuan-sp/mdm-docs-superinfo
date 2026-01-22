@@ -16,7 +16,7 @@ title: >-
 
 ## Answer
 
-* *AirDrop and AirPlay operate differently: AirDrop uses Peer-to-Peer communication, while AirPlay relies heavily on your campus network configuration.**
+* **AirDrop and AirPlay operate differently: AirDrop uses Peer-to-Peer communication, while AirPlay relies heavily on your campus network configuration.**
 
 ## AirDrop Troubleshooting (Point-to-Point):
 

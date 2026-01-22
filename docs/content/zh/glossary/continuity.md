@@ -5,7 +5,7 @@ term: Continuity（接續互通）
 ---
 ## 術語定義
 
-* *Continuity (接續互通)** 是 Apple 生態系統中多項無縫整合技術的統稱。
+* **Continuity (接續互通)** 是 Apple 生態系統中多項無縫整合技術的統稱。
 
 它讓登入同一 **Apple ID** 的不同裝置（iPhone, iPad, Mac）能夠協同工作，主要功能包括：
 

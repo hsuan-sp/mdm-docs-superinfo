@@ -5,7 +5,7 @@ term: Payload
 ---
 ## 術語定義
 
-* *Payload (設定承載)** 是 MDM 描述檔 (Configuration Profile) 中的最小設定單位。
+* **Payload (設定承載)** 是 MDM 描述檔 (Configuration Profile) 中的最小設定單位。
 
 它的特性包括：
 

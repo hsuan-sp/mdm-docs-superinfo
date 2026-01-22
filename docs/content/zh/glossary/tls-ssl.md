@@ -5,7 +5,7 @@ term: TLS / SSL
 ---
 ## 術語定義
 
-* *TLS (Transport Layer Security)** 及其前身**SSL (Secure Sockets Layer)** 是用於保護網路通訊安全的加密協定。
+* **TLS (Transport Layer Security)** 及其前身**SSL (Secure Sockets Layer)** 是用於保護網路通訊安全的加密協定。
 
 核心功能：
 

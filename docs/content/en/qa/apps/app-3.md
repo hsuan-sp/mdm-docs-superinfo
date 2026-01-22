@@ -14,7 +14,7 @@ title: 'If the App Store is hidden, how can students get the apps they need for 
 
 ## Answer
 
-* *Even when the official App Store is disabled via a management profile, students can still safely acquire apps through the "Self Service" app.**
+* **Even when the official App Store is disabled via a management profile, students can still safely acquire apps through the "Self Service" app.**
 
 ## The Role of Self Service:
 

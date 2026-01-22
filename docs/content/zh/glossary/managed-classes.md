@@ -6,7 +6,7 @@ term: Managed Classes（管理化班級）
 ---
 ## 術語定義
 
-* *Managed Classes (管理化班級)** 是在 MDM 或 Apple School Manager 中定義的教學群組。
+* **Managed Classes (管理化班級)** 是在 MDM 或 Apple School Manager 中定義的教學群組。
 
 資料結構包含：
 

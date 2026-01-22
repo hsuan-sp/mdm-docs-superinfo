@@ -5,7 +5,7 @@ term: Wi-Fi Payload
 ---
 ## 術語定義
 
-* *Wi-Fi Payload (Wi-Fi 設定單元)** 是 MDM 描述檔 (Profile) 中的一個設定區塊，專門用來管理無線網路連線。
+* **Wi-Fi Payload (Wi-Fi 設定單元)** 是 MDM 描述檔 (Profile) 中的一個設定區塊，專門用來管理無線網路連線。
 
 包含資訊：
 

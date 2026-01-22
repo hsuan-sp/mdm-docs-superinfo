@@ -5,7 +5,7 @@ term: LDAP
 ---
 ## Term Definition
 
-* *Lightweight Directory Access Protocol (LDAP)**is an open, vendor-neutral standard for accessing and maintaining distributed directory information services.
+* **Lightweight Directory Access Protocol (LDAP)**is an open, vendor-neutral standard for accessing and maintaining distributed directory information services.
 
 Common uses in MDM:
 

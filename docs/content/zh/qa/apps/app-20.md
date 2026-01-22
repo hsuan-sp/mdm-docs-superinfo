@@ -13,9 +13,9 @@ title: 新架構：什麼是「宣告式 App 管理 (Declarative App Management)
 
 ## Answer
 
-* *這是 Apple MDM 協定的重大演進，讓裝置能根據伺服器發出的「宣告 (Declarations)」，**
-* *自主維持 App 的安裝狀態。**
-* *與傳統 MDM 的核心差異**：
+* **這是 Apple MDM 協定的重大演進，讓裝置能根據伺服器發出的「宣告 (Declarations)」，**
+* **自主維持 App 的安裝狀態。**
+* **與傳統 MDM 的核心差異**：
 
 1. **預期狀態管理 (Desired State Management)**：
 
@@ -28,13 +28,13 @@ title: 新架構：什麼是「宣告式 App 管理 (Declarative App Management)
  裝置會 **持續監控**，一旦發現 App 被移除或狀態不符，會自動觸發重新下載，
  確保裝置始終符合管理員定義的狀態。
 
-2. **狀態通道 (Status Channel)**：
+1. **狀態通道 (Status Channel)**：
 
-* 裝置會透過輕量級的狀態通道，**主動** 向 Jamf Pro 回報 App 的詳細安裝進度
+* **裝置會透過輕量級的狀態通道，**主動** 向 Jamf Pro 回報 App 的詳細安裝進度
 
  （如：等待中、安裝中、驗證失敗）。這比傳統的「伺服器輪詢 (Polling)」更即時且節省網路流量。
 
-3. **邏輯判斷 (Predicates)**：
+1. **邏輯判斷 (Predicates)**：
 
 * 管理員可以設定安裝條件（例如：「僅在裝置版本 > iOS 17 時安裝」）。
 

@@ -14,7 +14,7 @@ title: 'I ''purchased'' an app in ASM, but it''s not appearing in my Jamf Pro li
 
 ## Answer
 
-* *This is usually due to a synchronization delay between Apple’s servers and your MDM server.**
+* **This is usually due to a synchronization delay between Apple’s servers and your MDM server.**
 
 ## The Sync Mechanism:
 

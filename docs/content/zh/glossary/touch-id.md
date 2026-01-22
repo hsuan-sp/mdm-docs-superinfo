@@ -5,7 +5,7 @@ term: Touch ID
 ---
 ## 術語定義
 
-* *Touch ID** 是 Apple 的指紋身分識別感測器。
+* **Touch ID** 是 Apple 的指紋身分識別感測器。
 
 教育場景應用：
 

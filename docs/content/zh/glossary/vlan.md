@@ -5,7 +5,7 @@ term: VLAN
 ---
 ## 術語定義
 
-* *VLAN (Virtual Local Area Network)** 是一種在實體網路交換器上切分出的虛擬子網段技術。
+* **VLAN (Virtual Local Area Network)** 是一種在實體網路交換器上切分出的虛擬子網段技術。
 
 應用方式：
 

@@ -5,7 +5,7 @@ term: Deprecated
 ---
 ## Term Definition
 
-* *Deprecated**is a status indicator signal that a specific technology, feature, or API is slated for removal.
+* **Deprecated**is a status indicator signal that a specific technology, feature, or API is slated for removal.
 
 Key points for IT:
 

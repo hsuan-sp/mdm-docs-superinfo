@@ -14,7 +14,7 @@ title: iOS 26 的「Return to Service 保留 App」功能如何運作？實際�
 
 ## Answer
 
-* *iOS 26、iPadOS 26 與 visionOS 26 的 Return to Service 可選擇保留 Managed App 的程式本體（Preserve Managed Apps），在清除使用者資料的同時，省去重新下載 GB 級教學 App 的巨大時間成本與網路頻寬壓力。**
+* **iOS 26、iPadOS 26 與 visionOS 26 的 Return to Service 可選擇保留 Managed App 的程式本體（Preserve Managed Apps），在清除使用者資料的同時，省去重新下載 GB 級教學 App 的巨大時間成本與網路頻寬壓力。**
 
 ## 技術運作原理
 
@@ -52,7 +52,7 @@ title: iOS 26 的「Return to Service 保留 App」功能如何運作？實際�
 | 清除資料 | 2-3 分鐘 | 2-3 分鐘 |
 | 重新啟動 | 1-2 分鐘 | 1-2 分鐘 |
 | 重新註冊 | 1-2 分鐘 | 1-2 分鐘 |
-| App 下載安裝 | **30-60 分鐘** | **0 分鐘**（已保留） |
+| App 下載安裝 | **30-60 分鐘**|**0 分鐘**（已保留） |
 | 總計 | 35-65 分鐘 | 5-10 分鐘 |
 
 ## 網路頻寬節省
@@ -69,9 +69,7 @@ title: iOS 26 的「Return to Service 保留 App」功能如何運作？實際�
 3. 選擇 **Return to Service** 指令
 4. 設定以下選項：
 
-*✅**Clear Activation Lock**（清除啟用鎖定）
-*✅**Retain Wi-Fi Profile**（保留 Wi-Fi 設定）
-*✅**Preserve Managed Apps**（保留受管理的 App，iOS 26 新選項）
+**✅** Clear Activation Lock**（清除啟用鎖定） **✅** Retain Wi-Fi Profile**（保留 Wi-Fi 設定） **✅** Preserve Managed Apps**（保留受管理的 App，iOS 26 新選項）
 
 1. 執行指令
 
@@ -130,7 +128,7 @@ title: iOS 26 的「Return to Service 保留 App」功能如何運作？實際�
 
 ## 效益評估
 
-* *假設學校需要同時重置 30 台 iPad**：
+* **假設學校需要同時重置 30 台 iPad**：
 
 | 項目 | 傳統方式（重新下載 App） | iOS 26 保留 App |
 | :--- | :--- | :--- |
@@ -140,7 +138,7 @@ title: iOS 26 的「Return to Service 保留 App」功能如何運作？實際�
 
 * 假設學校有部署快取伺服器（Content Caching），時間可能可縮短至 30-60 分鐘
 
-* *核心優勢**：
+* **核心優勢**：
 
 * 大幅減少網路頻寬壓力
 * 可在課間休息時間快速完成

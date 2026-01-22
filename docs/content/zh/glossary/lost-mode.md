@@ -5,7 +5,7 @@ term: Lost Mode (遺失模式)
 ---
 ## 術語定義
 
-* *Lost Mode (遺失模式)** 是專為受監管 (Supervised) 的 iOS 與 iPadOS 裝置設計的強力救援機制。
+* **Lost Mode (遺失模式)** 是專為受監管 (Supervised) 的 iOS 與 iPadOS 裝置設計的強力救援機制。
 
 當 IT 啟動此模式時：
 

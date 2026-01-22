@@ -9,9 +9,10 @@ An**Activation Lock Bypass Code**is a unique alphanumeric string that an MDM ser
 
 This code is essential for device lifecycle management:
 
-*    If a user leaves the organization without signing out of their personal**Apple Account**(leaving the device "locked").
-*    An IT administrator can enter this specific code in the password field to bypass the lock.
-*    This allows the device to be erased and prepared for a new user.
+* **If a user leaves the organization without signing out of their personal**Apple Account**(leaving the device "locked").
+
+* **An IT administrator can enter this specific code in the password field to bypass the lock.**
+* **This allows the device to be erased and prepared for a new user.**
 
 ## Analogy
 

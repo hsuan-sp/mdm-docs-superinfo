@@ -5,7 +5,7 @@ term: Extension Attribute (擴充屬性)
 ---
 ## 術語定義
 
-* *Extension Attribute (擴充屬性)** 是 Jamf Pro 提供的強大客製化功能。
+* **Extension Attribute (擴充屬性)** 是 Jamf Pro 提供的強大客製化功能。
 
 標準的 MDM 只能收集預設資訊（如序號、型號、OS 版本）。EA 允許管理員透過 **Script (Bash/Python)**或**輸入欄位**，收集任何你想知道的額外資訊，例如：
 
