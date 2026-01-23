@@ -1,6 +1,8 @@
 ---
 term: "Inventory Collection"
+
 category: ["Jamf", "Core"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Jamf", "Core"]
 Jamf Pro 預設每天會自動執行一次，收集的資料包括：
 
 - **硬體資訊** ：序號、型號、MAC 位址、電池健康度。
+
 - **軟體狀態** ：作業系統版本、已安裝 App 清單。
 - **管理屬性** ：Extension Attributes (擴充屬性) 的值。
 

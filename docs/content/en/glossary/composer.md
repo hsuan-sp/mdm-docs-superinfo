@@ -1,6 +1,8 @@
 ---
 term: "Composer"
+
 category: ["macOS", "Jamf"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["macOS", "Jamf"]
 Key functionalities:
 
 - **Snapshots** : Monitors a Mac's filesystem during a software installation to identify exactly what files were added or modified.
+
 - **Packaging** : Bundles these changes into a standardized **.pkg** or **.dmg** installer.
 - **Customization** : Allows administrators to include specific configuration files or licenses within an app installer.
 

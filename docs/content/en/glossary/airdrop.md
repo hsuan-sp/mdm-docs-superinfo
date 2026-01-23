@@ -1,6 +1,8 @@
 ---
 term: "AirDrop"
+
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Core"]
 Management considerations:
 
 - **Collaboration** : Excellent for quick document sharing in classrooms.
+
 - **Security Risks** : Can be used for unsolicited or unauthorized file transfers.
 - **Restrictions** : MDM can restrict AirDrop to **"Managed Contacts Only"** or disable it entirely to maintain a safe learning environment.
 

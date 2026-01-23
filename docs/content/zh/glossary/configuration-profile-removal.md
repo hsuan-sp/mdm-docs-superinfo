@@ -1,6 +1,8 @@
 ---
 term: "Configuration Profile Removal（描述檔移除）"
+
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Core"]
 執行後會連帶移除該描述檔所包含的所有資源：
 
 - **憑證** ：用於 Wi-Fi 或 VPN 的身分認證憑證。
+
 - **設定** ：Wi-Fi 密碼、Email 帳號設定、VPN 通道設定。
 - **限制** ：例如相機禁用、截圖限制等管控條款。
 

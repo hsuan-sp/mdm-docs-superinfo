@@ -1,6 +1,8 @@
 ---
 term: "Face ID"
+
 category: ["Hardware"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Hardware"]
 其技術與安全性特點包括：
 
 - **TrueDepth 相機** ：投射並分析超過 30,000 個隱形紅外線光點，建立使用者臉部的精確 **3D 數學模型** 。
+
 - **Secure Enclave** ：所有臉部資料皆經過加密，並僅儲存在裝置的 **Secure Enclave** 安全晶片中， **絕不會** 上傳至 Apple 伺服器或 iCloud 備份。
 - **MDM 管控** ：管理員可強制要求裝置必須設定 Face ID (或 Touch ID) 才能解鎖或存取特定的企業 App，作為密碼之外的強大防線。
 

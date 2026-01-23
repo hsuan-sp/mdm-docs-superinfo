@@ -1,6 +1,8 @@
 ---
 term: "Restricted Software"
+
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Security"]
 Capabilities:
 
 - **Detection** : Monitors the system for the launch of a specific process name (e.g., `Steam.app` or `Install macOS Beta.app`).
+
 - **Kill Process** : The moment the user tries to open the app, the system immediately forces it to quit.
 - **Remediation** : Can be configured to delete the application entirely and display a warning message explaining why it is not allowed.
 

@@ -1,9 +1,14 @@
 ---
 id: app-19
+
 title: "如何將 iPad 鎖定在「單一 App」進行考試？能設定讓學生自行退出嗎？"
+
 category: "第三部分：應用程式分發與管理 (Apps & Books)"
+
 important: true
+
 tags: ["單一 App 模式", "ASAM", "考試模式", "風險警示"]
+
 ---
 
 **標準的「單一 App 模式」無法由使用者自行退出。若需要保留退出彈性，應改用「自主單一 App 模式 (ASAM)」。**

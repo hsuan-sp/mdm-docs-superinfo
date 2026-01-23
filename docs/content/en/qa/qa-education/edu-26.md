@@ -1,10 +1,16 @@
 ---
 id: edu-26
+
 title: "How do teachers manage Apple Intelligence 'Writing Tools' in the classroom?"
+
 category: "Section 8: Education Scenarios"
+
 important: true
+
 tags:
+
   ["Apple Intelligence", "Writing Tools", "AI Management", "Academic Integrity"]
+
 ---
 
 **Apple Intelligence's 'Writing Tools' are powerful assistants, but they raise concerns about academic integrity during composition or language exams. Teachers can manage these through MDM restrictions or real-time monitoring via the Classroom app.**
@@ -16,6 +22,7 @@ tags:
 IT administrators can configure specific restrictions in the Jamf Pro profile:
 
 - **Full Disable**: Best for high-stakes exam periods.
+
 - **Granular Block**: Schools can choose to disable the "Rewrite" feature (preventing AI from writing the essay) while allowing the "Proofread" and "Summarize" features for daily learning support.
 - **Managed Apple Account Compliance**: On school-managed devices, Writing Tools data is processed with strict privacy protocols, ensuring student data is never used for model training.
 
@@ -24,6 +31,7 @@ IT administrators can configure specific restrictions in the Jamf Pro profile:
 iOS 26 enhances a teacher’s visibility into the student's activity:
 
 - **Screen View**: Teachers can see in real-time if a student has the Writing Tools floating panel open on their screen.
+
 - **Class Summary**: After a session ends, the "Class Summary" report can indicate which students utilized AI assistance during their writing time.
 
 ### 3. Utilizing Assessment Mode

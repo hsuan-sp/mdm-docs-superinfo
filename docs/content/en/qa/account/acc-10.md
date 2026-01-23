@@ -1,9 +1,14 @@
 ---
 id: acc-10
+
 title: "Our school email domain has changed (e.g., from .edu.tw to .xh.edu.tw). How do I update the Managed Apple Accounts?"
+
 category: "Section 1: Account & Server Management"
+
 important: false
+
 tags: ["Domain Change", "Account Management", "Major Migration"]
+
 ---
 
 **This involves a major underlying system change.** Since the format of a Managed Apple Account changes with the domain, it directly affects user login identities.
@@ -25,11 +30,13 @@ tags: ["Domain Change", "Account Management", "Major Migration"]
 ### Step 2: Batch Update Account Formats
 
 - **For Manually Managed Accounts**:
+
   1. Export all users as a CSV from the "Users" list.
   2. Find & Replace the domain part of the "Managed Apple Account" column in the CSV with the new domain.
   3. Re-upload the updated CSV via the import function.
 
 - **For Federated Authentication (Google / Microsoft)**:
+
   1. **Critical Order**: You must first complete the email domain migration on the Google or Microsoft side.
   2. Return to ASM to trigger a re-sync.
   3. ASM will detect the email changes and automatically update the corresponding Managed Apple Accounts.

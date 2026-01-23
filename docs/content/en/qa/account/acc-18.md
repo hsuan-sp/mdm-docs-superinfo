@@ -1,9 +1,14 @@
 ---
 id: acc-18
+
 title: "How do I transfer VPP App licenses smoothly when changing MDM providers?"
+
 category: "Section 1: Account & Server Management"
+
 important: false
+
 tags: ["VPP", "MDM Migration", "License Reclamation"]
+
 ---
 
 **You do not need to repurchase anything. App licenses are tied to the 'Location' in Apple School Manager (ASM), not to a specific MDM software.**

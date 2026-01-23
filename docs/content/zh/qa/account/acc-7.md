@@ -1,9 +1,14 @@
 ---
 id: acc-7
+
 title: "我可以使用個人的 Apple 帳號登入學校的 iPad 嗎？"
+
 category: "第一部分：帳號與伺服器管理 (Account & Server Management)"
+
 important: false
+
 tags: ["個人 Apple 帳號", "管理式 Apple 帳號", "存取控制"]
+
 ---
 
 **標準政策：不建議。學校裝置應優先使用「管理式 Apple 帳號 (Managed Apple Account)」，或在不登入帳號的情況下使用。**

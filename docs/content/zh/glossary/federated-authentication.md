@@ -1,6 +1,8 @@
 ---
 term: "Federated Authentication (聯合驗證)"
+
 category: ["Apple"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Apple"]
 支援的服務包括 **Microsoft Entra ID (Azure AD)** 與 **Google Workspace** 。
 
 - **單一登入 (SSO)** ：員工或學生可使用原本的學校 Email 與密碼登入 **管理式 Apple 帳號 (Managed Apple Account)** 。
+
 - **帳號整合** ：無需再記憶另一組 Apple ID 專用密碼，減少忘記密碼的困擾。
 - **安全性** ：直接沿用企業原本的 **MFA (多因素驗證)** 政策，提升帳號安全。
 

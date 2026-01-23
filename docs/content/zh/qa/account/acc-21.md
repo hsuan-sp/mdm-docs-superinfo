@@ -1,9 +1,14 @@
 ---
 id: acc-21
+
 title: "「moemdm」跟「Jamf Pro」是一樣的東西嗎？為什麼學校需要兩個帳號？"
+
 category: "第一部分：帳號與伺服器管理 (Account & Server Management)"
+
 important: true
+
 tags: ["moemdm", "教育部", "Jamf Pro", "架構说明"]
+
 ---
 
 **兩者完全不同。Jamf Pro 是真正的「遙控器（管理系統）」，而 moemdm 是教育部的「儀表板（回報平台）」。**
@@ -30,4 +35,5 @@ tags: ["moemdm", "教育部", "Jamf Pro", "架構说明"]
 ## 實務建議 ：
 
 若要檢查裝置是否故障或更換 App，請登入 **Jamf Pro** 。
+
 若要查看學校的 KPI 是否達標或填寫期末報表，請登入 **moemdm** 。

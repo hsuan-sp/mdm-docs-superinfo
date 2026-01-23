@@ -1,9 +1,14 @@
 ---
 id: edu-26
+
 title: "老師如何管理 iOS 26 的 Apple Intelligence「寫作工具」？"
+
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
+
 important: true
+
 tags: ["Apple Intelligence", "寫作工具", "AI 管理", "測驗安全"]
+
 ---
 
 **Apple Intelligence 的「寫作工具 (Writing Tools)」是強大的輔助，但在語文課或測驗中需妥善控管。**老師可以透過行政端的 MDM 設定，或課堂當下的工具進行監管與引導。
@@ -15,6 +20,7 @@ tags: ["Apple Intelligence", "寫作工具", "AI 管理", "測驗安全"]
 在 Jamf Pro 的限制描述檔中設定：
 
 - **完全禁用寫作工具**：適用於作文大考或語文競賽期間。
+
 - **分級開放**：在日常教學中開放「摘要」功能（練習重點擷取），但在考試時關閉「改寫」與「校對」功能。
 
 ### 2. 「課堂 (Classroom)」App 的即時視角 (動態管理)
@@ -22,6 +28,7 @@ tags: ["Apple Intelligence", "寫作工具", "AI 管理", "測驗安全"]
 iOS 26 強化了老師對學生設備狀態的感知：
 
 - **螢幕檢視**：老師可以即時看到學生是否啟用了 Writing Tools 的浮動面板。
+
 - **課堂總結**：課堂結束後，老師可以查看哪些學生在撰寫過程中頻繁啟用了 AI 輔助，作為差異化教學策略的參考。
 
 ### 3. 使用 Assessment Mode (測驗模式)

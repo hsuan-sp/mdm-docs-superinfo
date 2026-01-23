@@ -1,6 +1,8 @@
 ---
 term: "Lightning Connector"
+
 category: ["Hardware"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Hardware"]
 硬體特性背景：
 
 - **廣泛支援** ：曾是 iPhone 5 至 iPhone 14，以及第 9 代 iPad 以前的標準充電孔。
+
 - **傳輸速度** ：主要支援 USB 2.0 速度（相較於現代 USB-C 較慢）。
 - **逐步淘汰** ：雖然新款裝置已全面轉向 **USB-C** ，但由於學校 iPad 使用年限長，目前校園內仍有大量裝置使用此介面。
 

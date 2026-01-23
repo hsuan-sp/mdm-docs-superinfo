@@ -1,6 +1,8 @@
 ---
 term: "Unified Logging"
+
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Core"]
 Key features:
 
 - **Centralization** : Collects logs from the kernel, drivers, and user apps into one single database.
+
 - **Privacy** : Automatically redacts sensitive info (like passwords) unless a special profile is installed.
 - **Troubleshooting** : Administrators use the `log` command or **Console.app** to view these streams. It is the definitive way to find out*why*a profile failed to install or*why* an app is crashing.
 

@@ -1,9 +1,14 @@
 ---
 id: enr-22
+
 title: "The school is changing its Wi-Fi SSID. How do I prevent iPads from losing connectivity?"
+
 category: "Section 2: Device Enrollment & Deployment"
+
 important: true
+
 tags: ["Wi-Fi Migration", "SSID", "Disaster Prevention", "Network Config"]
+
 ---
 
 **This is a common maintenance task that frequently leads to mass disconnections. You must follow the 'Parallel Deployment' principle: Never delete the old setting until the new network is verified as functional.**

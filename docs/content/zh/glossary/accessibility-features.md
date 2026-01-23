@@ -1,6 +1,8 @@
 ---
 term: "Accessibility Features (輔助使用功能)"
+
 category: ["Apple"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Apple"]
 關鍵工具包括：
 
 - **視覺 (Vision)** ：VoiceOver（螢幕朗讀）、縮放與放大鏡。
+
 - **聽覺 (Hearing)** ：即時字幕 (Live Captions)、Made for iPhone 助聽設備支援。
 - **動作 (Motor)** ：語音控制、切換控制與輔助觸控 (AssistiveTouch)。
 - **認知 (Cognitive)** ：輔助存取 (Assisted Access) 與背景聲音。

@@ -1,6 +1,8 @@
 ---
 term: "Apple Classroom (Apple 課堂)"
+
 category: ["Education"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Education"]
 核心功能包括：
 
 - **畫面監看 (Screen View)** ：教師可即時監看學生的 iPad 畫面。
+
 - **鎖定 App (App Lock)** ：將全班鎖定在特定的 App 或網站，讓學生專注學習。
 - **資源共享** ：一鍵將文件、網頁連結或學生的畫面分享到 Apple TV 或全班同學。
 

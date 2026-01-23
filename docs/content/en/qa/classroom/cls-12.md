@@ -1,16 +1,28 @@
 ---
 id: cls-12
+
 title: "How do I prevent students from cheating using Apple Intelligence (Writing Tools) or Math Notes?"
+
 category: "Section 4: Classroom Management & Instructional Tools"
+
 important: false
+
 tags:
+
   [
+
     "Apple Intelligence",
+
     "Writing Tools",
+
     "Math Notes",
+
     "Anti-Cheating",
+
     "iOS 18",
+
   ]
+
 ---
 
 **For devices running iOS 26+, administrators should use 'Declarative Device Management (DDM)' for real-time control.**

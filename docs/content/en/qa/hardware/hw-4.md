@@ -1,9 +1,14 @@
 ---
 id: hw-4
+
 title: "The screen is cracked or the touch response is failing. How is warranty vs. accidental damage determined?"
+
 category: "Section 6: Hardware & Maintenance"
+
 important: false
+
 tags: ["Warranty Policy", "VMI", "Inspection Standards", "Repairs"]
+
 ---
 
 **Apple hardware inspections follow the "Visual Mechanical Inspection (VMI)" standard to determine if a repair is covered by the limited warranty or considered out-of-warranty accidental damage.**

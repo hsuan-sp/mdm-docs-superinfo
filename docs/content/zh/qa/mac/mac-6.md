@@ -1,9 +1,14 @@
 ---
 id: mac-6
+
 title: "Mac 電腦教室如何像還原卡一樣，快速清除重置 (Wipe)？"
+
 category: "第七部分：Mac 裝置管理 (Mac Management)"
+
 important: false
+
 tags: ["重置", "EACS", "抹除所有內容", "電腦教室", "Imaging"]
+
 ---
 
 **Apple Silicon (M 系列) 時代已不建議，而且可能也無法使用「還原卡」或「Ghost」。** 請改用「清除所有內容和設定 (EACS)」指令。
@@ -23,12 +28,17 @@ tags: ["重置", "EACS", "抹除所有內容", "電腦教室", "Imaging"]
 ## 三、 標準重置 SOP (Jamf Pro)：
 
 1.  **發送指令** ：
+
     - 對目標電腦群組發送 **「清除電腦 (Wipe Computer)」** 指令。
     - **關鍵** ：針對 Apple Silicon 與配備 T2 晶片的 Mac，此指令會觸發 **EACS (Erase All Content and Settings)** 。
+
 1.  **執行過程 (數分鐘內)** ：
+
     - 系統會瞬間丟棄加密金鑰（Cryptographic Erase），資料幾秒內即無法讀取。
     - 電腦重開機，回到「哈囉 (Hello)」畫面。
+
 1.  **自動部署 (Zero-Touch)** ：
+
     - 電腦連上網路（需規劃好免驗證 Wi-Fi 或有線網路）。
     - 自動觸發 **ADE (自動裝置註冊)** 。
     - 自動從 Jamf Pro 下載 **PreStage Enrollment** 設定。

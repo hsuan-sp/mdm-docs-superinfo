@@ -1,9 +1,14 @@
 ---
 id: cls-10
+
 title: "How can a teacher 'Log Out' all students from Shared iPads after class?"
+
 category: "Section 4: Classroom Management & Instructional Tools"
+
 important: false
+
 tags: ["Shared iPad", "Log Out Command", "Intelligent Caching"]
+
 ---
 
 **When using 'Shared iPad' deployments, teachers should trigger a 'Log Out' action at the end of class to prepare the devices for the next group of users.**

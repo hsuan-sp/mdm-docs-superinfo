@@ -1,6 +1,8 @@
 ---
 term: "VLAN"
+
 category: ["Network"]
+
 ---
 
 ## Definition

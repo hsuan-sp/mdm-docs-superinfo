@@ -1,6 +1,8 @@
 ---
 term: "ABM (Apple Business Manager)"
+
 category: ["Apple"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Apple"]
 Key functionalities include:
 
 - **Device Management** : Assigning devices to MDM servers via **Automated Device Enrollment (ADE)** .
+
 - **Content Distribution** : Purchasing apps and books in volume through the **Volume Purchase Program (VPP)** .
 - **Identity Management** : Creating and managing **Managed Apple Accounts** for employees.
 

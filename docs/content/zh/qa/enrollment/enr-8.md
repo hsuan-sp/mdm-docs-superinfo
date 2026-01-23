@@ -1,9 +1,14 @@
 ---
 id: enr-8
+
 title: "註冊時出現「設定描述檔安裝失敗 (Profile Installation Failed)」？"
+
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
+
 important: false
+
 tags: ["故障排除", "網路", "宣告式管理", "描述檔"]
+
 ---
 
 **此錯誤通常源於裝置無法與 MDM 伺服器或 Apple 伺服器建立穩定且受信任的安全連線。** 在嘗試註冊（Enrollment）過程中，若出現此提示，請依序排除以下常見成因：

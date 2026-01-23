@@ -1,6 +1,8 @@
 ---
 term: "Apple Configurator"
+
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Core"]
 It is primarily used for:
 
 - **Bulk Provisioning** : Setting up many devices via a wired connection.
+
 - **ABM Addition** : Manually adding devices (not purchased through enterprise channels) into **Apple Business Manager** .
 - **Restoration** : Reinstalling device firmware (IPSW) or reviving a "bricked" device.
 

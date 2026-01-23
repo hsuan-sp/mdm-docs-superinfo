@@ -1,6 +1,8 @@
 ---
 term: "Continuity（接續互通）"
+
 category: ["Apple"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Apple"]
 它讓登入同一 **Apple ID** 的不同裝置（iPhone, iPad, Mac）能夠協同工作，主要功能包括：
 
 - **Handoff (接力)** ：在 iPhone 上寫一半的郵件，在 Mac 上繼續寫。
+
 - **Universal Control (通用控制)** ：用一組鍵盤滑鼠同時控制 iPad 和 Mac。
 - **AirPlay / AirDrop** ：影音投放與檔案傳輸。
 - **iPhone Mirroring (iPhone 鏡像)** ：在 Mac 螢幕上操作 iPhone (iOS 26/macOS 26)。

@@ -1,15 +1,26 @@
 ---
 id: cls-11
+
 title: "Why can't I see the device's real MAC address after iPadOS 17? (Private Wi-Fi Address)"
+
 category: "Section 4: Classroom Management & Instructional Tools"
+
 important: true
+
 tags:
+
   [
+
     "MAC Address",
+
     "Private Wi-Fi Address",
+
     "Privacy Features",
+
     "Network Management",
+
   ]
+
 ---
 
 **This is because Apple enables the 'Private Wi-Fi Address' feature by default.**
@@ -17,6 +28,7 @@ tags:
 In newer versions of iOS/iPadOS, this feature offers two modes:
 
 - **Fixed Mode** (Default): Provides a unique, random MAC address for a specific Wi-Fi network to prevent cross-network tracking.
+
 - **Rotating Mode**: Changes the MAC address approximately every two weeks for maximum security.
 
 Since the device broadcasts a virtual MAC, traditional network management systems cannot identify the hardware.

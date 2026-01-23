@@ -1,9 +1,14 @@
 ---
 id: acc-5
+
 title: "我們學校有使用 Google Workspace / Microsoft 365，可以用這些帳號登入 Apple 服務嗎？"
+
 category: "第一部分：帳號與伺服器管理 (Account & Server Management)"
+
 important: false
+
 tags: ["聯合驗證", "Google Workspace", "Microsoft Entra ID", "SSO"]
+
 ---
 
 **可以，這稱為「聯合驗證 (Federated Authentication)」，能讓師生使用學校現有的 Google 或 Microsoft 帳號登入 Apple 服務。**

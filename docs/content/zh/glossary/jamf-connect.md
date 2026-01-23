@@ -1,6 +1,8 @@
 ---
 term: "Jamf Connect"
+
 category: ["Jamf", "Security", "macOS"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Jamf", "Security", "macOS"]
 其核心優勢包括：
 
 - **統一登入** ：允許使用者直接使用 Google Workspace 或 Microsoft Entra ID 等雲端帳號登入 Mac。
+
 - **密碼同步** ：確保當你在雲端更改密碼後，Mac 的登入密碼也會自動同步更新，避免「密碼打架」。
 - **多重驗證 (MFA)** ：在首次登入時可強制要求 MFA 驗證，大幅提升安全性。
 - **零接觸部署** ：讓新員工或學生自行開箱即用，系統會自動建立正確權限的本機帳號。

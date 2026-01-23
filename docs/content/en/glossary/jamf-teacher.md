@@ -1,6 +1,8 @@
 ---
 term: "Jamf Teacher"
+
 category: ["Jamf", "Education"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Jamf", "Education"]
 Core capabilities:
 
 - **App Lock** : Force a class of iPads into a single specific app (e.g., a calculator or a quiz app).
+
 - **Web Restrictions** : Create a "Safe List" of websites that students are allowed to visit during a specific lesson.
 - **Content Pushing** : Instantly send links, documents, or apps to every student at once.
 - **Attention Request** : Send notifications to student screens to get their attention during a transition.

@@ -1,9 +1,14 @@
 ---
 id: acc-19
+
 title: "How do I control access to Apple Intelligence features for Managed Apple Accounts?"
+
 category: "Section 1: Account & Server Management"
+
 important: false
+
 tags: ["Apple Intelligence", "Service Access", "ASM"]
+
 ---
 
 **Administrators can determine whether to allow AI features through the 'Service Access' settings in Apple School Manager (ASM).**

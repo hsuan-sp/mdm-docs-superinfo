@@ -1,6 +1,8 @@
 ---
 term: "Supervision"
+
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Core"]
 Capabilities unlocked by Supervision:
 
 - **Silent App Install** : Push apps without asking the user for permission.
+
 - **Kiosk Mode** : Lock the device into a single app (Single App Mode).
 - **Web Filtering** : Enforce global HTTP proxies to filter content.
 - **Lost Mode** : Locate the device if it goes missing.

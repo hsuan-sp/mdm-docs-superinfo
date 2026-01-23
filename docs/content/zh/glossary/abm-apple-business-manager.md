@@ -1,6 +1,8 @@
 ---
 term: "ABM (Apple Business Manager)"
+
 category: ["Apple"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Apple"]
 關鍵功能包括：
 
 - **裝置管理** ：透過 **自動裝置註冊 (ADE)** 將裝置指派給 MDM 伺服器。
+
 - **內容分發** ：透過 **大量採購計畫 (VPP)** 批量購買 App 與書籍。
 - **身份管理** ：建立與管理員工的 **管理式 Apple 帳號** 。
 

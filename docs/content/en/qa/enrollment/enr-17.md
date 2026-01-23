@@ -1,9 +1,14 @@
 ---
 id: enr-17
+
 title: "The device is locked by 'Activation Lock'. How do I unlock it?"
+
 category: "Section 2: Device Enrollment & Deployment"
+
 important: false
+
 tags: ["Activation Lock", "Bypass Code", "Apple Devices App"]
+
 ---
 
 **Activation Lock is an Apple security feature. If you have ownership of the device, there are several technical pathways to unlock it.**
@@ -15,6 +20,7 @@ When an iPad is erased, if it previously had "Find My" enabled, it will request 
 If the device was Supervised and managed by Jamf Pro before being locked:
 
 1. Log in to Jamf Pro and find the device record.
+
 2. Under **Inventory > Security**, look for the **Activation Lock Bypass Code**.
 3. Enter this code in the password field on the iPad (leave the Apple ID field blank) to skip verification.
 
@@ -30,7 +36,9 @@ If the device was Supervised and managed by Jamf Pro before being locked:
 If the device is in an abnormal state and cannot receive commands:
 
 1. Use **Finder / Apple Configurator** (macOS) or the **Apple Devices app** (Windows).
+
 2. Enter Recovery Mode and perform a Restore.
+
    - **Note**: This clears the data, but the Activation Lock screen may still appear (requiring Option 1 or 2 to unlock).
 
 ## Option 4: Contact Apple Support

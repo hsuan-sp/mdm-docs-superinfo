@@ -1,6 +1,8 @@
 ---
 term: "Jamf Now"
+
 category: ["Jamf"]
+
 ---
 
 ## Definition

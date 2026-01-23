@@ -1,9 +1,14 @@
 ---
 id: mac-7
+
 title: "What special restrictions apply to managing Apple Silicon (M-series) Macs?"
+
 category: "Section 7: Advanced Mac Management"
+
 important: false
+
 tags: ["Apple Silicon", "Bootstrap Token", "Secure Boot", "Kernel Extensions"]
+
 ---
 
 **The security architecture of Apple Silicon (M1-M5) is fundamentally different from Intel Macs. The core of management lies in the "Bootstrap Token" and "Volume Ownership."**

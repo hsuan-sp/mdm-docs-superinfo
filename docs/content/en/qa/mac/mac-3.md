@@ -1,9 +1,14 @@
 ---
 id: mac-3
+
 title: "How do we distribute non-App Store software like Chrome, Adobe CC, or Office?"
+
 category: "Section 7: Advanced Mac Management"
+
 important: false
+
 tags: ["Software Distribution", "App Installers", "PKG", "Auto-Update"]
+
 ---
 
 **Move away from manual packaging. Use Jamf Pro's "App Installers" for high-frequency apps, and DDM-based distribution for mission-critical software.**

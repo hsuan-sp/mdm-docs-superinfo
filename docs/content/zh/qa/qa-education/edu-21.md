@@ -1,9 +1,14 @@
 ---
 id: edu-21
+
 title: "如何管理 iOS 18 新增的「訊息摘要 (Notification Summary)」功能？"
+
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
+
 important: true
+
 tags: ["iOS 18", "Apple Intelligence", "通知管理"]
+
 ---
 
 **iOS 18 引進了 AI 自動摘要通知內容的功能 (Apple Intelligence)。這在某些專注模式下是很有用的，但也可能讓學生忽略完整訊息或在課堂中造成分心。**

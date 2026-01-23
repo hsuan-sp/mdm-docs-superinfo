@@ -1,9 +1,14 @@
 ---
 id: acc-20
+
 title: "管理式 Apple 帳號支援「多重身分驗證 (MFA)」嗎？如何管理？"
+
 category: "第一部分：帳號與伺服器管理 (Account & Server Management)"
+
 important: false
+
 tags: ["MFA", "資安", "管理式 Apple 帳號"]
+
 ---
 
 **支援。管理式 Apple 帳號可以透過受管理的救援電話或聯合驗證來達成身分防護。**

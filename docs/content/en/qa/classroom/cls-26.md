@@ -1,9 +1,14 @@
 ---
 id: cls-26
+
 title: "Will the 'AirDrop Code' in iOS 26.2 affect school management policies? Can students use it to bypass restrictions?"
+
 category: "Section 4: Classroom Management & Instructional Tools"
+
 important: false
+
 tags: ["AirDrop", "Code", "Privacy", "Policy Adjustment", "iOS 26.2"]
+
 ---
 
 **The 'AirDrop Code' is a privacy enhancement in iOS 26.2. It does NOT allow students to bypass MDM-enforced 'Disable AirDrop' settings. Your existing security policies remain effective.**
@@ -13,6 +18,7 @@ tags: ["AirDrop", "Code", "Privacy", "Policy Adjustment", "iOS 26.2"]
 In iOS/iPadOS/macOS 26.2, a 6-digit temporary authorization code can be used to establish a "trusted relationship" between two people who are not in each other's contacts.
 
 - **Security**: This is a way to safely add "Known Contacts" temporarily (for 30 days) without exchanging permanent phone numbers or emails.
+
 - **Termination**: The relationship automatically expires after 30 days, or can be manually "forgotten" in the Contacts app.
 
 ## Impact Analysis for Schools

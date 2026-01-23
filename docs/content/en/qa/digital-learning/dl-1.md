@@ -1,9 +1,14 @@
 ---
 id: dl-1
+
 title: "The VPN icon disappeared after updating to iPadOS 17. Is this normal?"
+
 category: "Section 5: Digital Initiatives (MOE Project)"
+
 important: true
+
 tags: ["iPadOS 17", "VPN", "Jamf Trust", "MOE Project", "Architecture"]
+
 ---
 
 **Yes, this is completely normal. It reflects a shift in the management architecture designed to optimize connection speeds and ensure compatibility with local educational network standards.** In alignement with the latest digital learning policies, the **Jamf Trust** agent has transitioned from a full-tunnel VPN to a more efficient **"DNS Proxy"** and **"Content Filter"** architecture.

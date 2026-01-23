@@ -1,9 +1,14 @@
 ---
 id: edu-15
+
 title: "Does enabling 'Lost Mode' infringe on my privacy?"
+
 category: "Section 8: Education Scenarios"
+
 important: false
+
 tags: ["Lost Mode", "Privacy", "Location Tracking"]
+
 ---
 
 **No. Lost Mode is designed specifically for asset recovery. Location services are only activated while the device is officially marked as 'Lost' by an administrator.**

@@ -1,9 +1,14 @@
 ---
 id: acc-6
+
 title: "Students have graduated or left the school. How should I handle their Managed Apple Accounts?"
+
 category: "Section 1: Account & Server Management"
+
 important: false
+
 tags: ["Account Lifecycle", "Graduation", "Data Retention"]
+
 ---
 
 **It is recommended to first 'Deactivate' the account, and strictly proceed to 'Delete' only after confirming the student has completed any necessary data migration. Please note that deletion is permanent and irreversible.**
@@ -22,6 +27,7 @@ The lifecycle of a Managed Apple Account should align with your school's adminis
 **Effects**:
 
 - The student will be immediately signed out of all devices and can no longer access any Apple services.
+
 - Data in iCloud (**200 GB free tier**) is retained on the server until the account is permanently deleted.
 - Administrators can reactivate access at any time by switching the status back to "Active".
 
@@ -37,6 +43,7 @@ It is advisable to retain accounts for 30 to 90 days after graduation. Since stu
 **Consequences**:
 
 - All cloud data (Drive files, Notes, Photos) associated with the account will be permanently erased.
+
 - Any App licenses (VPP) assigned to the user will be automatically released back to the school's license pool.
 
 ## Batch Processing for Graduates:

@@ -1,6 +1,8 @@
 ---
 term: "Platform SSO"
+
 category: ["Security", "macOS"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Security", "macOS"]
 Capabilities:
 
 - **Sync** : Keeps the local Mac password in sync with the cloud password (e.g., Entra ID or Okta).
+
 - **Kerberos/Tokens** : Automatically acquires authentication tickets in the background.
 - **Experience** : When a user unlocks their Mac, they are implicitly signed in to Safari, corporate apps, and file shares without needing to re-authenticate.
 

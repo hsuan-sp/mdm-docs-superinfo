@@ -1,9 +1,14 @@
 ---
 id: cls-23
+
 title: "全班 iPad 發出音效擾亂課堂秩序，老師可以一鍵「全班靜音」嗎？"
+
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
+
 important: false
+
 tags: ["靜音", "音量控制", "課堂秩序", "限制"]
+
 ---
 
 **可以「一鍵靜音」，但無法「一鍵恢復音量」。**

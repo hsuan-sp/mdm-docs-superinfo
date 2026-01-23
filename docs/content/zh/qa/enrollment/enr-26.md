@@ -1,9 +1,14 @@
 ---
 id: enr-26
+
 title: "iOS 26 的「Return to Service 保留 App」功能如何運作？實際效益為何？"
+
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
+
 important: true
+
 tags: ["Return to Service", "iOS 26", "共享 iPad", "App 保留", "快速部署"]
+
 ---
 
 **iOS 26、iPadOS 26 與 visionOS 26 的 Return to Service 可選擇保留 Managed App 的程式本體（Preserve Managed Apps），在清除使用者資料的同時，省去重新下載 GB 級教學 App 的巨大時間成本與網路頻寬壓力。**
@@ -24,6 +29,7 @@ tags: ["Return to Service", "iOS 26", "共享 iPad", "App 保留", "快速部署
 1. MDM 發送指令並建立檔案系統快照
 
 1. **快照包含已安裝的 Managed App 程式檔案** 1. 清除使用者資料（文件、照片、設定等）
+
 1. 裝置重新啟動
 1. 回復至快照狀態
 1. 自動註冊至 MDM
@@ -63,6 +69,7 @@ tags: ["Return to Service", "iOS 26", "共享 iPad", "App 保留", "快速部署
 1. 設定以下選項：
 
 - ✅ **Clear Activation Lock** （清除啟用鎖定）
+
 - ✅ **Retain Wi-Fi Profile** （保留 Wi-Fi 設定）
 - ✅ **Preserve Managed Apps** （保留受管理的 App，iOS 26 新選項）
 
@@ -133,5 +140,6 @@ tags: ["Return to Service", "iOS 26", "共享 iPad", "App 保留", "快速部署
 - 假設學校有部署快取伺服器（Content Caching），時間可能可縮短至 30-60 分鐘 **核心優勢** ：
 
 - 大幅減少網路頻寬壓力
+
 - 可在課間休息時間快速完成
 - 不影響其他教學活動的網路使用

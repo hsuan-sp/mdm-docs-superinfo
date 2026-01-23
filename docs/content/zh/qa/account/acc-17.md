@@ -1,9 +1,14 @@
 ---
 id: acc-17
+
 title: "如何結合 Platform SSO (PSSO) 實現 Mac 開機即解鎖 FileVault？"
+
 category: "第一部分：帳號與伺服器管理 (Account & Server Management)"
+
 important: false
+
 tags: ["PSSO", "FileVault", "macOS 15+", "身分驗證"]
+
 ---
 
 **在 macOS 15 (Sequoia) 以上版本，Platform SSO 支援了與 FileVault 的深度整合，真正解決了「二次密碼」的痛點。**
@@ -11,9 +16,11 @@ tags: ["PSSO", "FileVault", "macOS 15+", "身分驗證"]
 ## 解決方案 ：
 
 以往即使 Mac 加入了網域，開機時的第一層 FileVault 畫面仍須輸入本機密碼。
+
 透過 macOS 15 引入的 Platform SSO 延伸功能，可以達成：
 
 1.  **密碼同步** ：將網路帳號（如 Microsoft Entra ID / Okta）的憑證直接寫入加密磁碟的解鎖清單中。
+
 2.  **單一登入體驗** ：使用者在開機畫面輸入組織帳號密碼，系統解鎖磁碟後會自動透傳身分至桌面，無需再次登入。
 
 ## 技術需求 ：

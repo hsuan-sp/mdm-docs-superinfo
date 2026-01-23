@@ -1,6 +1,8 @@
 ---
 term: "Enrollment Invitation"
+
 category: ["Jamf", "Enrollment"]
+
 ---
 
 ## 術語定義
@@ -18,4 +20,5 @@ category: ["Jamf", "Enrollment"]
 公司發給你一個連結，你點進去填個資料同意一下，你的私人手機就加入了公司的「VIP 會員」。
 
 - **好處** ：你可以連公司的 Wi-Fi、下載公司的付費 App。
+
 - **隱私** ：公司只能管理它給你的東西， **看不到** 你手機裡原本的照片、LINE 訊息或私人 App。

@@ -1,6 +1,8 @@
 ---
 term: "Bonjour"
+
 category: ["Network", "Apple"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Network", "Apple"]
 Common use cases in schools:
 
 - **Printing** : Discovering **AirPrint** enabled printers.
+
 - **Display** : Finding **AirPlay** destinations like Apple TVs.
 - **Collaboration** : Allowing **Apple Classroom** to discover student iPads.
 

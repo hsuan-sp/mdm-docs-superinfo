@@ -1,6 +1,8 @@
 ---
 term: "Inventory Collection"
+
 category: ["Jamf", "Core"]
+
 ---
 
 ## Definition

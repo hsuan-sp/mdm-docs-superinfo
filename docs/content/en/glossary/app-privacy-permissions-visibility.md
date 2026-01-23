@@ -1,6 +1,8 @@
 ---
 term: "App Privacy Permissions Visibility"
+
 category: ["Mac"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ Introduced in **macOS Tahoe** , this transparency feature enhances user awarenes
 Key features include:
 
 - **Explicit Display** : App privacy permissions managed via MDM (such as Screen Recording or Full Disk Access) are shown in **System Settings > Privacy & Security** .
+
 - **Managed Labels** : These permissions are clearly labeled as **"Managed by Organization."**
 - **User Insight** : Users can see exactly what has been authorized by IT, promoting a transparent security environment.
 - **MDM Context** :

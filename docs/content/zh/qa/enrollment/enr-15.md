@@ -1,9 +1,14 @@
 ---
 id: enr-15
+
 title: "iPad 顯示「無法使用」或因密碼輸入錯誤太多次鎖死，該如何處理？"
+
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
+
 important: true
+
 tags: ["密碼鎖死", "還原", "Apple Configurator", "Apple 裝置 App", "DFU"]
+
 ---
 
 **當裝置顯示「iPad 無法使用」或「安全性鎖定」時，必須透過清除裝置 (Erase) 才能重新使用。若裝置受 MDM 管理，可依連網狀態選擇不同的處理方案。**
@@ -17,6 +22,7 @@ tags: ["密碼鎖死", "還原", "Apple Configurator", "Apple 裝置 App", "DFU"
 若 iPad 仍連接著 Wi-Fi 或行動網路（即使鎖定狀態下，先前連過的網路通常仍有效）：
 
 1.  登入 Jamf Pro，找到該裝置紀錄。
+
 2.  點選 **「管理」>「遠端指令」>「清除裝置 (Wipe Device)」** 。
 3.  **優點** ：操作最快，且若裝置先前已透過「自動裝置註冊 (ADE)」納管，重新開機後會直接進入自動註冊流程，無須手動介入。
 
@@ -25,11 +31,15 @@ tags: ["密碼鎖死", "還原", "Apple Configurator", "Apple 裝置 App", "DFU"
 若裝置完全無法連網，或 MDM 指令無法傳達：
 
 1.  **準備電腦工具** ：
+
     - **macOS** ：使用內建的 **Finder** 或 **Apple Configurator** 。
     - **Windows** ：請安裝微軟商店提供的 **Apple 裝置 App (Apple Devices app)** ；若環境較舊則使用 iTunes。
+
 2.  **進入復原模式 (Recovery Mode)** ：
+
     - **無 Home 鍵機型 (如 iPad 10, A16, M 系列)** ：按下並快速放開「音量大」鍵，按下並快速放開「音量小」鍵，接著長按「頂端電源」鈕直到看到電腦連線圖示。
     - **有 Home 鍵機型 (如 iPad 9)** ：同時按住「Home 鍵」與「頂端電源」鈕，直到螢幕出現電腦連線圖示。
+
 3.  在電腦上點選 **「回復 (Restore)」** 。這會下載最新的系統軟體並抹除裝置所有內容。
 
 ### 方案三：DFU 模式還原（進階排錯）

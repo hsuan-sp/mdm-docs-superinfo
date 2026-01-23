@@ -1,9 +1,14 @@
 ---
 id: enr-14
+
 title: "如何讓 iPad 重置後自動連上 Wi-Fi 並完成註冊 (Return to Service)？"
+
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
+
 important: false
+
 tags: ["自動化", "Wi-Fi", "Return to Service", "無人值守"]
+
 ---
 
 **Return to Service 是 Apple 於 iOS 17 引入的一項指令功能，可讓裝置在執行抹除後，自動跳過初始設定畫面連線並重新註冊。**

@@ -1,9 +1,14 @@
 ---
 id: mac-24
+
 title: "【考試防弊】如何管理 Safari 的「干擾控制 (Distraction Control)」，避免學生在網頁檢定中隱藏關鍵 UI？"
+
 category: "第七部分：Mac 裝置管理 (Mac Management)"
+
 important: true
+
 tags: ["Safari", "干擾控制", "考試防弊", "macOS 26", "教學端管理"]
+
 ---
 
 **macOS 26 Safari 推出的「干擾控制」允許使用者點擊並隱藏網頁上的部分元素（如廣告、側欄）。但在電腦化測驗 (CBT) 中，學生可能利用此功能隱藏測驗計時器、剩餘題數或導覽列，造成公平性疑慮。**

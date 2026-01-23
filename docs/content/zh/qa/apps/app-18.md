@@ -1,9 +1,14 @@
 ---
 id: app-18
+
 title: "我的 App Store 圖示不見了！我也沒設限制，怎麼找回來？"
+
 category: "第三部分：應用程式分發與管理 (Apps & Books)"
+
 important: false
+
 tags: ["App Store", "圖示消失", "故障排除", "螢幕使用時間", "限制"]
+
 ---
 
 **App Store 圖示消失通常源於「本機螢幕使用時間」或「MDM 限制描述檔」的權限鎖定。請依序排查：**

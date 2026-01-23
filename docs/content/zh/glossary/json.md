@@ -1,6 +1,8 @@
 ---
 term: "JSON (JavaScript Object Notation)"
+
 category: ["Other"]
+
 ---
 
 ## 術語定義

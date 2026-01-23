@@ -1,9 +1,14 @@
 ---
 id: edu-03
+
 title: "What are the configuration differences between Teacher iPads and Student iPads?"
+
 category: "Section 8: Education Scenarios & FAQ"
+
 important: false
+
 tags: ["Roles", "Permissions", "Group Policy", "Classroom"]
+
 ---
 
 **Teacher and Student devices are usually assigned different management profiles, app catalogs, and restriction levels to provide teachers with the flexibility needed for classroom instruction.** In Jamf Pro, we use Smart Groups to separate these roles and ensure that the right rules are applied to the right person.

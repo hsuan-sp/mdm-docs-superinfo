@@ -1,10 +1,16 @@
 ---
 id: enr-11
+
 title: "'Allow App Deletion' is enabled, but students still can't delete apps. Why?"
+
 category: "Section 2: Device Enrollment & Deployment"
+
 important: true
+
 tags:
+
   ["App Management", "Restriction Profiles", "Screen Time", "Troubleshooting"]
+
 ---
 
 **This is usually due to a 'System Permission Conflict' or specific 'App Management Attributes.' Check the following three areas in order:**

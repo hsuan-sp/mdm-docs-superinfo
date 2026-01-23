@@ -1,6 +1,8 @@
 ---
 term: "Jamf Safe Internet"
+
 category: ["Jamf", "Security", "Network"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Jamf", "Security", "Network"]
 Protective features:
 
 - **Filtering** : Blocks access to inappropriate or dangerous categories of websites (e.g., adult content, gambling, or piracy).
+
 - **Phishing Defense** : Identifies and blocks malicious links designed to steal school login credentials.
 - **Reporting** : Provides administrators with insights into web usage trends and security threats.
 - **Deployment** : Integrated directly into Jamf Pro or Jamf School for easy "no-touch" rollout to student devices.

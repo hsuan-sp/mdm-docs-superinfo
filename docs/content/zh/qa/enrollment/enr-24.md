@@ -1,9 +1,14 @@
 ---
 id: enr-24
+
 title: "如何設定「強制執行截止日期」(Enforcement Deadline) 確保裝置按時完成 MDM 註冊或系統更新？"
+
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
+
 important: true
+
 tags: ["Enforcement Deadline", "DDM", "強制執行", "截止日期", "合規"]
+
 ---
 
 **透過宣告式裝置管理 (DDM) 設定強制執行截止日期，裝置會自主評估並在截止時移除「稍後」選項，自動執行更新或註冊。**
@@ -31,11 +36,15 @@ tags: ["Enforcement Deadline", "DDM", "強制執行", "截止日期", "合規"]
 1.  進入 **Devices** > **Blueprints** 或 **Computers** > **Blueprints** 。
 2.  建立或編輯 **Software Update Declaration** 。
 3.  設定更新目標：
+
     - 指定目標 iOS/macOS 版本。
     - 或選擇「最新版本」。
+
 4.  啟用 **Enforcement Deadline** ：
+
     - 設定具體日期和時間（如 2026-02-28 17:00）。
     - 選擇時區（建議使用裝置本地時間）。
+
 5.  部署至目標裝置群組。
 
 ### MDM 遷移截止日設定

@@ -1,6 +1,8 @@
 ---
 term: "Location Services（定位服務）"
+
 category: ["Apple", "Core"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Apple", "Core"]
 定位依據包含：
 
 - **GPS/GLONASS** ：衛星訊號（在戶外最準確）。
+
 - **Wi-Fi** ：根據周遭 Wi-Fi 基地台的位置進行三角測量。
 - **行動網路** ：計算與基地台的距離。
 - **iBeacons** ：用於室內的微定位技術。

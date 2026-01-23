@@ -1,9 +1,14 @@
 ---
 id: cls-23
+
 title: "iPads are making noise and disrupting class. Can the teacher 'Mute All' at once?"
+
 category: "Section 4: Classroom Management & Instructional Tools"
+
 important: false
+
 tags: ["Mute", "Volume Control", "Classroom Order"]
+
 ---
 
 **Yes, the teacher can 'Mute' the whole class with one click, but they cannot 'Unmute' them remotely.**

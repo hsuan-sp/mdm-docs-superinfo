@@ -1,6 +1,8 @@
 ---
 term: "Captive Portal (強制入口網頁)"
+
 category: ["Network"]
+
 ---
 
 ## 術語定義

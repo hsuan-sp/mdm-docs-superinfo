@@ -1,6 +1,8 @@
 ---
 term: "Proxy"
+
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ A **Proxy Server** acts as an intermediary gateway between a user's device and t
 Functions:
 
 - **Filtering** : Inspects URL requests and blocks dangerous or inappropriate content before it reaches the device.
+
 - **Caching** : Stores copies of frequently accessed websites (e.g., the school homepage) to speed up loading times for everyone.
 - **Anonymity** : Hides the internal IP structure of the school network from the public internet.
 - **Logging** : Keeps a record of which websites are accessed by which user for accountability.

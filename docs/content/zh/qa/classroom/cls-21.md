@@ -1,9 +1,14 @@
 ---
 id: cls-21
+
 title: "老師可以強制將學生的畫面投影到 Apple TV 或大螢幕嗎？"
+
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
+
 important: false
+
 tags: ["AirPlay", "Apple TV", "畫面分享", "教學展示"]
+
 ---
 
 **可以。老師透過「課堂」App，能指定任意學生的畫面透過 AirPlay 投射出來，無需學生操作。**

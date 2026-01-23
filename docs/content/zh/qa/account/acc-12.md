@@ -1,9 +1,14 @@
 ---
 id: acc-12
+
 title: "【MDM 遷移】更換新 MDM 廠商時，可以「不抹除資料」直接轉移嗎？"
+
 category: "第一部分：帳號與伺服器管理 (Account & Server Management)"
+
 important: true
+
 tags: ["遷移", "MDM 轉移", "OS 26"]
+
 ---
 
 **雖然系統版本 26 已支援「自動 MDM 遷移」，但在教育環境下仍「強烈不建議」採取不抹除遷移。**

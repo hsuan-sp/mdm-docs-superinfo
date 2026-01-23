@@ -1,16 +1,28 @@
 ---
 id: enr-13
+
 title: "How do I prevent students from removing the MDM management profile?"
+
 category: "Section 2: Device Enrollment & Deployment"
+
 important: true
+
 tags:
+
   [
+
     "Prevent Unenrollment",
+
     "Supervised",
+
     "PreStage Enrollment",
+
     "ADE",
+
     "Return to Service",
+
   ]
+
 ---
 
 **The key to preventing profile removal is using the 'Automated Device Enrollment (ADE)' process and enabling mandatory locking in the 'PreStage Enrollment' settings.**
@@ -22,6 +34,7 @@ If a device is enrolled manually (e.g., via a manual link or temporary Apple Con
 1. **PreStage Enrollment**: Ensure the device is assigned to the correct **Automated Device Enrollment** instance.
 2. **Enable Mandatory Supervision**: Under the **Supervised Devices** section, ensure **Supervise Devices** is checked. This is the foundation for all advanced management; unsupervised devices cannot lock profiles.
 3. **Lock the Profile (Crucial Step)**:
+
    - Check **Prevent Unenrollment**.
    - **Result**: The "Remove Management" button will disappear from the iPad settings. Unless the device was added via Apple Configurator (which has a 30-day grace period), the student cannot manually remove the MDM profile.
 

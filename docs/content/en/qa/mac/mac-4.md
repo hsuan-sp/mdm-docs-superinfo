@@ -1,9 +1,14 @@
 ---
 id: mac-4
+
 title: "How should we design our macOS update strategy for 2026? How does DDM change things?"
+
 category: "Section 7: Advanced Mac Management"
+
 important: true
+
 tags: ["Software Updates", "DDM", "macOS 26", "Compliance", "IT Strategy"]
+
 ---
 
 **In the macOS 26 (Tahoe) era, Apple has fully transitioned to Declarative Device Management (DDM) for software updates. IT teams no longer "send a command" to update; they "declare a state."**

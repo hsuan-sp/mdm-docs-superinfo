@@ -1,6 +1,8 @@
 ---
 term: "BYOD (Bring Your Own Device)"
+
 category: ["Enrollment"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Enrollment"]
 Apple’s **User Enrollment** framework facilitates BYOD by:
 
 - **Work Partitioning** : Creating a separate, encrypted file system for work data.
+
 - **Privacy Focus** : Institutional management is limited to the work partition.
 - **Separation** : The organization has **no access** to personal photos, messages, location data, or apps on the rest of the device.
 

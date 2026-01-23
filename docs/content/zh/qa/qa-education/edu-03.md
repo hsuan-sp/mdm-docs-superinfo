@@ -1,9 +1,14 @@
 ---
 id: edu-03
+
 title: "老師的 iPad 跟學生的 iPad 在 MDM 設定上有什麼不同？"
+
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
+
 important: false
+
 tags: ["角色差異", "權限", "群組設定"]
+
 ---
 
 **教師裝置與學生裝置通常套用不同的 MDM 設定描述檔、App 集合、與限制等級。教師裝置權限較大，以配合教學彈性需求。**
@@ -28,15 +33,22 @@ tags: ["角色差異", "權限", "群組設定"]
 ## 實作方式（Jamf Pro） ：
 
 1.  **建立群組** ：
+
     - 建立「教師 iPad」智慧型群組（條件可依裝置命名規則、資產標籤、或使用者角色）。
     - 建立「學生 iPad」智慧型群組。
+
 1.  **設定描述檔 Scope** ：
+
     - 「學生限制描述檔」：Scope 設為「學生 iPad」群組。
     - 「教師限制描述檔」（較寬鬆）：Scope 設為「教師 iPad」群組。
+
 1.  **App 部署** ：
+
     - 教學管理 App（如 Apple Classroom, Jamf Teacher）：Scope 包含教師與學生（但角色不同）。
     - 進階教學工具（如 Explain Everything, iMovie）：可能只部署至教師。
+
 1.  **Apple 課堂設定** ：
+
     - 在 Jamf Pro 的「班級 (Classes)」中，明確指定誰是教師、誰是學生。
     - 教師裝置會顯示「管理」介面，學生裝置會顯示「被管理」狀態。
 

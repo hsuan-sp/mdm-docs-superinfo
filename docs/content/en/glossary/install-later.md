@@ -1,6 +1,8 @@
 ---
 term: "Install Later"
+
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Core"]
 Workflow details:
 
 - **Background Download** : The device downloads the large update files while the user continues their work, ensuring the "heavy lifting" is done without interruption.
+
 - **Scheduling** : The actual installation—which requires a restart—is scheduled for a later time, typically when the device is inactive (e.g., late at night).
 - **Flexibility** : The user can also choose to manually trigger the installation at a more convenient time once the files are ready.
 

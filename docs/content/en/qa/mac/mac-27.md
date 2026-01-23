@@ -1,9 +1,14 @@
 ---
 id: mac-27
+
 title: "Automated Maintenance: Using macOS 26 DDM for 'Smart Energy Management' (Eco-friendly vs. Scheduled Updates)."
+
 category: "Section 7: Advanced Mac Management"
+
 important: false
+
 tags: ["Energy Policy", "DDM", "Auto-Update", "Power Management", "macOS 26"]
+
 ---
 
 **In the past, school IT wanted computers ON for updates, while the facility manager wanted them OFF to save electricity. macOS 26 and DDM provide a perfect automated balance.**
@@ -13,14 +18,17 @@ tags: ["Energy Policy", "DDM", "Auto-Update", "Power Management", "macOS 26"]
 Using macOS 26 **System Configurations**, you can set the following intelligent logic:
 
 1. **Dynamic Sleep Schedule**:
+
    - **School Hours**: Set a 20-minute idle-to-sleep timer for immediate student access.
    - **Night Mode**: After 6:00 PM, transition to a deep sleep state (Power Nap).
 
 2. **Update-Initiated Wake**:
+
    - **Configuration**: Enable `Allow Wake for Managed Activity` in the DDM payload.
    - **Effect**: Even if the Mac is asleep, when Jamf Pro pushes a **Security Response (RSR)** or a **DDM Software Declaration**, the Mac will briefly "wake," complete the background installation, and return to deep sleep once the task is reported as successful.
 
 3. **Energy Auditing (Status Channel)**:
+
    - You can monitor "Battery Cycle Counts" or "Up-time in High Performance Mode" via the DDM Status Channel to use as quantitative data for future hardware replacement cycles.
 
 ## II. Operational Recommendations

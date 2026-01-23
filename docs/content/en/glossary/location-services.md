@@ -1,6 +1,8 @@
 ---
 term: "Location Services"
+
 category: ["Apple", "Core"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Apple", "Core"]
 Inputs used for positioning:
 
 - **GPS/GLONASS** : Satellite signals (most accurate outdoors).
+
 - **Wi-Fi** : Triangulation based on known Wi-Fi hotspot locations.
 - **Cellular** : Proximity to cell towers.
 - **iBeacons** : Micro-location awareness indoors.

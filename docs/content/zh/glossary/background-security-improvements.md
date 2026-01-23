@@ -1,6 +1,8 @@
 ---
 term: "Background Security Improvements (背景安全改良)"
+
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Security"]
 其核心功能包括：
 
 - **模組化修補** ：允許 Apple 針對 **Safari** 、 **WebKit** 等特定元件快速修補嚴重漏洞，而無需更新整個作業系統。
+
 - **無縫更新** ：更新過程在背景靜默進行，完全不需要重開機。
 - **零時差防護** ：一旦 Apple 釋出修正檔，裝置能即刻獲得針對最新攻擊的防護。
 

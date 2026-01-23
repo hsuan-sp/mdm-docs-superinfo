@@ -1,9 +1,14 @@
 ---
 id: mac-12
+
 title: "如何防止學生進入 Recovery Mode (復原模式) 格式化電腦？"
+
 category: "第七部分：Mac 裝置管理 (Mac Management)"
+
 important: false
+
 tags: ["防篡改", "Recovery Lock", "韌體密碼", "資安", "遠端指令"]
+
 ---
 
 **針對不同架構的 Mac，防護機制有所不同：Intel 機型需設定「韌體密碼」，而 Apple Silicon (M 系列) 則需設定「復原鎖定 (Recovery Lock)」。兩者皆可透過 Jamf Pro 部署。**

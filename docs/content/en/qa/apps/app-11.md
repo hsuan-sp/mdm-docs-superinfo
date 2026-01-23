@@ -1,9 +1,14 @@
 ---
 id: app-11
+
 title: "How do I distribute E-books (PDF/ePub) to student iPads?"
+
 category: "Section 3: App Management & Distribution"
+
 important: false
+
 tags: ["E-books", "Material Distribution", "PDF", "Restrictions"]
+
 ---
 
 **Apple School Manager (ASM) in many regions (including Taiwan) does not support the direct purchase or distribution of content from the Apple Books Store.**

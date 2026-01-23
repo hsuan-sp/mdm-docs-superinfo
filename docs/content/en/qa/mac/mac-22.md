@@ -1,16 +1,28 @@
 ---
 id: mac-22
+
 title: "macOS 26: The end of the Intel Mac era. How much longer can Intel Macs be used?"
+
 category: "Section 7: Advanced Mac Management"
+
 important: true
+
 tags:
+
   [
+
     "Intel Mac",
+
     "Apple Silicon",
+
     "System Support",
+
     "macOS 26",
+
     "Lifecycle Planning",
+
   ]
+
 ---
 
 **macOS 26 (Tahoe) has been confirmed as the final major version of macOS to support Intel-based Macs. Starting with macOS 27 in 2027, the operating system will exclusively support Apple Silicon (M1–M5 series).**
@@ -48,6 +60,7 @@ tags:
 Use Jamf Pro to identify all Intel-based Macs:
 
 - Create a **Smart Computer Group**.
+
 - Criteria: `Architecture Type` is `x86_64`.
 
 ### 2. Impact assessment by Scenario

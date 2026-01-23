@@ -1,9 +1,14 @@
 ---
 id: mac-10
+
 title: "Default Jamf Pro inventory lacks specific info (like file versions or last reboot). How do I collect custom data?"
+
 category: "Section 7: Advanced Mac Management"
+
 important: false
+
 tags: ["Extension Attributes", "Scripts", "Inventory", "Custom Fields"]
+
 ---
 
 **Use the "Computer Extension Attributes" feature. This is the core tool in Jamf Pro for expanding database fields and collecting non-standard hardware/software information.**
@@ -15,6 +20,7 @@ While standard inventory includes specs, OS versions, and app lists, specific ne
 In addition to traditional inventory updates, macOS 26 recommends using the DDM Status Channel:
 
 - **Real-time**: When a state changes (e.g., CPU load, disk space, FileVault status), the device actively reports to Jamf Pro rather than waiting for the next scheduled scan.
+
 - **Low Load**: Only changed fields are reported, significantly reducing server overhead.
 - **Recommendation**: For fields where accuracy is critical (e.g., whether security software is running), prioritize the DDM Status Channel.
 
@@ -45,10 +51,13 @@ Click **+ New**.
 #!/bin/bash
 
 # Get system uptime days and report to Jamf Pro
+
 # Uses awk to grab the 'days' part of the uptime command output
 
 days=$(uptime | awk '{ print $3 }')
+
 echo "<result>$days</result>"
+
 ```
 
 ## Advanced Application Scenarios:

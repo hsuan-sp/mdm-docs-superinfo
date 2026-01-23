@@ -1,6 +1,8 @@
 ---
 term: "Audio Accessory Configuration (音訊配件設定)"
+
 category: ["Hardware"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Hardware"]
 關鍵管理功能：
 
 - **臨時配對** ：允許受監管裝置暫時配對 AirPods 或 Beats 耳機。
+
 - **iCloud 略過** ：防止配對資訊同步到使用者的個人 iCloud 帳號。
 - **共用 iPad 最佳化** ：專為教育設計，確保學生登出時，配件的連線會被自動清除。
 

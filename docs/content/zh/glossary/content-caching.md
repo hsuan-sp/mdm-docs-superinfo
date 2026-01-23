@@ -1,6 +1,8 @@
 ---
 term: "Content Caching (內容快取)"
+
 category: ["Network"]
+
 ---
 
 ## 術語定義

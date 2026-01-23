@@ -1,9 +1,14 @@
 ---
 id: edu-11
+
 title: "「引導使用模式 (Guided Access)」跟「單一 App 模式」有什麼不一樣？"
+
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
+
 important: false
+
 tags: ["鎖定", "比較", "Guided Access", "單一 App 模式"]
+
 ---
 
 **兩者都能將 iPad 鎖定在單一 App 中，但控制權不同：引導使用模式由使用者（老師）手動開關；單一 App 模式由 MDM 強制設定，重開機也無法解除。**

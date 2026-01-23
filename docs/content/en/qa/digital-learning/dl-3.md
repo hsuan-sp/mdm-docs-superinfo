@@ -1,9 +1,14 @@
 ---
 id: dl-3
+
 title: "How do I perform a 'Reset Network Settings'? What are the risks to my MDM connection?"
+
 category: "Section 5: Digital Initiatives (MOE Project)"
+
 important: false
+
 tags: ["Troubleshooting", "Reset", "Network", "Connection Help"]
+
 ---
 
 **Resetting network settings is a powerful way to solve stubborn Wi-Fi issues, but it carries the risk of making the device an "unmanaged device" if not handled carefully.**
@@ -13,6 +18,7 @@ tags: ["Troubleshooting", "Reset", "Network", "Connection Help"]
 If you are in the middle of a Wi-Fi migration (transitioning from an old SSID to a new official school network), **do not delete the old profile first**.
 
 - **Correct Process**: Push the new Wi-Fi profile via MDM -> Verify connection -> Only then remove the old setting.
+
 - **The Danger**: If you reset all network settings and the iPad cannot "auto-join" any available school Wi-Fi, it will lose its connection to Jamf Pro. You will then have to manually reconnect every device by hand to restore management.
 
 ## When to Perform a Reset:

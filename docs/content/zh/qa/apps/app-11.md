@@ -1,9 +1,14 @@
 ---
 id: app-11
+
 title: "如何派送「電子書 (PDF/ePub)」教材到學生 iPad？"
+
 category: "第三部分：應用程式分發與管理 (Apps & Books)"
+
 important: false
+
 tags: ["電子書", "教材派送", "PDF", "限制"]
+
 ---
 
 **在台灣，Apple 校務管理 (ASM) 目前不支援直接採購或分發「Apple Books」商店內的內容。**

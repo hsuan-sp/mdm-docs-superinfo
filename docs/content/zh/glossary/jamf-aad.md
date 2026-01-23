@@ -1,6 +1,8 @@
 ---
 term: "JamfAAD"
+
 category: ["Jamf", "Security"]
+
 ---
 
 ## 術語定義

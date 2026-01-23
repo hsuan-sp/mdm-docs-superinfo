@@ -1,9 +1,14 @@
 ---
 id: hw-3
+
 title: "AirDrop won't find other devices, or AirPlay can't see the classroom Apple TV. Why?"
+
 category: "Section 6: Hardware & Maintenance"
+
 important: true
+
 tags: ["AirDrop", "AirPlay", "Network Management", "mDNS", "Troubleshooting"]
+
 ---
 
 **AirDrop and AirPlay operate differently: AirDrop uses Peer-to-Peer communication, while AirPlay relies heavily on your campus network configuration.**

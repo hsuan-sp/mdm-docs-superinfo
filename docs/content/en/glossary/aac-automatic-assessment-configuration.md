@@ -1,6 +1,8 @@
 ---
 term: "AAC (Automatic Assessment Configuration)"
+
 category: ["Education"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Education"]
 When a student opens a supported testing app, AAC automatically manages the device environment:
 
 - **Disables assistive features** : Dictionary, spell check, and lookup.
+
 - **Blocks interruptions** : Screenshots, screen recording, and push notifications are suppressed.
 - **Prevents multitasking** : The student is locked into the specific testing app.
 

@@ -1,6 +1,8 @@
 ---
 term: "Client Isolation (使用者隔離)"
+
 category: ["Network"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Network"]
 雖然這能防止病毒在內網橫向傳播，但也會直接導致以下 Apple 關鍵教育功能 **失效** ：
 
 - **AirPlay** ：無法投影。
+
 - **AirDrop** ：找不到鄰近裝置。
 - **Apple Classroom** ：教師端無法連接學生端 iPad。
 

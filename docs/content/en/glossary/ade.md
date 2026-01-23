@@ -1,6 +1,8 @@
 ---
 term: "ADE (Automated Device Enrollment)"
+
 category: ["Enrollment"]
+
 ---
 
 ## Term Definition

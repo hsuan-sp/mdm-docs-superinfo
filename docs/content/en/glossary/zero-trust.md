@@ -1,6 +1,8 @@
 ---
 term: "Zero Trust"
+
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -8,6 +10,7 @@ category: ["Security"]
 **Zero Trust** is a modern security architecture based on the principle: **"Never Trusted, Always Verified."** Key concepts:
 
 - **No Perimeter** : Being "inside the school building" does not automatically grant access.
+
 - **Continuous Auth** : Every request (opening a file, accessing email) is checked.
 - **Context** : Access depends on*Who*you are (User ID),*What*device you have (Managed?), and*Where* you are.
 - **Risk Assessment** : If a device is outdated or infected, access is blocked immediately, even if the password is correct.

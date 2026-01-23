@@ -1,9 +1,14 @@
 ---
 id: dl-6
+
 title: "How can I temporarily unblock certain websites needed for teaching?"
+
 category: "Section 5: Digital Initiatives (MOE Project)"
+
 important: false
+
 tags: ["Content Filtering", "Exclusions", "YouTube", "Jamf Trust", "DNS Proxy"]
+
 ---
 
 **Filtering rules for the Digital Learning Project are typically managed by higher-level authorities (Educational Bureaus). Modifying the blocklist is not recommended, but if an immediate exception is required for teaching, an "Exclusion" strategy is preferred.**

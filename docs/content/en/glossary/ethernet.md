@@ -1,6 +1,8 @@
 ---
 term: "Ethernet"
+
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Network"]
 Deployment advantages:
 
 - **Stability** : Provides a consistent connection unaffected by radio interference or physical obstacles that impact Wi-Fi.
+
 - **Speed** : Offers significantly higher throughput for massive data tasks.
 - **IT Labs** : Recommended for initial "Zero-Touch" provisioning, bulk software installations, and multi-gigabit OS updates where Wi-Fi congestion could lead to failures.
 

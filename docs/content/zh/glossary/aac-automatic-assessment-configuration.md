@@ -1,6 +1,8 @@
 ---
 term: "AAC (Automatic Assessment Configuration)"
+
 category: ["Education"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Education"]
 當學生開啟支援此功能的測驗 App 時，AAC 會自動接管並優化裝置環境，確保測驗的安全性與公正：
 
 - **停用輔助功能** ：自動關閉字典查詢、拼字檢查、字詞建議及「查詢」等可能輔助作弊的功能。
+
 - **阻斷外部干擾** ：全面禁止螢幕截圖、螢幕錄影，並抑制所有推播通知彈出。
 - **強制單一 App 鎖定** ：停用多工處理（Multitasking）與視窗切換，將學生端裝置嚴格鎖定在目前的測驗 App 中。
 

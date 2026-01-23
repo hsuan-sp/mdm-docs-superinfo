@@ -1,9 +1,14 @@
 ---
 id: hw-2
+
 title: "An iPad isn't charging inside the cart. Is the device faulty or the cart?"
+
 category: "Section 6: Hardware & Maintenance"
+
 important: false
+
 tags: ["Charging Issues", "Diagnostics", "Hardware Maintenance"]
+
 ---
 
 **When an iPad fails to charge, we recommend a "Systematic Cross-Testing" approach to isolate the failure point between the device, the cable, and the cart’s power module.**
@@ -14,6 +19,7 @@ tags: ["Charging Issues", "Diagnostics", "Hardware Maintenance"]
 
 1. Move the non-charging iPad to a **known working slot** in the cart (one that successfully charged another iPad).
 2. Wait 30 seconds. Does the "Lightning bolt" icon appear in the status bar?
+
    - ✅ **If it charges**: The original cable or the power brick for that specific slot is likely faulty.
    - ❌ **If it still doesn't charge**: Move to Stage 2.
 
@@ -21,6 +27,7 @@ tags: ["Charging Issues", "Diagnostics", "Hardware Maintenance"]
 
 1. Remove the iPad from the cart and use a **trusted standalone 20W charger** and cable (direct to a wall outlet).
 2. Connect it directly to a wall power outlet.
+
    - ✅ **If it charges**: The issue is with the cart’s internal power distribution or a tripped breaker.
    - ❌ **If it still doesn't charge**: The issue is almost certainly a **hardware failure on the iPad**.
 

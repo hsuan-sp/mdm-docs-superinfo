@@ -1,16 +1,28 @@
 ---
 id: hw-9
+
 title: "The Smart or Magic Keyboard is not responding. How do I troubleshoot it?"
+
 category: "Section 6: Hardware Maintenance & Troubleshooting"
+
 important: false
+
 tags:
+
   [
+
     "Keyboard",
+
     "Smart Connector",
+
     "Magic Keyboard",
+
     "Hardware Compatibility",
+
     "Troubleshooting",
+
   ]
+
 ---
 
 **Keyboard failures typically stem from model incompatibility, oxidized contacts, or physical misalignment of the magnets. Since original Apple keyboards do not require Bluetooth pairing, if cleaning doesn't work, it usually involves a hardware circuit failure.**
@@ -34,6 +46,7 @@ In a 2026 classroom environment where iPad 9th, 10th, and 11th generations coexi
 1. **Reseat**: Completely remove the iPad from the keyboard case and reinstall it. For the Magic Keyboard Folio, ensure both the back panel and keyboard are properly aligned.
 2. **Remove Interference**: Some third-party cases or extra-thick screen protectors may prevent the Smart Connector from making a solid connection. Try testing without any case.
 3. **Hard Reset**:
+
    - **iPad 9th Gen**: Hold the Power and Home buttons.
    - **Newer Models**: Press Vol Up, Vol Down, then hold Power until the Apple logo appears.
 

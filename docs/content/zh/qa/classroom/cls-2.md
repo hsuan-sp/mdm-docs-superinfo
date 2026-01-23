@@ -1,9 +1,14 @@
 ---
 id: cls-2
+
 title: "可以限制學生在課堂上只能使用特定的 App 嗎？(App 鎖定)"
+
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
+
 important: true
+
 tags: ["App 鎖定", "單一 App 模式", "防弊", "專注模式"]
+
 ---
 
 **可以。老師能透過「課堂」App 將學生裝置暫時「鎖定」在指定的應用程式中。**

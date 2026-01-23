@@ -1,6 +1,8 @@
 ---
 term: "Identity Provider (IdP)"
+
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -12,6 +14,7 @@ category: ["Security"]
 在現代 MDM 架構中：
 
 - **身分委外** ：MDM 不直接儲存或管理密碼，而是將驗證工作「外包」給 IdP。
+
 - **單一登入 (SSO)** ：學生只需記住一組帳號密碼，即可登入 iPad、Email 與學習平台。MDM 會向 IdP 確認「這個人是誰」，驗證通過後即放行。
 
 ## 白話文比喻

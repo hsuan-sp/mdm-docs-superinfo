@@ -1,6 +1,8 @@
 ---
 term: "Install Application"
+
 category: ["Core"]
+
 ---
 
 ## Term Definition

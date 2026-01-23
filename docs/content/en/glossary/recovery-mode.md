@@ -1,6 +1,8 @@
 ---
 term: "Recovery Mode"
+
 category: ["Apple", "macOS"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Apple", "macOS"]
 Available tools:
 
 - **Disk Utility** : Repair or erase the hard drive.
+
 - **Reinstall macOS** : Download and install a fresh copy of the operating system.
 - **Restore from Backup** : Recover data from a Time Machine backup.
 - **Terminal** : Advanced command-line tools for fixing system errors.

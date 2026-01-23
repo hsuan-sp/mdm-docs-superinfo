@@ -1,16 +1,28 @@
 ---
 id: app-18
+
 title: "The App Store icon disappeared! How do I get it back?"
+
 category: "Section 3: App Management & Distribution"
+
 important: false
+
 tags:
+
   [
+
     "App Store",
+
     "Missing Icon",
+
     "Troubleshooting",
+
     "Screen Time",
+
     "Restrictions",
+
   ]
+
 ---
 
 **A missing App Store icon usually results from 'Screen Time' restrictions on the device or a 'Restrictions' profile from the MDM. Follow these steps to troubleshoot:**

@@ -1,6 +1,8 @@
 ---
 term: "MDM Profile"
+
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ The **MDM Profile** (Mobile Device Management Profile) is the critical configura
 Its lifecycle:
 
 - **Installation** : Marks the official "Enrollment" of the device. Grants the MDM server permission to send commands.
+
 - **Operation** : Acts as the conduit for all subsequent settings (Wi-Fi, apps, restrictions).
 - **Removal** : If this single profile is removed, the trust relationship is broken. All managed settings, managed apps, and secure certificates are immediately wiped from the device.
 

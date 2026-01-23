@@ -1,6 +1,8 @@
 ---
 term: "Background App Refresh"
+
 category: ["Apps"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Apps"]
 Management through MDM:
 
 - **Productivity** : Mail apps fetch new messages, and News apps pre-load headlines.
+
 - **Battery Optimization** : MDM can disable this feature globally or for specific apps to extend the battery life of student devices.
 - **Bandwidth** : Controlling background activity can help manage network congestion during the school day.
 

@@ -1,9 +1,14 @@
 ---
 id: mac-22
+
 title: "macOS 26 是最後支援 Intel Mac 的版本，現有 Intel Mac 可以用多久？"
+
 category: "第七部分：Mac 裝置管理 (Mac Management)"
+
 important: true
+
 tags: ["Intel Mac", "Apple Silicon", "系統支援", "macOS 26", "裝置規劃"]
+
 ---
 
 ## Q: macOS 26 是最後支援 Intel Mac 的版本，現有 Intel Mac 可以用多久？
@@ -43,6 +48,7 @@ tags: ["Intel Mac", "Apple Silicon", "系統支援", "macOS 26", "裝置規劃"]
 Jamf Pro 範例：
 
 - 建立 Smart Computer Group
+
 - 條件：`Architecture` = `x86_64`
 
 ### 2. 使用情境影響

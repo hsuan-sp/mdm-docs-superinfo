@@ -1,6 +1,8 @@
 ---
 term: "SCEP (Simple Certificate Enrollment Protocol)"
+
 category: ["Security"]
+
 ---
 
 ## Term Definition

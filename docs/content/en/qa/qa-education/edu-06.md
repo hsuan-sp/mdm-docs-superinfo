@@ -1,9 +1,14 @@
 ---
 id: edu-06
+
 title: "Can I sign into my personal Apple Account to download games I bought before?"
+
 category: "Section 8: Education Scenarios"
+
 important: false
+
 tags: ["Apple Account", "Personal vs. School", "Account Policies"]
+
 ---
 
 **This is strongly discouraged, and most school policies explicitly forbid it. Signing into a personal Apple Account can lead to data mixing, Activation Lock risks, and VPP licensing conflicts.** This is a common question from students and even some teachers. From a management and technical perspective, doing so introduces multiple risks.

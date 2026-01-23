@@ -1,6 +1,8 @@
 ---
 term: "Jamf Data Policy"
+
 category: ["Jamf", "Security"]
+
 ---
 
 ## Definition

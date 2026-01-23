@@ -1,6 +1,8 @@
 ---
 term: "DHCP (Dynamic Host Configuration Protocol)"
+
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Network"]
 How it works:
 
 - **Discovery** : When a device connects to a network (Wi-Fi or Ethernet), it broadcasts a request for an address.
+
 - **Lease** : The DHCP server "leases" a temporary IP address to the device from a pool.
 - **Renewal** : The device periodically renews its lease to keep using that address.
 - **Efficiency** : Prevents "IP conflicts" where two devices accidentally try to use the same address at the same time.

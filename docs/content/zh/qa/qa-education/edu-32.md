@@ -1,9 +1,14 @@
 ---
 id: edu-32
+
 title: "學生忘記 iPad 解鎖密碼 (Passcode) 怎麼辦？老師可以幫忙重設嗎？"
+
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
+
 important: true
+
 tags: ["解鎖密碼", "忘記密碼", "Jamf Pro", "遠端指令", "故障排除"]
+
 ---
 
 **可以的。只要 iPad 是由學校 MDM (Jamf Pro) 管理且處於連網狀態，老師或資訊組長可以透過指令直接「清除密碼」，而不需要重灌裝置。**
@@ -15,6 +20,7 @@ tags: ["解鎖密碼", "忘記密碼", "Jamf Pro", "遠端指令", "故障排除
 如果校方有配置 Jamf Teacher 權限給任課老師：
 
 1.  開啟教師機上的 **Jamf Teacher** App 或網頁版。
+
 1.  選取該名學生所在的班級與群組。
 1.  點選該名學生的 iPad 圖示。
 1.  選取 **「清除密碼 (Clear Passcode)」** 指令。
@@ -25,6 +31,7 @@ tags: ["解鎖密碼", "忘記密碼", "Jamf Pro", "遠端指令", "故障排除
 資訊組長或網管人員可隨時執行此操作：
 
 1.  登入 Jamf Pro 後台，搜尋該台 iPad 的序號或資產編號。
+
 1.  進入 **`Inventory` > `Management` > `Commands`**。
 1.  點選 **`Clear Passcode`** 指令並確定送出。
 

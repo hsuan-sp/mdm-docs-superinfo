@@ -1,6 +1,8 @@
 ---
 term: "Lightning Connector"
+
 category: ["Hardware"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ The **Lightning Connector** is Apple's proprietary 8-pin physical data and power
 Hardware context:
 
 - **Usage** : Standard port for iPhone 5 through iPhone 14, and entry-level iPads up until the 9th Generation.
+
 - **Comparison** : Supports USB 2.0 speeds (slower than modern USB-C).
 - **Phased Out** : While modern devices now use **USB-C** to comply with international regulations, Lightning is still prevalent in education due to the long lifespan of iPad fleets.
 - **Design** : Reversible design, allowing the cable to be plugged in face up or face down.

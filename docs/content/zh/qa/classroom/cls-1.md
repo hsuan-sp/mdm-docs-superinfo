@@ -1,9 +1,14 @@
 ---
 id: cls-1
+
 title: "老師可以透過「課堂 (Classroom)」App 看到每位學生的螢幕嗎？"
+
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
+
 important: true
+
 tags: ["課堂 App", "螢幕檢視", "隱私保護", "AirPlay"]
+
 ---
 
 **可以。這是「課堂」App 的核心功能，但具備嚴格的隱私提示機制。**

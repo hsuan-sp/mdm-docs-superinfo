@@ -1,9 +1,14 @@
 ---
 id: edu-08
+
 title: "收到 iOS 更新通知，我可以馬上更新嗎？還是要等學校通知？"
+
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
+
 important: false
+
 tags: ["系統更新", "穩定性", "iOS 更新"]
+
 ---
 
 **建議等待學校通知後再更新。新版 iOS 剛推出時可能存在與教學 App 或 MDM 功能的相容性問題，學校會在驗證後統一安排更新。**

@@ -1,6 +1,8 @@
 ---
 term: "Guided Access"
+
 category: ["Education", "Apple"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Education", "Apple"]
 Key functionalities:
 
 - **App Locking** : Temporarily restricts the device to a single application.
+
 - **Hardware Control** : Disables the Home button or gestures (on newer iPads) to prevent the user from leaving the app.
 - **Screen Customization** : Allows an administrator or teacher to disable specific areas of the screen to prevent accidental or unwanted interaction.
 - **Time Limits** : Enables the setting of a specific duration for an activity.

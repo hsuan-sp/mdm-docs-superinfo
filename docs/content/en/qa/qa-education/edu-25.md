@@ -1,9 +1,14 @@
 ---
 id: edu-25
+
 title: "Can iPads from the Digital Learning Project (MOE) still be used after the project expires? Is upgrading to iPadOS 26 safe?"
+
 category: "Section 8: Education Scenarios"
+
 important: false
+
 tags: ["MOE Project", "2026", "System Upgrade", "iPadOS 26", "Sustainability"]
+
 ---
 
 **iPads provided by the Digital Learning Project are school assets. Even after the initial project period concludes, they can continue to be used as long as the school maintains them. Upgrading to iPadOS 26 is technically viable and highly recommended, provided you consider MDM server compatibility.**
@@ -34,6 +39,7 @@ tags: ["MOE Project", "2026", "System Upgrade", "iPadOS 26", "Sustainability"]
 We recommend maintaining your existing management framework to protect the learning environment:
 
 - **Ownership**: The device remains school property; management settings should remain identical to when it was in use during the project.
+
 - **App Guidelines**: If the App Store is currently blocked, keep it blocked to prevent the device from becoming a gaming console at home.
 - **Safety**: Continue using your Content Filter (e.g., Jamf Safe Internet) to protect students from inappropriate content while using the device off-campus.
 

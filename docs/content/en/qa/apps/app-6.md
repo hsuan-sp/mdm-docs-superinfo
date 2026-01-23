@@ -1,9 +1,14 @@
 ---
 id: app-6
+
 title: "What is the difference between Managed Apps and personally installed apps? Can students take their apps with them after graduation?"
+
 category: "Section 3: App Management & Distribution"
+
 important: false
+
 tags: ["Managed Apps", "License Ownership", "VPP", "Data Protection"]
+
 ---
 
 **It depends on the "purchaser" identity and the "management attributes" of the app. App licenses and the data inside them should be considered separately.**
@@ -15,6 +20,7 @@ In a managed environment, apps are categorized as either "Managed" or "Personal,
 - **Source**: Purchased by administrators via **Apple School Manager (ASM)** and deployed through an MDM using "Device-based assignment."
 - **Ownership**: The license belongs to the **school**.
 - **Graduation/Departure Process**:
+
   - **License Recovery**: When a student leaves and the device is unenrolled, the MDM revokes the license. The app will either disappear from the device or become inaccessible. The license is then returned to the school's VPP (Volume Purchase Program) pool for the next student to use.
   - **Data Risk**: If the "Remove app when management profile is removed" setting is enabled, all data stored within the app (e.g., unsaved projects, local notes) will be **permanently erased**.
 
@@ -23,6 +29,7 @@ In a managed environment, apps are categorized as either "Managed" or "Personal,
 - **Source**: Purchased by the student on a personal or unrestricted device using their private Apple Account.
 - **Ownership**: The license belongs permanently to the **individual student**.
 - **Graduation/Departure Process**:
+
   - **Permanent Access**: The student can redownload the app on any new device by signing in with the same Apple Account, unaffected by the school's MDM.
   - **Note**: On internal "Supervised" school iPads, admins often restrict personal Apple Account logins to the App Store, so these apps are less common on school-owned hardware.
 

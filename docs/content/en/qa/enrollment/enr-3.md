@@ -1,9 +1,14 @@
 ---
 id: enr-3
+
 title: "What is 'Supervised Mode'? Why is it essential for school-owned devices?"
+
 category: "Section 2: Device Enrollment & Deployment"
+
 important: true
+
 tags: ["Supervised", "Management Levels", "ADE"]
+
 ---
 
 **Supervised Mode is a special state that gives the school "Institutional Ownership" over the device's operating system.**

@@ -1,9 +1,14 @@
 ---
 id: mac-12
+
 title: "How do I prevent students from entering Recovery Mode to format the computer?"
+
 category: "Section 7: Advanced Mac Management"
+
 important: false
+
 tags: ["Tamper Proofing", "Recovery Lock", "Firmware Password", "Security"]
+
 ---
 
 **The protection mechanism differs depending on the Mac architecture: Intel-based Macs require a 'Firmware Password,' while Apple Silicon (M-series) Macs require a 'Recovery Lock.' Both can be deployed via Jamf Pro.**
@@ -22,6 +27,7 @@ Recovery Mode is powerful. If left unprotected, anyone with physical access can 
 Starting with macOS 11.5, MDM can set a Recovery Lock. When enabled, the Mac will prompt for the administrator-defined password before allowing entry into Recovery Mode.
 
 - **Jamf Pro Action**: Select a computer > **Management > Remote Commands > Set Recovery Lock**.
+
 - **Management Note**: Jamf Pro will escrow the password so you can retrieve it later from the inventory record.
 
 ### 2. Firmware Password (For Intel Macs)

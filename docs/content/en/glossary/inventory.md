@@ -1,6 +1,8 @@
 ---
 term: "Inventory"
+
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ In a device management context, **Inventory** refers to the comprehensive databa
 Key inventory data points:
 
 - **Hardware details** : Serial number, model, processor type, and total RAM.
+
 - **Software details** : Current OS version and a list of all installed applications.
 - **Security status** : Encryption status (FileVault/Activation Lock), security patch level, and passcode compliance.
 - **Network status** : Current IP address, MAC address, and last check-in time.

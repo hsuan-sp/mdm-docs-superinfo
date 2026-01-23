@@ -1,6 +1,8 @@
 ---
 term: "iCloud Backup"
+
 category: ["Core", "Apple"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Core", "Apple"]
 Execution criteria:
 
 - **Connectivity** : The device must be connected to Wi-Fi.
+
 - **Power** : The device must be plugged into a power source (charging).
 - **State** : The device screen must be locked (usually occurring overnight).
 

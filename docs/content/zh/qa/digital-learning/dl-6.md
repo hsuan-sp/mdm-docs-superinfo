@@ -1,14 +1,20 @@
 ---
 id: dl-6
+
 title: "教學需要用到某些網站，如何暫時解除封鎖？"
+
 category: "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+
 important: false
+
 tags: ["內容過濾", "例外開放", "YouTube", "Jamf Trust", "DNS Proxy"]
+
 ---
 
 **精進方案的過濾規則由上級單位（教育局）控管。極度不建議做更動，**但若真的臨時急需使用，建議採取「排除」策略而非修改阻擋名單。** 在不影響全校政策的前提下，可依需求選擇解法： **方法一：暫時將裝置排除 (Jamf Trust Scope Exclusion)\*\* 1. 登入 Jamf Pro。
 
 1. 找到 Jamf Trust 的 **「設定描述檔 (DNS Proxy / Content Filter)」** 。
+
 1. 進入 **「範圍 (Scope)」>「排除 (Exclusion)」** 。
 1. 將老師的教學 iPad 或特定班級群組加入排除清單。
 1. 儲存後，裝置下次 Check-in 時會移除過濾設定，即可瀏覽 YouTube。

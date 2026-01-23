@@ -1,6 +1,8 @@
 ---
 term: "Certificate Authority (CA)"
+
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Security"]
 在數位憑證的信任鏈中：
 
 - **根憑證 (Root Certificate)** ：裝置必須先安裝並信任 CA 的根憑證。
+
 - **信任傳遞** ：一旦信任了根憑證，裝置就會自動信任由該 CA 簽發的所有子憑證。
 
 企業通常會架設內部的 CA，專門用來發放員工使用的 Wi-Fi 或 VPN 憑證。

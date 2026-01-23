@@ -1,9 +1,14 @@
 ---
 id: app-17
+
 title: "I 'purchased' an app in ASM, but it's not appearing in my Jamf Pro list. Why?"
+
 category: "Section 3: App Management & Distribution"
+
 important: false
+
 tags: ["VPP Sync", "ASM", "Troubleshooting", "Volume Purchase"]
+
 ---
 
 **This is usually due to a synchronization delay between Apple’s servers and your MDM server.**

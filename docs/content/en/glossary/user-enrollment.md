@@ -1,6 +1,8 @@
 ---
 term: "User Enrollment"
+
 category: ["Enrollment"]
+
 ---
 
 ## Definition

@@ -1,6 +1,8 @@
 ---
 term: "Firmware"
+
 category: ["Hardware"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Hardware"]
 Key roles:
 
 - **Initialization** : It is the first code that runs when a device is turned on, telling the hardware how to start up.
+
 - **Hardware Control** : Manages the interaction between the physical components (screen, battery, fans) and the higher-level operating system (macOS/iOS).
 - **Security Updates** : Apple frequently bundles firmware updates with standard OS updates to patch vulnerabilities that exist at the chip level.
 

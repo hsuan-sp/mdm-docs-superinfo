@@ -1,9 +1,14 @@
 ---
 id: cls-13
+
 title: "On a [Shared iPad], can students log in without a password? Is there a 'Guest Mode'?"
+
 category: "Section 4: Classroom Management & Instructional Tools"
+
 important: false
+
 tags: ["Shared iPad", "Guest Session", "Library"]
+
 ---
 
 **Yes. Shared iPad supports 'Guest Sessions', allowing users to log in without an account.**

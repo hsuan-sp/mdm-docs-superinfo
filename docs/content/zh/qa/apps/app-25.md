@@ -1,9 +1,14 @@
 ---
 id: app-25
+
 title: "macOS 26 的「宣告式 .pkg 部署」如何使用？與傳統 Jamf Policy 有何不同？"
+
 category: "第三部分：應用程式分發與管理 (Apps & Books)"
+
 important: false
+
 tags: ["macOS 26", "Package", "DDM", ".pkg", "Jamf Policy"]
+
 ---
 
 **macOS 26 (Tahoe) 將非 App Store 軟體 (.pkg) 納入宣告式裝置管理 (DDM) 範疇，允許透過 Declaration 部署軟體包，提供比傳統 Jamf Policy 更現代化、更透明的安裝體驗。**
@@ -22,6 +27,7 @@ tags: ["macOS 26", "Package", "DDM", ".pkg", "Jamf Policy"]
 
 - **macOS 版本需求** ：macOS 26 (Tahoe) 或更新版本。
 - **.pkg 檔案要求** ：
+
   - 必須由 **Apple Developer ID Installer certificate** 正確簽署。
   - 必須為標準的 Distribution Package 格式。
   - 安裝路徑需符合 macOS 安全性要求（通常為 `/Applications` 資料夾）。

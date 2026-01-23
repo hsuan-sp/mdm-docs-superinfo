@@ -1,6 +1,8 @@
 ---
 term: "Battery Health"
+
 category: ["Hardware"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Hardware"]
 MDM integration allows:
 
 - **Telemetry Collection** : Administrators can remotely monitor the health percentage of every device in the fleet.
+
 - **Proactive Maintenance** : Identify devices with batteries below a critical threshold (e.g., 80%).
 - **Prevention** : Schedule battery replacements before aging cells lead to performance throttling, unexpected shutdowns, or physical swelling (expanding batteries).
 

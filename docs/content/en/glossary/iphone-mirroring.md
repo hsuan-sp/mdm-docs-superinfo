@@ -1,6 +1,8 @@
 ---
 term: "iPhone Mirroring"
+
 category: ["macOS", "Security"]
+
 ---
 
 ## Definition

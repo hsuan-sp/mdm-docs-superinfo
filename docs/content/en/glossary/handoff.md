@@ -1,6 +1,8 @@
 ---
 term: "Handoff"
+
 category: ["Apple"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Apple"]
 How it works:
 
 - **Synchronization** : As you work in a compatible app (like Mail, Safari, or Pages), the device broadcasts the state of that app.
+
 - **Continuity** : A nearby device (Mac, iPad, or iPhone) detects the broadcast and displays a Handoff icon.
 - **Resumption** : Clicking the icon instantly opens the same app on the second device, at the exact same point in the task.
 

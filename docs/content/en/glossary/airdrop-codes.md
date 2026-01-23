@@ -1,6 +1,8 @@
 ---
 term: "AirDrop Codes"
+
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ Introduced in **iOS 26.2** , **AirDrop Codes** add an extra layer of privacy and
 Key features include:
 
 - **One-time Codes** : Users can generate a temporary code (valid for up to 30 days) for sharing with people not in their contacts.
+
 - **Verification** : The recipient must enter this code to verify and accept the incoming transfer.
 - **Privacy Protection** : Prevents unsolicited AirDrop requests and ensures files are only sent to the intended recipient.
 - **MDM Context** :

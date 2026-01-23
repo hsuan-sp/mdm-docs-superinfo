@@ -1,9 +1,14 @@
 ---
 id: mac-28
+
 title: "【現場救援】Mac 快速重置 (EACS) 後若自動註冊卡住，有哪些離線恢復與修復技巧？"
+
 category: "第七部分：Mac 裝置管理 (Mac Management)"
+
 important: true
+
 tags: ["EACS", "ADE 故障排除", "網路認證", "Terminal 指令", "復原模式"]
+
 ---
 
 **雖然「清除所有內容和設定 (EACS)」非常穩定，但在學校環境中，常因 Wi-Fi 需要網頁認證或防火牆擋掉 Apple 註冊伺服器，導致電腦卡在「遠端管理」註冊畫面。**
@@ -21,16 +26,21 @@ tags: ["EACS", "ADE 故障排除", "網路認證", "Terminal 指令", "復原模
 在 Setup Assistant 畫面，按下 **Command + Option + T** 開啟終端機（或從選單進入）：
 
 ```bash
+
 sntp -sS time.apple.com
 
 ## 或是手動設定 (格式: MMDDhhmmYY)
+
 date 0115100026
+
 ```
 
 ### 技巧 2：手動觸發雲端設定檢查
 
 ```bash
+
 sudo profiles renew -type enrollment
+
 ```
 
 這會強制 Mac 重新連網詢問 Apple 伺服器：「誰是我的管理程式？」
@@ -44,6 +54,7 @@ sudo profiles renew -type enrollment
 若 EACS 完全無法啟動，請進入 **復原模式 (Recovery Mode)** ：
 
 1.  **Apple Silicon (M1-M5)** ：長按電源鍵進入。
+
 1.  **Intel Mac (T2)** ：開機時按住 `Command + R`。
 1.  **操作** ：點選「抹除 Mac」並重新啟動，強迫系統重置所有與硬體綁定的安全金鑰 (Secure Enclave)。
 

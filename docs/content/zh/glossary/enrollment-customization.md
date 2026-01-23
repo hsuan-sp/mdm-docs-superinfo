@@ -1,6 +1,8 @@
 ---
 term: "Enrollment Customization (註冊自訂內容)"
+
 category: ["Enrollment", "Apple"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Enrollment", "Apple"]
 它允許管理員在標準的開箱設定流程中，插入 **客製化的網頁介面** ，常見用途包括：
 
 - **身分驗證** ：整合 Microsoft Entra ID (Azure AD) 或 Google Workspace 進行登入驗證。
+
 - **使用者條款** ：顯示並要求簽署數位使用合約 (EULA)。
 - **品牌識別** ：展示學校或企業的 Logo 與歡迎訊息。
 
@@ -22,6 +25,7 @@ category: ["Enrollment", "Apple"]
 就像新員工第一天報到，公司不是直接把他丟到座位上，而是先在門口（開機設定畫面）設了幾個關卡：
 
 1. 先看歡迎看板（品牌訊息）。
+
 2. 發員工手冊要你簽名（使用條款）。
 3. 檢查身分證確認是本人（帳號登入）。
 

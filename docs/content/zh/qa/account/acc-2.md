@@ -1,9 +1,14 @@
 ---
 id: acc-2
+
 title: "推播憑證 (APNs Certificate) 過期會發生什麼事？如何續約？"
+
 category: "第一部分：帳號與伺服器管理 (Account & Server Management)"
+
 important: true
+
 tags: ["APNs", "憑證", "災難預防"]
+
 ---
 
 **後果極為嚴重：MDM 系統將完全失效，無法推送任何新命令以管理裝置。**
@@ -22,7 +27,9 @@ Apple 推播通知服務憑證 (Apple Push Notification service Certificate, APN
 1.  **登入 Jamf Pro** ：前往 **「設定 (Settings)」>「全域管理 (Global Management)」>「推播憑證 (Push Certificates)」** 。
 1.  **點選「續約 (Renew)」** ，系統會產生一個 **憑證簽署請求 (CSR)** 檔案供您下載。
 1.  **登入 Apple 推播憑證入口網站** ：前往 [identity.apple.com/pushcert](https://identity.apple.com/pushcert)，使用 **最初建立該憑證的同一個 Apple 帳號** 登入。
+
     - ⚠️ **嚴重警告** ：若使用不同的 Apple 帳號登入並建立新憑證，Apple 會將其視為「全新的 MDM 服務」，所有裝置將與 Jamf Pro 斷開連結！（若及時換回憑證還能救回，否則將無法控制裝置）
+
 1.  **找到對應的憑證點選「Renew」** ：上傳 CSR 檔案，下載新的 .pem 憑證檔。
 1.  **回到 Jamf Pro 上傳新憑證** ：完成上傳後，憑證將同步更新，有效期將向後延長一年。
 

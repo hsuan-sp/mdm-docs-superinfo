@@ -1,15 +1,26 @@
 ---
 id: app-15
+
 title: "How do I prevent apps from updating during class time to avoid network congestion?"
+
 category: "Section 3: App Management & Distribution"
+
 important: false
+
 tags:
+
   [
+
     "App Updates",
+
     "Classroom Management",
+
     "Update Strategy",
+
     "Bandwidth Control",
+
   ]
+
 ---
 
 **The key is to disable 'Automatic Updates' and adopt a 'Manual Push during Maintenance Window' strategy.**

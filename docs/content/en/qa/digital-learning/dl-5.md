@@ -1,9 +1,14 @@
 ---
 id: dl-5
+
 title: "Students are deleting the Jamf Trust app. How does this affect compliance, and how do we prevent it?"
+
 category: "Section 5: Digital Initiatives (MOE Project)"
+
 important: false
+
 tags: ["Compliance", "Security", "Restrictions", "Jamf Trust"]
+
 ---
 
 **Deleting Jamf Trust effectively blinds your reporting system. The device will be marked as "Unused" in official compliance audits, even if the student is using it for class every day.** To ensure your school meets its Key Performance Indicators (KPIs), you must implement technical safeguards.

@@ -1,6 +1,8 @@
 ---
 term: "Bootstrap Token"
+
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ A **Bootstrap Token** is a secure authorization credential used within the macOS
 Operational flow:
 
 - **Generation** : When the first user enables **FileVault** encryption on a Mac, the system generates this token.
+
 - **Escrow** : The token is securely uploaded and stored in the MDM server.
 - **Utility** : MDM uses this token to authorize other administrator accounts or to allow **software updates** that require a cryptographic "owner" to proceed.
 

@@ -1,6 +1,8 @@
 ---
 term: "Keychain"
+
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ The **Keychain** is Apple’s integrated password management system included in 
 Stored items include:
 
 - **Credentials** : Usernames and passwords for websites, servers, and apps.
+
 - **Certificates** : Digital identities used for Wi-Fi (802.1X) and VPN authentication.
 - **Encryption** : Private keys used for secure communication.
 - **Secure Notes** : Confidential information entered by the user.

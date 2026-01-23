@@ -1,9 +1,14 @@
 ---
 id: dl-2
+
 title: "The MOE dashboard shows some devices as 'Unused' or failing to upload data. How do we fix this?"
+
 category: "Section 5: Digital Initiatives (MOE Project)"
+
 important: true
+
 tags: ["Data Reporting", "Troubleshooting", "Jamf Trust", "Usage Metrics"]
+
 ---
 
 **Incomplete usage data is usually caused by the Jamf Trust agent being closed, devices staying offline, or missing configuration profiles.** For institutional compliance, the Jamf Trust app must remain active in the background to report student engagement. If a device shows zero activity, follow these steps:

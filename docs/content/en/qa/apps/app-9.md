@@ -1,9 +1,14 @@
 ---
 id: app-9
+
 title: "Do I need the student's Apple ID password to update apps? How can I achieve silent updates?"
+
 category: "Section 3: App Management & Distribution"
+
 important: false
+
 tags: ["App Updates", "Device-based Assignment", "Automated Updates", "DDM"]
+
 ---
 
 **No password is required. As long as you use "Device-based Assignment," the update process is completely hands-off.**
@@ -13,6 +18,7 @@ tags: ["App Updates", "Device-based Assignment", "Automated Updates", "DDM"]
 Under the latest OS architecture, **DDM** is the best path for silent updates:
 
 - **Autonomy**: The device itself monitors app versions based on the MDM declaration and triggers downloads in the background. It no longer relies on a one-way "push" command from the server.
+
 - **Status Transparency**: Admins get real-time progress reports (e.g., "Downloading" or "Insufficient Space") instead of the vague "Pending" status seen in older MDM versions.
 
 ## Traditional MDM Configuration (Compatibility Layer):

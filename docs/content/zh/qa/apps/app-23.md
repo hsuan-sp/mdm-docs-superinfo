@@ -1,9 +1,14 @@
 ---
 id: app-23
+
 title: "什麼是「Declarative App Management (宣告式 App 管理)」？與傳統 VPP App 指派有什麼不同？"
+
 category: "第三部分：應用程式分發與管理 (Apps & Books)"
+
 important: true
+
 tags: ["DDM", "App 管理", "宣告式", "自動更新", "iOS 26"]
+
 ---
 
 **Declarative App Management (宣告式 App 管理) 是 iOS 26、iPadOS 26 與 macOS 26 引入的全新機制，讓裝置能夠「自主」管理 App 的安裝與更新狀態，取代傳統依賴 MDM 伺服器頻繁發送指令的模式。**
@@ -28,11 +33,15 @@ tags: ["DDM", "App 管理", "宣告式", "自動更新", "iOS 26"]
 在支援 DDM 的 Jamf Pro 版本中：
 
 1.  進入 **Blueprints** > **App Management**
+
 2.  建立 **App Declaration**
 3.  設定 **Installation Behavior** ：
+
     - **Required (必要)** ：強制安裝，且使用者無法移除。若使用者刪除，裝置會自動重裝。
     - **Optional (選用)** ：出現在 Self Service 供下載，使用者可移除。
+
 4.  設定 **Update Behavior** ：
+
     - **Automatic** ：永遠保持最新。
     - **Follow User Preference** ：依循使用者在 App Store 的自動更新設定。
 

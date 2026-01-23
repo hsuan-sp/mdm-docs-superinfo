@@ -1,9 +1,14 @@
 ---
 id: mac-20
+
 title: "How do I configure 'Unlock FileVault via SSH' in macOS 26?"
+
 category: "Section 7: Advanced Mac Management"
+
 important: false
+
 tags: ["FileVault", "SSH", "Remote Unlock", "macOS 26", "Remote Management"]
+
 ---
 
 **macOS 26 introduces the ability to unlock FileVault at the 'Pre-boot' stage via SSH, solving a major pain point for headless server management.**
@@ -22,6 +27,7 @@ Historically, a Mac with FileVault enabled would stop at the login screen after 
 ## Remote Unlock Command
 
 From a remote terminal:
+
 `SSH -o PreferredAuthentications=password -o PubkeyAuthentication=no username@mac-ip`
 
 After entering the password, the SSH session will momentarily drop as the encryption keys are released and the system finishes its boot sequence.
@@ -39,6 +45,7 @@ After entering the password, the SSH session will momentarily drop as the encryp
 On **M5 Silicon** Macs, Apple has tightened **Secure Enclave** protections.
 
 - If you have enabled "Lockdown Mode" or "Advanced Data Protection," the Pre-boot SSH stack may be crippled for safety.
+
 - **Recommendation**: For server-room units requiring remote telemetry, ensure these high-restriction security toggles are managed carefully via MDM to allow the network stack to initialize.
 
 ## Deployment Advice

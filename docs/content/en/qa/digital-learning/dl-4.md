@@ -1,9 +1,14 @@
 ---
 id: dl-4
+
 title: "How do I create Smart Groups specifically for tracking different phases of our hardware rollout?"
+
 category: "Section 5: Digital Initiatives (MOE Project)"
+
 important: false
+
 tags: ["Group Management", "Automation", "Smart Groups", "Asset Tracking"]
+
 ---
 
 **Smart Groups are the "sorting bins" of Jamf Pro. They allow you to automatically categorize devices based on their purchase year, model, or health status.** Using Smart Groups, you can target specific "batches" of hardware with unique apps or restrictions without having to manually select each iPad.

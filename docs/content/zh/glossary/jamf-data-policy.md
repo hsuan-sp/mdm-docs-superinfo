@@ -1,6 +1,8 @@
 ---
 term: "Jamf Data Policy"
+
 category: ["Jamf", "Security"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Jamf", "Security"]
 管理員可設定規則來防止：
 
 - **不當傳輸** ：禁止透過 AirDrop 分享特定文件。
+
 - **畫面擷取** ：當開啟機密文件時，自動阻擋螢幕截圖功能。
 - **剪貼簿控制** ：禁止將機密內容「複製」並「貼上」到未經授權的私人 App (如 LINE 或 WhatsApp)。
 

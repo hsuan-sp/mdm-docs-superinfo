@@ -1,6 +1,8 @@
 ---
 term: "Liquid Glass"
+
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Core"]
 Visual characteristics:
 
 - **Materiality** : Features increased transparency, dynamic light reflections, and real-time blurring logic.
+
 - **Depth** : Creates a fluid sense of depth where interface elements (like windows or dock icons) feel like they are floating on different layers of glass.
 - **Adaptability** : The interface reacts subtly to environmental lighting conditions captured by the device's sensors.
 

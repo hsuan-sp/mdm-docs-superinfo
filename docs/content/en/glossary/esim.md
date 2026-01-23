@@ -1,6 +1,8 @@
 ---
 term: "eSIM"
+
 category: ["Hardware"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ An **eSIM** (embedded SIM) is a programmable digital SIM card built directly int
 In an MDM environment:
 
 - **Remote Provisioning** : IT can push cellular data plans to a fleet of iPads or iPhones over-the-air.
+
 - **Security** : The SIM cannot be physically removed or stolen from the device.
 - **Logistics** : Eliminates the cost and delay of shipping physical SIM cards to staff or students.
 - **Flexibility** : Devices can store multiple eSIM profiles, making it easy to switch between local and international data plans for school trips.

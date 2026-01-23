@@ -1,6 +1,8 @@
 ---
 term: "DHCP (Dynamic Host Configuration Protocol)"
+
 category: ["Network"]
+
 ---
 
 ## 術語定義

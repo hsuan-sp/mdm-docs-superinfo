@@ -1,6 +1,8 @@
 ---
 term: "Package (.pkg)"
+
 category: ["macOS"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ A **Package (.pkg)** is the standard flat-file installation format for macOS sof
 Components:
 
 - **Payload** : The actual files (apps, fonts, scripts) to be installed.
+
 - **Scripts** : "Pre-install" and "Post-install" scripts that run commands to set up the environment (e.g., activate a license key).
 - **Receipts** : A record left on the Mac so the system knows what was installed.
 

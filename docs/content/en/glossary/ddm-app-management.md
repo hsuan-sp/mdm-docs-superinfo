@@ -1,6 +1,8 @@
 ---
 term: "DDM App Management"
+
 category: ["Apps"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Apps"]
 Key differences from legacy MDM:
 
 - **Device Agency** : The device itself takes full responsibility for handling downloads and managing installation retries.
+
 - **Auto-Correction** : If a required managed app is accidentally deleted by a user, the device detects the discrepancy locally and automatically re-installs it.
 - **Efficiency** : Eliminates the need for the MDM server to constantly monitor and resend installation commands.
 

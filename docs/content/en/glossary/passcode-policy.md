@@ -1,6 +1,8 @@
 ---
 term: "Passcode Policy"
+
 category: ["Security", "Core"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ A **Passcode Policy** is an MDM payload that defines the mandatory password requ
 Configurable rules:
 
 - **Complexity** : Determine if the code can be simple logic (4 digits) or must be complex (alphanumeric).
+
 - **History** : Prevent users from reusing old passwords (e.g., "Cannot use previous 5 passwords").
 - **Age** : Force users to change their password every X days (e.g., 90 days).
 - **Attempts** : Set the maximum number of failed attempts before the device is automatically wiped (e.g., 10 attempts).

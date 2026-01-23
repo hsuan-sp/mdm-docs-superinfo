@@ -1,9 +1,14 @@
 ---
 id: hw-1
+
 title: "學校同時有 iPad 9 (Lightning) 以前的載具，與 iPad 10 (USB-C) 以後的載具，配件或 Apple Pencil 如何相容？"
+
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
+
 important: true
+
 tags: ["硬體管理", "Lightning", "USB-C", "Apple Pencil", "轉接器", "充電車"]
+
 ---
 
 **隨著精進方案進入後期，學校開始採購新 iPad，校內常出現不同介面的 iPad 併存。**
@@ -13,16 +18,22 @@ tags: ["硬體管理", "Lightning", "USB-C", "Apple Pencil", "轉接器", "充�
 ## Apple Pencil 相容性與轉接方案 ：
 
 1.  **iPad 9 (Lightning) 世代** ：僅支援 **Apple Pencil (第 1 代)** 。
+
     - 配對與充電方式是直接將筆頭插入 iPad 底部的 Lightning 埠。
+
 2.  **iPad 10 (USB-C 基礎款)** ：
+
     - 若沿用 **Apple Pencil (第 1 代)** ：必須額外購買 **「USB-C 對 Apple Pencil 轉接器」** 。配對時需透過 USB-C 線接上轉接器與筆，過程較為繁瑣，建議由老師統一保管轉接器，避免學生遺失。
     - 若新購 **Apple Pencil (USB-C)** ：可直接透過 USB-C 線進行配對與充電，但要注意此款筆 **不具備壓力感應功能** 。
+
 3.  **iPad Pro (M4)、iPad Air (M2/M3)、iPad mini 7 (A17 Pro) 高階機型** ：
+
     - **重大變更** ：這些機型改用新磁吸結構， **不再支援 Apple Pencil (第 2 代)** 。
     - **僅支援** ：
       - **Apple Pencil Pro** （建議）：具備側壓 (Squeeze)、陀螺儀旋轉、觸覺回饋，並支援「尋找網路 (Find My)」，遺失時可定位追蹤，對校園管理極為重要。
       - **Apple Pencil (USB-C)** ：預算有限時的選項，但無壓力感應與進階功能。
     - **採購提醒** ：若學校有 M4 iPad Pro，千萬不要採購 Apple Pencil 2，會完全無法使用。
+
 4.  **第三方配件** ：若採購副廠觸控筆，請確認其支援 USB-C 充電並具備防誤觸功能，以減少教學干擾。
 
 ## 充電車與佈線管理建議 ：

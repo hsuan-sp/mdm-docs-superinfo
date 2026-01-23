@@ -1,9 +1,14 @@
 ---
 id: cls-6
+
 title: "Can students leave or remove 'Classroom' classes created by the teacher?"
+
 category: "Section 4: Classroom Management & Instructional Tools"
+
 important: false
+
 tags: ["Classroom", "ASM", "Restrictions Profile", "Prevent Leaving"]
+
 ---
 
 **This depends on the source of the class. Classes synced from your school system cannot be removed, but teacher-created ad-hoc classes can—unless restricted via MDM.**

@@ -1,9 +1,14 @@
 ---
 id: cls-10
+
 title: "課堂結束後，老師如何一鍵「登出」所有學生的共用 iPad？"
+
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
+
 important: false
+
 tags: ["共用 iPad", "Shared iPad", "登出指令", "智慧快取"]
+
 ---
 
 **在使用「共用 iPad (Shared iPad)」的情境下，老師應在下課時執行「登出」動作，讓裝置準備好迎接下一位使用者。**

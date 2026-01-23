@@ -1,9 +1,14 @@
 ---
 id: mac-9
+
 title: "What can Jamf Scripts do? How do I create and run them?"
+
 category: "Section 7: Advanced Mac Management"
+
 important: false
+
 tags: ["Automation", "Shell Script", "Zsh", "Policies", "Scripts", "jamfHelper"]
+
 ---
 
 **Scripts allow administrators to execute shell commands with Root privileges on a Mac, enabling advanced customization that standard MDM payloads cannot achieve.**
@@ -59,13 +64,19 @@ While scripts were previously used to check system states periodically, macOS 26
 #!/bin/bash
 
 # Define variables
+
 HELPER="/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper"
+
 TITLE="School IT Department Announcement"
+
 HEADING="Software Update Notification"
+
 DESC="Your computer will undergo a security update in 10 minutes. Please save your work and connect to power."
 
 # Execute window
+
 "$HELPER" -windowType utility -title "$TITLE" -heading "$HEADING" -description "$DESC" -button1 "I understand" -defaultButton 1
+
 ```
 
 ## Practical Advice & Expert Tips:

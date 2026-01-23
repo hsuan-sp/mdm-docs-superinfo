@@ -1,6 +1,8 @@
 ---
 term: "PPPC"
+
 category: ["Security", "macOS"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Security", "macOS"]
 Protected resources include:
 
 - **Hardware** : Camera, Microphone.
+
 - **Data** : Desktop folder, Documents folder, Photos, Downloads.
 - **System** : Screen Recording, Accessibility features.
 

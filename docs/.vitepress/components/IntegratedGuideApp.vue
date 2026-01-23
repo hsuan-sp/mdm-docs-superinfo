@@ -385,7 +385,7 @@ const closeMobileDrawer = () => {
                     <div class="q-main">
                       <span v-if="item.important" class="imp-tag">{{
                         t.important
-                      }}</span>
+                        }}</span>
                       <span class="q-text">{{ item.question }}</span>
                     </div>
                     <span class="arrow">▼</span>
@@ -414,7 +414,7 @@ const closeMobileDrawer = () => {
                     <div class="q-main">
                       <span v-if="item.important" class="imp-tag">{{
                         t.important
-                      }}</span>
+                        }}</span>
                       <span class="q-text">{{ item.question }}</span>
                     </div>
                     <span class="arrow">▼</span>
@@ -442,7 +442,7 @@ const closeMobileDrawer = () => {
                       <div class="q-main">
                         <span v-if="item.important" class="imp-tag">{{
                           t.important
-                        }}</span>
+                          }}</span>
                         <span class="q-text">{{ item.question }}</span>
                       </div>
                       <span class="arrow">▼</span>
@@ -562,7 +562,7 @@ const closeMobileDrawer = () => {
 <style scoped>
 /* WCAG 2.1 AA Compliant Typography - Research-Based Readability */
 .markdown-body {
-  font-size: 1.05em;
+  font-size: 1.0625rem;
   line-height: 1.6 !important;
   padding-top: 16px;
   word-wrap: break-word;
@@ -576,9 +576,14 @@ const closeMobileDrawer = () => {
 
 .markdown-body :deep(p) {
   margin-bottom: 1.25rem;
-  /* Reduced from 1.75em for better balance */
   line-height: inherit;
   word-spacing: inherit;
+}
+
+.markdown-body :deep(h2),
+.markdown-body :deep(h3) {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 /* Ensure paragraphs inside list items don't have bottom margin */

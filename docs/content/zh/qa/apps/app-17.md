@@ -1,9 +1,14 @@
 ---
 id: app-17
+
 title: "我在 ASM 已經「取得」了 App，為什麼 Jamf Pro 列表裡還是找不到？"
+
 category: "第三部分：應用程式分發與管理 (Apps & Books)"
+
 important: false
+
 tags: ["VPP 同步", "ASM", "故障排除", "大量採購"]
+
 ---
 
 **這通常是因為「Apple 伺服器」與「MDM 伺服器」之間的排程同步尚未完成。**

@@ -1,9 +1,14 @@
 ---
 id: edu-06
+
 title: "我可以登入自己的 Apple 帳號 下載以前買過的遊戲嗎？"
+
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
+
 important: false
+
 tags: ["Apple 帳號", "公私分明", "個人帳號"]
+
 ---
 
 **強烈不建議，且多數學校政策明確禁止。登入私人 Apple 帳號 會導致資料混雜、啟用鎖定風險、以及 VPP 授權衝突等問題。**

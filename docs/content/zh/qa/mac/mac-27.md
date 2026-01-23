@@ -1,9 +1,14 @@
 ---
 id: mac-27
+
 title: "【自動化維管】利用 macOS 26 DDM 設定「智慧能源管理」：兼顧校園節能與凌晨自動更新。"
+
 category: "第七部分：Mac 裝置管理 (Mac Management)"
+
 important: false
+
 tags: ["節能政策", "DDM", "自動更新", "能源管理", "macOS 26"]
+
 ---
 
 **過往「資訊組希望開機更新」與「總務處希望按時關機省電」一直是學校維運的兩難。macOS 26 與 DDM 的結合提供了一個完美的自動化平衡點。**
@@ -13,12 +18,17 @@ tags: ["節能政策", "DDM", "自動更新", "能源管理", "macOS 26"]
 透過 macOS 26 的 **系統配置承載資料 (System Configurations)** ，您可以設定以下智慧型邏輯：
 
 1.  **動態睡眠排程 (Dynamic Sleep Schedule)** ：
+
     - **平日授課** ：設定 20 分鐘閒置即喚醒，確保師生開機即用。
     - **夜間保護** ：設定在 18:00 後進入深層睡眠 (Power Nap)。
+
 1.  **更新優先喚醒 (Update-Initiated Wake)** ：
+
     - **設定** ：啟用 DDM 中的 `Allow Wake for Managed Activity`。
     - **效果** ：即使 Mac 處於睡眠狀態，當 Jamf Pro 推送 **安全性更新 (Rapid Security Response)** 或 **DDM 軟體配給** 時，Mac 會自動短暫喚醒、完成安裝後再度進入深度睡眠。
+
 1.  **節能回報 (Energy Status Channel)** ：
+
     - 您可以透過 DDM 狀態頻道監控全校電腦的「電池循環次數」或「處於高效能模式的時數」，作為未來報廢汰換的量化依據。
 
 ## 二、 實務營運建議

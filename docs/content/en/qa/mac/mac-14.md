@@ -1,9 +1,14 @@
 ---
 id: mac-14
+
 title: "How do I deploy multiple network printers to teacher Macs using Jamf Pro?"
+
 category: "Section 7: Advanced Mac Management"
+
 important: false
+
 tags: ["Printers", "AirPrint", "lpadmin", "Policy", "Self Service"]
+
 ---
 
 **Modern Mac printing should prioritize the 'AirPrint (driverless)' protocol. For advanced configurations, use 'Policies' or Shell scripts executing the `lpadmin` command.**
@@ -27,14 +32,19 @@ For precise control, use a script to call `lpadmin`:
 #!/bin/bash
 
 # Define Variables
+
 PRINTER_NAME="Office_HP_M404"
+
 DISPLAY_NAME="Admin Office HP M404"
+
 ADDRESS="ipp://192.168.1.100/ipp/print"
 
 # Execute lpadmin with -m everywhere for auto-AirPrint
+
 /usr/sbin/lpadmin -p "$PRINTER_NAME" -D "$DISPLAY_NAME" -E -v "$ADDRESS" -m everywhere -o printer-is-shared=false
 
 echo "Printer $DISPLAY_NAME installed successfully."
+
 ```
 
 ### Method 3: Handling Older Printers (Driver Required)

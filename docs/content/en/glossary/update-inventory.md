@@ -1,6 +1,8 @@
 ---
 term: "Update Inventory"
+
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Core"]
 Data points refreshed:
 
 - **Device Info** : OS Version, Battery Level, Storage usage.
+
 - **Apps** : List of all installed applications and versions.
 - **Security** : Current status of Passcode, Encryption, and System Integrity Protection.
 - **Profiles** : List of installed configuration profiles.

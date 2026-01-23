@@ -1,6 +1,8 @@
 ---
 term: "Zero-Touch Deployment"
+
 category: ["Enrollment"]
+
 ---
 
 ## Term Definition

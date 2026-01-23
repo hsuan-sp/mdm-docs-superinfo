@@ -1,6 +1,8 @@
 ---
 term: "Platform SSO in Setup Assistant"
+
 category: ["Mac"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Mac"]
 Workflow improvements:
 
 - **Early Login** : Allows the user to authenticate with their cloud identity (Google/Microsoft/Okta) during the very first "Hello" setup screens.
+
 - **Auto-Account Creation** : Automatically creates the local computer account using the cloud identity's full name and password.
 - **FileVault Sync** : Ensures the disk encryption password matches the cloud password from day one.
 - **Token Exchange** : Retrieves the necessary SSO tokens immediately so apps are logged in as soon as the Desktop appears.

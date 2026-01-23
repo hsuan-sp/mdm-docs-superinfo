@@ -1,6 +1,8 @@
 ---
 term: "Shared iPad"
+
 category: ["Education", "Enrollment"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Education", "Enrollment"]
 How it works:
 
 - **Cloud Storage** : Users sign in with their Managed Apple Account. Their personal data is downloaded from iCloud to the device.
+
 - **Caching** : The iPad caches the data locally for the most recent users (e.g., last 5 students) so they can log in instantly next time.
 - **Privacy** : Each user's data is encrypted separately. Student A cannot see Student B's photos or files.
 - **Guest Mode** : Allows temporary usage without a login for quick research tasks.

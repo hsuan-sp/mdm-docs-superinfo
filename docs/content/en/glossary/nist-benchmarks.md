@@ -1,6 +1,8 @@
 ---
 term: "NIST Benchmarks"
+
 category: ["Security", "Education"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ The **NIST (National Institute of Standards and Technology) Benchmarks** are a g
 Educational adoption:
 
 - **Baseline** : Many government education departments adopt these standards as the minimum requirement for school-owned devices.
+
 - **Requirements** : Typically mandate a 6-digit complex passcode, automatic OS updates, 15-minute auto-lock timers, and full-disk encryption.
 - **Compliance** : MDM systems use these benchmarks to "audit" device fleets and flag any iPad that is not secure enough.
 

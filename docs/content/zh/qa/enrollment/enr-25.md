@@ -1,9 +1,14 @@
 ---
 id: enr-25
+
 title: "PreStage 註冊時可以跳過哪些「設定輔助程式」步驟？教育場域的建議設定為何？"
+
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
+
 important: true
+
 tags: ["PreStage", "設定輔助程式", "ADE", "部署加速", "最佳實務"]
+
 ---
 
 **PreStage Enrollment 可跳過多項設定輔助程式步驟。教育環境建議跳過大部分非必要步驟，以加速部署並減少學生誤操作。**
@@ -78,6 +83,7 @@ tags: ["PreStage", "設定輔助程式", "ADE", "部署加速", "最佳實務"]
 在 **Setup Assistant** 分頁中，勾選（跳過）以下項目：
 
 - Location Services
+
 - Restore（從 iCloud 回復，學校裝置不需要）
 - Apple ID（共享裝置）
 - Terms and Conditions

@@ -1,9 +1,14 @@
 ---
 id: cls-12
+
 title: "【考試防弊】如何避免學生用 Apple Intelligence (寫作工具) 或數學備忘錄作弊？"
+
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
+
 important: false
+
 tags: ["Apple Intelligence", "寫作工具", "數學備忘錄", "防弊", "iOS 18"]
+
 ---
 
 **針對 iOS 26+ 裝置，管理員應優先透過「宣告式裝置管理 (DDM)」進行即時控管。**

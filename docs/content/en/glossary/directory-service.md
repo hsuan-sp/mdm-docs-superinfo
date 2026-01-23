@@ -1,6 +1,8 @@
 ---
 term: "Directory Service"
+
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ A **Directory Service** is a centralized system used to store, organize, and man
 It serves as the authoritative source for answering:
 
 - Who a user is
+
 - Which organization or department they belong to
 - What resources they are allowed to access
 
@@ -18,6 +21,7 @@ It serves as the authoritative source for answering:
 - **Microsoft Active Directory (AD)**
 - **LDAP (Lightweight Directory Access Protocol)**
 - **Cloud-based Identity Services**
+
   - Azure AD (Entra ID)
   - Google Workspace
   - Okta
@@ -29,6 +33,7 @@ When integrated with a **Mobile Device Management (MDM)** system, a Directory Se
 This enables:
 
 - Centralized authentication
+
 - Automatic assignment of apps and configurations based on group or role
 - Immediate revocation of access across all managed devices when a user leaves the organization
 

@@ -1,9 +1,14 @@
 ---
 id: edu-27
+
 title: "If a school changes MDM providers, is it mandatory to wipe all iPads?"
+
 category: "Section 8: Education Scenarios"
+
 important: true
+
 tags: ["MDM Migration", "Zero-Wipe", "System Maintenance", "iOS 26 Technology"]
+
 ---
 
 **Prior to 2026, the answer was yes. However, with the release of iOS 26 (Tahoe), Apple introduced 'Zero-Wipe MDM Migration.' If specific conditions are met, schools can migrate from Provider A to Provider B without erasing data or re-downloading apps.**
@@ -28,6 +33,7 @@ tags: ["MDM Migration", "Zero-Wipe", "System Maintenance", "iOS 26 Technology"]
 Even though the feature is available, education technology experts often consider it a **last resort** rather than a best practice.
 
 - **'Profile Ghosting'**: Legacy settings from the old MDM (like specific Wi-Fi certificates or restrictions) can sometimes linger, creating "conflicts" with the new MDM policies that are difficult to troubleshoot.
+
 - **VPP Licensing Lock**: Handing off app management is fragile. If the old MDM doesn't release the VPP license cleanly before the new one takes over, apps may stop updating or prompt students for a password.
 - **Accumulated Technical Debt**: A wipe provides a "fresh start" for the filesystem. A migration carries over years of system logs and cache clutter, which can impact performance on older devices like the iPad 9.
 

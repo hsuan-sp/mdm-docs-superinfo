@@ -242,7 +242,7 @@ const getCategoryChipName = (cat: string) =>
               {{ getCategoryName(cat) }}
               <span class="cat-count" v-if="getCategoryCount(cat) > 0">{{
                 getCategoryCount(cat)
-                }}</span>
+              }}</span>
             </button>
           </div>
         </template>
@@ -258,7 +258,7 @@ const getCategoryChipName = (cat: string) =>
             }}</span>
             <span class="status-count">{{
               t.totalTerms.replace("{n}", String(filteredTerms.length))
-              }}</span>
+            }}</span>
             <button v-if="!isMobileView" @click="toggleSort" class="desk-sort-btn">
               {{ sortOrder === "asc" ? "A-Z" : "Z-A" }}
             </button>
@@ -380,7 +380,7 @@ const getCategoryChipName = (cat: string) =>
 <style scoped>
 /* WCAG 2.1 AA Compliant Typography - Research-Based Readability */
 .markdown-body {
-  font-size: 1.05em;
+  font-size: 1.0625rem;
   line-height: 1.6 !important;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -394,6 +394,12 @@ const getCategoryChipName = (cat: string) =>
   margin-bottom: 1.25rem;
   line-height: inherit;
   word-spacing: inherit;
+}
+
+.markdown-body :deep(h2),
+.markdown-body :deep(h3) {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 /* Ensure paragraphs inside list items don't have bottom margin */

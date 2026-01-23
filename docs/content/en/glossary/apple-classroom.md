@@ -1,6 +1,8 @@
 ---
 term: "Apple Classroom"
+
 category: ["Education"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Education"]
 Key capabilities:
 
 - **Screen View** : Teachers can monitor student screens in real-time.
+
 - **App Lock** : Lock devices into a specific app or website for focused learning.
 - **Resource Sharing** : Instantly share documents, web links, or students' screens to an Apple TV.
 

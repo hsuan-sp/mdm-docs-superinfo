@@ -1,6 +1,8 @@
 ---
 term: "Global Proxy"
+
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ A **Global HTTP Proxy** setting is an MDM payload that enforces the routing of a
 Typical organizational goals:
 
 - **Content Filtering** : Denying access to inappropriate or dangerous websites at the gateway level.
+
 - **Auditing** : Maintaining centralized logs of all internet usage for compliance and digital citizenship monitoring.
 - **Bypass Prevention** : Ensuring that filtering remains active even when the device leaves the campus network.
 

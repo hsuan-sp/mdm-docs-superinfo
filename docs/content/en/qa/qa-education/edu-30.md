@@ -1,9 +1,14 @@
 ---
 id: edu-30
+
 title: "Can MDM-managed iPads still be used if the school Wi-Fi is down? What are the backup plans?"
+
 category: "Section 8: Education Scenarios"
+
 important: true
+
 tags: ["Connectivity", "Backup Plan", "Offline Usage", "Network Instability"]
+
 ---
 
 **One of the iPad’s greatest strengths is its 'Offline Productivity.' Even without Wi-Fi, most pre-installed apps and downloaded content remain fully functional. The role of MDM is to pre-configure 'Offline Grace Periods' and 'Local Caching' to ensure teaching never stops.**

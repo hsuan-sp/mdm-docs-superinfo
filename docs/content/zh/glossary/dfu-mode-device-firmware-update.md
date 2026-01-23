@@ -1,6 +1,8 @@
 ---
 term: "DFU Mode (Device Firmware Update)"
+
 category: ["Hardware"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Hardware"]
 它的權限位階低於一般的 **復原模式 (Recovery Mode)** ，主要用於極端情況：
 
 - **嚴重損壞** ：裝置系統崩潰，無法開機。
+
 - **卡在白蘋果** ：開機過程無限循環。
 - **降級系統** ：在特定條件下強制重刷舊版韌體。
 

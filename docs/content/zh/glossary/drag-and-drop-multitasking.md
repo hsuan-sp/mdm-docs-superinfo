@@ -1,6 +1,8 @@
 ---
 term: "Drag and Drop Multitasking (拖放式多工)"
+
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Core"]
 使用者可直接透過直覺的手勢操作：
 
 - **快速分頁** ：從 Dock 或 Spotlight 直接拖拉 App 圖示到螢幕側邊。
+
 - **多視窗佈局** ：快速建立 **分割視圖 (Split View)** 或 **滑動置前 (Slide Over)** 。
 - **內容傳輸** ：在兩個並排的 App 之間直接拖曳文字、圖片或檔案。
 

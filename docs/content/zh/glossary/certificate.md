@@ -1,6 +1,8 @@
 ---
 term: "Certificate (憑證)"
+
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Security"]
 在 MDM 管理環境中，憑證扮演關鍵角色：
 
 - **身分證明** ：用於證明裝置合法身分 (S/MIME)。
+
 - **加密連線** ：建立安全的通訊通道 (TLS)。
 - **信任授權** ：簽署 App 程式碼以證明來源。
 

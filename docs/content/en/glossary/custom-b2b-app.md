@@ -1,6 +1,8 @@
 ---
 term: "Custom B2B App"
+
 category: ["Apps"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ A **Custom B2B App** is a specialized application developed specifically for an 
 Distribution through the **Volume Purchase Program (VPP)** includes:
 
 - **Private Access** : These apps are not visible on the public App Store.
+
 - **Organization Specific** : They are only accessible to specific organizations (identified by Apple Business Manager IDs).
 - **Security** : Allows for the deployment of internal tools containing sensitive proprietary logic or curriculum without exposing them to the general public.
 

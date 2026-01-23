@@ -1,6 +1,8 @@
 ---
 term: "Compliance"
+
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Security"]
 Typical compliance checks include:
 
 - **Passcode** : Is a secure passcode set up and active?
+
 - **Version** : Is the device running an approved and patched OS version?
 - **Integrity** : Is the device free from unauthorized modifications (e.g., is not "Jailbroken")?
 - **Applications** : Are mandatory security apps installed and running?

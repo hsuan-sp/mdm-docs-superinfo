@@ -1,6 +1,8 @@
 ---
 term: "Gatekeeper"
+
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Security"]
 其防護機制包含三道關卡：
 
 - **驗證 (Verification)** ：檢查 App 是否擁有有效的 Apple 開發者簽章 (Developer ID)。
+
 - **公證 (Notarization)** ：確認 App 已通過 Apple 自動化安全掃描，不含已知惡意程式碼。
 - **攔截可疑程式** ：若軟體來源不明或遭竄改，系統會強制阻擋執行。
 

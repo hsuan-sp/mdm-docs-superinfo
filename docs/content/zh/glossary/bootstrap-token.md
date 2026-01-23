@@ -1,6 +1,8 @@
 ---
 term: "Bootstrap Token"
+
 category: ["Security"]
+
 ---
 
 ## 術語定義

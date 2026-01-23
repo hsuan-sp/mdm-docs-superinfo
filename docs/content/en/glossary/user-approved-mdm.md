@@ -1,6 +1,8 @@
 ---
 term: "User Approved MDM"
+
 category: ["Enrollment", "macOS"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Enrollment", "macOS"]
 Distinction:
 
 - **Automated Enrollment** : Automatically "User Approved" because the device was registered by the organization (Apple Business Manager).
+
 - **Manual Enrollment** : If a user manually installs a profile, they*must* also go into System Settings and click "Approve" to grant UAMDM status.
 - **Privileges** : Only UAMDM devices can accept sensitive security payloads (like Kernel Extensions or Full Disk Access controls) silently. Without this status, the MDM is considered "Untrusted" for deep system changes.
 

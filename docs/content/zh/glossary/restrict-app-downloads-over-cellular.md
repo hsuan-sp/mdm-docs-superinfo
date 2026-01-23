@@ -1,6 +1,8 @@
 ---
 term: "Restrict App Downloads over Cellular (限制透過行動網路下載 App)"
+
 category: ["Network"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Network"]
 它的功能：
 
 - **限制流量** ：明確禁止 App Store 與 MDM 在使用行動網路 (4G/5G) 時下載或更新 App。
+
 - **等待 Wi-Fi** ：下載任務會被暫停，直到裝置連上 Wi-Fi 網路後才會自動繼續。
 - **主要目的** ：防止使用 SIM 卡版 iPad 的學生，不小心因為下載大型遊戲或更新 iOS，把學校申請的數據流量額度瞬間用光。
 

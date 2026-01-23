@@ -1,6 +1,8 @@
 ---
 term: "Jamf Safe Internet"
+
 category: ["Jamf", "Security", "Network"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Jamf", "Security", "Network"]
 它的防護功能包括：
 
 - **內容過濾** ：自動阻擋成人內容、賭博、盜版等不適合校園的危險網站。
+
 - **反釣魚防護** ：辨識並攔截試圖竊取學校帳號密碼的惡意連結。
 - **視覺化報表** ：提供管理員關於網路使用趨勢與安全威脅的詳細分析。
 - **簡易部署** ：與 Jamf Pro 或 Jamf School 深度整合，可無縫部署至學生裝置。

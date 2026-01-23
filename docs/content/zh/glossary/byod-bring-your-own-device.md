@@ -1,6 +1,8 @@
 ---
 term: "BYOD (Bring Your Own Device)"
+
 category: ["Enrollment"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Enrollment"]
 透過 Apple 的 **「使用者註冊 (User Enrollment)」** 模式，企業可以在私人裝置上實現隱私與管理的平衡：
 
 - **加密工作區** ：建立一個獨立加密的 **「工作容器 (Work Container)」** 來存放公務資料與管理式 App。
+
 - **隱私保護** ：企業完全 **無法** 存取使用者的私人照片、簡訊、通話紀錄或安裝的私人 App。
 - **資料分離** ：公務資料與私人資料完全隔離，互不相通。
 

@@ -20,6 +20,7 @@ tags: ["ASM", "條款更新"]
 ## 誰可以同意 ：
 
 只有在 ASM 中具備 **「管理員 (Administrator)」** 角色的帳號才有權限勾選並同意條款。
+
 「內容經理 (Content Manager)」或「機構經理 (Site Manager)」等角色無法代為同意。
 
 ## 操作步驟 ：

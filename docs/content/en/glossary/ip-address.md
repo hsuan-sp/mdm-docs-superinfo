@@ -1,6 +1,8 @@
 ---
 term: "IP Address"
+
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ An **IP Address** (Internet Protocol Address) is a unique numerical label assign
 It serves two primary functions:
 
 - **Identification** : uniquely identifying a specific host or network interface.
+
 - **Addressing** : Providing the location of the host in the network so data reaches the correct destination.
 
 ## Common Types:

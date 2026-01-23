@@ -1,6 +1,8 @@
 ---
 term: "ACME (Automated Certificate Management Environment)"
+
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Security"]
 它能讓裝置自動執行以下作業：
 
 - **申請** ：主動要求核發新的身分憑證。
+
 - **驗證** ：向憑證授權單位 (CA) 證明裝置的真實身分。
 - **續期** ：在憑證到期前自動更新，完全無需 IT 人員手動介入。
 

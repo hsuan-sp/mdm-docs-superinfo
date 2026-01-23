@@ -1,9 +1,14 @@
 ---
 id: app-16
+
 title: "我可以統一排版學生 iPad 的桌面嗎？（例如：把數學 App 放在第一頁）"
+
 category: "第三部分：應用程式分發與管理 (Apps & Books)"
+
 important: false
+
 tags: ["主畫面佈局", "Home Screen Layout", "限制", "資料夾"]
+
 ---
 
 **可以。透過「主畫面佈局 (Home Screen Layout)」設定檔，管理員可以強制定義 App 的排列位置。**

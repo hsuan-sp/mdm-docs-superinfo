@@ -1,9 +1,14 @@
 ---
 id: edu-18
+
 title: "【網路排除】iPad 顯示已連上 Wi-Fi 也有打勾，但網頁都打不開（顯示無網路連線）？"
+
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
+
 important: false
+
 tags: ["DNS", "DHCP", "網路故障", "交叉測試"]
+
 ---
 
 **這種情況通常是「取得假 IP」或是「DNS 解析失敗」造成的，不一定是 iPad 壞掉。**

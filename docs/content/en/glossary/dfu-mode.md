@@ -1,6 +1,8 @@
 ---
 term: "DFU Mode (Device Firmware Update)"
+
 category: ["Hardware"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Hardware"]
 Key characteristics:
 
 - **Low-Level Access** : Bypasses the standard OS and the iBoot bootloader, allowing for a deep firmware reinstallation.
+
 - **Physical Connection** : Requires the device to be plugged into a Mac running **Apple Configurator** or Finder via a USB cable.
 - **Visual State** : In DFU mode, the device's screen remains **entirely black** , providing no visual feedback to the user.
 

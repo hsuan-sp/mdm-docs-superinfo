@@ -1,9 +1,14 @@
 ---
 id: enr-19
+
 title: "【Mac 啟動鎖定】Mac 電腦維修回來後被鎖住，該如何徹底解決？"
+
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
+
 important: false
+
 tags: ["Mac 安全", "啟動鎖定", "Apple 晶片", "Apple Configurator", "維修風險"]
+
 ---
 
 **可以。配備 Apple 晶片（M1 至 M4 系列等）或 Apple T2 安全晶片的 Mac，其啟動鎖定管理完全整合於 Apple 校務管理 (ASM) 中。**
@@ -15,6 +20,7 @@ tags: ["Mac 安全", "啟動鎖定", "Apple 晶片", "Apple Configurator", "維�
 若序號正確出現在 ASM，這最容易解決：
 
 1.  登入 **ASM** >「裝置」> 搜尋該序號。
+
 2.  點選 **「管理啟動鎖定」>「關閉啟動鎖定」** 。
 3.  **生效流程** ：確認指令送出約 10 分鐘後，將 Mac 重新開機並連上 Wi-Fi，系統會向 Apple 伺服器驗證並解除鎖定。
 
@@ -23,6 +29,7 @@ tags: ["Mac 安全", "啟動鎖定", "Apple 晶片", "Apple Configurator", "維�
 若維修商更換了全新的主機板，但未協助將序號匯入您的 ASM，您可以自行手動操作：
 
 1.  **準備工具** ：使用另一台 Mac 安裝 **Apple Configurator** ，或使用 iPhone 下載 **Apple Configurator App** 。
+
 2.  **操作步驟** ：將待處理的 Mac 進入「設定輔助程式」畫面，利用 iPhone 掃描 Mac 螢幕上的圖案，或透過 Mac 版 Configurator 指令將其 **「新增至 Apple 校務管理」** 。
 3.  **後續** ：一旦序號出現在您的 ASM 中，即可執行「方案一」的解鎖動作。
 
@@ -31,6 +38,7 @@ tags: ["Mac 安全", "啟動鎖定", "Apple 晶片", "Apple Configurator", "維�
 若維修商更換的是「二手主機板」或「測試用板」，而該板件先前已被其他學校或企業納管且未被「釋出 (Release)」：
 
 - **症狀** ：當您嘗試用 Apple Configurator 手動加入時，系統會報錯提示「此裝置已由其他組織擁有」。
+
 - **風險** ： **您無法自行解鎖。** 因為該硬體的所有權在法律與系統層級上仍屬於他人。
 - **對策** ：必須立即要求維修商負責，聯繫原擁有者進行「釋出」操作，或是更換一片乾淨的、未被納管的主機板。
 
@@ -39,6 +47,7 @@ tags: ["Mac 安全", "啟動鎖定", "Apple 晶片", "Apple Configurator", "維�
 若遠端解除指令已送出，但 Mac 依然無法正常引導，這可能是系統韌體狀態異常：
 
 1.  將受影響的 Mac 進入 **DFU 模式** 。
+
 2.  連接至另一台 Mac（使用 Finder/Configurator）或 Windows 電腦（使用 **Apple 裝置 App** ）。
 3.  執行 **「回復 (Restore)」** 。這會重新刷寫韌體並抹除硬碟。若 ASM 端已解鎖，還原完成後即可順利進入系統。
 

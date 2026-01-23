@@ -1,6 +1,8 @@
 ---
 term: "IP Address (IP 位址)"
+
 category: ["Network"]
+
 ---
 
 ## 術語定義
@@ -10,6 +12,7 @@ category: ["Network"]
 主要分為以下類型：
 
 - **固定 IP (Static IP)** ：手動設定，永久不變，如同買斷的門牌。
+
 - **動態 IP (Dynamic IP / DHCP)** ：由伺服器自動分配，會隨時間或重新連線而改變。
 - **虛擬 IP (Private IP)** ：僅在區域網路內有效（如 `192.168.x.x`），外部無法直接存取。
 

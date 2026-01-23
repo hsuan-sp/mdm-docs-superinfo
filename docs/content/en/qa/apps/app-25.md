@@ -1,9 +1,14 @@
 ---
 id: app-25
+
 title: "How do I use 'Declarative .pkg Deployment' in macOS 26? How does it differ from Jamf Policies?"
+
 category: "Section 3: App Management & Distribution"
+
 important: false
+
 tags: ["macOS 26", "Package", "DDM", ".pkg", "Jamf Policy"]
+
 ---
 
 **macOS 26 (Tahoe) extends Declarative Device Management (DDM) to support non-App Store software (.pkg). This allows you to deploy installation packages via 'Declarations' for a more modern, transparent, and resilient installation experience compared to the legacy Jamf Binary/Policy method.**
@@ -22,6 +27,7 @@ tags: ["macOS 26", "Package", "DDM", ".pkg", "Jamf Policy"]
 
 - **OS**: macOS 26 (Tahoe) or later.
 - **Package Quality**:
+
   - Must be a **Distribution Package** (not a basic component pkg).
   - Must be **signed** with a valid Apple Developer ID Installer certificate.
   - Must be **notarized** by Apple. MDM deployment in macOS 26 is extremely strict regarding security; unsigned or un-notarized packages will fail with a `VerificationFailed` error in the status channel.
@@ -34,5 +40,7 @@ tags: ["macOS 26", "Package", "DDM", ".pkg", "Jamf Policy"]
 ## Expert Tip: The Notarization Check
 
 Before uploading a .pkg to Jamf for DDM deployment, run the following command on your admin Mac to ensure it will be accepted by macOS 26:
+
 `pkgutil --check-signature path/to/your.pkg`
+
 If the signature chain is not valid all the way to the Apple Root CA, the DDM deployment will be rejected by the client device's security framework.

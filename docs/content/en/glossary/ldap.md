@@ -1,6 +1,8 @@
 ---
 term: "LDAP"
+
 category: ["Apple"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Apple"]
 Common uses in MDM:
 
 - **User Lookup** : Connecting the MDM to **Active Directory** or **OpenLDAP** to search for users.
+
 - **Group Sync** : Importing student and teacher groups (e.g., "Grade 5 Staff") directly into the MDM for scoping policies.
 - **Authentication** : Verifying a username and password against the central database during enrollment.
 

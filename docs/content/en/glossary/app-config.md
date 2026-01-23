@@ -1,6 +1,8 @@
 ---
 term: "App Config (App Configuration)"
+
 category: ["Apps"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Apps"]
 The benefits include:
 
 - **Zero-Touch Setup** : Server URLs, license keys, and usernames are pre-filled.
+
 - **Security** : Specific features within the app can be locked or hidden.
 - **Consistency** : All students receive the exact same app configuration automatically.
 

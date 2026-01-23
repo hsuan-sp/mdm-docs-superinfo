@@ -1,6 +1,8 @@
 ---
 term: "Intel Mac End-of-Support Milestone"
+
 category: ["Mac"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ The **Intel Mac End-of-Support Milestone** refers to the transition point where 
 Critical timelines:
 
 - **Final Supported OS** : **macOS Tahoe (v26)** is the absolute final major release to support any Intel-based hardware.
+
 - **Affected Hardware** : Includes the 2020 iMac and 2019 Mac Pro—the last Intel machines sold by Apple.
 - **Management Impact** : Starting with the next major macOS release in 2027, many modern MDM commands and security features will require **Apple Silicon** (M-series) to function.
 

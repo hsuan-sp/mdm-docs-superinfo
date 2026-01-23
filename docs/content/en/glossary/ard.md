@@ -1,6 +1,8 @@
 ---
 term: "ARD (Apple Remote Desktop)"
+
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Core"]
 While MDM handles broad, persistent settings, ARD is optimized for **real-time tasks** :
 
 - **Screen Monitoring** : View multiple Mac screens simultaneously in a classroom or lab.
+
 - **Remote Assistance** : Take control of a user's keyboard and mouse to provide technical support.
 - **Software Distribution** : Rapidly push large packages or files directly to a group of student laptops.
 - **Execution** : Run remote shell scripts on a selection of target Macs.

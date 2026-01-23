@@ -1,6 +1,8 @@
 ---
 term: "Setup Pane Skipping"
+
 category: ["Mac"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Mac"]
 DDM Improvements in macOS Tahoe:
 
 - **Granular Control** : Admins can skip post-update "What's New" screens that typically appear after a major OS upgrade.
+
 - **Context Awareness** : Can suppress prompts purely based on the device state (e.g., skip "Sign in to iCloud" if the device is a shared lab machine).
 - **Efficiency** : Prevents students from getting stuck on configuration screens that are irrelevant to their classroom needs.
 

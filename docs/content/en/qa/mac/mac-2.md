@@ -1,9 +1,14 @@
 ---
 id: mac-2
+
 title: "How do we manage Local Admin privileges for staff and students on Macs?"
+
 category: "Section 7: Advanced Mac Management"
+
 important: false
+
 tags: ["Privilege Management", "LAPS", "Security", "Standard User"]
+
 ---
 
 **The Gold Standard is to provide "Standard User" accounts for daily tasks, supplemented by a "just-in-time" Admin elevation tool or a Managed LAPS solution.**
@@ -27,6 +32,7 @@ Granting permanent Admin rights to students or teachers is a major security risk
 For staff members who occasionally need to install a printer driver or specialized software:
 
 - **Tool**: Deploy the **Privileges** app (or Jamf’s equivalent).
+
 - **Workflow**: The teacher clicks a lock icon in the Dock, justifies the need, and is granted **Admin rights for 20 minutes**. After the timer expires, the system automatically demotes them back to a Standard User.
 
 ## Institutional Advice:

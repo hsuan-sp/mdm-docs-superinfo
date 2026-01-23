@@ -1,9 +1,14 @@
 ---
 id: hw-7
+
 title: "送修前必須關閉「尋找 (Find My)」嗎？怎麼關？"
+
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
+
 important: true
+
 tags: ["維修", "尋找功能", "啟用鎖定", "送修", "Activation Lock"]
+
 ---
 
 **是的，這是大多數時候維修的必要條件。未關閉「尋找」功能會觸發「啟用鎖定 (Activation Lock)」，導致維修中心不方便作業，裝置將會被直接退件。**
@@ -15,6 +20,7 @@ tags: ["維修", "尋找功能", "啟用鎖定", "送修", "Activation Lock"]
 若裝置已受監管，管理員擁有最高權限，可直接在後台處理：
 
 1.  在 Jamf Pro 找到該裝置。
+
 2.  發送 **「停用啟用鎖定 (Disable Activation Lock)」** 指令。
 3.  **效果**：即使學生登入了個人帳號，此指令也能讓 Apple 伺服器暫時解除鎖定限制，方便維修。
 
@@ -29,6 +35,7 @@ tags: ["維修", "尋找功能", "啟用鎖定", "送修", "Activation Lock"]
 若裝置已壞掉無法操作螢幕：
 
 1.  請學生登入 [iCloud.com/find](https://www.icloud.com/find)。
+
 2.  在「所有裝置」中選取該台 iPad。
 3.  點選 **「從帳號移除」** 。
 4.  **注意**：請勿選擇「清除 iPad」，否則維修回來後會更難處理。

@@ -1,9 +1,14 @@
 ---
 id: enr-6
+
 title: "The setup is stuck spinning on 'Retrieving remote management configuration'. How do I troubleshoot?"
+
 category: "Section 2: Device Enrollment & Deployment"
+
 important: false
+
 tags: ["Enrollment Stuck", "Troubleshooting", "ADE", "DDM"]
+
 ---
 
 **This indicates a communication delay or interruption while the device attempts to fetch the MDM configuration profile from Apple's servers.**

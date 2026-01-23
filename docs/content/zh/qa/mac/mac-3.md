@@ -1,9 +1,14 @@
 ---
 id: mac-3
+
 title: "如何派送非 App Store 的軟體（如 Chrome, Adobe, Office）？"
+
 category: "第七部分：Mac 裝置管理 (Mac Management)"
+
 important: false
+
 tags: ["軟體派送", "App Installers", "PKG", "自動更新"]
+
 ---
 
 **放棄手動打包。請優先使用 Jamf Pro 的「App Installers」服務，實現「隨選即裝」與「自動更新」。**

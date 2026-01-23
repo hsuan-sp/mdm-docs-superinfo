@@ -1,9 +1,14 @@
 ---
 id: enr-18
+
 title: "ASM 現在可以直接解除啟用鎖定嗎？還需要聯絡 Apple 客服嗎？"
+
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
+
 important: true
+
 tags: ["啟用鎖定", "ASM", "自動裝置註冊", "解鎖"]
+
 ---
 
 **是的。只要裝置歸屬於您的組織，現在已經可以直接透過 Apple 校務管理 (ASM) 介面自助解除鎖定，無需再撥打客服電話提供發票。**

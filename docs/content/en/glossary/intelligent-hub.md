@@ -1,6 +1,8 @@
 ---
 term: "Intelligent Hub"
+
 category: ["Apps"]
+
 ---
 
 ## Definition

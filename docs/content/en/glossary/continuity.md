@@ -1,6 +1,8 @@
 ---
 term: "Continuity"
+
 category: ["Apple"]
+
 ---
 
 ## Term Definition
@@ -10,6 +12,7 @@ category: ["Apple"]
 Core features include:
 
 - **Handoff** : Start a task (e.g., an email) on an iPhone and finish it on a Mac.
+
 - **Universal Clipboard** : Copy text or images on one device and paste them on another.
 - **Sidecar & Mirroring** : Use an iPad as a second display for a Mac.
 - **Universal Control** : Use a single mouse and keyboard to control multiple iPads and Macs.

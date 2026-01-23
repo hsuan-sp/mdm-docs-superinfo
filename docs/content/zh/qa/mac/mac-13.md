@@ -1,10 +1,16 @@
 ---
 id: mac-13
+
 title: "Google Meet 或 Zoom 想要分享螢幕，卻一直跳出權限請求？MDM 能自動全開嗎？"
+
 category: "第七部分：Mac 裝置管理 (Mac Management)"
+
 important: false
+
 tags:
+
   ["PPPC", "隱私權限", "TCC", "螢幕錄製", "標準使用者", "Apple Intelligence"]
+
 ---
 
 **這是 macOS 的 TCC (透明度、同意與控制) 隱私機制。針對「螢幕錄製」、「麥克風」與「相機」，Apple 強制要求必須由使用者「親自點選同意」，MDM 無法越俎代庖強制開啟。**
@@ -29,6 +35,7 @@ tags:
 由於學校老師通常非管理者，當其要允許螢幕錄製時，系統會要求輸入「管理員密碼」。
 
 - **解法**：在 Jamf Pro 的 **「隱私權偏好設定 (PPPC)」** Payload 中。
+
 - **設定**：針對 `Screen Recording` 權限，勾選 **「允許標準使用者允許存取 (Allow Standard Users to allow access)」**。
 - **效果**：老師點擊開關時， **不再需要輸入管理員密碼**，即點即用。
 

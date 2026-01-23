@@ -1,9 +1,14 @@
 ---
 id: mac-21
+
 title: "macOS 26 升級後，學生可以看到 MDM 設定的隱私權限，如何處理詢問？"
+
 category: "第七部分：Mac 裝置管理 (Mac Management)"
+
 important: false
+
 tags: ["隱私權限", "透明度", "PPPC", "macOS 26", "使用者溝通"]
+
 ---
 
 **macOS 26 在「系統設定 > 隱私權與安全性」中，會明確標註哪些權限是由組織管理的。**

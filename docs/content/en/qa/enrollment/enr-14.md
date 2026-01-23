@@ -1,9 +1,14 @@
 ---
 id: enr-14
+
 title: "How do I make an iPad automatically connect to Wi-Fi and re-enroll after a reset? (Return to Service)"
+
 category: "Section 2: Device Enrollment & Deployment"
+
 important: false
+
 tags: ["Automation", "Wi-Fi", "Return to Service", "Zero-Touch"]
+
 ---
 
 **'Return to Service' is a command feature introduced by Apple in iOS 17. It allows a device to automatically bypass the initial setup screens, connect to Wi-Fi, and re-enroll after a remote wipe.**

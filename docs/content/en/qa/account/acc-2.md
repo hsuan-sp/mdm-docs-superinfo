@@ -1,9 +1,14 @@
 ---
 id: acc-2
+
 title: "What happens if our APNs Push Certificate expires? How do we renew it?"
+
 category: "Section 1: Account & Server Management"
+
 important: true
+
 tags: ["APNs", "Push Certificate", "Maintenance"]
+
 ---
 
 **The consequences are severe: Your MDM system will lose the ability to manage your devices entirely.** The **Apple Push Notification service (APNs)** certificate is the "digital ID card" that allows your MDM (Jamf Pro) to talk to Apple’s servers. Every command—from installing an app to wiping a passcode—must be signed by this certificate.
