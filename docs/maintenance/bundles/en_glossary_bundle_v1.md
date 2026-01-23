@@ -1,12 +1,12 @@
-
-
 ---
 File: 802-1x.md
 ---
 
 ---
+
 term: "802.1X"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -29,14 +29,15 @@ Think of 802.1X as an **"Airport Security Checkpoint"** for your network.
 
 If the identity doesn't match the security list, they aren't allowed through the gate.
 
-
----
-File: aac-automatic-assessment-configuration.md
 ---
 
+## File: aac-automatic-assessment-configuration.md
+
 ---
+
 term: "AAC (Automatic Assessment Configuration)"
 category: ["Education"]
+
 ---
 
 ## Term Definition
@@ -57,14 +58,15 @@ This is the iPad's **"Proctored Exam Mode"** .
 
 When the test starts, the system temporarily **"confiscates"** all potential cheating tools (like copy-paste, Siri, or auto-correct). As soon as the test is over, these tools are automatically returned to the student, ensuring a fair and secure testing environment for everyone.
 
-
----
-File: abm-apple-business-manager.md
 ---
 
+## File: abm-apple-business-manager.md
+
 ---
+
 term: "ABM (Apple Business Manager)"
 category: ["Apple"]
+
 ---
 
 ## Term Definition
@@ -85,14 +87,15 @@ ABM is the **"Central Assets Headquarters"** for an organization's Apple devices
 
 Every piece of hardware the company buys and every software license is registered here first. Think of the **MDM** as a third-party management company that must get a **"Central Key"** from the Headquarters (ABM) before it is allowed to enter and manage the company's property.
 
-
----
-File: accessibility-features.md
 ---
 
+## File: accessibility-features.md
+
 ---
+
 term: "Accessibility Features"
 category: ["Apple"]
+
 ---
 
 ## Term Definition
@@ -116,14 +119,15 @@ Just as public buildings must have ramps and braille signs, Apple builds these t
 
 Schools can turn these on automatically for students who need them, saving time for both the student and the teacher.
 
-
----
-File: account-driven-device-enrollment.md
 ---
 
+## File: account-driven-device-enrollment.md
+
 ---
+
 term: "Account-Driven Device Enrollment"
 category: ["Enrollment"]
+
 ---
 
 ## Term Definition
@@ -145,14 +149,15 @@ It is as simple as signing into your work email. Once you log in, your phone cre
 
 If you ever leave the company and log out, that entire partition disappears instantly, leaving your personal data completely untouched.
 
-
----
-File: acme.md
 ---
 
+## File: acme.md
+
 ---
+
 term: "ACME (Automated Certificate Management Environment)"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -175,14 +180,15 @@ Think of it like a digital ID card that expires every few months. Instead of you
 
 You never lose access to the network because a certificate "expired" while you weren't looking.
 
-
----
-File: activation-lock-bypass-code.md
 ---
 
+## File: activation-lock-bypass-code.md
+
 ---
+
 term: "Activation Lock Bypass Code"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -201,14 +207,15 @@ This is the **"Emergency Override Key"** for institution-owned hardware.
 
 If someone leaves the school and forgets to unlock their iPad, IT doesn't have to guess the student's personal password. They can pull this code from the MDM system, enter it into the device, and the "theft lock" is instantly removed. The iPad can then be wiped and given to a new student.
 
-
----
-File: activation-lock.md
 ---
 
+## File: activation-lock.md
+
 ---
+
 term: "Activation Lock"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -228,14 +235,15 @@ Think of this as the device's **"Anti-Theft Deadbolt."** Even if a thief complet
 
 However, it can become a **"Zombie Device"** if a student graduates and forgets to unlock it—leaving the school with hardware that can't be reused without an IT "Override Key."
 
-
----
-File: ade.md
 ---
 
+## File: ade.md
+
 ---
+
 term: "ADE (Automated Device Enrollment)"
 category: ["Enrollment"]
+
 ---
 
 ## Term Definition
@@ -256,14 +264,15 @@ This process is mandatory and cannot be skipped by the end-user, enabling true *
 
 This is the device's **"Factory-Level Identity."** It's as if every school iPad was born with the school's stamp on its digital forehead. No matter who holds the device or how many times it's reset, the moment it touches the internet, it **"calls home"** to the school’s management system and sets itself up according to the rules automatically.
 
-
----
-File: admin-account.md
 ---
 
+## File: admin-account.md
+
 ---
+
 term: "Admin Account"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -286,14 +295,15 @@ Whoever has this account can change anything, delete anything, or install any so
 
 Everyone else is given a **"Standard Account,"** meaning they can use the computer to do their work, but they can't mess with the "engine" under the hood.
 
-
----
-File: airdrop-codes.md
 ---
 
+## File: airdrop-codes.md
+
 ---
+
 term: "AirDrop Codes"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -315,14 +325,15 @@ In the past, AirDrop was like an **"Open Mailbox"** —anyone nearby could try t
 
 With **AirDrop Codes** , it's like adding a **"Combination Lock"** to your mailbox. Only the people you give the code to can send you files, making the experience much more private and secure.
 
-
----
-File: airdrop-for-business.md
 ---
 
+## File: airdrop-for-business.md
+
 ---
+
 term: "AirDrop for Business"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -342,14 +353,15 @@ Think of this as an **"Information Filter"** for AirDrop.
 
 The school can set a rule that says: "You can AirDrop files between school iPads, but you are blocked from sending school work to your personal phone." This ensures that homework and sensitive data stay within the school's safe environment.
 
-
----
-File: airdrop.md
 ---
 
+## File: airdrop.md
+
 ---
+
 term: "AirDrop"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -370,14 +382,15 @@ You don't need a cable or a USB drive; if two devices are close enough, you can 
 
 However, if not managed, it could lead to students accidentally sharing distracting files with people nearby.
 
-
----
-File: airplay.md
 ---
 
+## File: airplay.md
+
 ---
+
 term: "AirPlay"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -396,14 +409,15 @@ This is the **"Wireless Projector"** feature.
 
 With one tap, a teacher can put their iPad screen up on the big classroom TV. To keep things orderly, IT can pre-program the passwords so teachers can just walk in and start teaching without having to hunt for a cable or ask for a complicated setup.
 
-
----
-File: airprint.md
 ---
 
+## File: airprint.md
+
 ---
+
 term: "AirPrint"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -422,14 +436,15 @@ Think of this as **"Driver-Free Printing."** In the old days, you had to downloa
 
 IT sets it up so that as soon as you connect to the school Wi-Fi, all the authorized school printers just show up in your menu, ready to go.
 
-
----
-File: always-on-vpn.md
 ---
 
+## File: always-on-vpn.md
+
 ---
+
 term: "Always-on VPN"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -446,14 +461,15 @@ Key characteristics:
 
 This is a **"Mandatory Security Tunnel."** Whether a student is at a cafe or an airport, the system forces all internet usage to go through the school's private, encrypted lane first. If the tunnel isn't available, the internet simply won't work. This ensures that no matter where the device goes, the data stays safe from hackers on public Wi-Fi.
 
-
----
-File: apns.md
 ---
 
+## File: apns.md
+
 ---
+
 term: "APNs (Apple Push Notification service)"
 category: ["Core", "Apple"]
+
 ---
 
 ## Term Definition
@@ -478,14 +494,15 @@ When the school’s management system wants to install an app, it can't just sho
 
 If this messenger can't get through the school gate (the firewall), the iPad will never know it has new work to do.
 
-
----
-File: app-config.md
 ---
 
+## File: app-config.md
+
 ---
+
 term: "App Config (App Configuration)"
 category: ["Apps"]
+
 ---
 
 ## Term Definition
@@ -504,14 +521,15 @@ This eliminates the need for manual setup by students or teachers and significan
 
 Think of this as an app that comes **"Pre-filled."** When IT sends you an email app, the server settings and your email address are already typed in for you. All you have to do is open the app and start working. You don't need to call IT to ask for complicated IP addresses or secret port numbers.
 
-
----
-File: app-privacy-permissions-visibility.md
 ---
 
+## File: app-privacy-permissions-visibility.md
+
 ---
+
 term: "App Privacy Permissions Visibility"
 category: ["Mac"]
+
 ---
 
 ## Term Definition
@@ -531,14 +549,15 @@ While this increases transparency, it may also lead to user questions about why 
 
 In the past, permissions granted by IT were "invisible." Now, they are listed on a **"Public Authorization List."** Users can easily see which apps have been granted special permissions by the school's management system, improving trust and transparency.
 
-
----
-File: app-store.md
 ---
 
+## File: app-store.md
+
 ---
+
 term: "App Store"
 category: ["Apps"]
+
 ---
 
 ## Term Definition
@@ -555,14 +574,15 @@ In managed school environments:
 
 This is Apple’s **"Official Software Mall."** To keep students focused and prevent the installation of unauthorized games, schools often choose to "Board up the mall doors" (hide the App Store icon). Students then go to the **"School Supply Room"** (the Self Service app) to get the specific tools their teachers have approved for the lesson.
 
-
----
-File: app-thinning.md
 ---
 
+## File: app-thinning.md
+
 ---
+
 term: "App Thinning"
 category: ["Apps"]
+
 ---
 
 ## Term Definition
@@ -583,14 +603,15 @@ Instead of delivering every possible version of an app (for iPad Air, iPad Pro, 
 
 It's like buying a shirt in your exact size rather than taking home a giant box containing every size from XS to XL.
 
-
----
-File: apple-classroom.md
 ---
 
+## File: apple-classroom.md
+
 ---
+
 term: "Apple Classroom"
 category: ["Education"]
+
 ---
 
 ## Term Definition
@@ -611,14 +632,15 @@ Think of this as the **"Classroom Remote Control"** for teachers.
 
 On their iPad, a teacher can see exactly what every student is doing. If a student gets distracted, the teacher can instantly lock their screen or switch them to the correct textbook app, ensuring the whole class stays on task during the lesson.
 
-
----
-File: apple-configurator.md
 ---
 
+## File: apple-configurator.md
+
 ---
+
 term: "Apple Configurator"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -637,14 +659,15 @@ It serves as the **"last resort"** tool for recovery when a device cannot be rea
 
 Think of this as the **"IT Workbench."** If an iPad is completely frozen or won't connect to the internet, you use a USB cable to plug it into a Mac running Apple Configurator. It allows IT to **"reinstall the engine"** or force the device to register with the school's management system even if it was originally purchased at a regular retail store.
 
-
----
-File: apple-intelligence-management.md
 ---
 
+## File: apple-intelligence-management.md
+
 ---
+
 term: "Apple Intelligence Management"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -663,14 +686,15 @@ This maintains strict data privacy while allowing users to benefit from AI-power
 
 Think of this as a **"Privacy Shield for AI."** While Apple Intelligence provides powerful new tools to help with writing and organization, the school can choose to turn off certain features to make sure your work and private messages aren't being "read" or "learned" by the AI. It keeps the school’s most sensitive secrets safe from being analyzed by a computer program.
 
-
----
-File: apple-intelligence-reports.md
 ---
 
+## File: apple-intelligence-reports.md
+
 ---
+
 term: "Apple Intelligence Reports"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -689,14 +713,15 @@ This ensures students are reading, synthesizing, and writing content based on th
 
 This is a mechanism to prevent **"AI Plagiarism."** Just as a teacher might require a student to write their own book report rather than copying from an older sibling, MDM can turn off the "AI Summarize" button. This ensures that students are actually reading the full text and learning to express their own thoughts.
 
-
----
-File: apple-intelligence.md
 ---
 
+## File: apple-intelligence.md
+
 ---
+
 term: "Apple Intelligence"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -726,14 +751,15 @@ Think of it as a **"Private Assistant"** living inside your iPad.
 
 It can help you rewrite an essay, summarize a long email, or even create a custom emoji, all while keeping your data strictly on your device so no one else can see it. It's like having a brilliant helper who is sworn to secrecy.
 
-
----
-File: apple-pencil.md
 ---
 
+## File: apple-pencil.md
+
 ---
+
 term: "Apple Pencil"
 category: ["Hardware"]
+
 ---
 
 ## Term Definition
@@ -752,14 +778,15 @@ This is the **"High-Tech Pencil"** for the iPad.
 
 In addition to writing, it has electronic features—like tapping the side of the pen to change to an eraser. During an exam, the school can **"lock"** these digital features, turning it back into a standard pencil that can only write. This prevents any unfair advantages or accidental distractions.
 
-
----
-File: apple-silicon.md
 ---
 
+## File: apple-silicon.md
+
 ---
+
 term: "Apple Silicon"
 category: ["Hardware"]
+
 ---
 
 ## Term Definition
@@ -782,14 +809,15 @@ While it's incredibly fast, it's also much more secure. Think of it like a super
 
 While it makes the computer almost impossible for a thief to use, it also means the school’s IT team has to use more sophisticated methods to keep everything updated and secure.
 
-
----
-File: applecare.md
 ---
 
+## File: applecare.md
+
 ---
+
 term: "AppleCare+"
 category: ["Hardware"]
+
 ---
 
 ## Term Definition
@@ -808,14 +836,15 @@ Think of this as **"Original Equipment Insurance."** While every device comes wi
 
 Instead, they pay a small **"Processing Fee"** and Apple repairs or replaces the iPad with a fresh one, keeping the fleet healthy and operational.
 
-
----
-File: ard.md
 ---
 
+## File: ard.md
+
 ---
+
 term: "ARD (Apple Remote Desktop)"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -835,14 +864,15 @@ Think of this as the **"Immediate Control Console"** for IT.
 
 If MDM is like posting school rules on a bulletin board for everyone to read, ARD is like a teacher standing in the room and helping you personally. IT can see your screen, move your mouse to show you a fix, or **"broadcast"** a file to every Mac in the room instantly.
 
-
----
-File: asm.md
 ---
 
+## File: asm.md
+
 ---
+
 term: "ASM (Apple School Manager)"
 category: ["Apple"]
+
 ---
 
 ## Term Definition
@@ -862,14 +892,15 @@ ASM is the school's **"Digital Registrar's Office."** It's the headquarters wher
 
 It makes sure that when a teacher walks into a room, their iPad already **"knows"** exactly which students are in their class, what their names are, and which digital books they need for the lesson.
 
-
----
-File: asset-tag.md
 ---
 
+## File: asset-tag.md
+
 ---
+
 term: "Asset Tag"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -888,14 +919,15 @@ This is a **"Digital Property Sticker."** Just like a school might put a physica
 
 If an iPad is lost, anyone who finds it can see the **"Asset ID: A-101"** tag on the Lock Screen and return it to the correct department without ever having to unlock the device or check the serial number.
 
-
----
-File: audio-accessory-configuration.md
 ---
 
+## File: audio-accessory-configuration.md
+
 ---
+
 term: "Audio Accessory Configuration"
 category: ["Hardware"]
+
 ---
 
 ## Term Definition
@@ -918,14 +950,15 @@ Previously, pairing AirPods was like **"Getting Married"** —the connection fol
 
 Now, in shared school environments, it's like a **"Temporary Rental."** You pair the headphones while you're in the lab, but when you log out, the iPad **"forgets"** the connection instantly so it doesn't interfere with the next student.
 
-
----
-File: automatic-app-updates.md
 ---
 
+## File: automatic-app-updates.md
+
 ---
+
 term: "Automatic App Updates"
 category: ["Apps"]
+
 ---
 
 ## Term Definition
@@ -946,14 +979,15 @@ Just as a car dealership might automatically change your oil when you bring the 
 
 This ensures that students are not exposed to security risks or missing features caused by running outdated, "sputtering" software.
 
-
----
-File: automatic-reboot.md
 ---
 
+## File: automatic-reboot.md
+
 ---
+
 term: "Automatic Reboot"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -976,14 +1010,15 @@ Think of this as a **"Timed Vault Lock."** If the vault hasn't been opened for a
 
 If an iPad is lost and remains locked for several days, it reboots itself to **"forget"** any temporary passwords stored in its short-term memory, making it much harder for a thief to break into the data.
 
-
----
-File: background-app-refresh.md
 ---
 
+## File: background-app-refresh.md
+
 ---
+
 term: "Background App Refresh"
 category: ["Apps"]
+
 ---
 
 ## Term Definition
@@ -1002,14 +1037,15 @@ Think of this as the app's **"Standby Concierge."** While you aren't using the d
 
 If the concierge is working too hard and draining the battery, IT can tell them to rest (disable the feature) so the iPad stays powered through the last period.
 
-
----
-File: background-security-improvements.md
 ---
 
+## File: background-security-improvements.md
+
 ---
+
 term: "Background Security Improvements"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -1032,14 +1068,15 @@ Previously, fixing a security bug was like **"Shutting down the whole building f
 
 Now, "Background Security Improvements" are like **"Replacing a single broken lightbulb"** while the building stays open and active. It’s fast, automatic, and doesn't interrupt anyone's work or learning.
 
-
----
-File: battery-health.md
 ---
 
+## File: battery-health.md
+
 ---
+
 term: "Battery Health"
 category: ["Hardware"]
+
 ---
 
 ## Term Definition
@@ -1058,14 +1095,15 @@ This is the **"Physical Exam Report"** for a battery.
 
 A brand-new battery has 100% capacity, but it "loses its stamina" over time as it is used and recharged. IT doesn't need to manually check every iPad; they can just look at a digital report to see which students have **"tired" batteries** that need to be replaced, preventing a dead iPad in the middle of a lesson.
 
-
----
-File: blob-urls-and-managed-open-in-improvement.md
 ---
 
+## File: blob-urls-and-managed-open-in-improvement.md
+
 ---
+
 term: "Blob URLs and Managed Open-In Improvement"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -1084,14 +1122,15 @@ Previously, there was a **"Hidden Secret Passage"** (Blob URLs) that allowed use
 
 Now, the security guard ( **Managed Open-In** ) also monitors these secret passages, ensuring that school data remains strictly inside the approved school applications and doesn't "leak" out.
 
-
----
-File: blueprints.md
 ---
 
+## File: blueprints.md
+
 ---
+
 term: "Blueprints"
 category: ["Jamf", "Core"]
+
 ---
 
 ## Term Definition
@@ -1114,14 +1153,15 @@ You set the destination (e.g., "This device must always have the security app an
 
 If the device **"veers off course"** because someone changed a setting, the Blueprint pulls it back into alignment instantly, without IT needing to step in.
 
-
----
-File: bonjour.md
 ---
 
+## File: bonjour.md
+
 ---
+
 term: "Bonjour"
 category: ["Network", "Apple"]
+
 ---
 
 ## Term Definition
@@ -1144,14 +1184,15 @@ It's like a new student walking into a classroom and announcing "I'm here, and I
 
 Without Bonjour, you would have to know every device's exact **"GPS Coordinates"** (IP Address) just to say hello to them.
 
-
----
-File: bootstrap-token.md
 ---
 
+## File: bootstrap-token.md
+
 ---
+
 term: "Bootstrap Token"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -1172,14 +1213,15 @@ This is the **"Backup Recovery Key"** stored in the school's digital vault.
 
 When a computer is locked down with encryption (FileVault), usually only the primary user can unlock the door. The **Bootstrap Token** allows IT to have a secure copy of the "Master Key" so they can enter the system for maintenance or give access to a new employee if the original user has left.
 
-
----
-File: bundle-id.md
 ---
 
+## File: bundle-id.md
+
 ---
+
 term: "Bundle ID"
 category: ["Apps"]
+
 ---
 
 ## Term Definition
@@ -1196,14 +1238,15 @@ Key characteristics:
 
 This is the app's **"Social Security Number"** or **"ID Card Number."** While there might be many apps named "Calculator" or "Notes," the **Bundle ID** is guaranteed to be unique to just one app. The IT system uses this specific number to make sure it is helping or managing the exact right app and doesn't get confused by apps with similar-looking names.
 
-
----
-File: byod.md
 ---
 
+## File: byod.md
+
 ---
+
 term: "BYOD (Bring Your Own Device)"
 category: ["Enrollment"]
+
 ---
 
 ## Term Definition
@@ -1226,14 +1269,15 @@ Imagine you have your own house (your personal phone). You agree to set aside on
 
 The school can organize or collect papers from that desk at any time, but they have no right—and no way—to peek into your personal drawers or closets.
 
-
----
-File: camera-access-control-per-app.md
 ---
 
+## File: camera-access-control-per-app.md
+
 ---
+
 term: "Camera Access Control per App"
 category: ["Privacy"]
+
 ---
 
 ## Term Definition
@@ -1256,14 +1300,15 @@ In the past, camera access was like a **"Main Front Door Key"** —it was either
 
 Now, it's like a **"Hotel Keycard System."** IT can program the card to let you into the "Science Lab" (the classroom app), while simultaneously keeping the "Game Room" (distracting apps) locked, protecting your privacy and focus.
 
-
----
-File: captive-portal.md
 ---
 
+## File: captive-portal.md
+
 ---
+
 term: "Captive Portal"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -1282,14 +1327,15 @@ Think of this as a **"Security Questionnaire at the Front Door."** Before you ca
 
 For school iPads, these portals can be a hurdle because the device can't "talk" to its school server until a person manually fills out that questionnaire on the screen.
 
-
----
-File: casper-suite.md
 ---
 
+## File: casper-suite.md
+
 ---
+
 term: "Casper Suite"
 category: ["Jamf"]
+
 ---
 
 ## Term Definition
@@ -1310,14 +1356,15 @@ This is simply an **"Old Brand Name"** or **"Classic Name."** Just as a famous c
 
 If you see an old manual mentioning Casper, don't be confused; it's talking about the same reliable management system you use today—it just got a new outfit.
 
-
----
-File: cdn.md
 ---
 
+## File: cdn.md
+
 ---
+
 term: "CDN (Content Delivery Network)"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -1338,14 +1385,15 @@ Instead of every school having to drive to the main central warehouse (Apple’s
 
 When it's time to update, the school just picks up the files from the local store, which is much faster and doesn't clog up the main highways for everyone else.
 
-
----
-File: certificate-authority.md
 ---
 
+## File: certificate-authority.md
+
 ---
+
 term: "Certificate Authority (CA)"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -1366,14 +1414,15 @@ Think of it like a government passport office. Because we trust the office (the 
 
 In a school, the IT department often runs its own private **"ID Office"** to give the school's iPads permission to use the campus Wi-Fi without needing a public company's approval.
 
-
----
-File: certificate.md
 ---
 
+## File: certificate.md
+
 ---
+
 term: "Certificate"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -1396,14 +1445,15 @@ Just as you need a physical ID to open a bank account, your iPad uses this certi
 
 As long as the ID is valid and hasn't "expired," the network trusts the device and allows it to connect securely.
 
-
----
-File: client-isolation.md
 ---
 
+## File: client-isolation.md
+
 ---
+
 term: "Client Isolation"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -1424,14 +1474,15 @@ Every device is put into its own soundproof, transparent room. They can all see 
 
 While this makes the building very safe, it means students can't use AirPlay to project their screen or AirDrop files to their group members, because they aren't allowed to "talk across the hallway."
 
-
----
-File: command-history.md
 ---
 
+## File: command-history.md
+
 ---
+
 term: "Command History"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -1450,14 +1501,15 @@ This is the device's **"Instruction Log"** or **"Receipt Book."** Just as a bank
 
 If something goes wrong, IT doesn't have to guess what happened; they can check the history to see exactly which command got "stuck in the mail" and why.
 
-
----
-File: compliance.md
 ---
 
+## File: compliance.md
+
 ---
+
 term: "Compliance"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -1479,14 +1531,15 @@ Think of this as a **"Digital Security Health Check."** Before entering a high-s
 
 If a device has an old, unpatched system or no password, it’s **"out of compliance"** and might be blocked from the school network until it is "healed" and following the security rules again.
 
-
----
-File: composer.md
 ---
 
+## File: composer.md
+
 ---
+
 term: "Composer"
 category: ["macOS", "Jamf"]
+
 ---
 
 ## Term Definition
@@ -1509,14 +1562,15 @@ If you have a complicated app with many different parts scattered everywhere, yo
 
 Once IT sends that box to other computers, the recipients just have to open it, and all the parts automatically jump out and go exactly where they belong on the new computer.
 
-
----
-File: configuration-profile-removal.md
 ---
 
+## File: configuration-profile-removal.md
+
 ---
+
 term: "Configuration Profile Removal"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -1535,14 +1589,15 @@ This is the **"Take It Back"** button for IT.
 
 When a student graduates or an employee leaves the company, IT can click one button to remotely **"reclaim"** all the school’s digital property—like the secret Wi-Fi password and specific campus settings—leaving the device clean and ready for its next owner.
 
-
----
-File: configuration-profile.md
 ---
 
+## File: configuration-profile.md
+
 ---
+
 term: "Configuration Profile"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -1560,14 +1615,15 @@ Common payloads include:
 
 A Configuration Profile is like a **"Pre-filled Registration Form"** or a **"Instructional Blueprint."** Instead of asking 500 students to manually type in a 20-character Wi-Fi password and set up their campus email one by one, the school sends them a profile. It’s a "Master Key" that tells the device exactly how it should behave and connect on campus, saving everyone time and preventing typing errors.
 
-
----
-File: content-caching.md
 ---
 
+## File: content-caching.md
+
 ---
+
 term: "Content Caching"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -1588,14 +1644,15 @@ Think of this as the school's **"Shared Resource Library."** Instead of every in
 
 Now, every other student can just grab a copy from the desk, saving everyone a long trip and keeping the main city roads (the internet) clear.
 
-
----
-File: continuity.md
 ---
 
+## File: continuity.md
+
 ---
+
 term: "Continuity"
 category: ["Apple"]
+
 ---
 
 ## Term Definition
@@ -1617,14 +1674,15 @@ This is **"Mind Reading"** for your Apple devices.
 
 It makes all your gadgets act like one big, synchronized team. If you copy a photo on your iPhone, you can immediately **"paste"** it into a project on your Mac. It feels like there’s an invisible thread connecting all your devices, allowing your work to flow smoothly from one screen to the next without losing your place.
 
-
----
-File: custom-b2b-app.md
 ---
 
+## File: custom-b2b-app.md
+
 ---
+
 term: "Custom B2B App"
 category: ["Apps"]
+
 ---
 
 ## Term Definition
@@ -1643,14 +1701,15 @@ This is a **"Private Software Tool"** just for your school or company.
 
 Think of it like a **"Secret Menu"** at a restaurant—regular customers can't see it, and it's not listed on the main board. Only authorized members can see and order (install) these items through the organization's private system.
 
-
----
-File: ddm-app-management.md
 ---
 
+## File: ddm-app-management.md
+
 ---
+
 term: "DDM App Management"
 category: ["Apps"]
+
 ---
 
 ## Term Definition
@@ -1671,14 +1730,15 @@ Think of this as an **"Automatic Restocking"** system for your apps.
 
 It’s like a smart vending machine that knows exactly what should be on each shelf. If someone takes an app off the "shelf" (deletes it), the machine immediately sees the empty spot and puts a new one back right away, ensuring the students always have the tools they need.
 
-
----
-File: ddm.md
 ---
 
+## File: ddm.md
+
 ---
+
 term: "DDM (Declarative Device Management)"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -1697,14 +1757,15 @@ This shift significantly reduces server load, improves battery life, and makes d
 
 This is the shift from **"Following Orders"** to **"Autonomous Management."** Traditional MDM is like a remote-control car where you have to press a button for every single turn. **DDM** is like a **Self-Driving Car** —you give it the destination and the rules of the road (the declarations), and it handles the driving itself. It only lets you know when it has reached its destination or encountered a pothole it can't fix.
 
-
----
-File: declarative-app-management.md
 ---
 
+## File: declarative-app-management.md
+
 ---
+
 term: "Declarative App Management"
 category: ["DDM"]
+
 ---
 
 ## Term Definition
@@ -1724,14 +1785,15 @@ In the past, sending an app was like **"Delivering a package"** —once it arriv
 
 Now, with DDM, it's more like a **"Managed Subscription Service."** You can set rules for each app (like "always keep this one updated" or "never update this version until I say so"), giving the school total control over the software students are using in the classroom.
 
-
----
-File: declarative-software-updates.md
 ---
 
+## File: declarative-software-updates.md
+
 ---
+
 term: "Declarative Software Updates"
 category: ["DDM"]
+
 ---
 
 ## Term Definition
@@ -1757,14 +1819,15 @@ Now, it's like **"Posting the due date on the bulletin board"** and letting the 
 
 ⚠️ **Important Reminder**: To align with Apple's platform trajectory, schools are encouraged to transition their update strategies to DDM by late 2026 to ensure continuous management capabilities.
 
-
----
-File: deprecated.md
 ---
 
+## File: deprecated.md
+
 ---
+
 term: "Deprecated"
 category: ["Other"]
+
 ---
 
 ## Term Definition
@@ -1783,14 +1846,15 @@ Think of this as a **"Notice of Demolition"** posted on an old building.
 
 The building hasn't been torn down yet, and you can still walk inside, but the blueprint for the new park replacing it has already been approved. **IT administrators** should start moving their digital furniture out as soon as possible so they aren't caught inside when the "Update Bulldozers" finally arrive to clear the site.
 
-
----
-File: device-group.md
 ---
 
+## File: device-group.md
+
 ---
+
 term: "Device Group"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -1813,14 +1877,15 @@ Think of this as the school's **"Classroom System."**
 
 This allows IT to manage devices based on their current status without manual checking.
 
-
----
-File: device-name.md
 ---
 
+## File: device-name.md
+
 ---
+
 term: "Device Name"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -1839,14 +1904,15 @@ This is the device's **"Digital Name Tag."** Just as a school might require stud
 
 If someone finds a lost iPad in the library, they can just see the name on the screen and know exactly who to return it to, without needing to check complicated serial numbers or "social security" codes.
 
-
----
-File: dfu-mode.md
 ---
 
+## File: dfu-mode.md
+
 ---
+
 term: "DFU Mode (Device Firmware Update)"
 category: ["Hardware"]
+
 ---
 
 ## Term Definition
@@ -1867,14 +1933,15 @@ Think of this as **"Digital Open-Heart Surgery."** When a patient (the iPad) is 
 
 It is a deep-level reset used to bring a **"dead"** device back to life when everything else has failed, essentially rebuilding the device's "brain" from scratch.
 
-
----
-File: dhcp.md
 ---
 
+## File: dhcp.md
+
 ---
+
 term: "DHCP (Dynamic Host Configuration Protocol)"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -1896,14 +1963,15 @@ When you drive your car (your iPad) into the school's parking garage (the Wi-Fi 
 
 You don't have to wander around looking for an empty spot yourself, and you'll never accidentally try to park in a space that another car is already using. The attendant makes sure everyone has a place to park so they can join the party.
 
-
----
-File: directory-service.md
 ---
 
+## File: directory-service.md
+
 ---
+
 term: "Directory Service"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -1943,14 +2011,15 @@ It maintains an official record of every member—who they are, which department
 
 Whenever a user tries to log in to systems such as Wi-Fi, email, or MDM enrollment, those systems consult this central registry to verify identity and permissions, ensuring consistent access control and preventing unauthorized entry.
 
-
----
-File: dmg.md
 ---
 
+## File: dmg.md
+
 ---
+
 term: "DMG (Disk Image)"
 category: ["macOS"]
+
 ---
 
 ## Term Definition
@@ -1971,14 +2040,15 @@ Think of this as a **"Virtual Software CD."** Downloading a DMG is like being ha
 
 Once you've copied the software onto your Mac's hard drive, you just "eject" the digital disc and throw the DMG file in the trash. It’s a clean and organized way to deliver a new tool to your computer.
 
-
----
-File: dns-over-https-tls.md
 ---
 
+## File: dns-over-https-tls.md
+
 ---
+
 term: "DNS over HTTPS/TLS (DoH/DoT)"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -1999,14 +2069,15 @@ While beneficial for privacy, DoH can be used to bypass school content filters. 
 
 Traditional DNS is like a **"Postcard"** —anyone handling the mail (like the ISP or a hacker on public Wi-Fi) can easily see exactly which website you are looking for. **DoH/DoT** is like placing that same request inside a **"Sealed Security Envelope."** The people handling the mail know you sent a message, but they have no way of knowing exactly which "address" you are looking for inside the envelope.
 
-
----
-File: dns.md
 ---
 
+## File: dns.md
+
 ---
+
 term: "DNS (Domain Name System)"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -2023,14 +2094,15 @@ Functional roles:
 
 This is the internet's **"Directory Assistance"** or **"GPS."** You know the name of the store you want to visit (e.g., "Apple Support"), but you don't know exactly where it's located (the IP Address). You "call" the DNS server, it gives you the specific coordinates, and then your device can navigate directly to the correct destination and load the website.
 
-
----
-File: domain-capture.md
 ---
 
+## File: domain-capture.md
+
 ---
+
 term: "Domain Capture"
 category: ["Apple", "Security"]
+
 ---
 
 ## Term Definition
@@ -2053,14 +2125,15 @@ Think of this as an **"Official Property Claim."** If a student used their schoo
 
 The student must then decide to either move their private belongings to their own locker at home or give the key to the school to be officially managed as part of the school's inventory.
 
-
----
-File: drag-and-drop-multitasking.md
 ---
 
+## File: drag-and-drop-multitasking.md
+
 ---
+
 term: "Drag and Drop Multitasking"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -2079,14 +2152,15 @@ Think of this as **"Organizing your physical desk"** with one hand.
 
 Instead of opening apps one by one, you can just grab a tool from your shelf (the Dock) and drop it right onto the table to start working side-by-side with what's already there. It makes using two or three apps at once feel as natural as moving papers around on a real desk.
 
-
----
-File: enforcement-deadline.md
 ---
 
+## File: enforcement-deadline.md
+
 ---
+
 term: "Enforcement Deadline"
 category: ["DDM"]
+
 ---
 
 ## Term Definition
@@ -2112,5 +2186,3 @@ Think of it as a **"Library Book Due Date."**
 - Once the **deadline** hits, the library "locks your account" or applies a fine until the book is returned.
 
 Enforcement Deadlines ensure that critical rules are followed on time across the entire school, so no one is left vulnerable to old bugs.
-
-

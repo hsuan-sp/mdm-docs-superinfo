@@ -1,38 +1,51 @@
 <script setup lang="ts">
-import { computed, ref, onMounted } from 'vue';
-import { useData } from 'vitepress';
+import { computed, ref, onMounted } from "vue";
+import { useData } from "vitepress";
 
-defineProps<{ isOpen: boolean; title?: string; }>();
+defineProps<{ isOpen: boolean; title?: string }>();
 
 const { lang } = useData();
 const isMounted = ref(false);
 
 const t = computed(() => {
-  return lang.value === 'zh-TW' ? {
-    menu: '選單',
-    close: '關閉'
-  } : {
-    menu: 'Menu',
-    close: 'Close'
-  };
+  return lang.value === "zh-TW"
+    ? {
+        menu: "選單",
+        close: "關閉",
+      }
+    : {
+        menu: "Menu",
+        close: "Close",
+      };
 });
 
 onMounted(() => {
   isMounted.value = true;
 });
 
-defineEmits<{ (e: 'close'): void; }>();
+defineEmits<{ (e: "close"): void }>();
 </script>
 
 <template>
   <Teleport to="body" v-if="isMounted">
     <Transition name="slide-up">
       <div v-if="isOpen" class="mobile-drawer-overlay" @click="$emit('close')">
-        <aside class="mobile-drawer" @click.stop role="dialog" aria-modal="true">
+        <aside
+          class="mobile-drawer"
+          @click.stop
+          role="dialog"
+          aria-modal="true"
+        >
           <div class="drawer-handle"></div>
           <div class="drawer-header">
             <h3>{{ title || t.menu }}</h3>
-            <button class="close-btn" @click="$emit('close')" :aria-label="t.close">✕</button>
+            <button
+              class="close-btn"
+              @click="$emit('close')"
+              :aria-label="t.close"
+            >
+              ✕
+            </button>
           </div>
 
           <div class="drawer-content">

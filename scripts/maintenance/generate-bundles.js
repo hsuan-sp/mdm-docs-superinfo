@@ -1,35 +1,36 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const CONTENT_DIR = path.join(__dirname, '../../docs/content');
-const BUNDLE_DIR = path.join(__dirname, '../../docs/maintenance/bundles');
+const CONTENT_DIR = path.join(__dirname, "../../docs/content");
+const BUNDLE_DIR = path.join(__dirname, "../../docs/maintenance/bundles");
 
 const QA_ORDER = [
-  'account',
-  'enrollment',
-  'apps',
-  'classroom',
-  'digital-learning',
-  'hardware',
-  'mac',
-  'qa-education'
+  "account",
+  "enrollment",
+  "apps",
+  "classroom",
+  "digital-learning",
+  "hardware",
+  "mac",
+  "qa-education",
 ];
 
 function generateQABundles(lang) {
-  const root = path.join(CONTENT_DIR, lang, 'qa');
-  QA_ORDER.forEach(slug => {
+  const root = path.join(CONTENT_DIR, lang, "qa");
+  QA_ORDER.forEach((slug) => {
     const dir = path.join(root, slug);
     if (!fs.existsSync(dir)) {
-        console.warn(`[Bundle] Warning: Directory ${dir} does not exist.`);
-        return;
+      console.warn(`[Bundle] Warning: Directory ${dir} does not exist.`);
+      return;
     }
-    
-    const files = fs.readdirSync(dir)
-      .filter(f => f.endsWith('.md'))
+
+    const files = fs
+      .readdirSync(dir)
+      .filter((f) => f.endsWith(".md"))
       .sort((a, b) => {
         const numA = parseInt(a.match(/\d+/)?.[0] || 0);
         const numB = parseInt(b.match(/\d+/)?.[0] || 0);
@@ -37,9 +38,9 @@ function generateQABundles(lang) {
         return a.localeCompare(b);
       });
 
-    let bundleContent = '\n\n';
-    files.forEach(file => {
-      const content = fs.readFileSync(path.join(dir, file), 'utf-8');
+    let bundleContent = "\n\n";
+    files.forEach((file) => {
+      const content = fs.readFileSync(path.join(dir, file), "utf-8");
       bundleContent += `---\nFile: ${file}\n---\n\n${content}\n\n`;
     });
 
@@ -50,37 +51,43 @@ function generateQABundles(lang) {
 }
 
 function generateGlossaryBundles(lang) {
-  const dir = path.join(CONTENT_DIR, lang, 'glossary');
+  const dir = path.join(CONTENT_DIR, lang, "glossary");
   if (!fs.existsSync(dir)) {
-      console.warn(`[Bundle] Warning: Directory ${dir} does not exist.`);
-      return;
+    console.warn(`[Bundle] Warning: Directory ${dir} does not exist.`);
+    return;
   }
 
-  const files = fs.readdirSync(dir).filter(f => f.endsWith('.md')).sort();
+  const files = fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith(".md"))
+    .sort();
   const chunkSize = Math.ceil(files.length / 3);
-  
+
   for (let i = 0; i < 3; i++) {
     const chunk = files.slice(i * chunkSize, (i + 1) * chunkSize);
     if (chunk.length === 0) continue;
-    
-    let bundleContent = '\n\n';
-    chunk.forEach(file => {
-      const content = fs.readFileSync(path.join(dir, file), 'utf-8');
+
+    let bundleContent = "\n\n";
+    chunk.forEach((file) => {
+      const content = fs.readFileSync(path.join(dir, file), "utf-8");
       bundleContent += `---\nFile: ${file}\n---\n\n${content}\n\n`;
     });
-    const bundlePath = path.join(BUNDLE_DIR, `${lang}_glossary_bundle_v${i + 1}.md`);
+    const bundlePath = path.join(
+      BUNDLE_DIR,
+      `${lang}_glossary_bundle_v${i + 1}.md`
+    );
     fs.writeFileSync(bundlePath, bundleContent);
     console.log(`✅ Generated ${lang} glossary bundle v${i + 1}`);
   }
 }
 
-console.log('📦 Generating Bundles...');
+console.log("📦 Generating Bundles...");
 if (!fs.existsSync(BUNDLE_DIR)) {
   fs.mkdirSync(BUNDLE_DIR, { recursive: true });
 }
 
-generateQABundles('zh');
-generateQABundles('en');
-generateGlossaryBundles('zh');
-generateGlossaryBundles('en');
-console.log('✨ Bundles Completed.');
+generateQABundles("zh");
+generateQABundles("en");
+generateGlossaryBundles("zh");
+generateGlossaryBundles("en");
+console.log("✨ Bundles Completed.");

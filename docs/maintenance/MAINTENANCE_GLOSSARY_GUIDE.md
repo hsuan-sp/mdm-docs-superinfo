@@ -21,7 +21,6 @@
 - **自動排版腳本 (重要)**：
 
   在此專案中，我們使用嚴格的 `Tight List` 格式（列表項之間無空行），並透過腳本強制執行。
-
   - **英文術語排版**：`node scripts/maintenance/align-glossary.js` (或 `rename-glossary.js`)
   - **中文術語排版**：`node scripts/maintenance/fix-markdown.js`
   - **更新索引**：`npm run update-index` (或 `node scripts/maintenance/generate-index.js`)
@@ -124,7 +123,6 @@ tags: ["標籤1", "標籤2", "標籤3"]
 **範例**：
 
 ```markdown
-
 ## MDM 相關
 
 教育場域需考慮是否限制此功能，避免低年級學生操作混亂或上課分心。

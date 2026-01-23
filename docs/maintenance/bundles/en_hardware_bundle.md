@@ -1,22 +1,22 @@
-
-
 ---
 File: hw-1.md
 ---
 
 ---
+
 id: hw-1
 title: "We have both older Lightning iPads and newer USB-C models. How do we manage accessories and Apple Pencils?"
 category: "Section 6: Hardware & Maintenance"
 important: true
 tags:
-  [
-    "Hardware Compatibility",
-    "Lightning",
-    "USB-C",
-    "Apple Pencil",
-    "Charging Carts",
-  ]
+[
+"Hardware Compatibility",
+"Lightning",
+"USB-C",
+"Apple Pencil",
+"Charging Carts",
+]
+
 ---
 
 **As your school transitions to newer hardware, managing a mixed fleet of Lightning (iPad 9 and older) and USB-C (iPad 10 and newer) devices requires careful planning regarding peripherals and charging infrastructure.**
@@ -41,17 +41,18 @@ tags:
 
 Maintain a "Hardware Mapping Table" that matches device serial numbers to specific peripherals. When upgrading hardware, evaluate the total cost of ownership, including the required new adapters or Pencils.
 
-
----
-File: hw-2.md
 ---
 
+## File: hw-2.md
+
 ---
+
 id: hw-2
 title: "An iPad isn't charging inside the cart. Is the device faulty or the cart?"
 category: "Section 6: Hardware & Maintenance"
 important: false
 tags: ["Charging Issues", "Diagnostics", "Hardware Maintenance"]
+
 ---
 
 **When an iPad fails to charge, we recommend a "Systematic Cross-Testing" approach to isolate the failure point between the device, the cable, and the cart’s power module.**
@@ -82,17 +83,18 @@ tags: ["Charging Issues", "Diagnostics", "Hardware Maintenance"]
 - **Warranty**: If the device is found to be faulty (e.g., a burned-out charging IC), verify its warranty status before sending it for repair.
 - **Spare Parts**: Cables are consumables. IT departments should keep a 5-10% stock of spare cables to quickly swap out damaged ones in classroom carts.
 
-
----
-File: hw-3.md
 ---
 
+## File: hw-3.md
+
 ---
+
 id: hw-3
 title: "AirDrop won't find other devices, or AirPlay can't see the classroom Apple TV. Why?"
 category: "Section 6: Hardware & Maintenance"
 important: true
 tags: ["AirDrop", "AirPlay", "Network Management", "mDNS", "Troubleshooting"]
+
 ---
 
 **AirDrop and AirPlay operate differently: AirDrop uses Peer-to-Peer communication, while AirPlay relies heavily on your campus network configuration.**
@@ -113,17 +115,18 @@ tags: ["AirDrop", "AirPlay", "Network Management", "mDNS", "Troubleshooting"]
 
 If AirPlay issues occur frequently in specific rooms, check the wireless load. When an Access Point (AP) is overloaded with 40+ devices, it will often drop low-priority mDNS discovery packets first, causing the "list of TVs" to appear empty.
 
-
----
-File: hw-4.md
 ---
 
+## File: hw-4.md
+
 ---
+
 id: hw-4
 title: "The screen is cracked or the touch response is failing. How is warranty vs. accidental damage determined?"
 category: "Section 6: Hardware & Maintenance"
 important: false
 tags: ["Warranty Policy", "VMI", "Inspection Standards", "Repairs"]
+
 ---
 
 **Apple hardware inspections follow the "Visual Mechanical Inspection (VMI)" standard to determine if a repair is covered by the limited warranty or considered out-of-warranty accidental damage.**
@@ -148,17 +151,18 @@ tags: ["Warranty Policy", "VMI", "Inspection Standards", "Repairs"]
 
 We recommend that schools maintain an "Internal Insurance Fund" or accidental damage protection (like AppleCare+ for Schools) to cover the high cost of screen replacements, which can often be up to 60-80% of the cost of a new device.
 
-
----
-File: hw-5.md
 ---
 
+## File: hw-5.md
+
 ---
+
 id: hw-5
 title: "How should we store iPads during the summer break to prevent battery damage?"
 category: "Section 6: Hardware & Maintenance"
 important: true
 tags: ["Battery Health", "Storage", "Summer Break", "Prevention"]
+
 ---
 
 **To protect the long-term health of your iPad's lithium-ion battery during extended breaks, you should follow the "50% Power + Full Shutdown" rule.** Storing a device improperly for 2-3 months can lead to "Deep Discharge," where the battery becomes chemically unable to hold a charge ever again.
@@ -179,24 +183,25 @@ tags: ["Battery Health", "Storage", "Summer Break", "Prevention"]
 
 Before the final day of the term, send a message to all students/teachers asking them to leave their devices at ~50% charge before handing them in. When you move the devices to storage, verify they are fully powered off to ensure a smooth "Back to School" experience with minimal "dead" hardware.
 
-
----
-File: hw-6.md
 ---
 
+## File: hw-6.md
+
 ---
+
 id: hw-6
 title: "How do I handle 'Ghost Touch' or issues with auto-rotation on the screen?"
 category: "Section 6: Hardware Maintenance & Troubleshooting"
 important: false
 tags:
-  [
-    "Touch Issues",
-    "Gyroscope",
-    "Accelerometer",
-    "Ghost Touch",
-    "Troubleshooting",
-  ]
+[
+"Touch Issues",
+"Gyroscope",
+"Accelerometer",
+"Ghost Touch",
+"Troubleshooting",
+]
+
 ---
 
 **'Ghost Touch' (erratic touch input) typically involves Electromagnetic Interference (EMI) or a damaged digitizer layer. Auto-rotation issues are usually related to hardware failure of internal sensors (accelerometer and gyroscope).** These issues directly impact the usability of the device. Administrators should distinguish between software settings, environmental interference, and pure hardware failure before deciding on a repair.
@@ -230,17 +235,18 @@ If the iPad screen won't rotate with the device, check the following in order:
 - **When to Repair**: If Ghost Touch persists after removing external power and cleaning, or if the Compass app is unresponsive, it typically indicates a damaged **digitizer layer** or **logic board sensor**.
 - **Contract Coverage**: Provided there is no obvious physical damage or screen cracks, these issues are generally considered natural hardware failures. Contact support immediately to facilitate repair or replacement under your project's warranty.
 
-
----
-File: hw-7.md
 ---
 
+## File: hw-7.md
+
 ---
+
 id: hw-7
 title: "Must 'Find My' be turned off before repair? How?"
 category: "Section 6: Hardware Maintenance & Troubleshooting"
 important: true
 tags: ["Repair", "Find My", "Activation Lock", "Maintenance", "Activation Lock"]
+
 ---
 
 **Yes, this is almost always a requirement for repair. Failure to disable 'Find My' triggers 'Activation Lock,' which prevents service centers from performing the necessary diagnostics or parts replacement, leading to the device being returned unrepaired.**
@@ -274,18 +280,19 @@ If the device screen is broken and unusable:
 
 When collecting devices for repair, the IT lead must verify that every unit sent to the vendor has been "Removed from Account." Failure to do so can cause repair delays of several weeks.
 
-
----
-File: hw-8.md
 ---
 
+## File: hw-8.md
+
 ---
+
 id: hw-8
 title: "Can I clean the iPad screen with alcohol? Is there a risk of damage?"
 category: "Section 6: Hardware Maintenance & Troubleshooting"
 important: true
 tags:
-  ["Cleaning", "Maintenance", "Disinfection", "Alcohol", "Oleophobic Coating"]
+["Cleaning", "Maintenance", "Disinfection", "Alcohol", "Oleophobic Coating"]
+
 ---
 
 **Yes, Apple explicitly allows the use of specific alcohol concentrations to clean iPads. According to the latest official guidelines, you can use 70% Isopropyl Alcohol, 75% Ethyl Alcohol, or disinfectant wipes on the hard, non-porous surfaces of the device.**
@@ -324,24 +331,25 @@ In a classroom environment with multiple users, a proper disinfection routine is
 
 For school-wide management, we recommend placing a dedicated microfiber cloth in each charging cart and having teachers manage the alcohol spray to ensure students don't spray liquid directly into the devices, which could cause internal hardware damage (liquid damage is not covered under Apple's standard warranty).
 
-
----
-File: hw-9.md
 ---
 
+## File: hw-9.md
+
 ---
+
 id: hw-9
 title: "The Smart or Magic Keyboard is not responding. How do I troubleshoot it?"
 category: "Section 6: Hardware Maintenance & Troubleshooting"
 important: false
 tags:
-  [
-    "Keyboard",
-    "Smart Connector",
-    "Magic Keyboard",
-    "Hardware Compatibility",
-    "Troubleshooting",
-  ]
+[
+"Keyboard",
+"Smart Connector",
+"Magic Keyboard",
+"Hardware Compatibility",
+"Troubleshooting",
+]
+
 ---
 
 **Keyboard failures typically stem from model incompatibility, oxidized contacts, or physical misalignment of the magnets. Since original Apple keyboards do not require Bluetooth pairing, if cleaning doesn't work, it usually involves a hardware circuit failure.**
@@ -379,17 +387,18 @@ In a 2026 classroom environment where iPad 9th, 10th, and 11th generations coexi
 
 If an original keyboard is out for repair, IT staff can temporarily issue a standard **Bluetooth keyboard** to maintain instructional continuity.
 
-
----
-File: hw-10.md
 ---
 
+## File: hw-10.md
+
 ---
+
 id: hw-10
 title: "Apple Pencil won't pair or write?"
 category: "Section 6: Hardware Maintenance & Troubleshooting"
 important: false
 tags: ["Apple Pencil", "Pairing", "Stylus"]
+
 ---
 
 **Apple Pencil issues can usually be solved by re-pairing, tightening the tip, or charging. Different generations have different pairing and charging methods.**
@@ -425,17 +434,18 @@ The Apple Pencil has four main versions as of 2026:
 
 If an Apple Pencil is left uncharged for more than 3 months (like over summer break), the tiny internal battery may enter "Deep Discharge" fail state. We recommend charging Pencils fully before storing them separately from iPads during long breaks.
 
-
----
-File: hw-11.md
 ---
 
+## File: hw-11.md
+
 ---
+
 id: hw-11
 title: "How do I check iPad battery health? Why can't I see this data in the MDM console?"
 category: "Section 6: Hardware & Maintenance"
 important: false
 tags: ["Battery Health", "Longevity", "Troubleshooting", "Asset Management"]
+
 ---
 
 **For base models like the iPad 9 and the later iPad 11 (A16), technical limitations prevent "Battery Maximum Capacity (%)" from being displayed directly in System Settings or the Jamf Pro console.** However, newer models released in 2024 (such as the M4 iPad Pro and M2/M3 iPad Air) now include a comprehensive Battery Health menu similar to the iPhone.
@@ -468,17 +478,18 @@ For the latest iPads, administrators can use a Restrictions Profile to enable th
 
 Lithium batteries typically show noticeable degradation after **800-1,000 charge cycles**. For project devices that have been in use for three years, if battery life is severely impacting teaching, prepare for a repair or battery replacement service.
 
-
----
-File: hw-12.md
 ---
 
+## File: hw-12.md
+
 ---
+
 id: hw-12
 title: "I heard that moisture exposure voids the warranty. Where is the iPad Liquid Contact Indicator (LCI)?"
 category: "Section 6: Hardware & Maintenance"
 important: false
 tags: ["Liquid Damage", "LCI", "Moisture", "Repair Policy", "VMI"]
+
 ---
 
 **Unlike the iPhone, no current iPad models (including the iPad 9th, 10th, and 11th generations) have an 'externally visible' Liquid Contact Indicator (LCI).** Moisture determination is made by authorized technicians after disassembling the device to inspect internal indicators.
@@ -504,23 +515,24 @@ tags: ["Liquid Damage", "LCI", "Moisture", "Repair Policy", "VMI"]
 
 Since the determination lies entirely with the service center's internal inspection, report observed symptoms truthfully to avoid controversies arising from concealing moisture issues.
 
-
----
-File: hw-13.md
 ---
 
+## File: hw-13.md
+
 ---
+
 id: hw-13
 title: "My iPad is lagging. Is it because of battery aging or old hardware?"
 category: "Section 6: Hardware & Maintenance"
 important: false
 tags:
-  [
-    "Power Management",
-    "Performance Throttling",
-    "Hardware Aging",
-    "Asset Replacement",
-  ]
+[
+"Power Management",
+"Performance Throttling",
+"Hardware Aging",
+"Asset Replacement",
+]
+
 ---
 
 **iPad performance is a balance between battery health, software demands, and hardware degradation. As a device enters its 4th or 5th year, multiple factors combine to cause noticeable lag.**
@@ -554,17 +566,18 @@ Besides the battery, internal **NAND Flash storage** has a finite number of writ
 
 For iPads that have served over 4 years, schools should plan a "Tier 2" or "Retirement" program (e.g., repurposing them as library kiosks or admin-only single-app devices) and purchase new models with higher RAM and A/M series chips to maintain teaching quality.
 
-
----
-File: hw-14.md
 ---
 
+## File: hw-14.md
+
 ---
+
 id: hw-14
 title: "Why can't our firewall see the iPad's real MAC address?"
 category: "Section 6: Hardware & Maintenance"
 important: false
 tags: ["MAC Address", "Private Wi-Fi Address", "Network Admin", "DHCP"]
+
 ---
 
 **This is because iPadOS enables 'Private Wi-Fi Address' by default, generating a randomized virtual MAC address for each SSID.** This prevents commercial tracking but can break campus network systems that rely on "MAC Address Binding" for IP assignments or access control.
@@ -587,17 +600,18 @@ Do not ask students to manually disable this. Instead, handle it centrally via J
 
 This setting only applies to the Wi-Fi network defined in the MDM profile. If students connect to a personal hotspot or home Wi-Fi, the system will still enable Private Address to protect their privacy—this does not affect school management.
 
-
----
-File: hw-15.md
 ---
 
+## File: hw-15.md
+
 ---
+
 id: hw-15
 title: "How do I restrict USB/Thunderbolt drive access on macOS to prevent data leaks?"
 category: "Section 6: Hardware & Maintenance"
 important: false
 tags: ["macOS", "Disk Management", "Security", "USB Restrictions"]
+
 ---
 
 **Starting with macOS 15, Apple introduced a new 'Media Management' framework that allows for granular control over external storage devices. macOS 26 (Tahoe) further strengthens this security.** Controlled USB access is vital in computer labs or administrative offices to prevent unauthorized file copying or malware injection.
@@ -622,17 +636,18 @@ tags: ["macOS", "Disk Management", "Security", "USB Restrictions"]
 
 For Mac computer labs, administrators can create a Smart Group that automatically applies a "Block External Disks" profile during exam times, and reverts to normal read/write permissions afterwards.
 
-
----
-File: hw-16.md
 ---
 
+## File: hw-16.md
+
 ---
+
 id: hw-16
 title: "Will the Apple Pencil break if left in its tray for 3 months without charging?"
 category: "Section 6: Hardware & Maintenance"
 important: true
 tags: ["Apple Pencil", "Battery Maintenance", "Deep Discharge", "Hardware Life"]
+
 ---
 
 **There is a risk of damage. Apple Pencils use tiny lithium-polymer batteries. If left at 'zero' or 'low' charge for an extended period, they can experience 'Deep Discharge,' rendering them unable to take a charge again.** This is a common cause for support tickets after summer or winter breaks.
@@ -657,17 +672,18 @@ tags: ["Apple Pencil", "Battery Maintenance", "Deep Discharge", "Hardware Life"]
 
 For a Pencil that is confirmed dead (won't charge) and is within the warranty period (without physical damage), you can usually claim a hardware failure replacement.
 
-
----
-File: hw-17.md
 ---
 
+## File: hw-17.md
+
 ---
+
 id: hw-17
 title: "Can I see device warranty expiration dates directly in the MDM console?"
 category: "Section 6: Hardware & Maintenance"
 important: false
 tags: ["Warranty", "Asset Management", "GSX", "Extension Attributes"]
+
 ---
 
 **Yes. Jamf Pro integrates with Apple’s Global Service Exchange (GSX) database to automatically pull 'Limited Warranty' status for every device.** This is extremely helpful for auditing the Digital Initiative fleet in 2026.
@@ -695,17 +711,18 @@ In many MOE projects, schools receive a 4-year warranty. If this extra coverage 
 
 In the final year (2026), export this warranty report monthly. If any device approaching expiration shows signs of battery aging or screen flicker, initiate the repair process immediately.
 
-
----
-File: hw-18.md
 ---
 
+## File: hw-18.md
+
 ---
+
 id: hw-18
 title: "How do I enable Wi-Fi 6E 160MHz on iPad Pro and Mac? Why isn't my speed improving?"
 category: "Section 6: Hardware & Maintenance"
 important: false
 tags: ["Wi-Fi 6E", "160MHz", "Network Velocity", "iPadOS 26", "macOS Tahoe"]
+
 ---
 
 **iPadOS 26.2 and macOS Tahoe 26.2 unlock support for 160 MHz bandwidth on compatible Wi-Fi 6E hardware, significantly increasing throughput.** M5 devices launched in 2025 further support Wi-Fi 7, offering higher speeds and lower latency. If your speeds haven't improved, it is likely an Access Point (AP) configuration or interference issue.
@@ -745,17 +762,18 @@ tags: ["Wi-Fi 6E", "160MHz", "Network Velocity", "iPadOS 26", "macOS Tahoe"]
 - **Reason 3: WPA3 Compatibility**: Wi-Fi 6E forces WPA3. Old RADIUS servers may reject the connection.
 - **Reason 4: Ethernet Bottleneck**: If the AP's uplink port is only 1 Gbps, 2.4 Gbps Wi-Fi is bottlednecked. Upgrade to **2.5 GbE or 10 GbE** switches.
 
-
----
-File: hw-19.md
 ---
 
+## File: hw-19.md
+
 ---
+
 id: hw-19
 title: "How do I avoid AirPods pairing confusion in Shared iPad environments? Does iOS 26 fix this?"
 category: "Section 6: Hardware & Maintenance"
 important: true
 tags: ["AirPods", "Beats", "Pairing", "Shared iPad", "Audio Accessories"]
+
 ---
 
 **iOS 26 finally solves the Bluetooth headset nightmare for Shared iPads! A new 'Audio Accessory Configuration' allows for 'Ephemeral Pairing' that doesn't sync to iCloud, perfectly solving the chaos in shared environments.**
@@ -787,17 +805,18 @@ MDM can now push the `com.apple.configuration.audio-accessory.settings` payload:
 
 This feature requires compatible headset firmware and iPadOS 26. We recommend testing one pair to confirm the "auto-disconnect on logout" behavior before full deployment.
 
-
----
-File: hw-20.md
 ---
 
+## File: hw-20.md
+
 ---
+
 id: hw-20
 title: "Students are reporting the screen looks 'Blurry' (Liquid Glass Design). How do I handle this?"
 category: "Section 6: Hardware & Maintenance"
 important: false
 tags: ["Liquid Glass", "UI Design", "iOS 26", "macOS Tahoe", "visionOS"]
+
 ---
 
 **This is usually not a hardware failure! The 'Liquid Glass' design language introduced in iOS 26 uses heavy 'Frosted Glass' and 'Depth of Field' effects that can be mistaken for a foggy or defective screen.**
@@ -826,17 +845,18 @@ tags: ["Liquid Glass", "UI Design", "iOS 26", "macOS Tahoe", "visionOS"]
 
 When upgrading to **iOS 26**, spend 2 minutes during homeroom explaining that "Looking a bit blurry on the Lock Screen is the new style." This will prevent a flood of false repair reports.
 
-
----
-File: hw-21.md
 ---
 
+## File: hw-21.md
+
 ---
+
 id: hw-21
 title: "2024-2025 iPad Hardware Differences: M4 Pro, M2/M3 Air, iPad mini 7 (A17 Pro)."
 category: "Section 6: Hardware & Maintenance"
 important: true
 tags: ["Hardware Specs", "M4", "M2", "A17 Pro", "Procurement", "Compatibility"]
+
 ---
 
 **Newer iPads released in 2024–2025 feature significant hardware and management upgrades, specifically regarding Pencil compatibility, battery health, and high-speed networking.**
@@ -872,24 +892,25 @@ tags: ["Hardware Specs", "M4", "M2", "A17 Pro", "Procurement", "Compatibility"]
 - **Color Coded Accessories**: Since Pencil Pro is incompatible with older models, we recommend using color-coded stickers (e.g., Metallic Blue) on both the new iPad and its Pencil to avoid mix-ups.
 - **Charging Infrastructure**: M4 iPad Pro supports PD fast charging. Ensure your charging carts support 30W+ USB-C PD output to maintain charging efficiency.
 
-
----
-File: hw-22.md
 ---
 
+## File: hw-22.md
+
 ---
+
 id: hw-22
 title: "The iPad 9 (2021) in 2026: Performance evaluation and end-of-life planning."
 category: "Section 6: Hardware & Maintenance"
 important: true
 tags:
-  [
-    "iPad 9",
-    "Digital Initiative",
-    "Performance Evaluation",
-    "Replacement Planning",
-    "iOS 26",
-  ]
+[
+"iPad 9",
+"Digital Initiative",
+"Performance Evaluation",
+"Replacement Planning",
+"iOS 26",
+]
+
 ---
 
 **The iPad 9 (released in 2021), a staple of the Digital Initiative, is now entering its 4th or 5th year of service as of 2026. While it still supports iOS 26, schools are beginning to face hardware aging and performance bottlenecks.**
@@ -929,24 +950,25 @@ tags:
 
 Use Jamf Pro to generate health reports. If an iPad 9 takes 3x longer to boot an app compared to a new model, flag it for priority replacement.
 
-
----
-File: hw-23.md
 ---
 
+## File: hw-23.md
+
 ---
+
 id: hw-23
 title: "How do I use 'Find My' to track lost Apple Pencil Pro styluses on campus?"
 category: "Section 6: Hardware & Maintenance"
 important: true
 tags:
-  [
-    "Apple Pencil Pro",
-    "Find My",
-    "Asset Management",
-    "Lost Property",
-    "Campus Management",
-  ]
+[
+"Apple Pencil Pro",
+"Find My",
+"Asset Management",
+"Lost Property",
+"Campus Management",
+]
+
 ---
 
 **The Apple Pencil Pro (released May 2024) is the first Apple stylus to support the 'Find My' network. This is a game-changer for schools, as it allows for tracking even when the pencil is not magnetised to an iPad.**
@@ -981,24 +1003,25 @@ tags:
 
 When issuing Apple Pencil Pros, require teachers to rename each pencil to a unique ID (e.g., "104-Pencil-01") for easy identification in the Find My list.
 
-
----
-File: hw-24.md
 ---
 
+## File: hw-24.md
+
 ---
+
 id: hw-24
 title: "Managing Wi-Fi 6, 6E, and 7: How to plan school network upgrades for a mixed fleet."
 category: "Section 6: Hardware & Maintenance"
 important: true
 tags:
-  [
-    "Wi-Fi 7",
-    "Wi-Fi 6E",
-    "Wireless Networking",
-    "Infrastructure",
-    "Procurement",
-  ]
+[
+"Wi-Fi 7",
+"Wi-Fi 6E",
+"Wireless Networking",
+"Infrastructure",
+"Procurement",
+]
+
 ---
 
 **With the introduction of M4/M5 iPads and Macs, school networks are now 'Tri-generational.' Handling Wi-Fi 6, 6E, and 7 simultaneously requires careful planning to prevent newer devices from being throttled while ensuring older iPads (like the iPad 9) remain connected.**
@@ -1038,5 +1061,3 @@ Wi-Fi 7's MLO allows M5 iPad Pros to transmit on 5GHz and 6GHz simultaneously.
 ## Practical Advice:
 
 For most general classrooms, **Wi-Fi 6E** offers the best cost-performance ratio. Reserve **Wi-Fi 7** for "Future Labs" or multimedia centers where M5 devices are deployed.
-
-

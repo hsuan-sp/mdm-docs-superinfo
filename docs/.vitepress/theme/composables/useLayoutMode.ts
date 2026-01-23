@@ -23,7 +23,7 @@ const detectMobile = (): boolean => {
 
   // 偵測其他行動瀏覽器環境
   const isMobileBrowser = /Mobile|webOS|BlackBerry|IEMobile|Opera Mini/i.test(
-    ua,
+    ua
   );
 
   // 偵測螢幕寬度 (以 VitePress 標準斷點 960px 為依據)

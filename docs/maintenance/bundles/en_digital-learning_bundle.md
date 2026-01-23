@@ -1,15 +1,15 @@
-
-
 ---
 File: dl-1.md
 ---
 
 ---
+
 id: dl-1
 title: "The VPN icon disappeared after updating to iPadOS 17. Is this normal?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: true
 tags: ["iPadOS 17", "VPN", "Jamf Trust", "MOE Project", "Architecture"]
+
 ---
 
 **Yes, this is completely normal. It reflects a shift in the management architecture designed to optimize connection speeds and ensure compatibility with local educational network standards.** In alignement with the latest digital learning policies, the **Jamf Trust** agent has transitioned from a full-tunnel VPN to a more efficient **"DNS Proxy"** and **"Content Filter"** architecture.
@@ -29,17 +29,18 @@ tags: ["iPadOS 17", "VPN", "Jamf Trust", "MOE Project", "Architecture"]
 
 If you see yellow or red warnings inside the Jamf Trust app regarding "Passcode not set" or "OS outdated," you can usually ignore these as long as the main shield remains green. The device is still successfully reporting its status for compliance purposes.
 
-
----
-File: dl-2.md
 ---
 
+## File: dl-2.md
+
 ---
+
 id: dl-2
 title: "The MOE dashboard shows some devices as 'Unused' or failing to upload data. How do we fix this?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: true
 tags: ["Data Reporting", "Troubleshooting", "Jamf Trust", "Usage Metrics"]
+
 ---
 
 **Incomplete usage data is usually caused by the Jamf Trust agent being closed, devices staying offline, or missing configuration profiles.** For institutional compliance, the Jamf Trust app must remain active in the background to report student engagement. If a device shows zero activity, follow these steps:
@@ -65,17 +66,18 @@ tags: ["Data Reporting", "Troubleshooting", "Jamf Trust", "Usage Metrics"]
 
 Usage dashboards often have a **T+1 delay** (24-hour lag). If you fix a device today, you likely won't see the updated status in the official MOE portal until the following day.
 
-
----
-File: dl-3.md
 ---
 
+## File: dl-3.md
+
 ---
+
 id: dl-3
 title: "How do I perform a 'Reset Network Settings'? What are the risks to my MDM connection?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: false
 tags: ["Troubleshooting", "Reset", "Network", "Connection Help"]
+
 ---
 
 **Resetting network settings is a powerful way to solve stubborn Wi-Fi issues, but it carries the risk of making the device an "unmanaged device" if not handled carefully.**
@@ -101,17 +103,18 @@ Use this only when the device shows "Unable to Join Network," fails to see any B
 
 Before resorting to a full network reset, always try toggling **Airplane Mode** for 10 seconds or performing a hard restart. These solve 90% of connectivity hang-ups without erasing your saved configurations.
 
-
----
-File: dl-4.md
 ---
 
+## File: dl-4.md
+
 ---
+
 id: dl-4
 title: "How do I create Smart Groups specifically for tracking different phases of our hardware rollout?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: false
 tags: ["Group Management", "Automation", "Smart Groups", "Asset Tracking"]
+
 ---
 
 **Smart Groups are the "sorting bins" of Jamf Pro. They allow you to automatically categorize devices based on their purchase year, model, or health status.** Using Smart Groups, you can target specific "batches" of hardware with unique apps or restrictions without having to manually select each iPad.
@@ -138,17 +141,18 @@ tags: ["Group Management", "Automation", "Smart Groups", "Asset Tracking"]
 
 Log in to Jamf Pro > **Devices > Smart Device Groups > New**. After defining your criteria, check the box for **"Show in Dashboard."** This gives you a real-time "progress bar" on your management homepage to see how many devices are compliant with your school standards.
 
-
----
-File: dl-5.md
 ---
 
+## File: dl-5.md
+
 ---
+
 id: dl-5
 title: "Students are deleting the Jamf Trust app. How does this affect compliance, and how do we prevent it?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: false
 tags: ["Compliance", "Security", "Restrictions", "Jamf Trust"]
+
 ---
 
 **Deleting Jamf Trust effectively blinds your reporting system. The device will be marked as "Unused" in official compliance audits, even if the student is using it for class every day.** To ensure your school meets its Key Performance Indicators (KPIs), you must implement technical safeguards.
@@ -169,17 +173,18 @@ tags: ["Compliance", "Security", "Restrictions", "Jamf Trust"]
 
 Create a Smart Group for "Devices Missing Jamf Trust" (Logic: Application Title _does not have_ Jamf Trust). Set this as a tile on your Jamf dashboard. If the number is greater than zero, your ICT team knows exactly which students need to be called in for a hardware check.
 
-
----
-File: dl-6.md
 ---
 
+## File: dl-6.md
+
 ---
+
 id: dl-6
 title: "How can I temporarily unblock certain websites needed for teaching?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: false
 tags: ["Content Filtering", "Exclusions", "YouTube", "Jamf Trust", "DNS Proxy"]
+
 ---
 
 **Filtering rules for the Digital Learning Project are typically managed by higher-level authorities (Educational Bureaus). Modifying the blocklist is not recommended, but if an immediate exception is required for teaching, an "Exclusion" strategy is preferred.**
@@ -205,17 +210,18 @@ If students only need to "view" content rather than "interact" with it, it is re
 - **Data Interruption**: Once a device is excluded from the Jamf Trust scope, **traffic data reporting stops completely.** Avoid long-term exclusions for student devices, as this will affect the school's usage rate KPIs.
 - **Content Control**: Once unblocked, students can access all websites (including inappropriate content). Teachers must closely monitor student activity during this time.
 
-
----
-File: dl-7.md
 ---
 
+## File: dl-7.md
+
 ---
+
 id: dl-7
 title: "Why is 'iCloud Private Relay' forced off on school iPads? Does this affect privacy?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: false
 tags: ["iCloud", "Private Relay", "Digital Learning Project", "Policy Info"]
+
 ---
 
 **This policy ensures that 'Jamf Trust' functions correctly. Enabling this feature would disable the school's content filtering and stop usage data reporting.**
@@ -238,17 +244,18 @@ On Supervised devices within the Digital Learning Project, you will typically fi
 
 If you find a student iPad that **can enable** Private Relay, it means the device has likely **fallen out of management** or **missed the restriction profile.** Ensure you run "Update Inventory" or redeploy the restriction settings in Jamf Pro for that device.
 
-
----
-File: dl-8.md
 ---
 
+## File: dl-8.md
+
 ---
+
 id: dl-8
 title: "If school Wi-Fi is poor, can I connect the iPad to a wired network (Ethernet)?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: false
 tags: ["Network", "Wired Connection", "Ethernet", "Lightning", "iPad 9"]
+
 ---
 
 **Yes. Whether it's an older Lightning-based iPad or a newer USB-C model, they all support wired network connections via adapters.**
@@ -283,17 +290,18 @@ Connect the adapter to the Ethernet wall jack in the classroom.
 - **Priority**: When an Ethernet cable is connected, the iPad automatically prioritizes the wired connection, reducing the load on the Wi-Fi AP.
 - **Firewall Rules**: Ensure the wired network VLAN also allows the necessary communication ports for Apple and Jamf services.
 
-
----
-File: dl-9.md
 ---
 
+## File: dl-9.md
+
 ---
+
 id: dl-9
 title: "Does MDM monitor the student's location (GPS) at all times?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: false
 tags: ["Privacy", "Location", "GPS", "Lost Mode"]
+
 ---
 
 **No. Apple's privacy architecture strictly limits MDM's location permissions. Under normal conditions, schools cannot obtain a device's GPS coordinates.**
@@ -315,17 +323,18 @@ Administrators can only trigger location tracking if a device is specifically ma
 - School MDM **cannot see** a student's photos, messages, or browsing history (it can only filter domains, not see specific page content).
 - The location feature is used solely for "asset recovery," never for monitoring a student's movements after school hours. This complies with GDPR and national cybersecurity standards.
 
-
----
-File: dl-10.md
 ---
 
+## File: dl-10.md
+
 ---
+
 id: dl-10
 title: "Can students remove school management by 'Resetting' or 'DFU Restoring' the iPad?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: false
 tags: ["ADE", "ASM", "DFU", "Reset", "Activation Lock", "Remote Management"]
+
 ---
 
 **No. This will only result in the loss of all local data, and the device will be forcibly re-locked into the school's MDM during setup.** Students often mistakenly believe that MDM is just an app that can be wiped by "formatting" the device. In reality, management is tied to the **Hardware Serial Number** and **Cloud Activation Servers**, not just local software.
@@ -357,17 +366,18 @@ Once the Apple server confirms the serial number belongs to the school via **App
 - **Data Disaster**: Restoring a device is almost always an irreversible operation for local data. Students will likely **permanently lose** unsynced photos, Goodnotes, and homework.
 - **Administrative Burden**: When a student fails a restore attempt, they ultimately have to return the bricked device to the IT staff, who must then spend time restoring it in DFU mode and re-enrolling it for classroom use.
 
-
----
-File: dl-11.md
 ---
 
+## File: dl-11.md
+
 ---
+
 id: dl-11
 title: "How do I transfer 'Digital Initiative' iPads from graduating students to new students?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: false
 tags: ["Graduation", "Asset Transfer", "Return to Service", "Automation"]
+
 ---
 
 **Utilize the 'Return to Service (RTS)' feature to achieve a seamless transition from 'Wipe' to 'Redeploy' without manual Wi-Fi configuration.** Graduation season is a major event for device management. We recommend the following automated workflow:
@@ -391,17 +401,18 @@ tags: ["Graduation", "Asset Transfer", "Return to Service", "Automation"]
 4. **Issuance to New Students**:
    - New students power on the device to see the "Remote Management" screen. They follow the updated PreStage Enrollment settings (e.g., login with student ID) to complete activation.
 
-
----
-File: dl-12.md
 ---
 
+## File: dl-12.md
+
 ---
+
 id: dl-12
 title: "Why can't my device get online even when connected to Wi-Fi, or why is it blocked by the firewall?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: true
 tags: ["Network", "MAC Address", "Private Address", "DHCP", "Troubleshooting"]
+
 ---
 
 **This is usually because the iPad has 'Private Wi-Fi Address' enabled, preventing the school firewall or DHCP server from identifying the device by its hardware MAC address.**
@@ -425,17 +436,18 @@ Administrators should not ask students to adjust this one-by-one. Instead, use J
 
 This setting only applies to Wi-Fi networks deployed via MDM profiles. If a student manually joins a Wi-Fi network, they must still manually go to **Settings > Wi-Fi > (i) Icon** to disable the Private Address.
 
-
----
-File: dl-13.md
 ---
 
+## File: dl-13.md
+
 ---
+
 id: dl-13
 title: "How do I prevent students from signing into personal Apple Accounts and installing non-educational apps?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: false
 tags: ["Apple Account", "App Store", "Restrictions", "Asset Policy"]
+
 ---
 
 **This is a fundamental control for school-owned deployments. To avoid app ownership confusion and privacy risks, you must use a 'Restrictions' profile to lock account settings and App Store access.** School-issued devices are public assets and should not allow personal account usage.
@@ -452,17 +464,18 @@ tags: ["Apple Account", "App Store", "Restrictions", "Asset Policy"]
    - **Result**: The App Store icon will disappear from the Home Screen entirely.
    - **Management**: All apps should be pushed via the MDM using **Volume Purchase (VPP)** with Device-based Assignment.
 
-
----
-File: dl-14.md
 ---
 
+## File: dl-14.md
+
 ---
+
 id: dl-14
 title: "Students keep changing their iPad names, making it hard to track assets. How can I fix this?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: false
 tags: ["Device Naming", "Asset Management", "The MUT", "Batch Update"]
+
 ---
 
 **This is a common classroom management headache. Beyond 'Blocking Changes,' you need a 'Batch Renaming' tool to quickly correct your entire fleet.**
@@ -495,17 +508,18 @@ Enable **Enforce Mobile Device Name** in your smart groups or device records in 
 
 For future deployments, define your naming convention (e.g., `Class-2026-%SERIALNUMBER%`) directly within the **PreStage Enrollment** settings. New devices will be named automatically upon activation without any manual effort.
 
-
----
-File: dl-15.md
 ---
 
+## File: dl-15.md
+
 ---
+
 id: dl-15
 title: "Updating all iPads at once crashes our school network. What is the standard solution? (Content Caching)"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: false
 tags: ["Content Caching", "Bandwidth Optimization", "VLAN", "mDNS Relay"]
+
 ---
 
 **For schools with high-density Wi-Fi, deploying macOS 'Content Caching' is key to solving bandwidth bottlenecks. However, you must address cross-VLAN communication hurdles.** By using an existing Mac (e.g., a teacher's Mac mini or a lab iMac) as a cache server, only the first iPad downloads the update from Apple; all subsequent devices fetch the file locally via the LAN at high speed.
@@ -544,17 +558,18 @@ Open **Activity Monitor** on the Mac and press `Command + 2` to see the **Cache*
 
 Ensure the Mac is set to **Prevent the computer from sleeping automatically when the display is off**. If the Mac sleeps, the cache service stops, and iPads will revert to the external internet, crashing your bandwidth.
 
-
----
-File: dl-16.md
 ---
 
+## File: dl-16.md
+
 ---
+
 id: dl-16
 title: "MOE Jamf Pro accounts can't use 'Scheduled Updates'. How do I increase update success rates?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: false
 tags: ["Software Update", "Jamf Pro", "Permissions", "Inventory"]
+
 ---
 
 **Because the MOE Jamf Pro environment uses 'legacy' update commands, the key to success is 'Verifying Connectivity' before sending the update.** Many failures occur because devices are "unmanaged" (e.g., Wi-Fi disconnected or long-term sleep). Sending an OS update command to an unresponsive device is futile.
@@ -587,17 +602,18 @@ Use the fresh inventory data to filter for a "Ready to Update" group:
 
 If the school lacks a **Content Caching** server, send updates in batches (e.g., one class at a time) to avoid crashing the school's external bandwidth.
 
-
----
-File: dl-17.md
 ---
 
+## File: dl-17.md
+
 ---
+
 id: dl-17
 title: "How do I set a unify school wallpaper and prevent students from changing it?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: false
 tags: ["Wallpaper", "Lock Screen", "Restrictions", "Automated Management"]
+
 ---
 
 **This is a common requirement for asset branding. We recommend using 'Automated Management' to set the image and 'Restrictions' to lock the permission.**
@@ -629,17 +645,18 @@ Instead of editing every image, use the **Lock Screen Message** payload.
 - **Setting**: Use Jamf variables like `Owned by: $DEVICENAME` or `Asset: $ASSET_TAG`.
 - **Effect**: This dynamic text appears at the bottom of the Lock Screen, making physical audits much easier.
 
-
----
-File: dl-18.md
 ---
 
+## File: dl-18.md
+
 ---
+
 id: dl-18
 title: "A student forgot their iPad passcode. Do I have to factory reset the whole device?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: false
 tags: ["Passcode", "Unlock", "Clear Passcode", "Troubleshooting"]
+
 ---
 
 **No. MDM provides a 'Clear Passcode' command that removes the lock while 'Keeping All Data'.**
@@ -669,24 +686,25 @@ If the device is in Airplane Mode or the Wi-Fi is disconnected, the MDM command 
 
 Only if Ethernet and Wi-Fi both fail should you perform a full DFU/Recovery mode reset.
 
-
----
-File: dl-19.md
 ---
 
+## File: dl-19.md
+
 ---
+
 id: dl-19
 title: "Troubleshooting: Apple Classroom keeps losing student connections or showing 'Offline'."
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: false
 tags:
-  [
-    "Apple Classroom",
-    "Classroom Management",
-    "Troubleshooting",
-    "Bluetooth",
-    "mDNS",
-  ]
+[
+"Apple Classroom",
+"Classroom Management",
+"Troubleshooting",
+"Bluetooth",
+"mDNS",
+]
+
 ---
 
 **Apple Classroom is highly dependent on 'Bluetooth Proximity' and 'Peer-to-Peer Interoperability'. If connections fail, follow this three-stage checklist.** As an IT Coordinator, first eliminate front-end environment issues before escalating network-layer problems to higher-level authorities.
@@ -713,25 +731,26 @@ tags:
 
 If connection issues only occur in specific rooms, check if that specific Access Point (AP) is overloaded or has a firmware issue causing packet drops.
 
-
----
-File: dl-20.md
 ---
 
+## File: dl-20.md
+
 ---
+
 id: dl-20
 title: "Maintenance: The Digital Initiative contract ends in 2026. What should I do if iPads fail or die?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: true
 tags:
-  [
-    "Hardware Repair",
-    "No Power",
-    "Charging Issues",
-    "Display Lines",
-    "Wi-Fi Failure",
-    "Replacement Units",
-  ]
+[
+"Hardware Repair",
+"No Power",
+"Charging Issues",
+"Display Lines",
+"Wi-Fi Failure",
+"Replacement Units",
+]
+
 ---
 
 **As the Digital Initiative enters its final contract year, hardware failures will reach their peak. If a device shows no signs of accidental damage, you must report it early to secure a replacement or repair before the contract expires.** After four years of high-intensity classroom use, various internal components in the initial iPad 9 batch are reaching their natural limit. IT Coordinators should audit their fleet for the following:
@@ -764,17 +783,18 @@ tags:
 
 Audit your entire fleet by **Summer 2026**. Once the maintenance contract expires, subsequent repairs will fall back on the school’s independent budget. Ensure all public assets are functional while the protection of the initiative's contract is still in place.
 
-
----
-File: dl-21.md
 ---
 
+## File: dl-21.md
+
 ---
+
 id: dl-21
 title: "How should Digital Initiative iPads be managed after 2026? Should we keep the MDM?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: true
 tags: ["2026", "MDM Management", "Device Maintenance", "Asset Management"]
+
 ---
 
 **Digital Initiative iPads are permanent school assets. We strongly recommend continuing to manage them via MDM to maintain device security, instructional quality, and asset integrity.**
@@ -831,18 +851,19 @@ As the project's strict usage quotas subside, consider a more flexible "Teacher-
 - **Backup Configs**: Export your current Jamf Pro XML/Configuration profiles as a backup.
 - **Monitor unmanaged devices**: Use Smart Groups to catch devices that have been offline for over 60 days, as these are often tucked away in drawers and forgotten.
 
-
----
-File: dl-22.md
 ---
 
+## File: dl-22.md
+
 ---
+
 id: dl-22
 title: "How does the iOS 26 Network Extension URL Filtering API impact school content filters?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: true
 tags:
-  ["Jamf Trust", "URL Filtering", "iOS 26", "Content Filter", "Cybersecurity"]
+["Jamf Trust", "URL Filtering", "iOS 26", "Content Filter", "Cybersecurity"]
+
 ---
 
 **The 'Network Extension URL Filtering API' introduced in iOS 26, iPadOS 26, and macOS 26 is a major technical upgrade for content filtering services. While schools should be aware of this development, project-assigned devices should prioritize following regional guidelines (such as the MOE's DNS Proxy or Content Filter architectures).**
@@ -879,24 +900,25 @@ If you use a service like **Jamf Trust**, the transition to this new API is typi
 - **Testing**: When upgrading a classroom to iOS 26, verify that your regional teaching platforms (educational portals) remain accessible.
 - **Battery Monitoring**: Observe if the newer API reduces "battery drain" complaints from students, as this is a common side effect of older VPN-based filters.
 
-
----
-File: dl-23.md
 ---
 
+## File: dl-23.md
+
 ---
+
 id: dl-23
 title: "Will the iOS 26 'Background Security Improvements' install automatically? Should I leave it on or off?"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: false
 tags:
-  [
-    "Background Security Improvements",
-    "iOS 26",
-    "Security Update",
-    "Automation",
-    "System Update",
-  ]
+[
+"Background Security Improvements",
+"iOS 26",
+"Security Update",
+"Automation",
+"System Update",
+]
+
 ---
 
 **The 'Background Security Improvements' feature in iOS 26 automatically installs critical security patches at appropriate times. We strongly recommend that schools keep this feature ON to ensure devices maintain a baseline of security protection.**
@@ -938,24 +960,25 @@ If your school uses highly customized, proprietary teaching apps that are extrem
 
 Check the status in **Settings > General > Software Update**. If you see a small 'letter' next to the version (e.g., iOS 26.1 (a)), it means a background security patch is active. If a specific app starts behaving strangely after a patch, you can remove a background repair in the "About" section, though this should rarely be necessary.
 
-
----
-File: dl-25.md
 ---
 
+## File: dl-25.md
+
 ---
+
 id: dl-25
 title: "Integration Recommendations for New iPads (M4/A17 Pro) in the Digital Learning Project (2024–2026)"
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: true
 tags:
-  [
-    "Mixed Environment",
-    "M4",
-    "A17 Pro",
-    "Accessory Management",
-    "Charging Cart Planning",
-  ]
+[
+"Mixed Environment",
+"M4",
+"A17 Pro",
+"Accessory Management",
+"Charging Cart Planning",
+]
+
 ---
 
 **Many schools have purchased newer iPad models (e.g., M4 iPad Pro, M2 iPad Air, iPad mini 7) during the project period (2022–2026) due to class expansion, hardware failure, or specific requirements. These newer models have significant hardware differences compared to the base iPad 9 used in the primary project fleet. Mixed management requires attention to accessory compatibility, charging logistics, and MDM configurations.**
@@ -986,24 +1009,25 @@ tags:
 
 When managing a mixed fleet, labeling is your best friend. Use laser engraving or color-coded protective cases to distinguish between "Standard Project iPads" (iPad 9) and "High-Performance Creative iPads" (M-series). This helps teachers quickly identify which students have access to the newer iPadOS 26 pro features.
 
-
----
-File: dl-26.md
 ---
 
+## File: dl-26.md
+
 ---
+
 id: dl-26
 title: "How to use the iOS 26 'Background Security Improvements' to maintain security for project devices."
 category: "Section 5: Digital Initiatives (MOE Project)"
 important: true
 tags:
-  [
-    "iOS 26",
-    "Security Updates",
-    "Automated Management",
-    "Background Security Improvements",
-    "Asset Maintenance",
-  ]
+[
+"iOS 26",
+"Security Updates",
+"Automated Management",
+"Background Security Improvements",
+"Asset Maintenance",
+]
+
 ---
 
 **For network administrators managing a large fleet of project devices, the biggest security risk is 'unpatched systems' due to users ignoring update prompts. iOS 26 introduces the 'Background Security Improvements' framework, allowing critical security patches to be installed automatically without a device reboot or disruption to teaching activities.**
@@ -1028,5 +1052,3 @@ tags:
 ## Practical Tip for Teachers
 
 Explain to students that if they see a small 'letter' next to their iPad version (e.g., iPadOS 26.1 (b)), it means their iPad has automatically protected itself from a security threat overnight while it was charging. This is an excellent opportunity for a brief 'Digital Citizenship' lesson on the importance of staying updated.
-
-

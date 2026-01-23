@@ -8,45 +8,49 @@ import Theme from "vitepress/theme";
 import type { EnhanceAppContext } from "vitepress";
 import "./style.css";
 
-// 匯入知識庫核心應用元件
-import GlossaryApp from "../components/GlossaryApp.vue";
-import IntegratedGuideApp from "../components/IntegratedGuideApp.vue";
-import AppleHome from "../components/AppleHome.vue";
-import BackToTop from "../components/BackToTop.vue";
-import GlobalFooter from "../components/GlobalFooter.vue";
-import ChangelogApp from "../components/ChangelogApp.vue";
+// 匯入知識庫核心應用元件 (Apps)
+import HomeApp from "../components/apps/HomeApp.vue";
+import GuideApp from "../components/apps/GuideApp.vue";
+import GlossaryApp from "../components/apps/GlossaryApp.vue";
+import ChangelogApp from "../components/apps/ChangelogApp.vue";
 
-// 匯入全域佈局增強元件
-import UserCenter from "./components/UserCenter.vue";
-import SecurityGuard from "./components/SecurityGuard.vue";
-import MobileDrawer from "./components/MobileDrawer.vue";
-import EmptyState from "./components/EmptyState.vue";
+// 匯入佈局組件 (Layout)
+import LayoutBackToTop from "../components/layout/LayoutBackToTop.vue";
+import LayoutFooter from "../components/layout/LayoutFooter.vue";
+
+// 匯入功能模組 (Features)
+import UserCenter from "../components/features/UserCenter.vue";
+import SecurityGuard from "../components/features/SecurityGuard.vue";
+import ReportIssue from "../components/features/ReportIssue.vue";
+
+// 匯入 UI 組件 (UI)
+import EmptyState from "../components/ui/EmptyState.vue";
+import LayoutMobileDrawer from "../components/layout/LayoutMobileDrawer.vue";
 
 export default {
   extends: Theme,
   /**
    * 自定義佈局設定
-   * 利用 VitePress 提供的插槽 (Slot) 機制，在不改動核心的情況下注入自定義功能。
    */
   Layout: () => {
     return h(Theme.Layout, null, {
       // 在導覽列右側注入使用者中心與安全性防護元件
       "nav-bar-content-after": () => [h(UserCenter), h(SecurityGuard)],
       // 在頁面最底層掛載全域頁尾與返回頂部按鈕
-      "layout-bottom": () => [h(GlobalFooter), h(BackToTop)],
+      "layout-bottom": () => [h(LayoutFooter), h(LayoutBackToTop)],
     });
   },
   /**
    * 應用程式增強擴充 (Enhance App)
-   * 註冊全域元件，使其能在 Markdown 檔案中直接調用。
    */
   enhanceApp({ app }: EnhanceAppContext) {
+    app.component("HomeApp", HomeApp);
+    app.component("GuideApp", GuideApp);
     app.component("GlossaryApp", GlossaryApp);
-    app.component("IntegratedGuideApp", IntegratedGuideApp);
-    app.component("AppleHome", AppleHome);
-    app.component("GlobalFooter", GlobalFooter);
-    app.component("MobileDrawer", MobileDrawer);
-    app.component("EmptyState", EmptyState);
     app.component("ChangelogApp", ChangelogApp);
+    app.component("LayoutFooter", LayoutFooter);
+    app.component("LayoutMobileDrawer", LayoutMobileDrawer);
+    app.component("EmptyState", EmptyState);
+    app.component("ReportIssue", ReportIssue);
   },
 };

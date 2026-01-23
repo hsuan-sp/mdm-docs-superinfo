@@ -129,11 +129,21 @@ textarea,
   cursor: text;
 }
 
-/* HIDE Default VitePress "Return to Top" link/text on both desktop and mobile */
+/* HIDE Default VitePress "Return to Top" link/text - Aggressive Fix */
 .VPBackToTop,
 .VPLocalNav-top-link,
-.VPLocalNav .top-link {
+.VPLocalNav .top-link,
+.VPLocalNav .outline-link[href="#app"],
+.VPLocalNav-outline-container a[href="#app"],
+a.top-link,
+.return-to-top {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
 }
 
 /* 
@@ -154,10 +164,6 @@ body,
 /* Ensure the sticky sidebar has enough Z-index but stays under Navbar */
 .app-sidebar {
   z-index: 15 !important;
-}
-
-.return-to-top {
-  display: none !important;
 }
 
 /* Feature Cards - Strictly Responsive */
@@ -380,5 +386,22 @@ h1 {
   .VPNavBarTitle .logo {
     display: block !important;
     height: 24px !important;
+  }
+
+  /* Hide Redundant Mobile Menu Items */
+  .VPNavBarMenu,
+  .VPNavBarExtra,
+  .VPNavBarDivider {
+    display: none !important;
+  }
+
+  /* Ensure User Center is visible and pushed to the right */
+  .VPNavBar .content {
+    justify-content: flex-end !important;
+  }
+
+  .user-center {
+    display: flex !important;
+    margin-right: 8px !important;
   }
 }

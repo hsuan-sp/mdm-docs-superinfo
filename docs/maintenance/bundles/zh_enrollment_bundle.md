@@ -1,15 +1,15 @@
-
-
 ---
 File: enr-1.md
 ---
 
 ---
+
 id: enr-1
 title: "新買的 iPad 開機後沒有出現「遠端管理」畫面，該如何確認？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["ADE", "ASM", "註冊失敗", "自動裝置註冊"]
+
 ---
 
 **若開機後直接進入一般個人設定而非「遠端管理」畫面，通常代表 Apple 伺服器尚未將該序號與您的 MDM 伺服器連結。**
@@ -38,17 +38,18 @@ tags: ["ADE", "ASM", "註冊失敗", "自動裝置註冊"]
 - **必須抹除裝置** ：前往「設定」>「一般」>「移轉或重置 iPad」> **「清除所有內容和設定」** 。
 - 重新開機後，在 Wi-Fi 設定完成後請稍候片刻，系統會再次嘗試向 Apple 伺服器抓取「遠端管理」設定檔。
 
-
----
-File: enr-2.md
 ---
 
+## File: enr-2.md
+
 ---
+
 id: enr-2
 title: "可以手動安裝描述檔來註冊嗎？手動與自動註冊有何差別？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["手動註冊", "帳號驅動註冊", "受監管", "Apple Configurator"]
+
 ---
 
 **可以，但手動安裝描述檔（使用者啟動註冊）與自動裝置註冊 (ADE) 在管理權限上有極大差異。**
@@ -80,17 +81,18 @@ tags: ["手動註冊", "帳號驅動註冊", "受監管", "Apple Configurator"]
 
 學校採購的資產應一律要求經銷商匯入 ASM 以執行 **自動裝置註冊 (ADE)** 。手動註冊應僅作為臨時性、短期或私人裝置的權宜方案。
 
-
----
-File: enr-3.md
 ---
 
+## File: enr-3.md
+
 ---
+
 id: enr-3
 title: "什麼是「受監管模式 (Supervised Mode)」？為什麼學校裝置一定要開啟？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["受監管", "權限差異", "Supervised", "ADE"]
+
 ---
 
 **受監管模式 (Supervised Mode) 是 Apple 賦予組織擁有裝置「最高管理權限」的特殊狀態。** 一般個人購買的 iPad 預設為「非受監管」，使用者擁有最高控制權。
@@ -112,17 +114,18 @@ tags: ["受監管", "權限差異", "Supervised", "ADE"]
 若學校 iPad 未開啟受監管模式，學生將能輕易繞過網管、移除描述檔甚至自行重置裝置。
 因此，確保每台裝置都具備 Supervised 屬性是教育部署的第一道防線。
 
-
----
-File: enr-4.md
 ---
 
+## File: enr-4.md
+
 ---
+
 id: enr-4
 title: "「使用者註冊 (User Enrollment)」與一般的裝置註冊有何不同？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["BYOD", "隱私", "註冊模式", "帳號驅動"]
+
 ---
 
 \*\*使用者註冊是 Apple 專為「自帶裝置 (BYOD)」設計的模式，重點在於隔離組織資料並絕對保護使用者個人隱私。
@@ -152,17 +155,18 @@ tags: ["BYOD", "隱私", "註冊模式", "帳號驅動"]
 
 使用者註冊是平衡「資安控管」與「隱私保護」的最佳方案。
 
-
----
-File: enr-5.md
 ---
 
+## File: enr-5.md
+
 ---
+
 id: enr-5
 title: "如何在學校網域環境下，順利進行「帳號驅動註冊」的服務偵測？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["帳號驅動註冊", "服務偵測", ".well-known", "BYOD"]
+
 ---
 
 **帳號驅動註冊 (Account-driven Enrollment) 依賴 Apple 的「服務偵測 (Service Discovery)」機制，** 讓使用者只需輸入管理式 Apple 帳號即可引導註冊。
@@ -195,17 +199,18 @@ tags: ["帳號驅動註冊", "服務偵測", ".well-known", "BYOD"]
 
 1. **預載配置** ：對於學校資產，優先使用 **自動裝置註冊 (ADE)** ，完全不需手動輸入帳號或偵測服務。
 
-
----
-File: enr-6.md
 ---
 
+## File: enr-6.md
+
 ---
+
 id: enr-6
 title: "開機卡在「正在擷取遠端管理設定」轉圈圈很久，該如何排查？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["註冊卡住", "故障排除", "自動裝置註冊", "DDM"]
+
 ---
 
 **這代表裝置在嘗試向 Apple 伺服器獲取 MDM 設定檔時發生通訊延遲或中斷，**通常與網路環境或 MDM 伺服器回應有關。** 「正在擷取遠端管理設定」是 **自動裝置註冊 (ADE)** 的關鍵步驟。
@@ -227,17 +232,18 @@ tags: ["註冊卡住", "故障排除", "自動裝置註冊", "DDM"]
 
 長按電源鍵強制重開機。裝置會重新執行「設定輔助程式」，通常第二次嘗試即可成功。
 
-
----
-File: enr-7.md
 ---
 
+## File: enr-7.md
+
 ---
+
 id: enr-7
 title: "在 PreStage 註冊期間，為什麼「初次安裝 App」會卡在設定輔助程式畫面？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["PreStage 註冊", "App 派送", "自動裝置註冊", "DDM", "故障排除"]
+
 ---
 
 **當您在 PreStage 註冊中設定了「強制安裝 App」，裝置會等待該 App 下載完成才允許進入主畫面。**若網路或 VPP 授權出問題，就會導致卡死。\*\* 這在執行「自動裝置註冊 (ADE)」時極為常見。
@@ -279,17 +285,18 @@ tags: ["PreStage 註冊", "App 派送", "自動裝置註冊", "DDM", "故障排�
 
 - **分流測試** ：在大規模拆箱前，先拿一台裝置走完完整流程，確認 VPP 同步與下載速度正常。
 
-
----
-File: enr-8.md
 ---
 
+## File: enr-8.md
+
 ---
+
 id: enr-8
 title: "註冊時出現「設定描述檔安裝失敗 (Profile Installation Failed)」？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["故障排除", "網路", "宣告式管理", "描述檔"]
+
 ---
 
 **此錯誤通常源於裝置無法與 MDM 伺服器或 Apple 伺服器建立穩定且受信任的安全連線。** 在嘗試註冊（Enrollment）過程中，若出現此提示，請依序排除以下常見成因：
@@ -322,17 +329,18 @@ tags: ["故障排除", "網路", "宣告式管理", "描述檔"]
 
 但在安裝過程可能會因身分衝突而報錯。請確保在重新註冊前已解除啟動鎖定。
 
-
----
-File: enr-9.md
 ---
 
+## File: enr-9.md
+
 ---
+
 id: enr-9
 title: "Jamf Pro 指令一直顯示「擱置中 (Pending)」，但裝置明明有連網？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["指令卡住", "推播通知服務", "APNs", "宣告式管理", "空白推播"]
+
 ---
 
 **「擱置中 (Pending)」表示指令已傳送至 Apple 的伺服器，**但裝置端尚未與伺服器進行 Check-in 聯絡並回報執行狀態。** 在當前的 **宣告式裝置管理 (Declarative Device Management, DDM)\*\* 與傳統 MDM 協定並行的架構下，
@@ -369,17 +377,18 @@ tags: ["指令卡住", "推播通知服務", "APNs", "宣告式管理", "空白�
 若單一裝置頻繁 Pending，通常是個別網路或硬體休眠問題；
 若全校裝置同時 Pending，請優先至 Jamf Pro 檢查 **推播通知服務 (APNs) 憑證** 是否依然在有效期限內。
 
-
----
-File: enr-10.md
 ---
 
+## File: enr-10.md
+
 ---
+
 id: enr-10
 title: "在 Jamf Pro 修改了裝置名稱，為什麼 iPad 本機端仍顯示舊名字？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["重新命名", "名稱同步", "資產預載", "預備註冊", "The MUT"]
+
 ---
 
 **這通常是因為您僅修改了 Jamf Pro 資料庫中的「文字紀錄」，而尚未發送「遠端更名指令」至實體裝置中。**
@@ -418,17 +427,18 @@ tags: ["重新命名", "名稱同步", "資產預載", "預備註冊", "The MUT"
 
 建議管理員在 Jamf Pro 內一律勾選「強制修改裝置名稱」，這能避免學生自行在 iPad 內亂改名稱，確保後台資產清冊與實體裝置永遠保持同步。
 
-
----
-File: enr-11.md
 ---
 
+## File: enr-11.md
+
 ---
+
 id: enr-11
 title: "已開啟「允許刪除 App」，為什麼學生長按仍無法「刪除」App？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["App 管理", "限制描述檔", "螢幕使用時間", "排錯"]
+
 ---
 
 **這通常是「系統權限衝突」或「App 管理屬性」導致的行為。請依序排查以下三個環節：**
@@ -447,17 +457,18 @@ tags: ["App 管理", "限制描述檔", "螢幕使用時間", "排錯"]
 - **同步問題** ：有時裝置在安裝完描述檔後未即時刷新權限，請嘗試發送一個 **「發送空白推播 (Send Blank Push)」** 或 **「更新資產 (Update Inventory)」** 指令。
 - **系統 App 限制** ：請注意，某些 Apple 原生 App（如：設定、App Store、訊息）在任何情況下都無法被刪除，這是系統底層的保護機制。
 
-
----
-File: enr-12.md
 ---
 
+## File: enr-12.md
+
 ---
+
 id: enr-12
 title: "什麼是「共享 iPad (Shared iPad)」？如何讓多位學生共用同一台裝置且保有個人資料？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["共享 iPad", "管理式 Apple 帳號", "PreStage 註冊", "多人使用"]
+
 ---
 
 **「共享 iPad」是 Apple 專為非 1:1 部署環境設計的功能，允許多位學生使用自己的「管理式 Apple 帳號」登入同一台 iPad，並擁有獨立的作業空間。**
@@ -492,17 +503,18 @@ tags: ["共享 iPad", "管理式 Apple 帳號", "PreStage 註冊", "多人使用
 
 共享 iPad 非常依賴穩定且高速的校園 Wi-Fi。建議在部署前，先針對預計共用的人數進行「初次登入測試」，確認下載資料的速度是否符合教學流程需求。
 
-
----
-File: enr-13.md
 ---
 
+## File: enr-13.md
+
 ---
+
 id: enr-13
 title: "如何防止學生自行移除 MDM 管理描述檔？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["防止取消註冊", "受監管", "PreStage 註冊", "ADE", "返回服務"]
+
 ---
 
 **要徹底防止學生移除管理，核心在於透過「自動裝置註冊 (ADE)」流程，並在「PreStage 註冊」中啟用強制鎖定功能。**
@@ -528,17 +540,18 @@ tags: ["防止取消註冊", "受監管", "PreStage 註冊", "ADE", "返回服�
 - **不可溯及既往** ：若裝置目前「已經」被學生移除描述檔，您無法遠端補救。必須將裝置重置（Wipe），讓其重新走一遍具備「防止取消註冊」設定的 PreStage 流程。
 - **版本限制** ：針對最新的系統環境，建議在 PreStage 中設定 **「所需的最低 iPadOS 版本」** (如 iPadOS 17.0 或更高)，以確保「返回服務」與最新的「啟用鎖定」防護機制能正常運作。
 
-
----
-File: enr-14.md
 ---
 
+## File: enr-14.md
+
 ---
+
 id: enr-14
 title: "如何讓 iPad 重置後自動連上 Wi-Fi 並完成註冊 (Return to Service)？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["自動化", "Wi-Fi", "Return to Service", "無人值守"]
+
 ---
 
 **Return to Service 是 Apple 於 iOS 17 引入的一項指令功能，可讓裝置在執行抹除後，自動跳過初始設定畫面連線並重新註冊。**
@@ -570,17 +583,18 @@ tags: ["自動化", "Wi-Fi", "Return to Service", "無人值守"]
 - **處理時長** ：從發送指令到裝置回到主畫面，通常需要 5 至 10 分鐘，視網路下載設定檔與 App 的速度而定。
 - **資料保存** ：此功能本質上仍會抹除整台裝置的內容，僅是在註冊流程上達成「無人值守」。若裝置上有尚未上傳雲端的教學資料，執行前需評估資料遺失風險。
 
-
----
-File: enr-15.md
 ---
 
+## File: enr-15.md
+
 ---
+
 id: enr-15
 title: "iPad 顯示「無法使用」或因密碼輸入錯誤太多次鎖死，該如何處理？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["密碼鎖死", "還原", "Apple Configurator", "Apple 裝置 App", "DFU"]
+
 ---
 
 **當裝置顯示「iPad 無法使用」或「安全性鎖定」時，必須透過清除裝置 (Erase) 才能重新使用。若裝置受 MDM 管理，可依連網狀態選擇不同的處理方案。**
@@ -618,17 +632,18 @@ tags: ["密碼鎖死", "還原", "Apple Configurator", "Apple 裝置 App", "DFU"
 - **資料遺失** ：除非先前有開啟 iCloud 自動備份，否則清除後資料將無法找回。
 - **啟動鎖定 (Activation Lock)** ：若裝置曾登入個人帳號並開啟「尋找」，還原後會要求輸入該帳號密碼。若是學校資產，管理員可嘗試透過 ASM 或 MDM 發送解鎖代碼。
 
-
----
-File: enr-16.md
 ---
 
+## File: enr-16.md
+
 ---
+
 id: enr-16
 title: "裝置顯示「描述檔無效」或運作異常緩慢，即使重置也無法解決？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["描述檔無效", "故障排除", "抹除裝置", "宣告式管理"]
+
 ---
 
 **「描述檔無效」通常代表裝置與 MDM 伺服器間的身分信任鏈（Trust Anchor）已中斷，這會導致指令與設定無法正確下達。**
@@ -653,17 +668,18 @@ tags: ["描述檔無效", "故障排除", "抹除裝置", "宣告式管理"]
 - **硬體限制** ：若裝置硬體老舊且安裝了過於臃腫的設定檔或 App，也會造成反應遲緩。
 - **解決建議** ：在裝置重新註冊前，先在 Jamf Pro 清除該序號的所有指令紀錄（Cancel Pending/Failed Commands）。
 
-
----
-File: enr-17.md
 ---
 
+## File: enr-17.md
+
 ---
+
 id: enr-17
 title: "裝置被「啟動鎖定 (Activation Lock)」鎖住了，該如何解除？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["啟用鎖定", "Activation Lock", "解鎖代碼", "Apple 裝置 App"]
+
 ---
 
 **啟動鎖定是 Apple 的資安防護機制，若您擁有該裝置的所有權，可透過多種技術途徑解除鎖定。**
@@ -699,17 +715,18 @@ tags: ["啟用鎖定", "Activation Lock", "解鎖代碼", "Apple 裝置 App"]
 
 在 Jamf Pro 的 PreStage 註冊 設定中，應預設開啟 **「防止啟動鎖定」** 功能，這能確保裝置在被清除時不會自動進入鎖定狀態，減少行政處理負擔。
 
-
----
-File: enr-18.md
 ---
 
+## File: enr-18.md
+
 ---
+
 id: enr-18
 title: "ASM 現在可以直接解除啟用鎖定嗎？還需要聯絡 Apple 客服嗎？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["啟用鎖定", "ASM", "自動裝置註冊", "解鎖"]
+
 ---
 
 **是的。只要裝置歸屬於您的組織，現在已經可以直接透過 Apple 校務管理 (ASM) 介面自助解除鎖定，無需再撥打客服電話提供發票。**
@@ -740,17 +757,18 @@ tags: ["啟用鎖定", "ASM", "自動裝置註冊", "解鎖"]
 
 若解鎖後需要重新安裝系統，Windows 使用者請使用 **「Apple 裝置 App (Apple Devices app)」** ，Mac 使用者請使用 **Finder** 或 **Apple Configurator** 進行還原。還原完成後，原本的啟動鎖定將不復存在。
 
-
----
-File: enr-19.md
 ---
 
+## File: enr-19.md
+
 ---
+
 id: enr-19
 title: "【Mac 啟動鎖定】Mac 電腦維修回來後被鎖住，該如何徹底解決？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["Mac 安全", "啟動鎖定", "Apple 晶片", "Apple Configurator", "維修風險"]
+
 ---
 
 **可以。配備 Apple 晶片（M1 至 M4 系列等）或 Apple T2 安全晶片的 Mac，其啟動鎖定管理完全整合於 Apple 校務管理 (ASM) 中。**
@@ -793,17 +811,18 @@ tags: ["Mac 安全", "啟動鎖定", "Apple 晶片", "Apple Configurator", "維�
 
 維修驗收時，請務必先確認序號是否已正確指派至您的 MDM。若發現序號無法手動加入且被第三方鎖定，應拒絕驗收該維修件，避免資產管理的漏洞。
 
-
----
-File: enr-20.md
 ---
 
+## File: enr-20.md
+
 ---
+
 id: enr-20
 title: "【維修 SOP】廠商繳回資訊組來的維修替換機，如何快速恢復原本的教學設定？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["維修", "裝置替換", "ADE", "自動裝置註冊"]
+
 ---
 
 **維修替換機（Service Replacement）擁有全新的序號。要讓新機自動載入設定，核心在於「序號轉移」與「自動裝置註冊 (ADE)」。**
@@ -838,17 +857,18 @@ tags: ["維修", "裝置替換", "ADE", "自動裝置註冊"]
 - **找不到新序號** ：若維修回來的機器在 ASM 找不到，請聯繫原維修廠商，要求其將維修交換紀錄（Case Number）上傳至 Apple 的教育資產系統。
 - **卡在啟動鎖定** ：若新機開機要求輸入 Apple 帳號，請聯繫廠商，這通常是維修流程中未清理乾淨的殘留，或請嘗試使用 ASM 的「關閉啟動鎖定」功能。
 
-
----
-File: enr-21.md
 ---
 
+## File: enr-21.md
+
 ---
+
 id: enr-21
 title: "購買的機器沒有出現在 ASM 中，可以用 Apple Configurator 手動加入嗎？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: false
 tags: ["Apple Configurator", "手動加入 ASM", "過渡期"]
+
 ---
 
 **可以。對於非透過教育授權經銷商管道購買的裝置，可以使用 Apple Configurator 將其手動納入 Apple 校務管理 (ASM) 組織。**
@@ -875,17 +895,18 @@ tags: ["Apple Configurator", "手動加入 ASM", "過渡期"]
 - **Windows 平台限制** ：Windows 版的 **「Apple 裝置 App」** 僅能執行回復與備份， **無法** 將裝置手動加入 ASM 組織。若學校無 Mac 裝置，建議與維修廠商或具備 Mac 的單位協作處理。
 - **釋出風險** ：手動加入的裝置一旦從 ASM 中「釋出 (Release)」，只能再次透過 Apple Configurator 重新手動加入，無法自動找回。
 
-
----
-File: enr-22.md
 ---
 
+## File: enr-22.md
+
 ---
+
 id: enr-22
 title: "【Wi-Fi 遷移】學校要更換新的無線網路 SSID，如何確保 iPad 不會集體失聯？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["Wi-Fi 遷移", "SSID", "災難預防", "網路設定"]
+
 ---
 
 **這是最容易導致「大規模集體失聯」的維護操作。請務必遵守「新舊並行」原則，絕對不可在確認新網路通順前刪除舊設定。**
@@ -912,17 +933,18 @@ tags: ["Wi-Fi 遷移", "SSID", "災難預防", "網路設定"]
 
 在進行大規模網路變動前，建議先在一個「實驗班級」進行完整流程測試，確認無誤後再推行至全校。
 
-
----
-File: enr-23.md
 ---
 
+## File: enr-23.md
+
 ---
+
 id: enr-23
 title: "什麼是「零抹除 MDM 遷移」(Zero-Wipe MDM Migration)？iOS 26 新功能適合學校使用嗎？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["MDM 遷移", "零抹除", "iOS 26", "macOS 26", "風險評估"]
+
 ---
 
 **iOS 26、iPadOS 26 與 macOS 26 支援零抹除 MDM 遷移，可在不重置裝置的情況下更換 MDM 系統。但教育環境建議優先評估使用 Return to Service，以確保裝置處於乾淨狀態。**
@@ -1019,17 +1041,18 @@ tags: ["MDM 遷移", "零抹除", "iOS 26", "macOS 26", "風險評估"]
 3.  確認 Wi-Fi 描述檔已正確設定。
 4.  利用 iOS 26 的 App 保留功能，減少重新部署時間。
 
-
----
-File: enr-24.md
 ---
 
+## File: enr-24.md
+
 ---
+
 id: enr-24
 title: "如何設定「強制執行截止日期」(Enforcement Deadline) 確保裝置按時完成 MDM 註冊或系統更新？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["Enforcement Deadline", "DDM", "強制執行", "截止日期", "合規"]
+
 ---
 
 **透過宣告式裝置管理 (DDM) 設定強制執行截止日期，裝置會自主評估並在截止時移除「稍後」選項，自動執行更新或註冊。**
@@ -1084,17 +1107,18 @@ tags: ["Enforcement Deadline", "DDM", "強制執行", "截止日期", "合規"]
 - 裝置執行強制更新或註冊。
 - 確保所有裝置在指定時間前符合合規要求。
 
-
----
-File: enr-25.md
 ---
 
+## File: enr-25.md
+
 ---
+
 id: enr-25
 title: "PreStage 註冊時可以跳過哪些「設定輔助程式」步驟？教育場域的建議設定為何？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["PreStage", "設定輔助程式", "ADE", "部署加速", "最佳實務"]
+
 ---
 
 **PreStage Enrollment 可跳過多項設定輔助程式步驟。教育環境建議跳過大部分非必要步驟，以加速部署並減少學生誤操作。**
@@ -1206,17 +1230,18 @@ tags: ["PreStage", "設定輔助程式", "ADE", "部署加速", "最佳實務"]
 - 讓使用者保有個人化選項
 - 僅跳過明確不需要的項目
 
-
----
-File: enr-26.md
 ---
 
+## File: enr-26.md
+
 ---
+
 id: enr-26
 title: "iOS 26 的「Return to Service 保留 App」功能如何運作？實際效益為何？"
 category: "第二部分：裝置註冊與部署 (Device Enrollment)"
 important: true
 tags: ["Return to Service", "iOS 26", "共享 iPad", "App 保留", "快速部署"]
+
 ---
 
 **iOS 26、iPadOS 26 與 visionOS 26 的 Return to Service 可選擇保留 Managed App 的程式本體（Preserve Managed Apps），在清除使用者資料的同時，省去重新下載 GB 級教學 App 的巨大時間成本與網路頻寬壓力。**
@@ -1349,19 +1374,18 @@ tags: ["Return to Service", "iOS 26", "共享 iPad", "App 保留", "快速部署
 - 可在課間休息時間快速完成
 - 不影響其他教學活動的網路使用
 
-
----
-File: enr-27.md
 ---
 
+## File: enr-27.md
+
 ---
+
 id: enr-27
 title: "iOS 26 的「零抹除 MDM 遷移」實戰：從教育部 Jamf Pro 轉移至校內自建 MDM 的完整流程"
 category: "第二部分：裝置註冊與自動部署 (Enrollment)"
 important: true
 tags: ["iOS 26", "MDM 遷移", "Zero-Wipe", "資產轉移", "Jamf Pro"]
+
 ---
 
 **隨著精進方案合約進入轉型期，不少學校希望將原本由教育部託管的 Jamf Pro 裝置轉移至校內自建的 MDM 伺服器。**在 iOS 26 (Tahoe) 以前，跨 MDM 轉移必須「抹除所有資料」並重新開機，這對存有大量學生學習歷程的裝置來說是巨大負擔。**iOS 26 引進了革命性的「零抹除 MDM 遷移 (Zero-Wipe MDM Migration)」功能，讓管理權限能平順交接。**
-
-

@@ -31,7 +31,7 @@ export function useKeyboardShortcuts(options: ShortcutOptions = {}) {
       }
 
       const searchInput = document.querySelector(
-        searchInputSelector,
+        searchInputSelector
       ) as HTMLInputElement;
       searchInput?.focus();
     }

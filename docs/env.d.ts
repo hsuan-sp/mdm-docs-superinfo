@@ -1,24 +1,24 @@
 /// <reference types="vite/client" />
 
-declare module '*.vue' {
-  import type { DefineComponent } from 'vue'
-  const component: DefineComponent<{}, {}, any>
-  export default component
+declare module "*.vue" {
+  import type { DefineComponent } from "vue";
+  const component: DefineComponent<{}, {}, any>;
+  export default component;
 }
 
-declare module '*.data.ts' {
-  const data: any
-  export default data
+declare module "*.data.ts" {
+  const data: any;
+  export default data;
 }
 
 // Volar JSX support
-import type { VNode } from 'vue'
+import type { VNode } from "vue";
 
 declare global {
   namespace JSX {
-    interface Element extends VNode { }
+    interface Element extends VNode {}
     interface IntrinsicElements {
-      [elem: string]: any
+      [elem: string]: any;
     }
   }
 }

@@ -1,12 +1,12 @@
-
-
 ---
 File: enrollment-invitation.md
 ---
 
 ---
+
 term: "Enrollment Invitation"
 category: ["Jamf", "Enrollment"]
+
 ---
 
 ## 術語定義
@@ -26,14 +26,15 @@ category: ["Jamf", "Enrollment"]
 - **好處** ：你可以連公司的 Wi-Fi、下載公司的付費 App。
 - **隱私** ：公司只能管理它給你的東西， **看不到** 你手機裡原本的照片、LINE 訊息或私人 App。
 
-
----
-File: esim.md
 ---
 
+## File: esim.md
+
 ---
+
 term: "eSIM"
 category: ["Hardware"]
+
 ---
 
 ## 術語定義
@@ -54,14 +55,15 @@ category: ["Hardware"]
 
 現在就像下載 App 一樣簡單，只要掃個條碼或收到 MDM 的指令，手機就自動寫入了 Sim 卡資料，馬上就能上網，完全不用動手拔插卡片。
 
-
----
-File: ethernet.md
 ---
 
+## File: ethernet.md
+
 ---
+
 term: "Ethernet（乙太網路）"
 category: ["Network"]
+
 ---
 
 ## 術語定義
@@ -82,14 +84,15 @@ category: ["Network"]
 - **Wi-Fi** 就像在 **公路上開車** ：人多的時候會塞車（頻寬擁擠），開到地下室收訊會不好（訊號死角）。
 - **Ethernet** 就像 **鋪設專門軌道** ：這是一條專線，只有你在用，速度最快、最穩定，而且絕對不會斷線。
 
-
----
-File: extension-attribute.md
 ---
 
+## File: extension-attribute.md
+
 ---
+
 term: "Extension Attribute (擴充屬性)"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -112,14 +115,15 @@ category: ["Core"]
 
 Extension Attribute 讓你可以在問卷下面的空白處 **自己加題目** ，例如：「你有沒有偷打電動？」、「你昨天幾點睡覺？」。這樣老師（管理員）就能掌握更細節、更個人化的學生狀況。
 
-
----
-File: face-id.md
 ---
 
+## File: face-id.md
+
 ---
+
 term: "Face ID"
 category: ["Hardware"]
+
 ---
 
 ## 術語定義
@@ -140,14 +144,15 @@ category: ["Hardware"]
 
 就算有人拿著你的高畫質照片，甚至是精細的 3D 面具放在鏡頭前，因為「深度」資訊不對，絕對騙不過系統。這確保了只有 **真正的你** 才能解鎖裝置。
 
-
----
-File: federated-authentication.md
 ---
 
+## File: federated-authentication.md
+
 ---
+
 term: "Federated Authentication (聯合驗證)"
 category: ["Apple"]
+
 ---
 
 ## 術語定義
@@ -168,14 +173,15 @@ category: ["Apple"]
 
 透過聯合驗證，你在學校 iPad 上登入時，用的是你原本那組學校信箱和密碼。如果你在學校辦公室改了密碼，iPad 上的登入密碼也會自動跟著變。就像一把鑰匙可以開所有的門，不用口袋裡塞滿一大堆不同的鑰匙。
 
-
----
-File: filevault-unlock-over-ssh.md
 ---
 
+## File: filevault-unlock-over-ssh.md
+
 ---
+
 term: "FileVault Unlock over SSH (透過 SSH 解鎖 FileVault)"
 category: ["Mac"]
+
 ---
 
 ## 術語定義
@@ -192,14 +198,15 @@ category: ["Mac"]
 
 現在有了 SSH 解鎖，就像擁有 **「經認證的遠端遙控器」** 。只要電腦有插電上網，IT 人員就可以坐在辦公室裡，安全地幫你把保險箱打開，不用為了打個密碼特地跑一大趟。
 
-
----
-File: filevault.md
 ---
 
+## File: filevault.md
+
 ---
+
 term: "FileVault"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -220,14 +227,15 @@ category: ["Security"]
 
 開啟 FileVault 後，整顆硬碟的資料都被打亂成亂碼。沒有那把特定的鑰匙（密碼），那顆硬碟對小偷來說就只是一塊 **廢鐵** ，完全讀不出任何有意義的內容。
 
-
----
-File: find-my.md
 ---
 
+## File: find-my.md
+
 ---
+
 term: "Find My（尋找）"
 category: ["Apple", "Security"]
+
 ---
 
 ## 術語定義
@@ -248,14 +256,15 @@ category: ["Apple", "Security"]
 
 甚至可以讓它發出 **高分貝警報聲** （即使原本是靜音），並在螢幕上顯示「這是學校財產」的大字。如果真的找不回來，還能按一下按鈕啟動 **「自毀程序」** ，把內部資料全部刪光光。
 
-
----
-File: firmware-password.md
 ---
 
+## File: firmware-password.md
+
 ---
+
 term: "Firmware Password"
 category: ["macOS"]
+
 ---
 
 ## 術語定義
@@ -276,14 +285,15 @@ category: ["macOS"]
 
 韌體密碼則是直接鎖住 **「引擎發動」** 的機制。沒有這把鑰匙，就算小偷打破車窗進來，這台車也發動不了（無法開機重灌），對小偷來說整台車就跟廢鐵一樣沒有價值。
 
-
----
-File: firmware.md
 ---
 
+## File: firmware.md
+
 ---
+
 term: "Firmware"
 category: ["Hardware"]
+
 ---
 
 ## 術語定義
@@ -304,14 +314,15 @@ category: ["Hardware"]
 
 它指揮螢幕該怎麼亮、風扇該轉多快、電池該怎麼充。如果這個最深層的「本能」壞了，電腦連怎麼醒過來（開機）都不知道。
 
-
----
-File: gatekeeper.md
 ---
 
+## File: gatekeeper.md
+
 ---
+
 term: "Gatekeeper"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -334,14 +345,15 @@ category: ["Security"]
 
 如果是來路不明的偷渡客，或是簽證被偽造的程式，海關會直接將其擋在門外，拒絕放行。這能有效防止你誤裝病毒或木馬程式。
 
-
----
-File: global-proxy.md
 ---
 
+## File: global-proxy.md
+
 ---
+
 term: "Global Proxy"
 category: ["Network"]
+
 ---
 
 ## 術語定義
@@ -364,14 +376,15 @@ category: ["Network"]
 
 雖然這樣可以有效攔截「違禁品」（如色情網站），但也因為每台車都要停下來檢查，很容易在尖峰時刻造成 **「大塞車」** （網速變慢）。
 
-
----
-File: guided-access.md
 ---
 
+## File: guided-access.md
+
 ---
+
 term: "Guided Access（引導使用模式）"
 category: ["Education", "Apple"]
+
 ---
 
 ## 術語定義
@@ -393,14 +406,15 @@ category: ["Education", "Apple"]
 
 學生想偷看筆記？沒辦法跳出 App。想亂按設定？按鍵沒反應。想玩遊戲？連切換畫面都做不到。直到考完試老師輸入密碼解鎖，這台 iPad 才能恢復自由。
 
-
----
-File: handoff.md
 ---
 
+## File: handoff.md
+
 ---
+
 term: "Handoff（接力）"
 category: ["Apple"]
+
 ---
 
 ## 術語定義
@@ -421,14 +435,15 @@ category: ["Apple"]
 
 你不需要把檔案存檔、不需要寄給自己，工作內容就像接力棒一樣， **「咻」** 一聲直接跳到大螢幕上讓你繼續跑，完全不用停下來。
 
-
----
-File: ibeacon.md
 ---
 
+## File: ibeacon.md
+
 ---
+
 term: "iBeacon"
 category: ["Hardware"]
+
 ---
 
 ## 術語定義
@@ -449,14 +464,15 @@ category: ["Hardware"]
 
 它會自動告訴 iPad：「你現在在音樂教室，請把音量轉小並打開樂譜 App。」讓科技能根據學生的 **實際位置** 做出聰明的反應。
 
-
----
-File: icloud-backup-icloud.md
 ---
 
+## File: icloud-backup-icloud.md
+
 ---
+
 term: "iCloud Backup（iCloud 備份）"
 category: ["Core", "Apple"]
+
 ---
 
 ## 術語定義
@@ -479,14 +495,15 @@ category: ["Core", "Apple"]
 
 萬一第二天 iPad 摔壞了，IT 只要給學生一台新機器，登入後，所有的 **「數位人生」** 都會原封不動地回來，就像什麼意外都沒發生過一樣。
 
-
----
-File: identity-provider-idp.md
 ---
 
+## File: identity-provider-idp.md
+
 ---
+
 term: "Identity Provider (IdP)"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -508,14 +525,15 @@ category: ["Security"]
 
 當有人要登入時，它們只要打電話問 IdP：「這個人真的是王小明嗎？」一旦 IdP 確認身分並蓋章（驗證通過），大門就打開了。這讓學生只需要一把 **「萬用鑰匙」** 就能通行無阻。
 
-
----
-File: imei.md
 ---
 
+## File: imei.md
+
 ---
+
 term: "IMEI"
 category: ["Hardware"]
+
 ---
 
 ## 術語定義
@@ -536,14 +554,15 @@ category: ["Hardware"]
 
 如果學校的 4G iPad 被偷了，只要把這串號碼交給電信警察，就能通令所有電信公司封殺這台機器。這台 iPad 就算被小偷換了新的 SIM 卡，也因為「身分不乾淨」而被拒絕上網，變成一塊無法通話的磚頭。
 
-
----
-File: install-application.md
 ---
 
+## File: install-application.md
+
 ---
+
 term: "Install Application"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -568,14 +587,15 @@ category: ["Core"]
 
 老師只需要在系統上開出一張清單（發送指令），所有 iPad 收到後，就會自己跑去 **「數位圖書館」** （App Store）把上課要用的工具通通領回來裝好。
 
-
----
-File: install-later.md
 ---
 
+## File: install-later.md
+
 ---
+
 term: "Install Later"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -598,14 +618,15 @@ IT 部門先把 **「建材」** （更新檔）偷偷搬到工地（iPad）旁�
 
 等到學生放學回家、睡覺了， **「施工隊」** （安裝程序）才進場敲敲打打（重開機更新）。第二天早上學生上學時，教室（系統）已經翻修一新，隨時可以用。
 
-
----
-File: intel-mac-end-of-support-milestone.md
 ---
 
+## File: intel-mac-end-of-support-milestone.md
+
 ---
+
 term: "Intel Mac End-of-Support Milestone (Intel Mac 支援終止里程碑)"
 category: ["Mac"]
+
 ---
 
 ## 術語定義
@@ -624,14 +645,15 @@ category: ["Mac"]
 
 對學校的預算編列而言，這意味著教室裡現有的 Intel Mac 已進入「退役倒數階段」，建議儘早規劃汰換，以免設備因無法更新而變得緩慢且暴露於資安風險中。
 
-
----
-File: intelligent-hub.md
 ---
 
+## File: intelligent-hub.md
+
 ---
+
 term: "Intelligent Hub"
 category: ["Apps"]
+
 ---
 
 ## 術語定義
@@ -653,14 +675,15 @@ category: ["Apps"]
 
 有問題或有公告時，學校也會直接貼在這裡通知你，就像是數位版的班級公佈欄。
 
-
----
-File: inventory-collection.md
 ---
 
+## File: inventory-collection.md
+
 ---
+
 term: "Inventory Collection"
 category: ["Jamf", "Core"]
+
 ---
 
 ## 術語定義
@@ -683,14 +706,15 @@ Jamf Pro 預設每天會自動執行一次，收集的資料包括：
 
 醫生（IT 管理員）看這份報告就知道哪台 iPad 需要照顧，不用每天親自跑去摸每一台機器。
 
-
----
-File: inventory.md
 ---
 
+## File: inventory.md
+
 ---
+
 term: "Inventory"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -715,14 +739,15 @@ category: ["Core"]
 
 MDM 就像是一個超強的戶政系統，隨時更新這些資料，讓管理員坐在辦公室就能掌握數千台裝置的現況。
 
-
----
-File: ip-address-ip.md
 ---
 
+## File: ip-address-ip.md
+
 ---
+
 term: "IP Address (IP 位址)"
 category: ["Network"]
+
 ---
 
 ## 術語定義
@@ -745,14 +770,15 @@ MDM 伺服器依賴準確的 IP 位址來與裝置通訊及記錄連線來源。
 
 有些地址是 **「自購豪宅」** （固定 IP），永遠都是你的，朋友隨時找得到；有些像是 **「旅館房間」** （動態 IP），你入住時給你一個號碼，退房後這個號碼就會換給別人用。
 
-
----
-File: ipaas.md
 ---
 
+## File: ipaas.md
+
 ---
+
 term: "iPaaS"
 category: ["Other"]
+
 ---
 
 ## 術語定義
@@ -773,14 +799,15 @@ category: ["Other"]
 
 iPaaS 就像一箇中間人，這邊聽懂點名系統的話，那邊翻譯給資產系統聽，讓資料可以自動流動，不用老師這頭打完字，那頭又要再打一次。
 
-
----
-File: iphone-mirroring-iphone.md
 ---
 
+## File: iphone-mirroring-iphone.md
+
 ---
+
 term: "iPhone Mirroring (iPhone 鏡像)"
 category: ["macOS", "Security"]
+
 ---
 
 ## 術語定義
@@ -801,14 +828,15 @@ category: ["macOS", "Security"]
 
 但在學校的公用電腦上，這就像是開了一個 **「隱形後門」** ，學校的監控軟體可能看不到你在這個小視窗裡做什麼（例如玩手遊或傳紙條），所以 IT 部門通常會把這個後門鎖起來。
 
-
----
-File: jamf-aad.md
 ---
 
+## File: jamf-aad.md
+
 ---
+
 term: "JamfAAD"
 category: ["Jamf", "Security"]
+
 ---
 
 ## 術語定義
@@ -819,14 +847,15 @@ JamfAAD 是 Jamf Pro 內建於 macOS 的背景執行程序，專門負責處理�
 
 這是專門跟微軟溝通的「外交官」。當你要開 Word 或 Excel 登入公司帳號時，微軟警衛會攔住你。這時 JamfAAD 會出面遞交國書（合規證明），跟微軟警衛說：「放心，這台電腦很安全，是我們管的」，微軟才會放行。
 
-
----
-File: jamf-binary.md
 ---
 
+## File: jamf-binary.md
+
 ---
+
 term: "Jamf binary"
 category: ["Jamf", "macOS"]
+
 ---
 
 ## 術語定義
@@ -849,14 +878,15 @@ category: ["Jamf", "macOS"]
 
 MDM 伺服器雖然是 **「總指揮」** ，但很多粗活（像是搬運軟體、修理設定、打掃環境）需要有人在現場親自動手。 **Jamf Binary** 就是這位工頭，他默默地在電腦背景工作，確保總部的命令被確實執行。沒有他，學校就無法遠端幫你修復複雜的電腦問題。
 
-
----
-File: jamf-connect.md
 ---
 
+## File: jamf-connect.md
+
 ---
+
 term: "Jamf Connect"
 category: ["Jamf", "Security", "macOS"]
+
 ---
 
 ## 術語定義
@@ -878,14 +908,15 @@ category: ["Jamf", "Security", "macOS"]
 
 就像 **「萬能鑰匙」** 一樣，只要你在網路上改了密碼，你的電腦鑰匙也會自動變成新的，讓你永遠只需要記住一組密碼就能通行無阻。
 
-
----
-File: jamf-data-policy.md
 ---
 
+## File: jamf-data-policy.md
+
 ---
+
 term: "Jamf Data Policy"
 category: ["Jamf", "Security"]
+
 ---
 
 ## 術語定義
@@ -908,14 +939,15 @@ category: ["Jamf", "Security"]
 
 如果有人試圖把機密文件截圖傳給外面的人，或是想用 AirDrop 丟給隔壁同學，這張 **「防護網」** 會立刻攔截並發出警報，確保秘密永遠留在學校的安全範圍內。
 
-
----
-File: jamf-helper.md
 ---
 
+## File: jamf-helper.md
+
 ---
+
 term: "jamfHelper"
 category: ["macOS", "Jamf"]
+
 ---
 
 ## 術語定義
@@ -926,14 +958,15 @@ category: ["macOS", "Jamf"]
 
 可以將其想像成一面 **「數位佈告欄」** 。每當有重要事情發生時（例如電腦需要重新啟動以安裝更新），資訊組就會利用這個工具在你的螢幕上貼出一張告示。這讓技術團隊能直接透過螢幕與你對話，確保你隨時掌握目前的系統狀態。
 
-
----
-File: jamf-now.md
 ---
 
+## File: jamf-now.md
+
 ---
+
 term: "Jamf Now"
 category: ["Jamf"]
+
 ---
 
 ## 術語定義
@@ -956,14 +989,15 @@ category: ["Jamf"]
 
 它只有最常用的幾種功能（剪刀、小刀、開瓶器），但對於不需要拆解引擎的日常需求來說，它即使是普通人也能立刻拿來用，解決 90% 的基本問題。
 
-
----
-File: jamf-pro-api.md
 ---
 
+## File: jamf-pro-api.md
+
 ---
+
 term: "Jamf Pro API"
 category: ["Jamf", "Other"]
+
 ---
 
 ## 術語定義
@@ -984,14 +1018,15 @@ category: ["Jamf", "Other"]
 
 懂程式的工程師則可以使用這個 **「超級遙控器」** (API)，按一個鍵就讓電視自動每 5 分鐘換一次台，或是同時幫整棟樓的 500 台電視一起開機，完全不需要人去跑腿。
 
-
----
-File: jamf-pro.md
 ---
 
+## File: jamf-pro.md
+
 ---
+
 term: "Jamf Pro"
 category: ["Core", "Jamf"]
+
 ---
 
 ## 術語定義
@@ -1013,14 +1048,15 @@ category: ["Core", "Jamf"]
 
 普通的相機（簡易 MDM）只有一個全自動按鈕，拍出來好不好看全看運氣。 **Jamf Pro** 就像一台高階單眼，有數百個轉盤、按鈕和選單可以微調。雖然需要受過訓練的專業攝影師（IT 管理員）才能駕馭，但它能讓你精確控制每一張照片（每台裝置）的細節，拍出完美的結果。
 
-
----
-File: jamf-protect.md
 ---
 
+## File: jamf-protect.md
+
 ---
+
 term: "Jamf Protect"
 category: ["Jamf", "Security", "macOS"]
+
 ---
 
 ## 術語定義
@@ -1039,14 +1075,15 @@ category: ["Jamf", "Security", "macOS"]
 
 傳統的防毒軟體像是穿著厚重鎧甲的武士，雖然能防禦，但走起路來鏗鏘作響，會讓做事情（電腦運作）變得很慢。 **Jamf Protect** 則是一位隱形的武林高手，這保鑣平常安靜地站在角落，完全不影響你工作。但只要有壞人（惡意程式）試圖靠近，他會瞬間出手制伏對方，保護你的安全。
 
-
----
-File: jamf-remote.md
 ---
 
+## File: jamf-remote.md
+
 ---
+
 term: "Jamf Remote"
 category: ["Jamf", "macOS"]
+
 ---
 
 ## 術語定義
@@ -1067,14 +1104,15 @@ category: ["Jamf", "macOS"]
 
 他們只要打開這個「任意門」，就能從遠端的辦公室直接「進入」你的螢幕畫面，像是坐在你旁邊一樣幫你修電腦，修好後直接關門離開。
 
-
----
-File: jamf-safe-internet.md
 ---
 
+## File: jamf-safe-internet.md
+
 ---
+
 term: "Jamf Safe Internet"
 category: ["Jamf", "Security", "Network"]
+
 ---
 
 ## 術語定義
@@ -1098,14 +1136,15 @@ category: ["Jamf", "Security", "Network"]
 
 如果那是網際網路上的 **「治安死角」** ，保鑣會立刻擋在你身前，禁止你進入。無論你在教室上課還是在公園玩，這位保鑣都隨時保護著你和學校的資料安全。
 
-
----
-File: jamf-school.md
 ---
 
+## File: jamf-school.md
+
 ---
+
 term: "Jamf School"
 category: ["Jamf", "Education"]
+
 ---
 
 ## 術語定義
@@ -1127,14 +1166,15 @@ category: ["Jamf", "Education"]
 
 它讓老師不需要具備電腦科學學位，也能輕鬆管理一整班 30 台 iPad，同時仍保有學校所需的完整安全性與控制力。
 
-
----
-File: jamf-student.md
 ---
 
+## File: jamf-student.md
+
 ---
+
 term: "Jamf Student"
 category: ["Jamf", "Education"]
+
 ---
 
 ## 術語定義
@@ -1155,14 +1195,15 @@ category: ["Jamf", "Education"]
 
 這能確保全班同學在上課時步伐一致，不會有人跟不上進度或分心去玩別的東西。
 
-
----
-File: jamf-teacher.md
 ---
 
+## File: jamf-teacher.md
+
 ---
+
 term: "Jamf Teacher"
 category: ["Jamf", "Education"]
+
 ---
 
 ## 術語定義
@@ -1182,14 +1223,15 @@ category: ["Jamf", "Education"]
 
 老師不用再走到每個學生背後檢查螢幕，只要站在講台上按一下 iPad，就能讓全班 30 位同學同時翻到課本的同一頁（打開同一個網頁），或是鎖定螢幕讓大家抬頭聽講。這讓課堂管理變得像切換電視頻道一樣簡單快速。
 
-
----
-File: jamf-trust-jamf-private-access.md
 ---
 
+## File: jamf-trust-jamf-private-access.md
+
 ---
+
 term: "Jamf Trust (Jamf Private Access)"
 category: ["Jamf", "Security", "Network"]
+
 ---
 
 ## 術語定義
@@ -1209,14 +1251,15 @@ category: ["Jamf", "Security", "Network"]
 
 但這個 **「智慧閘門」** 不只檢查證件，還會量體溫（檢查有無病毒）、看你有沒有穿好制服（合規性）。只有全部通過才開門，而且它只會讓你進入你申請要去的那間小房間（特定 App），而不是讓你整棟大樓（整個網路）到處跑。
 
-
----
-File: json.md
 ---
 
+## File: json.md
+
 ---
+
 term: "JSON (JavaScript Object Notation)"
 category: ["Other"]
+
 ---
 
 ## 術語定義
@@ -1231,14 +1274,15 @@ category: ["Other"]
 
 因為格式始終保持一致，接收資訊的電腦能準確知道在哪個位置找到每一項資料，絕對不會發生看錯行或理解錯誤的情況。
 
-
----
-File: kernel-extension-kext.md
 ---
 
+## File: kernel-extension-kext.md
+
 ---
+
 term: "Kernel Extension (Kext)"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -1259,14 +1303,15 @@ category: ["Core"]
 
 所以現在 Apple 醫生盡量不動這種大刀，改推 **「微創手術」** (System Extensions)，既安全又容易復原。
 
-
----
-File: keychain.md
 ---
 
+## File: keychain.md
+
 ---
+
 term: "Keychain (鑰匙圈)"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -1289,14 +1334,15 @@ category: ["Security"]
 
 只要你用指紋或開機密碼打開這個盒子，系統就會自動幫你拿出對的那把鑰匙去開門（登入網站或連 Wi-Fi），你甚至感覺不到它的存在。
 
-
----
-File: laps-local-administrator-password-solution.md
 ---
 
+## File: laps-local-administrator-password-solution.md
+
 ---
+
 term: "LAPS (Local Administrator Password Solution)"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -1318,14 +1364,15 @@ category: ["Security"]
 
 有了 **LAPS** ，每間教室的鎖每天都會自動換密碼。就算小偷今天偷到了這間教室的密碼，他也打不開隔壁的門，甚至到了明天，連原本那間門也打不開了。
 
-
----
-File: ldap.md
 ---
 
+## File: ldap.md
+
 ---
+
 term: "LDAP"
 category: ["Apple"]
+
 ---
 
 ## 術語定義
@@ -1346,14 +1393,15 @@ category: ["Apple"]
 
 透過 **LDAP** 這個語言，MDM 可以開口問資料庫：「請問『王小明』是幾年級的學生？」或是「這組密碼對嗎？」，資料庫聽得懂並回答，雙方才能合作。
 
-
----
-File: lightning-connector.md
 ---
 
+## File: lightning-connector.md
+
 ---
+
 term: "Lightning Connector"
 category: ["Hardware"]
+
 ---
 
 ## 術語定義
@@ -1374,14 +1422,15 @@ category: ["Hardware"]
 
 雖然它正在像 DVD 播放器一樣慢慢消失，但學校的「iPad 充電車」裡通常還有一大堆這種線，用來餵飽那些還沒退役的舊款平板。
 
-
----
-File: liquid-glass.md
 ---
 
+## File: liquid-glass.md
+
 ---
+
 term: "Liquid Glass (液態玻璃設計)"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -1402,14 +1451,15 @@ category: ["Core"]
 
 當你轉動裝置或房間開燈時，螢幕上的圖示和視窗會像真的玻璃藝品一樣捕捉並反射光線。這讓介面看起來比過去那些死板板、畫上去的按鈕更輕盈、透氣，也更有生命力。
 
-
----
-File: local-account.md
 ---
 
+## File: local-account.md
+
 ---
+
 term: "Local Account (本機帳號)"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -1430,14 +1480,15 @@ category: ["Core"]
 
 這跟學校發的 **「通用識別證」** (網路帳號) 不同，識別證可以讓你刷卡進入校園內任何一間電腦教室或圖書館。
 
-
----
-File: location-services.md
 ---
 
+## File: location-services.md
+
 ---
+
 term: "Location Services（定位服務）"
 category: ["Apple", "Core"]
+
 ---
 
 ## 術語定義
@@ -1461,14 +1512,15 @@ category: ["Apple", "Core"]
 
 萬一你不小心把 iPad 忘在公園或公車上，IT 老師可以打開地圖看到它在哪裡，趕快把它找回來。
 
-
----
-File: lost-mode.md
 ---
 
+## File: lost-mode.md
+
 ---
+
 term: "Lost Mode (遺失模式)"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -1490,14 +1542,15 @@ category: ["Security"]
 
 這讓小偷拿了也沒用（因為無法重置），同時幫學校找回失物。
 
-
----
-File: mac-address.md
 ---
 
+## File: mac-address.md
+
 ---
+
 term: "MAC Address"
 category: ["Network"]
+
 ---
 
 ## 術語定義
@@ -1519,14 +1572,15 @@ category: ["Network"]
 
 每次你走進不同的商店，手機就會換戴不同花色的手套，這樣店家的監視器就認不出你是誰，也無法記錄你的去向。
 
-
----
-File: managed-app-framework.md
 ---
 
+## File: managed-app-framework.md
+
 ---
+
 term: "Managed App Framework (管理式 App 框架)"
 category: ["DDM"]
+
 ---
 
 ## 術語定義
@@ -1547,14 +1601,15 @@ category: ["DDM"]
 
 在你使用 App 的*過程中*，它能隨時與校園系統保持連線，瞬間獲取最新的資安更新或伺服器異動。它更快、更安全，這意味著你的教學 App 永遠能維持在完美的設定狀態，完全不需要你手動關閉再重開。
 
-
----
-File: managed-apple-account.md
 ---
 
+## File: managed-apple-account.md
+
 ---
+
 term: "Managed Apple Account (管理式 Apple 帳號)"
 category: ["Apple"]
+
 ---
 
 ## 術語定義
@@ -1576,14 +1631,15 @@ category: ["Apple"]
 
 因為學校擁有管理權，如果你忘記密碼，資訊組可以隨時協助你重置；但也因為如此，你不應該用它來登入私人的 TikTok 或購買個人遊戲。
 
-
----
-File: managed-classes.md
 ---
 
+## File: managed-classes.md
+
 ---
+
 term: "Managed Classes（管理化班級）"
 category: ["Education", "Jamf"]
+
 ---
 
 ## 術語定義
@@ -1605,14 +1661,15 @@ category: ["Education", "Jamf"]
 
 老師不需要手動輸入序號或配對藍牙，直接在儀表板按一下，就能叫全班同學打開課本，或檢查有沒有人在偷偷打電動。
 
-
----
-File: managed-device-attestation.md
 ---
 
+## File: managed-device-attestation.md
+
 ---
+
 term: "Managed Device Attestation"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -1633,14 +1690,15 @@ category: ["Security"]
 
 現在系統要求驗 **「指紋」** 或 **「DNA」** （硬體晶片驗證）。這能 100% 確定連上網路的那台 iPad 是學校發的那台真機，而不是駭客用電腦程式模擬出來的冒牌貨。
 
-
----
-File: managed-open-in.md
 ---
 
+## File: managed-open-in.md
+
 ---
+
 term: "Managed Open In"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -1661,14 +1719,15 @@ category: ["Security"]
 
 這確保了學校的機密檔案和考卷，不會因為學生手滑或惡意操作而流出到私人的聊天軟體中。
 
-
----
-File: mdm-mobile-device-management.md
 ---
 
+## File: mdm-mobile-device-management.md
+
 ---
+
 term: "MDM (Mobile Device Management)"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -1692,14 +1751,15 @@ IT 老師不需要親自跑到每一間教室、拿起每一台 iPad 去按設�
 
 當學校買了新的學習軟體，IT 老師只要按一下「廣播」，全校 500 台 iPad 就會同時自動安裝好，確保每位學生上課時都準備就緒。
 
-
----
-File: mdm-profile-mdm.md
 ---
 
+## File: mdm-profile-mdm.md
+
 ---
+
 term: "MDM Profile (MDM 描述檔)"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -1719,14 +1779,15 @@ category: ["Core"]
 - **簽約（安裝）** ：簽了合約，公司就給你員工識別證（憑證）、配發電腦與軟體（資源），你也必須遵守公司規定（政策）。
 - **解約（移除）** ：一旦你撕毀合約（移除描述檔），雖然裝置還在，但所有公司給你的福利、權限和軟體都會瞬間收回，無法再使用。
 
-
----
-File: mdns-multicast-dns.md
 ---
 
+## File: mdns-multicast-dns.md
+
 ---
+
 term: "mDNS (Multicast DNS)"
 category: ["Network"]
+
 ---
 
 ## 術語定義
@@ -1747,14 +1808,15 @@ category: ["Network"]
 - **限制** ：聲音（訊號）通常穿不過水泥牆（路由器/不同 VLAN），只有同房間的人聽得見。
 - **中繼** ：如果隔壁房間也要聽到，就需要網管人員架設「轉播站」 ( **mDNS Gateway** )，把聲音傳過去。
 
-
----
-File: n-1-strategy.md
 ---
 
+## File: n-1-strategy.md
+
 ---
+
 term: "N-1 Strategy"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -1776,14 +1838,15 @@ category: ["Core"]
 - 如果你開的是 5 年前的舊車（N-5），原廠可能已經停產零件（不支援新功能），出問題時也無法保證能修好。
 - 這強迫管理者必須定期汰換更新，不能讓車隊太過老舊。
 
-
----
-File: network-extension-url-filtering-api.md
 ---
 
+## File: network-extension-url-filtering-api.md
+
 ---
+
 term: "Network Extension URL Filtering API (網路擴充功能 URL 過濾 API)"
 category: ["Network"]
+
 ---
 
 ## 術語定義
@@ -1811,14 +1874,15 @@ category: ["Network"]
 
 使用 DNS over HTTPS (DoH) 與系統級 Network Extension，在不解密流量的前提下實現 URL 過濾，符合隱私法規。
 
-
----
-File: nist-benchmarks.md
 ---
 
+## File: nist-benchmarks.md
+
 ---
+
 term: "NIST Benchmarks (資安基準)"
 category: ["Security", "Education"]
+
 ---
 
 ## 術語定義
@@ -1839,14 +1903,15 @@ category: ["Security", "Education"]
 - **檢查** ：每台平板（房間）都要通過檢查：密碼夠不夠長（門鎖好不好）、系統是不是最新（結構穩不穩）。
 - **後果** ：如果安檢沒過（不合規），這棟房子就不能開放使用（被鎖定或限制連網），直到改善為止。
 
-
----
-File: notarization.md
 ---
 
+## File: notarization.md
+
 ---
+
 term: "Notarization (公證)"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -1867,14 +1932,15 @@ category: ["Security"]
 - **通關** ：檢驗合格就會蓋上一個數位章（公證票證）。
 - **上架** ：使用者的電腦（Gatekeeper）只認識這個章，有章才給過，沒章就攔下來。
 
-
----
-File: oidc-openid-connect.md
 ---
 
+## File: oidc-openid-connect.md
+
 ---
+
 term: "OIDC (OpenID Connect)"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -1895,14 +1961,15 @@ category: ["Security"]
 - **手環（Token）** ：工作人員給你戴上一個防水手環。
 - **暢遊** ：之後要去其他遊樂設施（如 Jamf Pro、雲端教室），只要秀出手環就好，不用每一站都重新拿身分證排隊買票。
 
-
----
-File: ota-over-the-air.md
 ---
 
+## File: ota-over-the-air.md
+
 ---
+
 term: "OTA (Over-The-Air)"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -1922,14 +1989,15 @@ category: ["Core"]
 - **舊時代** ：手機生病（當機）或要學新技能（更新），必須帶去讓醫生插管子（插傳輸線）治療。
 - **新時代** ：像是雲端大師直接 **「發功」** ，指令透過無形的空氣（Wi-Fi）傳過去，手機自己就修好了，完全不需要插線。
 
-
----
-File: package-pkg.md
 ---
 
+## File: package-pkg.md
+
 ---
+
 term: "Package (.pkg)"
 category: ["macOS"]
+
 ---
 
 ## 術語定義
@@ -1949,14 +2017,15 @@ category: ["macOS"]
 - **內容物** ：裡面不只有家具零件（軟體檔案），還附帶了一組會自己動的工具人（腳本）。
 - **執行** ：當這個包裹送到電腦門口，裡面的工具人會自動跳出來，幫你把櫃子組好定位。使用者只要負責收貨，不用自己拿螺絲起子動手。
 
-
----
-File: passcode-policy.md
 ---
 
+## File: passcode-policy.md
+
 ---
+
 term: "Passcode Policy（密碼原則）"
 category: ["Security", "Core"]
+
 ---
 
 ## 術語定義
@@ -1976,14 +2045,15 @@ category: ["Security", "Core"]
 - **規定** ：公司規定大門不準用「0000」這種爛密碼，一定要用「6 位數且包含英文」。
 - **強制** ：如果你原本的密碼太爛，警衛（MDM）會擋在門口，不讓你進去，直到你當場想出一個夠難的新密碼設定好為止。
 
-
----
-File: passkeys.md
 ---
 
+## File: passkeys.md
+
 ---
+
 term: "Passkeys"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -2003,14 +2073,15 @@ category: ["Security"]
 - **舊習慣** ：以前回家要找鑰匙（密碼），要是鑰匙弄丟或被偷（外洩），小偷就能開你家門。
 - **新體驗** ：現在你的臉或指紋就是鑰匙。你站在門口笑一下（Face ID），門就開了。這把鑰匙長在你身上，別人偷不走，也模仿不來。
 
-
----
-File: patch-management.md
 ---
 
+## File: patch-management.md
+
 ---
+
 term: "Patch Management"
 category: ["macOS", "Jamf"]
+
 ---
 
 ## 術語定義
@@ -2030,14 +2101,15 @@ category: ["macOS", "Jamf"]
 - **問題** ：以前窗戶破了（漏洞），要住戶自己去買玻璃來補，住戶通常很懶不會補。
 - **解決** ：現在物業管理（MDM）一旦發現窗戶破了或強化玻璃出了新款（更新），會直接派人到每一戶家裡自動換上最新的防彈玻璃，住戶甚至不需要在家。
 
-
----
-File: payload.md
 ---
 
+## File: payload.md
+
 ---
+
 term: "Payload"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -2058,14 +2130,15 @@ category: ["Core"]
 - **條款 (Payload)** ：守則裡面的一條條規定，例如「第一條：要連公司 Wi-Fi」、「第二條：Email 設好」。
 - **運作** ：你可以把好幾條規定寫在一張紙上發布，那一條條的規定就是 Payload。
 
-
----
-File: pending-command.md
 ---
 
+## File: pending-command.md
+
 ---
+
 term: "Pending Command"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -2086,14 +2159,15 @@ category: ["Core"]
 - **未達** ：因為收件人（裝置）不在家或是去旅行（關機/斷網），包裹暫時放在郵局。
 - **領取** ：等收件人一回到家（連網），郵差就會立刻把累積的包裹全部送過去。
 
-
----
-File: platform-sso-in-setup-assistant.md
 ---
 
+## File: platform-sso-in-setup-assistant.md
+
 ---
+
 term: "Platform SSO in Setup Assistant (設定輔助程式中的 Platform SSO)"
 category: ["Mac"]
+
 ---
 
 ## 術語定義
@@ -2120,5 +2194,3 @@ category: ["Mac"]
 ## 技術優勢
 
 使用 Secure Enclave 儲存 SSO Token，安全性更高，且支援生物辨識解鎖（Touch ID / Face ID on MacBook）
-
-

@@ -217,7 +217,7 @@
      Marker takes 1em space. 2.5 - 0.5 - 1.0 = 1em gap on the right.
      Ensures perfect 1+1 grid while avoiding clipping.
   */
-  left: -2em; 
+  left: -2em;
   width: 1em; /* Exactly 1 character width */
   display: flex !important;
   justify-content: center;

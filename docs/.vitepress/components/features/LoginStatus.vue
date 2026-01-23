@@ -1,21 +1,23 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useData, withBase } from 'vitepress';
-import { useAuth } from '../composables/useAuth';
+import { computed } from "vue";
+import { useData, withBase } from "vitepress";
+import { useAuth } from "../../theme/composables/useAuth";
 
 const { lang } = useData();
 const { user, logout } = useAuth();
 
 const t = computed(() => {
-  return lang.value === 'zh-TW' ? {
-    logoutTitle: '登出系統',
-    logout: '退出',
-    login: '系統登入'
-  } : {
-    logoutTitle: 'Sign out',
-    logout: 'Exit',
-    login: 'Sign In'
-  };
+  return lang.value === "zh-TW"
+    ? {
+        logoutTitle: "登出系統",
+        logout: "退出",
+        login: "系統登入",
+      }
+    : {
+        logoutTitle: "Sign out",
+        logout: "Exit",
+        login: "Sign In",
+      };
 });
 </script>
 
@@ -25,7 +27,9 @@ const t = computed(() => {
     <template v-if="user">
       <div class="user-pill">
         <span class="user-email text-truncate">{{ user }}</span>
-        <button class="logout-btn" @click="logout" :title="t.logoutTitle">{{ t.logout }}</button>
+        <button class="logout-btn" @click="logout" :title="t.logoutTitle">
+          {{ t.logout }}
+        </button>
       </div>
     </template>
 

@@ -1,15 +1,15 @@
-
-
 ---
 File: edu-01.md
 ---
 
 ---
+
 id: edu-01
 title: "The VPN icon is missing on iPadOS. Are network filtering and usage reporting still working?"
 category: "Section 8: Education Scenarios & FAQ"
 important: true
 tags: ["MOE Project", "VPN", "Jamf Trust", "Content Filtering", "Compliance"]
+
 ---
 
 **Yes, everything is working perfectly. In modern iPadOS versions (17 through 26), Jamf Trust uses "DNS Proxy" and "Content Filter" technology which does not require a VPN tunnel.** This architectural shift is intentional and was implemented to improve device battery life and network stability across school campuses.
@@ -33,17 +33,18 @@ In macOS and **iOS 26**, these network filters are now protected by **RTS (Retur
 
 Occasionally, the Jamf Trust app might show a red warning if a passcode is missing or the OS is out of date. While you should encourage students to update, **these local warnings do not stop the usage statistics from being reported to the school dashboard.**
 
-
----
-File: edu-02.md
 ---
 
+## File: edu-02.md
+
 ---
+
 id: edu-02
 title: "What is 'Shared iPad' and how does it differ from a standard iPad? When should we use it?"
 category: "Section 8: Education Scenarios & FAQ"
 important: false
 tags: ["Shared iPad", "Multi-User", "Deployment Modes", "iCloud"]
+
 ---
 
 **Shared iPad allows multiple students to log into the same physical device using their individual Managed Apple Accounts. Their documents and app data are isolated and synced to iCloud.** This is the ideal solution for computer labs or "trolley systems" where iPads are moved between different year groups throughout the day.
@@ -68,17 +69,18 @@ tags: ["Shared iPad", "Multi-User", "Deployment Modes", "iCloud"]
 
 Because Shared iPad requires downloading user data from the cloud, it places a high demand on your school’s internet bandwidth. We strongly recommend implementing a **Content Caching** server to speed up the login process for large classes.
 
-
----
-File: edu-03.md
 ---
 
+## File: edu-03.md
+
 ---
+
 id: edu-03
 title: "What are the configuration differences between Teacher iPads and Student iPads?"
 category: "Section 8: Education Scenarios & FAQ"
 important: false
 tags: ["Roles", "Permissions", "Group Policy", "Classroom"]
+
 ---
 
 **Teacher and Student devices are usually assigned different management profiles, app catalogs, and restriction levels to provide teachers with the flexibility needed for classroom instruction.** In Jamf Pro, we use Smart Groups to separate these roles and ensure that the right rules are applied to the right person.
@@ -105,17 +107,18 @@ tags: ["Roles", "Permissions", "Group Policy", "Classroom"]
 
 Periodically audit your Smart Groups. When a staff member leaves or replaces their hardware, ensure their new device is correctly tagged as a "Teacher" asset to avoid giving students unrestricted access to staff-level tools.
 
-
----
-File: edu-04.md
 ---
 
+## File: edu-04.md
+
 ---
+
 id: edu-04
 title: "How do we quickly reset iPads between different classes or rotating groups?"
 category: "Section 8: Education Scenarios & FAQ"
 important: false
 tags: ["Classroom Management", "SOP", "Handoff", "RTS"]
+
 ---
 
 **The best method depends on how much time you have between lessons. For the fastest handoff, use 'Shared iPad' mode or the 'Return to Service' remote command.**
@@ -147,17 +150,18 @@ If you need to completely erase a device (e.g., between different year levels) b
 
 For 1-to-1 environments where a student is just borrowing a device for one period, remind them to log out of their Google or Microsoft accounts in Safari before handing the device back. This prevents the next student from accessing the previous user's private school records.
 
-
----
-File: edu-05.md
 ---
 
+## File: edu-05.md
+
 ---
+
 id: edu-05
 title: "The iPad feels slow or laggy. Is it faulty? How do we fix it?"
 category: "Section 8: Education Scenarios & FAQ"
 important: false
 tags: ["Performance", "Troubleshooting", "Maintenance"]
+
 ---
 
 **Most 'slowness' is caused by software fatigue rather than hardware failure. Regular maintenance steps can restore the device to its original speed.**
@@ -183,17 +187,18 @@ tags: ["Performance", "Troubleshooting", "Maintenance"]
 
 If the device is still slow after a reboot and a storage cleanup, or if the screen is behaving erratically (ghost touching), it may have a failing digitizer or battery. At this point, the device should be sent to the ICT Support Team for a hardware diagnostic.
 
-
----
-File: edu-06.md
 ---
 
+## File: edu-06.md
+
 ---
+
 id: edu-06
 title: "Can I sign into my personal Apple Account to download games I bought before?"
 category: "Section 8: Education Scenarios"
 important: false
 tags: ["Apple Account", "Personal vs. School", "Account Policies"]
+
 ---
 
 **This is strongly discouraged, and most school policies explicitly forbid it. Signing into a personal Apple Account can lead to data mixing, Activation Lock risks, and VPP licensing conflicts.** This is a common question from students and even some teachers. From a management and technical perspective, doing so introduces multiple risks.
@@ -226,17 +231,18 @@ In the iOS 26 environment, teachers and students are advised to use school-provi
 
 School iPads are educational tools, not personal gaming consoles. If you need personal apps, please use your own private device.
 
-
----
-File: edu-07.md
 ---
 
+## File: edu-07.md
+
 ---
+
 id: edu-07
 title: "I heard MDM drains the battery quickly. Is this true?"
 category: "Section 8: Education Scenarios"
 important: false
 tags: ["Battery", "Myths", "MDM", "Power Consumption"]
+
 ---
 
 **This is a myth. MDM itself consumes very little resources and does not significantly impact battery life. The real battery drainers are typically screen brightness, video streaming, and GPS navigation.** Actually, MDM operates in an extremely energy-efficient way.
@@ -274,17 +280,18 @@ The Jamf Trust app, which handles content filtering and data reporting, also use
 
 If a device is several years old and doesn't last as long as it used to, it is likely due to battery aging. You can check battery cycle counts and health via Jamf Pro to evaluate if a replacement is needed.
 
-
----
-File: edu-08.md
 ---
 
+## File: edu-08.md
+
 ---
+
 id: edu-08
 title: "I received an iOS update notification. Can I update immediately or should I wait?"
 category: "Section 8: Education Scenarios"
 important: false
 tags: ["System Updates", "Stability", "iOS Updates"]
+
 ---
 
 **It is recommended to wait for a school announcement before updating. New iOS versions can sometimes cause compatibility issues with teaching apps or MDM functions. The school will coordinate a mass update after verification.** While Apple releases updates every few weeks for security and features, "newest" isn't always "best" for an educational environment.
@@ -319,17 +326,18 @@ Many IT teams follow the "N-1" principle: keeping production environments (stude
 - **Wait for School Announcement**. IT will usually release a "Clear to Update" notice.
 - **Ensure power is >50% and Wi-Fi is stable before updating.**
 
-
----
-File: edu-09.md
 ---
 
+## File: edu-09.md
+
 ---
+
 id: edu-09
 title: "How do I project my iPad screen to a traditional TV or a classroom without Apple TV?"
 category: "Section 8: Education Scenarios"
 important: false
 tags: ["Projection", "Adapters", "AirPlay", "HDMI"]
+
 ---
 
 **You can use a wired HDMI adapter (most stable) or third-party wireless projection software. For the best experience, we recommend the school acquire an Apple TV.**
@@ -360,17 +368,18 @@ tags: ["Projection", "Adapters", "AirPlay", "HDMI"]
 - Requires carrying an adapter and cable.
 - The iPad is tethered to the cable length.
 
-
----
-File: edu-10.md
 ---
 
+## File: edu-10.md
+
 ---
+
 id: edu-10
 title: "Why is the App Store missing? How do I download apps?"
 category: "Section 8: Education Scenarios"
 important: true
 tags: ["App Store", "Self Service", "Restrictions"]
+
 ---
 
 **This is an intentional setting by the school. The App Store is hidden to prevent students from downloading unauthorized apps. Use the 'Self Service' app to install school-approved applications instead.** Finding the App Store missing is a result of MDM restrictions, not a malfunction.
@@ -414,17 +423,18 @@ tags: ["App Store", "Self Service", "Restrictions"]
 - **Install button is grey**: Licensing may be low or a background process is active; try again later.
 - **Can't find Self Service**: Check inside folders or the second page. You can also use Spotlight to search for it.
 
-
----
-File: edu-11.md
 ---
 
+## File: edu-11.md
+
 ---
+
 id: edu-11
 title: "What is the difference between 'Guided Access' and 'Single App Mode'?"
 category: "Section 8: Education Scenarios"
 important: false
 tags: ["Locking", "Comparison", "Guided Access", "Single App Mode"]
+
 ---
 
 **Both features lock the iPad into a single application, but they offer different levels of control: Guided Access is manually enabled by a user (e.g., a teacher), while Single App Mode is enforced remotely via MDM.** These two methods are often confused, but they serve different purposes:
@@ -445,17 +455,18 @@ tags: ["Locking", "Comparison", "Guided Access", "Single App Mode"]
 - **Use Guided Access** for quick, low-stakes classroom management where a teacher needs students to stay in one app for a short duration.
 - **Use Single App Mode** for formal exams or public-facing informational kiosks where manual tampering must be completely prevented.
 
-
----
-File: edu-12.md
 ---
 
+## File: edu-12.md
+
 ---
+
 id: edu-12
 title: "How do students submit their work (Keynote/Pages) to the teacher?"
 category: "Section 8: Education Scenarios"
 important: false
 tags: ["Submission", "File Sharing", "Google Drive"]
+
 ---
 
 **The best method is via cloud storage (Google Drive, OneDrive, or iCloud Drive). Other options include AirDrop, Google Classroom assignments, or a school-designated submission portal.** In a digital learning environment, a smooth submission flow is key to efficiency.
@@ -504,17 +515,18 @@ Best for small groups or immediate collection.
 - **Cannot find Google Drive in Files app**: Open the **Files** app > Tap "..." > **Edit** > Toggle on **Google Drive**.
 - **File too large**: Lower video resolution or share via a cloud link instead.
 
-
----
-File: edu-13.md
 ---
 
+## File: edu-13.md
+
 ---
+
 id: edu-13
 title: "Can I use a mouse or a Bluetooth keyboard with my iPad?"
 category: "Section 8: Education Scenarios"
 important: false
 tags: ["Mouse", "Keyboard", "Accessibility", "Peripherals"]
+
 ---
 
 **Yes. iPadOS 13.4 and later fully support mice, trackpads, and Bluetooth/USB keyboards, providing a laptop-like experience.**
@@ -533,17 +545,18 @@ Keyboards work instantly upon pairing. Command-key shortcuts (like Cmd+C/V) func
 
 Go to **Settings > Accessibility > Pointer Control** to adjust the cursor size, contrast, scrolling speed, and "Secondary Click" (Right-click) behavior.
 
-
----
-File: edu-14.md
 ---
 
+## File: edu-14.md
+
 ---
+
 id: edu-14
 title: "Why is my iPad suddenly requiring a 6-digit (or longer) passcode?"
 category: "Section 8: Education Scenarios"
 important: false
 tags: ["Passcode Policy", "Security", "Compliance"]
+
 ---
 
 **This is because an administrator has deployed a 'Passcode Configuration' profile to meet school security standards.**
@@ -558,17 +571,18 @@ tags: ["Passcode Policy", "Security", "Compliance"]
 
 Choose a passcode that is easy to remember but hard for others to guess. If you forget your passcode, you must contact the ICT Support Team to have the device cleared via MDM.
 
-
----
-File: edu-15.md
 ---
 
+## File: edu-15.md
+
 ---
+
 id: edu-15
 title: "Does enabling 'Lost Mode' infringe on my privacy?"
 category: "Section 8: Education Scenarios"
 important: false
 tags: ["Lost Mode", "Privacy", "Location Tracking"]
+
 ---
 
 **No. Lost Mode is designed specifically for asset recovery. Location services are only activated while the device is officially marked as 'Lost' by an administrator.**
@@ -579,17 +593,18 @@ tags: ["Lost Mode", "Privacy", "Location Tracking"]
 2. **Notification**: The device screen locks and displays a custom message (e.g., "This iPad is lost. Please contact the ICT Support Team at...") and a phone number.
 3. **Privacy Guard**: Administrators can only receive coordinates while Lost Mode is active. Once Lost Mode is disabled, the device returns to the user’s previous privacy settings, and the administrator can no longer track the device.
 
-
----
-File: edu-16.md
 ---
 
+## File: edu-16.md
+
 ---
+
 id: edu-16
 title: "Why can't iPads install 'APKs' (or third-party apps) like Android devices?"
 category: "Section 8: Education Scenarios"
 important: false
 tags: ["Security", "Sideloading", "App Store"]
+
 ---
 
 **To ensure device security and stability, Apple restricts app installation to the App Store or trusted organizational MDM channels (preventing 'Sideloading').**
@@ -604,17 +619,18 @@ tags: ["Security", "Sideloading", "App Store"]
 
 If an app is needed for teaching, please submit a request to the IT Coordinator. Once vetted for security, it will be purchased via VPP and deployed to your device automatically.
 
-
----
-File: edu-17.md
 ---
 
+## File: edu-17.md
+
 ---
+
 id: edu-17
 title: "Why is the 'Screen Recording' button missing or grayed out on student iPads?"
 category: "Section 8: Education Scenarios"
 important: true
 tags: ["Screen Recording", "Restrictions", "Control Center"]
+
 ---
 
 **This is typically because 'Screen Recording' is restricted in the school's MDM profile, or the button simply hasn't been added to the Control Center.**
@@ -635,17 +651,18 @@ tags: ["Screen Recording", "Restrictions", "Control Center"]
 
 - If a student (or parent) enabled local Screen Time restrictions, this can also block the feature. Check **Settings > Screen Time > Content & Privacy Restrictions**.
 
-
----
-File: edu-18.md
 ---
 
+## File: edu-18.md
+
 ---
+
 id: edu-18
 title: "The iPad shows it's connected to Wi-Fi, but I can't open any web pages. Why?"
 category: "Section 8: Education Scenarios"
 important: false
 tags: ["DNS", "DHCP", "Network Failure", "Troubleshooting"]
+
 ---
 
 **This is often a 'False IP' or 'DNS failure' rather than a hardware defect in the iPad.**
@@ -667,17 +684,18 @@ tags: ["DNS", "DHCP", "Network Failure", "Troubleshooting"]
 
 - If the school uses **Jamf Trust**, ensure it shows "Protected." A crash in the filtering app can block all traffic. Try restarting the iPad.
 
-
----
-File: edu-19.md
 ---
 
+## File: edu-19.md
+
 ---
+
 id: edu-19
 title: "MOE Cybersecurity Audit: How does MDM help comply with NIST standards?"
 category: "Section 8: Education Scenarios"
 important: false
 tags: ["Cybersecurity Audit", "NIST", "Compliance"]
+
 ---
 
 **Educational devices must comply with NIST (National Institute of Standards and Technology) 800-63 guidelines to ensure identity security and data privacy.**
@@ -701,17 +719,18 @@ Since the "MOE Centralized Jamf Pro" must manage millions of devices, some cutti
 - **Advice**: If your school has an independent **Jamf School/Pro** instance, use it as a **"Beta Test Lab."**
 - Test your iOS 26 profiles and DDM status channels there first. When the central MOE instance is updated, you will already be an expert on the configuration, ensuring your school passes cybersecurity audits with flying colors.
 
-
----
-File: edu-20.md
 ---
 
+## File: edu-20.md
+
 ---
+
 id: edu-20
 title: "Troubleshooting: A student used the same password for their iPad and Apple Account, and now both are locked."
 category: "Section 8: Education Scenarios"
 important: false
 tags: ["Password Management", "Account Security", "Troubleshooting"]
+
 ---
 
 **This is a common 'Serial Lock' risk. If a student tries the wrong password too many times, both the device and the account may be locked out simultaneously.**
@@ -722,17 +741,18 @@ tags: ["Password Management", "Account Security", "Troubleshooting"]
 2. **Reset the Apple Account**: Administrator logs into **ASM**, selects the student account, and clicks **Reset Password**.
 3. **Education**: Advise the student that their 6-digit iPad pin and their Apple Account password should be different to prevent total lockouts in the future.
 
-
----
-File: edu-21.md
 ---
 
+## File: edu-21.md
+
 ---
+
 id: edu-21
 title: "How do I manage the new 'Notification Summary' AI feature in iOS 18?"
 category: "Section 8: Education Scenarios"
 important: true
 tags: ["iOS 18", "Apple Intelligence", "Notification Management"]
+
 ---
 
 **iOS 18 introduces AI-powered notification summaries. While useful for filtering noise, it may cause students to miss critical full-context messages during class.**
@@ -742,17 +762,18 @@ tags: ["iOS 18", "Apple Intelligence", "Notification Management"]
 1. **MDM Restriction**: Administrators can use the Restrictions payload to disable **'Allow Intelligent Notification Preview'**. This prevents the AI from summarizing notifications.
 2. **Classroom Tip**: Instead of a full block, encourage students to configure this within a "Classroom Focus" mode. This allows the AI to only show urgent educational alerts while summarizing distracting social notifications until the end of the school day.
 
-
----
-File: edu-22.md
 ---
 
+## File: edu-22.md
+
 ---
+
 id: edu-22
 title: "The AirDrop Code Mechanism: Practical impact on classroom file sharing and how to adapt."
 category: "Section 8: Education Scenarios"
 important: false
 tags: ["AirDrop", "System Update", "File Transfer", "Classroom", "Operations"]
+
 ---
 
 **In iOS 26.2, iPadOS 26.2, and macOS 26.2, the 'AirDrop Code' mechanism means that first-time transfers between people not in each other's contacts require a 6-digit code. This changes the 'Everyone open AirDrop' workflow but can be managed effectively.**
@@ -789,24 +810,25 @@ tags: ["AirDrop", "System Update", "File Transfer", "Classroom", "Operations"]
 
 Inform your staff that the AirDrop Code is a **Security Feature** to prevent "Airdropping" of inappropriate images from strangers. While it adds a small step to the first interaction, it creates a much safer digital environment for the students.
 
-
----
-File: edu-23.md
 ---
 
+## File: edu-23.md
+
 ---
+
 id: edu-23
 title: "Boosting classroom productivity with iPadOS 26.2 'Windowed Apps' multitasking."
 category: "Section 8: Education Scenarios"
 important: false
 tags:
-  [
-    "iPadOS 26",
-    "Multitasking",
-    "Windowed Apps",
-    "Slide Over",
-    "Teaching Efficiency",
-  ]
+[
+"iPadOS 26",
+"Multitasking",
+"Windowed Apps",
+"Slide Over",
+"Teaching Efficiency",
+]
+
 ---
 
 **iPadOS 26.2 matures the 'Windowed Apps' system, allowing the iPad to behave more like a traditional computer. For students and teachers who need to cross-reference materials, this is a significant productivity boost.**
@@ -836,17 +858,18 @@ tags:
 
 While powerful, Windowed Apps can be overwhelming for younger students (K-3). We recommend only enabling this mode for secondary school students or as a reward for students who have demonstrated high digital literacy and focus.
 
-
----
-File: edu-24.md
 ---
 
+## File: edu-24.md
+
 ---
+
 id: edu-24
 title: "Managing 'Writing Tools' (AI) during exams: Which features should be restricted?"
 category: "Section 8: Education Scenarios"
 important: true
 tags: ["Writing Tools", "Apple Intelligence", "Exam Security", "iOS 26", "AI"]
+
 ---
 
 **The 'Writing Tools' in Apple Intelligence can rewrite, proofread, and summarize text even while offline. This poses a significant risk for language and composition exams. On AI-capable devices, these features must be managed via MDM during assessments.**
@@ -880,17 +903,18 @@ Remember that not all iPads have these features. Use Smart Groups to target only
 - **Need Restrictions**: iPad Air (M1/M2+), iPad Pro (M1/M4+), iPad mini 7 (A17 Pro).
 - **No Action Needed**: iPad 9, iPad 10 (These models lack the Neural Engine required for local Writing Tools).
 
-
----
-File: edu-25.md
 ---
 
+## File: edu-25.md
+
 ---
+
 id: edu-25
 title: "Can iPads from the Digital Learning Project (MOE) still be used after the project expires? Is upgrading to iPadOS 26 safe?"
 category: "Section 8: Education Scenarios"
 important: false
 tags: ["MOE Project", "2026", "System Upgrade", "iPadOS 26", "Sustainability"]
+
 ---
 
 **iPads provided by the Digital Learning Project are school assets. Even after the initial project period concludes, they can continue to be used as long as the school maintains them. Upgrading to iPadOS 26 is technically viable and highly recommended, provided you consider MDM server compatibility.**
@@ -928,18 +952,19 @@ We recommend maintaining your existing management framework to protect the learn
 
 As long as the hardware is healthy and your MDM server is up to date, upgrading to iPadOS 26 is the safest and most efficient way to extend the lifespan and educational value of your project investment.
 
-
----
-File: edu-26.md
 ---
 
+## File: edu-26.md
+
 ---
+
 id: edu-26
 title: "How do teachers manage Apple Intelligence 'Writing Tools' in the classroom?"
 category: "Section 8: Education Scenarios"
 important: true
 tags:
-  ["Apple Intelligence", "Writing Tools", "AI Management", "Academic Integrity"]
+["Apple Intelligence", "Writing Tools", "AI Management", "Academic Integrity"]
+
 ---
 
 **Apple Intelligence's 'Writing Tools' are powerful assistants, but they raise concerns about academic integrity during composition or language exams. Teachers can manage these through MDM restrictions or real-time monitoring via the Classroom app.**
@@ -974,17 +999,18 @@ For formal testing, we recommend using **'Single App Mode'**. In iOS 26, enterin
 
 AI is a critical future skill. Rather than a permanent ban, we recommend teachers allow AI during the "Brainstorming" phase while restricting it via MDM during the "Formal Drafting" and "Assessment" phases.
 
-
----
-File: edu-27.md
 ---
 
+## File: edu-27.md
+
 ---
+
 id: edu-27
 title: "If a school changes MDM providers, is it mandatory to wipe all iPads?"
 category: "Section 8: Education Scenarios"
 important: true
 tags: ["MDM Migration", "Zero-Wipe", "System Maintenance", "iOS 26 Technology"]
+
 ---
 
 **Prior to 2026, the answer was yes. However, with the release of iOS 26 (Tahoe), Apple introduced 'Zero-Wipe MDM Migration.' If specific conditions are met, schools can migrate from Provider A to Provider B without erasing data or re-downloading apps.**
@@ -1021,17 +1047,18 @@ Even though the feature is available, education technology experts often conside
 
 While technology has made "Zero-Wipe" possible, a **clean start** remains the gold standard for IT management stability.
 
-
----
-File: edu-28.md
 ---
 
+## File: edu-28.md
+
 ---
+
 id: edu-28
 title: "How should MDM administrators handle the 'Retirement' process for iPad/Mac hardware?"
 category: "Section 8: Education Scenarios"
 important: false
 tags: ["Device Retirement", "ESG", "Data Sanitization", "Asset Management"]
+
 ---
 
 **Device retirement is more than just turning off the power. It involves data sanitization and the secure return of ownership rights in Apple School Manager (ASM). A proper retirement process ensures student privacy and meets ESG (Environmental, Social, and Governance) sustainability standards.**
@@ -1065,17 +1092,18 @@ This is the most critical step. It prevents the device from trying to enroll bac
 
 A rigorous retirement process protects the school from data breaches and ensures your MDM license count remains accurate. Conduct a "Fleet Health Audit" every semester to keep your inventory lists clean and secure.
 
-
----
-File: edu-29.md
 ---
 
+## File: edu-29.md
+
 ---
+
 id: edu-29
 title: "In the AI Era (iOS 26), how can MDM assist with Digital Citizenship and behavior management?"
 category: "Section 8: Education Scenarios"
 important: false
 tags: ["Digital Citizenship", "AI Ethics", "Behavior Management", "iOS 26"]
+
 ---
 
 **MDM should not just be a 'restrictor,' but a 'guardrail' for Digital Citizenship education. With the features in iOS 26, administrators can guide students toward responsible AI and technology habits.**
@@ -1104,17 +1132,18 @@ tags: ["Digital Citizenship", "AI Ethics", "Behavior Management", "iOS 26"]
 
 MDM provides the technical parameters, but education remains the core objective. The goal in the iOS 26 era is to create a digital environment that is "Low-distraction, safe, and AI-literate," preparing students for a world where these technologies are omnipresent.
 
-
----
-File: edu-30.md
 ---
 
+## File: edu-30.md
+
 ---
+
 id: edu-30
 title: "Can MDM-managed iPads still be used if the school Wi-Fi is down? What are the backup plans?"
 category: "Section 8: Education Scenarios"
 important: true
 tags: ["Connectivity", "Backup Plan", "Offline Usage", "Network Instability"]
+
 ---
 
 **One of the iPad’s greatest strengths is its 'Offline Productivity.' Even without Wi-Fi, most pre-installed apps and downloaded content remain fully functional. The role of MDM is to pre-configure 'Offline Grace Periods' and 'Local Caching' to ensure teaching never stops.**
@@ -1145,24 +1174,25 @@ tags: ["Connectivity", "Backup Plan", "Offline Usage", "Network Instability"]
 
 Network outages are inevitable. In the iOS 26 architecture, **Declarative Device Management (DDM)** is designed to keep the device in its "Last Known Good State," ensuring that even without a cloud connection, the iPad remains a stable and predictable teaching tool.
 
-
----
-File: edu-31.md
 ---
 
+## File: edu-31.md
+
 ---
+
 id: edu-31
 title: "What is the difference between the 'MOE Managed Jamf Pro' and 'School-Purchased Jamf Pro'?"
 category: "Section 8: Education Scenarios"
 important: true
 tags:
-  [
-    "MOE Instance",
-    "Private Instance",
-    "Permission Differences",
-    "Integration",
-    "IT Coordinator",
-  ]
+[
+"MOE Instance",
+"Private Instance",
+"Permission Differences",
+"Integration",
+"IT Coordinator",
+]
+
 ---
 
 **The primary differences lie in administrative permissions, feature rollout speed, and 'Global Toggle' control. While assets can be moved between them, the daily management experience varies significantly.**
@@ -1196,24 +1226,25 @@ In the **MOE Managed Jamf Pro** architecture, permissions are layered to balance
 
 The MOE version provides a secure, "batteries-included" environment that protects the school from major configuration errors. The In-House version provides the "Absolute Freedom" required for advanced IT departments and custom coding projects.
 
-
----
-File: edu-32.md
 ---
 
+## File: edu-32.md
+
 ---
+
 id: edu-32
 title: "What if a student forgets their iPad passcode? Can a teacher help reset it?"
 category: "Section 8: Common Education Scenarios"
 important: true
 tags:
-  [
-    "Passcode",
-    "Forgot Password",
-    "Jamf Pro",
-    "Remote Commands",
-    "Troubleshooting",
-  ]
+[
+"Passcode",
+"Forgot Password",
+"Jamf Pro",
+"Remote Commands",
+"Troubleshooting",
+]
+
 ---
 
 **Yes. As long as the iPad is managed by the school's MDM (Jamf Pro) and remains connected to the internet, a teacher or IT administrator can "Clear Passcode" remotely without needing to wipe the device.** This is a very common scenario in the classroom.
@@ -1244,5 +1275,3 @@ If the school has deployed the Jamf Teacher app or web portal to teachers:
 **💡 Teacher Tip**:
 
 In iOS 26, if a student enters an incorrect passcode 5 times, the iPad displays a "Connect to School Network" prompt. If it stays on Wi-Fi, a teacher's "Clear Passcode" command usually takes effect within 5 seconds, minimizing classroom disruption.
-
-

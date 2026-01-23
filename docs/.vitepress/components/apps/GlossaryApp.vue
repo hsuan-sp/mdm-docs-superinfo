@@ -2,7 +2,7 @@
 import { ref, computed, onMounted, nextTick, shallowRef } from "vue";
 import { useData } from "vitepress";
 // @ts-ignore
-import { data as _rawDataImported } from "../../data/all.data";
+import { data as _rawDataImported } from "../../../data/all.data";
 
 const { lang } = useData();
 const isMounted = ref(false);
@@ -15,12 +15,12 @@ const langData = computed(() => {
 });
 const glossaryData = computed(() => langData.value?.glossaryData || []);
 
-import { useLayoutMode } from "../theme/composables/useLayoutMode";
-import { useAppFeatures } from "../theme/composables/useAppFeatures";
-import { useKeyboardShortcuts } from "../theme/composables/useKeyboardShortcuts";
-import AppSidebar from "./AppSidebar.vue";
-import MobileDrawer from "../theme/components/MobileDrawer.vue";
-import EmptyState from "../theme/components/EmptyState.vue";
+import { useLayoutMode } from "../../theme/composables/useLayoutMode";
+import { useAppFeatures } from "../../theme/composables/useAppFeatures";
+import { useKeyboardShortcuts } from "../../theme/composables/useKeyboardShortcuts";
+import LayoutSidebar from "../layout/LayoutSidebar.vue";
+import LayoutMobileDrawer from "../layout/LayoutMobileDrawer.vue";
+import EmptyState from "../ui/EmptyState.vue";
 
 const t = computed(() => {
   const translations = {
@@ -146,7 +146,7 @@ const filteredTerms = computed(() => {
       (q) =>
         item.term.toLowerCase().includes(q) ||
         item.definition.toLowerCase().includes(q) ||
-        item.analogy.toLowerCase().includes(q),
+        item.analogy.toLowerCase().includes(q)
     );
 
     const matchesCategory =
@@ -189,7 +189,7 @@ onMounted(async () => {
         if (e.isIntersecting) e.target.classList.add("card-visible");
       });
     },
-    { threshold: 0.1 },
+    { threshold: 0.1 }
   );
   document.querySelectorAll(".term-card").forEach((el) => observer.observe(el));
 });
@@ -199,7 +199,7 @@ const getCategoryCount = (cat: string) => {
   return glossaryData.value.filter((item: any) =>
     Array.isArray(item.category)
       ? item.category.includes(cat)
-      : item.category === cat,
+      : item.category === cat
   ).length;
 };
 
@@ -210,21 +210,42 @@ const getCategoryChipName = (cat: string) =>
 </script>
 
 <template>
-  <div class="glossary-app" :class="{ 'sidebar-collapsed': isSidebarCollapsed }" :style="{ '--app-scale': fontScale }">
+  <div
+    class="glossary-app"
+    :class="{ 'sidebar-collapsed': isSidebarCollapsed }"
+    :style="{ '--app-scale': fontScale }"
+  >
     <div v-if="isMounted" class="app-layout">
       <!-- Desktop Sidebar -->
-      <AppSidebar :title="t.sidebarTitle" :is-open="!isSidebarCollapsed" class="desktop-only" @toggle="toggleSidebar"
-        @update:scale="(val) => (fontScale = val)">
+      <LayoutSidebar
+        :title="t.sidebarTitle"
+        :is-open="!isSidebarCollapsed"
+        class="desktop-only"
+        @toggle="toggleSidebar"
+        @update:scale="(val) => (fontScale = val)"
+      >
         <template #search>
           <div class="search-section">
             <div class="search-box">
               <span class="search-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <circle cx="11" cy="11" r="8"></circle>
                   <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
               </span>
-              <input v-model="searchQuery" type="text" :placeholder="t.searchPlaceholder" class="search-input" />
+              <input
+                v-model="searchQuery"
+                type="text"
+                :placeholder="t.searchPlaceholder"
+                class="search-input"
+              />
             </div>
           </div>
         </template>
@@ -237,8 +258,12 @@ const getCategoryChipName = (cat: string) =>
             </button>
           </div>
           <div class="categories-list">
-            <button v-for="cat in categoriesList" :key="cat" @click="selectedCategory = cat"
-              :class="['cat-item', { active: selectedCategory === cat }]">
+            <button
+              v-for="cat in categoriesList"
+              :key="cat"
+              @click="selectedCategory = cat"
+              :class="['cat-item', { active: selectedCategory === cat }]"
+            >
               {{ getCategoryName(cat) }}
               <span class="cat-count" v-if="getCategoryCount(cat) > 0">{{
                 getCategoryCount(cat)
@@ -246,7 +271,7 @@ const getCategoryChipName = (cat: string) =>
             </button>
           </div>
         </template>
-      </AppSidebar>
+      </LayoutSidebar>
 
       <main class="app-content">
         <header class="content-header">
@@ -259,60 +284,105 @@ const getCategoryChipName = (cat: string) =>
             <span class="status-count">{{
               t.totalTerms.replace("{n}", String(filteredTerms.length))
             }}</span>
-            <button v-if="!isMobileView" @click="toggleSort" class="desk-sort-btn">
+            <button
+              v-if="!isMobileView"
+              @click="toggleSort"
+              class="desk-sort-btn"
+            >
               {{ sortOrder === "asc" ? "A-Z" : "Z-A" }}
             </button>
           </div>
         </header>
 
         <TransitionGroup name="list" tag="div" class="terms-grid">
-          <article v-for="item in filteredTerms" :key="item.term" class="term-card">
+          <article
+            v-for="item in filteredTerms"
+            :key="item.term"
+            class="term-card"
+          >
             <div class="term-card-content">
               <div class="card-main">
                 <header class="card-header">
                   <h3 class="term-title">{{ item.term }}</h3>
                   <div class="term-badges">
-                    <span v-for="cat in Array.isArray(item.category)
-                      ? item.category
-                      : [item.category]" :key="cat" :class="['badge', getCategoryColor(cat)]">{{ getCategoryName(cat)
-                      }}</span>
+                    <span
+                      v-for="cat in Array.isArray(item.category)
+                        ? item.category
+                        : [item.category]"
+                      :key="cat"
+                      :class="['badge', getCategoryColor(cat)]"
+                      >{{ getCategoryName(cat) }}</span
+                    >
                   </div>
                 </header>
-                <div class="term-definition markdown-body" :lang="lang" v-html="item.definition"></div>
+                <div
+                  class="term-definition markdown-body"
+                  :lang="lang"
+                  v-html="item.definition"
+                ></div>
               </div>
               <section v-if="item.analogy" class="analogy-wrapper">
                 <div class="analogy-header">
                   <span class="analogy-icon">💡</span>
                   <span class="analogy-label">{{ t.analogyLabel }}</span>
                 </div>
-                <div class="analogy-text markdown-body" :lang="lang" v-html="item.analogy"></div>
+                <div
+                  class="analogy-text markdown-body"
+                  :lang="lang"
+                  v-html="item.analogy"
+                ></div>
               </section>
             </div>
           </article>
         </TransitionGroup>
 
-        <EmptyState v-if="filteredTerms.length === 0" :description="t.emptyState.replace('{q}', searchQuery)"
-          :action-text="t.clearSearch" @clear="
+        <EmptyState
+          v-if="filteredTerms.length === 0"
+          :description="t.emptyState.replace('{q}', searchQuery)"
+          :action-text="t.clearSearch"
+          @clear="
             searchQuery = '';
-          selectedCategory = 'All';
-          " />
+            selectedCategory = 'All';
+          "
+        />
       </main>
     </div>
 
     <!-- Mobile Unified Settings Drawer -->
-    <MobileDrawer v-if="isMounted" :is-open="isSettingsOpen" :title="t.drawerTitle" @close="closeMobileDrawer">
+    <LayoutMobileDrawer
+      v-if="isMounted"
+      :is-open="isSettingsOpen"
+      :title="t.drawerTitle"
+      @close="closeMobileDrawer"
+    >
       <div class="mobile-drawer-inner">
         <!-- Search Section -->
         <div class="drawer-section">
           <div class="search-box mobile-search-bar">
             <span class="search-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
                 <circle cx="11" cy="11" r="8"></circle>
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
               </svg>
             </span>
-            <input v-model="searchQuery" type="text" :placeholder="t.searchPlaceholder" class="search-input" />
-            <button v-if="searchQuery" class="clear-search-btn" @click="searchQuery = ''">
+            <input
+              v-model="searchQuery"
+              type="text"
+              :placeholder="t.searchPlaceholder"
+              class="search-input"
+            />
+            <button
+              v-if="searchQuery"
+              class="clear-search-btn"
+              @click="searchQuery = ''"
+            >
               ✕
             </button>
           </div>
@@ -328,8 +398,12 @@ const getCategoryChipName = (cat: string) =>
           </div>
           <div class="mobile-filter-chips">
             <div class="chip-scroll-container">
-              <button v-for="cat in categoriesList" :key="cat" @click="selectCategoryAndClose(cat)"
-                :class="['filter-chip', { active: selectedCategory === cat }]">
+              <button
+                v-for="cat in categoriesList"
+                :key="cat"
+                @click="selectCategoryAndClose(cat)"
+                :class="['filter-chip', { active: selectedCategory === cat }]"
+              >
                 {{ getCategoryChipName(cat) }}
               </button>
             </div>
@@ -342,31 +416,58 @@ const getCategoryChipName = (cat: string) =>
             <span>{{ t.fontScaleTitle }}</span>
           </div>
           <div class="btn-group-mobile">
-            <button @click="fontScale = 0.85" :class="{ active: fontScale === 0.85 }">
+            <button
+              @click="fontScale = 0.85"
+              :class="{ active: fontScale === 0.85 }"
+            >
               {{ t.fontExtraSmall }}
             </button>
-            <button @click="fontScale = 0.92" :class="{ active: fontScale === 0.92 }">
+            <button
+              @click="fontScale = 0.92"
+              :class="{ active: fontScale === 0.92 }"
+            >
               {{ t.fontSmall }}
             </button>
-            <button @click="fontScale = 1.0" :class="{ active: fontScale === 1.0 }">
+            <button
+              @click="fontScale = 1.0"
+              :class="{ active: fontScale === 1.0 }"
+            >
               {{ t.fontMedium }}
             </button>
-            <button @click="fontScale = 1.2" :class="{ active: fontScale === 1.2 }">
+            <button
+              @click="fontScale = 1.2"
+              :class="{ active: fontScale === 1.2 }"
+            >
               {{ t.fontLarge }}
             </button>
-            <button @click="fontScale = 1.4" :class="{ active: fontScale === 1.4 }">
+            <button
+              @click="fontScale = 1.4"
+              :class="{ active: fontScale === 1.4 }"
+            >
               {{ t.fontExtraLarge }}
             </button>
           </div>
         </div>
       </div>
-    </MobileDrawer>
+    </LayoutMobileDrawer>
 
     <!-- Super FAB Button -->
-    <button v-if="isMounted" class="super-fab-btn" @click="isSettingsOpen = true" :aria-label="t.menuBtn">
+    <button
+      v-if="isMounted"
+      class="super-fab-btn"
+      @click="isSettingsOpen = true"
+      :aria-label="t.menuBtn"
+    >
       <div class="fab-icons">
-        <svg v-if="!searchQuery" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          stroke-width="2.5">
+        <svg
+          v-if="!searchQuery"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+        >
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
@@ -491,7 +592,7 @@ const getCategoryChipName = (cat: string) =>
   border: 2px solid white;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 959px) {
   .super-fab-btn {
     display: flex;
   }

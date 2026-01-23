@@ -409,7 +409,7 @@ const t = computed(() => {
   opacity: 0.5;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 959px) {
   .app-sidebar {
     display: none;
   }

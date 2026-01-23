@@ -1,15 +1,15 @@
-
-
 ---
 File: edu-01.md
 ---
 
 ---
+
 id: edu-01
 title: "iPadOS 17 以上沒有顯示 VPN 圖示，這樣網路過濾或是使用率資料回傳還有在作用嗎？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: true
 tags: ["精進方案", "VPN", "Jamf Trust", "網路過濾", "使用率資料回傳"]
+
 ---
 
 **完全正常運作中。iPadOS 17 之後，Jamf Trust 改用「DNS Proxy」與「內容過濾器」技術，不再需要建立 VPN 通道，因此狀態列不會顯示 VPN 圖示。**
@@ -53,17 +53,18 @@ tags: ["精進方案", "VPN", "Jamf Trust", "網路過濾", "使用率資料回�
   - **對策**：需在 Jamf Pro 的「全域管理」>「Apple 教育支援」中重新產生憑證，並「重新部署」描述檔至所有裝置。
 - **使用率資料**：新架構下，使用率資料同樣透過 Jamf Trust App 在背景回報。**請務必注意不要讓學生試圖移除 Jamf Trust App**，否則會影響資料上傳。
 
-
----
-File: edu-02.md
 ---
 
+## File: edu-02.md
+
 ---
+
 id: edu-02
 title: "「共用 iPad (Shared iPad)」跟一般個人 iPad 有什麼不同？適合什麼情境？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["Shared iPad", "多帳號", "部署模式", "共用 iPad"]
+
 ---
 
 **共用 iPad 允許多位學生以各自的管理式 Apple 帳號 登入同一台裝置，資料會隔離並同步至雲端。適合「一班共用多台」的電腦教室或輪替使用情境。**
@@ -116,17 +117,18 @@ Apple 專為教育設計的共用 iPad 模式，解決了「有限裝置、大�
 
 Apple 課堂的設定現在全面轉向 **宣告式管理 (DDM)**。與傳統「推送描述檔」不同，DDM 讓裝置自主維護班級狀態。即使學生在校外使用，一旦回到校園環境，裝置會「自動」恢復為課堂模式，大幅提升連線成功率。
 
-
----
-File: edu-03.md
 ---
 
+## File: edu-03.md
+
 ---
+
 id: edu-03
 title: "老師的 iPad 跟學生的 iPad 在 MDM 設定上有什麼不同？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["角色差異", "權限", "群組設定"]
+
 ---
 
 **教師裝置與學生裝置通常套用不同的 MDM 設定描述檔、App 集合、與限制等級。教師裝置權限較大，以配合教學彈性需求。**
@@ -168,17 +170,18 @@ tags: ["角色差異", "權限", "群組設定"]
 - **角色識別**：建議使用「T-序號」（教師）與「S-序號」（學生）等命名規則，或透過使用者指派功能來區分。
 - **定期檢視**：定期檢視群組成員資格，確保新購裝置正確分類。教師離職或調職時，記得更新裝置指派或群組歸屬。
 
-
----
-File: edu-04.md
 ---
 
+## File: edu-04.md
+
 ---
+
 id: edu-04
 title: "班級輪替時（如走班、分組教學），如何快速整理平板給下一班使用？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["課堂管理", "SOP", "交接"]
+
 ---
 
 **善用「登出」與「訪客模式」快速清理，或透過 MDM 的「Return to Service」徹底重置。** 依時間緊迫程度選擇適合的方式。
@@ -235,17 +238,18 @@ tags: ["課堂管理", "SOP", "交接"]
 - 善用 **DDM (宣告式管理)** 狀態回報，確保所有 iPad 在第一節課開始前都已完成 RTS 流程。
 - 下課前預留 2-3 分鐘進行交接流程。
 
-
----
-File: edu-05.md
 ---
 
+## File: edu-05.md
+
 ---
+
 id: edu-05
 title: "覺得平板變慢、卡卡的，是不是壞掉了？該怎麼處理？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["效能", "故障排除", "變慢"]
+
 ---
 
 **多數「變慢」情況並非硬體故障，而是軟體層面的問題：太久沒重開機、儲存空間不足、或背景正在更新。可透過簡單步驟排除。**
@@ -306,17 +310,18 @@ iPad 在使用一段時間後效能下降是常見現象，但通常可以透過
 - 電池急速耗電（充飽後 2 小時內耗盡）。
 - 持續過熱。
 
-
----
-File: edu-06.md
 ---
 
+## File: edu-06.md
+
 ---
+
 id: edu-06
 title: "我可以登入自己的 Apple 帳號 下載以前買過的遊戲嗎？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["Apple 帳號", "公私分明", "個人帳號"]
+
 ---
 
 **強烈不建議，且多數學校政策明確禁止。登入私人 Apple 帳號 會導致資料混雜、啟用鎖定風險、以及 VPP 授權衝突等問題。**
@@ -353,17 +358,18 @@ tags: ["Apple 帳號", "公私分明", "個人帳號"]
 
 對學生而言，更不應該登入私人 Apple 帳號。學校平板是教育工具，不是個人遊戲機。若需個人 App，請使用自己的私人裝置。
 
-
----
-File: edu-07.md
 ---
 
+## File: edu-07.md
+
 ---
+
 id: edu-07
 title: "聽說 MDM 很耗電？這是真的嗎？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["電池", "迷思", "MDM", "耗電"]
+
 ---
 
 **這是迷思。MDM 本身的資源消耗極低，不會明顯影響電池續航。真正的耗電殺手通常是螢幕亮度、影片串流、以及 GPS 導航等行為。**
@@ -403,17 +409,18 @@ Jamf Trust App 負責內容過濾與資料回報，其耗電量也極低：
 
 若裝置使用數年後電池明顯不如過去耐用，可能是電池老化。可透過 Jamf Pro 或第三方軟體查詢電池循環次數與健康度，評估是否需要更換電池。
 
-
----
-File: edu-08.md
 ---
 
+## File: edu-08.md
+
 ---
+
 id: edu-08
 title: "收到 iOS 更新通知，我可以馬上更新嗎？還是要等學校通知？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["系統更新", "穩定性", "iOS 更新"]
+
 ---
 
 **建議等待學校通知後再更新。新版 iOS 剛推出時可能存在與教學 App 或 MDM 功能的相容性問題，學校會在驗證後統一安排更新。**
@@ -446,17 +453,18 @@ Apple 每隔數週就會發布 iOS/iPadOS 更新，包含安全修補與新功�
 - **等待學校公告**。通常 IT 團隊會在驗證後發布「可以更新」的通知。
 - **確保更新前電量充足（>50%）並連接穩定 Wi-Fi**。
 
-
----
-File: edu-09.md
 ---
 
+## File: edu-09.md
+
 ---
+
 id: edu-09
 title: "我要如何把 iPad 畫面投影到傳統電視或沒有 Apple TV 的教室？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["投影", "轉接", "AirPlay", "HDMI"]
+
 ---
 
 **可透過 HDMI 轉接器有線連接（最穩定），或使用第三方無線投影軟體（延遲較高）。最佳方案仍是建議學校購置 Apple TV。**
@@ -489,17 +497,18 @@ tags: ["投影", "轉接", "AirPlay", "HDMI"]
 - 需攜帶轉接器與線材。
 - iPad 需固定線上材可達範圍內。
 
-
----
-File: edu-10.md
 ---
 
+## File: edu-10.md
+
 ---
+
 id: edu-10
 title: "為什麼 App Store 不見了？我要怎麼下載 App？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: true
 tags: ["App Store", "Self Service", "限制"]
+
 ---
 
 **這是學校刻意的設定。App Store 被隱藏是為了防止學生自行下載未經審核的 App。請改用「Self Service (自助服務)」App 安裝學校核准的應用程式。**
@@ -546,17 +555,18 @@ tags: ["App Store", "Self Service", "限制"]
 - **安裝按鈕是灰色的**：可能授權數量不足或 App 正在背景處理，稍後再試。
 - **找不到 Self Service App**：它可能被收進某個資料夾中，或在第二頁。也可使用 Spotlight 搜尋。
 
-
----
-File: edu-11.md
 ---
 
+## File: edu-11.md
+
 ---
+
 id: edu-11
 title: "「引導使用模式 (Guided Access)」跟「單一 App 模式」有什麼不一樣？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["鎖定", "比較", "Guided Access", "單一 App 模式"]
+
 ---
 
 **兩者都能將 iPad 鎖定在單一 App 中，但控制權不同：引導使用模式由使用者（老師）手動開關；單一 App 模式由 MDM 強制設定，重開機也無法解除。**
@@ -574,17 +584,18 @@ tags: ["鎖定", "比較", "Guided Access", "單一 App 模式"]
 | **重開機後**     | 解除（需重新啟動）         | **仍被鎖定**                     |
 | **需 MDM**       | ❌ 不需要                  | ✅ 需要                          |
 
-
----
-File: edu-12.md
 ---
 
+## File: edu-12.md
+
 ---
+
 id: edu-12
 title: "學生做完的作業（Keynote/Pages）要怎麼交給老師？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["作業繳交", "檔案分享", "Google Drive"]
+
 ---
 
 **最佳方式是透過雲端硬碟（Google Drive、OneDrive、或 iCloud Drive）繳交。也可使用 AirDrop、Google Classroom 作業功能、或 Self Service 指定的繳交平台。**
@@ -647,17 +658,18 @@ tags: ["作業繳交", "檔案分享", "Google Drive"]
 - **檔案太大無法上傳**：壓縮影片解析度，或改用雲端連結分享。
 - **忘記儲存**：確認在 App 中點選「完成」或「儲存」後再離開。
 
-
----
-File: edu-13.md
 ---
 
+## File: edu-13.md
+
 ---
+
 id: edu-13
 title: "可以用滑鼠或藍牙鍵盤操控 iPad 嗎？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["滑鼠", "鍵盤", "輔助使用", "配件"]
+
 ---
 
 **可以。iPadOS 13.4 及更新版本完整支援滑鼠、觸控式軌跡板、以及藍牙/USB 鍵盤，提供類似電腦的操作體驗。**
@@ -688,17 +700,18 @@ Apple 在 iPadOS 13.4 中大幅強化了對滑鼠與觸控板的支援，讓 iPa
 - 設定 > 輔助使用 > 指標控制。
 - 可調整指標大小、對比、滾動速度、次要按鈕（右鍵）。
 
-
----
-File: edu-14.md
 ---
 
+## File: edu-14.md
+
 ---
+
 id: edu-14
 title: "【密碼合規】為什麼 iPad 突然要求我設定 6 位數以上的密碼？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["密碼策略", "資安", "合規"]
+
 ---
 
 **這是因為管理員部署了更嚴格的「密碼設定描述檔」，以符合資安等級要求。**
@@ -714,17 +727,18 @@ tags: ["密碼策略", "資安", "合規"]
 - 設定一個自己容易記住但他人難以猜測的密碼。
 - 若遺忘密碼，請聯繫 資訊組長透過 MDM 遠端清除。
 
-
----
-File: edu-15.md
 ---
 
+## File: edu-15.md
+
 ---
+
 id: edu-15
 title: "【定位爭議】開啟「遺失模式」會侵犯我的隱私嗎？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["遺失模式", "隱私", "定位"]
+
 ---
 
 **不會。遺失模式 (Lost Mode) 是專為尋回裝置設計的，只有在裝置被標記為「遺失」時才會啟用定位。**
@@ -735,17 +749,18 @@ tags: ["遺失模式", "隱私", "定位"]
 1.  **使用者感知** ：裝置螢幕會鎖定並顯示「此 iPad 已遺失」以及管理員預設的聯絡電話。
 1.  **隱私保護** ：管理員只有在遺失模式下才能取得座標；一旦解除遺失模式，定位功能會恢復使用者原本的設定，管理員無法持續追蹤。
 
-
----
-File: edu-16.md
 ---
 
+## File: edu-16.md
+
 ---
+
 id: edu-16
 title: "【軟體安裝】為什麼 iPad 不能像 Android 一樣安裝 APK（或第三方來源 App）？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["安全", "側載", "Sideloading"]
+
 ---
 
 **這是為了確保裝置的安全與穩定。Apple 限制僅能從 App Store 或受信任的企業 MDM 管道安裝軟體**（防止「側載」）。
@@ -760,17 +775,18 @@ tags: ["安全", "側載", "Sideloading"]
 
 若有教學需求，請向 資訊組提出申請，由管理員評估安全後，透過 VPP 採購並統一派送至您的裝置。
 
-
----
-File: edu-17.md
 ---
 
+## File: edu-17.md
+
 ---
+
 id: edu-17
 title: "【實務排錯】為什麼學生的 iPad 找不到「螢幕錄製」按鈕，或是按鈕是灰色的？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: true
 tags: ["螢幕錄製", "教育限制", "控制中心", "限制描述檔"]
+
 ---
 
 **這通常是因為教育部或學校的 MDM 描述檔中「限制」了螢幕錄製功能，或是單純未將按鈕加入控制中心。**
@@ -792,17 +808,18 @@ tags: ["螢幕錄製", "教育限制", "控制中心", "限制描述檔"]
 - 若學生自行開啟了螢幕使用時間限制，也可能導致此功能被封鎖。
 - **解法** ：前往 **「設定」>「螢幕使用時間」>「內容與隱私限制」** 中確認相關設定。
 
-
----
-File: edu-18.md
 ---
 
+## File: edu-18.md
+
 ---
+
 id: edu-18
 title: "【網路排除】iPad 顯示已連上 Wi-Fi 也有打勾，但網頁都打不開（顯示無網路連線）？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["DNS", "DHCP", "網路故障", "交叉測試"]
+
 ---
 
 **這種情況通常是「取得假 IP」或是「DNS 解析失敗」造成的，不一定是 iPad 壞掉。**
@@ -824,17 +841,18 @@ tags: ["DNS", "DHCP", "網路故障", "交叉測試"]
 
 - 若學校安裝了 **Jamf Trust** ，請確認 App 內是否顯示「已保護」。有時過濾器崩潰會導致所有網路流量被攔截，此時可嘗試重啟 iPad。
 
-
----
-File: edu-19.md
 ---
 
+## File: edu-19.md
+
 ---
+
 id: edu-19
 title: "新要求：教育部資安稽核要求符合 NIST 標準，MDM 該如何配合？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["資安稽核", "NIST", "規範"]
+
 ---
 
 ## Q: 新要求：教育部資安稽核要求符合 NIST 標準，MDM 該如何配合？
@@ -863,17 +881,18 @@ tags: ["資安稽核", "NIST", "規範"]
 
 **組長觀點** ：NIST 標準是資安的底線。利用自購版 Jamf Pro 維持對新技術的掌握度，是 資訊組長在面對變動快速的資安環境時，最專業的自保與進步之道。
 
-
----
-File: edu-20.md
 ---
 
+## File: edu-20.md
+
 ---
+
 id: edu-20
 title: "【實務排錯】學生將 iPad 密碼設為跟 Apple 帳號 一樣，導致帳號被鎖定怎麼辦？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["密碼管理", "帳號安全", "排錯"]
+
 ---
 
 **這是最常見的「連鎖鎖定」風險。若學生多次輸入錯誤密碼導致裝置與帳號同時被鎖，管理員需分兩步解鎖。**
@@ -884,17 +903,18 @@ tags: ["密碼管理", "帳號安全", "排錯"]
 1.  **重置管理式 Apple 帳號 密碼**：管理員在 Apple School Manager (ASM) 後台找到該學生帳號，點選「重置密碼 (Reset Password)」，產生一組臨時密碼。
 1.  **教育宣導**：告知學生裝置密碼（螢幕解鎖）與 Apple 帳號（個人身分）密碼應區分，並建議由導師協助留存學生的密碼備份或使用數位密碼簿。
 
-
----
-File: edu-21.md
 ---
 
+## File: edu-21.md
+
 ---
+
 id: edu-21
 title: "如何管理 iOS 18 新增的「訊息摘要 (Notification Summary)」功能？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: true
 tags: ["iOS 18", "Apple Intelligence", "通知管理"]
+
 ---
 
 **iOS 18 引進了 AI 自動摘要通知內容的功能 (Apple Intelligence)。這在某些專注模式下是很有用的，但也可能讓學生忽略完整訊息或在課堂中造成分心。**
@@ -908,17 +928,18 @@ tags: ["iOS 18", "Apple Intelligence", "通知管理"]
 
 此功能屬於 Apple Intelligence 的一部分，僅能在支援 AI 的機型（如 iPad Air M1/M2/M3, iPad Pro M1-M4 等）上運作與進行軟體管控。
 
-
----
-File: edu-22.md
 ---
 
+## File: edu-22.md
+
 ---
+
 id: edu-22
 title: "iOS 26.2 的 AirDrop 代碼機制對課堂檔案分享的實務影響與應對方式"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["AirDrop", "系統更新", "檔案傳輸", "課堂", "實務操作"]
+
 ---
 
 **iOS 26.2、iPadOS 26.2 與 macOS 26.2 引入 AirDrop 代碼機制後，非聯絡人間的首次 AirDrop 傳輸必須透過代碼驗證。**這對教育現場的檔案分享流程產生實質影響，但可透過調整操作流程或使用「課堂」App 來因應。
@@ -967,17 +988,18 @@ tags: ["AirDrop", "系統更新", "檔案傳輸", "課堂", "實務操作"]
 - **課前準備**：確認 Wi-Fi 和藍牙都已開啟，並關閉「個人熱點」，因為熱點會干擾 AirDrop。
 - **版本相容性**：若班上裝置版本不一，部分學生需要代碼、部分不需要，建議統一更新至最新版本避免混淆。
 
-
----
-File: edu-23.md
 ---
 
+## File: edu-23.md
+
 ---
+
 id: edu-23
 title: "如何使用 iPadOS 26.2 的「視窗 App (Window App)」多工處理功能提升教學效率？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["iPadOS 26", "多工處理", "視窗 App", "滑動置前", "教學效率"]
+
 ---
 
 **iPadOS 26.2 引進了全新的「視窗 App」模式，讓 iPad 能像電腦一樣自由調整視窗大小、並排使用多個 App。**這對於需要同時參考資料（如 Safari）與製作筆記或進行課堂評量（如課堂 App）的師生來說，能大幅提升生產力。
@@ -1007,17 +1029,18 @@ tags: ["iPadOS 26", "多工處理", "視窗 App", "滑動置前", "教學效率"
 - **老師側**：老師可以同時開啟「課堂 App」監控學生，並在隔壁視窗開啟「電子書」或「教學投影片」進行講述。
 - **學生側**：鼓勵學生左側開啟「教學影片」，右側開啟「Goodnotes」做筆記，並透過「滑動置前」隨時彈出「翻譯」查閱英文生字。
 
-
----
-File: edu-24.md
 ---
 
+## File: edu-24.md
+
 ---
+
 id: edu-24
 title: "iOS 26 的「寫作工具」(Writing Tools) 在正式評量或考試時該如何管理？哪些功能需要禁用？"
 category: "第八部分：教育場景與教學應用 (Education Scenarios)"
 important: true
 tags: ["Writing Tools", "Apple Intelligence", "考試防弊", "iOS 26", "AI"]
+
 ---
 
 **Apple Intelligence 的「寫作工具」即使離線也能運作，對語文類考試構成作弊風險。**支援 Apple Intelligence 的裝置必須在正式評量時透過 MDM 強制禁用相關功能，以維護考試公平性。
@@ -1050,17 +1073,18 @@ tags: ["Writing Tools", "Apple Intelligence", "考試防弊", "iOS 26", "AI"]
 
 需注意班上設備可能不一致，只有具備 M 系列晶片或 A17 Pro 以上的機型（如 iPad Air M1/M2+, iPad Pro M1+, iPad mini 7）支援 AI，因此必須優先針對這些裝置設定限制。對於 iPad 9 或 iPad 10 等不支援 AI 的裝置，則無需特別設定。
 
-
----
-File: edu-25.md
 ---
 
+## File: edu-25.md
+
 ---
+
 id: edu-25
 title: "精進方案結束後，學生使用的 iPad 還可以繼續用於學習嗎？系統升級到 iOS 26 會有問題嗎？"
 category: "第八部分：教育場景與教學應用 (Education Scenarios)"
 important: false
 tags: ["精進方案", "2026", "系統升級", "iOS 26", "後續使用"]
+
 ---
 
 **精進方案的 iPad 屬於學校資產，即便計畫期程結束，只要硬體完好，升級至 iOS 26 是可行且建議的。**這能確保裝置獲得最新的安全性修補與系統改進，延長設備使用壽命。
@@ -1090,17 +1114,18 @@ tags: ["精進方案", "2026", "系統升級", "iOS 26", "後續使用"]
 - **安全性過濾**：若有部署 Jamf Safe Internet，建議持續運作，以過濾不良網頁。
 - **家長參與**：可引導家長了解 iOS 內建的「螢幕使用時間」功能，協助管理學生的數位健康。
 
-
----
-File: edu-26.md
 ---
 
+## File: edu-26.md
+
 ---
+
 id: edu-26
 title: "老師如何管理 iOS 26 的 Apple Intelligence「寫作工具」？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: true
 tags: ["Apple Intelligence", "寫作工具", "AI 管理", "測驗安全"]
+
 ---
 
 **Apple Intelligence 的「寫作工具 (Writing Tools)」是強大的輔助，但在語文課或測驗中需妥善控管。**老師可以透過行政端的 MDM 設定，或課堂當下的工具進行監管與引導。
@@ -1130,17 +1155,18 @@ iOS 26 強化了老師對學生設備狀態的感知：
 - **建立 AI 誠信規範**：若教學目標允許使用 AI，建議要求學生在繳交作業時標註「本文經 Apple Intelligence 校對」。
 - **反向教學**：利用 AI 產出的多個改寫版本，帶領學生討論不同修辭的優劣，將 AI 轉化為批判性思考的工具。
 
-
----
-File: edu-27.md
 ---
 
+## File: edu-27.md
+
 ---
+
 id: edu-27
 title: "學校如果想更換 MDM 廠商，一定要把 iPad 全部重灌 (Wipe) 嗎？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: true
 tags: ["MDM 遷移", "Zero-Wipe", "系統維護", "2026 新技術"]
+
 ---
 
 **在 2026 年以前是肯定的，但在 iOS 26 後，Apple 引入了「Zero-Wipe MDM Migration」技術。**只要符合特定條件，學校可以在不清除裝置資料、不重灌 App 的情況下，將裝置靜默地從 A 廠商遷移至 B 廠商。
@@ -1173,17 +1199,18 @@ tags: ["MDM 遷移", "Zero-Wipe", "系統維護", "2026 新技術"]
 - **學年度交替時**：強烈建議使用 **EACS (快速重置)** 進行重灌，確保每台載具都有 100% 乾淨、效能最佳化的起點。
 - **學期中緊急遷移**：若完全沒有時間重灌，才考慮使用 **Zero-Wipe** 技術進行應急遷移。
 
-
----
-File: edu-28.md
 ---
 
+## File: edu-28.md
+
 ---
+
 id: edu-28
 title: "學校 iPad/Mac 到達使用年限後，MDM 管理員應如何處理「退休」流程？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["裝置退休", "ESG", "資料清理", "資產管理"]
+
 ---
 
 **裝置退休作業涉及資料安全與資產權限的歸還。**正確的流程能確保學生隱私不外洩，並符合教育部的 ESG 永續管理與資安審計規範。
@@ -1216,17 +1243,18 @@ tags: ["裝置退休", "ESG", "資料清理", "資產管理"]
 
 建議資訊組長每年學期末定期檢視資產狀態，確實在 ASM 與 MDM 中完成解編作業，避免「名存實亡」的資產佔用授權額度。
 
-
----
-File: edu-29.md
 ---
 
+## File: edu-29.md
+
 ---
+
 id: edu-29
 title: "在 AI 時代（iOS 26），MDM 如何輔助「數位公民教育」與行為管理？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: false
 tags: ["數位公民", "AI 倫理", "行為管理", "iOS 26"]
+
 ---
 
 **MDM 不應只是「限制器」，而是數位公民教育的「守護欄」。**透過 iOS 26 的新功能，管理員可以引導學生建立負責任的 AI 使用與網路瀏覽習慣。
@@ -1255,17 +1283,18 @@ tags: ["數位公民", "AI 倫理", "行為管理", "iOS 26"]
 
 在 iOS 26 強大的技術基礎上，管理員的目標是與教師合作，打造一個「低干擾、安全且具備 AI 素養」的模擬社會環境。
 
-
----
-File: edu-30.md
 ---
 
+## File: edu-30.md
+
 ---
+
 id: edu-30
 title: "學校 Wi-Fi 斷網或不穩定時，MDM 管理的 iPad 還能上課嗎？備援方案為何？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: true
 tags: ["斷網維運", "備援方案", "離線使用", "網路不穩"]
+
 ---
 
 **iPad 的優勢之一在於強大的「離線作業」與「點對點通訊」能力。**即使學校對外網際網路斷開，多數已安裝的 App 與課堂監控功能仍可藉由區域網路或藍牙維持運行。
@@ -1298,17 +1327,18 @@ Keynote, Pages, Numbers, GarageBand 等創意套件完全支援離線編輯。
 
 在規劃無線網路時，應確保 AP 具備充足的本地處理能力，防止在對外網路斷開時內部流量 (mDNS/Bonjour) 也跟著癱瘓。
 
-
----
-File: edu-31.md
 ---
 
+## File: edu-31.md
+
 ---
+
 id: edu-31
 title: "「教育部版 Jamf Pro」與「校方自購版」有什麼不同？可以互通嗎？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: true
 tags: ["教育部版", "自購版", "權限差異", "功能銜接", "資訊組長"]
+
 ---
 
 **兩者在功能權限、更新頻率與「全域功能開關控制權」上存在差異，但資產序號可以在不同伺服器間自由轉移。**
@@ -1346,17 +1376,18 @@ tags: ["教育部版", "自購版", "權限差異", "功能銜接", "資訊組�
 - **可用性判斷**：若您在教育部版介面找不到相關按鈕，這**並不代表技術不存在或裝置故障**。這通常是因為中央後台尚未開啟該 Payload 或是您的權限受限。
 - **最佳建議**：若需針對精進行政效率的新功能進行深度實驗（如利用 Swift 腳本進行校務自動化），建議於具備 Full Admin 權限的「校內自購版環境」中進行先行測試，穩定後再推行至全區。
 
-
----
-File: edu-32.md
 ---
 
+## File: edu-32.md
+
 ---
+
 id: edu-32
 title: "學生忘記 iPad 解鎖密碼 (Passcode) 怎麼辦？老師可以幫忙重設嗎？"
 category: "第八部分：教育場域常見情境 (Education Scenarios)"
 important: true
 tags: ["解鎖密碼", "忘記密碼", "Jamf Pro", "遠端指令", "故障排除"]
+
 ---
 
 **可以的。只要 iPad 是由學校 MDM (Jamf Pro) 管理且處於連網狀態，老師或資訊組長可以透過指令直接「清除密碼」，而不需要重灌裝置。**
@@ -1390,5 +1421,3 @@ tags: ["解鎖密碼", "忘記密碼", "Jamf Pro", "遠端指令", "故障排除
 ## 💡 老師小撇步
 
 在 iOS 26 的環境下，只要裝置維持在校園 Wi-Fi 訊號範圍內，清除密碼指令通常能在 5-10 秒內生效，學生無需離開教室即可即時恢復上課。
-
-

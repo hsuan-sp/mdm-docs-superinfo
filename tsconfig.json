@@ -21,19 +21,19 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    
+
     /* Path mapping */
     "baseUrl": ".",
     "paths": {
       "@/*": ["docs/.vitepress/*"]
     },
-    
+
     /* Type checking */
     "types": ["vite/client", "node"]
   },
   "include": [
     "docs/**/*.ts",
-    "docs/**/*.mts", 
+    "docs/**/*.mts",
     "docs/**/*.d.ts",
     "docs/**/*.tsx",
     "docs/**/*.vue",

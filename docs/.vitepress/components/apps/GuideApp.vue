@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted, shallowRef } from "vue";
 import { useData } from "vitepress";
-import { useAppFeatures } from "../theme/composables/useAppFeatures";
-import { useKeyboardShortcuts } from "../theme/composables/useKeyboardShortcuts";
+import { useAppFeatures } from "../../theme/composables/useAppFeatures";
+import { useKeyboardShortcuts } from "../../theme/composables/useKeyboardShortcuts";
 // @ts-ignore
-import { data as rawLoaderData } from "../../data/all.data";
+import { data as rawLoaderData } from "../../../data/all.data";
 
 const { lang } = useData();
 const isMounted = ref(false);
@@ -19,10 +19,10 @@ const langData = computed(() => {
 });
 const allQAData = computed(() => langData.value?.allQAData || []);
 
-import type { QAItem } from "../../types";
-import AppSidebar from "./AppSidebar.vue";
-import MobileDrawer from "../theme/components/MobileDrawer.vue";
-import EmptyState from "../theme/components/EmptyState.vue";
+import type { QAItem } from "../../../types";
+import LayoutSidebar from "../layout/LayoutSidebar.vue";
+import LayoutMobileDrawer from "../layout/LayoutMobileDrawer.vue";
+import EmptyState from "../ui/EmptyState.vue";
 
 // UI Translations
 const t = computed(() => {
@@ -103,7 +103,7 @@ const getChapterCount = (source: string) => {
   if (!module) return 0;
   return module.sections.reduce(
     (total: number, section: any) => total + section.items.length,
-    0,
+    0
   );
 };
 
@@ -121,7 +121,7 @@ const handleHashChange = () => {
   const targetSource =
     hashMap[hash] ||
     (allQAData.value as any[]).find((m: any) =>
-      m.source.toLowerCase().includes(hash),
+      m.source.toLowerCase().includes(hash)
     )?.source;
 
   if (targetSource) {
@@ -172,7 +172,7 @@ const searchResults = computed(() => {
             relevance,
           });
         }
-      }),
+      })
     );
 
     if (matches.length) {
@@ -186,7 +186,7 @@ const searchResults = computed(() => {
 const currentModule = computed(() => {
   if (activeSource.value === "All") return null;
   return (allQAData.value as any[]).find(
-    (d: any) => d.source === activeSource.value,
+    (d: any) => d.source === activeSource.value
   );
 });
 
@@ -235,7 +235,7 @@ const isAllExpanded = computed(() => {
   if (searchResults.value) {
     const totalItems = searchResults.value.reduce(
       (acc: number, group: any) => acc + group.items.length,
-      0,
+      0
     );
     return openItems.value.size === totalItems && totalItems > 0;
   } else if (activeSource.value === "All") {
@@ -244,15 +244,15 @@ const isAllExpanded = computed(() => {
         acc +
         module.sections.reduce(
           (s: number, section: any) => s + section.items.length,
-          0,
+          0
         ),
-      0,
+      0
     );
     return openItems.value.size === totalItems && totalItems > 0;
   } else if (currentModule.value) {
     const totalItems = currentModule.value.sections.reduce(
       (acc: number, section: any) => acc + section.items.length,
-      0,
+      0
     );
     return openItems.value.size === totalItems && totalItems > 0;
   }
@@ -270,7 +270,7 @@ watch(searchQuery, (newVal) => {
 useKeyboardShortcuts({
   onSearchFocus: () => {
     const searchInput = document.querySelector(
-      ".search-input",
+      ".search-input"
     ) as HTMLInputElement;
     searchInput?.focus();
   },
@@ -307,44 +307,74 @@ const closeMobileDrawer = () => {
 </script>
 
 <template>
-  <div class="guide-app" :style="{ '--app-scale': fontScale }" :class="{ 'sidebar-collapsed': isSidebarCollapsed }">
+  <div
+    class="guide-app"
+    :style="{ '--app-scale': fontScale }"
+    :class="{ 'sidebar-collapsed': isSidebarCollapsed }"
+  >
     <div v-if="isMounted" class="app-layout">
       <!-- Desktop Sidebar -->
-      <AppSidebar :title="t.sidebarTitle" :is-open="!isSidebarCollapsed" class="desktop-only" @toggle="toggleSidebar"
-        @update:scale="(val) => (fontScale = val)">
+      <LayoutSidebar
+        :title="t.sidebarTitle"
+        :is-open="!isSidebarCollapsed"
+        class="desktop-only"
+        @toggle="toggleSidebar"
+        @update:scale="(val) => (fontScale = val)"
+      >
         <template #search>
           <div class="search-section">
             <div class="search-box">
               <span class="search-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
                   <circle cx="11" cy="11" r="8"></circle>
                   <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
               </span>
-              <input v-model="searchQuery" type="text" :placeholder="t.searchPlaceholder" class="search-input" />
+              <input
+                v-model="searchQuery"
+                type="text"
+                :placeholder="t.searchPlaceholder"
+                class="search-input"
+              />
             </div>
           </div>
         </template>
 
         <template #nav-items>
-          <button @click="switchModule('All')" :class="[
-            'nav-item',
-            { active: activeSource === 'All' && !searchQuery },
-          ]">
+          <button
+            @click="switchModule('All')"
+            :class="[
+              'nav-item',
+              { active: activeSource === 'All' && !searchQuery },
+            ]"
+          >
             <span class="nav-text">{{ t.allQuestions }}</span>
             <span class="nav-count">{{
               (allQAData as any[]).reduce(
                 (t: any, m: any) => t + getChapterCount(m.source),
-                0,
+                0
               )
             }}</span>
           </button>
           <div class="sidebar-divider"></div>
-          <button v-for="module in allQAData" :key="module.source" @click="switchModule(module.source)" :class="[
-            'nav-item',
-            { active: activeSource === module.source && !searchQuery },
-          ]">
+          <button
+            v-for="module in allQAData"
+            :key="module.source"
+            @click="switchModule(module.source)"
+            :class="[
+              'nav-item',
+              { active: activeSource === module.source && !searchQuery },
+            ]"
+          >
             <span class="nav-text">{{ module.source }}</span>
             <span class="nav-count">{{ getChapterCount(module.source) }}</span>
           </button>
@@ -352,20 +382,37 @@ const closeMobileDrawer = () => {
 
         <template #footer>
           <div class="sidebar-actions">
-            <button @click="isAllExpanded ? collapseAll() : expandAll()" class="desktop-expand-btn">
-              <svg v-if="!isAllExpanded" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2.5">
+            <button
+              @click="isAllExpanded ? collapseAll() : expandAll()"
+              class="desktop-expand-btn"
+            >
+              <svg
+                v-if="!isAllExpanded"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
-              <svg v-else width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2.5">
+              <svg
+                v-else
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
                 <polyline points="18 15 12 9 6 15"></polyline>
               </svg>
               <span>{{ isAllExpanded ? t.collapseAll : t.expandAll }}</span>
             </button>
           </div>
         </template>
-      </AppSidebar>
+      </LayoutSidebar>
 
       <main class="app-content">
         <header class="content-header" v-if="searchQuery">
@@ -376,10 +423,19 @@ const closeMobileDrawer = () => {
 
         <div v-if="searchQuery" class="result-container">
           <div v-if="searchResults && searchResults.length > 0">
-            <div v-for="group in searchResults" :key="group.source" class="module-group">
+            <div
+              v-for="group in searchResults"
+              :key="group.source"
+              class="module-group"
+            >
               <h3 class="group-label">{{ group.source }}</h3>
-              <div v-for="(item, idx) in group.items" :key="item.id" class="qa-item"
-                :class="{ open: openItems.has(item.id) }" :style="{ '--item-index': idx }">
+              <div
+                v-for="(item, idx) in group.items"
+                :key="item.id"
+                class="qa-item"
+                :class="{ open: openItems.has(item.id) }"
+                :style="{ '--item-index': idx }"
+              >
                 <div class="qa-card-content">
                   <div class="qa-trigger" @click="toggleItem(item.id)">
                     <div class="q-main">
@@ -391,24 +447,43 @@ const closeMobileDrawer = () => {
                     <span class="arrow">▼</span>
                   </div>
                   <div v-if="openItems.has(item.id)" class="qa-content">
-                    <div class="markdown-body" :lang="lang" v-html="item.answer"></div>
+                    <div
+                      class="markdown-body"
+                      :lang="lang"
+                      v-html="item.answer"
+                    ></div>
                     <div class="tags">
-                      <span v-for="tag in item.tags" :key="tag" class="tag">#{{ tag }}</span>
+                      <span v-for="tag in item.tags" :key="tag" class="tag"
+                        >#{{ tag }}</span
+                      >
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <EmptyState v-else @clear="searchQuery = ''" :action-text="t.clearSearch" />
+          <EmptyState
+            v-else
+            @clear="searchQuery = ''"
+            :action-text="t.clearSearch"
+          />
         </div>
 
         <div v-else class="module-view">
           <template v-if="activeSource !== 'All'">
-            <div v-for="section in currentModule?.sections" :key="section.title" class="section-block">
+            <div
+              v-for="section in currentModule?.sections"
+              :key="section.title"
+              class="section-block"
+            >
               <h3 class="section-label">{{ section.title }}</h3>
-              <div v-for="(item, idx) in section.items" :key="item.id" class="qa-item"
-                :class="{ open: openItems.has(item.id) }" :style="{ '--item-index': idx }">
+              <div
+                v-for="(item, idx) in section.items"
+                :key="item.id"
+                class="qa-item"
+                :class="{ open: openItems.has(item.id) }"
+                :style="{ '--item-index': idx }"
+              >
                 <div class="qa-card-content">
                   <div class="qa-trigger" @click="toggleItem(item.id)">
                     <div class="q-main">
@@ -420,9 +495,15 @@ const closeMobileDrawer = () => {
                     <span class="arrow">▼</span>
                   </div>
                   <div v-if="openItems.has(item.id)" class="qa-content">
-                    <div class="markdown-body" :lang="lang" v-html="item.answer"></div>
+                    <div
+                      class="markdown-body"
+                      :lang="lang"
+                      v-html="item.answer"
+                    ></div>
                     <div class="tags">
-                      <span v-for="tag in item.tags" :key="tag" class="tag">#{{ tag }}</span>
+                      <span v-for="tag in item.tags" :key="tag" class="tag"
+                        >#{{ tag }}</span
+                      >
                     </div>
                   </div>
                 </div>
@@ -431,12 +512,25 @@ const closeMobileDrawer = () => {
           </template>
 
           <template v-else>
-            <div v-for="module in allQuestions" :key="module.source" class="chapter-group">
+            <div
+              v-for="module in allQuestions"
+              :key="module.source"
+              class="chapter-group"
+            >
               <h2 class="chapter-title">{{ module.source }}</h2>
-              <div v-for="section in module.sections" :key="section.title" class="section-block">
+              <div
+                v-for="section in module.sections"
+                :key="section.title"
+                class="section-block"
+              >
                 <h3 class="section-label">{{ section.title }}</h3>
-                <div v-for="(item, idx) in section.items" :key="item.id" class="qa-item"
-                  :class="{ open: openItems.has(item.id) }" :style="{ '--item-index': idx }">
+                <div
+                  v-for="(item, idx) in section.items"
+                  :key="item.id"
+                  class="qa-item"
+                  :class="{ open: openItems.has(item.id) }"
+                  :style="{ '--item-index': idx }"
+                >
                   <div class="qa-card-content">
                     <div class="qa-trigger" @click="toggleItem(item.id)">
                       <div class="q-main">
@@ -448,9 +542,15 @@ const closeMobileDrawer = () => {
                       <span class="arrow">▼</span>
                     </div>
                     <div v-if="openItems.has(item.id)" class="qa-content">
-                      <div class="markdown-body" :lang="lang" v-html="item.answer"></div>
+                      <div
+                        class="markdown-body"
+                        :lang="lang"
+                        v-html="item.answer"
+                      ></div>
                       <div class="tags">
-                        <span v-for="tag in item.tags" :key="tag" class="tag">#{{ tag }}</span>
+                        <span v-for="tag in item.tags" :key="tag" class="tag"
+                          >#{{ tag }}</span
+                        >
                       </div>
                     </div>
                   </div>
@@ -465,19 +565,40 @@ const closeMobileDrawer = () => {
     <div v-if="!isMounted" class="app-loading-placeholder"></div>
 
     <!-- Mobile Super Drawer: Contains Everything -->
-    <MobileDrawer v-if="isMounted" :is-open="isSidebarOpen" :title="t.drawerTitle" @close="closeMobileDrawer">
+    <LayoutMobileDrawer
+      v-if="isMounted"
+      :is-open="isSidebarOpen"
+      :title="t.drawerTitle"
+      @close="closeMobileDrawer"
+    >
       <div class="mobile-drawer-inner">
         <!-- Search Section -->
         <div class="drawer-section">
           <div class="search-box mobile-search-bar">
             <span class="search-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
                 <circle cx="11" cy="11" r="8"></circle>
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
               </svg>
             </span>
-            <input v-model="searchQuery" type="text" :placeholder="t.searchPlaceholder" class="search-input" />
-            <button v-if="searchQuery" class="clear-search-btn" @click="searchQuery = ''">
+            <input
+              v-model="searchQuery"
+              type="text"
+              :placeholder="t.searchPlaceholder"
+              class="search-input"
+            />
+            <button
+              v-if="searchQuery"
+              class="clear-search-btn"
+              @click="searchQuery = ''"
+            >
               ✕
             </button>
           </div>
@@ -490,11 +611,18 @@ const closeMobileDrawer = () => {
           </div>
           <div class="mobile-filter-chips">
             <div class="chip-scroll-container">
-              <button @click="switchModule('All')" :class="['filter-chip', { active: activeSource === 'All' }]">
+              <button
+                @click="switchModule('All')"
+                :class="['filter-chip', { active: activeSource === 'All' }]"
+              >
                 {{ t.allLabel }}
               </button>
-              <button v-for="m in allQAData" :key="m.source" @click="switchModule(m.source)"
-                :class="['filter-chip', { active: activeSource === m.source }]">
+              <button
+                v-for="m in allQAData"
+                :key="m.source"
+                @click="switchModule(m.source)"
+                :class="['filter-chip', { active: activeSource === m.source }]"
+              >
                 {{ m.source }}
               </button>
             </div>
@@ -507,19 +635,34 @@ const closeMobileDrawer = () => {
             <span>{{ t.fontScaleTitle }}</span>
           </div>
           <div class="btn-group-mobile">
-            <button @click="fontScale = 0.85" :class="{ active: fontScale === 0.85 }">
+            <button
+              @click="fontScale = 0.85"
+              :class="{ active: fontScale === 0.85 }"
+            >
               {{ t.fontExtraSmall }}
             </button>
-            <button @click="fontScale = 0.92" :class="{ active: fontScale === 0.92 }">
+            <button
+              @click="fontScale = 0.92"
+              :class="{ active: fontScale === 0.92 }"
+            >
               {{ t.fontSmall }}
             </button>
-            <button @click="fontScale = 1.0" :class="{ active: fontScale === 1.0 }">
+            <button
+              @click="fontScale = 1.0"
+              :class="{ active: fontScale === 1.0 }"
+            >
               {{ t.fontMedium }}
             </button>
-            <button @click="fontScale = 1.2" :class="{ active: fontScale === 1.2 }">
+            <button
+              @click="fontScale = 1.2"
+              :class="{ active: fontScale === 1.2 }"
+            >
               {{ t.fontLarge }}
             </button>
-            <button @click="fontScale = 1.4" :class="{ active: fontScale === 1.4 }">
+            <button
+              @click="fontScale = 1.4"
+              :class="{ active: fontScale === 1.4 }"
+            >
               {{ t.fontExtraLarge }}
             </button>
           </div>
@@ -527,28 +670,58 @@ const closeMobileDrawer = () => {
 
         <!-- Expand/Collapse All Button -->
         <div class="drawer-section">
-          <button @click="
-            isAllExpanded ? collapseAll() : expandAll();
-          closeMobileDrawer();
-          " class="expand-all-btn">
-            <svg v-if="!isAllExpanded" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2">
+          <button
+            @click="
+              isAllExpanded ? collapseAll() : expandAll();
+              closeMobileDrawer();
+            "
+            class="expand-all-btn"
+          >
+            <svg
+              v-if="!isAllExpanded"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
-            <svg v-else width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg
+              v-else
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
               <polyline points="18 15 12 9 6 15"></polyline>
             </svg>
             <span>{{ isAllExpanded ? t.collapseAll : t.expandAll }}</span>
           </button>
         </div>
       </div>
-    </MobileDrawer>
+    </LayoutMobileDrawer>
 
     <!-- Super Button: Floating Action Button -->
-    <button v-if="isMounted" class="super-fab-btn" @click="isSidebarOpen = true" :aria-label="t.menuBtn">
+    <button
+      v-if="isMounted"
+      class="super-fab-btn"
+      @click="isSidebarOpen = true"
+      :aria-label="t.menuBtn"
+    >
       <div class="fab-icons">
-        <svg v-if="!searchQuery" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          stroke-width="2.5">
+        <svg
+          v-if="!searchQuery"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+        >
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
@@ -703,7 +876,7 @@ const closeMobileDrawer = () => {
   border: 2px solid white;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 959px) {
   .super-fab-btn {
     display: flex;
   }

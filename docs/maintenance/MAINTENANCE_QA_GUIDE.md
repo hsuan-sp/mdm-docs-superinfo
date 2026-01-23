@@ -47,6 +47,7 @@ tags: ["關鍵字1", "關鍵字2", "關鍵字3"]
 詳細說明段落，解釋背景脈絡...
 
 **操作步驟 / 技術重點 / 風險提示**：
+
 - 步驟一
 - 步驟二
 - 步驟三
@@ -78,12 +79,12 @@ tags: ["標籤1", "標籤2", "標籤3"]  # 3-6個精確標籤
 **內容架構**（基於現有優秀範例分析）：
 
 ```markdown
-
 **核心答案（粗體開場，一句話總結）**
 
 詳細說明段落...
 
 **技術重點/操作步驟/風險提示**：
+
 - 重點一
 - 重點二
 
@@ -150,10 +151,10 @@ tags: ["標籤1", "標籤2", "標籤3"]  # 3-6個精確標籤
 **使用表格對比**（參考 `enr-3`）：
 
 ```markdown
-| 功能 | 一般模式 | 受監管模式 |
-| :--- | :--- | :--- |
-| **移除 MDM** | 使用者可隨時移除 | **可設定為不可移除** |
-| **單一 App 模式** | 不支援 | **支援** |
+| 功能              | 一般模式         | 受監管模式           |
+| :---------------- | :--------------- | :------------------- |
+| **移除 MDM**      | 使用者可隨時移除 | **可設定為不可移除** |
+| **單一 App 模式** | 不支援           | **支援**             |
 ```
 
 **提供具體路徑**：
@@ -170,6 +171,7 @@ tags: ["標籤1", "標籤2", "標籤3"]  # 3-6個精確標籤
 ```markdown
 **如何確認？**
 打開 iPad 的「設定」，在最上方會顯示：
+
 > **「此 iPad 由 [您的組織名] 監管」**
 ```
 
@@ -201,7 +203,14 @@ tags: ["標籤1", "標籤2", "標籤3"]  # 3-6個精確標籤
 **範例**：
 
 ```yaml
-tags: ["Zero-Wipe MDM Migration", "iOS 26", "教育環境", "Return to Service", "風險評估"]
+tags:
+  [
+    "Zero-Wipe MDM Migration",
+    "iOS 26",
+    "教育環境",
+    "Return to Service",
+    "風險評估",
+  ]
 ```
 
 ## 4.7 避免與現有內容衝突
@@ -525,16 +534,16 @@ tags: ["Enforcement Deadline", "DDM", "iOS 26", "macOS Tahoe"]
 
 ## 9. 類別對照 (Category Mapping)
 
-| 目錄名稱 | 類別顯示名稱（完整版） | ID 前綴 |
-| :--- | :--- | :--- |
-| `account` | 第一部分：帳號與伺服器管理 (Account & Server Management) | `acc` |
-| `enrollment` | 第二部分：裝置註冊與部署 (Device Enrollment) | `enr` |
-| `apps` | 第三部分：應用程式分發與管理 (Apps & Books) | `app` |
-| `classroom` | 第四部分：課堂管理與教學應用 (Classroom Management) | `cls` |
-| `digital-learning` | 第五部分：數位學習精進方案專區 (MOE Digital Learning Project) | `dl` |
-| `hardware` | 第六部分：硬體故障排除 (Hardware Troubleshooting) | `hw` |
-| `mac` | 第七部分：Mac 裝置管理 (Mac Management) | `mac` |
-| `qa-education` | 第八部分：教育實戰問答 (Education Q&A) | `edu` |
+| 目錄名稱           | 類別顯示名稱（完整版）                                        | ID 前綴 |
+| :----------------- | :------------------------------------------------------------ | :------ |
+| `account`          | 第一部分：帳號與伺服器管理 (Account & Server Management)      | `acc`   |
+| `enrollment`       | 第二部分：裝置註冊與部署 (Device Enrollment)                  | `enr`   |
+| `apps`             | 第三部分：應用程式分發與管理 (Apps & Books)                   | `app`   |
+| `classroom`        | 第四部分：課堂管理與教學應用 (Classroom Management)           | `cls`   |
+| `digital-learning` | 第五部分：數位學習精進方案專區 (MOE Digital Learning Project) | `dl`    |
+| `hardware`         | 第六部分：硬體故障排除 (Hardware Troubleshooting)             | `hw`    |
+| `mac`              | 第七部分：Mac 裝置管理 (Mac Management)                       | `mac`   |
+| `qa-education`     | 第八部分：教育實戰問答 (Education Q&A)                        | `edu`   |
 
 ---
 

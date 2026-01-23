@@ -1,15 +1,15 @@
-
-
 ---
 File: acc-1.md
 ---
 
 ---
+
 id: acc-1
 title: "The system prompted to agree to 'New Terms and Conditions' when logging into Apple School Manager (ASM). Is this important?"
 category: "Section 1: Account & Server Management"
 important: true
 tags: ["ASM", "Terms Update"]
+
 ---
 
 **Yes, this is extremely important and should be prioritized immediately.** When Apple updates its service terms, a "Terms and Conditions" window will pop up when you log into [Apple School Manager (ASM)](https://school.apple.com). Ignoring this will impact several critical management functions.
@@ -35,17 +35,18 @@ Only users with the **"Administrator"** role in ASM have the authority to accept
 
 We recommend that every school has at least **two separate Administrator accounts** (e.g., the ICT Director and a designated systems administrator). This ensures that if one person is unavailable or leaves the school, global management of your Apple fleet can continue without interruption.
 
-
----
-File: acc-2.md
 ---
 
+## File: acc-2.md
+
 ---
+
 id: acc-2
 title: "What happens if our APNs Push Certificate expires? How do we renew it?"
 category: "Section 1: Account & Server Management"
 important: true
 tags: ["APNs", "Push Certificate", "Maintenance"]
+
 ---
 
 **The consequences are severe: Your MDM system will lose the ability to manage your devices entirely.** The **Apple Push Notification service (APNs)** certificate is the "digital ID card" that allows your MDM (Jamf Pro) to talk to Apple’s servers. Every command—from installing an app to wiping a passcode—must be signed by this certificate.
@@ -69,17 +70,18 @@ tags: ["APNs", "Push Certificate", "Maintenance"]
 - **Calendar Alerts**: Set multiple calendar reminders (3 months, 1 month, and 2 weeks before expiration) to ensure this task is never forgotten.
 - **Keep Backup codes**: Ensure the recovery phone number and backup keys for the management Apple ID are stored in the school’s secure password manager.
 
-
----
-File: acc-3.md
 ---
 
+## File: acc-3.md
+
 ---
+
 id: acc-3
 title: "How do I reset a student's 'Managed Apple Account' password?"
 category: "Section 1: Account & Server Management"
 important: false
 tags: ["Password Reset", "ASM", "Managed Apple Account"]
+
 ---
 
 **Password resets for Managed Apple Accounts are handled by administrators within Apple School Manager (ASM).** Because these are school-managed assets, students cannot use the standard "I forgot my password" link on their own.
@@ -103,17 +105,18 @@ tags: ["Password Reset", "ASM", "Managed Apple Account"]
 
 If your school has enabled **Federated Authentication** with Google or Microsoft (Microsoft Entra ID), you **cannot** reset passwords in ASM. Instead, you must reset the student's password in the Google Admin Console or Microsoft 365 Admin Center. The change will automatically sync to their Apple account.
 
-
----
-File: acc-4.md
 ---
 
+## File: acc-4.md
+
 ---
+
 id: acc-4
 title: "Jamf Pro shows that the 'VPP Token' is about to expire. How do we update it?"
 category: "Section 1: Account & Server Management"
 important: false
 tags: ["VPP", "Token", "Volume Purchasing"]
+
 ---
 
 **The VPP (Volume Purchase Program) Token is the secure bridge that syncs app licenses between Apple School Manager (ASM) and Jamf Pro. It must be renewed annually.** If the token expires, Jamf Pro will lose the ability to fetch new licenses or update existing ones, causing app deployments to fail across the school.
@@ -145,17 +148,18 @@ tags: ["VPP", "Token", "Volume Purchasing"]
 
 Schedule this task during the school summer break. Renewing your tokens as part of your "Annual IT Health Check" ensures that all classroom apps are ready to be deployed the moment teachers and students return in the autumn.
 
-
----
-File: acc-5.md
 ---
 
+## File: acc-5.md
+
 ---
+
 id: acc-5
 title: "My school uses Google Workspace / Microsoft 365. Can we use these IDs to sign into Apple services?"
 category: "Section 1: Account & Server Management"
 important: false
 tags: ["Federation", "Google Workspace", "Entra ID", "SSO"]
+
 ---
 
 **Yes. This is called "Federated Authentication," and it allows students and staff to use their existing school credentials to create and sign into Managed Apple Accounts.** By linking Apple School Manager (ASM) with your Google Workspace or Microsoft Entra ID (Azure AD), you create a seamless "Single Sign-On" experience across all campus devices.
@@ -176,17 +180,18 @@ tags: ["Federation", "Google Workspace", "Entra ID", "SSO"]
 
 Jamf Pro fully supports this through **Platform SSO** on macOS. When a teacher logs into their Mac for the first time, they simply use their Microsoft or Google credentials, and the system handles the rest. This drastically reduces the number of "I can't log in" tickets for the ICT team.
 
-
----
-File: acc-6.md
 ---
 
+## File: acc-6.md
+
 ---
+
 id: acc-6
 title: "Students have graduated or left the school. How should I handle their Managed Apple Accounts?"
 category: "Section 1: Account & Server Management"
 important: false
 tags: ["Account Lifecycle", "Graduation", "Data Retention"]
+
 ---
 
 **It is recommended to first 'Deactivate' the account, and strictly proceed to 'Delete' only after confirming the student has completed any necessary data migration. Please note that deletion is permanent and irreversible.**
@@ -233,17 +238,18 @@ It is advisable to retain accounts for 30 to 90 days after graduation. Since stu
 - **Federated Authentication Users**: If student accounts are federated via Google or Microsoft, you should first deactivate the user in the Google/Microsoft directory, then return to ASM to check the sync status.
 - **License Reclaiming**: Whenever an account is deactivated or deleted, any app licenses previously assigned to that user are automatically returned to the school.
 
-
----
-File: acc-7.md
 ---
 
+## File: acc-7.md
+
 ---
+
 id: acc-7
 title: "Can I use my personal Apple Account to sign in to a school iPad?"
 category: "Section 1: Account & Server Management"
 important: false
 tags: ["Personal Apple Account", "Managed Apple Account", "Access Control"]
+
 ---
 
 **Standard Policy: Not Recommended. School devices should prioritize the use of a 'Managed Apple Account' or remain signed out.**
@@ -271,17 +277,18 @@ School administrators can now configure specific restrictions via Apple School M
 > 3. **Sign Out Immediately**: Once the required app is installed, sign out of the App Store immediately to keep the device clean.
 > 4. **Notify Admin**: Some school policies automate the removal of unauthorized apps; ensure your actions comply with school regulations.
 
-
----
-File: acc-8.md
 ---
 
+## File: acc-8.md
+
 ---
+
 id: acc-8
 title: "What should I do if I forget the Jamf Pro administrator password?"
 category: "Section 1: Account & Server Management"
 important: false
 tags: ["Password Reset", "Jamf Pro", "Disaster Recovery"]
+
 ---
 
 **The recovery method depends on your Jamf Pro deployment (Cloud vs. On-Premise) and whether SSO is enabled.**
@@ -319,17 +326,18 @@ tags: ["Password Reset", "Jamf Pro", "Disaster Recovery"]
 - **Redundant Admins**: Organizations should maintain at least two personnel with administrative access to avoid a single point of failure.
 - **Managed Password Storage**: Store admin credentials in an organization-grade password manager (e.g., 1Password or Bitwarden) rather than relying on browser memory.
 
-
----
-File: acc-9.md
 ---
 
+## File: acc-9.md
+
 ---
+
 id: acc-9
 title: "The device shows 'Connection Failed' or won't update Inventory. How do I fix it?"
 category: "Section 1: Account & Server Management"
 important: false
 tags: ["Connection Issues", "APNs", "Network", "Troubleshooting"]
+
 ---
 
 **This usually indicates a breakdown in communication between the device and the MDM server or Apple's services. Please check the following four core areas in order:**
@@ -370,17 +378,18 @@ The device needs to reach both the Jamf server and Apple's servers. Ensure the c
 
 If all the above are normal but updates still fail, the device's **Declarative Device Management (DDM)** state might be stuck. You can try restarting the device or sending a **Blank Push** command via Jamf to forcibly wake up the device's connection process.
 
-
----
-File: acc-10.md
 ---
 
+## File: acc-10.md
+
 ---
+
 id: acc-10
 title: "Our school email domain has changed (e.g., from .edu.tw to .xh.edu.tw). How do I update the Managed Apple Accounts?"
 category: "Section 1: Account & Server Management"
 important: false
 tags: ["Domain Change", "Account Management", "Major Migration"]
+
 ---
 
 **This involves a major underlying system change.** Since the format of a Managed Apple Account changes with the domain, it directly affects user login identities.
@@ -426,17 +435,18 @@ tags: ["Domain Change", "Account Management", "Major Migration"]
 
 Before rolling this out globally, manually update 2-3 test accounts (e.g., IT staff) to verify that iCloud data and MDM commands continue to function correctly after switching domains.
 
-
----
-File: acc-11.md
 ---
 
+## File: acc-11.md
+
 ---
+
 id: acc-11
 title: "Troubleshooting: Apple Classroom fails school-wide with 'Invalid Profile' (The Certificate Trap)"
 category: "Section 1: Account & Server Management"
 important: true
 tags: ["Certificate Expiration", "Apple Classroom", "Education Profile"]
+
 ---
 
 **This is typically caused by the expiration of the 'Education Identity Certificate', which has a fixed validity period of 2 years.**
@@ -459,17 +469,18 @@ Teachers report that all students appear "Offline" or are unable to join classes
 - **Proactive Scheduling**: Periodically renew the certificate during summer breaks (every two years) to prevent sudden classroom disruptions mid-semester.
 - **Verify Managed Apple Accounts**: If certificates are valid but the issue persists, ensure that student/teacher Managed Apple Accounts are aligned and have not been affected by domain changes or federation issues.
 
-
----
-File: acc-12.md
 ---
 
+## File: acc-12.md
+
 ---
+
 id: acc-12
 title: "Can I migrate to a new MDM provider without wiping device data?"
 category: "Section 1: Account & Server Management"
 important: true
 tags: ["Migration", "MDM Transfer", "OS 26"]
+
 ---
 
 **While System Version 26 supports 'Automated MDM Migration', it remains 'strongly discouraged' in educational environments due to potential configuration conflicts.**
@@ -491,17 +502,18 @@ According to the latest updates from WWDC 25, Apple has enhanced the `MigrateDev
 
 To ensure device stability for a new semester, we prioritize the **Return to Service (RTS)** feature. Introduced in iOS 17 and optimized in **Version 26**, RTS allows administrators to send a single command that wipes the device and automatically re-enrolls it using cached Wi-Fi credentials. Crucially, **OS 26 supports retaining installed managed apps during the RTS process**, providing a "clean, stable, and fully automated" transition.
 
-
----
-File: acc-13.md
 ---
 
+## File: acc-13.md
+
 ---
+
 id: acc-13
 title: "Can users reset their own Managed Apple Account passwords?"
 category: "Section 1: Account & Server Management"
 important: false
 tags: ["Password Reset", "ASM", "Administrator Action"]
+
 ---
 
 **Standard Apple School Manager (ASM) accounts do not currently offer a global 'Self-Service Password Reset' toggle for end-users.** Apple maintains strict permission levels for Managed Apple Account security. Password reset logic depends on your setup:
@@ -524,17 +536,18 @@ While Apple optimized account recovery in OS 26, the primary control for student
 
 If your accounts are not federated, students **must contact the ICT Support Team** if they forget their password. We recommend that administrators use the batch selection feature at the start of the semester to generate PDFs or CSVs containing temporary passwords for distribution.
 
-
----
-File: acc-14.md
 ---
 
+## File: acc-14.md
+
 ---
+
 id: acc-14
 title: "Newly purchased devices are not syncing from ASM to Jamf Pro? (ADE Server Token Renewal)"
 category: "Section 1: Account & Server Management"
 important: true
 tags: ["ADE", "Server Token", "Automated Device Enrollment"]
+
 ---
 
 **If newly purchased devices do not appear in your MDM inventory, the most common reason is an expired 'Server Token' or unassigned devices in Apple School Manager (ASM).**
@@ -564,17 +577,18 @@ The Server Token acts as the secure bridge between ASM and Jamf Pro for hardware
 
 We recommend setting a "Default Device Assignment" in ASM for iPad and Mac. This ensures all future purchases are automatically linked to your Jamf Pro server, requiring only the annual token renewal for a fully automated hardware intake workflow.
 
-
----
-File: acc-15.md
 ---
 
+## File: acc-15.md
+
 ---
+
 id: acc-15
 title: "What are the main differences between Jamf Pro and Jamf School? How should we choose?"
 category: "Section 1: Account & Server Management"
 important: false
 tags: ["Jamf Pro", "Jamf School", "Product Comparison"]
+
 ---
 
 **Both products are Apple-validated MDM solutions, but they differ significantly in design philosophy, language support, and depth of management capabilities.**
@@ -606,17 +620,18 @@ Based on official technical specifications, here is an objective comparison:
 - **Choose Jamf Pro**: If your institution requires a **Traditional Chinese interface**, involves large-scale multi-site management, or needs complex automation scripts and deep third-party system integrations.
 - **Choose Jamf School**: If your deployment scale is smaller, technical resources are limited, and your administrators are comfortable navigating an English-only interface.
 
-
----
-File: acc-16.md
 ---
 
+## File: acc-16.md
+
 ---
+
 id: acc-16
 title: "How do I handle 'Domain Conflicts' in Apple School Manager and reclaim account ownership?"
 category: "Section 1: Account & Server Management"
 important: true
 tags: ["Domain Conflict", "Account Transfer", "ASM"]
+
 ---
 
 **Once a school verifies its domain in Apple School Manager (ASM), the system automatically identifies 'Personal Apple Accounts' registered with school email addresses and initiates a migration process.**
@@ -640,17 +655,18 @@ School administrators **cannot** view any personal data (photos, messages, etc.)
 
 Log in to ASM > **Settings > User Management > Domains**. You can view conflict status and remaining days next to your verified domains.
 
-
----
-File: acc-17.md
 ---
 
+## File: acc-17.md
+
 ---
+
 id: acc-17
 title: "How do I use Platform SSO (PSSO) to unlock FileVault at system boot?"
 category: "Section 1: Account & Server Management"
 important: false
 tags: ["PSSO", "FileVault", "macOS 15+", "Authentication"]
+
 ---
 
 **Starting with macOS 15 (Sequoia), Platform SSO supports deep integration with FileVault, effectively eliminating the 'dual-password' friction point during startup.**
@@ -672,17 +688,18 @@ Previously, even if a Mac was domain-joined, the initial FileVault unlock screen
 
 This significantly reduces support tickets caused by teachers forgetting their local Mac passwords, as they only need to remember one school-managed credential.
 
-
----
-File: acc-18.md
 ---
 
+## File: acc-18.md
+
 ---
+
 id: acc-18
 title: "How do I transfer VPP App licenses smoothly when changing MDM providers?"
 category: "Section 1: Account & Server Management"
 important: false
 tags: ["VPP", "MDM Migration", "License Reclamation"]
+
 ---
 
 **You do not need to repurchase anything. App licenses are tied to the 'Location' in Apple School Manager (ASM), not to a specific MDM software.**
@@ -699,17 +716,18 @@ As long as your licenses are in your ASM backend, you can rotate them between di
 
 If both your old and new providers support the migration APIs introduced in iOS 17.5, a **"Silent Migration"** may be possible under specific conditions. This means apps remain on the device while ownership is "re-assigned" to the new MDM server in the background, making the transition completely transparent to the user.
 
-
----
-File: acc-19.md
 ---
 
+## File: acc-19.md
+
 ---
+
 id: acc-19
 title: "How do I control access to Apple Intelligence features for Managed Apple Accounts?"
 category: "Section 1: Account & Server Management"
 important: false
 tags: ["Apple Intelligence", "Service Access", "ASM"]
+
 ---
 
 **Administrators can determine whether to allow AI features through the 'Service Access' settings in Apple School Manager (ASM).**
@@ -725,17 +743,18 @@ As Apple expands **Apple Intelligence** through 2024 and 2025, ASM provides acco
 
 If you disable the service in ASM, the student will be unable to use Apple Intelligence cloud-based features even if they sign into their Managed Apple Account on a personal, unmanaged device. This ensures the educational institution maintains absolute control over data flow.
 
-
----
-File: acc-20.md
 ---
 
+## File: acc-20.md
+
 ---
+
 id: acc-20
 title: "Do Managed Apple Accounts support Multi-Factor Authentication (MFA)? How is it managed?"
 category: "Section 1: Account & Server Management"
 important: false
 tags: ["MFA", "Security", "Managed Apple Account"]
+
 ---
 
 **Yes. Managed Apple Accounts support MFA via managed recovery phones or Federated Authentication.** Enables MFA is a basic security standard for high-privilege accounts, such as administrators or teachers.
@@ -749,17 +768,18 @@ tags: ["MFA", "Security", "Managed Apple Account"]
 
 We strongly recommend that all accounts with the "Administrator" role link at least two recovery channels or use physical hardware **Security Keys** to prevent a single lost device from locking the entire school out of the management console.
 
-
----
-File: acc-21.md
 ---
 
+## File: acc-21.md
+
 ---
+
 id: acc-21
 title: "Is 'moemdm' the same as 'Jamf Pro'? Why does the school need two accounts?"
 category: "Section 1: Account & Server Management"
 important: true
 tags: ["moemdm", "MOE", "Jamf Pro", "Architecture"]
+
 ---
 
 **They are completely different. Jamf Pro is the actual 'Remote Control' (the management system), while moemdm is the MOE 'Dashboard' (the reporting platform).**
@@ -787,17 +807,18 @@ Many school administrators find this confusing. Please clarify the following rol
 
 To troubleshoot a device or change apps, log in to **Jamf Pro**. To check if school KPIs have been met or to fill out end-of-term reports, log in to **moemdm**.
 
-
----
-File: acc-22.md
 ---
 
+## File: acc-22.md
+
 ---
+
 id: acc-22
 title: "How do I batch create Managed Apple Accounts? Should I use SFTP or CSV import?"
 category: "Section 1: Account & Server Management"
 important: true
 tags: ["ASM", "Batch Operations", "SFTP", "CSV", "Managed Apple Account"]
+
 ---
 
 **According to official Apple documentation, there are three primary ways to create Managed Apple Accounts: SFTP Upload (SIS integration), Manual CSV Import, and Federated Authentication.**
@@ -845,24 +866,25 @@ This is the most modern approach, linking ASM to **Google Workspace** or **Micro
 
 - **Person ID is Key**: Regardless of the method, the `person_id` must be a **permanently unique** identifier. We strongly recommend using a Student ID number rather than a classroom seat number, as the latter changes every year and will cause account duplicates or data corruption.
 
-
----
-File: acc-23.md
 ---
 
+## File: acc-23.md
+
 ---
+
 id: acc-23
 title: "How do I configure the feature to prevent personal Apple Account logins on organizational devices?"
 category: "Section 1: Account & Server Management"
 important: true
 tags:
-  [
-    "Managed Apple Account",
-    "DLP",
-    "iOS 26",
-    "Organizational Devices",
-    "WWDC 2025",
-  ]
+[
+"Managed Apple Account",
+"DLP",
+"iOS 26",
+"Organizational Devices",
+"WWDC 2025",
+]
+
 ---
 
 **Announced at WWDC 2025, the 'Restrict Apple Account to Managed Only' feature allows organizations to enforce that only Managed Apple Accounts can sign into organizational devices. This works at the system level, covering the Setup Assistant and System Settings, and provides robust data separation without relying solely on MDM profiles.**
@@ -900,17 +922,18 @@ Once configured, this policy automatically applies to all eligible devices owned
 - **Functionality Trade-offs**: Once enabled, personal features (personal App Store purchases, iCloud Photos, personal iMessage) will be unavailable on these devices. Evaluate if this aligns with your organizational policy.
 - **Access Management Pairing**: This feature can be paired with other "Access Management" settings in ASM/ABM to further restrict Managed Accounts to only log in on "Managed" or "Supervised" devices, creating a bidirectional security loop.
 
-
----
-File: acc-24.md
 ---
 
+## File: acc-24.md
+
 ---
+
 id: acc-24
 title: "How is the iCloud storage quota managed for Managed Apple Accounts? What if a student runs out of space?"
 category: "Section 1: Account & Server Management"
 important: false
 tags: ["iCloud", "Storage", "Quota", "Managed Apple Account"]
+
 ---
 
 **Managed Apple Accounts for education default to a 200GB iCloud storage quota. Administrators cannot adjust individual quotas or purchase additional space for specific users.**
@@ -940,17 +963,18 @@ If a student's 200GB is full (often due to backing up large personal photo/video
 
 - **Academic Opportunity**: Use this as a chance to teach students about "Digital Decluttering" and file management. Storage is always a finite resource, and organizing data is a key digital literacy skill.
 
-
----
-File: acc-25.md
 ---
 
+## File: acc-25.md
+
 ---
+
 id: acc-25
 title: "What automation tasks can be performed using ABM/ASM APIs? Does it require development skills?"
 category: "Section 1: Account & Server Management"
 important: false
 tags: ["API", "Automation", "ABM", "ASM", "Advanced Management"]
+
 ---
 
 **Apple provides APIs for ASM/ABM that allow developers to interact directly with organizational data, enabling advanced automations like "automated account creation," "device inventory queries," and "bulk MDM reassignment."**
@@ -982,24 +1006,25 @@ tags: ["API", "Automation", "ABM", "ASM", "Advanced Management"]
   - To manage devices: Use the MDM console directly without writing custom code to call the ASM API.
 - **When is the API necessary?** Only consider custom development if off-the-shelf software cannot meet a highly specific requirement, such as integrating with a proprietary homegrown school administration system.
 
-
----
-File: acc-26.md
 ---
 
+## File: acc-26.md
+
 ---
+
 id: acc-26
 title: "How should iCloud+ features (e.g., Hide My Email, Private Relay) be managed for Managed Apple Accounts in schools?"
 category: "Section 1: Account & Server Management"
 important: false
 tags:
-  [
-    "iCloud+",
-    "Managed Apple Account",
-    "Privacy",
-    "Private Relay",
-    "Education Management",
-  ]
+[
+"iCloud+",
+"Managed Apple Account",
+"Privacy",
+"Private Relay",
+"Education Management",
+]
+
 ---
 
 **As Apple expands permissions for education users, modern 'Managed Apple Accounts' now enjoy benefit from certain advanced iCloud+ privacy features. However, in a school setting, these 'Privacy Enhancements' (such as Hide My Email and iCloud Private Relay) can sometimes conflict with network management and security auditing protocols.**
@@ -1027,5 +1052,3 @@ tags:
 ## Expert Insight
 
 For student devices, maintaining **Network Visibility** is the priority. We recommend disabling **Private Relay** via MDM to ensure your Content Filtering (DNS Proxy or Network Extension) remains effective. For teacher devices, you may choose to leave these features enabled to respect professional privacy.
-
-

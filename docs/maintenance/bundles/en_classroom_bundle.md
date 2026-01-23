@@ -1,15 +1,15 @@
-
-
 ---
 File: cls-1.md
 ---
 
 ---
+
 id: cls-1
 title: "Can teachers see every student's screen using the Apple Classroom app?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: true
 tags: ["Classroom App", "Screen View", "Privacy", "AirPlay"]
+
 ---
 
 **Yes. This is a core feature of the Apple Classroom app, though it includes built-in privacy safeguards to ensure student awareness.**
@@ -30,17 +30,18 @@ tags: ["Classroom App", "Screen View", "Privacy", "AirPlay"]
 - **Supervised Status**: Student iPads must be in **Supervised Mode** for the teacher to view the screen without the student needing to tap "Accept" for every session.
 - **MDM Permissions**: The management profile pushed to the student device must explicitly allow "AirPlay and Screen View."
 
-
----
-File: cls-2.md
 ---
 
+## File: cls-2.md
+
 ---
+
 id: cls-2
 title: "Can I restrict students to using only one specific app during my lesson?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: true
 tags: ["App Lock", "Single App Mode", "Focus", "Compliance"]
+
 ---
 
 **Yes. Teachers can use Apple Classroom to temporarily "lock" students into a specific application.** This is particularly useful for assessments (e.g., Kahoot, Quizlet), focused writing tasks, or ensuring everyone is on the same page during a science lab.
@@ -62,17 +63,18 @@ tags: ["App Lock", "Single App Mode", "Focus", "Compliance"]
 
 This feature triggers a temporary "Single App Mode." If a student device becomes disconnected from the network, the unlock command might be missed. If a device remains stuck after class, a simple restart usually resolves the issue.
 
-
----
-File: cls-3.md
 ---
 
+## File: cls-3.md
+
 ---
+
 id: cls-3
 title: "Why is the web navigation failing when I try to push a URL to student iPads?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["Web Navigation", "Safari", "Content Filtering", "Troubleshooting"]
+
 ---
 
 **Navigation failures are typically caused by browser restrictions, content filters, or excessive open tabs.**
@@ -88,17 +90,18 @@ tags: ["Web Navigation", "Safari", "Content Filtering", "Troubleshooting"]
 
 Save your frequently used teaching links in your own iPad’s **Safari Bookmarks**. When using the "Navigate" tool in Classroom, you can select these bookmarks directly, reducing the chance of typing errors or formatting issues.
 
-
----
-File: cls-4.md
 ---
 
+## File: cls-4.md
+
 ---
+
 id: cls-4
 title: "The class is too loud! How do I 'Lock' all student screens at once?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["Screen Lock", "Classroom Order", "Eyes on Me"]
+
 ---
 
 **By using the "Lock" feature in Apple Classroom, you can instantly turn all student iPad screens black to get the class’s attention.** This is a favorite "Eyes on Me" tool for teachers when they need the class to stop working and look at the front of the room.
@@ -113,17 +116,18 @@ tags: ["Screen Lock", "Classroom Order", "Eyes on Me"]
 
 This command is triggered via Bluetooth, making it nearly instantaneous. While the screen is locked, the iPad’s background processes (like app downloads or file uploads) will **not** be interrupted. It only blocks the user interface.
 
-
----
-File: cls-5.md
 ---
 
+## File: cls-5.md
+
 ---
+
 id: cls-5
 title: "Troubleshooting: Bluetooth is on, but why does Apple Classroom show the students as 'Offline'?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["Troubleshooting", "Bluetooth", "Local Network Permissions"]
+
 ---
 
 **This is usually caused by missing 'Local Network' permissions or an expired teacher certificate.**
@@ -143,17 +147,18 @@ tags: ["Troubleshooting", "Bluetooth", "Local Network Permissions"]
 4. **Wi-Fi Segmentation**:
    - While devices are discovered via Bluetooth, data is exchanged over Wi-Fi. Ensure everyone is on the same **SSID** and that "Client Isolation" is disabled on your campus wireless access points.
 
-
----
-File: cls-6.md
 ---
 
+## File: cls-6.md
+
 ---
+
 id: cls-6
 title: "Can students leave or remove 'Classroom' classes created by the teacher?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["Classroom", "ASM", "Restrictions Profile", "Prevent Leaving"]
+
 ---
 
 **This depends on the source of the class. Classes synced from your school system cannot be removed, but teacher-created ad-hoc classes can—unless restricted via MDM.**
@@ -178,18 +183,19 @@ If the school allows teachers to create their own classes but wants to prevent s
 
 _(Note: This restriction only applies to Supervised devices.)_
 
-
----
-File: cls-7.md
 ---
 
+## File: cls-7.md
+
 ---
+
 id: cls-7
 title: "The teacher iPad shows 'Waiting for devices...' or 'Offline'. Why aren't commands sending?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags:
-  ["Command Latency", "Network Environment", "Bluetooth", "Client Isolation"]
+["Command Latency", "Network Environment", "Bluetooth", "Client Isolation"]
+
 ---
 
 **This is usually caused by a "Bluetooth Discovery Failure" or "Wi-Fi LAN communication being blocked."** Apple Classroom relies on two layers of communication to function:
@@ -211,18 +217,19 @@ tags:
 3. **Confirm Devices are on the Same Subnet**:
    - Both teachers and students must be connected to the same SSID, and their IP addresses must be within the same subnet for screen sharing and data transfer to function correctly.
 
-
----
-File: cls-8.md
 ---
 
+## File: cls-8.md
+
 ---
+
 id: cls-8
 title: "Will simultaneous downloads by the whole class crash the network? What is 'Content Caching'?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags:
-  ["Network Optimization", "Content Caching", "Bandwidth Management", "iCloud"]
+["Network Optimization", "Content Caching", "Bandwidth Management", "iCloud"]
+
 ---
 
 **Yes. Without a caching mechanism, 30 iPads requesting data individually from the internet will likely saturate your school's outbound bandwidth.**
@@ -243,17 +250,18 @@ Content Caching is a feature on a local Mac (e.g., a Mac mini) that stores conte
 
 When the first student in a class downloads 2GB of GarageBand, a copy is cached on the local Mac. When the remaining 29 students download the same app, it is served directly from that Mac at local network speeds, consuming zero outbound bandwidth from the school.
 
-
----
-File: cls-9.md
 ---
 
+## File: cls-9.md
+
 ---
+
 id: cls-9
 title: "How do I manage 'Screen Brightness' and 'Auto-Lock' on student iPads?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["Device Settings", "Power Saving", "Auto-Lock", "Restrictions Profile"]
+
 ---
 
 **MDM can enforce an 'Auto-Lock' timeout, but it 'cannot' directly control screen brightness.**
@@ -274,17 +282,18 @@ According to Apple's MDM protocol specifications:
 
 - **Manageable**: MDM can unify the Lock Screen and Home Screen wallpapers (Supervised devices only). This helps in identifying school assets visually.
 
-
----
-File: cls-10.md
 ---
 
+## File: cls-10.md
+
 ---
+
 id: cls-10
 title: "How can a teacher 'Log Out' all students from Shared iPads after class?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["Shared iPad", "Log Out Command", "Intelligent Caching"]
+
 ---
 
 **When using 'Shared iPad' deployments, teachers should trigger a 'Log Out' action at the end of class to prepare the devices for the next group of users.**
@@ -314,23 +323,24 @@ In the **Classroom** app, tap **End Class** in the top left and confirm **Log Ou
 
 While Intelligent Caching exists, if storage runs low, the system will automatically purge the "oldest" user cache. Therefore, critical work should always be saved to cloud storage (Google Drive / OneDrive) to be safe.
 
-
----
-File: cls-11.md
 ---
 
+## File: cls-11.md
+
 ---
+
 id: cls-11
 title: "Why can't I see the device's real MAC address after iPadOS 17? (Private Wi-Fi Address)"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: true
 tags:
-  [
-    "MAC Address",
-    "Private Wi-Fi Address",
-    "Privacy Features",
-    "Network Management",
-  ]
+[
+"MAC Address",
+"Private Wi-Fi Address",
+"Privacy Features",
+"Network Management",
+]
+
 ---
 
 **This is because Apple enables the 'Private Wi-Fi Address' feature by default.**
@@ -359,24 +369,25 @@ When the device connects to the _specific SSID_ (e.g., School-Student) defined i
 
 _(Note: This only applies to the Wi-Fi network specified in that profile. When students connect to their home Wi-Fi, the privacy feature will automatically re-enable.)_
 
-
----
-File: cls-12.md
 ---
 
+## File: cls-12.md
+
 ---
+
 id: cls-12
 title: "How do I prevent students from cheating using Apple Intelligence (Writing Tools) or Math Notes?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags:
-  [
-    "Apple Intelligence",
-    "Writing Tools",
-    "Math Notes",
-    "Anti-Cheating",
-    "iOS 18",
-  ]
+[
+"Apple Intelligence",
+"Writing Tools",
+"Math Notes",
+"Anti-Cheating",
+"iOS 18",
+]
+
 ---
 
 **For devices running iOS 26+, administrators should use 'Declarative Device Management (DDM)' for real-time control.**
@@ -402,17 +413,18 @@ If students use personal devices, administrators can turn off Apple Intelligence
 - Apple Intelligence is only supported on devices with **M-series chips** or **A17 Pro and later**.
 - _Note: Entry-level iPads (e.g., 10th and 11th Gen with A14/A16 chips) do not support these AI features natively. Focus your management efforts on iPad Air and iPad Pro models with M-series chips._
 
-
----
-File: cls-13.md
 ---
 
+## File: cls-13.md
+
 ---
+
 id: cls-13
 title: "On a [Shared iPad], can students log in without a password? Is there a 'Guest Mode'?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["Shared iPad", "Guest Session", "Library"]
+
 ---
 
 **Yes. Shared iPad supports 'Guest Sessions', allowing users to log in without an account.**
@@ -432,17 +444,18 @@ tags: ["Shared iPad", "Guest Session", "Library"]
 
 In the Jamf Pro **PreStage Enrollment** settings, find the "Shared iPad" section and check **Allow Temporary Session** (previously known as Guest Login).
 
-
----
-File: cls-14.md
 ---
 
+## File: cls-14.md
+
 ---
+
 id: cls-14
 title: "How do I manage AirDrop to prevent students from sending distracting images during class?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["AirDrop", "Restrictions", "Classroom Order", "Jamf Teacher"]
+
 ---
 
 **AirDrop is a primary source of classroom distraction. We recommend either constant restrictions via MDM or dynamic control by the teacher.**
@@ -461,17 +474,18 @@ tags: ["AirDrop", "Restrictions", "Classroom Order", "Jamf Teacher"]
    - Keep AirDrop enabled normally for file submissions.
    - During a lesson, the teacher can tap **Disable AirDrop** in the Jamf Teacher app. AirDrop is immediately disabled for the class and automatically restores once the session ends.
 
-
----
-File: cls-15.md
 ---
 
+## File: cls-15.md
+
 ---
+
 id: cls-15
 title: "If a student iPad fails and they use a loaner, will their data still be there?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["Backup", "Loaner Device", "iCloud", "Data Restore"]
+
 ---
 
 **This depends on whether the data is stored 'Locally' or in the 'Cloud'.**
@@ -490,17 +504,18 @@ tags: ["Backup", "Loaner Device", "iCloud", "Data Restore"]
 
 Education versions of iCloud provide 200GB of space. Administrators can enable **Allow iCloud Backup** in Jamf Pro. This allows students to select "Restore from iCloud Backup" when signing into a new device, restoring their wallpaper, app layout, and local data.
 
-
----
-File: cls-16.md
 ---
 
+## File: cls-16.md
+
 ---
+
 id: cls-16
 title: "Students are disabling Wi-Fi or Bluetooth to avoid Apple Classroom monitoring. What can I do?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["Bluetooth", "Wi-Fi", "Restrictions", "Classroom Management"]
+
 ---
 
 **This is a common student deflection tactic. Administrators can use MDM to prevent students from 'modifying' these settings, but the logic differs between Wi-Fi and Bluetooth.**
@@ -524,17 +539,18 @@ In the Jamf Pro **Restrictions** payload, there are two key options:
 - **Remedy**: If a device gets "locked in the OFF state," the administrator must remove the device from the restriction scope, wait for the profile to clear, manually turn Bluetooth ON, and then re-scope it.
 - **Scope wisely**: We recommend enforcing this only on school-owned specialized sets; for BYOD, locking Bluetooth may interfere with personal peripherals like headphones.
 
-
----
-File: cls-17.md
 ---
 
+## File: cls-17.md
+
 ---
+
 id: cls-17
 title: "How do I prevent students from manually deleting apps?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["App Deletion", "Restrictions", "Home Screen Management"]
+
 ---
 
 **You can disable 'Allow App Removal' in a Restrictions profile, but be mindful of the difference between 'Deleting' and 'Removing from Home Screen'.**
@@ -555,17 +571,18 @@ In the Jamf Pro **Restrictions** profile, uncheck **Allow removing apps**.
 
 For younger students or shared iPads, we recommend always enabling this restriction to prevent the accidental loss of educational software mid-lesson.
 
-
----
-File: cls-18.md
 ---
 
+## File: cls-18.md
+
 ---
+
 id: cls-18
 title: "What is the difference between 'Jamf Teacher' and 'Apple Classroom'? Which one should I use?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["Jamf Teacher", "Apple Classroom", "Tool Comparison"]
+
 ---
 
 **These are complementary tools. Apple Classroom excels at 'Close-range Monitoring,' while Jamf Teacher is built for 'Remote Restriction'.**
@@ -584,17 +601,18 @@ tags: ["Jamf Teacher", "Apple Classroom", "Tool Comparison"]
 - **During Lesson Monitoring**: Use **Apple Classroom** to keep an eye on active screens.
 - **Focus/Exam Mode**: Use **Jamf Teacher**. It is more powerful for hiding irrelevant apps (games, browsers) and doesn't rely on Bluetooth proximity.
 
-
----
-File: cls-19.md
 ---
 
+## File: cls-19.md
+
 ---
+
 id: cls-19
 title: "Troubleshooting: Apple Pencil won't pair or write. How do I fix it?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["Apple Pencil", "Bluetooth", "Hardware Compatibility", "Troubleshooting"]
+
 ---
 
 **Apple Pencil issues are usually caused by 'Model Incompatibility' or 'Bluetooth Pairing Cache' errors.**
@@ -616,17 +634,18 @@ tags: ["Apple Pencil", "Bluetooth", "Hardware Compatibility", "Troubleshooting"]
 4. **MDM Restrictions**:
    - Ensure the MDM "Restrictions" profile does not have **Disallow modifying Bluetooth settings** checked, as this may block new pairing attempts.
 
-
----
-File: cls-20.md
 ---
 
+## File: cls-20.md
+
 ---
+
 id: cls-20
 title: "Students are using the 'Clock' app for pranks (alarms/timers). Can MDM control this?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["Clock App", "Alarm Restrictions", "Classroom Order"]
+
 ---
 
 **MDM cannot detect or block the 'setting' of specific alarms, but you can solve the problem by 'Hiding the App'.**
@@ -647,17 +666,18 @@ The Apple MDM protocol does not grant permissions to read or modify local alarm 
 3. **Jamf Teacher 'App Restrictions'**:
    - During class, teachers can use Jamf Teacher to "Allow only Educational Apps," which temporarily hides the Clock app and prevents interference.
 
-
----
-File: cls-21.md
 ---
 
+## File: cls-21.md
+
 ---
+
 id: cls-21
 title: "Can a teacher force a student's screen to project to an Apple TV?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["AirPlay", "Apple TV", "Screen Sharing", "Instructional Display"]
+
 ---
 
 **Yes. Using the 'Classroom' app, a teacher can direct any student's screen to project via AirPlay without the student needing to take any action.**
@@ -676,17 +696,18 @@ To prevent students from "hijacking" the screen, administrators should configure
 > [!TIP]
 > This is a powerful feature for showcasing student's work in real-time.
 
-
----
-File: cls-22.md
 ---
 
+## File: cls-22.md
+
 ---
+
 id: cls-22
 title: "The school network is divided into 'Teacher' and 'Student' VLANs. Will Apple Classroom still work?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: true
 tags: ["Network Architecture", "VLAN", "Bonjour", "mDNS"]
+
 ---
 
 **By default, no. Apple Classroom relies on Bonjour (mDNS) broadcast packets, which do not cross different subnets or VLANs.**
@@ -704,17 +725,18 @@ The network administrator must configure the core switch or Wireless LAN Control
 
 If the network hardware does not support mDNS relay, the simplest solution is to have the teacher connect their iPad to the **'Student Wi-Fi'** SSID. This places both parties in the same broadcast domain, enabling a seamless connection.
 
-
----
-File: cls-23.md
 ---
 
+## File: cls-23.md
+
 ---
+
 id: cls-23
 title: "iPads are making noise and disrupting class. Can the teacher 'Mute All' at once?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["Mute", "Volume Control", "Classroom Order"]
+
 ---
 
 **Yes, the teacher can 'Mute' the whole class with one click, but they cannot 'Unmute' them remotely.**
@@ -728,24 +750,25 @@ Within the **Classroom** app's main screen, tap the **Mute** icon. The media vol
 - **Down, not Up**: For privacy and security reasons, the Apple MDM protocol **does not allow** remote volume increases or unmuting. This prevents potential abuse, such as an administrator blasting loud audio at night.
 - **Restoration**: After a mute command is sent, students must **manually** use the physical volume buttons on their iPads to turn the sound back up. The teacher cannot do this for them.
 
-
----
-File: cls-24.md
 ---
 
+## File: cls-24.md
+
 ---
+
 id: cls-24
 title: "How do I prevent students from getting distracted by 'Windowed Apps' in iPadOS 26?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: true
 tags:
-  [
-    "Windowed Apps",
-    "Multitasking",
-    "Focus",
-    "iPadOS 26",
-    "Classroom Management",
-  ]
+[
+"Windowed Apps",
+"Multitasking",
+"Focus",
+"iPadOS 26",
+"Classroom Management",
+]
+
 ---
 
 **iPadOS 26 introduces a new 'Windowed Apps' multitasking system, allowing apps to appear in resizable, overlapping windows. While great for productivity, it can lead to distraction. Schools can manage this via segmented MDM restrictions or use the 'Classroom' app for temporary focus locking.**
@@ -794,24 +817,25 @@ Maintain multitasking but enforce class norms.
 | **Temporary Lock** | Middle school, mixed-use | Medium (Requires teacher action)  |
 | **Guided Use**     | High school, BYU/1:1     | High (Requires ongoing education) |
 
-
----
-File: cls-25.md
 ---
 
+## File: cls-25.md
+
 ---
+
 id: cls-25
 title: "Classroom vs. Schoolwork apps: What's the difference, and which should teachers use?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags:
-  [
-    "Schoolwork",
-    "Classroom",
-    "Feature Comparison",
-    "Teaching Tools",
-    "Assignment Management",
-  ]
+[
+"Schoolwork",
+"Classroom",
+"Feature Comparison",
+"Teaching Tools",
+"Assignment Management",
+]
+
 ---
 
 **The 'Classroom' app is for active classroom management (the 'Now'), while the 'Schoolwork' app is for assignment distribution and progress tracking (the 'Long-form'). Most successful teachers use both in tandem.**
@@ -858,17 +882,18 @@ tags:
 - If you need to manage order, push web pages, and watch screens ➡️ Use **Classroom**.
 - If you need to distribute, collect, and grade assignments ➡️ Use **Schoolwork**.
 
-
----
-File: cls-26.md
 ---
 
+## File: cls-26.md
+
 ---
+
 id: cls-26
 title: "Will the 'AirDrop Code' in iOS 26.2 affect school management policies? Can students use it to bypass restrictions?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags: ["AirDrop", "Code", "Privacy", "Policy Adjustment", "iOS 26.2"]
+
 ---
 
 **The 'AirDrop Code' is a privacy enhancement in iOS 26.2. It does NOT allow students to bypass MDM-enforced 'Disable AirDrop' settings. Your existing security policies remain effective.**
@@ -903,24 +928,25 @@ In iOS/iPadOS/macOS 26.2, a 6-digit temporary authorization code can be used to 
 2. **For Daily Lessons**: **'Contacts Only'** is the recommended setting. The AirDrop Code feature actually makes this setting _more_ useful for schools, as students can share files for class projects without the privacy risk of exchanging personal contact details.
 3. **Governance**: Remind students that an AirDrop Code is a key—only give it to people you trust to send you academic material.
 
-
----
-File: cls-27.md
 ---
 
+## File: cls-27.md
+
 ---
+
 id: cls-27
 title: "How does the 'Audio Accessory Configuration' in iOS 26 solve AirPods pairing confusion in labs?"
 category: "Section 4: Classroom Management & Instructional Tools"
 important: false
 tags:
-  [
-    "AirPods",
-    "Audio Accessories",
-    "Shared iPad",
-    "iOS 26",
-    "Headset Management",
-  ]
+[
+"AirPods",
+"Audio Accessories",
+"Shared iPad",
+"iOS 26",
+"Headset Management",
+]
+
 ---
 
 **In a 'Shared iPad' environment, pairing Bluetooth headsets has historically been a major pain point. Previously, AirPods would try to sync to a student's iCloud account, leading to disconnections or cross-room interference when the next student used the same iPad.**
@@ -945,5 +971,3 @@ Introduced in **iOS 26 (Tahoe)**, this MDM payload completely changes how access
 ## Deployment Tip:
 
 Make sure your Apple Classroom "Bluetooth" requirement is enabled. If Bluetooth is disabled via MDM, this accessory payload will not work.
-
-

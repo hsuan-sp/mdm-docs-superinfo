@@ -4,4 +4,4 @@ title: Home
 sidebar: false
 ---
 
-<AppleHome />
+<HomeApp />

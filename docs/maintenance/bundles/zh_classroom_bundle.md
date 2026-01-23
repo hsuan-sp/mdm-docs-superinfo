@@ -1,15 +1,15 @@
-
-
 ---
 File: cls-1.md
 ---
 
 ---
+
 id: cls-1
 title: "老師可以透過「課堂 (Classroom)」App 看到每位學生的螢幕嗎？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: true
 tags: ["課堂 App", "螢幕檢視", "隱私保護", "AirPlay"]
+
 ---
 
 **可以。這是「課堂」App 的核心功能，但具備嚴格的隱私提示機制。**
@@ -25,17 +25,18 @@ tags: ["課堂 App", "螢幕檢視", "隱私保護", "AirPlay"]
 - **受監管裝置** ：學生 iPad 必須是 **「受監管 (Supervised)」** 狀態，才能強制執行螢幕檢視而不需學生手動點擊「同意」。
 - **權限設定** ：在 Jamf Pro 的限制描述檔中，必須勾選 **「允許 AirPlay 與螢幕檢視」** 以及 **「強制 AirPlay 請求」** 才能進行螢幕檢視和 Apple TV 投影。
 
-
----
-File: cls-2.md
 ---
 
+## File: cls-2.md
+
 ---
+
 id: cls-2
 title: "可以限制學生在課堂上只能使用特定的 App 嗎？(App 鎖定)"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: true
 tags: ["App 鎖定", "單一 App 模式", "防弊", "專注模式"]
+
 ---
 
 **可以。老師能透過「課堂」App 將學生裝置暫時「鎖定」在指定的應用程式中。**
@@ -58,17 +59,18 @@ tags: ["App 鎖定", "單一 App 模式", "防弊", "專注模式"]
 
 此功能本質上是觸發了暫時性的 **「單一 App 模式」** ，若網路不穩導致解除指令未送達，可能需手動重啟學生裝置。
 
-
----
-File: cls-3.md
 ---
 
+## File: cls-3.md
+
 ---
+
 id: cls-3
 title: "為什麼老師發送網頁導航，學生的 iPad 卻沒反應或卡住？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["網頁導航", "Safari", "網站過濾", "故障排除"]
+
 ---
 
 **導航失敗通常與 Safari 的「限制設定」或「網站過濾」有關。**
@@ -84,17 +86,18 @@ tags: ["網頁導航", "Safari", "網站過濾", "故障排除"]
 
 建議老師先將常用的教學網址加入自己 iPad 的 **「Safari 書籤」** ，在導航時直接從書籤選取，能大幅降低輸入錯誤或格式不符的機率。
 
-
----
-File: cls-4.md
 ---
 
+## File: cls-4.md
+
 ---
+
 id: cls-4
 title: "全班太吵！老師如何一鍵「鎖定」所有學生的螢幕？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["螢幕鎖定", "課堂秩序", "黑畫面模式"]
+
 ---
 
 **透過「課堂」App 的「鎖定 (Lock)」功能，可強制讓全班 iPad 進入黑畫面模式。**
@@ -112,17 +115,18 @@ tags: ["螢幕鎖定", "課堂秩序", "黑畫面模式"]
 - 此指令透過藍牙觸發，反應速度極快。
 - 鎖定期間，裝置的背景網路連線 **不會中斷** ，因此正在下載的 App 或上傳的作業仍會持續進行。
 
-
----
-File: cls-5.md
 ---
 
+## File: cls-5.md
+
 ---
+
 id: cls-5
 title: "【實務除錯】藍牙都開了，為什麼「課堂」App 還是顯示學生離線？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["故障排除", "藍牙", "本地網路權限", "課堂連線"]
+
 ---
 
 **這通常是「本地網路權限」未開啟，或教育設定描述檔過期所致。**
@@ -139,17 +143,18 @@ tags: ["故障排除", "藍牙", "本地網路權限", "課堂連線"]
 4.  **同一 Wi-Fi 網段** ：
     - 雖然發現是靠藍牙，但資料傳輸依賴 Wi-Fi。請確保全班連在同一個 SSID，且 AP 沒有開啟「使用者隔離 (Client Isolation)」。
 
-
----
-File: cls-6.md
 ---
 
+## File: cls-6.md
+
 ---
+
 id: cls-6
 title: "學生可以自行退出或移除老師建立的「課堂」班級嗎？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["課堂班級", "ASM", "限制描述檔", "防止退出"]
+
 ---
 
 **這取決於該課程的來源屬性。來自校務系統的課程無法移除，但老師臨時建立的課程則可以，需透過 MDM 進行限制。**
@@ -174,17 +179,18 @@ tags: ["課堂班級", "ASM", "限制描述檔", "防止退出"]
 
 建議學校全面改採經由 **ASM 同步** 的課程。這樣不僅學生無法退出，老師每節課也不需重新邀請新的學生，名冊會自動對齊註冊組的最新資料。
 
-
----
-File: cls-7.md
 ---
 
+## File: cls-7.md
+
 ---
+
 id: cls-7
 title: "老師端 iPad 一直顯示「等待裝置...」或「離線」，指令發不出去怎麼辦？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["指令延遲", "網路環境", "藍牙", "使用者隔離"]
+
 ---
 
 **這通常是「藍牙發現失敗」或「Wi-Fi 區網互通被阻擋」造成的。** Apple Classroom 的運作依賴兩層通訊，缺一不可：
@@ -211,17 +217,18 @@ tags: ["指令延遲", "網路環境", "藍牙", "使用者隔離"]
 
 - 老師與學生必須連接同一個 SSID，且 IP 必須在同一個子網段內，才能順利傳輸畫面資料。
 
-
----
-File: cls-8.md
 ---
 
+## File: cls-8.md
+
 ---
+
 id: cls-8
 title: "全班同時下載教材會讓網路癱瘓嗎？什麼是「內容快取 (Content Caching)」？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["網路優化", "內容快取", "頻寬管理", "iCloud"]
+
 ---
 
 \*\*會。若沒有快取機制，30 台 iPad 會各自向互聯網索取資料，極易塞爆出口頻寬。
@@ -243,17 +250,18 @@ tags: ["網路優化", "內容快取", "頻寬管理", "iCloud"]
 當第一位學生下載了 2GB 的 GarageBand，檔案會暫存在 Mac 中。
 後續 29 位學生下載時，是直接從這台 Mac 以校內區網速度傳輸，不消耗學校的對外頻寬。
 
-
----
-File: cls-9.md
 ---
 
+## File: cls-9.md
+
 ---
+
 id: cls-9
 title: "如何管理學生 iPad 的「螢幕亮度」與「自動鎖定」？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["裝置設定", "省電", "自動鎖定", "限制描述檔"]
+
 ---
 
 **MDM 可以強制設定「自動鎖定時間」，但「無法」直接控制螢幕亮度。** 根據 Apple MDM 協定規範：
@@ -280,17 +288,18 @@ tags: ["裝置設定", "省電", "自動鎖定", "限制描述檔"]
 
 這有助於統一識別學校資產。
 
-
----
-File: cls-10.md
 ---
 
+## File: cls-10.md
+
 ---
+
 id: cls-10
 title: "課堂結束後，老師如何一鍵「登出」所有學生的共用 iPad？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["共用 iPad", "Shared iPad", "登出指令", "智慧快取"]
+
 ---
 
 **在使用「共用 iPad (Shared iPad)」的情境下，老師應在下課時執行「登出」動作，讓裝置準備好迎接下一位使用者。**
@@ -321,17 +330,18 @@ tags: ["共用 iPad", "Shared iPad", "登出指令", "智慧快取"]
 
 雖然有智慧快取，但若裝置空間不足，系統會自動移除「最久未登入」的使用者快取。因此建議重要的作業檔案仍應主動儲存至雲端硬碟 (Google Drive / OneDrive) 最為保險。
 
-
----
-File: cls-11.md
 ---
 
+## File: cls-11.md
+
 ---
+
 id: cls-11
 title: "為什麼 iPadOS 17 以後，網管反應抓不到裝置的真實 MAC 位址？(專用 Wi-Fi 位址)"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: true
 tags: ["MAC 位址", "專用 Wi-Fi 位址", "隱私功能", "網路管理"]
+
 ---
 
 **這是因為 Apple 預設啟用了「專用 Wi-Fi 位址 (Private Wi-Fi Address)」功能。**
@@ -362,17 +372,18 @@ tags: ["MAC 位址", "專用 Wi-Fi 位址", "隱私功能", "網路管理"]
 - **注意** ：此設定僅對該描述檔指定的 Wi-Fi 有效。
 - 學生回家連線自家 Wi-Fi 時，仍會自動開啟隨機化以保護隱私。
 
-
----
-File: cls-12.md
 ---
 
+## File: cls-12.md
+
 ---
+
 id: cls-12
 title: "【考試防弊】如何避免學生用 Apple Intelligence (寫作工具) 或數學備忘錄作弊？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["Apple Intelligence", "寫作工具", "數學備忘錄", "防弊", "iOS 18"]
+
 ---
 
 **針對 iOS 26+ 裝置，管理員應優先透過「宣告式裝置管理 (DDM)」進行即時控管。**
@@ -398,17 +409,18 @@ tags: ["Apple Intelligence", "寫作工具", "數學備忘錄", "防弊", "iOS 1
 - Apple Intelligence 僅支援配備 **M 系列晶片** 或 **A17 Pro 以上** 的裝置。
 - **備註** ：目前的入門款 iPad (如第 10 代、第 11 代，搭載 A14/A16 晶片) 硬體本身即不支援上述 AI 功能，管理員可將重點放在配備 M 系列晶片的 iPad Air 與 iPad Pro。
 
-
----
-File: cls-13.md
 ---
 
+## File: cls-13.md
+
 ---
+
 id: cls-13
 title: "【共用 iPad】不想要每節課都輸入帳號密碼，有「訪客模式」嗎？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["共用 iPad", "訪客模式", "Shared iPad", "圖書館"]
+
 ---
 
 **有。Shared iPad 支援「訪客工作階段 (Guest Session)」，使用者無需帳號即可登入。**
@@ -428,17 +440,18 @@ tags: ["共用 iPad", "訪客模式", "Shared iPad", "圖書館"]
 
 在 Jamf Pro 的 **PreStage 註冊** 設定中，找到「共用 iPad (Shared iPad)」區塊，勾選 **「允許臨時工作階段 (Allow Temporary Session)」** (舊稱訪客登入)。
 
-
----
-File: cls-14.md
 ---
 
+## File: cls-14.md
+
 ---
+
 id: cls-14
 title: "如何管理 AirDrop？避免學生上課亂傳梗圖雜圖干擾秩序？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["AirDrop", "限制", "課堂秩序", "Jamf Teacher"]
+
 ---
 
 **AirDrop 是課堂干擾源之首。建議透過 MDM 進行常態限制，或由老師進行動態控管。**
@@ -455,17 +468,18 @@ tags: ["AirDrop", "限制", "課堂秩序", "Jamf Teacher"]
     - 平時開放 AirDrop 方便交作業。
     - 上課時，老師在 Jamf Teacher App 按下 **「關閉 AirDrop」** ，全班 AirDrop 功能即時停用；下課後自動恢復。
 
-
----
-File: cls-15.md
 ---
 
+## File: cls-15.md
+
 ---
+
 id: cls-15
 title: "學生 iPad 故障，臨時借用備用機時，原本的資料還在嗎？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["備份", "備用機", "iCloud", "資料還原"]
+
 ---
 
 **這取決於資料是「存在本機」還是「存在雲端」。**
@@ -483,17 +497,18 @@ tags: ["備份", "備用機", "iCloud", "資料還原"]
 
 教育版 iCloud 提供 200GB 空間，可以在 Jamf Pro 開啟 **「允許 iCloud 備份」** 。這樣學生在新機登入管理式 Apple 帳號時，可選擇「從 iCloud 備份回復」，將桌布、App 排列與本機資料一併還原。
 
-
----
-File: cls-16.md
 ---
 
+## File: cls-16.md
+
 ---
+
 id: cls-16
 title: "學生上課故意關閉 Wi-Fi 或藍牙來躲避「課堂」監控，該怎麼辦？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["藍牙", "Wi-Fi", "限制描述檔", "課堂管理", "部署風險"]
+
 ---
 
 **這是最常見的學生對抗行為。管理員可以透過 MDM 限制學生「修改」這些設定，但 Wi-Fi 與藍牙的運作邏輯不同，需特別小心。**
@@ -516,17 +531,18 @@ tags: ["藍牙", "Wi-Fi", "限制描述檔", "課堂管理", "部署風險"]
 - **補救措施** ：若發生「鎖死在關閉」的慘劇，管理員必須先將該裝置移出限制群組（移除描述檔），等待裝置解鎖後手動開啟藍牙，再重新加入限制群組。
 - **適用對象** ：建議僅針對「公用 iPad」實施此嚴格限制；BYOD 裝置因涉及耳機配對隱私，不建議鎖定藍牙。
 
-
----
-File: cls-17.md
 ---
 
+## File: cls-17.md
+
 ---
+
 id: cls-17
 title: "如何防止學生自己手動刪除 App？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["App 刪除", "限制描述檔", "主畫面管理"]
+
 ---
 
 **只要在限制描述檔中關閉「允許移除 App」即可，但需注意 iOS 的介面邏輯差異。**
@@ -546,17 +562,18 @@ tags: ["App 刪除", "限制描述檔", "主畫面管理"]
 
 針對低年級或公用 iPad，建議一律開啟此限制，避免學生誤刪教學軟體導致上課中斷。
 
-
----
-File: cls-18.md
 ---
 
+## File: cls-18.md
+
 ---
+
 id: cls-18
 title: "「Jamf Teacher」與「Apple 課堂」有什麼不同？老師該用哪一個？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["Jamf Teacher", "Apple Classroom", "工具比較", "教學管理"]
+
 ---
 
 **這兩者是互補的工具。Apple 課堂擅長「近端監控」，Jamf Teacher 擅長「遠端限制」。**
@@ -575,17 +592,18 @@ tags: ["Jamf Teacher", "Apple Classroom", "工具比較", "教學管理"]
 - **上課中看畫面** ：使用 **Apple 課堂** 。
 - **考試/專注模式** ：使用 **Jamf Teacher** ，因為它能更強力地隱藏無關的 App（如遊戲、瀏覽器），且不需擔心藍牙斷線問題。
 
-
----
-File: cls-19.md
 ---
 
+## File: cls-19.md
+
 ---
+
 id: cls-19
 title: "【實務排錯】Apple Pencil 無法配對或寫不出字，該如何排除？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["Apple Pencil", "藍牙", "硬體相容性", "故障排除"]
+
 ---
 
 **Apple Pencil 的問題通常源於「型號不相容」或「藍牙配對快取」卡住。**
@@ -604,17 +622,18 @@ tags: ["Apple Pencil", "藍牙", "硬體相容性", "故障排除"]
 4.  **MDM 限制檢查** ：
     - 確認限制描述檔中沒有勾選 **「不允許修改藍牙設定」** ，否則學生可能無法執行配對動作。
 
-
----
-File: cls-20.md
 ---
 
+## File: cls-20.md
+
 ---
+
 id: cls-20
 title: "學生利用「時鐘」App 的鬧鐘或計時器在課堂惡作劇，MDM 有辦法管嗎？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["時鐘 App", "鬧鐘限制", "課堂秩序", "限制描述檔"]
+
 ---
 
 **MDM 無法偵測或禁止學生「設定」鬧鐘，但可以透過「隱藏 App」來根絕此問題。**
@@ -634,17 +653,18 @@ Apple 的 MDM 協定並未開放「讀取或修改鬧鐘設定」的權限。因
 3.  **使用 Jamf Teacher 的「App 限制」** ：
     - 老師可以在上課期間，利用 Jamf Teacher 設定「僅允許教學 App」，這樣時鐘 App 就會暫時被隱藏，達到防干擾效果。
 
-
----
-File: cls-21.md
 ---
 
+## File: cls-21.md
+
 ---
+
 id: cls-21
 title: "老師可以強制將學生的畫面投影到 Apple TV 或大螢幕嗎？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["AirPlay", "Apple TV", "畫面分享", "教學展示"]
+
 ---
 
 **可以。老師透過「課堂」App，能指定任意學生的畫面透過 AirPlay 投射出來，無需學生操作。**
@@ -660,17 +680,18 @@ tags: ["AirPlay", "Apple TV", "畫面分享", "教學展示"]
 
 為了避免學生惡作劇隨意投影干擾上課，建議管理員在 **Apple TV** 設定中開啟 **「需要驗證碼」** 或 **「僅限同網域」** 。同時，在 Jamf Pro 的限制描述檔中，可以設定 **「強制 AirPlay 請求 (Force AirPlay outgoing requests to accept pairing password)」** ，讓老師擁有主控權。
 
-
----
-File: cls-22.md
 ---
 
+## File: cls-22.md
+
 ---
+
 id: cls-22
 title: "學校網路有分「老師」與「學生」不同網段 (VLAN)，「課堂」App 還能通嗎？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: true
 tags: ["網路架構", "VLAN", "Bonjour", "mDNS"]
+
 ---
 
 **預設情況下會不通。因為 Apple Classroom 依賴的 Bonjour 廣播封包無法跨越不同的網段 (Subnet/VLAN)。**
@@ -688,17 +709,18 @@ tags: ["網路架構", "VLAN", "Bonjour", "mDNS"]
 
 若網路裝置不支援，最簡單的做法是讓老師的 iPad 連接至 **「學生 Wi-Fi」** ，確保雙方在同一個廣播網域內，即可順利連線。
 
-
----
-File: cls-23.md
 ---
 
+## File: cls-23.md
+
 ---
+
 id: cls-23
 title: "全班 iPad 發出音效擾亂課堂秩序，老師可以一鍵「全班靜音」嗎？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["靜音", "音量控制", "課堂秩序", "限制"]
+
 ---
 
 **可以「一鍵靜音」，但無法「一鍵恢復音量」。**
@@ -712,17 +734,18 @@ tags: ["靜音", "音量控制", "課堂秩序", "限制"]
 - **只能變小，不能變大** ：Apple 為了防止惡用（例如管理員故意在大半夜調大音量嚇人），MDM 協定 **不允許** 遠端調大音量或解除靜音。
 - **恢復方式** ：下指令靜音後，若要恢復聲音，學生必須 **自己手動** 按側邊音量鍵調高音量，老師無法代勞。
 
-
----
-File: cls-24.md
 ---
 
+## File: cls-24.md
+
 ---
+
 id: cls-24
 title: "如何防止學生使用 iPadOS 26 的「視窗 App」功能在課堂分心？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: true
 tags: ["視窗 App", "多工處理", "專注度", "iPadOS 26", "課堂管理"]
+
 ---
 
 **iPadOS 26 引入全新的「視窗 App」多工系統，讓 App 以可調整大小的視窗方式呈現，雖然提升了生產力，但也可能導致學生同時開啟多個 App 而分心。學校可透過 MDM 限制進行分級管理，或利用「課堂」App 進行臨時鎖定。**
@@ -783,17 +806,18 @@ tags: ["視窗 App", "多工處理", "專注度", "iPadOS 26", "課堂管理"]
 | 臨時鎖定 | 中年級、教師願意即時管控、部分課程需要多工     | 中（需教師操作） |
 | 教育引導 | 高年級、重視自主管理能力、教學常需多工操作     | 高（需持續教育） |
 
-
----
-File: cls-25.md
 ---
 
+## File: cls-25.md
+
 ---
+
 id: cls-25
 title: "「課業」與「課堂」有什麼不同？老師該用哪一個？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["課業", "課堂", "功能對比", "教學工具", "作業管理"]
+
 ---
 
 **「課堂」(Classroom) 專注於「當下的教室管理」，「課業」(Schoolwork) 專注於「長期的作業收發與進度追蹤」。兩者各司其職，通常建議搭配使用。**
@@ -841,17 +865,18 @@ tags: ["課業", "課堂", "功能對比", "教學工具", "作業管理"]
 - 如果你想管秩序、開網頁、看學生有沒有專心 ➡️ 用 **「課堂」** 。
 - 如果你想發作業、收作業、看學生成績 ➡️ 用 **「課業」** 。
 
-
----
-File: cls-26.md
 ---
 
+## File: cls-26.md
+
 ---
+
 id: cls-26
 title: "iOS 26.2 的「AirDrop 代碼」會影響學校的 AirDrop 管理政策嗎？學生會利用此功能繞過管控嗎？"
 category: "第四部分：課堂管理與教學應用 (Classroom Management)"
 important: false
 tags: ["AirDrop", "代碼", "隱私", "政策調整", "iOS 26.2"]
+
 ---
 
 **AirDrop 代碼是 iOS 26.2 新增的隱私增強功能，並不會讓學生繞過 MDM 的「停用 AirDrop」設定。學校既有的 AirDrop 管理政策依然有效，無需過度擔憂。**
@@ -892,17 +917,18 @@ iOS 26.2、iPadOS 26.2 與 macOS 26.2 允許使用者產生一組「臨時授權
 
 AirDrop 代碼是安全的正面功能。只要 MDM 的限制設定正確，此功能並不會破壞學校的管理防線。相反地，它提供了一個更隱私友善的檔案分享方式。
 
-
----
-File: cls-27.md
 ---
 
+## File: cls-27.md
+
 ---
+
 id: cls-27
 title: "iOS 26 的「音訊配件設定」如何解決共用 iPad 的 AirPods/Beats 配對混亂？"
 category: "第四部分：課堂管理與互動教學 (Classroom Management)"
 important: false
 tags: ["AirPods", "音訊配件", "共用 iPad", "iOS 26", "耳機管理"]
+
 ---
 
 **在「共用 iPad (Shared iPad)」環境中，最困擾師生的一個問題是藍牙耳機的配對。**
@@ -928,5 +954,3 @@ tags: ["AirPods", "音訊配件", "共用 iPad", "iOS 26", "耳機管理"]
 
 - **裝置版本** ：iOS 26 / iPadOS 26 或更新版本。
 - **耳機硬體** ：支援最新的 AirPods (第 4 代及以上)、AirPods Pro (第 2 代及以上) 與部分 Beats 機型。
-
-

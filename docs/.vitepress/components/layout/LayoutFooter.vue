@@ -1,7 +1,7 @@
 <script setup>
 import { useData, withBase } from "vitepress";
 import { computed } from "vue";
-import ReportIssue from "./ReportIssue.vue"; // Assuming ReportIssue.vue is in the same directory
+import ReportIssue from "../features/ReportIssue.vue";
 
 const { lang } = useData();
 

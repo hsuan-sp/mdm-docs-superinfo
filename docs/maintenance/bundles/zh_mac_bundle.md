@@ -1,15 +1,15 @@
-
-
 ---
 File: mac-1.md
 ---
 
 ---
+
 id: mac-1
 title: "Mac 需要綁定 AD (Active Directory) 嗎？現代化的建議是什麼？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: true
 tags: ["AD", "身分認證", "Jamf Connect", "Platform SSO", "No-Bind"]
+
 ---
 
 **高度建議不要綁定 AD (No-Bind 策略)。請改用「平台單一登入 (Platform SSO)」或 Jamf Connect。** 傳統將 Mac「綁定 (Bind)」至 AD 網域的做法，在行動辦公與資安零信任（Zero Trust）架構下已顯得笨重且不可靠。
@@ -45,17 +45,18 @@ tags: ["AD", "身分認證", "Jamf Connect", "Platform SSO", "No-Bind"]
 
 若貴校仍有大量 Mac 綁定 AD，請優先計畫「解除綁定 (Unbind)」專案，並導入 Platform SSO，這能大幅減少資訊組長處理「密碼不同步」工單的數量。
 
-
----
-File: mac-2.md
 ---
 
+## File: mac-2.md
+
 ---
+
 id: mac-2
 title: "如何管理 Mac 的本機管理者權限 (Local Admin)？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["帳號權限", "LAPS", "資安", "Privileges", "最小權限原則"]
+
 ---
 
 **最佳實踐是「日常使用標準帳戶」搭配「LAPS (本機管理員密碼解決方案)」。嚴禁讓使用者長期持有 Admin 權限。**
@@ -85,17 +86,18 @@ tags: ["帳號權限", "LAPS", "資安", "Privileges", "最小權限原則"]
 - **流程**：老師點選 Dock 上的鎖頭圖示 > 說明理由 > 獲得 **「20 分鐘的管理員權限」**。時間一到，系統自動將其降回標準使用者。
 - 這既給予了方便，又維持了「最小權限原則 (Principle of Least Privilege)」。
 
-
----
-File: mac-3.md
 ---
 
+## File: mac-3.md
+
 ---
+
 id: mac-3
 title: "如何派送非 App Store 的軟體（如 Chrome, Adobe, Office）？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["軟體派送", "App Installers", "PKG", "自動更新"]
+
 ---
 
 **放棄手動打包。請優先使用 Jamf Pro 的「App Installers」服務，實現「隨選即裝」與「自動更新」。**
@@ -126,17 +128,18 @@ tags: ["軟體派送", "App Installers", "PKG", "自動更新"]
 
 對於 Adobe Creative Cloud (CC)，建議使用 Adobe Admin Console 建立 **「Shared Device License (共用裝置授權)」** 的安裝包，再透過 Jamf Pro 派送，以符合電腦教室多人共用的授權規範。
 
-
----
-File: mac-4.md
 ---
 
+## File: mac-4.md
+
 ---
+
 id: mac-4
 title: "如何制定 2026 年的 macOS 軟體更新策略？DDM 宣告式更新與傳統更新有何不同？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: true
 tags: ["軟體更新", "DDM", "macOS 26", "宣告式更新", "資訊組長實務"]
+
 ---
 
 **在 macOS 26 (Tahoe) 環境下，Apple 已正式棄用舊款指令式更新，全面轉向更強大的 DDM (宣告式管理) 模式。** 這讓 資訊組長從「催促裝置更新」變為「定義目標狀態」，解決了以往更新指令容易塞車的問題。
@@ -172,17 +175,18 @@ tags: ["軟體更新", "DDM", "macOS 26", "宣告式更新", "資訊組長實務
 
 - **避開大考日期** ：DDM 的強制性極高。在段考週或線上檢定期間，請務必將相關更新 Profile 暫時解除指派，避免電腦在考試中途因為 Deadline 到達而自動重啟。
 
-
----
-File: mac-5.md
 ---
 
+## File: mac-5.md
+
 ---
+
 id: mac-5
 title: "如何強制 Mac 進行 macOS 系統更新？學生一直按「稍後提醒」怎麼辦？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["系統更新", "DDM", "Nudge", "宣告式管理", "SOP"]
+
 ---
 
 **現在的標準是使用「宣告式裝置管理 (DDM)」。** 若需更強烈的視覺提醒，則搭配開源工具 "Nudge"。
@@ -209,17 +213,18 @@ tags: ["系統更新", "DDM", "Nudge", "宣告式管理", "SOP"]
 
 對於電腦教室（無人使用的時段），可設定 **「Power Nap」** 與 **「排程開機」** ，並發送 MDM 指令在深夜自動執行下載與安裝，避開教學時段。
 
-
----
-File: mac-6.md
 ---
 
+## File: mac-6.md
+
 ---
+
 id: mac-6
 title: "Mac 電腦教室如何像還原卡一樣，快速清除重置 (Wipe)？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["重置", "EACS", "抹除所有內容", "電腦教室", "Imaging"]
+
 ---
 
 **Apple Silicon (M 系列) 時代已不建議，而且可能也無法使用「還原卡」或「Ghost」。** 請改用「清除所有內容和設定 (EACS)」指令。
@@ -256,17 +261,18 @@ tags: ["重置", "EACS", "抹除所有內容", "電腦教室", "Imaging"]
 - 現代 Mac 管理是「學期末/專案結束時」執行一次 EACS 重置。
 - 若需每日還原（如圖書館公用機），則需透過 **「Guest User (訪客模式)」** 設定登出即刪除資料，或使用專門的 kiosk 軟體 (如 Deep Freeze Mac 版，但支援度需確認)。
 
-
----
-File: mac-7.md
 ---
 
+## File: mac-7.md
+
 ---
+
 id: mac-7
 title: "M 系列晶片 (Apple Silicon) 的 Mac 在管理上有什麼特殊限制？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["Apple Silicon", "Bootstrap Token", "安全啟動", "核心延伸功能"]
+
 ---
 
 **Apple Silicon (M1-M5) 的安全性架構與 Intel Mac 完全不同。管理核心在於「Bootstrap Token」與「擁有權 (Ownership)」。若未正確設定，MDM 將無法執行軟體更新或安裝核心外掛。**
@@ -290,17 +296,18 @@ tags: ["Apple Silicon", "Bootstrap Token", "安全啟動", "核心延伸功能"]
 - 若必須安裝（如舊款防毒軟體），必須重開機進入 Recovery Mode 降低安全性設定（Reduced Security）。
 - **現代建議** ：請改用 **系統延伸功能 (System Extensions)** ，這是 Apple 推薦的新架構，可直接透過 MDM 設定檔授權，無需降低系統安全性。
 
-
----
-File: mac-8.md
 ---
 
+## File: mac-8.md
+
 ---
+
 id: mac-8
 title: "為什麼 MDM 要求開啟 FileVault？使用者忘記登入密碼時該如何救援？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: true
 tags: ["FileVault", "全磁碟加密", "資料安全", "復原密鑰", "Jamf Pro", "資產"]
+
 ---
 
 **FileVault 是 macOS 內建的「全磁碟加密」技術，能確保電腦遺失時資料無法被竊取。透過 MDM 託管「復原密鑰 (Recovery Key)」，管理員可在使用者忘記密碼時協助解鎖。**
@@ -342,17 +349,18 @@ tags: ["FileVault", "全磁碟加密", "資料安全", "復原密鑰", "Jamf Pro
 - **資料遺失風險** ：若 FileVault 已開啟 but Jamf Pro 顯示「Unknown」或無金鑰，代表託管失敗。此時若忘記密碼，資料將 **永久無法救回** ，只能清除重灌。
 - **機構復原密鑰 (IRK)** ：現代管理建議優先使用「個人復原密鑰 (PRK)」機制，安全性較高。
 
-
----
-File: mac-9.md
 ---
 
+## File: mac-9.md
+
 ---
+
 id: mac-9
 title: "Jamf 的 Script (腳本) 功能 can do what? How to create and run?"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["自動化", "Shell Script", "Zsh", "政策", "腳本", "jamfHelper"]
+
 ---
 
 **腳本 (Scripts) 讓管理員能以 Root 權限在 Mac 上執行 Shell 指令，實現標準 MDM 描述檔 (Payload) 無法達成的進階客製化功能。**
@@ -415,17 +423,18 @@ DESC="您的電腦將在 10 分鐘後進行安全性更新，請儲存手邊的�
 - **權限** ：Jamf Pro 執行的腳本預設皆為 **Root (系統最高權限)** ，請務必先在測試機上驗證，以免誤刪重要系統檔。
 - **登入使用者的執行** ：若需以當前登入使用者的身分執行指令（例如修改使用者的 Dock），需使用 `sudo -u $(stat -f%Su /dev/console) command` 的語法切換身分。
 
-
----
-File: mac-10.md
 ---
 
+## File: mac-10.md
+
 ---
+
 id: mac-10
 title: "Jamf Pro 預設的「資產」報告中沒有我要的資訊（如特定檔案版本、最後重開機時間），該如何自訂收集？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["延伸屬性", "Extension Attributes", "腳本", "資產", "客製化欄位"]
+
 ---
 
 **請使用「電腦延伸屬性 (Computer Extension Attributes)」功能。**
@@ -476,17 +485,18 @@ echo "<result>$days</result>"
 
 - **執行效能**：延伸屬性腳本會在 **每次** 資產更新時執行。請避免撰寫耗時過長（如 `find / ...` 掃描全硬碟）的腳本，以免拖慢全校電腦的資產回報速度或造成系統卡頓。
 
-
----
-File: mac-11.md
 ---
 
+## File: mac-11.md
+
 ---
+
 id: mac-11
 title: "Mac 安裝軟體時顯示「來自未識別的開發者」或「無法打開」，如何解決？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["Gatekeeper", "安全性", "公證", "Notarization", "軟體安裝"]
+
 ---
 
 **這是 macOS 的 Gatekeeper 安全機制。對於教學所需但未經公證的軟體，建議透過「右鍵開啟」繞過，或由 MDM 統一派送以避免隔離標記。**
@@ -535,17 +545,18 @@ xattr -r -d com.apple.quarantine /Applications/AppName.app
 
 若遇到軟體顯示 **「已損毀，應丟到垃圾桶」**，通常不是真的故障，而是該軟體的簽署憑證過期或未經公證。請優先嘗試上述「移除隔離屬性」的指令，通常能起死回生。
 
-
----
-File: mac-12.md
 ---
 
+## File: mac-12.md
+
 ---
+
 id: mac-12
 title: "如何防止學生進入 Recovery Mode (復原模式) 格式化電腦？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["防篡改", "Recovery Lock", "韌體密碼", "資安", "遠端指令"]
+
 ---
 
 **針對不同架構的 Mac，防護機制有所不同：Intel 機型需設定「韌體密碼」，而 Apple Silicon (M 系列) 則需設定「復原鎖定 (Recovery Lock)」。兩者皆可透過 Jamf Pro 部署。**
@@ -559,18 +570,19 @@ Mac 的復原模式功能強大，若未加鎖，任何人只要接觸實體機�
 | **Apple Silicon (M1-M5)** | **復原鎖定 (Recovery Lock)**     | 僅能透過 **MDM 遠端指令** 設定 |
 | **Intel Mac**             | **韌體密碼 (Firmware Password)** | 透過 **設定描述檔** 或指令設定 |
 
-
----
-File: mac-13.md
 ---
 
+## File: mac-13.md
+
 ---
+
 id: mac-13
 title: "Google Meet 或 Zoom 想要分享螢幕，卻一直跳出權限請求？MDM 能自動全開嗎？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags:
-  ["PPPC", "隱私權限", "TCC", "螢幕錄製", "標準使用者", "Apple Intelligence"]
+["PPPC", "隱私權限", "TCC", "螢幕錄製", "標準使用者", "Apple Intelligence"]
+
 ---
 
 **這是 macOS 的 TCC (透明度、同意與控制) 隱私機制。針對「螢幕錄製」、「麥克風」與「相機」，Apple 強制要求必須由使用者「親自點選同意」，MDM 無法越俎代庖強制開啟。**
@@ -609,17 +621,18 @@ tags:
 
 **注意**：macOS 26 強化了對「螢幕快照」與「錄製」的通知，即使已授權，系統仍會定期提醒使用者「該 App 正在觀察您的系統」，這是系統級保護，建議向師生說明這是正常安全現象。
 
-
----
-File: mac-14.md
 ---
 
+## File: mac-14.md
+
 ---
+
 id: mac-14
 title: "學校有多台網路印表機，如何透過 Jamf Pro 派送設定給老師的 Mac？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["印表機", "AirPrint", "lpadmin", "政策", "自助服務", "驅動程式"]
+
 ---
 
 **現代化 Mac 列印部署應優先採用「AirPrint (免驅動)」協定。若需進階設定，則透過「政策 (Policies)」或 Shell 腳本執行 `lpadmin` 指令。**
@@ -679,18 +692,19 @@ echo "Printer $DISPLAY_NAME installed successfully."
 - **痛點**：學校印表機眾多，全校派送會導致老師的選單出現數十台印表機，造成混亂。
 - **解法**：將每台印表機做成一個 **「自助服務」** 項目，並附上位置說明（如：「安裝 - 二樓導師室印表機」）。讓老師走到哪、裝到哪，亦可減少驅動衝突。
 
-
----
-File: mac-15.md
 ---
 
+## File: mac-15.md
+
 ---
+
 id: mac-15
 title: "如何大量部署 Microsoft Office 並啟用授權？電腦教室與行政機有何不同？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags:
-  ["Office", "Microsoft 365", "Serializer", "大量授權", "Jamf App Installers"]
+["Office", "Microsoft 365", "Serializer", "大量授權", "Jamf App Installers"]
+
 ---
 
 **最佳實踐是使用「Jamf App Installers」自動部署安裝檔，並依據使用場景區分「序列化 (Serializer)」或「使用者登入」兩種啟用方式。**
@@ -727,17 +741,18 @@ tags:
 
 若發生「授權衝突」，通常是因為電腦同時殘留了舊版的 Serializer 與新版登入資訊。建議使用微軟官方的 **License Removal Tool** (可包裝成腳本透過 Jamf 執行) 清除乾淨後再重新部署。
 
-
----
-File: mac-16.md
 ---
 
+## File: mac-16.md
+
 ---
+
 id: mac-16
 title: "【Sequoia 新功能】如何管理或禁用「iPhone 鏡像輸出 (iPhone Mirroring)」？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["macOS 15", "iPhone Mirroring", "隱私", "限制", "DLP"]
+
 ---
 
 **macOS 15 Sequoia 引入的「iPhone 鏡像輸出」雖然方便，但在校園公用電腦或高機密行政機上存在資料外洩 (DLP) 風險，建議透過 MDM 限制。**
@@ -760,17 +775,18 @@ tags: ["macOS 15", "iPhone Mirroring", "隱私", "限制", "DLP"]
 
 設定生效後，即使使用者登入了相同的 Apple 帳號，開啟「iPhone 鏡像輸出」App 時會顯示「由管理員停用」的訊息。
 
-
----
-File: mac-17.md
 ---
 
+## File: mac-17.md
+
 ---
+
 id: mac-17
 title: "【硬體部署】學校電腦教室改用 Mac mini (M4) 有什麼優勢？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["Mac mini", "M4", "電腦教室", "自動部署", "ADE"]
+
 ---
 
 **Mac mini 憑藉其「零接觸部署 (Zero-Touch)」與「極低功耗」，已成為取代傳統 PC 電腦教室的首選方案。**
@@ -790,17 +806,18 @@ tags: ["Mac mini", "M4", "電腦教室", "自動部署", "ADE"]
 1. **AI 教學就緒**：
    - M4 晶片內建強大的神經網路引擎 (NPU)，無需依賴雲端算力即可執行本機 AI 模型教學或 4K 影片剪輯，符合新課綱數位內容需求。
 
-
----
-File: mac-18.md
 ---
 
+## File: mac-18.md
+
 ---
+
 id: mac-18
 title: "【資產救援】Mac 送修回來或離職交接時被舊 Apple 帳號鎖住 (啟用鎖定)，怎麼辦？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["啟用鎖定", "Activation Lock", "ASM", "解除鎖定", "資產回收"]
+
 ---
 
 **只要該 Mac 屬於學校資產（已加入 ASM），管理員可直接在 Apple School Manager 後台強制解除鎖定，無需聯絡原使用者。**
@@ -824,17 +841,18 @@ tags: ["啟用鎖定", "Activation Lock", "ASM", "解除鎖定", "資產回收"]
 - 該裝置必須是 **「自動裝置註冊 (ADE/DEP)」** 的一部分，且已指派給學校的 MDM 伺服器。
 - 若為早期自行購買未入庫的機器，需先透過 Apple Configurator 將其加入 ASM 才能使用此功能。
 
-
----
-File: mac-19.md
 ---
 
+## File: mac-19.md
+
 ---
+
 id: mac-19
 title: "2026 年 macOS 部署與離線安裝進階策略：如何應對大規模新機註冊？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["部署策略", "ADE", "離線安裝", "內容快取", "macOS 26"]
+
 ---
 
 **在 2026 年的校園環境中，零接觸部署 (Zero-Touch) 已經是標準操作。但面對全校性大規模採購（如 M5 Mac mini 教室）時，網路頻寬與 MDM 伺服器的負載將是最大挑戰。**
@@ -872,17 +890,18 @@ macOS 26 支援更強大的註冊機制。
 
 **建議**：對於 2026 年的主力機型 (M4/M5)，請務必利用其強大的 NPU 加速特性，在部署時同步完成 AI 模型的本機索引初始化，讓學生開機即可使用書寫工具等功能。
 
-
----
-File: mac-20.md
 ---
 
+## File: mac-20.md
+
 ---
+
 id: mac-20
 title: "macOS 26 的「透過 SSH 解鎖 FileVault」如何設定？有什麼安全考量？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["FileVault", "SSH", "遠端解鎖", "macOS 26", "遠端管理"]
+
 ---
 
 **macOS 26 新增在 Pre-boot 階段透過 SSH 解鎖 FileVault 的功能，解決遠端管理無螢幕主機的痛點。**
@@ -934,17 +953,18 @@ tags: ["FileVault", "SSH", "遠端解鎖", "macOS 26", "遠端管理"]
 - **建議啟用**：機房伺服器、無螢幕部署、多校區環境
 - **不建議啟用**：電腦教室、公開網路、學生可存取網段
 
-
----
-File: mac-21.md
 ---
 
+## File: mac-21.md
+
 ---
+
 id: mac-21
 title: "macOS 26 升級後，學生可以看到 MDM 設定的隱私權限，如何處理詢問？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["隱私權限", "透明度", "PPPC", "macOS 26", "使用者溝通"]
+
 ---
 
 **macOS 26 在「系統設定 > 隱私權與安全性」中，會明確標註哪些權限是由組織管理的。**
@@ -996,17 +1016,18 @@ tags: ["隱私權限", "透明度", "PPPC", "macOS 26", "使用者溝通"]
 - 說明每個權限的教學必要性
 - 強調 macOS 的保護機制（指示燈、通知等）
 
-
----
-File: mac-22.md
 ---
 
+## File: mac-22.md
+
 ---
+
 id: mac-22
 title: "macOS 26 是最後支援 Intel Mac 的版本，現有 Intel Mac 可以用多久？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: true
 tags: ["Intel Mac", "Apple Silicon", "系統支援", "macOS 26", "裝置規劃"]
+
 ---
 
 ## Q: macOS 26 是最後支援 Intel Mac 的版本，現有 Intel Mac 可以用多久？
@@ -1068,17 +1089,18 @@ Jamf Pro 範例：
 - macOS 和 Apple App 針對 Apple Silicon 優化。
 - 原生支援 iOS/iPadOS App。
 
-
----
-File: mac-23.md
 ---
 
+## File: mac-23.md
+
 ---
+
 id: mac-23
 title: "【課室秩序】如何透過 MDM 控管或禁用「iPhone 鏡像輸出」，防止學生在課堂中進行遠端干擾？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["iPhone 鏡像輸出", "教室管理", "限制", "macOS 26", "教學端控制"]
+
 ---
 
 **macOS 26 針對「iPhone 鏡像輸出」提供了更精細的控制，資訊組長可以根據「教室共享機」或「行政專用機」設定不同的權限層級。**
@@ -1109,17 +1131,18 @@ tags: ["iPhone 鏡像輸出", "教室管理", "限制", "macOS 26", "教學端�
 
 **組長觀點**：對於 M5 晶片的 Mac，鏡像輸出的延遲極低，建議利用「僅限檢視模式」作為「作品展示」的輔助工具，而非全然封殺，以發揮科技教學的最大價值。
 
-
----
-File: mac-24.md
 ---
 
+## File: mac-24.md
+
 ---
+
 id: mac-24
 title: "【考試防弊】如何管理 Safari 的「干擾控制 (Distraction Control)」，避免學生在網頁檢定中隱藏關鍵 UI？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: true
 tags: ["Safari", "干擾控制", "考試防弊", "macOS 26", "教學端管理"]
+
 ---
 
 **macOS 26 Safari 推出的「干擾控制」允許使用者點擊並隱藏網頁上的部分元素（如廣告、側欄）。但在電腦化測驗 (CBT) 中，學生可能利用此功能隱藏測驗計時器、剩餘題數或導覽列，造成公平性疑慮。**
@@ -1152,17 +1175,18 @@ tags: ["Safari", "干擾控制", "考試防弊", "macOS 26", "教學端管理"]
 
 **組長觀點**：雖然「干擾控制」能提升日常閱讀效率，但在資訊素養檢定或校內段考情境下，它是個顯著的防弊漏洞。建議組長在「測驗用設定檔」中，將此選項與「翻譯功能」一併評估是否關閉。
 
-
----
-File: mac-25.md
 ---
 
+## File: mac-25.md
+
 ---
+
 id: mac-25
 title: "【資安稽核】如何利用 PSSO 實現「開機即登入」，並自動滿足教育部對資安強密碼之要求？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["Platform SSO", "無密碼", "資安規範", "教育部要求", "身分驗證"]
+
 ---
 
 **在 2026 年，藉由 Platform SSO (PSSO) 2.0，學校可以徹底解決「老師密碼太弱」與「登入兩次（FileVault + 系統）」的維運問題。** 透過將本機登入與組織雲端帳號 (Entra ID / Google Workspace) 同步，您可以強制執行符合資安規範的密碼原則，而使用者只需在解鎖磁碟時輸入一次密碼。
@@ -1193,17 +1217,18 @@ tags: ["Platform SSO", "無密碼", "資安規範", "教育部要求", "身分�
 
 **組長觀點** ：PSSO 是 2026 年 Mac 管理的最重要拼圖。它不僅滿足了政府對資安的管控需求，更大幅提升了老師的「使用者體驗」，是 資訊組長展現專業價值的最佳方案。
 
-
----
-File: mac-26.md
 ---
 
+## File: mac-26.md
+
 ---
+
 id: mac-26
 title: "【新舊互通】2026 混合環境管理：如何設定 Smart Group 正確區分 Intel 與 Apple Silicon 的軟體包？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["混合環境", "Intel Mac", "Apple Silicon", "Smart Group", "部署策略"]
+
 ---
 
 **2026 年是 Intel Mac 邁向生命週期終點的關鍵年。校內同時存在「x86_64 (Intel)」與「arm 64 (M1-M5)」兩種架構，若派錯軟體包，輕則軟體無法執行，重則導致系統不穩。**
@@ -1243,17 +1268,18 @@ tags: ["混合環境", "Intel Mac", "Apple Silicon", "Smart Group", "部署策�
 
 **組長觀點** ：混合環境的管理關鍵在於「精準分群」。只要 Smart Group 設定正確，後續的軟體部署就不會出錯，這也能讓 資訊組長對於學校資產的健康度有更科學的掌握。
 
-
----
-File: mac-27.md
 ---
 
+## File: mac-27.md
+
 ---
+
 id: mac-27
 title: "【自動化維管】利用 macOS 26 DDM 設定「智慧能源管理」：兼顧校園節能與凌晨自動更新。"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: false
 tags: ["節能政策", "DDM", "自動更新", "能源管理", "macOS 26"]
+
 ---
 
 **過往「資訊組希望開機更新」與「總務處希望按時關機省電」一直是學校維運的兩難。macOS 26 與 DDM 的結合提供了一個完美的自動化平衡點。**
@@ -1282,17 +1308,18 @@ tags: ["節能政策", "DDM", "自動更新", "能源管理", "macOS 26"]
 
 **組長觀點** ：數位校園的管理不應是全天候耗電。透過 macOS 26 的宣告式能源管理，我們能做到「有需要才醒來，沒事就深睡」，徹底解決 資訊組與總務處的多年心結。
 
-
----
-File: mac-28.md
 ---
 
+## File: mac-28.md
+
 ---
+
 id: mac-28
 title: "【現場救援】Mac 快速重置 (EACS) 後若自動註冊卡住，有哪些離線恢復與修復技巧？"
 category: "第七部分：Mac 裝置管理 (Mac Management)"
 important: true
 tags: ["EACS", "ADE 故障排除", "網路認證", "Terminal 指令", "復原模式"]
+
 ---
 
 **雖然「清除所有內容和設定 (EACS)」非常穩定，但在學校環境中，常因 Wi-Fi 需要網頁認證或防火牆擋掉 Apple 註冊伺服器，導致電腦卡在「遠端管理」註冊畫面。**
@@ -1338,17 +1365,18 @@ sudo profiles renew -type enrollment
 
 **組長觀點** ：遇到大量電腦卡註冊時「莫驚慌」。通常 90% 的問題只要「同步時間」或「換個熱點」就能解決。建議組長在維修 USB 中預載一份包含常見 Apple 高頻域名通訊埠的清單，以便隨時與網管組溝通。
 
-
----
-File: mac-29.md
 ---
 
+## File: mac-29.md
+
 ---
+
 id: mac-29
 title: "如何透過 Jamf Pro 統一推送系統更新 (iOS/iPadOS/macOS)？"
 category: "第一部分：硬體與系統更新 (Hardware & OS Updates)"
 important: true
 tags: ["系統更新", "Jamf Pro", "DDM", "軟體更新藍圖", "iOS 更新", "macOS 更新"]
+
 ---
 
 **在 2026 年的 Jamf Pro 中，推送系統更新（iOS/iPadOS/macOS）已全面轉向「宣告式管理 (DDM)」模式。** 這不僅比舊式的遠端指令更穩定，還能讓裝置「自主」處理下載與安裝流程，大幅降低伺服器負載。
@@ -1387,5 +1415,3 @@ tags: ["系統更新", "Jamf Pro", "DDM", "軟體更新藍圖", "iOS 更新", "m
 
 1.  **避開大考周** ：雖然可以強制更新，但請務必避開考試或重要演示期間，以免裝置進入更新畫面（通常需 15-30 分鐘）影響學生。
 1.  **電源確認** ：提醒學生在排程更新的當晚，將 iPad/Mac 插上充電器，這是確保更新成功的最大關鍵。
-
-

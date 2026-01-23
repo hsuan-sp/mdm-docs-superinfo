@@ -36,16 +36,20 @@ type: "major/minor/patch"
 ### [摘要標題，例如：重大功能更新]
 
 ### Added
+
 - [新增功能 A]
 - [新增功能 B]
 
 ### Changed
+
 - [變更功能 C]
 
 ### Fixed
+
 - [修正錯誤 D]
 
 ### Security
+
 - [安全性更新 E]
 ```
 

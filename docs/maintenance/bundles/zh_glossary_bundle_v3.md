@@ -1,12 +1,12 @@
-
-
 ---
 File: platform-sso.md
 ---
 
 ---
+
 term: "Platform SSO (平台單一登入)"
 category: ["Security", "macOS"]
+
 ---
 
 ## 術語定義
@@ -26,14 +26,15 @@ category: ["Security", "macOS"]
 - **舊困擾** ：進大門（開機）要一把鑰匙，開保險箱（雲端硬碟）要另一把，進會議室（公司網頁）又要一把。鑰匙一多容易搞混（密碼不同步）。
 - **新解法** ：現在把你家大門鑰匙直接換成「萬能感應卡」。一刷卡進門（開機登入），之後開保險箱、進會議室全部自動感應解鎖，一張卡通到底。
 
-
----
-File: policy.md
 ---
 
+## File: policy.md
+
 ---
+
 term: "Policy (原則/政策)"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -54,14 +55,15 @@ category: ["Core"]
 - **內容** ：上面寫著：「每天早上 8 點（時機 + 頻率），請把客廳地板吸乾淨（任務）」。
 - **自動化** ：一旦設好這張指令單（Policy），機器人（MDM）就會乖乖照表操課，不用你每次都去按開關。
 
-
----
-File: pppc-privacy-preferences-policy-control.md
 ---
 
+## File: pppc-privacy-preferences-policy-control.md
+
 ---
+
 term: "PPPC (Privacy Preferences Policy Control)"
 category: ["Security", "macOS"]
+
 ---
 
 ## 術語定義
@@ -81,14 +83,15 @@ category: ["Security", "macOS"]
 - **一般狀況** ：普通 App 要用麥克風或看你的桌面，都要先被警衛（系統）攔下來問使用者「可以嗎？」。
 - **VIP 通行** ：IT 發給這些重要 App（如上課用的軟體）一張 VIP 證（PPPC）。警衛看到這張證就直接放行，不會再囉唆問東問西，讓上課流程更順暢。
 
-
----
-File: prestage-enrollment.md
 ---
 
+## File: prestage-enrollment.md
+
 ---
+
 term: "PreStage Enrollment"
 category: ["Enrollment", "Jamf"]
+
 ---
 
 ## 術語定義
@@ -108,14 +111,15 @@ category: ["Enrollment", "Jamf"]
 - **劇本** ：就像去餐廳點餐，你已經事先把「不要香菜」、「少油」、「少鹽」都註記在訂單上了。
 - **上菜** ：當服務生把菜端上來（使用者開機），這道菜就已經是完美的狀態（跳過不需要的設定），使用者不用再花時間挑香菜，直接開吃（使用）。
 
-
----
-File: private-relay.md
 ---
 
+## File: private-relay.md
+
 ---
+
 term: "Private Relay (私密轉送)"
 category: ["Security", "Apple"]
+
 ---
 
 ## 術語定義
@@ -135,14 +139,15 @@ category: ["Security", "Apple"]
 - **功能** ：穿上它（開啟功能），網路上的人看不到你是誰（隱藏 IP），也看不到你去哪裡（加密流量）。
 - **校園限制** ：在學校裡，因為老師有責任確保學生不去危險的地方（色情/暴力網站），所以校規規定「在校內不准穿隱形斗篷」，以便學校能保護大家的安全。
 
-
----
-File: private-wi-fi-address.md
 ---
 
+## File: private-wi-fi-address.md
+
 ---
+
 term: "Private Wi-Fi Address (私有 Wi-Fi 位址)"
 category: ["Network", "Security"]
+
 ---
 
 ## 術語定義
@@ -163,14 +168,15 @@ category: ["Network", "Security"]
 - **情境** ：你在星巴克連 Wi-Fi 時，用個假名（隨機 MAC）沒關係，這樣店家就不知道你每天都來偷懶。
 - **問題** ：但在學校，警衛（路由器）必須核對你的 **「真實身分證」** （硬體 MAC）才肯放行。如果你堅持報假名，警衛認不出你是誰，就會把你擋在校門外（連不上網）。
 
-
----
-File: profile-configuration-profile.md
 ---
 
+## File: profile-configuration-profile.md
+
 ---
+
 term: "Profile (Configuration Profile)"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -191,14 +197,15 @@ category: ["Core"]
 - **舊方法** ：想像要 500 位學生每個人自己動手輸入 20 個字的超長 Wi-Fi 密碼，一定會有人打錯或放棄。
 - **新方法** ：學校直接發給每人一張「智慧卡」（Profile）。卡片一插（安裝），裝置就知道該怎麼連 Wi-Fi、去哪裡收信、哪些事不能做。這是一把「萬能鑰匙」，幫大家省時間又避免手誤。
 
-
----
-File: provisioning-profile.md
 ---
 
+## File: provisioning-profile.md
+
 ---
+
 term: "Provisioning Profile"
 category: ["Apps", "Security"]
+
 ---
 
 ## 術語定義
@@ -219,14 +226,15 @@ category: ["Apps", "Security"]
 - **臨時簽證** ：但學校自己開發、沒上架的 App，只能拿 **「一年期簽證」** （佈建描述檔）。
 - **遣返** ：如果學校忘記幫它續簽，簽證一到期，這個 App 就會被 **「強制遣返」** （無法開啟），直到辦好新手續為止。
 
-
----
-File: proxy.md
 ---
 
+## File: proxy.md
+
 ---
+
 term: "Proxy"
 category: ["Network"]
+
 ---
 
 ## 術語定義
@@ -248,14 +256,15 @@ category: ["Network"]
 - **委託代購** ：現在你把購物清單（網址）交給 **「專業代購」** （Proxy）。
 - **流程** ：代購幫你出國買，順便檢查東西有沒有毒（過濾）、是不是違禁品。如果很多人都買同一款餅乾，他會直接批發一箱回來放著（快取），這樣大家拿到貨的速度就更快了。
 
-
----
-File: push-notification.md
 ---
 
+## File: push-notification.md
+
 ---
+
 term: "Push Notification (推播通知)"
 category: ["Core", "Apple"]
+
 ---
 
 ## 術語定義
@@ -281,14 +290,15 @@ MDM 的運作流程：
 - **省電模式** ：iPad 為了省電，沒事的時候都在睡覺。IT 部門不能對著睡著的 iPad 大吼大叫。
 - **拍一下** ：所以他們發一個 **推播通知** 。就像輕輕拍一下學生的肩膀，在他耳邊悄悄說： _「老師有新的作業要給你，趕快去辦公室領一下！」_
 
-
----
-File: qr-code-enrollment.md
 ---
 
+## File: qr-code-enrollment.md
+
 ---
+
 term: "QR Code Enrollment"
 category: ["Enrollment"]
+
 ---
 
 ## 術語定義
@@ -309,14 +319,15 @@ category: ["Enrollment"]
 - **舊方法** ：想像新員工報到時，要自己在瀏覽器手動輸入一長串像 `https://MDM.school.edu/enroll` 的網址，很容易打錯字或不知道去哪裡打。
 - **新方法** ：現在只要拿起相機 **「嗶一下」** (掃 QR Code)，註冊表單自動填好跳出來，直接簽名 (安裝) 就完成報到了，完全不用打字，也不會迷路。
 
-
----
-File: radius.md
 ---
 
+## File: radius.md
+
 ---
+
 term: "RADIUS"
 category: ["Network"]
+
 ---
 
 ## 術語定義
@@ -337,14 +348,15 @@ category: ["Network"]
 - **刷卡 (連線)** ：當你拿員工證刷卡時，門鎖會把資料傳給 **「中央保全主機」** (RADIUS)。
 - **驗證** ：主機查了一下名單說：「他是張三，還在職」，然後命令門鎖打開。如果主機說「查無此人」，門就不會開。這樣不管有多少個門，只要管好這台主機就好。
 
-
----
-File: rapid-security-response-rsr.md
 ---
 
+## File: rapid-security-response-rsr.md
+
 ---
+
 term: "Rapid Security Response (RSR)"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -365,14 +377,15 @@ category: ["Security"]
 - **大手術 (系統更新)** ：以前不管傷口多小，都要進手術房全身麻醉（完整更新），還得停工好幾個小時。
 - **OK 繃 (RSR)** ：現在發現一個小傷口（漏洞），Apple 護士直接過來貼個 **OK 繃** 就好了。過程只要幾分鐘，貼完馬上就能繼續跑跳，不用躺在病床上等半天。
 
-
----
-File: recon.md
 ---
 
+## File: recon.md
+
 ---
+
 term: "Recon"
 category: ["Jamf", "macOS"]
+
 ---
 
 ## 術語定義
@@ -396,14 +409,15 @@ category: ["Jamf", "macOS"]
 - **突擊檢查 (Recon)** ：當 IT 下達 Recon 指令，就像跟電腦說： **「現在！立刻！全身檢查一遍！」** 。
 - **回報** ：電腦會馬上數一數自己裝了幾個 App、量量硬碟剩多少空間，然後把這份最新的體檢報告送到總部，讓醫生（IT）能根據最新狀況來開藥方（解決問題）。
 
-
----
-File: recovery-lock.md
 ---
 
+## File: recovery-lock.md
+
 ---
+
 term: "Recovery Lock"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -423,14 +437,15 @@ category: ["Security"]
 - **漏洞** ：以前如果有小偷拿到電腦，只要把電腦送進「急診室」（復原模式），就可以把大腦洗白（重灌系統），變成一台新電腦據為己有。
 - **上鎖** ：現在急診室門口裝了 **密碼鎖** 。沒有 IT 給的密碼，小偷連重灌的機會都沒有，這台偷來的電腦對他來說就只是一塊沒用的磚頭。
 
-
----
-File: recovery-mode.md
 ---
 
+## File: recovery-mode.md
+
 ---
+
 term: "Recovery Mode（復原模式）"
 category: ["Apple", "macOS"]
+
 ---
 
 ## 術語定義
@@ -452,14 +467,15 @@ category: ["Apple", "macOS"]
 - **送急診 (復原模式)** ：當電腦病重到連開機都開不了（系統損毀），我們就把它推推這間 **「手術室」** 。
 - **醫生** ：這裡面住著幾位專科醫生（內建工具），有的負責換大腦（重灌系統），有的負責修補器官（修復磁碟）。這是救活死機電腦的最後手段。
 
-
----
-File: remote-management.md
 ---
 
+## File: remote-management.md
+
 ---
+
 term: "Remote Management"
 category: ["Core", "Jamf"]
+
 ---
 
 ## 術語定義
@@ -479,14 +495,15 @@ category: ["Core", "Jamf"]
 - **認祖歸宗** ：當你拆開一台全新的 iPad，這個畫面就像是 iPad 舉著一個牌子說： **「我是屬於某某學校的財產」** 。
 - **入學手續** ：這是一個正式的移交儀式，iPad 在這裡接受學校的校規（MDM 管理），正式成為一台受管控的學習工具。
 
-
----
-File: restrict-app-downloads-over-cellular.md
 ---
 
+## File: restrict-app-downloads-over-cellular.md
+
 ---
+
 term: "Restrict App Downloads over Cellular (限制透過行動網路下載 App)"
 category: ["Network"]
+
 ---
 
 ## 術語定義
@@ -505,14 +522,15 @@ category: ["Network"]
 
 - **家長規定** ：就像爸媽規定的家規： **「要下載新遊戲只能回家用 Wi-Fi 下載，不准在公車上用手機網路下載！」\*\*\*** 保護荷包\*\* ：這張安全網確保不會因為某一個學生下載了 10GB 的遊戲，就害全班這個月的網路流量被切斷。
 
-
----
-File: restricted-software.md
 ---
 
+## File: restricted-software.md
+
 ---
+
 term: "Restricted Software"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -533,14 +551,15 @@ category: ["Security"]
 - **沒收** ：如果他們看到你從書包裡拿出一台「違禁品」（例如電動遊樂器），他們會立刻衝過來把它 **沒收** ，並開一張違規勸導單給你。
 - **目的** ：這確保了課堂上不會有讓學生分心的違規軟體在運作。
 
-
----
-File: return-to-service.md
 ---
 
+## File: return-to-service.md
+
 ---
+
 term: "Return to Service"
 category: ["Enrollment"]
+
 ---
 
 ## 術語定義
@@ -566,14 +585,15 @@ category: ["Enrollment"]
 - **以前** ：iPad 重灌（喝孟婆湯）後就什麼都忘了，變回一張白紙，需要人重新教它連 Wi-Fi。
 - **現在** ：使用了 Return to Service，iPad 雖然喝了孟婆湯（清除資料），但口袋裡被塞了一張 **小紙條** （Wi-Fi 密碼）。醒來後它一摸口袋，馬上就知道該連哪個網路、該去哪裡報到，完全不用人操心。
 
-
----
-File: root-certificate.md
 ---
 
+## File: root-certificate.md
+
 ---
+
 term: "Root Certificate"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -593,14 +613,15 @@ category: ["Security"]
 - **信任鏈** ：數位的信任關係像族譜。如果你的裝置信任這位 **「老祖宗」** (根憑證)，那只要是老祖宗認可的 **「子子孫孫」** (其他憑證)，裝置都會無條件信任。
 - **拒絕往來** ：但如果你的裝置不認識這位老祖宗，它就會把整個家族的人都擋在門外——也就是說，你連學校 Wi-Fi 都連不上。
 
-
----
-File: rosetta-2.md
 ---
 
+## File: rosetta-2.md
+
 ---
+
 term: "Rosetta 2"
 category: ["macOS"]
+
 ---
 
 ## 術語定義
@@ -620,14 +641,15 @@ category: ["macOS"]
 - **語言不通** ：新的 M 晶片電腦說英文，舊的軟體說法文。
 - **口譯** ： **Rosetta 2** 就像坐在中間的 **口譯員** ，隨時把法文翻譯成英文。這樣一來，你也許感覺不到，但舊軟體就能跟新電腦順利溝通，讓你繼續使用習慣的工具，完全沒有語言隔閡。
 
-
----
-File: roster.md
 ---
 
+## File: roster.md
+
 ---
+
 term: "Roster (班級名冊)"
 category: ["Education"]
+
 ---
 
 ## 術語定義
@@ -652,14 +674,15 @@ category: ["Education"]
 - **自動推送** ：現在，學校的中央電腦系統會自動把最新的名單 **「推」** 到老師的 iPad 裡。
 - **結果** ：當王老師走進生物課教室，他的 iPad 早就知道這節課該有哪些學生，一個都不會少，也不會打錯名字。
 
-
----
-File: scep-simple-certificate-enrollment-protocol.md
 ---
 
+## File: scep-simple-certificate-enrollment-protocol.md
+
 ---
+
 term: "SCEP (Simple Certificate Enrollment Protocol)"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -685,14 +708,15 @@ category: ["Security"]
 - **傳統方式** ：想像以前學生要辦借書證，都要親自去圖書館櫃檯，填表格、排隊、等阿姨蓋章。
 - **SCEP 方式** ：現在 MDM 直接發一張 **「兌換券」** 給學生的 iPad。iPad 自己拿著兌換券去跟 **「自動發證機」** (CA) 溝通，機器「嗶」一聲就吐出一張 **「數位通行證」** 。iPad 拿到證件後，就能自己刷卡進出圖書館（連 Wi-Fi），學生本人什麼事都不用做。
 
-
----
-File: schoolwork-app.md
 ---
 
+## File: schoolwork-app.md
+
 ---
+
 term: "Schoolwork App"
 category: ["Education"]
+
 ---
 
 ## 術語定義
@@ -713,14 +737,15 @@ category: ["Education"]
 - **聯絡簿** ：它是老師發布命令的中心（例如：「今天回家讀第四章」）。
 - **投遞箱** ：學生做完作業直接在 App 裡「投進去」，老師的畫面上就會看到誰交了、誰還沒交、誰考了幾分，所有資訊一目了然，再也不用擔心作業紙不見。
 
-
----
-File: scope.md
 ---
 
+## File: scope.md
+
 ---
+
 term: "Scope (範圍)"
 category: ["Core", "Jamf"]
+
 ---
 
 ## 術語定義
@@ -741,14 +766,15 @@ Scope 由三個邏輯閘組成：
 
 - **邏輯** ：就像你要辦生日趴，你會說： **「邀請所有足球社的人 (Target)，但我只要住在台北市的 (Limitation)，還有，絕對不要邀請小明 (Exclusion)！」\*\*\*** 結果\*\* ：只有完全符合這三個條件的人才會收到邀請卡。Scope 就是 IT 發送 App 或指令時，用來過濾裝置的那張清單。
 
-
----
-File: screen-time.md
 ---
 
+## File: screen-time.md
+
 ---
+
 term: "Screen Time（螢幕使用時間）"
 category: ["Apple", "Core"]
+
 ---
 
 ## 術語定義
@@ -769,14 +795,15 @@ MDM 可控制的功能包括：
 - **功能** ：它會幫學生「記帳」，看你在數位世界花了多少時間。
 - **規範** ：如果學校希望學生午休不要滑手機，或晚上睡覺後不要打電動，助手可以設定 **「安靜時間」** 。時間一到，遊戲 App 就會變灰不能玩，自動幫學生養成良好的數位生活習慣。
 
-
----
-File: script.md
 ---
 
+## File: script.md
+
 ---
+
 term: "Script"
 category: ["macOS"]
+
 ---
 
 ## 術語定義
@@ -796,14 +823,15 @@ category: ["macOS"]
 - **一般按鈕** ：控制台裡只有「音量」、「亮度」這種普通按鈕。但有時候你會遇到一些怪問題，是沒有按鈕可以解決的。
 - **咒語** ：這時候，IT 巫師就會寫一段專屬的 **「咒語」** (Script) 並命令電腦唸出來。電腦照著咒語執行複雜的動作，就能完成那些普通按鈕做不到的神奇修復任務。
 
-
----
-File: secure-token.md
 ---
 
+## File: secure-token.md
+
 ---
+
 term: "Secure Token"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -823,14 +851,15 @@ category: ["Security"]
 - **門禁** ：就算你有鑰匙（登入密碼），銀行警衛也不會讓你打開 **大金庫** （加密硬碟），除非你的識別證上蓋有官方的 **「經理印章」** (Secure Token)。
 - **保護** ：這是多一層的保護機制，確保只有經過授權的人，才能觸碰電腦裡最敏感的安全鎖。
 
-
----
-File: security-update.md
 ---
 
+## File: security-update.md
+
 ---
+
 term: "Security Update"
 category: ["Core", "Jamf"]
+
 ---
 
 ## 術語定義
@@ -850,14 +879,15 @@ category: ["Core", "Jamf"]
 - **預防** ：就像疫苗能幫你的身體識別並抵抗新病毒，卻不會改變你的長相或個性。
 - **作用** ： **安全性更新** 教會你的 iPad 如何抵擋新出現的電腦病毒。它不會改變操作介面，也不會多出酷炫的新功能，但它能確保你的裝置在面對看不見的威脅時，依然能活得好好的。
 
-
----
-File: self-service.md
 ---
 
+## File: self-service.md
+
 ---
+
 term: "Self Service"
 category: ["Apps", "Jamf"]
+
 ---
 
 ## 術語定義
@@ -877,14 +907,15 @@ category: ["Apps", "Jamf"]
 - **隨取隨用** ：如果學生需要計算機 App，或老師需要新版的 Zoom，他們不用填寫申請單然後等 IT 來裝。
 - **流程** ：他們只要 **「走進福利社」** (打開 App)，點一下按鈕，東西就會馬上送到手上（安裝完成），而且保證是正版、免費且安全的。
 
-
----
-File: setup-assistant.md
 ---
 
+## File: setup-assistant.md
+
 ---
+
 term: "Setup Assistant"
 category: ["Enrollment"]
+
 ---
 
 ## 術語定義
@@ -904,14 +935,15 @@ MDM 客製化功能：
 - **一般情況** ：就像玩遊戲一開始都要創角、選名字、調設定。Setup Assistant 會問你一堆問題來設定 iPad。
 - **MDM 介入** ：但是學校可以幫你按 **「跳過教學」** 。所以當你打開 iPad，它會跳過那些無聊的問題，直接進入主畫面，而且所有裝備都已經幫你穿好，隨時可以開始上課。
 
-
----
-File: setup-pane-skipping.md
 ---
 
+## File: setup-pane-skipping.md
+
 ---
+
 term: "Setup Pane Skipping (跳過設定輔助程式面板)"
 category: ["Mac"]
+
 ---
 
 ## 術語定義
@@ -934,14 +966,15 @@ macOS Tahoe 的 DDM 改進：
 
 教育電腦教室大量部署時，可省下大量時間。搭配 PreStage Enrollment 使用效果更佳。
 
-
----
-File: shared-ipad.md
 ---
 
+## File: shared-ipad.md
+
 ---
+
 term: "Shared iPad (共用 iPad)"
 category: ["Education", "Enrollment"]
+
 ---
 
 ## 術語定義
@@ -963,14 +996,15 @@ category: ["Education", "Enrollment"]
 - **個人化** ：但當你輸入帳號登入時，桌面就會變成你習慣的樣子，你的檔案也都還在。
 - **還原** ：一旦你登出，電腦就清乾淨給下一個人用，但你的心血都已經安全地存回 **「伺服器」** (iCloud) 等你下次再來。
 
-
----
-File: single-app-mode-kiosk-mode.md
 ---
 
+## File: single-app-mode-kiosk-mode.md
+
 ---
+
 term: "Single App Mode (Kiosk Mode)"
 category: ["Apps"]
+
 ---
 
 ## 術語定義
@@ -991,14 +1025,15 @@ category: ["Apps"]
 - **功能單一化** ：就像火車站的自動售票機其實也是一台電腦，但你只能用它來「買票」。單一 App 模式把萬能的 iPad 變成一台 **「單一用途機器」** 。
 - **強制專注** ：如果學生在考試，他不能跳出去回訊息，除非老師解鎖，否則他只能乖乖待在考卷畫面。
 
-
----
-File: sip-system-integrity-protection.md
 ---
 
+## File: sip-system-integrity-protection.md
+
 ---
+
 term: "SIP (System Integrity Protection)"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -1020,14 +1055,15 @@ category: ["Security"]
 - **絕對防護** ：就算你是這棟房子的主人（管理員），手裡拿著大鐵鎚，系統還是把它最重要的「大腦零件」放在防彈玻璃後面，誰都不准碰。
 - **目的** ：這讓病毒或甚至是你自己不小心手滑，都幾乎不可能 **「弄壞」** Mac 的核心系統。
 
-
----
-File: site-jamf-pro-sites.md
 ---
 
+## File: site-jamf-pro-sites.md
+
 ---
+
 term: "Site (Jamf Pro Sites)"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -1049,14 +1085,15 @@ category: ["Core"]
 - **架構** ：教育局可能買下了整棟大樓（伺服器），但在大樓內部，每個學校都有自己上鎖的 **獨立辦公室** (Site)。
 - **隱私** ：國小部的老師看不到高中部的 iPad，各校可以關起門來定自己的規矩，互不干擾。
 
-
----
-File: smart-group.md
 ---
 
+## File: smart-group.md
+
 ---
+
 term: "Smart Group"
 category: ["Core", "Jamf"]
+
 ---
 
 ## 術語定義
@@ -1076,14 +1113,15 @@ Smart Group 是一個 **「自動分類箱」** 。
 
 - **規則** ：你設好一個規則： **「只要學生 iPad 電量低於 10%，就丟進『待充電』名單。」\*\*\*** 執行\*\* ：系統會 24 小時盯著每一台裝置，只要有人電量掉到 9%，它就會自動跳進那個名單，完全不需要人工去檢查。
 
-
----
-File: software-update.md
 ---
 
+## File: software-update.md
+
 ---
+
 term: "Software Update"
 category: ["macOS", "Jamf"]
+
 ---
 
 ## 術語定義
@@ -1103,14 +1141,15 @@ MDM 的管理控制 (透過 DDM)：
 - **目的** ：裝置每隔一段時間就需要 **「回學校上課」** ，學習新技能（新功能）或是鍛煉身體（修補安全漏洞）。
 - **管理** ：IT 就像是一絲不苟的 **「訓導主任」** ，他會安排好課程表，決定全校 iPad 什麼時候該集體進修，確保大家在考試（重要課程）時不會突然被叫去更新，但又能保持在最新狀態。
 
-
----
-File: ssid-service-set-identifier.md
 ---
 
+## File: ssid-service-set-identifier.md
+
 ---
+
 term: "SSID (Service Set Identifier)"
 category: ["Network"]
+
 ---
 
 ## 術語定義
@@ -1130,14 +1169,15 @@ SSID 就好比是 **「教室門上的班級牌」** 。
 - **辨識** ：當你走在走廊上，你會看到「五年一班」、「五年二班」、「教職員室」的掛牌。
 - **連線** ：你會選擇與你身份相符的房間進去。就像你的 iPad 會選擇連上正確的 Wi-Fi **「房間」** (SSID)，以取得正確的網路權限。
 
-
----
-File: status-channel.md
 ---
 
+## File: status-channel.md
+
 ---
+
 term: "Status Channel"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -1157,14 +1197,15 @@ category: ["Core"]
 - **舊方法** ：以前老闆必須每個小時打電話問每個員工：「工作做完了嗎？」這很煩人也很花時間。
 - **新方法** ：有了 **Status Channel** ，員工只要一完成工作，就立刻用無線電回報老闆： **「我做完了！」** 這樣更快、更省力，而且老闆隨時都能掌握最新進度。
 
-
----
-File: student-information-system-sis.md
 ---
 
+## File: student-information-system-sis.md
+
 ---
+
 term: "Student Information System（SIS，學生資訊系統）"
 category: ["Education", "Other"]
+
 ---
 
 ## 術語定義
@@ -1184,14 +1225,15 @@ category: ["Education", "Other"]
 - **核心** ：它是學校的中樞神經，知道每個學生的名字、在哪一班、爸媽是誰。
 - **連動** ：當我們把這個 **「大腦」** 連接到學校的 iPad 系統時，一切都能保持同步。如果有新生報到，大腦會通知 iPad 系統自動發給他帳號，完全不需要老師手動填寫任何表格。
 
-
----
-File: supervision.md
 ---
 
+## File: supervision.md
+
 ---
+
 term: "Supervision (受監管)"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -1215,14 +1257,15 @@ category: ["Core"]
 - **個人模式** ：你自己去商店買的 iPhone 是 **「個人模式」** ，大多數設定都不能被鎖住。
 - **資產模式** ：一旦裝置進入 **「監管模式」** ，它就被認定為 **「學校財產」** 。這讓 IT 擁有完全的控制權，可以鎖定任何功能，確保裝置永遠是安全且隨時準備好用於教學的。
 
-
----
-File: system-extension.md
 ---
 
+## File: system-extension.md
+
 ---
+
 term: "System Extension"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -1242,14 +1285,15 @@ category: ["Core"]
 - **過去** ：以前要增加新的安全功能（如防毒軟體），必須在電腦最重要的部位（核心 Kernel）進行 **「開心手術」** ，風險非常高。
 - **現在** ：System Extension 是一種更安全的現代技術，就像微創手術一樣，不需要觸碰到心臟就能增強功能，讓 Mac 更穩健，也讓駭客更難攻破。
 
-
----
-File: temporary-session-guest-mode.md
 ---
 
+## File: temporary-session-guest-mode.md
+
 ---
+
 term: "Temporary Session (Guest Mode)"
 category: ["Education"]
+
 ---
 
 ## 術語定義
@@ -1271,14 +1315,15 @@ category: ["Education"]
 - **自動清理** ：但是，當你站起來 **「登出」** 的那一刻，鍵盤會自動消毒，電腦會自動 **碎掉** 你留在桌上的所有紙張。
 - **隱私** ：這確保了下一個人絕對看不到你剛剛做了什麼，而且 iPad 對每個人來說都是乾淨、快速的。
 
-
----
-File: testflight.md
 ---
 
+## File: testflight.md
+
 ---
+
 term: "TestFlight"
 category: ["Apps"]
+
 ---
 
 ## 術語定義
@@ -1301,14 +1346,15 @@ category: ["Apps"]
 - **搶先看** ：在電影（App）正式在戲院（App Store）上映之前，導演可能會先放映 **「未完成版」** 給一小群粉絲看，聽聽他們的意見。
 - **專屬影廳** ：TestFlight 就像是那個 **「私人放映廳」** ，讓學生和老師可以試用新的教學工具，並在全世界都看到之前幫忙抓出錯誤。
 
-
----
-File: tls-ssl.md
 ---
 
+## File: tls-ssl.md
+
 ---
+
 term: "TLS / SSL"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -1328,14 +1374,15 @@ category: ["Security"]
 - **上鎖** ：當你把信（資料）放進去，車子會自動上鎖，密碼只有目的地的銀行才有。
 - **安全傳輸** ：這確保了當運鈔車（網路）從你家開到銀行的路上，即使遇到強盜，他們也無法窺探裡面的內容，更不可能把錢掉包。
 
-
----
-File: token.md
 ---
 
+## File: token.md
+
 ---
+
 term: "Token (代號/權杖)"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -1356,14 +1403,15 @@ category: ["Security"]
 - **憑證** ：工作人員不需每次都檢查你的身分證，而是給你一個 **手環** (Token)。只要戴著它，你就能隨意玩設施。
 - **過期** ：如果手環掉了或隔天失效了（過期），你就得回到門口重新驗票領新的。
 
-
----
-File: touch-id.md
 ---
 
+## File: touch-id.md
+
 ---
+
 term: "Touch ID"
 category: ["Hardware"]
+
 ---
 
 ## 術語定義
@@ -1384,14 +1432,15 @@ category: ["Hardware"]
 - **便利** ：不用每次想用 iPad 都得輸入 6 位數密碼，只要把手指放在按鍵上就好。
 - **獨一無二** ：機器認得你的指紋紋路，瞬間讓你通過。這比鑰匙還快，而且更難被偷走（除非有人偷了你的手指！）。
 
-
----
-File: transfer-to-android-tool.md
 ---
 
+## File: transfer-to-android-tool.md
+
 ---
+
 term: "Transfer to Android Tool (移轉至 Android 工具)"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -1410,14 +1459,15 @@ category: ["Core"]
 - **影響極低** ：學校通常不會將 iPad 替換為 Android 平板，因此大規模遷移需求極少。
 - **資安疑慮** ：IT 管理者需注意，若學生嘗試使用此工具移轉 **Managed Apple Account (管理式 Apple 帳號)** 內的資料，可能涉及組織資料外洩。MDM 可透過限制資料導出來管控此風險。
 
-
----
-File: uie-user-initiated-enrollment.md
 ---
 
+## File: uie-user-initiated-enrollment.md
+
 ---
+
 term: "UIE (User-Initiated Enrollment)"
 category: ["Enrollment"]
+
 ---
 
 ## 術語定義
@@ -1439,14 +1489,15 @@ category: ["Enrollment"]
 - **自由加入** ：不像 ADE（入學義務教育）是強制參加，UIE 是學生（使用者）自己決定要不要報名參加管理。
 - **隨時退出** ：因為是自願的，學生如果不開心或是想偷懶，隨時可以「退班」（移除描述檔），學校的校規（資安政策）在退班的那一刻就對他無效了。
 
-
----
-File: unified-logging.md
 ---
 
+## File: unified-logging.md
+
 ---
+
 term: "Unified Logging"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -1466,14 +1517,15 @@ category: ["Core"]
 - **默默記錄** ：它安靜地寫下飛機（裝置）發生的一切大小事，從「連上 Wi-Fi」到「打開計算機」都記下來。
 - **調查關鍵** ：平常沒人理它，但一旦飛機 **「出事」** （當機或連不上網），調查人員（IT 團隊）第一個動作就是讀取黑盒子裡的日記，還原事故發生前幾秒到底發生了什麼。
 
-
----
-File: universal-binary.md
 ---
 
+## File: universal-binary.md
+
 ---
+
 term: "Universal Binary"
 category: ["macOS"]
+
 ---
 
 ## 術語定義
@@ -1493,14 +1545,15 @@ category: ["macOS"]
 - **一書兩用** ：你不需要分別買中文版和英文版，這本書每一頁都並排印著兩種語言。
 - **自動切換** ：如果你是中文讀者（Apple Silicon），你就直接讀中文部分；如果你是英文讀者（Intel），就讀英文部分。每個人都能用自己最熟悉的語言閱讀，不需要翻譯人員（Rosetta），效率最高。
 
-
----
-File: universal-control.md
 ---
 
+## File: universal-control.md
+
 ---
+
 term: "Universal Control（通用控制）"
 category: ["Apple", "macOS"]
+
 ---
 
 ## 術語定義
@@ -1521,14 +1574,15 @@ category: ["Apple", "macOS"]
 - **跨越邊界** ：把 iPad 放在 Mac 旁邊，你的滑鼠彷彿有了超能力，可以直接 **滑出** 電腦螢幕邊緣，瞬間出現在 iPad 上。
 - **合而為一** ：你甚至可以從 iPad 上抓一張照片，直接拖回 Mac 貼在報告裡。感覺就像兩台分開的機器，變成了一個擁有巨大工作空間的超級電腦。
 
-
----
-File: update-inventory.md
 ---
 
+## File: update-inventory.md
+
 ---
+
 term: "Update Inventory"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -1551,14 +1605,15 @@ category: ["Core"]
 - **清點人數** ：就像老師在上課前要環顧教室點名，確認每個人都帶了課本。
 - **全面檢查** ：技術部門發送這個指令，就是要 **清點** 你 iPad 裡的所有 App，這確保了學校的紀錄是百分之百準確且最新的。
 
-
----
-File: usb-c.md
 ---
 
+## File: usb-c.md
+
 ---
+
 term: "USB-C"
 category: ["Hardware"]
+
 ---
 
 ## 術語定義
@@ -1581,14 +1636,15 @@ category: ["Hardware"]
 - **一孔多用** ：以前你需要不同的線來充電 (Lightning)、接螢幕 (HDMI) 和傳檔案 (USB-A)。現在，這 **一個** 孔全包了。
 - **防呆設計** ：不論正插反插都能通，充電、簡報、備份一次搞定，讓 iPad 在校園裡的使用更加直覺方便。
 
-
----
-File: user-approved-mdm.md
 ---
 
+## File: user-approved-mdm.md
+
 ---
+
 term: "User Approved MDM（使用者核准的 MDM）"
 category: ["Enrollment", "macOS"]
+
 ---
 
 ## 術語定義
@@ -1609,14 +1665,15 @@ category: ["Enrollment", "macOS"]
 - **最高授權** ：但如果你要給他 **金庫鑰匙** （系統核心權限），你需要簽署一份特別的法律文件，明確表示 **「是的，我完全信任他」** 。
 - **簽名生效** ：User Approved MDM 就是那個簽名。沒有它，MDM 只能做基本的打掃，絕對不能碰你最機密的地方。
 
-
----
-File: user-enrollment.md
 ---
 
+## File: user-enrollment.md
+
 ---
+
 term: "User Enrollment"
 category: ["Enrollment"]
+
 ---
 
 ## 術語定義
@@ -1637,14 +1694,15 @@ category: ["Enrollment"]
 - **互不干涉** ：學校可以管理櫃子裡的東西（作業、考卷），但完全看不到櫃子以外的地方（你的私人自拍照、遊戲）。
 - **各自安好** ：你的隱私 100% 安全，學校管不到你的生活，但也能確保學校的資料在櫃子裡是安全的。
 
-
----
-File: vlan.md
 ---
 
+## File: vlan.md
+
 ---
+
 term: "VLAN"
 category: ["Network"]
+
 ---
 
 ## 術語定義
@@ -1664,14 +1722,15 @@ category: ["Network"]
 - **專屬通道** ：雖然大家看起來都插在同一台機器、用同一條大水管（網路線），但技術上我們像切蛋糕一樣，把它隔成了好幾個 **獨立通道** 。
 - **互不干擾** ：A 通道（訪客）的水流絕對流不到 B 通道（行政）去，確保了各自的安全與順暢。
 
-
----
-File: volume-owner.md
 ---
 
+## File: volume-owner.md
+
 ---
+
 term: "Volume Owner"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -1691,14 +1750,15 @@ category: ["Security"]
 - **唯一權力** ：雖然這間房子（Mac）裡可能住了很多房客（使用者），但只有 **真正持有地契** 的人，才有權力決定要不要打掉牆壁裝修（系統更新）或是更換大門門鎖（安全設定）。
 - **房客限制** ：其他沒有地契的房客，想要做這些大工程，都必須先取得屋主的同意與鑰匙才行。
 
-
----
-File: vpp-volume-purchase-program.md
 ---
 
+## File: vpp-volume-purchase-program.md
+
 ---
+
 term: "VPP (Volume Purchase Program)"
 category: ["Apple"]
+
 ---
 
 ## 術語定義
@@ -1718,14 +1778,15 @@ category: ["Apple"]
 - **只借不送** ：學校買了 500 本教科書（App），不是送給學生，而是 **「借」** 給每位學生一本。
 - **循環使用** ：學期結束或學生畢業時，學校會按一個按鈕，把書 **「收回來」** 放回架上，隨時準備借給下一個班級使用，完全不浪費。
 
-
----
-File: web-clip.md
 ---
 
+## File: web-clip.md
+
 ---
+
 term: "Web Clip (網頁捷徑)"
 category: ["Apps"]
+
 ---
 
 ## 術語定義
@@ -1746,14 +1807,15 @@ category: ["Apps"]
 - **一鍵傳送** ：IT 在每位學生的桌面上放了一個 **「傳送門按鈕」** 。
 - **省時省力** ：學生不需要打開瀏覽器、也不用費力輸入落落長的網址。只要點一下這個圖示，就能 **瞬間傳送** 到老師指定的學習網站，馬上開始上課。
 
-
----
-File: wi-fi-payload.md
 ---
 
+## File: wi-fi-payload.md
+
 ---
+
 term: "Wi-Fi Payload"
 category: ["Network"]
+
 ---
 
 ## 術語定義
@@ -1776,14 +1838,15 @@ category: ["Network"]
 - **無聲傳遞** ：與其讓老師在台上述說 30 次 Wi-Fi 密碼，不如由 MDM 直接把寫有密碼的小抄 **「悄悄塞進」** 每一台 iPad 的腦袋裡。
 - **自動感應** ：iPad 一進到學校，讀了腦袋裡的小抄，就自動連上網路了。學生甚至不需要知道密碼是什麼，只要專心上課就好。
 
-
----
-File: wifi-5.md
 ---
 
+## File: wifi-5.md
+
 ---
+
 term: "Wi-Fi 5"
 category: ["Network"]
+
 ---
 
 ## 術語定義
@@ -1803,14 +1866,15 @@ category: ["Network"]
 - **拓寬道路** ：在 Wi-Fi 5 之前，大家走的是狹窄的鄉間小路 (2.4 GHz)。Wi-Fi 5 蓋了一條 **寬敞、快速的高速公路** (5 GHz)，讓車子跑得更快。
 - **交通堵塞** ：但是，當 30 台 iPad（車輛）同時衝上這條路時，因為紅綠燈（路由器）不夠聰明，無法有效指揮交通，導致高速公路上還是塞成一團。
 
-
----
-File: wifi-6.md
 ---
 
+## File: wifi-6.md
+
 ---
+
 term: "Wi-Fi 6"
 category: ["Network"]
+
 ---
 
 ## 術語定義
@@ -1830,14 +1894,15 @@ category: ["Network"]
 - **私家車隊** ： **Wi-Fi 5** 就像是一支每輛車只載一個人的車隊。如果有 30 個學生需要資料，30 輛車必須排隊，造成交通堵塞。
 - **大型公車** ： **Wi-Fi 6** 使用 **OFDMA** 技術，這就像是一輛 **公車** 。一輛公車可以一次載運 30 個學生的資料，並在一趟旅程中送達。道路不再那麼擁擠，即使在繁忙的課程中，每個人都能更順暢、更快速地到達目的地。
 
-
----
-File: wifi-6e.md
 ---
 
+## File: wifi-6e.md
+
 ---
+
 term: "Wi-Fi 6E"
 category: ["Network"]
+
 ---
 
 ## 術語定義
@@ -1858,14 +1923,15 @@ category: ["Network"]
 - **高架快速** ：Wi-Fi 6E 開闢了一條 **全新、更寬敞的高架道路** (6 GHz)，讓新款 iPad 可以用兩倍的速度行駛，而不會被舊手機或筆電造成的 **「網路塞車」** 卡住。
 - **瞬間完成** ：這讓下載大型教科書或專案檔案的感覺幾乎是瞬間完成。
 
-
----
-File: wifi-7.md
 ---
 
+## File: wifi-7.md
+
 ---
+
 term: "Wi-Fi 7"
 category: ["Network"]
+
 ---
 
 ## 術語定義
@@ -1885,14 +1951,15 @@ category: ["Network"]
 - **單一車道** ：以前的 Wi-Fi 就像是一台一次只能走一條車道的車。如果那條車道塞車，你的速度就會變慢。
 - **全線通車** ：具備 **MLO** 技術的 Wi-Fi 7 就像是一台未來車，可以 **同時行駛** 在平面道路 (2.4 GHz)、高架橋 (5 GHz) 和特快車道 (6 GHz) 上。它會自動把你的資料分流到所有順暢的車道，確保你永遠不會被網路塞車困住，非常適合用於即時互動的 VR 課程。
 
-
----
-File: window-app.md
 ---
 
+## File: window-app.md
+
 ---
+
 term: "Window App (視窗化 App)"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -1916,14 +1983,15 @@ category: ["Core"]
 
 教育場域需考慮是否透過 MDM 限制此功能（設定 Restrictions > Functionality > 取消勾選 "Allow Multitasking"），以免低年級學生因操作過於複雜而感到困惑或分心。
 
-
----
-File: wipe.md
 ---
 
+## File: wipe.md
+
 ---
+
 term: "Wipe (清除裝置)"
 category: ["Core"]
+
 ---
 
 ## 術語定義
@@ -1944,14 +2012,15 @@ category: ["Core"]
 - **徹底遺忘** ：當 IT 按下這個按鈕，就像是對 iPad 施了失憶咒，叫它 **「忘記」** 它所知道的一切（照片、作業、密碼）。
 - **全新開始** ：iPad 醒來時就像剛從盒子裡拿出來一樣，乾乾淨淨，隨時可以迎接它的新主人。
 
-
----
-File: wpa-wpa2-wpa3.md
 ---
 
+## File: wpa-wpa2-wpa3.md
+
 ---
+
 term: "WPA / WPA2 / WPA3"
 category: ["Network", "Security"]
+
 ---
 
 ## 術語定義
@@ -1972,14 +2041,15 @@ category: ["Network", "Security"]
 - **WPA 2 (鐵門鎖)** ：現在大家都在用的標準鎖，雖然安全，但如果鑰匙（密碼）被偷還是擋不住。
 - **WPA 3 (銀行金庫)** ：最新的高科技鎖。就算小偷拿到鑰匙也不一定打得開，還會主動防禦各種嘗試撬鎖的行為，是保護學校資料最安全不僅的選擇。
 
-
----
-File: zero-touch-deployment.md
 ---
 
+## File: zero-touch-deployment.md
+
 ---
+
 term: "Zero-Touch Deployment"
 category: ["Enrollment"]
+
 ---
 
 ## 術語定義
@@ -1999,14 +2069,15 @@ category: ["Enrollment"]
 - **無需拆箱** ：IT 人員連箱子都不用拆，可以直接把新買的 1000 台 iPad 寄給各個老師。
 - **自動變身** ：老師打開包裝、連上學校 Wi-Fi，手中的空機就會像變魔術一樣，自動安裝好所有教學軟體，馬上就能開始上課。IT 人員只需在辦公室喝咖啡監控就好。
 
-
----
-File: zero-trust.md
 ---
 
+## File: zero-trust.md
+
 ---
+
 term: "Zero Trust"
 category: ["Security"]
+
 ---
 
 ## 術語定義
@@ -2026,14 +2097,15 @@ category: ["Security"]
 - **過去** ：以前你只要進了校門口，大家就覺得你是自己人，去哪裡都沒人管。
 - **零信任** ：現在學校變成了充滿 **「上鎖房間」** 的迷宮。不管你是校長還是工讀生，每當你要開一扇門，警衛都要再一次檢查你的 **識別證** 和 **指紋** 。雖然嚴格，但能確保沒有任何小偷可以混進去偷資料。
 
-
----
-File: zero-wipe-mdm-migration.md
 ---
 
+## File: zero-wipe-mdm-migration.md
+
 ---
+
 term: "Zero-Wipe MDM Migration (零抹除 MDM 遷移)"
 category: ["MDM"]
+
 ---
 
 ## 術語定義
@@ -2061,5 +2133,3 @@ category: ["MDM"]
 
 - **風險提示** ：雖然方便，但在教育環境（特別是 Shared iPad）使用此功能有風險，容易導致舊設定殘留或 App 無法更新（變成殭屍 App）。
 - **建議** ：對於大批次學校設備轉移，使用 **"Return to Service"** 進行完全重置通常還是最乾淨、最穩定的做法。
-
-

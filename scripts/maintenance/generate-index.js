@@ -1,26 +1,24 @@
-
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const CONTENT_DIR = path.join(__dirname, "../../docs/content");
+const ITEMS_ZH_DIR = path.join(CONTENT_DIR, "zh");
+const ITEMS_EN_DIR = path.join(CONTENT_DIR, "en");
 
-const CONTENT_DIR = path.join(__dirname, '../../docs/content');
-const ITEMS_ZH_DIR = path.join(CONTENT_DIR, 'zh');
-const ITEMS_EN_DIR = path.join(CONTENT_DIR, 'en');
+const MAINTENANCE_DIR = path.join(__dirname, "../../docs/maintenance");
+const INDEX_ZH_FILE = path.join(MAINTENANCE_DIR, "INDEX_ZH.md");
+const INDEX_EN_FILE = path.join(MAINTENANCE_DIR, "INDEX_EN.md");
 
-const MAINTENANCE_DIR = path.join(__dirname, '../../docs/maintenance');
-const INDEX_ZH_FILE = path.join(MAINTENANCE_DIR, 'INDEX_ZH.md');
-const INDEX_EN_FILE = path.join(MAINTENANCE_DIR, 'INDEX_EN.md');
-
-import matter from 'gray-matter';
+import matter from "gray-matter";
 
 // Helper to get frontmatter safely
 function getFrontmatter(filePath) {
   try {
-    const rawContent = fs.readFileSync(filePath, 'utf-8');
+    const rawContent = fs.readFileSync(filePath, "utf-8");
     const { data } = matter(rawContent);
     return data;
   } catch (e) {
@@ -30,100 +28,137 @@ function getFrontmatter(filePath) {
 }
 
 function generateGlossarySection(dir, isEn) {
-  const files = fs.readdirSync(dir).filter(f => f.endsWith('.md')).sort();
-  let output = `## ${isEn ? 'Glossary (EN)' : '術語表 (Glossary)'}\n\n`;
-  output += isEn ? `Total **${files.length}** terms：\n\n` : `目前共有 **${files.length}** 個術語：\n\n`;
+  const files = fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith(".md"))
+    .sort();
+  let output = `## ${isEn ? "Glossary (EN)" : "術語表 (Glossary)"}\n\n`;
+  output += isEn
+    ? `Total **${files.length}** terms：\n\n`
+    : `目前共有 **${files.length}** 個術語：\n\n`;
 
-  files.forEach(file => {
+  files.forEach((file) => {
     const fm = getFrontmatter(path.join(dir, file));
     const term = fm.term || file;
     output += `- **${term}** (\`${file}\`)\n`;
   });
-  return output + '\n';
+  return output + "\n";
 }
 
 function generateQASection(baseDir, isEn) {
-    const categories = [
-        { dir: 'account', title: isEn ? 'Account & Server' : '帳號與伺服器', path: 'qa/account' },
-        { dir: 'enrollment', title: isEn ? 'Enrollment' : '裝置註冊', path: 'qa/enrollment' },
-        { dir: 'apps', title: isEn ? 'Apps & Content' : 'App 管理', path: 'qa/apps' },
-        { dir: 'classroom', title: isEn ? 'Classroom Tools' : '課堂管理', path: 'qa/classroom' },
-        { dir: 'digital-learning', title: isEn ? 'Digital Initiatives' : '數位精進', path: 'qa/digital-learning' },
-        { dir: 'hardware', title: isEn ? 'Hardware Tuning' : '硬體排除', path: 'qa/hardware' },
-        { dir: 'mac', title: isEn ? 'Mac Management' : 'Mac 管理', path: 'qa/mac' },
-        { dir: 'qa-education', title: isEn ? 'Education Scenarios' : '教育實戰', path: 'qa/qa-education' }
-    ];
+  const categories = [
+    {
+      dir: "account",
+      title: isEn ? "Account & Server" : "帳號與伺服器",
+      path: "qa/account",
+    },
+    {
+      dir: "enrollment",
+      title: isEn ? "Enrollment" : "裝置註冊",
+      path: "qa/enrollment",
+    },
+    {
+      dir: "apps",
+      title: isEn ? "Apps & Content" : "App 管理",
+      path: "qa/apps",
+    },
+    {
+      dir: "classroom",
+      title: isEn ? "Classroom Tools" : "課堂管理",
+      path: "qa/classroom",
+    },
+    {
+      dir: "digital-learning",
+      title: isEn ? "Digital Initiatives" : "數位精進",
+      path: "qa/digital-learning",
+    },
+    {
+      dir: "hardware",
+      title: isEn ? "Hardware Tuning" : "硬體排除",
+      path: "qa/hardware",
+    },
+    { dir: "mac", title: isEn ? "Mac Management" : "Mac 管理", path: "qa/mac" },
+    {
+      dir: "qa-education",
+      title: isEn ? "Education Scenarios" : "教育實戰",
+      path: "qa/qa-education",
+    },
+  ];
 
-    let totalQA = 0;
-    const catData = categories.map(cat => {
-        const catDir = path.join(baseDir, cat.dir);
-        if (!fs.existsSync(catDir)) return { ...cat, files: [] };
-        const files = fs.readdirSync(catDir).filter(f => f.endsWith('.md'));
-        files.sort((a, b) => {
-            const numA = parseInt(a.match(/\d+/)?.[0] || 0);
-            const numB = parseInt(b.match(/\d+/)?.[0] || 0);
-            if (numA !== numB) return numA - numB;
-            return a.localeCompare(b);
-        });
-        totalQA += files.length;
-        return { ...cat, files };
+  let totalQA = 0;
+  const catData = categories.map((cat) => {
+    const catDir = path.join(baseDir, cat.dir);
+    if (!fs.existsSync(catDir)) return { ...cat, files: [] };
+    const files = fs.readdirSync(catDir).filter((f) => f.endsWith(".md"));
+    files.sort((a, b) => {
+      const numA = parseInt(a.match(/\d+/)?.[0] || 0);
+      const numB = parseInt(b.match(/\d+/)?.[0] || 0);
+      if (numA !== numB) return numA - numB;
+      return a.localeCompare(b);
     });
+    totalQA += files.length;
+    return { ...cat, files };
+  });
 
-    let output = `## ${isEn ? 'Q&A (EN)' : '問答集 (Q&A)'} [${isEn ? 'Total' : '總計'}: **${totalQA}**]\n\n`;
+  let output = `## ${isEn ? "Q&A (EN)" : "問答集 (Q&A)"} [${isEn ? "Total" : "總計"}: **${totalQA}**]\n\n`;
 
-    catData.forEach(cat => {
-        if (cat.files.length === 0) return;
+  catData.forEach((cat) => {
+    if (cat.files.length === 0) return;
 
-        output += `### ${cat.title} (\`${cat.path}\`) [**${cat.files.length}** ${isEn ? 'items' : '題'}]\n\n`;
+    output += `### ${cat.title} (\`${cat.path}\`) [**${cat.files.length}** ${isEn ? "items" : "題"}]\n\n`;
 
-        cat.files.forEach(file => {
-            const fm = getFrontmatter(path.join(baseDir, cat.dir, file));
-            const id = fm.id || '';
-            const title = fm.title || file;
-            output += `- [\`${id}\`] ${title}\n`;
-        });
-        output += '\n';
+    cat.files.forEach((file) => {
+      const fm = getFrontmatter(path.join(baseDir, cat.dir, file));
+      const id = fm.id || "";
+      const title = fm.title || file;
+      output += `- [\`${id}\`] ${title}\n`;
     });
-    return output;
+    output += "\n";
+  });
+  return output;
 }
 
 function generateIndex(isEn) {
-    const itemsDir = isEn ? ITEMS_EN_DIR : ITEMS_ZH_DIR;
-    const qaBaseDir = isEn ? path.join(itemsDir, 'qa') : path.join(itemsDir, 'qa'); // Warning: En structure might differ?
-    // User structure seems to be:
-    // zh: doc/data/items/glossary, doc/data/items/qa/...
-    // en: doc/data/items-en/glossary, doc/data/items-en/qa/... (Assumed, need to verify if qa exists in items-en)
-    
-    // Let's check if qa dir exists in en
-    const qaPath = path.join(itemsDir, 'qa');
-    
-    let content = isEn ? '# Maintenance Index (EN Version)\n\n' : '# 維護索引 (Maintenance Index)\n\n';
-    
-    content += isEn 
-        ? '> This file is automatically generated. Do not edit manually.\n\n'
-        : '> 此文件由腳本自動生成。用於讓維護人員（或 AI）快速確認目前已存在的內容，避免重複新增。\n\n';
-        
-    const now = new Date();
-    content += `${isEn ? 'Last Updated' : '最後更新時間'}：${now.toLocaleString()}\n\n`;
-    
-    content += generateGlossarySection(path.join(itemsDir, 'glossary'), isEn);
-    
-    content += '--- \n\n';
+  const itemsDir = isEn ? ITEMS_EN_DIR : ITEMS_ZH_DIR;
+  const qaBaseDir = isEn
+    ? path.join(itemsDir, "qa")
+    : path.join(itemsDir, "qa"); // Warning: En structure might differ?
+  // User structure seems to be:
+  // zh: doc/data/items/glossary, doc/data/items/qa/...
+  // en: doc/data/items-en/glossary, doc/data/items-en/qa/... (Assumed, need to verify if qa exists in items-en)
 
-    if (fs.existsSync(qaPath)) {
-        content += generateQASection(qaPath, isEn);
-    } else {
-        // Maybe flat structure or different? Assuming standard for now based on prev file view
-        // The MAINTENANCE_INDEX_EN.md showed qa sections, so it should exist.
-        // Wait, looking at file list in prev steps, I only listed items/glossary.
-        // I should assume structure matches.
-    }
-    
-    fs.writeFileSync(isEn ? INDEX_EN_FILE : INDEX_ZH_FILE, content);
-    console.log(`✅ Generated ${isEn ? 'EN' : 'ZH'} Index`);
+  // Let's check if qa dir exists in en
+  const qaPath = path.join(itemsDir, "qa");
+
+  let content = isEn
+    ? "# Maintenance Index (EN Version)\n\n"
+    : "# 維護索引 (Maintenance Index)\n\n";
+
+  content += isEn
+    ? "> This file is automatically generated. Do not edit manually.\n\n"
+    : "> 此文件由腳本自動生成。用於讓維護人員（或 AI）快速確認目前已存在的內容，避免重複新增。\n\n";
+
+  const now = new Date();
+  content += `${isEn ? "Last Updated" : "最後更新時間"}：${now.toLocaleString()}\n\n`;
+
+  content += generateGlossarySection(path.join(itemsDir, "glossary"), isEn);
+
+  content += "--- \n\n";
+
+  if (fs.existsSync(qaPath)) {
+    content += generateQASection(qaPath, isEn);
+  } else {
+    // Maybe flat structure or different? Assuming standard for now based on prev file view
+    // The MAINTENANCE_INDEX_EN.md showed qa sections, so it should exist.
+    // Wait, looking at file list in prev steps, I only listed items/glossary.
+    // I should assume structure matches.
+  }
+
+  fs.writeFileSync(isEn ? INDEX_EN_FILE : INDEX_ZH_FILE, content);
+  console.log(`✅ Generated ${isEn ? "EN" : "ZH"} Index`);
 }
 
-console.log('🚀 Generating Indexes...');
+console.log("🚀 Generating Indexes...");
 generateIndex(false); // ZH
-generateIndex(true);  // EN
-console.log('✨ Done.');
+generateIndex(true); // EN
+console.log("✨ Done.");

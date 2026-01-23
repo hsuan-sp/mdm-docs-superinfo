@@ -1,15 +1,15 @@
-
-
 ---
 File: hw-1.md
 ---
 
 ---
+
 id: hw-1
 title: "學校同時有 iPad 9 (Lightning) 以前的載具，與 iPad 10 (USB-C) 以後的載具，配件或 Apple Pencil 如何相容？"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: true
 tags: ["硬體管理", "Lightning", "USB-C", "Apple Pencil", "轉接器", "充電車"]
+
 ---
 
 **隨著精進方案進入後期，學校開始採購新 iPad，校內常出現不同介面的 iPad 併存。**
@@ -41,17 +41,18 @@ tags: ["硬體管理", "Lightning", "USB-C", "Apple Pencil", "轉接器", "充�
 
 管理員可以建立「資產對照表」，明確標記各型號對應的序號。針對較新款 iPad，若需要採購新充電車，可以確認是否具備 **PD (Power Delivery)** 快充功能或是保證有較高的輸出功率，以確保載具能在課間休息時間完成充足的回充。
 
-
----
-File: hw-2.md
 ---
 
+## File: hw-2.md
+
 ---
+
 id: hw-2
 title: "iPad 在充電車內無法充電，是機器故障還是車子故障？"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: false
 tags: ["充電問題", "交叉測試", "充電車", "MFi", "硬體檢測"]
+
 ---
 
 **針對充電異常，建議採用簡單的「交叉測試 (Cross-testing)」法來系統化判斷問題點。**
@@ -85,17 +86,18 @@ tags: ["充電問題", "交叉測試", "充電車", "MFi", "硬體檢測"]
 - **確認保固狀態** ：若判定為 iPad 硬體故障（如充電 IC 燒毀），請備齊序號聯繫廠商進行保固內維修。
 - **線材損耗管理** ：充電線屬消耗品，建議校內隨時準備 5-10% 的備用線材，以隨時更換受損或接頭處斷裂的舊線。
 
-
----
-File: hw-3.md
 ---
 
+## File: hw-3.md
+
 ---
+
 id: hw-3
 title: "AirDrop 找不到其他裝置，或 AirPlay 找不到電視與投影機？"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: true
 tags: ["AirDrop", "AirPlay", "網路管理", "mDNS Relay", "投影故障排除"]
+
 ---
 
 **AirDrop 與 AirPlay 的運作原理不同，前者主要依賴點對點（P2P）通訊，後者則高度仰賴校園區域網路（LAN）的穩定性與協定放行。**
@@ -122,17 +124,18 @@ tags: ["AirDrop", "AirPlay", "網路管理", "mDNS Relay", "投影故障排除"]
 
 若特定區域出現大規模搜尋不到裝置的情況，請優先確認該區域無線基地台的負載量。當單一 AP 連線裝置過多時，mDNS 封包常會被優先捨棄，造成 AirPlay 列表為空。建議於 Jamf Pro 建立專屬教師群組，排除相關限制描述檔，以確保教學投影優先權。
 
-
----
-File: hw-4.md
 ---
 
+## File: hw-4.md
+
 ---
+
 id: hw-4
 title: "螢幕破裂或觸控失靈，如何判定保固範圍與人為損壞？及合約末期維修建議。"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: false
 tags: ["維修判定", "保固規範", "VMI", "精進方案報價", "合約到期"]
+
 ---
 
 **Apple 裝置的保固判定嚴格遵循「外觀機構檢查 (VMI)」標準。**
@@ -177,17 +180,18 @@ tags: ["維修判定", "保固規範", "VMI", "精進方案報價", "合約到�
 
 若判定為非人為損壞，應要求廠商提供備機更換或依合約執行維護，確保全校教學載具水位正常。
 
-
----
-File: hw-5.md
 ---
 
+## File: hw-5.md
+
 ---
+
 id: hw-5
 title: "寒暑假長期不使用，平板該如何保存電池才不會損壞？"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: true
 tags: ["電池保養", "長期存放", "深度放電", "暑假作業", "鋰離子電池"]
+
 ---
 
 **根據 Apple 官方技術規範，長期存放裝置時應「維持約 50% 電量」、「完全關機」並置於「陰涼環境」。**
@@ -218,17 +222,18 @@ tags: ["電池保養", "長期存放", "深度放電", "暑假作業", "鋰離�
 
 由於電池仍會有緩慢的「自放電」現象，開學後第一次開機若沒反應，請先連接原廠充電器 **至少 20 分鐘** 進行喚醒，通常即可恢復正常運作。
 
-
----
-File: hw-6.md
 ---
 
+## File: hw-6.md
+
 ---
+
 id: hw-6
 title: "螢幕觸控亂跳 (Ghost Touch) 或畫面無法翻轉（自動旋轉異常）如何處理？"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: false
 tags: ["觸控異常", "陀螺儀", "加速度計", "Ghost Touch", "故障排除"]
+
 ---
 
 **螢幕觸控異常通常涉及電磁干擾 (EMI) 或螢幕內部的「觸控感應層 (Digitizer)」受損；畫面翻轉異常則多與內部感測器（加速度計與陀螺儀）硬體失效有關。**
@@ -263,17 +268,18 @@ tags: ["觸控異常", "陀螺儀", "加速度計", "Ghost Touch", "故障排除
 - **報修判定** ：若排除充電干擾與軟體鎖定後，觸控仍持續亂跳，或「指南針」數值完全不動，通常代表 **觸控面板感應層** 或 **主機板的某些感測器** 損毀。
 - **合約保障** ：若裝置外觀無明顯撞擊痕跡 or 螢幕裂痕，此類問題應視為硬體自然故障。請儘速聯繫我們，以便在 2026 年保固結束前依照精進方案合約執行維修或更換整新機。
 
-
----
-File: hw-7.md
 ---
 
+## File: hw-7.md
+
 ---
+
 id: hw-7
 title: "送修前必須關閉「尋找 (Find My)」嗎？怎麼關？"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: true
 tags: ["維修", "尋找功能", "啟用鎖定", "送修", "Activation Lock"]
+
 ---
 
 **是的，這是大多數時候維修的必要條件。未關閉「尋找」功能會觸發「啟用鎖定 (Activation Lock)」，導致維修中心不方便作業，裝置將會被直接退件。**
@@ -307,17 +313,18 @@ tags: ["維修", "尋找功能", "啟用鎖定", "送修", "Activation Lock"]
 
 維修繳回時，資訊組長應確保每一台送往廠商的機器都已「從帳號移除」。若未移除，維修過程可能會因此卡住數週。
 
-
----
-File: hw-8.md
 ---
 
+## File: hw-8.md
+
 ---
+
 id: hw-8
 title: "可以用酒精清潔 iPad 螢幕嗎？有沒有損壞風險？"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: true
 tags: ["清潔", "保養", "消毒", "酒精", "抗油外層"]
+
 ---
 
 **是的，Apple 官方明確允許使用特定濃度的酒精清潔 iPad。根據最新官方指引，您可以使用 70% 異丙醇酒精、75% 乙醇酒精或消毒擦拭巾清潔裝置的堅硬、無孔表面。**
@@ -356,17 +363,18 @@ tags: ["清潔", "保養", "消毒", "酒精", "抗油外層"]
 
 在學校批量管理時，建議為每台充電車設定專用的纖維布，並由教師統一保管酒精噴霧，確保學生不會因「直接噴灑」而導致液體浸入主機板造成硬體損壞（液體損壞不在 Apple 標準保固範圍內）。
 
-
----
-File: hw-9.md
 ---
 
+## File: hw-9.md
+
 ---
+
 id: hw-9
 title: "連接聰穎鍵盤或巧控鍵盤 (Smart/Magic Keyboard) 但無反應，如何排除？"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: false
 tags: ["鍵盤", "聰穎接點", "巧控鍵盤", "硬體相容性", "故障排除"]
+
 ---
 
 **鍵盤失效通常源於「型號不相容」、「接點氧化」或「實體磁吸對位偏差」。由於原廠鍵盤無需藍牙配對，若排除清潔因素後仍無反應，通常涉及硬體電路損壞。**
@@ -396,17 +404,18 @@ tags: ["鍵盤", "聰穎接點", "巧控鍵盤", "硬體相容性", "故障排�
 
 若校內有兩台相同的機型與鍵盤，請進行「交叉測試」。若鍵盤換到另一台 iPad 仍無反應，則為鍵盤硬體損壞；反之則可能是 iPad 接點或內部電路異常。
 
-
----
-File: hw-10.md
 ---
 
+## File: hw-10.md
+
 ---
+
 id: hw-10
 title: "Apple Pencil 無法配對或寫不出來？"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: false
 tags: ["Apple Pencil", "配對", "觸控筆"]
+
 ---
 
 **Apple Pencil 問題通常可透過重新配對、扭緊筆尖、或充電解決。不同世代的 Pencil 有不同的配對與充電方式。**
@@ -442,17 +451,18 @@ Apple Pencil 依世代分為四種：
 
 Apple Pencil 若超過三個月沒充電，內部的微型電池可能會「過度放電」導致損壞。寒暑假期間建議將筆充滿電後與 iPad 分離存放，或定期回充。
 
-
----
-File: hw-11.md
 ---
 
+## File: hw-11.md
+
 ---
+
 id: hw-11
 title: "我想知道 iPad 的電池健康度，但後台看不到資料，應如何評估電池是否老化？"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: false
 tags: ["電池保養", "續航力", "故障排除", "耗電紀錄", "資產盤點"]
+
 ---
 
 **針對精進方案主力的 iPad 9 與後續的 iPad 11 (A16) 等 iPad 基礎款機種，由於硬體與系統限制，在「系統設定」或 Jamf Pro 管理後台均無法直接查看到「電池最大容量百分比」。**
@@ -487,17 +497,18 @@ tags: ["電池保養", "續航力", "故障排除", "耗電紀錄", "資產盤�
 
 鋰電池通常在 **循環次數 (Cycle Count) 超過 800-1000 次** 後會感到明顯續航下降。對於已使用三年的精進方案載具，若續航力嚴重不足影響教學，建議準備報修。
 
-
----
-File: hw-12.md
 ---
 
+## File: hw-12.md
+
 ---
+
 id: hw-12
 title: "聽說受潮會導致保固失效，哪裡可以看到 iPad 的受潮指示器 (LCI)？"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: false
 tags: ["受潮判定", "LCI", "液體侵入", "維修規範", "VMI"]
+
 ---
 
 **與 iPhone 不同，iPad 全系列機型（包括 iPad 9、10 與 11 代）均未設有「外部可見」的液體接觸指示器 (LCI)。**
@@ -526,17 +537,18 @@ tags: ["受潮判定", "LCI", "液體侵入", "維修規範", "VMI"]
 
 由於判定權完全在於維修中心的拆機結果，建議據實描述觀察到的現象，避免因隱瞞受潮狀況產生的一切爭議。
 
-
----
-File: hw-13.md
 ---
 
+## File: hw-13.md
+
 ---
+
 id: hw-13
 title: "【效能與壽命】iPad 運行變得很卡，是因為電池老化的關係嗎？還是硬體不行了？"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: false
 tags: ["電源管理", "效能降速", "硬體老化", "系統更新", "資產汰換"]
+
 ---
 
 **iPad 的效能表現是電池健康度、系統軟體需求與硬體組件損耗三方平衡的結果。當裝置進入使用的第四年，多重因素的疊加會讓使用者明顯感受到作業的遲緩。**
@@ -570,17 +582,18 @@ tags: ["電源管理", "效能降速", "硬體老化", "系統更新", "資產�
 
 對於已經服役滿四年的 iPad，建議學校開始規劃「二線化」或「汰換」計畫（例如轉為純圖書借閱機或行政單一功能機），並採購具備更高 RAM 指標與 A/M 系列晶片的新款載具以維持教學品質。
 
-
----
-File: hw-14.md
 ---
 
+## File: hw-14.md
+
 ---
+
 id: hw-14
 title: "【網路隱私】為什麼在學校 Wi-Fi 的防火牆或 DHCP Server 上，抓不到 iPad 的真實 MAC 位址？"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: false
 tags: ["MAC 位址", "私密 Wi-Fi 位址", "網管", "DHCP", "MAC Binding"]
+
 ---
 
 **這是因為 iPadOS 預設開啟了「私密 Wi-Fi 位址 (Private Wi-Fi Address)」，系統會針對不同的 SSID 生成虛擬的隨機 MAC 位址。**
@@ -605,17 +618,18 @@ tags: ["MAC 位址", "私密 Wi-Fi 位址", "網管", "DHCP", "MAC Binding"]
 
 此設定僅對 MDM 派送的 Wi-Fi 設定檔有效。若學生是在校外連上個人熱點或自家 Wi-Fi，系統仍會自動開啟私密位址功能以保護隱私，這並不影響學校內部的管理。
 
-
----
-File: hw-15.md
 ---
 
+## File: hw-15.md
+
 ---
+
 id: hw-15
 title: "macOS 裝置管理：如何透過 MDM 控管外接磁碟 (USB/Thunderbolt) 的讀寫權限以防止資料外洩？"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: false
 tags: ["macOS", "磁碟管理", "資安", "防弊", "USB 限制"]
+
 ---
 
 **自 macOS 15 起，Apple 引進了全新的「媒體管理 (Media Management)」與「外部儲存裝置」控管架構，讓管理員能精細控制資料進出。macOS 26 (Tahoe) 進一步強化安全性，且是 Intel Mac 支援的最後版本。**
@@ -646,17 +660,18 @@ tags: ["macOS", "磁碟管理", "資安", "防弊", "USB 限制"]
 
 對於電腦教室的 Mac，管理員可以建立智慧型群組，在考試期間自動切換為「禁用外接磁碟」的描述檔，考完後再恢復正常讀寫權限。
 
-
----
-File: hw-16.md
 ---
 
+## File: hw-16.md
+
 ---
+
 id: hw-16
 title: "【電池維護】Apple Pencil 放在筆槽裡超過三個月沒充電，會壞掉嗎？"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: true
 tags: ["Apple Pencil", "電池維護", "過放電", "硬體壽命"]
+
 ---
 
 **會有損壞風險。Apple Pencil 採用微型鋰電池，若長期處於「低電量」或「零電量」狀態，可能因「深度放電 (Deep Discharge)」導致無法再充電。**
@@ -681,17 +696,18 @@ tags: ["Apple Pencil", "電池維護", "過放電", "硬體壽命"]
 
 對於已經損壞（無法充電）的 Pencil，若在保固期內且無明顯人損撞擊，通常可主張硬體故障進行出保固維修。
 
-
----
-File: hw-17.md
 ---
 
+## File: hw-17.md
+
 ---
+
 id: hw-17
 title: "不用拆箱對序號，MDM 後台可以直接看到裝置的保固到期日嗎？"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: false
 tags: ["保固查詢", "資產管理", "GSX", "專案保固", "Extension Attributes"]
+
 ---
 
 **可以。Jamf Pro 整合了 Apple 原廠資料庫 (GSX)，可自動撈取每一台裝置的「原廠保固」狀態。**
@@ -721,17 +737,18 @@ tags: ["保固查詢", "資產管理", "GSX", "專案保固", "Extension Attribu
 
 在合約最後一年（2026 年），定期每個月匯出一次保固報表。若發現保固即將到期的裝置有電池老化或螢幕閃爍等隱擊異常，應立即啟動維修流程。
 
-
----
-File: hw-18.md
 ---
 
+## File: hw-18.md
+
 ---
+
 id: hw-18
 title: "如何啟用 iPad Pro 與 Mac 的 Wi-Fi 6E 160MHz 頻寬？為何我的裝置速度沒有提升？"
 category: "第六部分：硬體與周邊管理 (Hardware & Peripherals)"
 important: false
 tags: ["Wi-Fi 6E", "160MHz", "網路速度", "iPadOS 26.2", "macOS Tahoe 26.2"]
+
 ---
 
 **iPadOS 26.2 與 macOS Tahoe 26.2 解鎖了對應硬體的 Wi-Fi 6E 160 MHz 頻寬支援，可大幅提升傳輸吞吐量。**
@@ -773,17 +790,18 @@ tags: ["Wi-Fi 6E", "160MHz", "網路速度", "iPadOS 26.2", "macOS Tahoe 26.2"]
 - **原因 3：WPA 3 相容性問題** ：Wi-Fi 6E 強制走 WPA 3，若 RADIUS 伺服器老舊不支援，裝置會拒絕連線或降級。
 - **原因 4：網路線瓶頸** ：AP 本身的 Uplink 網孔若只有 1 Gbps，就算 Wi-Fi 跑到 2.4 Gbps 也沒用。建議升級至 2.5 GbE 或 10 GbE 交換器。
 
-
----
-File: hw-19.md
 ---
 
+## File: hw-19.md
+
 ---
+
 id: hw-19
 title: "共用 iPad 如何避免 AirPods 配對混亂？iOS 26 的新功能有用嗎？"
 category: "第六部分：硬體與周邊管理 (Hardware & Peripherals)"
 important: true
 tags: ["AirPods", "Beats", "配對", "共用 iPad", "音訊配件"]
+
 ---
 
 **iOS 26 終於解決了共用 iPad (Shared iPad) 的藍牙耳機噩夢！透過新的「Audio Accessory Configuration」設定，可讓裝置「暫時配對」AirPods 而不同步至 iCloud，完美解決共用場景的混亂。**
@@ -815,17 +833,18 @@ MDM 現在可以推送 `com.apple.configuration.audio-accessory.settings` 描述
 
 此功能需要耳機韌體與 iPadOS 26 配合。建議在部署前，先用一對耳機確認「登出後自動斷開」的行為是否符合預期。
 
-
----
-File: hw-20.md
 ---
 
+## File: hw-20.md
+
 ---
+
 id: hw-20
 title: "學生反應螢幕看起來模糊（Liquid Glass 誤解）該如何處理？"
 category: "第六部分：硬體與周邊管理 (Hardware & Peripherals)"
 important: false
 tags: ["Liquid Glass", "介面設計", "iOS 26", "macOS Tahoe", "visionOS"]
+
 ---
 
 **這通常不是硬體故障！iOS 26 導入的「Liquid Glass」設計語言會根據環境光與背景圖產生強烈的「毛玻璃」與「景深」效果，可能讓不習慣的使用者誤以為螢幕起霧或故障。**
@@ -852,17 +871,18 @@ tags: ["Liquid Glass", "介面設計", "iOS 26", "macOS Tahoe", "visionOS"]
 
 建議在升級 iOS 26 後的早自習或班會，花 2 分鐘向全班展示新介面，說明「鎖定畫面看起來糊糊的是正常的」，避免大量誤報修。
 
-
----
-File: hw-21.md
 ---
 
+## File: hw-21.md
+
 ---
+
 id: hw-21
 title: "2024-2025 年新款 iPad 硬體規格差異：M4 iPad Pro、M2/M3 iPad Air、iPad mini 7 (A17 Pro) 在管理上有什麼不同？"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: true
 tags: ["硬體規格", "M4", "M2", "A17 Pro", "採購建議", "配件相容性"]
+
 ---
 
 **2024-2025 年推出的新款 iPad 在硬體規格與管理功能上有顯著升級，特別是在配件相容性、電池管理、無線連接與系統功能上與舊款（如精進方案 iPad 9）有明顯差異。**
@@ -900,17 +920,18 @@ tags: ["硬體規格", "M4", "M2", "A17 Pro", "採購建議", "配件相容性"]
 - **配件標籤化**：由於 Pencil Pro 與舊款完全不相容，建議在新款 iPad 背面與對應的筆身貼上相同色標（如：金屬藍）。
 - **充電設施**：M4 iPad Pro 支援 PD 快充，建議充電車應配備支援 30W 以上輸出的 USB-C PD 插座才能發揮充電效率。
 
-
----
-File: hw-22.md
 ---
 
+## File: hw-22.md
+
 ---
+
 id: hw-22
 title: "精進方案 iPad 9 (2021) 在 2026 年的續用建議：效能、系統支援與汰換時機評估"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: true
 tags: ["iPad 9", "精進方案", "效能評估", "汰換規劃", "iOS 26"]
+
 ---
 
 **精進方案主力載具 iPad 9（2021 年發布）在 2026 年已進入使用第 4-5 年，雖然 iOS 26 仍提供系統支援，但硬體老化、效能瓶頸與教學軟體需求提升已成為實務挑戰。**
@@ -953,17 +974,18 @@ tags: ["iPad 9", "精進方案", "效能評估", "汰換規劃", "iOS 26"]
 
 管理員應利用 Jamf Pro 建立健康報告，若某台 iPad 9 的開機時間與 App 載入時間明顯超過新機型的三倍，即應列為優先汰換名單。
 
-
----
-File: hw-23.md
 ---
 
+## File: hw-23.md
+
 ---
+
 id: hw-23
 title: "如何使用 Apple Pencil Pro 的「尋找」(Find My) 功能追蹤校園遺失的觸控筆？"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: true
 tags: ["Apple Pencil Pro", "Find My", "資產管理", "遺失物追蹤", "校園管理"]
+
 ---
 
 **Apple Pencil Pro（2024 年 5 月發布）是首款支援「尋找」網路 (Find My) 的 Apple 觸控筆，即使筆身未吸附在 iPad 上，也能透過 Find My App 定位追蹤，大幅降低校園遺失風險。**
@@ -1000,17 +1022,18 @@ tags: ["Apple Pencil Pro", "Find My", "資產管理", "遺失物追蹤", "校園
 
 建議在配發 Apple Pencil Pro 時，要求教師逐一將筆更名為「專屬編號」（如：104-Pencil-01），以便在「尋找」App 的項目清單中一眼辨識。
 
-
----
-File: hw-24.md
 ---
 
+## File: hw-24.md
+
 ---
+
 id: hw-24
 title: "學校同時擁有 Wi-Fi 6、Wi-Fi 6E、Wi-Fi 7 設備，如何規劃網路基礎設施升級？"
 category: "第六部分：硬體維修與故障排除 (Hardware & Maintenance)"
 important: true
 tags: ["Wi-Fi 7", "Wi-Fi 6E", "無線網路", "基礎設施", "採購規劃"]
+
 ---
 
 **隨著 2024-2025 年新一代 iPad 與 Mac 加入校園，學校網路環境正進入「三代同堂」的過渡期。**
@@ -1052,5 +1075,3 @@ Wi-Fi 7 的 MLO 允許 M5 iPad Pro 同時在 5GHz 與 6GHz 傳輸。
 ## 實務建議 ：
 
 對於大部分一般用途教室， **Wi-Fi 6E** 已能提供極佳的 CP 值。 **Wi-Fi 7** 會建議優先佈建於「未來教室」或「多媒體創作中心」，作為新機型（M5 系列）的展示場域。
-
-

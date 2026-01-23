@@ -163,7 +163,7 @@ onMounted(() => {
           }
         });
       },
-      { threshold: 0.1, rootMargin: "50px" },
+      { threshold: 0.1, rootMargin: "50px" }
     );
 
     document.querySelectorAll(".fade-in-on-scroll").forEach((el) => {

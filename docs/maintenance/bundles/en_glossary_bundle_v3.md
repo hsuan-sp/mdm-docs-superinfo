@@ -1,12 +1,12 @@
-
-
 ---
 File: platform-sso-in-setup-assistant.md
 ---
 
 ---
+
 term: "Platform SSO in Setup Assistant"
 category: ["Mac"]
+
 ---
 
 ## Term Definition
@@ -24,14 +24,15 @@ Workflow improvements:
 
 Previously, setting up a new school Mac meant **"Creating a local account first, then connecting your school ID later."** Now, it's like **"Swiping your employee badge to enter the building."** You use your official work login from the very first second you turn on the computer, and the system sets up your desk, your keys, and your ID card automatically before you even sit down.
 
-
----
-File: platform-sso.md
 ---
 
+## File: platform-sso.md
+
 ---
+
 term: "Platform SSO"
 category: ["Security", "macOS"]
+
 ---
 
 ## Term Definition
@@ -50,14 +51,15 @@ This is the **"All-Access School Pass."** In the past, you might have needed one
 
 As soon as you unlock your Mac with your face or fingerprint, the computer automatically "tells" all the school apps like Google Drive and Zoom, **"It's really them, let them in!"** so you don't have to type your password again and again.
 
-
----
-File: policy.md
 ---
 
+## File: policy.md
+
 ---
+
 term: "Policy"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -77,14 +79,15 @@ A Policy is like a **"School Bell Schedule"** combined with a **"Lesson Plan."**
 
 Similarly, a policy tells the computer: _"Every time you wake up (Trigger), check if the printer is installed (Payload)."_
 
-
----
-File: pppc.md
 ---
 
+## File: pppc.md
+
 ---
+
 term: "PPPC"
 category: ["Security", "macOS"]
+
 ---
 
 ## Term Definition
@@ -105,14 +108,15 @@ Think of this as a **"Standing Permission Slip."** Usually, your Mac is very pro
 
 With **PPPC** , the school has already **"signed the permission slip"** for you. This means official school apps can start working instantly without annoying you with questions, because the Mac knows the school trusts them.
 
-
----
-File: prestage-enrollment.md
 ---
 
+## File: prestage-enrollment.md
+
 ---
+
 term: "PreStage Enrollment"
 category: ["Enrollment", "Jamf"]
+
 ---
 
 ## Term Definition
@@ -134,14 +138,15 @@ Before the student even turns on their new iPad, the ICT department has already 
 
 When the student turns it on, they skip the long lines (the boring "Click Next" screens) and go straight to their destination: a fully functional device ready for class.
 
-
----
-File: private-relay.md
 ---
 
+## File: private-relay.md
+
 ---
+
 term: "iCloud Private Relay"
 category: ["Security", "Apple"]
+
 ---
 
 ## Term Definition
@@ -162,14 +167,15 @@ It hides who you are and where you are going. However, at school, teachers and t
 
 Because the "Invisibility Cloak" stops them from being able to protect you, the school usually **"asks you to take the cloak off"** (blocks the feature) while you are using school Wi-Fi.
 
-
----
-File: private-wi-fi-address.md
 ---
 
+## File: private-wi-fi-address.md
+
 ---
+
 term: "Private Wi-Fi Address"
 category: ["Network", "Security"]
+
 ---
 
 ## Term Definition
@@ -189,14 +195,15 @@ This is a **"Digital Stage Name."** When your iPad connects to Wi-Fi at a Starbu
 
 However, at school, the **"Gatekeeper"** (the Wi-Fi router) needs to know your **"Real Name"** (Hardware ID) to confirm you are a student and let you in. If you keep using a fake name, the school Wi-Fi might not recognize you and could lock you out.
 
-
----
-File: provisioning-profile.md
 ---
 
+## File: provisioning-profile.md
+
 ---
+
 term: "Provisioning Profile"
 category: ["Apps", "Security"]
+
 ---
 
 ## Term Definition
@@ -217,14 +224,15 @@ Most apps get a "Permanent Citizenship" from the public App Store. However, if t
 
 If the school forgets to renew the visa, the app gets **"deported"** (stops working) and won't open anymore until it gets its new paperwork stamped.
 
-
----
-File: proxy.md
 ---
 
+## File: proxy.md
+
 ---
+
 term: "Proxy"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -246,14 +254,15 @@ Instead of you going directly to a store (a website) yourself, you hand a shoppi
 
 They go out, verify the store is safe, buy the item, and bring it back to you. This ensures that no "forbidden items" are brought onto campus because the shopper checks everything first.
 
-
----
-File: push-notification.md
 ---
 
+## File: push-notification.md
+
 ---
+
 term: "Push Notification"
 category: ["Apple"]
+
 ---
 
 ## Term Definition
@@ -278,14 +287,15 @@ Think of this as a **"Digital Tap on the Shoulder."** To save battery, your iPad
 
 Instead, they send a **Push Notification** . It’s like a gentle tap that wakes the iPad up and whispers, _"Hey, the teacher has some new work for you; go call the server to get it!"_
 
-
----
-File: qr-code-enrollment.md
 ---
 
+## File: qr-code-enrollment.md
+
 ---
+
 term: "QR Code Enrollment"
 category: ["Enrollment"]
+
 ---
 
 ## Term Definition
@@ -307,14 +317,15 @@ Think of this as **"Scan-to-Check-In."** Instead of requiring a student to manua
 
 All the setup information is automatically filled in, allowing the iPad to start its first day of school instantly without any typing mistakes.
 
-
----
-File: radius.md
 ---
 
+## File: radius.md
+
 ---
+
 term: "RADIUS"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -335,14 +346,15 @@ When you try to open a door (connect to Wi-Fi) with your ID card (your device's 
 
 Instead, it sends your data to the central server (RADIUS) to check the main list. If the server says **"Yes, they are a current student,"** the door unlocks and you're online.
 
-
----
-File: rapid-security-response.md
 ---
 
+## File: rapid-security-response.md
+
 ---
+
 term: "Rapid Security Response (RSR)"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -362,14 +374,15 @@ Think of this as a **"Digital Emergency Band-Aid."** Instead of performing a maj
 
 It’s fast, simple, and makes sure your iPad is protected from a new threat the moment it's discovered, without making you wait through a 20-minute update screen.
 
-
----
-File: recon.md
 ---
 
+## File: recon.md
+
 ---
+
 term: "Recon"
 category: ["Jamf", "macOS"]
+
 ---
 
 ## Term Definition
@@ -391,14 +404,15 @@ Think of this as an **"Instant Health Checkup."** Normally, a computer might onl
 
 If you run the "Recon" command, you're telling the Mac to **"Stop everything, count your apps, check your storage, and tell the main office how you are feeling right now!"** It ensures IT has the absolute latest information to help fix a problem.
 
-
----
-File: recovery-lock.md
 ---
 
+## File: recovery-lock.md
+
 ---
+
 term: "Recovery Lock"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -417,14 +431,15 @@ Think of this as a **"Digital Lock on the ER Door."** In the past, anyone could 
 
 Now, the ER door has a keypad. Without the secret code from IT, a thief can't even "reinstall" the computer to erase their tracks, making a stolen school Mac useless to them.
 
-
----
-File: recovery-mode.md
 ---
 
+## File: recovery-mode.md
+
 ---
+
 term: "Recovery Mode"
 category: ["Apple", "macOS"]
+
 ---
 
 ## Term Definition
@@ -445,14 +460,15 @@ Think of this as the **"Emergency Operating Room."** If your computer gets so "s
 
 Here, the **"Doctors"** (the built-in tools) can perform surgery on its hard drive or completely transplant its brain (reinstall the OS) to get it working like new again. It’s the final safety net for fixing a broken device.
 
-
----
-File: remote-management.md
 ---
 
+## File: remote-management.md
+
 ---
+
 term: "Remote Management"
 category: ["Core", "Jamf"]
+
 ---
 
 ## Term Definition
@@ -469,14 +485,15 @@ Signifies:
 
 Remote Management is the **"School’s Digital Stamp."** When you first open a brand new iPad box, this screen is like the device holding up a badge saying: **"I belong to Taipei European School."** It’s the official hand-off where the iPad accepts the school’s rules and begins its life as a managed learning tool.
 
-
----
-File: restrict-app-downloads-over-cellular.md
 ---
 
+## File: restrict-app-downloads-over-cellular.md
+
 ---
+
 term: "Restrict App Downloads over Cellular"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -495,14 +512,15 @@ Think of this as **"Wi-Fi Only Mode"** for heavy lifting.
 
 It’s like a parent setting a rule that says: **"You can only download new video games when you are at home on Wi-Fi, not while you're on the bus using expensive phone data."** This creates a safety net so that one student downloading a huge game doesn't use up the entire class's data budget for the month.
 
-
----
-File: restricted-software.md
 ---
 
+## File: restricted-software.md
+
 ---
+
 term: "Restricted Software"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -521,14 +539,15 @@ Think of this as the school's **"Digital Hall Monitor."** The hall monitor is al
 
 It helps keep the classroom focused on learning by ensuring distractions (unapproved games) don't even have a chance to start.
 
-
----
-File: return-to-service.md
 ---
 
+## File: return-to-service.md
+
 ---
+
 term: "Return to Service"
 category: ["Enrollment"]
+
 ---
 
 ## Term Definition
@@ -553,14 +572,15 @@ Think of this as **"Reincarnation with Memory."** Usually, when you wipe an iPad
 
 With **Return to Service** , the iPad is wiped clean, but it keeps a **"sticky note in its pocket"** (the Wi-Fi password). When it wakes up, it reads the note, connects to the internet, and reports back to the office for its duties immediately—without a human needing to touch it.
 
-
----
-File: root-certificate.md
 ---
 
+## File: root-certificate.md
+
 ---
+
 term: "Root Certificate"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -581,14 +601,15 @@ Trust in digital security works like a family tree. If your device trusts the **
 
 However, if your device doesn't know the Grandfather, it will block the entire family from entering—which means you won't be allowed to connect to the secure school Wi-Fi.
 
-
----
-File: rosetta-2.md
 ---
 
+## File: rosetta-2.md
+
 ---
+
 term: "Rosetta 2"
 category: ["macOS"]
+
 ---
 
 ## Term Definition
@@ -605,14 +626,15 @@ Function:
 
 Think of this as a **"Live Language Translator."** The new M-series Macs speak one language (English), while older software speaks another (French). **Rosetta 2** sits in the middle and translates everything instantly, so your favorite older apps can still talk to your brand-new computer. It's like having a dedicated interpreter follow you around so you don't even notice the language barrier.
 
-
----
-File: roster.md
 ---
 
+## File: roster.md
+
 ---
+
 term: "Roster"
 category: ["Education"]
+
 ---
 
 ## Term Definition
@@ -635,14 +657,15 @@ This is the **"Digital Roll Call List."** Instead of a teacher having to create 
 
 It means that when Mr. Smith walks into Biology class, his iPad already knows exactly who is supposed to be there.
 
-
----
-File: scep.md
 ---
 
+## File: scep.md
+
 ---
+
 term: "SCEP (Simple Certificate Enrollment Protocol)"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -665,14 +688,15 @@ This automation is critical for zero-touch deployments, removing the need for ma
 
 Think of this as an **"Automatic ID Booth."** Instead of every single student having to go to the office and wait in line to get their ID badge printed, the MDM sends them a digital **"Voucher."** The student's iPad takes that voucher to a machine (the CA), and the machine prints out their official ID card instantly. It allows the iPad to get its own **"Hall Pass"** for the school Wi-Fi without you lifting a finger.
 
-
----
-File: schoolwork-app.md
 ---
 
+## File: schoolwork-app.md
+
 ---
+
 term: "Schoolwork App"
 category: ["Education"]
+
 ---
 
 ## Term Definition
@@ -692,14 +716,15 @@ Think of this as the **"Digital Homework Diary and Dropbox."** It’s the centra
 
 Students can submit their finished work directly in the app, and teachers can see who has finished and how everyone is doing, all in one organized dashboard—no more lost papers.
 
-
----
-File: scope.md
 ---
 
+## File: scope.md
+
 ---
+
 term: "Scope"
 category: ["Core", "Jamf"]
+
 ---
 
 ## Term Definition
@@ -722,14 +747,15 @@ Just as you might say, **"Invite everyone in the soccer club (Target), but only 
 
 It ensures the right tools end up in the right hands without cluttering everyone else's screen.
 
-
----
-File: screen-time.md
 ---
 
+## File: screen-time.md
+
 ---
+
 term: "Screen Time"
 category: ["Apple", "Core"]
+
 ---
 
 ## Term Definition
@@ -747,14 +773,15 @@ MDM capabilities:
 
 Screen Time is like a **"Classroom Concentration Assistant."** It helps students understand how they are spending their digital time. If the school wants to ensure students aren't distracted by social media during lunch or playing games after bedtime, the school can set **"Quiet Hours"** standards to help promote a healthy digital-life balance automatically.
 
-
----
-File: script.md
 ---
 
+## File: script.md
+
 ---
+
 term: "Script"
 category: ["macOS"]
+
 ---
 
 ## Term Definition
@@ -773,14 +800,15 @@ Think of a Script as a **"Special Magic Spell."** The standard control panel has
 
 So, the IT wizard writes a specific **Spell** (the Script) and tells the computer to cast it. The computer follows the spell's exact instructions to perform a complicated repair task that no standard button could ever do.
 
-
----
-File: secure-token.md
 ---
 
+## File: secure-token.md
+
 ---
+
 term: "Secure Token"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -801,14 +829,15 @@ Even if you have the key (your login password), the bank guard won't let you ope
 
 It’s an extra layer of protection to make sure only authorized people can touch the computer's most sensitive security locks.
 
-
----
-File: security-update.md
 ---
 
+## File: security-update.md
+
 ---
+
 term: "Security Update"
 category: ["Core", "Jamf"]
+
 ---
 
 ## Term Definition
@@ -829,14 +858,15 @@ Just as a vaccine helps your body recognize and fight off new diseases without c
 
 It doesn't change how the device looks or give you new cool tricks, but it keeps you alive and safe from invisible threats.
 
-
----
-File: self-service.md
 ---
 
+## File: self-service.md
+
 ---
+
 term: "Self Service"
 category: ["Apps", "Jamf"]
+
 ---
 
 ## Term Definition
@@ -855,14 +885,15 @@ Self Service is the **"Campus Supply Store."** If a student needs a specific cal
 
 They just **"walk into the store"** (open the app), click install, and the item is delivered to their device immediately—all pre-approved, free, and safe to use.
 
-
----
-File: setup-assistant.md
 ---
 
+## File: setup-assistant.md
+
 ---
+
 term: "Setup Assistant"
 category: ["Enrollment"]
+
 ---
 
 ## Term Definition
@@ -883,14 +914,15 @@ Just like a video game asks you to choose your character’s name and settings a
 
 However, the school can choose to **"Skip the Tutorial"** for you. So when you turn the iPad on, it bypasses the boring questions and goes straight to the home screen, all set up and ready for class.
 
-
----
-File: setup-pane-skipping.md
 ---
 
+## File: setup-pane-skipping.md
+
 ---
+
 term: "Setup Pane Skipping"
 category: ["Mac"]
+
 ---
 
 ## Term Definition
@@ -909,14 +941,15 @@ In the past, every time a Mac was updated, you had to **"watch a short commercia
 
 With **Setup Pane Skipping** , the school tells the Mac to **"Skip the Intro."** This saves time and allows students to get straight to their work without having to click "Next" on five different screens just to open a web browser.
 
-
----
-File: shared-ipad.md
 ---
 
+## File: shared-ipad.md
+
 ---
+
 term: "Shared iPad"
 category: ["Education", "Enrollment"]
+
 ---
 
 ## Term Definition
@@ -938,14 +971,15 @@ Many different students sit at the computer throughout the week. When you log in
 
 When you log off, the computer resets for the next student, but all your hard work is safely **"on the server"** (iCloud) waiting for your next visit.
 
-
----
-File: single-app-mode.md
 ---
 
+## File: single-app-mode.md
+
 ---
+
 term: "Single App Mode"
 category: ["Apps"]
+
 ---
 
 ## Term Definition
@@ -965,14 +999,15 @@ Think of this as **"Special Purpose Mode."** Just as a ticket machine at a train
 
 If a student is taking an exam, they can't leave the test to check messages—they are **locked into the test** until the teacher says otherwise.
 
-
----
-File: sip.md
 ---
 
+## File: sip.md
+
 ---
+
 term: "SIP (System Integrity Protection)"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -995,14 +1030,15 @@ Even if you are the owner of the house (the administrator) and you are holding a
 
 This makes it almost impossible for a virus or even an accidental mistake to **"break"** the core parts of your Mac.
 
-
----
-File: sites.md
 ---
 
+## File: sites.md
+
 ---
+
 term: "Sites"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -1023,14 +1059,15 @@ Think of this as **"Separate Private Offices in a Shared Building."** The school
 
 The Primary School staff can't see the High School’s iPads, and each school can set their own rules without interfering with the other.
 
-
----
-File: smart-group.md
 ---
 
+## File: smart-group.md
+
 ---
+
 term: "Smart Group"
 category: ["Core", "Jamf"]
+
 ---
 
 ## Term Definition
@@ -1048,14 +1085,15 @@ How it works:
 
 A Smart Group is an **"Automatic Sorting Bin."** You set a rule: **"If a student iPad has less than 10% battery, put it in the 'Needs Charge' list."** The system constantly checks every device; as soon as one drops to 9%, it’s moved to that list automatically. No one has to check manually.
 
-
----
-File: software-update.md
 ---
 
+## File: software-update.md
+
 ---
+
 term: "Software Update"
 category: ["macOS", "Jamf"]
+
 ---
 
 ## Term Definition
@@ -1074,14 +1112,15 @@ Think of this as **"Device Schooling."** Every once in a while, your device need
 
 IT is the **Teacher** who decides when it’s the best time for all school iPads to learn these new things, making sure they are ready for the next lesson without surprising you in the middle of an exam.
 
-
----
-File: ssid.md
 ---
 
+## File: ssid.md
+
 ---
+
 term: "SSID (Service Set Identifier)"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -1100,14 +1139,15 @@ An SSID is the **"Name Above the Classroom Door."** When you walk through the ha
 
 On your iPad, you choose the Wi-Fi **"Room"** (the SSID) that matches your actual campus role to get the right level of internet access.
 
-
----
-File: status-channel.md
 ---
 
+## File: status-channel.md
+
 ---
+
 term: "Status Channel"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -1126,14 +1166,15 @@ Think of this as **"The Emergency Radio."** In the old days, a boss had to call 
 
 With the **Status Channel** , the employee just radios the boss the moment they finish a task: **"I'm done!"** It’s faster, uses less energy, and keeps the boss informed instantly without constant phone calls.
 
-
----
-File: student-information-system.md
 ---
 
+## File: student-information-system.md
+
 ---
+
 term: "Student Information System (SIS)"
 category: ["Education", "Other"]
+
 ---
 
 ## Term Definition
@@ -1152,14 +1193,15 @@ This is the **"Digital Brain of the School Office."** It's the central hub that 
 
 By connecting this **"Brain"** to the school's iPad system, everything stays synchronized. If a new student joins the school, the system automatically gives them an iPad account and puts them in the correct classes without any extra paperwork.
 
-
----
-File: supervision.md
 ---
 
+## File: supervision.md
+
 ---
+
 term: "Supervision"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -1182,14 +1224,15 @@ Supervision is the device's **"School Asset Mode."** A personal iPhone you buy f
 
 Once a device is **Supervised** , it is recognized as **"School Property."** This unlocks full management capabilities for IT, allowing them to lock down any feature and ensuring the device is always safe and ready for learning.
 
-
----
-File: system-extension.md
 ---
 
+## File: system-extension.md
+
 ---
+
 term: "System Extension"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -1210,14 +1253,15 @@ In the past, to add a new security feature (like an antivirus), you had to perfo
 
 System Extensions are a safer, modern way to add those same features without touching its **"heart."** It makes the Mac more stable and much harder for hackers to break.
 
-
----
-File: temporary-session.md
 ---
 
+## File: temporary-session.md
+
 ---
+
 term: "Temporary Session"
 category: ["Education"]
+
 ---
 
 ## Term Definition
@@ -1237,14 +1281,15 @@ Think of this as a **"Public Library Computer."** You don't need a library card 
 
 This ensures the next person can't see what you were doing, and the iPad stays fresh and fast for everyone.
 
-
----
-File: testflight.md
 ---
 
+## File: testflight.md
+
 ---
+
 term: "TestFlight"
 category: ["Apps"]
+
 ---
 
 ## Term Definition
@@ -1269,14 +1314,15 @@ Think of this as a **"Sneak Peek Movie Screening."** Before a movie (an app) com
 
 TestFlight is the **"private theater"** where students and teachers can try out new educational tools and help fix the bugs before the app is released to the whole world.
 
-
----
-File: tls-ssl.md
 ---
 
+## File: tls-ssl.md
+
 ---
+
 term: "TLS / SSL"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -1295,14 +1341,15 @@ Think of this as the internet’s **"Armored Truck."** When you put a letter (yo
 
 This ensures that while the truck (the network) is driving from your house to the bank, no highway robbers can peek inside or change the money in the bags.
 
-
----
-File: token.md
 ---
 
+## File: token.md
+
 ---
+
 term: "Token"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -1323,14 +1370,15 @@ You go to the front gate, show your ID, and pay (this is entering your password)
 
 Instead of having to show your ID at every single ride, the park gives you a **wristband** (the Token). As long as you are wearing it, you can walk onto any ride instantly. If it falls off (expires), you just go back to the gate to get a new one.
 
-
----
-File: touch-id.md
 ---
 
+## File: touch-id.md
+
 ---
+
 term: "Touch ID"
 category: ["Hardware"]
+
 ---
 
 ## Term Definition
@@ -1350,14 +1398,15 @@ Think of this as your **"Fingerprint Key."** Instead of having to type in a 6-di
 
 The machine recognizes your unique print and lets you in instantly. It’s faster than a key and much harder for someone to steal (unless they steal your finger!).
 
-
----
-File: transfer-to-android-tool.md
 ---
 
+## File: transfer-to-android-tool.md
+
 ---
+
 term: "Transfer to Android Tool"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -1376,14 +1425,15 @@ This is the **"Exit Migration Helper."** Just as Apple has a tool to help people
 
 For schools, it's something to watch out for. You don't want a student packing up the school's "furniture" (school data) and taking it to their personal house where the school keys no longer work.
 
-
----
-File: unified-logging.md
 ---
 
+## File: unified-logging.md
+
 ---
+
 term: "Unified Logging"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -1404,14 +1454,15 @@ It silently keeps a detailed diary of everything the computer is doing—from "C
 
 If the **"plane"** (your device) crashes, the **"Investigators"** (the tech team) look at the black box diary to see exactly what happened in the seconds before the trouble started.
 
-
----
-File: universal-binary.md
 ---
 
+## File: universal-binary.md
+
 ---
+
 term: "Universal Binary"
 category: ["macOS"]
+
 ---
 
 ## Term Definition
@@ -1430,14 +1481,15 @@ Think of this as a **"Bilingual Book."** Instead of buying one book in English a
 
 If you are an English reader (Apple Silicon), you just read the English parts. If you are a French reader (Intel), you read the French parts. It works perfectly for everyone without needing a translator.
 
-
----
-File: universal-control.md
 ---
 
+## File: universal-control.md
+
 ---
+
 term: "Universal Control"
 category: ["Apple", "macOS"]
+
 ---
 
 ## Term Definition
@@ -1457,14 +1509,15 @@ Think of this as **"Cursor Teleportation."** If you place your iPad next to your
 
 You can even grab a photo from your iPad and drag it onto your Mac to paste it into a report. It makes your two separate devices feel like one giant, powerful workspace.
 
-
----
-File: update-inventory.md
 ---
 
+## File: update-inventory.md
+
 ---
+
 term: "Update Inventory"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -1486,14 +1539,15 @@ Think of this as a **"Digital Roll Call."** Just like a teacher needs to scan th
 
 It ensures the school's records are 100% accurate and up-to-date.
 
-
----
-File: usb-c.md
 ---
 
+## File: usb-c.md
+
 ---
+
 term: "USB-C"
 category: ["Hardware"]
+
 ---
 
 ## Term Definition
@@ -1515,14 +1569,15 @@ Think of this as the **"Universal Connection Hole."** In the old days, you had d
 
 It’s faster, the cable works even if you flip it upside down, and it makes it much easier to keep your iPad charged and ready for the school day.
 
-
----
-File: user-approved-mdm.md
 ---
 
+## File: user-approved-mdm.md
+
 ---
+
 term: "User Approved MDM"
 category: ["Enrollment", "macOS"]
+
 ---
 
 ## Term Definition
@@ -1539,14 +1594,15 @@ Distinction:
 
 Think of this as a **"Certificate of High Trust."** If you hire a cleaner for your house, they can clean the windows. But if you want to give them the keys to the **Main Security Gate** , you need to sign a special legal document saying, **"Yes, I trust them completely."** User Approved MDM is that signature. Without it, the MDM can only do basic cleaning; it's not allowed to touch the locks.
 
-
----
-File: user-enrollment.md
 ---
 
+## File: user-enrollment.md
+
 ---
+
 term: "User Enrollment"
 category: ["Enrollment"]
+
 ---
 
 ## Definition
@@ -1557,14 +1613,15 @@ User Enrollment is a specialized MDM onboarding mode designed specifically for *
 
 This is the "Church and State" of device management. It’s like having a secure "School Locker" inside your personal phone. The school can see and manage what’s inside the locker (your school work and email), but it’s completely impossible for them to see what’s in the rest of your phone. Your private photos and games stay 100% private, and the school can't even "remote wipe" your personal device.
 
-
----
-File: user-initiated-enrollment.md
 ---
 
+## File: user-initiated-enrollment.md
+
 ---
+
 term: "User-Initiated Enrollment (UIE)"
 category: ["Enrollment"]
+
 ---
 
 ## Term Definition
@@ -1586,14 +1643,15 @@ This is a **"Voluntary Enrollment Plan."** Instead of the school "drafting" the 
 
 However, because it's voluntary, the student can also choose to **"quit"** the plan at any time, meaning the school’s security rules will stop working the moment they decide to leave.
 
-
----
-File: vlan.md
 ---
 
+## File: vlan.md
+
 ---
+
 term: "VLAN"
 category: ["Network"]
+
 ---
 
 ## Definition
@@ -1604,14 +1662,15 @@ A Virtual Local Area Network (VLAN) is a logical subnetwork within a physical ne
 
 Think of this as "Invisible Walls" inside your network cable. Even though everyone is using the same physical "Internet Pipe," the VLANs act like dividers that slice the pipe into several smaller, private tunnels. Water in Tunnel A (the guest Wi-Fi) can never leak into Tunnel B (the school's private exam server), keeping everything organized and secure.
 
-
----
-File: volume-owner.md
 ---
 
+## File: volume-owner.md
+
 ---
+
 term: "Volume Owner"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -1630,14 +1689,15 @@ Think of this as the **"Homeowner with the Title Deed."** Even if many people li
 
 If you aren't the official **"Volume Owner,"** the Mac will refuse to let you install a major system update or change its deepest security settings, making the machine much harder to "break" or hack.
 
-
----
-File: vpp.md
 ---
 
+## File: vpp.md
+
 ---
+
 term: "VPP (Volume Purchase Program)"
 category: ["Apple"]
+
 ---
 
 ## Term Definition
@@ -1657,14 +1717,15 @@ Think of this as the school's **"Digital Library."** Instead of every student ha
 
 When the school year is over, the school **"takes the book back"** electronically and puts it back on the shelf, ready for the next class to use.
 
-
----
-File: web-clip.md
 ---
 
+## File: web-clip.md
+
 ---
+
 term: "Web Clip"
 category: ["Apps"]
+
 ---
 
 ## Term Definition
@@ -1684,14 +1745,15 @@ Think of this as a **"Smart Bookmark."** Instead of having to open a browser and
 
 You tap it, and it **teleports** you straight to the correct website instantly. It’s a great time-saver for students.
 
-
----
-File: wi-fi-payload.md
 ---
 
+## File: wi-fi-payload.md
+
 ---
+
 term: "Wi-Fi Payload"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -1713,14 +1775,15 @@ Think of this as an **"Automatic Login Sheet."** Instead of a teacher having to 
 
 The iPad **"reads"** the password and connects to the internet automatically, so you're ready to start working the moment you walk into the building.
 
-
----
-File: wifi-5.md
 ---
 
+## File: wifi-5.md
+
 ---
+
 term: "Wi-Fi 5"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -1739,14 +1802,15 @@ Think of this as a **"Wide Highway."** Before Wi-Fi 5 (Wi-Fi 4), we drove on nar
 
 However, as more cars (Ipads) joined the road, the highway started to get congested because the traffic lights (router) weren't smart enough to manage the flow efficiently.
 
-
----
-File: wifi-6.md
 ---
 
+## File: wifi-6.md
+
 ---
+
 term: "Wi-Fi 6"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -1765,14 +1829,15 @@ Think of this as a **"Smart Bus System."**
 
 **Wi-Fi 5** was like a fleet of cars carrying one person each. If 30 students needed data, 30 cars had to line up, causing a traffic jam. **Wi-Fi 6** uses **OFDMA** , which is like a **bus** . One bus can pick up data for 30 students at once and deliver it in a single trip. The road is less crowded, and everyone gets to their destination (website) smoother and faster, even during a busy lesson.
 
-
----
-File: wifi-6e.md
 ---
 
+## File: wifi-6e.md
+
 ---
+
 term: "Wi-Fi 6E"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -1793,14 +1858,15 @@ Most Wi-Fi works on "crowded local streets." Wi-Fi 6E opens up a brand-new, wide
 
 It makes downloading large textbooks and projects feel almost instant.
 
-
----
-File: wifi-7.md
 ---
 
+## File: wifi-7.md
+
 ---
+
 term: "Wi-Fi 7"
 category: ["Network"]
+
 ---
 
 ## Term Definition
@@ -1819,14 +1885,15 @@ Think of this as a **"Multi-Lane Superhighway."** Previous Wi-Fi was like a car 
 
 Wi-Fi 7 with **MLO** is like a futuristic car that can drive on the Local Road (2.4GHz), the Highway (5GHz), and the Express Lane (6GHz) **all at the same time** . It splits your data across all empty lanes so you never get stuck in traffic, making it perfect for real-time virtual reality lessons.
 
-
----
-File: window-app.md
 ---
 
+## File: window-app.md
+
 ---
+
 term: "Window App"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -1845,14 +1912,15 @@ In the past, using apps on an iPad was like **"reading one book at a time"** on 
 
 With **Window App** , using your iPad is like sitting at a **"Professional Desk."** You can have your textbook open, your notepad next to it, and a calculator floating on top—all at once. You can resize them and move them around just like you do on a laptop, making homework much faster.
 
-
----
-File: wipe.md
 ---
 
+## File: wipe.md
+
 ---
+
 term: "Wipe"
 category: ["Core"]
+
 ---
 
 ## Term Definition
@@ -1872,14 +1940,15 @@ This is the **"Digital Reset Button."** When IT sends this command, it tells the
 
 The iPad then wakes up looking exactly as it did the day it was first taken out of its box, clean and ready for a fresh start.
 
-
----
-File: wpa.md
 ---
 
+## File: wpa.md
+
 ---
+
 term: "WPA / WPA2 / WPA3"
 category: ["Network", "Security"]
+
 ---
 
 ## Term Definition
@@ -1902,14 +1971,15 @@ Think of these as the **"Different Levels of Locks"** on your school's front doo
 
 The school uses these high-level locks to make sure only students and teachers can get onto the school Wi-Fi, keeping everyone's data safe.
 
-
----
-File: zero-touch.md
 ---
 
+## File: zero-touch.md
+
 ---
+
 term: "Zero-Touch Deployment"
 category: ["Enrollment"]
+
 ---
 
 ## Term Definition
@@ -1934,14 +2004,15 @@ Think of this as **"Instant School iPad Magic."** The school's IT team doesn't e
 
 The moment you turn it on and connect to your home Wi-Fi, the iPad **"realizes"** it belongs to the school and automatically begins setting itself up with your email, textbooks, and apps—all by itself!
 
-
----
-File: zero-trust.md
 ---
 
+## File: zero-trust.md
+
 ---
+
 term: "Zero Trust"
 category: ["Security"]
+
 ---
 
 ## Term Definition
@@ -1961,14 +2032,15 @@ In the past, if you were inside the school building, everybody assumed you belon
 
 Under **Zero Trust** , the building is full of **"locked doors."** No matter who you are, the school's system asks to see your **"ID card"** and check your **fingerprints** every single time you want to open a door. It’s strict, but it keeps everyone’s data much safer.
 
-
----
-File: zero-wipe-mdm-migration.md
 ---
 
+## File: zero-wipe-mdm-migration.md
+
 ---
+
 term: "Zero-Wipe MDM Migration"
 category: ["MDM"]
+
 ---
 
 ## Term Definition
@@ -1992,5 +2064,3 @@ Mechanism (Declarative Device Management):
 In the past, switching to a new management system was like **"tearing down a house and rebuilding it"** just to change the landlord.
 
 Now, **Zero-Wipe Migration** is like **"keeping your house and furniture exactly as is, but just hiring a new security guard."** All your photos and homework stay on the iPad, but the school gets to manage it using a newer, better system.
-
-

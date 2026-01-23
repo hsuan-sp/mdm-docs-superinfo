@@ -25,14 +25,14 @@
 
 ```yaml
 ---
-category: 註冊與自動派送 (Enrollment)  # 必須，對應分類索引
-id: enr-25                               # 必須，唯一識別碼
-important: false                         # 必須，是否為重要題目
-tags:                                    # 必須，至少一個標籤
+category: 註冊與自動派送 (Enrollment) # 必須，對應分類索引
+id: enr-25 # 必須，唯一識別碼
+important: false # 必須，是否為重要題目
+tags: # 必須，至少一個標籤
   - ADE
   - 設定助理
   - 部署策略
-title: ADE 自動註冊時，IT 應該「跳過」哪些設定助理步驟？  # 必須
+title: ADE 自動註冊時，IT 應該「跳過」哪些設定助理步驟？ # 必須
 ---
 ```
 
@@ -40,13 +40,14 @@ title: ADE 自動註冊時，IT 應該「跳過」哪些設定助理步驟？  #
 
 ```yaml
 ---
-category:                                # 必須，可為陣列
+category: # 必須，可為陣列
   - Enrollment
-term: ADE (Automated Device Enrollment)  # 必須，術語名稱（含英文縮寫）
+term: ADE (Automated Device Enrollment) # 必須，術語名稱（含英文縮寫）
 ---
 ```
 
 **規則**：
+
 - Frontmatter 中的鍵必須依「字母順序」排列
 - `category`, `id`, `title`/`term` 為必填欄位
 - 所有 frontmatter 值結尾**不可有多餘空格**
@@ -66,6 +67,7 @@ term: ADE (Automated Device Enrollment)  # 必須，術語名稱（含英文縮�
 ```
 
 **規則**：
+
 - 問題必須用 `## Q: ` 開頭
 - 答案必須用 `## Answer` 標示
 - 子標題使用 `###`，最多到 `####`
@@ -87,6 +89,7 @@ term: ADE (Automated Device Enrollment)  # 必須，術語名稱（含英文縮�
 ```
 
 **規則**：
+
 - 中文檔案使用「術語定義」與「白話文比喻」
 - 英文檔案使用「Term Definition」與「Analogy」
 - 標題文字固定，不可更改
@@ -106,6 +109,7 @@ term: ADE (Automated Device Enrollment)  # 必須，術語名稱（含英文縮�
 ```
 
 **規則**：
+
 - 標題後必須有**一個空行**
 - 段落之間必須有**一個空行**
 - 清單前後必須有**一個空行**
@@ -117,13 +121,13 @@ term: ADE (Automated Device Enrollment)  # 必須，術語名稱（含英文縮�
 段落內容。
 
 ` ``javascript
-const example = 'code';
-` ``
+const example = 'code'; ` ``
 
 後續段落。
 ```
 
 **規則**：
+
 - 程式碼區塊前後必須有**一個空行**
 - 程式碼區塊必須標註語言名稱（如 `javascript`, `bash`）
 - 行內代碼使用單個反引號：`` `code` ``
@@ -142,6 +146,7 @@ const example = 'code';
 ```
 
 **規則**：
+
 - 使用 `*` 作為清單標記（不使用 `-`）
 - 清單符號後必須有**一個空格**
 - 子清單縮排**兩個空格**
@@ -155,6 +160,7 @@ const example = 'code';
 ```
 
 **規則**：
+
 - 數字序號使用 `1.`, `2.`, `3.` 格式
 - 序號後必須有**一個空格**
 
@@ -169,6 +175,7 @@ const example = 'code';
 ```
 
 **規則**：
+
 - 使用 `**text**` 標記粗體（不使用 `__text__`）
 - 粗體標記前後必須有**一個空格**（除非緊鄰標點符號）
 - **禁止** `**text**` 這種內部有空格的寫法
@@ -183,6 +190,7 @@ const example = 'code';
 ```
 
 **規則**：
+
 - Emoji 後必須有**一個空格**
 - 常用 Emoji：✅（正確）、❌（錯誤）、⚠️（警告）、💡（提示）
 
@@ -197,6 +205,7 @@ const example = 'code';
 ```
 
 **規則**：
+
 - 技術指令、函數名、變數名使用反引號包裹
 - 中文與反引號之間必須有**一個空格**
 
@@ -207,6 +216,7 @@ const example = 'code';
 ```
 
 **規則**：
+
 - 首次出現的專有名詞使用粗體，並附上英文全稱
 - 縮寫與中文名稱保持一致：`ASM (Apple School Manager)` 或 `Apple School Manager (ASM)`
 
@@ -224,11 +234,13 @@ const example = 'code';
 ```
 
 **規則**：
+
 - 中文字元與英文字母之間：**加空格**
 - 中文字元與阿拉伯數字之間：**加空格**
 - 英文字母與中文標點符號之間：**不加空格**
 
 示例：
+
 ```markdown
 ✅ Apple 於 2024 年推出了 iOS 18。
 ❌ Apple於2024年推出了iOS 18。
@@ -244,6 +256,7 @@ const example = 'code';
 ```
 
 **規則**：
+
 - 英文單詞之間必須有空格
 - 專有名詞首字母大寫
 - 句子結尾使用英文標點符號
@@ -261,6 +274,7 @@ npm run fix-markdown
 ```
 
 **功能**：
+
 - 自動修正粗體、Emoji、盤古之白等排版問題
 - 標準化 frontmatter 順序
 - 清除多餘空行
@@ -273,6 +287,7 @@ npm run update-index
 ```
 
 **功能**：
+
 - 檢查所有 Markdown 檔案的 frontmatter 完整性
 - 更新維護索引檔案
 

@@ -2,7 +2,7 @@
 import { computed, ref, onMounted, shallowRef, watch } from "vue";
 import { useData } from "vitepress";
 // @ts-ignore
-import { data as rawLogsData } from "../../data/changelog.data";
+import { data as rawLogsData } from "../../../data/changelog.data";
 
 const { lang } = useData();
 const isMounted = ref(false);
@@ -43,7 +43,7 @@ const ui = computed(() =>
         latest: "最新版本",
         noLogs: "目前沒有更新紀錄。",
         allVersions: "所有版本",
-      },
+      }
 );
 
 // Initialization
@@ -54,13 +54,13 @@ watch(
       selectedVersion.value = newLogs[0].version;
     }
   },
-  { immediate: true },
+  { immediate: true }
 );
 
 const filteredLogs = computed(() => {
   if (selectedVersion.value === "ALL") return currentLogs.value;
   return currentLogs.value.filter(
-    (log) => log.version === selectedVersion.value,
+    (log) => log.version === selectedVersion.value
   );
 });
 

@@ -16,7 +16,14 @@ const t = computed(() => {
 });
 
 const handleScroll = () => {
-  visible.value = window.scrollY > 300;
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  const scrollPercentage = (scrollTop / scrollHeight) * 100;
+
+  // Only show button if we've scrolled more than 20% of the page
+  visible.value = scrollPercentage > 20;
 };
 
 const scrollToTop = () => {
