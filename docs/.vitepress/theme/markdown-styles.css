@@ -99,7 +99,7 @@
   font-weight: 700;
   line-height: 1.4;
   margin-top: 2.75rem;
-  margin-bottom: 1.5rem; /* Increased for better separation */
+  margin-bottom: 1.75rem; /* Increased for better separation */
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--vp-c-divider);
   color: var(--vp-c-text-1);
@@ -126,7 +126,7 @@
   font-weight: 700;
   line-height: 1.4;
   margin-top: 1.75rem;
-  margin-bottom: 1.25rem; /* Increased for better separation */
+  margin-bottom: 1.5rem; /* Increased for better separation */
   color: var(--vp-c-text-1);
   letter-spacing: -0.01em;
 }
@@ -209,13 +209,13 @@
   color: var(--vp-c-brand-1);
   font-weight: bold;
   position: absolute;
-  left: -2em; /* Start from the edge of the 2em padding */
-  width: 1em; /* Take up exactly 1em */
+  left: -2em; /* Align exactly to the start of the 2em padding */
+  width: 1em; /* Box takes exactly 1 character space */
+  height: 1.85em; /* Match CJK line-height for vertical centering */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.25em;
-  line-height: 1.4;
+  font-size: 1.2em;
 }
 
 /* Custom counter for circled numbers with exact alignment */
@@ -241,15 +241,15 @@
 .markdown-body ol > li::before {
   content: counter(li-counter, circled-decimal);
   position: absolute;
-  left: -2em; /* Start from the edge of the 2em padding */
-  width: 1em; /* Take up exactly 1em */
+  left: -2em; /* Align exactly to the start of the 2em padding */
+  width: 1em; /* Box takes exactly 1 character space */
+  height: 1.85em; /* Match CJK line-height for vertical centering */
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--vp-c-brand-1);
   font-weight: bold;
-  font-size: 1.15em;
-  line-height: 1.4;
+  font-size: 1.1em; /* Balanced size for circled numbers */
 }
 
 /* --- 3. Feature: Cards & Callouts --- */
