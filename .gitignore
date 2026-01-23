@@ -19,3 +19,5 @@ dist
 
 # Editor
 .idea
+.vercel
+.env*.local
