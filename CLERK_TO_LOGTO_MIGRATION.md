@@ -89,9 +89,9 @@ git push origin nextra-migration
 \`\`\`
 LOGTO_ENDPOINT=https://36dxrv.logto.app/
 LOGTO_APP_ID=gkv7y7qb9hts3wib55g46
-LOGTO_APP_SECRET=Ju7IJJHx4w8JO7VO8zWC4CNjMA6GygyL
+LOGTO_APP_SECRET=YOUR_APP_SECRET
 LOGTO_BASE_URL=https://mdm-docs-superinfo.netlify.app
-LOGTO_COOKIE_SECRET=KzgXM9DILJ87sdICpZcrxJVl52WeMgqO
+LOGTO_COOKIE_SECRET=YOUR_COOKIE_SECRET
 LOGTO_COOKIE_SECURE=true
 \`\`\`
 
