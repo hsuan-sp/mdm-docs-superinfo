@@ -2,11 +2,11 @@
 import React, { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { useRouter } from 'next/router'
-import { useLanguage } from '@/hooks/useLanguage'
-import { translations } from '@/locales'
-import { X, ChevronRight, Moon, Sun, Globe, ExternalLink } from 'lucide-react'
+import { useLanguage } from '../../hooks/useLanguage'
+import { translations } from '../../locales'
+import { X, ChevronRight, Moon, Sun, Globe, ExternalLink, User, LogOut } from 'lucide-react'
 import { useTheme } from 'next-themes'
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
+import { useUser } from '../../hooks/useLogtoUser'
 
 interface MobileNavProps {
   isOpen: boolean
@@ -18,9 +18,11 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
   const { language, setLanguage } = useLanguage()
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const { user, signIn, signOut } = useUser()
   
   const t = translations[language as keyof typeof translations] || translations['zh-TW']
   const isZh = language === 'zh-TW'
+  const userCenterT = (translations[language as keyof typeof translations] as any)?.userCenter || (translations['zh-TW'] as any).userCenter
 
   useEffect(() => {
     setMounted(true)
@@ -87,27 +89,36 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
         <div className="flex-1 overflow-y-auto p-6 space-y-8 no-scrollbar">
           {/* User Section - Enhanced Cohesion */}
           <div className="p-1 bg-zinc-50 dark:bg-zinc-800/30 rounded-3xl border border-zinc-100 dark:border-zinc-800/50">
-            <SignedIn>
-              <div className="flex items-center gap-4 p-4">
-                <div className="bg-white dark:bg-zinc-900 p-1 rounded-full shadow-sm">
-                  <UserButton afterSignOutUrl="/" />
+            {user ? (
+              <div className="flex flex-col p-2 space-y-2">
+                <div className="flex items-center gap-4 p-3 bg-white dark:bg-zinc-900 rounded-2xl shadow-sm">
+                  <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm shadow-inner shrink-0 leading-none">
+                    {user.username?.[0]?.toUpperCase() || user.primaryEmail?.[0]?.toUpperCase() || <User className="w-5 h-5" />}
+                  </div>
+                  <div className="flex flex-col min-w-0">
+                    <span className="text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest leading-none">Active Session</span>
+                    <span className="text-sm font-bold text-zinc-800 dark:text-zinc-200 truncate mt-1">
+                      {user.username || user.primaryEmail || (isZh ? '已安全登入' : 'Securely Signed In')}
+                    </span>
+                  </div>
                 </div>
-                <div className="flex flex-col">
-                   <span className="text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">Active Account</span>
-                   <span className="text-sm font-bold text-zinc-800 dark:text-zinc-200">
-                     {isZh ? '已安全登入' : 'Securely Signed In'}
-                   </span>
-                </div>
-              </div>
-            </SignedIn>
-            <SignedOut>
-              <SignInButton mode="redirect">
-                <button className="w-full flex items-center justify-center gap-3 px-5 py-4 bg-blue-600 text-white rounded-2xl font-black text-[14px] hover:bg-blue-700 active:scale-[0.98] transition-all shadow-lg shadow-blue-500/20">
-                  {isZh ? '登入帳號系統' : 'Sign In to Access'}
-                  <ChevronRight className="w-4 h-4" />
+                <button 
+                  onClick={signOut}
+                  className="w-full flex items-center justify-center gap-2 px-5 py-3 text-red-600 dark:text-red-400 font-black text-[13px] hover:bg-red-50 dark:hover:bg-red-900/10 rounded-xl transition-all"
+                >
+                  <LogOut className="w-4 h-4" />
+                  {userCenterT.logout || (isZh ? '登出帳號' : 'Sign Out')}
                 </button>
-              </SignInButton>
-            </SignedOut>
+              </div>
+            ) : (
+              <button 
+                onClick={signIn}
+                className="w-full flex items-center justify-center gap-3 px-5 py-4 bg-blue-600 text-white rounded-2xl font-black text-[14px] hover:bg-blue-700 active:scale-[0.98] transition-all shadow-lg shadow-blue-500/20"
+              >
+                {isZh ? '登入帳號系統' : 'Sign In to Access'}
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            )}
           </div>
 
           {/* Navigation Links */}

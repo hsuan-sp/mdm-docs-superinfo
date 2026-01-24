@@ -41,14 +41,27 @@ git push origin nextra-migration
 
 Netlify Dashboard → Site settings → Environment variables → **Add variable**
 
-複製貼上以下 6 個變數:
+**⚠️ 重要：以下標記 🔒 的變數請設為 "Secret"（勾選 Secret 選項）**
 
-```
+新增以下 6 個變數：
+
+| 變數名稱                 | 值                                       | 是否 Secret |
+| ------------------------ | ---------------------------------------- | ----------- |
+| `LOGTO_ENDPOINT`         | `https://36dxrv.logto.app/`              | ❌ 否       |
+| `LOGTO_APP_ID`           | `gkv7y7qb9hts3wib55g46`                  | ❌ 否       |
+| `LOGTO_APP_SECRET` 🔒    | `Ju7IJJHx4w8JO7VO8zWC4CNjMA6GygyL`       | ✅ **是**   |
+| `LOGTO_BASE_URL`         | `https://mdm-docs-superinfo.netlify.app` | ❌ 否       |
+| `LOGTO_COOKIE_SECRET` 🔒 | `KzgXM9DILJ87sdICpZcrxJVl52WeMgqO`       | ✅ **是**   |
+| `LOGTO_COOKIE_SECURE`    | `true`                                   | ❌ 否       |
+
+**快速複製（一次全部新增）：**
+
+```bash
 LOGTO_ENDPOINT=https://36dxrv.logto.app/
 LOGTO_APP_ID=gkv7y7qb9hts3wib55g46
-LOGTO_APP_SECRET=Ju7IJJHx4w8JO7VO8zWC4CNjMA6GygyL
+LOGTO_APP_SECRET=Ju7IJJHx4w8JO7VO8zWC4CNjMA6GygyL      # 記得勾選 Secret
 LOGTO_BASE_URL=https://mdm-docs-superinfo.netlify.app
-LOGTO_COOKIE_SECRET=KzgXM9DILJ87sdICpZcrxJVl52WeMgqO
+LOGTO_COOKIE_SECRET=KzgXM9DILJ87sdICpZcrxJVl52WeMgqO  # 記得勾選 Secret
 LOGTO_COOKIE_SECURE=true
 ```
 

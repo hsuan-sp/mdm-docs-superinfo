@@ -2,11 +2,11 @@
 import React, { useState, useMemo } from 'react'
 import { useRouter } from 'nextra/hooks'
 import { Calendar, Tag, ChevronDown, ExternalLink } from 'lucide-react'
-import { SignedIn, SignedOut } from '@clerk/nextjs'
 import AuthGate from '../ui/AuthGate'
+import { useUser } from '../../hooks/useLogtoUser'
 
-import { translations } from '@/locales'
-import { useLanguage } from '@/hooks/useLanguage'
+import { translations } from '../../locales'
+import { useLanguage } from '../../hooks/useLanguage'
 
 interface LogEntry {
   version: string
@@ -23,8 +23,12 @@ const Changelog: React.FC<ChangelogProps> = ({ logs }) => {
   const router = useRouter()
   const { language: locale } = useLanguage()
   const t = translations[locale as keyof typeof translations]?.changelog || translations['zh-TW'].changelog
+  const { user, isLoading } = useUser()
 
   const [selectedVersion, setSelectedVersion] = useState<string>('ALL')
+
+  if (isLoading) return null
+  if (!user) return <AuthGate />
 
 
   const filteredLogs = useMemo(() => {
@@ -42,9 +46,8 @@ const Changelog: React.FC<ChangelogProps> = ({ logs }) => {
 
   return (
     <>
-      <SignedIn>
-        <div className="max-w-4xl mx-auto py-10">
-          {/* Version Selector */}
+      <div className="max-w-4xl mx-auto py-10">
+        {/* Version Selector */}
           <div className="mb-12 p-6 bg-gray-50 dark:bg-zinc-900 rounded-3xl border border-gray-100 dark:border-zinc-800 flex flex-col md:flex-row items-start md:items-center gap-4">
             <label htmlFor="version-select" className="text-sm font-black uppercase tracking-widest text-zinc-400">
               {t.selectVersion}
@@ -107,11 +110,7 @@ const Changelog: React.FC<ChangelogProps> = ({ logs }) => {
               </article>
             ))}
           </div>
-        </div>
-      </SignedIn>
-      <SignedOut>
-        <AuthGate />
-      </SignedOut>
+      </div>
     </>
   )
 }

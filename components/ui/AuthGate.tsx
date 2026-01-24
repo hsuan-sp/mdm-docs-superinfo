@@ -1,13 +1,13 @@
-import React from 'react'
-import { SignInButton } from '@clerk/nextjs'
 import { Lock, ChevronRight, Home, ShieldCheck } from 'lucide-react'
 import Link from 'next/link'
-import { useLanguage } from '@/hooks/useLanguage'
-import { translations } from '@/locales'
+import { useLanguage } from '../../hooks/useLanguage'
+import { translations } from '../../locales'
+import { useUser } from '../../hooks/useLogtoUser'
 
 const AuthGate: React.FC = () => {
   const { language } = useLanguage()
   const t = translations[language as keyof typeof translations]?.authGate || translations['zh-TW'].authGate
+  const { signIn } = useUser()
 
   return (
     <div className="min-h-[70vh] flex items-center justify-center p-6 bg-zinc-50/50 dark:bg-black/20">
@@ -41,12 +41,13 @@ const AuthGate: React.FC = () => {
             />
 
             <div className="flex flex-col w-full gap-4 max-w-sm">
-              <SignInButton mode="redirect">
-                <button className="w-full flex items-center justify-center gap-3 px-8 py-5 bg-blue-600 text-white rounded-[1.25rem] font-black text-[16px] hover:bg-blue-700 hover:shadow-2xl hover:shadow-blue-500/30 active:scale-95 transition-all group">
-                  {t.signInBtn}
-                  <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </SignInButton>
+              <button 
+                onClick={signIn}
+                className="w-full flex items-center justify-center gap-3 px-8 py-5 bg-blue-600 text-white rounded-[1.25rem] font-black text-[16px] hover:bg-blue-700 hover:shadow-2xl hover:shadow-blue-500/30 active:scale-95 transition-all group"
+              >
+                {t.signInBtn}
+                <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
 
               <Link 
                 href="/"

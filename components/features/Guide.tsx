@@ -2,12 +2,12 @@
 import React, { useState, useMemo, useEffect, useCallback } from 'react'
 import { useRouter } from 'nextra/hooks'
 import { Search, ChevronDown, Tag, AlertCircle, X, ChevronRight, Menu, Maximize2, Minimize2, Settings2, Filter } from 'lucide-react'
-import { QAModule, QAItem } from '@/types'
-import EmptyState from '@/components/ui/EmptyState'
+import { QAModule } from '../../types'
+import EmptyState from '../../components/ui/EmptyState'
 
-import { translations } from '@/locales'
-import { useLanguage } from '@/hooks/useLanguage'
-import { SignedIn, SignedOut } from '@clerk/nextjs'
+import { translations } from '../../locales'
+import { useLanguage } from '../../hooks/useLanguage'
+import { useUser } from '../../hooks/useLogtoUser'
 import AuthGate from '../ui/AuthGate'
 
 interface GuideProps {
@@ -20,19 +20,22 @@ const Guide: React.FC = () => {
   const t = translations[locale as keyof typeof translations]?.guide || translations['zh-TW'].guide
 
   const [allData, setAllData] = useState<QAModule[]>([])
-  const [isLoading, setIsLoading] = useState(true)
+  const [isDataLoading, setIsDataLoading] = useState(true)
   const [searchQuery, setSearchQuery] = useState('')
   const [activeSource, setActiveSource] = useState<string | 'All'>('All')
   const [openItems, setOpenItems] = useState<Set<string>>(new Set())
   const [fontScale, setFontScale] = useState(0.9)
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
+  const { user, isLoading: isAuthLoading } = useUser()
   
   // Infinite Scroll State
   const [visibleCount, setVisibleCount] = useState(20)
 
   useEffect(() => {
+    if (isAuthLoading || !user) return
+    
     const fetchData = async () => {
-      setIsLoading(true)
+      setIsDataLoading(true)
       try {
         const res = await fetch(`/api/guide?lang=${locale}`)
         if (res.ok) {
@@ -42,11 +45,11 @@ const Guide: React.FC = () => {
       } catch (error) {
         console.error('Failed to fetch guide data', error)
       } finally {
-        setIsLoading(false)
+        setIsDataLoading(false)
       }
     }
     fetchData()
-  }, [locale])
+  }, [locale, user, isAuthLoading])
 
   // Reset visible count on search/filter change
   useEffect(() => {
@@ -231,7 +234,10 @@ const Guide: React.FC = () => {
     </div>
   )
 
-  if (isLoading) {
+  if (isAuthLoading) return null
+  if (!user) return <AuthGate />
+
+  if (isDataLoading) {
     return (
       <div className="flex flex-col lg:flex-row gap-0 lg:gap-12 py-10 opacity-60">
         <aside className="hidden lg:block w-[320px] shrink-0 space-y-4">
@@ -249,8 +255,7 @@ const Guide: React.FC = () => {
 
   return (
     <>
-      <SignedIn>
-        <div className="flex flex-col lg:flex-row gap-0 lg:gap-12 py-10">
+      <div className="flex flex-col lg:flex-row gap-0 lg:gap-12 py-10">
           {/* Desktop Sidebar */}
           <aside className="hidden lg:block w-[320px] flex-shrink-0 sticky top-28 h-[calc(100vh-8rem)]">
             <SidebarContent />
@@ -402,11 +407,7 @@ const Guide: React.FC = () => {
               </div>
             </div>
           )}
-        </div>
-      </SignedIn>
-      <SignedOut>
-        <AuthGate />
-      </SignedOut>
+      </div>
     </>
   )
 }
