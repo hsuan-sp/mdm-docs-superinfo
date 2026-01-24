@@ -247,4 +247,11 @@ export const zhTW = {
     backHome: "返回首頁",
     backPrev: "回到上一頁",
   },
+  pageTitles: {
+    index: "首頁",
+    guide: "實戰指南",
+    glossary: "術語百科",
+    changelog: "更新日誌",
+    "404": "頁面未找到",
+  },
 };

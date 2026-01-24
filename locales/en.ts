@@ -249,4 +249,11 @@ export const en = {
     backHome: "Back Home",
     backPrev: "Go Back",
   },
+  pageTitles: {
+    index: "Home",
+    guide: "Guides",
+    glossary: "Glossary Hub",
+    changelog: "Changelog",
+    "404": "Page Not Found",
+  },
 };
