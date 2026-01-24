@@ -40,14 +40,8 @@ export function useUser() {
   }, []);
 
   const signOut = useCallback(async () => {
-    try {
-      await fetch("/api/auth/sign-out", { method: "POST" });
-      setUser(null);
-      router.push("/");
-    } catch (error) {
-      console.error("Sign out failed:", error);
-    }
-  }, [router]);
+    window.location.href = "/api/auth/sign-out";
+  }, []);
 
   return {
     user,
