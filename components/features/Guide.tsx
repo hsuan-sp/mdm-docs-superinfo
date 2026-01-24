@@ -328,7 +328,8 @@ const Guide: React.FC = () => {
                           {openItems.has(item.id) && (
                             <div className="px-6 pb-8 pt-0 sm:px-7 md:px-8 md:pb-10 animate-in fade-in slide-in-from-top-2 duration-300">
                               <div 
-                                className={`prose prose-zinc dark:prose-invert max-w-none text-zinc-600 dark:text-zinc-400 leading-relaxed prose-p:mb-6 prose-headings:text-zinc-800 dark:prose-headings:text-zinc-100 ${fontClasses}`}
+                                className="prose prose-zinc dark:prose-invert max-w-none text-zinc-600 dark:text-zinc-400 leading-relaxed prose-p:mb-6 prose-headings:text-zinc-800 dark:prose-headings:text-zinc-100"
+                                style={{ '--current-font-scale': fontScale } as any}
                                 dangerouslySetInnerHTML={{ __html: item.answer }}
                               />
                               {item.tags && item.tags.length > 0 && (

@@ -297,10 +297,14 @@ button[aria-label*="Menu"],
   display: none !important;
 }
 
-/* Guide 卡片內容字體優化 - 統一大小、更自然的比例 */
+/* Guide & Glossary 內容字體優化 - 支援動態縮放 */
+.prose {
+  --current-font-scale: 1; /* 預設倍率 */
+}
+
 .prose h1,
 .prose h2 {
-  font-size: 1.15rem !important;
+  font-size: calc(var(--current-font-scale) * 1.15rem) !important;
   font-weight: 800 !important;
 }
 
@@ -308,27 +312,23 @@ button[aria-label*="Menu"],
 .prose h4,
 .prose h5,
 .prose h6 {
-  font-size: 1.05rem !important;
+  font-size: calc(var(--current-font-scale) * 1.05rem) !important;
   font-weight: 700 !important;
   margin-top: 1.5em !important;
   margin-bottom: 0.8em !important;
   line-height: 1.4 !important;
 }
 
-.prose p {
-  font-size: 0.95rem !important;
+.prose p,
+.prose li {
+  font-size: calc(var(--current-font-scale) * 0.95rem) !important;
   line-height: 1.65 !important;
   margin-bottom: 0.8em !important;
 }
 
 .prose ul,
 .prose ol {
-  font-size: 0.95rem !important;
   padding-left: 1.5em !important;
-}
-
-.prose li {
-  margin-bottom: 0.4em !important;
 }
 
 .prose strong {

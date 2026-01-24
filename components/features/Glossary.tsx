@@ -215,18 +215,23 @@ const Glossary: React.FC = () => {
                 </header>
 
                 <div 
-                  className={`flex-1 prose prose-zinc dark:prose-invert max-w-none text-zinc-600 dark:text-zinc-400 leading-relaxed prose-p:mb-6 mb-8 relative z-10 ${fontClasses}`}
+                  className="flex-1 prose prose-zinc dark:prose-invert max-w-none text-zinc-600 dark:text-zinc-400 leading-relaxed prose-p:mb-6 mb-8 relative z-10"
+                  style={{ '--current-font-scale': fontScale } as any}
                   dangerouslySetInnerHTML={{ __html: item.definition }}
                 />
 
                 {item.analogy && (
-                  <div className="p-6 sm:p-8 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-200 dark:border-amber-900/30 rounded-3xl relative group-hover:border-amber-300 dark:group-hover:border-amber-800/40 transition-all z-10">
+                  <div 
+                    className="p-6 sm:p-8 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-200 dark:border-amber-900/30 rounded-3xl relative group-hover:border-amber-300 dark:group-hover:border-amber-800/40 transition-all z-10"
+                    style={{ '--current-font-scale': fontScale } as any}
+                  >
                     <div className="flex items-center gap-2 mb-5 text-amber-600 dark:text-amber-500 font-black text-xs uppercase tracking-[0.2em]">
                       <Lightbulb className="w-4 h-4" />
                       {t.analogyLabel}
                     </div>
                     <div 
-                      className={`text-[15px] md:text-[17px] text-zinc-800 dark:text-zinc-200 leading-relaxed font-bold italic opacity-90 ${fontClasses}`}
+                      className="text-[15px] md:text-[17px] text-zinc-800 dark:text-zinc-200 leading-relaxed font-bold italic opacity-90"
+                      style={{ fontSize: `calc(${fontScale} * 16px)` }}
                       dangerouslySetInnerHTML={{ __html: item.analogy }}
                     />
                   </div>
