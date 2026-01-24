@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const publicRoutes = ["/", "/sign-in", "/sign-up", "/api/auth"];
+const publicRoutes = ["/", "/sign-in", "/sign-up", "/api/logto"];
 const protectedRoutes = ["/guide", "/glossary", "/changelog"];
 
 export function middleware(request: NextRequest) {
@@ -23,7 +23,7 @@ export function middleware(request: NextRequest) {
 
     if (!hasAuthCookie) {
       // 重導向到登入
-      const signInUrl = new URL("/api/auth/sign-in", request.url);
+      const signInUrl = new URL("/api/logto/sign-in", request.url);
       signInUrl.searchParams.set("returnUrl", pathname);
       return NextResponse.redirect(signInUrl);
     }

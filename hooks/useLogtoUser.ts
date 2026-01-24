@@ -20,7 +20,7 @@ export function useUser() {
 
   const checkAuth = async () => {
     try {
-      const res = await fetch("/api/auth/user");
+      const res = await fetch("/api/logto/user");
       if (res.ok) {
         const userData = await res.json();
         setUser(userData);
@@ -36,11 +36,11 @@ export function useUser() {
   };
 
   const signIn = useCallback(async () => {
-    window.location.href = "/api/auth/sign-in";
+    window.location.href = "/api/logto/sign-in";
   }, []);
 
   const signOut = useCallback(async () => {
-    window.location.href = "/api/auth/sign-out";
+    window.location.href = "/api/logto/sign-out";
   }, []);
 
   return {
