@@ -2,6 +2,10 @@
   "name": "mdm-support-site",
   "version": "1.0.0",
   "description": "Professional MDM FAQ & Support Documentation",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
   "type": "module",
   "main": "index.js",
   "scripts": {
