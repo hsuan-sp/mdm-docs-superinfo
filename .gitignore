@@ -56,3 +56,5 @@ out/
 _generated/
 maintenance/bundles/
 data/logs/
+VERCEL_ENV_VARS.txt
+*.local

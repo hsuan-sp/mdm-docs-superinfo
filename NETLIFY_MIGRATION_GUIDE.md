@@ -27,8 +27,8 @@
 需要從 Vercel 遷移的環境變數：
 
 ```
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
-CLERK_SECRET_KEY=sk_test_...
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=YOUR_PUBLISHABLE_KEY
+CLERK_SECRET_KEY=YOUR_SECRET_KEY
 NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
@@ -120,8 +120,8 @@ netlify deploy --prod
 2. 添加所有環境變數：
 
 ```
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY = pk_live_...  # 注意：改為 production key
-CLERK_SECRET_KEY = sk_live_...                   # 注意：改為 production key
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY = YOUR_LIVE_PUBLISHABLE_KEY  # 注意：改為 production key
+CLERK_SECRET_KEY = YOUR_LIVE_SECRET_KEY                   # 注意：改為 production key
 NEXT_PUBLIC_CLERK_SIGN_IN_URL = /sign-in
 NEXT_PUBLIC_CLERK_SIGN_UP_URL = /sign-up
 NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL = /
@@ -167,12 +167,12 @@ Production 模式後，Clerk 會給你新的 keys：
 
 ```env
 # Development (舊的，保留用於本機開發)
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
-CLERK_SECRET_KEY=sk_test_...
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key
+CLERK_SECRET_KEY=your_secret_key
 
 # Production (新的，用於 Netlify)
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_live_...
-CLERK_SECRET_KEY=sk_live_...
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_live_publishable_key
+CLERK_SECRET_KEY=your_live_secret_key
 ```
 
 ### Step 4: 設定 Allowed Origins
