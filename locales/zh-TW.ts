@@ -232,4 +232,19 @@ export const zhTW = {
     verifyError: "驗證碼不正確或已失效",
     networkError: "網路連線異常",
   },
+  authGate: {
+    title: "存取受限內容",
+    subtitle:
+      "此區域僅供極電資訊合作夥伴與教育機構存取。<br />請登入您的教育帳號以解除鎖定。",
+    signInBtn: "立即登入存取",
+    backHome: "返回首頁",
+    badge: "安全存取受控",
+  },
+  error404: {
+    title: "頁面失蹤了",
+    subtitle:
+      "抱歉，我們找不到您要求的頁面。<br />可能是網址輸入錯誤，或是該內容已被移動。",
+    backHome: "返回首頁",
+    backPrev: "回到上一頁",
+  },
 };

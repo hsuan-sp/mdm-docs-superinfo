@@ -4,6 +4,7 @@ import type { AppProps } from 'next/app'
 import { LanguageProvider } from '../hooks/useLanguage'
 import SecurityGuard from '../components/features/SecurityGuard'
 import BackToTop from '../components/ui/BackToTop'
+import GlobalLoader from '../components/ui/GlobalLoader'
 import { ClerkProvider } from '@clerk/nextjs'
 import Footer from '../components/layout/Footer'
 
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ClerkProvider>
       <LanguageProvider>
+        <GlobalLoader />
         <SecurityGuard />
         {getLayout(<Component {...pageProps} />)}
         <Footer />

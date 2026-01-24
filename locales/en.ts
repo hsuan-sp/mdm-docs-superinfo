@@ -234,4 +234,19 @@ export const en = {
     verifyError: "Invalid or expired verification code",
     networkError: "Network connection error",
   },
+  authGate: {
+    title: "Restricted Access",
+    subtitle:
+      "This content is reserved for Superinfo partners and educational institutions.<br />Please sign in with your institutional account to unlock.",
+    signInBtn: "Sign In to Access",
+    backHome: "Back to Home",
+    badge: "Secure Access Control",
+  },
+  error404: {
+    title: "Page Not Found",
+    subtitle:
+      "Sorry, we couldn't find the page you're looking for.<br />It might have been moved or deleted.",
+    backHome: "Back Home",
+    backPrev: "Go Back",
+  },
 };

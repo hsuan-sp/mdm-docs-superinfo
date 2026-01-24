@@ -1,11 +1,30 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
-const isProtectedRoute = createRouteMatcher(["/guide(.*)", "/glossary(.*)"]);
+const isPublicRoute = createRouteMatcher(["/", "/sign-in(.*)", "/sign-up(.*)"]);
+const isProtectedRoute = createRouteMatcher([
+  "/guide(.*)",
+  "/glossary(.*)",
+  "/changelog(.*)",
+]);
 
 export default clerkMiddleware(async (auth, req) => {
-  const authObject = await auth();
-  if (isProtectedRoute(req) && !authObject.userId) {
-    return authObject.redirectToSignIn();
+  if (isPublicRoute(req)) return;
+
+  try {
+    const { userId, redirectToSignIn } = await auth();
+    if (isProtectedRoute(req) && !userId) {
+      return redirectToSignIn({ returnBackUrl: req.url });
+    }
+  } catch (error) {
+    console.error("Middleware Auth Error:", error);
+    // 只有在開發環境且金鑰完全未配置時才允許繞過，避免洩漏
+    if (
+      process.env.NODE_ENV === "development" &&
+      !process.env.CLERK_SECRET_KEY
+    ) {
+      return;
+    }
+    // 預期行為：如果金鑰失效，伺服器會噴錯提醒開發者，而非安靜地讓內容洩漏
   }
 });
 

@@ -115,78 +115,61 @@ const SecurityGuard: React.FC = () => {
     const devToolsInterval = setInterval(detectDevTools, 1000)
     detectCrawler()
     
-    // Disable text selection globally
-    document.body.style.userSelect = "none"
-    document.body.style.webkitUserSelect = "none"
-    ;(document.body.style as any).MozUserSelect = "none"
-    ;(document.body.style as any).msUserSelect = "none"
+    // Apply Global Protective Styles
+    const styleId = 'security-guard-styles'
+    if (!document.getElementById(styleId)) {
+      const style = document.createElement('style')
+      style.id = styleId
+      style.innerHTML = `
+        * {
+          -webkit-user-select: none !important;
+          -moz-user-select: none !important;
+          -ms-user-select: none !important;
+          user-select: none !important;
+        }
+        input, textarea {
+          -webkit-user-select: text !important;
+          -moz-user-select: text !important;
+          -ms-user-select: text !important;
+          user-select: text !important;
+        }
+      `
+      document.head.appendChild(style)
+    }
 
-    // Add elegant geometric pattern watermark (non-intrusive)
+    // Add geometric pattern watermark (non-intrusive)
+
     const watermark = document.createElement('div')
     watermark.id = 'geometric-watermark'
     watermark.innerHTML = `
-      <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; opacity: 0.4;">
+      <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; opacity: 1;">
         <defs>
           <pattern id="hexPattern" x="0" y="0" width="100" height="87" patternUnits="userSpaceOnUse">
-            <path d="M50 0 L93.3 25 L93.3 62 L50 87 L6.7 62 L6.7 25 Z" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  stroke-width="0.5" 
-                  opacity="0.15"/>
-            <circle cx="50" cy="43.5" r="2" fill="currentColor" opacity="0.08"/>
+            <path d="M50 0 L93.3 25 L93.3 62 L50 87 L6.7 62 L6.7 25 Z" fill="none" stroke="currentColor" stroke-width="0.3" opacity="0.08"/>
+            <circle cx="50" cy="43.5" r="1.5" fill="currentColor" opacity="0.04"/>
           </pattern>
-          <linearGradient id="fadeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color: rgb(59, 130, 246); stop-opacity: 0.03"/>
-            <stop offset="100%" style="stop-color: rgb(147, 51, 234); stop-opacity: 0.02"/>
-          </linearGradient>
         </defs>
         <rect width="100%" height="100%" fill="url(#hexPattern)" class="dark:text-white text-zinc-900" />
       </svg>
     `
-    watermark.style.cssText = `
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 0;
-      opacity: 1;
-      user-select: none;
-    `
+    watermark.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;user-select:none;'
     document.body.appendChild(watermark)
 
     return () => {
       try {
-        // Safer cleanup with explicit checks
         document.removeEventListener("contextmenu", handleContextMenu)
         document.removeEventListener("keydown", handleKeyDown)
         document.removeEventListener("copy", handleCopy)
         document.removeEventListener("selectstart", handleSelectStart as EventListener)
         document.removeEventListener("dragstart", handleDragStart)
-        
-        if (devToolsInterval) {
-          clearInterval(devToolsInterval)
-        }
-        
-        // Restore user-select
-        if (document.body) {
-          document.body.style.userSelect = "auto"
-          document.body.style.webkitUserSelect = "auto"
-          ;(document.body.style as any).MozUserSelect = "auto"
-          ;(document.body.style as any).msUserSelect = "auto"
-        }
-        
-        // Remove watermark safely
-        const watermarkEl = document.getElementById('geometric-watermark')
-        if (watermarkEl && watermarkEl.parentNode) {
-          watermarkEl.parentNode.removeChild(watermarkEl)
-        }
-      } catch (error) {
-        console.error('SecurityGuard cleanup error:', error)
-      }
+        clearInterval(devToolsInterval)
+        const el = document.getElementById('geometric-watermark')
+        if (el) el.remove()
+        const style = document.getElementById('security-guard-styles')
+        if (style) style.remove()
+      } catch (e) {}
     }
-  }, [router, language, setLanguage])
+  }, [language]) // 只依賴語言變化，不依賴 setLanguage 避免潛在的 Provider 重繪循環
 
   return null
 }

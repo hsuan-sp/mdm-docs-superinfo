@@ -297,14 +297,16 @@ button[aria-label*="Menu"],
   display: none !important;
 }
 
-/* Guide & Glossary 內容字體優化 - 支援動態縮放 */
+/* Guide & Glossary 內容字體優化 - 支援差異化動態縮放 */
 .prose {
-  --current-font-scale: 1; /* 預設倍率 */
+  --current-font-scale: 1; /* 基礎倍率 */
+  /* 標題縮放公式：增幅減半，避免標題過大 */
+  --heading-scale: calc(1 + (var(--current-font-scale) - 1) * 0.4);
 }
 
 .prose h1,
 .prose h2 {
-  font-size: calc(var(--current-font-scale) * 1.15rem) !important;
+  font-size: calc(var(--heading-scale) * 1.15rem) !important;
   font-weight: 800 !important;
 }
 
@@ -312,7 +314,7 @@ button[aria-label*="Menu"],
 .prose h4,
 .prose h5,
 .prose h6 {
-  font-size: calc(var(--current-font-scale) * 1.05rem) !important;
+  font-size: calc(var(--heading-scale) * 1.05rem) !important;
   font-weight: 700 !important;
   margin-top: 1.5em !important;
   margin-bottom: 0.8em !important;
@@ -321,9 +323,10 @@ button[aria-label*="Menu"],
 
 .prose p,
 .prose li {
+  /* 內文維持 1:1 縮放比例 */
   font-size: calc(var(--current-font-scale) * 0.95rem) !important;
-  line-height: 1.65 !important;
-  margin-bottom: 0.8em !important;
+  line-height: 1.7 !important;
+  margin-bottom: 1em !important;
 }
 
 .prose ul,
@@ -331,13 +334,36 @@ button[aria-label*="Menu"],
   padding-left: 1.5em !important;
 }
 
-.prose strong {
-  font-weight: 600 !important;
-  color: inherit !important;
+/* 側邊欄按鈕優化 - 更好按、更精緻 */
+.sidebar-btn {
+  @apply relative overflow-hidden transition-all duration-300 ease-out py-3.5 px-5 rounded-2xl flex items-center justify-between font-bold text-[14px];
+  border: 1px solid transparent;
 }
 
-.prose code {
-  font-size: 0.9em !important;
-  padding: 0.15em 0.3em !important;
-  border-radius: 0.25em !important;
+.sidebar-btn:hover {
+  @apply bg-zinc-100 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 translate-x-1;
+}
+
+.sidebar-btn-active {
+  @apply bg-blue-600 text-white shadow-xl shadow-blue-500/20 border-blue-500 !important;
+  transform: translateX(4px);
+}
+
+.sidebar-btn-active:hover {
+  @apply bg-blue-700 brightness-110;
+}
+
+/* 全域載入動畫容器 */
+.global-loader-overlay {
+  @apply fixed inset-0 z-[11000] flex flex-col items-center justify-center bg-white dark:bg-zinc-950 transition-opacity duration-500;
+}
+
+.loader-progress-bar {
+  @apply fixed top-0 left-0 h-1 bg-blue-600 z-[12000] transition-all duration-300;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+}
+
+/* 骨架屏補強 */
+.skeleton-pulse {
+  @apply animate-pulse bg-zinc-100 dark:bg-zinc-800 rounded-2xl;
 }

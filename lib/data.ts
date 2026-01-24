@@ -204,8 +204,8 @@ export async function getChangelogData(locale: string = "zh-TW") {
   const isEn = locale === "en";
   const root = path.resolve(
     process.cwd(),
-    "data/logs",
-    isEn ? "items-en" : "items"
+    "data/changelog",
+    isEn ? "en" : "zh"
   );
 
   if (!fs.existsSync(root)) return [];
