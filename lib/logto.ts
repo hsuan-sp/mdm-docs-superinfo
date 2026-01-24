@@ -6,7 +6,7 @@ export const logtoConfig = {
   appSecret: process.env.LOGTO_APP_SECRET || "",
   baseUrl: process.env.LOGTO_BASE_URL || "http://localhost:3000",
   cookieSecret: process.env.LOGTO_COOKIE_SECRET || "",
-  cookieSecure: process.env.LOGTO_COOKIE_SECURE === "true",
+  cookieSecure: process.env.NODE_ENV === "production",
 };
 
 export const logtoClient = new LogtoClient(logtoConfig);
