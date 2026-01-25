@@ -14,10 +14,47 @@
 # Node
 node_modules
 dist
+.next
+.cache
+out
+build
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Documentation Specific
 .vitepress/dist
 .vitepress/cache
 
-# Editor
+# Editor & Service
 .idea
 .vercel
 .env*.local
+.turbo
+
+# Documentation Specific
+.vitepress/dist
+.vitepress/cache
+
+# Production bundle
+out/
+
+# Vercel
+.vercel
+
+# Turbo
+.turbo
+
+# Misc
+.DS_Store
+
+# Build artifacts and generated files
+*.tsbuildinfo
+*.timestamp-*.mjs
+_generated/
+maintenance/bundles/
+data/logs/
+VERCEL_ENV_VARS.txt
+*.local

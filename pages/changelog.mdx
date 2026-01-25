@@ -1,0 +1,24 @@
+---
+title: 更新日誌
+---
+
+import Changelog from "@/components/features/Changelog";
+import { getChangelogData } from "@/lib/data";
+import { useLanguage } from "@/hooks/useLanguage";
+
+export const getStaticProps = async () => {
+  const zhLogs = await getChangelogData("zh");
+  const enLogs = await getChangelogData("en");
+  return {
+    props: {
+      zhLogs,
+      enLogs,
+    },
+  };
+};
+
+export default function ChangelogPage({ zhLogs, enLogs }) {
+  const { language } = useLanguage();
+  const logs = language === "en" ? enLogs : zhLogs;
+  return <Changelog logs={logs} />;
+}

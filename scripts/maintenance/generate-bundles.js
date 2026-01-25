@@ -5,8 +5,9 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const CONTENT_DIR = path.join(__dirname, "../../docs/content");
-const BUNDLE_DIR = path.join(__dirname, "../../docs/maintenance/bundles");
+// 適應新結構: md_data 位於路徑根目錄
+const CONTENT_DIR = path.join(__dirname, "../../md_data");
+const BUNDLE_DIR = path.join(__dirname, "../../_generated/bundles");
 
 const QA_ORDER = [
   "account",
@@ -21,6 +22,11 @@ const QA_ORDER = [
 
 function generateQABundles(lang) {
   const root = path.join(CONTENT_DIR, lang, "qa");
+  if (!fs.existsSync(root)) {
+    console.warn(`[Bundle] Warning: QA Root ${root} does not exist.`);
+    return;
+  }
+
   QA_ORDER.forEach((slug) => {
     const dir = path.join(root, slug);
     if (!fs.existsSync(dir)) {
@@ -61,6 +67,8 @@ function generateGlossaryBundles(lang) {
     .readdirSync(dir)
     .filter((f) => f.endsWith(".md"))
     .sort();
+
+  // 每 50 個文件打一個包，或者按比例分 3 包
   const chunkSize = Math.ceil(files.length / 3);
 
   for (let i = 0; i < 3; i++) {

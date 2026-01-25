@@ -1,0 +1,369 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --nextra-primary-hue: 210deg; /* More standard blue */
+    --nextra-primary-saturation: 100%;
+    /* Clean, modern grid - very subtle */
+    --grid-color: rgba(0, 0, 0, 0.02);
+    --grid-accent: rgba(0, 0, 0, 0.04);
+
+    /* Fluid Typography System - Refined for better readability */
+    --font-xs: clamp(0.6rem, 0.45rem + 0.2vw, 0.7rem);
+    --font-sm: clamp(0.7rem, 0.6rem + 0.2vw, 0.8rem);
+    --font-base: clamp(0.85rem, 0.7rem + 0.25vw, 0.95rem);
+    --font-lg: clamp(0.95rem, 0.8rem + 0.3vw, 1.05rem);
+    --font-xl: clamp(1.05rem, 0.9rem + 0.35vw, 1.15rem);
+    --font-2xl: clamp(1.2rem, 1rem + 0.4vw, 1.35rem);
+    --font-3xl: clamp(1.4rem, 1.1rem + 0.5vw, 1.65rem);
+    --font-4xl: clamp(1.7rem, 1.4rem + 0.7vw, 2.1rem);
+
+    /* Fluid Spacing System - More generous whitespace */
+    --spacing-xs: clamp(0.3rem, 0.25rem + 0.15vw, 0.45rem);
+    --spacing-sm: clamp(0.6rem, 0.5rem + 0.3vw, 0.9rem);
+    --spacing-md: clamp(1.25rem, 1rem + 0.6vw, 1.75rem);
+    --spacing-lg: clamp(2rem, 1.5rem + 1vw, 2.5rem);
+    --spacing-xl: clamp(3rem, 2rem + 2vw, 4.5rem);
+  }
+
+  .dark {
+    --grid-color: rgba(255, 255, 255, 0.02);
+    --grid-accent: rgba(255, 255, 255, 0.04);
+  }
+
+  html {
+    font-family:
+      "Inter",
+      "Noto Sans TC",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      sans-serif;
+    /* Smooth font scaling */
+    font-size: clamp(14px, 0.875rem + 0.15vw, 16px);
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100;
+
+    /* Beautiful gradient background with subtle texture */
+    background:
+      radial-gradient(
+        circle at 20% 20%,
+        rgba(59, 130, 246, 0.08),
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 80% 80%,
+        rgba(147, 51, 234, 0.06),
+        transparent 40%
+      ),
+      radial-gradient(var(--grid-accent) 1px, transparent 1px);
+    background-size:
+      100% 100%,
+      100% 100%,
+      clamp(24px, 1.5rem + 0.5vw, 32px) clamp(24px, 1.5rem + 0.5vw, 32px);
+    background-attachment: fixed;
+  }
+
+  .dark body {
+    background:
+      radial-gradient(
+        circle at 20% 20%,
+        rgba(59, 130, 246, 0.12),
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 80% 80%,
+        rgba(147, 51, 234, 0.1),
+        transparent 50%
+      ),
+      radial-gradient(var(--grid-accent) 1px, transparent 1px);
+    background-size:
+      100% 100%,
+      100% 100%,
+      clamp(24px, 1.5rem + 0.5vw, 32px) clamp(24px, 1.5rem + 0.5vw, 32px);
+    background-attachment: fixed;
+  }
+}
+
+/* Global Typography & Interactive Rules */
+@layer components {
+  /* Fluid Typography Utilities */
+  .text-fluid-xs {
+    font-size: var(--font-xs);
+  }
+  .text-fluid-sm {
+    font-size: var(--font-sm);
+  }
+  .text-fluid-base {
+    font-size: var(--font-base);
+  }
+  .text-fluid-lg {
+    font-size: var(--font-lg);
+  }
+  .text-fluid-xl {
+    font-size: var(--font-xl);
+  }
+  .text-fluid-2xl {
+    font-size: var(--font-2xl);
+  }
+  .text-fluid-3xl {
+    font-size: var(--font-3xl);
+  }
+  .text-fluid-4xl {
+    font-size: var(--font-4xl);
+  }
+
+  /* Fluid Spacing Utilities */
+  .gap-fluid-xs {
+    gap: var(--spacing-xs);
+  }
+  .gap-fluid-sm {
+    gap: var(--spacing-sm);
+  }
+  .gap-fluid-md {
+    gap: var(--spacing-md);
+  }
+  .gap-fluid-lg {
+    gap: var(--spacing-lg);
+  }
+  .gap-fluid-xl {
+    gap: var(--spacing-xl);
+  }
+
+  /* Prevent italics universally if desired, or just use non-italic utility */
+  .italic {
+    font-style: normal !important;
+  }
+  em {
+    font-style: normal !important;
+    font-weight: 600;
+    color: rgb(37, 99, 235);
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  /* Interactive Elements: High Opacity & Hover Effects */
+  a,
+  button,
+  [role="button"] {
+    @apply opacity-100 transition-opacity duration-200;
+  }
+
+  /* Non-interactive text slightly softer */
+  p,
+  li,
+  span:not(.font-bold) {
+    @apply text-zinc-600 dark:text-zinc-400;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-zinc-900 dark:text-zinc-100 opacity-100 font-bold;
+  }
+}
+
+/* Premium Apple-style Glassmorphism Navbar */
+.nextra-nav-container {
+  backdrop-filter: saturate(180%) blur(20px) !important;
+  background-color: rgba(255, 255, 255, 0.72) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  height: 3.5rem !important; /* Compact mobile navbar */
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .nextra-nav-container {
+    height: 4rem !important;
+  }
+}
+
+.dark .nextra-nav-container {
+  background-color: rgba(0, 0, 0, 0.72) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Ensure Navbar Brand and Menu Items are Visible */
+.nextra-nav-container nav {
+  @apply px-4 md:px-6 h-full flex items-center justify-between !important;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .nextra-nav-container nav {
+    @apply gap-2 !important;
+  }
+}
+
+/* Mobile Search Bar Optimization */
+.nextra-search {
+  @apply max-w-[120px] sm:max-w-[200px] md:max-w-xs transition-all duration-300;
+}
+
+.nextra-nav-container a,
+.nextra-nav-container button {
+  @apply transition-all duration-300;
+}
+
+/* Sidebar Refinement */
+.nextra-sidebar-container {
+  background-color: transparent !important;
+  padding-top: 3.5rem !important; /* Match mobile navbar height */
+}
+
+@media (min-width: 768px) {
+  .nextra-sidebar-container {
+    padding-top: 4rem !important;
+  }
+}
+
+.nextra-sidebar-container [role="menu"] {
+  @apply space-y-1 px-4;
+}
+
+.nextra-sidebar-container a {
+  @apply rounded-xl font-bold transition-all duration-200 !important;
+}
+
+.nextra-sidebar-container .active {
+  @apply bg-blue-50 text-blue-600 dark:bg-blue-900/20 dark:text-blue-400 !important;
+}
+
+/* Main Content Area */
+.nextra-body {
+  @apply max-w-[1440px] mx-auto px-4 md:px-6; /* Ensure padding on mobile */
+}
+
+/* Typography Scale */
+h1 {
+  @apply text-4xl font-black tracking-tight mb-8;
+}
+h2 {
+  @apply text-2xl font-bold tracking-tight mb-6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #e5e5e5;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+/* Footer Section - Ensure Integration */
+.global-footer {
+  @apply mt-20;
+}
+
+/* Vibrant Emojis via Noto Color Emoji */
+@font-face {
+  font-family: "VibrantEmoji";
+  src: url("https://fonts.gstatic.com/s/notocoloremoji/v24/Yq6P-KqIXIk05puL3vOndM-n0YI.woff2")
+    format("woff2");
+  unicode-range: U+1F000-1F9FF, U+2600-26FF, U+2700-27BF;
+}
+
+.emoji-vibrant {
+  font-family:
+    "VibrantEmoji", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+}
+/* 隱藏 Nextra 預設的側邊欄和 hamburger */
+.nextra-sidebar-container,
+button[aria-label*="sidebar"],
+button[aria-label*="Menu"],
+.nextra-hamburger {
+  display: none !important;
+}
+
+/* Guide & Glossary 內容字體優化 - 支援差異化動態縮放 */
+.prose {
+  --current-font-scale: 1; /* 基礎倍率 */
+  /* 標題縮放公式：增幅減半，避免標題過大 */
+  --heading-scale: calc(1 + (var(--current-font-scale) - 1) * 0.4);
+}
+
+.prose h1,
+.prose h2 {
+  font-size: calc(var(--heading-scale) * 1.15rem) !important;
+  font-weight: 800 !important;
+}
+
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  font-size: calc(var(--heading-scale) * 1.05rem) !important;
+  font-weight: 700 !important;
+  margin-top: 1.5em !important;
+  margin-bottom: 0.8em !important;
+  line-height: 1.4 !important;
+}
+
+.prose p,
+.prose li {
+  /* 內文維持 1:1 縮放比例 */
+  font-size: calc(var(--current-font-scale) * 0.95rem) !important;
+  line-height: 1.7 !important;
+  margin-bottom: 1em !important;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.5em !important;
+}
+
+/* 側邊欄按鈕優化 - 更好按、更精緻 */
+.sidebar-btn {
+  @apply relative overflow-hidden transition-all duration-300 ease-out py-3.5 px-5 rounded-2xl flex items-center justify-between font-bold text-[14px];
+  border: 1px solid transparent;
+}
+
+.sidebar-btn:hover {
+  @apply bg-zinc-100 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 translate-x-1;
+}
+
+.sidebar-btn-active {
+  @apply bg-blue-600 text-white shadow-xl shadow-blue-500/20 border-blue-500 !important;
+  transform: translateX(4px);
+}
+
+.sidebar-btn-active:hover {
+  @apply bg-blue-700 brightness-110;
+}
+
+/* 全域載入動畫容器 */
+.global-loader-overlay {
+  @apply fixed inset-0 z-[11000] flex flex-col items-center justify-center bg-white dark:bg-zinc-950 transition-opacity duration-500;
+}
+
+.loader-progress-bar {
+  @apply fixed top-0 left-0 h-1 bg-blue-600 z-[12000] transition-all duration-300;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+}
+
+/* 骨架屏補強 */
+.skeleton-pulse {
+  @apply animate-pulse bg-zinc-100 dark:bg-zinc-800 rounded-2xl;
+}

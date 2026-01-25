@@ -1,0 +1,478 @@
+# 維護索引 (Maintenance Index)
+
+> 此文件由腳本自動生成。用於讓維護人員（或 AI）快速確認目前已存在的內容，避免重複新增。
+
+最後更新時間：1/23/2026, 5:47:52 PM
+
+## 術語表 (Glossary)
+
+目前共有 **223** 個術語：
+
+- **802.1X** (`802-1x.md`)
+- **AAC (Automatic Assessment Configuration)** (`aac-automatic-assessment-configuration.md`)
+- **ABM (Apple Business Manager)** (`abm-apple-business-manager.md`)
+- **Accessibility Features (輔助使用功能)** (`accessibility-features.md`)
+- **Account-Driven Device Enrollment** (`account-driven-device-enrollment.md`)
+- **ACME (Automated Certificate Management Environment)** (`acme.md`)
+- **Activation Lock Bypass Code (啟用鎖定繞過代碼)** (`activation-lock-bypass-code.md`)
+- **Activation Lock (啟用鎖定)** (`activation-lock.md`)
+- **ADE (Automated Device Enrollment)** (`ade-automated-device-enrollment.md`)
+- **Admin Account (管理者帳號)** (`admin-account.md`)
+- **AirDrop Codes (AirDrop 代碼)** (`airdrop-codes.md`)
+- **AirDrop for Business** (`airdrop-for-business.md`)
+- **AirDrop** (`airdrop.md`)
+- **AirPlay** (`airplay.md`)
+- **AirPrint** (`airprint.md`)
+- **Always-on VPN** (`always-on-vpn.md`)
+- **APNs (Apple Push Notification service)** (`apns.md`)
+- **App Config (App Configuration)** (`app-config.md`)
+- **App Privacy Permissions Visibility (App 隱私權限可見度)** (`app-privacy-permissions-visibility.md`)
+- **App Store** (`app-store.md`)
+- **App Thinning (App 精簡化)** (`app-thinning-app.md`)
+- **Apple Classroom (Apple 課堂)** (`apple-classroom-apple.md`)
+- **Apple Configurator** (`apple-configurator.md`)
+- **Apple Intelligence Management** (`apple-intelligence-management.md`)
+- **Apple Intelligence Reports (Apple Intelligence 報告與管理)** (`apple-intelligence-reports-ai.md`)
+- **Apple Intelligence (Apple 智慧)** (`apple-intelligence.md`)
+- **Apple Pencil** (`apple-pencil.md`)
+- **Apple Silicon** (`apple-silicon.md`)
+- **AppleCare+** (`applecare.md`)
+- **ARD (Apple Remote Desktop)** (`ard-apple-remote-desktop.md`)
+- **ASM (Apple School Manager)** (`asm-apple-school-manager.md`)
+- **Asset Tag (資產標籤)** (`asset-tag.md`)
+- **Audio Accessory Configuration (音訊配件設定)** (`audio-accessory-configuration.md`)
+- **Automatic App Updates（自動更新 App）** (`automatic-app-updates.md`)
+- **Automatic Reboot (自動重開機)** (`automatic-reboot.md`)
+- **Background App Refresh（背景 App 重新整理）** (`background-app-refresh.md`)
+- **Background Security Improvements (背景安全改良)** (`background-security-improvements.md`)
+- **Battery Health (電池健康度)** (`battery-health.md`)
+- **Blob URLs and Managed Open-In Improvement (Blob URL 與管理式 Open-In 改進)** (`blob-urls-and-managed-open-in-improvement.md`)
+- **Blueprints** (`blueprints.md`)
+- **Bonjour** (`bonjour.md`)
+- **Bootstrap Token** (`bootstrap-token.md`)
+- **Bundle ID** (`bundle-id.md`)
+- **BYOD (Bring Your Own Device)** (`byod-bring-your-own-device.md`)
+- **Camera Access Control per App (個別 App 相機存取控制)** (`camera-access-control-per-app.md`)
+- **Captive Portal (強制入口網頁)** (`captive-portal.md`)
+- **Casper Suite** (`casper-suite.md`)
+- **CDN (Content Delivery Network)** (`cdn-content-delivery-network.md`)
+- **Certificate Authority (CA)** (`certificate-authority-ca.md`)
+- **Certificate (憑證)** (`certificate.md`)
+- **Client Isolation (使用者隔離)** (`client-isolation.md`)
+- **Command History** (`command-history.md`)
+- **Compliance** (`compliance.md`)
+- **Composer** (`composer.md`)
+- **Configuration Profile Removal（描述檔移除）** (`configuration-profile-removal.md`)
+- **Content Caching (內容快取)** (`content-caching.md`)
+- **Continuity（接續互通）** (`continuity.md`)
+- **Custom B2B App** (`custom-b2b-app.md`)
+- **DDM App Management (宣告式 App 管理)** (`ddm-app-management.md`)
+- **DDM (Declarative Device Management)** (`ddm-declarative-device-management.md`)
+- **Declarative App Management (宣告式 App 管理)** (`declarative-app-management.md`)
+- **Declarative Software Updates (宣告式軟體更新)** (`declarative-software-updates.md`)
+- **Deprecated (已棄用)** (`deprecated.md`)
+- **Device Group (裝置群組)** (`device-group.md`)
+- **Device Name（裝置名稱）** (`device-name.md`)
+- **DFU Mode (Device Firmware Update)** (`dfu-mode-device-firmware-update.md`)
+- **DHCP (Dynamic Host Configuration Protocol)** (`dhcp-dynamic-host-configuration-protocol.md`)
+- **Directory Service（目錄服務）** (`directory-service.md`)
+- **DMG (Disk Image)** (`dmg-disk-image.md`)
+- **DNS (Domain Name System)** (`dns-domain-name-system.md`)
+- **DNS over HTTPS/TLS (DNS 加密協定)** (`dns-over-https-tls.md`)
+- **Domain Capture (域名擷取)** (`domain-capture.md`)
+- **Drag and Drop Multitasking (拖放式多工)** (`drag-and-drop-multitasking.md`)
+- **Enforcement Deadline (強制執行截止日)** (`enforcement-deadline.md`)
+- **Enrollment Customization (註冊自訂內容)** (`enrollment-customization.md`)
+- **Enrollment Invitation** (`enrollment-invitation.md`)
+- **eSIM** (`esim.md`)
+- **Ethernet（乙太網路）** (`ethernet.md`)
+- **Extension Attribute (擴充屬性)** (`extension-attribute.md`)
+- **Face ID** (`face-id.md`)
+- **Federated Authentication (聯合驗證)** (`federated-authentication.md`)
+- **FileVault Unlock over SSH (透過 SSH 解鎖 FileVault)** (`filevault-unlock-over-ssh.md`)
+- **FileVault** (`filevault.md`)
+- **Find My（尋找）** (`find-my.md`)
+- **Firmware Password** (`firmware-password.md`)
+- **Firmware** (`firmware.md`)
+- **Gatekeeper** (`gatekeeper.md`)
+- **Global Proxy** (`global-proxy.md`)
+- **Guided Access（引導使用模式）** (`guided-access.md`)
+- **Handoff（接力）** (`handoff.md`)
+- **iBeacon** (`ibeacon.md`)
+- **iCloud Backup（iCloud 備份）** (`icloud-backup-icloud.md`)
+- **Identity Provider (IdP)** (`identity-provider-idp.md`)
+- **IMEI** (`imei.md`)
+- **Install Application** (`install-application.md`)
+- **Install Later** (`install-later.md`)
+- **Intel Mac End-of-Support Milestone (Intel Mac 支援終止里程碑)** (`intel-mac-end-of-support-milestone.md`)
+- **Intelligent Hub** (`intelligent-hub.md`)
+- **Inventory Collection** (`inventory-collection.md`)
+- **Inventory** (`inventory.md`)
+- **IP Address (IP 位址)** (`ip-address-ip.md`)
+- **iPaaS** (`ipaas.md`)
+- **iPhone Mirroring (iPhone 鏡像)** (`iphone-mirroring-iphone.md`)
+- **JamfAAD** (`jamf-aad.md`)
+- **Jamf binary** (`jamf-binary.md`)
+- **Jamf Connect** (`jamf-connect.md`)
+- **Jamf Data Policy** (`jamf-data-policy.md`)
+- **jamfHelper** (`jamf-helper.md`)
+- **Jamf Now** (`jamf-now.md`)
+- **Jamf Pro API** (`jamf-pro-api.md`)
+- **Jamf Pro** (`jamf-pro.md`)
+- **Jamf Protect** (`jamf-protect.md`)
+- **Jamf Remote** (`jamf-remote.md`)
+- **Jamf Safe Internet** (`jamf-safe-internet.md`)
+- **Jamf School** (`jamf-school.md`)
+- **Jamf Student** (`jamf-student.md`)
+- **Jamf Teacher** (`jamf-teacher.md`)
+- **Jamf Trust (Jamf Private Access)** (`jamf-trust-jamf-private-access.md`)
+- **JSON (JavaScript Object Notation)** (`json.md`)
+- **Kernel Extension (Kext)** (`kernel-extension-kext.md`)
+- **Keychain (鑰匙圈)** (`keychain.md`)
+- **LAPS (Local Administrator Password Solution)** (`laps-local-administrator-password-solution.md`)
+- **LDAP** (`ldap.md`)
+- **Lightning Connector** (`lightning-connector.md`)
+- **Liquid Glass (液態玻璃設計)** (`liquid-glass.md`)
+- **Local Account (本機帳號)** (`local-account.md`)
+- **Location Services（定位服務）** (`location-services.md`)
+- **Lost Mode (遺失模式)** (`lost-mode.md`)
+- **MAC Address** (`mac-address.md`)
+- **Managed App Framework (管理式 App 框架)** (`managed-app-framework.md`)
+- **Managed Apple Account (管理式 Apple 帳號)** (`managed-apple-account.md`)
+- **Managed Classes（管理化班級）** (`managed-classes.md`)
+- **Managed Device Attestation** (`managed-device-attestation.md`)
+- **Managed Open In** (`managed-open-in.md`)
+- **MDM (Mobile Device Management)** (`mdm-mobile-device-management.md`)
+- **MDM Profile (MDM 描述檔)** (`mdm-profile-mdm.md`)
+- **mDNS (Multicast DNS)** (`mdns-multicast-dns.md`)
+- **N-1 Strategy** (`n-1-strategy.md`)
+- **Network Extension URL Filtering API (網路擴充功能 URL 過濾 API)** (`network-extension-url-filtering-api.md`)
+- **NIST Benchmarks (資安基準)** (`nist-benchmarks.md`)
+- **Notarization (公證)** (`notarization.md`)
+- **OIDC (OpenID Connect)** (`oidc-openid-connect.md`)
+- **OTA (Over-The-Air)** (`ota-over-the-air.md`)
+- **Package (.pkg)** (`package-pkg.md`)
+- **Passcode Policy（密碼原則）** (`passcode-policy.md`)
+- **Passkeys** (`passkeys.md`)
+- **Patch Management** (`patch-management.md`)
+- **Payload** (`payload.md`)
+- **Pending Command** (`pending-command.md`)
+- **Platform SSO in Setup Assistant (設定輔助程式中的 Platform SSO)** (`platform-sso-in-setup-assistant.md`)
+- **Platform SSO (平台單一登入)** (`platform-sso.md`)
+- **Policy (原則/政策)** (`policy.md`)
+- **PPPC (Privacy Preferences Policy Control)** (`pppc-privacy-preferences-policy-control.md`)
+- **PreStage Enrollment** (`prestage-enrollment.md`)
+- **Private Relay (私密轉送)** (`private-relay.md`)
+- **Private Wi-Fi Address (私有 Wi-Fi 位址)** (`private-wi-fi-address.md`)
+- **Profile (Configuration Profile)** (`profile-configuration-profile.md`)
+- **Provisioning Profile** (`provisioning-profile.md`)
+- **Proxy** (`proxy.md`)
+- **Push Notification (推播通知)** (`push-notification.md`)
+- **QR Code Enrollment** (`qr-code-enrollment.md`)
+- **RADIUS** (`radius.md`)
+- **Rapid Security Response (RSR)** (`rapid-security-response-rsr.md`)
+- **Recon** (`recon.md`)
+- **Recovery Lock** (`recovery-lock.md`)
+- **Recovery Mode（復原模式）** (`recovery-mode.md`)
+- **Remote Management** (`remote-management.md`)
+- **Restrict App Downloads over Cellular (限制透過行動網路下載 App)** (`restrict-app-downloads-over-cellular.md`)
+- **Restricted Software** (`restricted-software.md`)
+- **Return to Service** (`return-to-service.md`)
+- **Root Certificate** (`root-certificate.md`)
+- **Rosetta 2** (`rosetta-2.md`)
+- **Roster (班級名冊)** (`roster.md`)
+- **SCEP (Simple Certificate Enrollment Protocol)** (`scep-simple-certificate-enrollment-protocol.md`)
+- **Schoolwork App** (`schoolwork-app.md`)
+- **Scope (範圍)** (`scope.md`)
+- **Screen Time（螢幕使用時間）** (`screen-time.md`)
+- **Script** (`script.md`)
+- **Secure Token** (`secure-token.md`)
+- **Security Update** (`security-update.md`)
+- **Self Service** (`self-service.md`)
+- **Setup Assistant** (`setup-assistant.md`)
+- **Setup Pane Skipping (跳過設定輔助程式面板)** (`setup-pane-skipping.md`)
+- **Shared iPad (共用 iPad)** (`shared-ipad.md`)
+- **Single App Mode (Kiosk Mode)** (`single-app-mode-kiosk-mode.md`)
+- **SIP (System Integrity Protection)** (`sip-system-integrity-protection.md`)
+- **Site (Jamf Pro Sites)** (`site-jamf-pro-sites.md`)
+- **Smart Group** (`smart-group.md`)
+- **Software Update** (`software-update.md`)
+- **SSID (Service Set Identifier)** (`ssid-service-set-identifier.md`)
+- **Status Channel** (`status-channel.md`)
+- **Student Information System（SIS，學生資訊系統）** (`student-information-system-sis.md`)
+- **Supervision (受監管)** (`supervision.md`)
+- **System Extension** (`system-extension.md`)
+- **Temporary Session (Guest Mode)** (`temporary-session-guest-mode.md`)
+- **TestFlight** (`testflight.md`)
+- **TLS / SSL** (`tls-ssl.md`)
+- **Token (代號/權杖)** (`token.md`)
+- **Touch ID** (`touch-id.md`)
+- **Transfer to Android Tool (移轉至 Android 工具)** (`transfer-to-android-tool.md`)
+- **UIE (User-Initiated Enrollment)** (`uie-user-initiated-enrollment.md`)
+- **Unified Logging** (`unified-logging.md`)
+- **Universal Binary** (`universal-binary.md`)
+- **Universal Control（通用控制）** (`universal-control.md`)
+- **Update Inventory** (`update-inventory.md`)
+- **USB-C** (`usb-c.md`)
+- **User Approved MDM（使用者核准的 MDM）** (`user-approved-mdm.md`)
+- **User Enrollment** (`user-enrollment.md`)
+- **VLAN** (`vlan.md`)
+- **Volume Owner** (`volume-owner.md`)
+- **VPP (Volume Purchase Program)** (`vpp-volume-purchase-program.md`)
+- **Web Clip (網頁捷徑)** (`web-clip.md`)
+- **Wi-Fi Payload** (`wi-fi-payload.md`)
+- **Wi-Fi 5** (`wifi-5.md`)
+- **Wi-Fi 6** (`wifi-6.md`)
+- **Wi-Fi 6E** (`wifi-6e.md`)
+- **Wi-Fi 7** (`wifi-7.md`)
+- **Window App (視窗化 App)** (`window-app.md`)
+- **Wipe (清除裝置)** (`wipe.md`)
+- **WPA / WPA2 / WPA3** (`wpa-wpa2-wpa3.md`)
+- **Zero-Touch Deployment** (`zero-touch-deployment.md`)
+- **Zero Trust** (`zero-trust.md`)
+- **Zero-Wipe MDM Migration (零抹除 MDM 遷移)** (`zero-wipe-mdm-migration.md`)
+
+---
+
+## 問答集 (Q&A) [總計: **217**]
+
+### 帳號與伺服器 (`qa/account`) [**26** 題]
+
+- [`acc-1`] 登入 Apple 校務管理 (ASM) 時，系統提示需同意新的條款與約定，這很重要嗎？
+- [`acc-2`] 推播憑證 (APNs Certificate) 過期會發生什麼事？如何續約？
+- [`acc-3`] 如何重置學生的「管理式 Apple 帳號」密碼？
+- [`acc-4`] Jamf Pro 顯示「VPP Token」即將過期，如何更新？
+- [`acc-5`] 我們學校有使用 Google Workspace / Microsoft 365，可以用這些帳號登入 Apple 服務嗎？
+- [`acc-6`] 學生畢業或離校了，我該如何處理他們的管理式 Apple 帳號？
+- [`acc-7`] 我可以使用個人的 Apple 帳號登入學校的 iPad 嗎？
+- [`acc-8`] 忘記 Jamf Pro 的管理員登入密碼怎麼辦？
+- [`acc-9`] 裝置一直顯示「連線失敗」或無法更新資產 (Inventory)？
+- [`acc-10`] 學校的 Email 網域更換了（例如從 .edu.tw 改為 .xh.edu.tw），該怎麼更改管理式 Apple 帳號？
+- [`acc-11`] 【憑證陷阱】Apple 課堂突然全校失靈，顯示「描述檔無效」？
+- [`acc-12`] 【MDM 遷移】更換新 MDM 廠商時，可以「不抹除資料」直接轉移嗎？
+- [`acc-13`] 【自助重設】忘記管理式 Apple 帳號密碼，可以自己重置嗎？
+- [`acc-14`] ASM 中新採購的裝置無法同步到 Jamf Pro？（ADE 伺服器代號續約）
+- [`acc-15`] Jamf Pro 與 Jamf School 的主要差異為何？該如何選擇？
+- [`acc-16`] 如何在 Apple 校務管理中處理「網域衝突」並取回帳號主導權？
+- [`acc-17`] 如何結合 Platform SSO (PSSO) 實現 Mac 開機即解鎖 FileVault？
+- [`acc-18`] 更換 MDM 廠商時，VPP App 授權如何平順轉移？需要重新購買嗎？
+- [`acc-19`] 如何控管「管理式 Apple 帳號」是否能使用 Apple Intelligence 功能？
+- [`acc-20`] 管理式 Apple 帳號支援「多重身分驗證 (MFA)」嗎？如何管理？
+- [`acc-21`] 「moemdm」跟「Jamf Pro」是一樣的東西嗎？為什麼學校需要兩個帳號？
+- [`acc-22`] 如何在 ASM 中批次建立管理式 Apple 帳號？使用 SFTP 還是手動 CSV 匯入？
+- [`acc-23`] WWDC 2025 宣布的「防止個人 Apple 帳號登入組織裝置」功能如何設定？有什麼限制？
+- [`acc-24`] 管理式 Apple 帳號的 iCloud 儲存空間配額如何管理？學生作業滿了怎麼辦？
+- [`acc-25`] ABM/ASM 的 API 可以用來做什麼自動化工作？需要開發能力嗎？
+- [`acc-26`] 管理式 Apple 帳號的「iCloud+ 功能」（如隱藏電子郵件、私密轉送）在教育環境該如何管理？
+
+### 裝置註冊 (`qa/enrollment`) [**27** 題]
+
+- [`enr-1`] 新買的 iPad 開機後沒有出現「遠端管理」畫面，該如何確認？
+- [`enr-2`] 可以手動安裝描述檔來註冊嗎？手動與自動註冊有何差別？
+- [`enr-3`] 什麼是「受監管模式 (Supervised Mode)」？為什麼學校裝置一定要開啟？
+- [`enr-4`] 「使用者註冊 (User Enrollment)」與一般的裝置註冊有何不同？
+- [`enr-5`] 如何在學校網域環境下，順利進行「帳號驅動註冊」的服務偵測？
+- [`enr-6`] 開機卡在「正在擷取遠端管理設定」轉圈圈很久，該如何排查？
+- [`enr-7`] 在 PreStage 註冊期間，為什麼「初次安裝 App」會卡在設定輔助程式畫面？
+- [`enr-8`] 註冊時出現「設定描述檔安裝失敗 (Profile Installation Failed)」？
+- [`enr-9`] Jamf Pro 指令一直顯示「擱置中 (Pending)」，但裝置明明有連網？
+- [`enr-10`] 在 Jamf Pro 修改了裝置名稱，為什麼 iPad 本機端仍顯示舊名字？
+- [`enr-11`] 已開啟「允許刪除 App」，為什麼學生長按仍無法「刪除」App？
+- [`enr-12`] 什麼是「共享 iPad (Shared iPad)」？如何讓多位學生共用同一台裝置且保有個人資料？
+- [`enr-13`] 如何防止學生自行移除 MDM 管理描述檔？
+- [`enr-14`] 如何讓 iPad 重置後自動連上 Wi-Fi 並完成註冊 (Return to Service)？
+- [`enr-15`] iPad 顯示「無法使用」或因密碼輸入錯誤太多次鎖死，該如何處理？
+- [`enr-16`] 裝置顯示「描述檔無效」或運作異常緩慢，即使重置也無法解決？
+- [`enr-17`] 裝置被「啟動鎖定 (Activation Lock)」鎖住了，該如何解除？
+- [`enr-18`] ASM 現在可以直接解除啟用鎖定嗎？還需要聯絡 Apple 客服嗎？
+- [`enr-19`] 【Mac 啟動鎖定】Mac 電腦維修回來後被鎖住，該如何徹底解決？
+- [`enr-20`] 【維修 SOP】廠商繳回資訊組來的維修替換機，如何快速恢復原本的教學設定？
+- [`enr-21`] 購買的機器沒有出現在 ASM 中，可以用 Apple Configurator 手動加入嗎？
+- [`enr-22`] 【Wi-Fi 遷移】學校要更換新的無線網路 SSID，如何確保 iPad 不會集體失聯？
+- [`enr-23`] 什麼是「零抹除 MDM 遷移」(Zero-Wipe MDM Migration)？iOS 26 新功能適合學校使用嗎？
+- [`enr-24`] 如何設定「強制執行截止日期」(Enforcement Deadline) 確保裝置按時完成 MDM 註冊或系統更新？
+- [`enr-25`] PreStage 註冊時可以跳過哪些「設定輔助程式」步驟？教育場域的建議設定為何？
+- [`enr-26`] iOS 26 的「Return to Service 保留 App」功能如何運作？實際效益為何？
+- [`enr-27`] iOS 26 的「零抹除 MDM 遷移」實戰：從教育部 Jamf Pro 轉移至校內自建 MDM 的完整流程
+
+### App 管理 (`qa/apps`) [**27** 題]
+
+- [`app-1`] iPad 上的 App 一直顯示「等待中 (Waiting)」或無法安裝，如何排除？
+- [`app-2`] 不用登入 Apple 帳號也可以在 iPad 上安裝 App 嗎？
+- [`app-3`] 如果隱藏了 App Store，學生要如何獲取教學所需的 App？
+- [`app-4`] 大量採購免費 App 時，有哪些容易被忽略的細節？
+- [`app-5`] 如何平衡「自動安裝」與「網路頻寬」？大批 App 下載不動怎麼辦？
+- [`app-6`] 管理式 App 與個人安裝的 App 有何不同？學生畢業後可以將 App 帶走嗎？
+- [`app-7`] 我想用的 App 在 ASM 搜不到（例如特定地區限制或下架），該如何解決？
+- [`app-8`] 可以派送網頁捷徑 (Web Clip) 到學生桌面上嗎？這算 App 嗎？
+- [`app-9`] 更新 App 時，需要學生的 Apple 帳號密碼嗎？如何實現靜默更新？
+- [`app-10`] 為什麼開啟 App 時，iPad 會跳出要求輸入 Apple 帳號密碼的對話框？
+- [`app-11`] 如何派送「電子書 (PDF/ePub)」教材到學生 iPad？
+- [`app-12`] 付費 App 的授權可以分給不同學校用嗎？(跨校 VPP)
+- [`app-13`] 什麼是「受管理的應用程式設定 (Managed App Configuration)」？如何應用於大量部署？
+- [`app-14`] 【TestFlight】可以讓老師使用「管理式 Apple 帳號」測試校內開發的 Beta 版 App 嗎？
+- [`app-15`] 【App 更新策略】如何避免 App 在上課時間突然更新，導致斷線或頻寬塞車？
+- [`app-16`] 我可以統一排版學生 iPad 的桌面嗎？（例如：把數學 App 放在第一頁）
+- [`app-17`] 我在 ASM 已經「取得」了 App，為什麼 Jamf Pro 列表裡還是找不到？
+- [`app-18`] 我的 App Store 圖示不見了！我也沒設限制，怎麼找回來？
+- [`app-19`] 如何將 iPad 鎖定在「單一 App」進行考試？能設定讓學生自行退出嗎？
+- [`app-20`] 新架構：什麼是「宣告式 App 管理 (Declarative App Management)」？
+- [`app-21`] 如何防止學生利用 iOS 18 的功能「隱藏」或「鎖定」管理式 App？
+- [`app-22`] 【番外篇-實務採購常見狀況】以 Procreate 與 Procreate Pocket 為例，這兩者有什麼差別？學校買錯了怎麼辦？
+- [`app-23`] 什麼是「Declarative App Management (宣告式 App 管理)」？與傳統 VPP App 指派有什麼不同？
+- [`app-24`] iOS 26 如何限制學生只能透過 Wi-Fi 下載 App，避免消耗行動數據？
+- [`app-25`] macOS 26 的「宣告式 .pkg 部署」如何使用？與傳統 Jamf Policy 有何不同？
+- [`app-26`] 如何管理 2024-2025 年新推出的 AI 輔助教學 App（如 Writing Tools、Image Playground）？
+- [`app-27`] 如何透過 Jamf Pro 更新 App？(自動強制執行與手動強制更新)
+
+### 課堂管理 (`qa/classroom`) [**27** 題]
+
+- [`cls-1`] 老師可以透過「課堂 (Classroom)」App 看到每位學生的螢幕嗎？
+- [`cls-2`] 可以限制學生在課堂上只能使用特定的 App 嗎？(App 鎖定)
+- [`cls-3`] 為什麼老師發送網頁導航，學生的 iPad 卻沒反應或卡住？
+- [`cls-4`] 全班太吵！老師如何一鍵「鎖定」所有學生的螢幕？
+- [`cls-5`] 【實務除錯】藍牙都開了，為什麼「課堂」App 還是顯示學生離線？
+- [`cls-6`] 學生可以自行退出或移除老師建立的「課堂」班級嗎？
+- [`cls-7`] 老師端 iPad 一直顯示「等待裝置...」或「離線」，指令發不出去怎麼辦？
+- [`cls-8`] 全班同時下載教材會讓網路癱瘓嗎？什麼是「內容快取 (Content Caching)」？
+- [`cls-9`] 如何管理學生 iPad 的「螢幕亮度」與「自動鎖定」？
+- [`cls-10`] 課堂結束後，老師如何一鍵「登出」所有學生的共用 iPad？
+- [`cls-11`] 為什麼 iPadOS 17 以後，網管反應抓不到裝置的真實 MAC 位址？(專用 Wi-Fi 位址)
+- [`cls-12`] 【考試防弊】如何避免學生用 Apple Intelligence (寫作工具) 或數學備忘錄作弊？
+- [`cls-13`] 【共用 iPad】不想要每節課都輸入帳號密碼，有「訪客模式」嗎？
+- [`cls-14`] 如何管理 AirDrop？避免學生上課亂傳梗圖雜圖干擾秩序？
+- [`cls-15`] 學生 iPad 故障，臨時借用備用機時，原本的資料還在嗎？
+- [`cls-16`] 學生上課故意關閉 Wi-Fi 或藍牙來躲避「課堂」監控，該怎麼辦？
+- [`cls-17`] 如何防止學生自己手動刪除 App？
+- [`cls-18`] 「Jamf Teacher」與「Apple 課堂」有什麼不同？老師該用哪一個？
+- [`cls-19`] 【實務排錯】Apple Pencil 無法配對或寫不出字，該如何排除？
+- [`cls-20`] 學生利用「時鐘」App 的鬧鐘或計時器在課堂惡作劇，MDM 有辦法管嗎？
+- [`cls-21`] 老師可以強制將學生的畫面投影到 Apple TV 或大螢幕嗎？
+- [`cls-22`] 學校網路有分「老師」與「學生」不同網段 (VLAN)，「課堂」App 還能通嗎？
+- [`cls-23`] 全班 iPad 發出音效擾亂課堂秩序，老師可以一鍵「全班靜音」嗎？
+- [`cls-24`] 如何防止學生使用 iPadOS 26 的「視窗 App」功能在課堂分心？
+- [`cls-25`] 「課業」與「課堂」有什麼不同？老師該用哪一個？
+- [`cls-26`] iOS 26.2 的「AirDrop 代碼」會影響學校的 AirDrop 管理政策嗎？學生會利用此功能繞過管控嗎？
+- [`cls-27`] iOS 26 的「音訊配件設定」如何解決共用 iPad 的 AirPods/Beats 配對混亂？
+
+### 數位精進 (`qa/digital-learning`) [**25** 題]
+
+- [`dl-1`] 升級 iPadOS 17 後，螢幕上的 VPN 圖示消失了，這樣正常嗎？
+- [`dl-2`] 在教育部系統看到某些裝置「未使用」或資料未上傳，如何排除？
+- [`dl-3`] 裝置連線異常，如何執行「重置網路設定」？有什麼風險？
+- [`dl-4`] 如何建立「精進方案」專用的智慧型群組？
+- [`dl-5`] 學生刪除了 Jamf Trust App，會影響使用率計算嗎？該如何防範？
+- [`dl-6`] 教學需要用到某些網站，如何暫時解除封鎖？
+- [`dl-7`] 為什麼 iPad 的「iCloud 私密轉送」被強制關閉且無法開啟？這會影響隱私嗎？
+- [`dl-8`] 學校 Wi-Fi 訊號很差，精進方案的 iPad 可以接有線網路 (Ethernet) 嗎？
+- [`dl-9`] MDM 會不會隨時監控學生的位置 (GPS)？這有隱私問題嗎？
+- [`dl-10`] 學生以為把平板「重置」或「DFU 刷機」就能移除學校的監管，這樣有用嗎？
+- [`dl-11`] 學生畢業了，這台精進方案平板要如何轉移給新生使用？
+- [`dl-12`] 為什麼裝置連上 Wi-Fi 卻無法上網，或被學校防火牆阻擋？(私密 Wi-Fi 位址)
+- [`dl-13`] 如何防止學生登入個人 Apple 帳號並自行安裝非教學用 App？
+- [`dl-14`] 學生上課一直亂改 iPad 名稱，導致後台分不出是哪一台，怎麼辦？
+- [`dl-15`] 全班同時更新 iPadOS 會導致校網崩潰或塞車，有什麼標準解法？(內容快取)
+- [`dl-16`] 【更新實務】教育部 Jamf Pro 帳號無法使用排程更新，該如何操作才能提高成功率？
+- [`dl-17`] 學校希望統一全校平板的桌布（如放上校徽），並禁止學生隨意更換，該怎麼做？
+- [`dl-18`] 學生亂設螢幕密碼 (Passcode) 結果忘記了，一定要重置整台 iPad 嗎？
+- [`dl-19`] 老師反應「課堂 (Apple Classroom)」App 常常連不到學生畫面，或顯示離線，該怎麼檢查？
+- [`dl-20`] 【資產維護】精進方案合約將於 2026 年結案，若平板出現功能故障或死機應如何處理？
+- [`dl-21`] 精進方案範圍內的 iPad 在 2026 年如何持續管理？建議保留 MDM 嗎？
+- [`dl-22`] iOS 26 的 Network Extension URL Filtering API 對內容過濾服務有什麼影響？
+- [`dl-23`] iOS 26 的「背景安全性改進」會自動安裝嗎？建議開啟還是關閉？
+- [`dl-25`] 2024-2026 年採購的新款 iPad（M4/A17 Pro）在精進方案環境中的整合建議
+- [`dl-26`] 如何使用 iOS 26 的「背景安全性改進」確保精進方案載具的基礎安全防護？
+
+### 硬體排除 (`qa/hardware`) [**24** 題]
+
+- [`hw-1`] 學校同時有 iPad 9 (Lightning) 以前的載具，與 iPad 10 (USB-C) 以後的載具，配件或 Apple Pencil 如何相容？
+- [`hw-2`] iPad 在充電車內無法充電，是機器故障還是車子故障？
+- [`hw-3`] AirDrop 找不到其他裝置，或 AirPlay 找不到電視與投影機？
+- [`hw-4`] 螢幕破裂或觸控失靈，如何判定保固範圍與人為損壞？及合約末期維修建議。
+- [`hw-5`] 寒暑假長期不使用，平板該如何保存電池才不會損壞？
+- [`hw-6`] 螢幕觸控亂跳 (Ghost Touch) 或畫面無法翻轉（自動旋轉異常）如何處理？
+- [`hw-7`] 送修前必須關閉「尋找 (Find My)」嗎？怎麼關？
+- [`hw-8`] 可以用酒精清潔 iPad 螢幕嗎？有沒有損壞風險？
+- [`hw-9`] 連接聰穎鍵盤或巧控鍵盤 (Smart/Magic Keyboard) 但無反應，如何排除？
+- [`hw-10`] Apple Pencil 無法配對或寫不出來？
+- [`hw-11`] 我想知道 iPad 的電池健康度，但後台看不到資料，應如何評估電池是否老化？
+- [`hw-12`] 聽說受潮會導致保固失效，哪裡可以看到 iPad 的受潮指示器 (LCI)？
+- [`hw-13`] 【效能與壽命】iPad 運行變得很卡，是因為電池老化的關係嗎？還是硬體不行了？
+- [`hw-14`] 【網路隱私】為什麼在學校 Wi-Fi 的防火牆或 DHCP Server 上，抓不到 iPad 的真實 MAC 位址？
+- [`hw-15`] macOS 裝置管理：如何透過 MDM 控管外接磁碟 (USB/Thunderbolt) 的讀寫權限以防止資料外洩？
+- [`hw-16`] 【電池維護】Apple Pencil 放在筆槽裡超過三個月沒充電，會壞掉嗎？
+- [`hw-17`] 不用拆箱對序號，MDM 後台可以直接看到裝置的保固到期日嗎？
+- [`hw-18`] 如何啟用 iPad Pro 與 Mac 的 Wi-Fi 6E 160MHz 頻寬？為何我的裝置速度沒有提升？
+- [`hw-19`] 共用 iPad 如何避免 AirPods 配對混亂？iOS 26 的新功能有用嗎？
+- [`hw-20`] 學生反應螢幕看起來模糊（Liquid Glass 誤解）該如何處理？
+- [`hw-21`] 2024-2025 年新款 iPad 硬體規格差異：M4 iPad Pro、M2/M3 iPad Air、iPad mini 7 (A17 Pro) 在管理上有什麼不同？
+- [`hw-22`] 精進方案 iPad 9 (2021) 在 2026 年的續用建議：效能、系統支援與汰換時機評估
+- [`hw-23`] 如何使用 Apple Pencil Pro 的「尋找」(Find My) 功能追蹤校園遺失的觸控筆？
+- [`hw-24`] 學校同時擁有 Wi-Fi 6、Wi-Fi 6E、Wi-Fi 7 設備，如何規劃網路基礎設施升級？
+
+### Mac 管理 (`qa/mac`) [**29** 題]
+
+- [`mac-1`] Mac 需要綁定 AD (Active Directory) 嗎？現代化的建議是什麼？
+- [`mac-2`] 如何管理 Mac 的本機管理者權限 (Local Admin)？
+- [`mac-3`] 如何派送非 App Store 的軟體（如 Chrome, Adobe, Office）？
+- [`mac-4`] 如何制定 2026 年的 macOS 軟體更新策略？DDM 宣告式更新與傳統更新有何不同？
+- [`mac-5`] 如何強制 Mac 進行 macOS 系統更新？學生一直按「稍後提醒」怎麼辦？
+- [`mac-6`] Mac 電腦教室如何像還原卡一樣，快速清除重置 (Wipe)？
+- [`mac-7`] M 系列晶片 (Apple Silicon) 的 Mac 在管理上有什麼特殊限制？
+- [`mac-8`] 為什麼 MDM 要求開啟 FileVault？使用者忘記登入密碼時該如何救援？
+- [`mac-9`] Jamf 的 Script (腳本) 功能 can do what? How to create and run?
+- [`mac-10`] Jamf Pro 預設的「資產」報告中沒有我要的資訊（如特定檔案版本、最後重開機時間），該如何自訂收集？
+- [`mac-11`] Mac 安裝軟體時顯示「來自未識別的開發者」或「無法打開」，如何解決？
+- [`mac-12`] 如何防止學生進入 Recovery Mode (復原模式) 格式化電腦？
+- [`mac-13`] Google Meet 或 Zoom 想要分享螢幕，卻一直跳出權限請求？MDM 能自動全開嗎？
+- [`mac-14`] 學校有多台網路印表機，如何透過 Jamf Pro 派送設定給老師的 Mac？
+- [`mac-15`] 如何大量部署 Microsoft Office 並啟用授權？電腦教室與行政機有何不同？
+- [`mac-16`] 【Sequoia 新功能】如何管理或禁用「iPhone 鏡像輸出 (iPhone Mirroring)」？
+- [`mac-17`] 【硬體部署】學校電腦教室改用 Mac mini (M4) 有什麼優勢？
+- [`mac-18`] 【資產救援】Mac 送修回來或離職交接時被舊 Apple 帳號鎖住 (啟用鎖定)，怎麼辦？
+- [`mac-19`] 2026 年 macOS 部署與離線安裝進階策略：如何應對大規模新機註冊？
+- [`mac-20`] macOS 26 的「透過 SSH 解鎖 FileVault」如何設定？有什麼安全考量？
+- [`mac-21`] macOS 26 升級後，學生可以看到 MDM 設定的隱私權限，如何處理詢問？
+- [`mac-22`] macOS 26 是最後支援 Intel Mac 的版本，現有 Intel Mac 可以用多久？
+- [`mac-23`] 【課室秩序】如何透過 MDM 控管或禁用「iPhone 鏡像輸出」，防止學生在課堂中進行遠端干擾？
+- [`mac-24`] 【考試防弊】如何管理 Safari 的「干擾控制 (Distraction Control)」，避免學生在網頁檢定中隱藏關鍵 UI？
+- [`mac-25`] 【資安稽核】如何利用 PSSO 實現「開機即登入」，並自動滿足教育部對資安強密碼之要求？
+- [`mac-26`] 【新舊互通】2026 混合環境管理：如何設定 Smart Group 正確區分 Intel 與 Apple Silicon 的軟體包？
+- [`mac-27`] 【自動化維管】利用 macOS 26 DDM 設定「智慧能源管理」：兼顧校園節能與凌晨自動更新。
+- [`mac-28`] 【現場救援】Mac 快速重置 (EACS) 後若自動註冊卡住，有哪些離線恢復與修復技巧？
+- [`mac-29`] 如何透過 Jamf Pro 統一推送系統更新 (iOS/iPadOS/macOS)？
+
+### 教育實戰 (`qa/qa-education`) [**32** 題]
+
+- [`edu-01`] iPadOS 17 以上沒有顯示 VPN 圖示，這樣網路過濾或是使用率資料回傳還有在作用嗎？
+- [`edu-02`] 「共用 iPad (Shared iPad)」跟一般個人 iPad 有什麼不同？適合什麼情境？
+- [`edu-03`] 老師的 iPad 跟學生的 iPad 在 MDM 設定上有什麼不同？
+- [`edu-04`] 班級輪替時（如走班、分組教學），如何快速整理平板給下一班使用？
+- [`edu-05`] 覺得平板變慢、卡卡的，是不是壞掉了？該怎麼處理？
+- [`edu-06`] 我可以登入自己的 Apple 帳號 下載以前買過的遊戲嗎？
+- [`edu-07`] 聽說 MDM 很耗電？這是真的嗎？
+- [`edu-08`] 收到 iOS 更新通知，我可以馬上更新嗎？還是要等學校通知？
+- [`edu-09`] 我要如何把 iPad 畫面投影到傳統電視或沒有 Apple TV 的教室？
+- [`edu-10`] 為什麼 App Store 不見了？我要怎麼下載 App？
+- [`edu-11`] 「引導使用模式 (Guided Access)」跟「單一 App 模式」有什麼不一樣？
+- [`edu-12`] 學生做完的作業（Keynote/Pages）要怎麼交給老師？
+- [`edu-13`] 可以用滑鼠或藍牙鍵盤操控 iPad 嗎？
+- [`edu-14`] 【密碼合規】為什麼 iPad 突然要求我設定 6 位數以上的密碼？
+- [`edu-15`] 【定位爭議】開啟「遺失模式」會侵犯我的隱私嗎？
+- [`edu-16`] 【軟體安裝】為什麼 iPad 不能像 Android 一樣安裝 APK（或第三方來源 App）？
+- [`edu-17`] 【實務排錯】為什麼學生的 iPad 找不到「螢幕錄製」按鈕，或是按鈕是灰色的？
+- [`edu-18`] 【網路排除】iPad 顯示已連上 Wi-Fi 也有打勾，但網頁都打不開（顯示無網路連線）？
+- [`edu-19`] 新要求：教育部資安稽核要求符合 NIST 標準，MDM 該如何配合？
+- [`edu-20`] 【實務排錯】學生將 iPad 密碼設為跟 Apple 帳號 一樣，導致帳號被鎖定怎麼辦？
+- [`edu-21`] 如何管理 iOS 18 新增的「訊息摘要 (Notification Summary)」功能？
+- [`edu-22`] iOS 26.2 的 AirDrop 代碼機制對課堂檔案分享的實務影響與應對方式
+- [`edu-23`] 如何使用 iPadOS 26.2 的「視窗 App (Window App)」多工處理功能提升教學效率？
+- [`edu-24`] iOS 26 的「寫作工具」(Writing Tools) 在正式評量或考試時該如何管理？哪些功能需要禁用？
+- [`edu-25`] 精進方案結束後，學生使用的 iPad 還可以繼續用於學習嗎？系統升級到 iOS 26 會有問題嗎？
+- [`edu-26`] 老師如何管理 iOS 26 的 Apple Intelligence「寫作工具」？
+- [`edu-27`] 學校如果想更換 MDM 廠商，一定要把 iPad 全部重灌 (Wipe) 嗎？
+- [`edu-28`] 學校 iPad/Mac 到達使用年限後，MDM 管理員應如何處理「退休」流程？
+- [`edu-29`] 在 AI 時代（iOS 26），MDM 如何輔助「數位公民教育」與行為管理？
+- [`edu-30`] 學校 Wi-Fi 斷網或不穩定時，MDM 管理的 iPad 還能上課嗎？備援方案為何？
+- [`edu-31`] 「教育部版 Jamf Pro」與「校方自購版」有什麼不同？可以互通嗎？
+- [`edu-32`] 學生忘記 iPad 解鎖密碼 (Passcode) 怎麼辦？老師可以幫忙重設嗎？

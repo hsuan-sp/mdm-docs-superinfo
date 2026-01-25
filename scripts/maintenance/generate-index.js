@@ -1,19 +1,19 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import matter from "gray-matter";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const CONTENT_DIR = path.join(__dirname, "../../docs/content");
+// 適應新結構: md_data 與 maintenance 位於根目錄
+const CONTENT_DIR = path.join(__dirname, "../../md_data");
 const ITEMS_ZH_DIR = path.join(CONTENT_DIR, "zh");
 const ITEMS_EN_DIR = path.join(CONTENT_DIR, "en");
 
-const MAINTENANCE_DIR = path.join(__dirname, "../../docs/maintenance");
+const MAINTENANCE_DIR = path.join(__dirname, "../../maintenance");
 const INDEX_ZH_FILE = path.join(MAINTENANCE_DIR, "INDEX_ZH.md");
 const INDEX_EN_FILE = path.join(MAINTENANCE_DIR, "INDEX_EN.md");
-
-import matter from "gray-matter";
 
 // Helper to get frontmatter safely
 function getFrontmatter(filePath) {
@@ -28,6 +28,7 @@ function getFrontmatter(filePath) {
 }
 
 function generateGlossarySection(dir, isEn) {
+  if (!fs.existsSync(dir)) return "";
   const files = fs
     .readdirSync(dir)
     .filter((f) => f.endsWith(".md"))
@@ -120,14 +121,6 @@ function generateQASection(baseDir, isEn) {
 
 function generateIndex(isEn) {
   const itemsDir = isEn ? ITEMS_EN_DIR : ITEMS_ZH_DIR;
-  const qaBaseDir = isEn
-    ? path.join(itemsDir, "qa")
-    : path.join(itemsDir, "qa"); // Warning: En structure might differ?
-  // User structure seems to be:
-  // zh: doc/data/items/glossary, doc/data/items/qa/...
-  // en: doc/data/items-en/glossary, doc/data/items-en/qa/... (Assumed, need to verify if qa exists in items-en)
-
-  // Let's check if qa dir exists in en
   const qaPath = path.join(itemsDir, "qa");
 
   let content = isEn
@@ -141,21 +134,25 @@ function generateIndex(isEn) {
   const now = new Date();
   content += `${isEn ? "Last Updated" : "最後更新時間"}：${now.toLocaleString()}\n\n`;
 
-  content += generateGlossarySection(path.join(itemsDir, "glossary"), isEn);
+  const glossaryPath = path.join(itemsDir, "glossary");
+  if (fs.existsSync(glossaryPath)) {
+    content += generateGlossarySection(glossaryPath, isEn);
+  }
 
   content += "--- \n\n";
 
   if (fs.existsSync(qaPath)) {
     content += generateQASection(qaPath, isEn);
-  } else {
-    // Maybe flat structure or different? Assuming standard for now based on prev file view
-    // The MAINTENANCE_INDEX_EN.md showed qa sections, so it should exist.
-    // Wait, looking at file list in prev steps, I only listed items/glossary.
-    // I should assume structure matches.
+  }
+
+  if (!fs.existsSync(MAINTENANCE_DIR)) {
+    fs.mkdirSync(MAINTENANCE_DIR, { recursive: true });
   }
 
   fs.writeFileSync(isEn ? INDEX_EN_FILE : INDEX_ZH_FILE, content);
-  console.log(`✅ Generated ${isEn ? "EN" : "ZH"} Index`);
+  console.log(
+    `✅ Generated ${isEn ? "EN" : "ZH"} Index at ${isEn ? INDEX_EN_FILE : INDEX_ZH_FILE}`
+  );
 }
 
 console.log("🚀 Generating Indexes...");

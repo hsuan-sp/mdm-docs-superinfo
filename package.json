@@ -1,42 +1,60 @@
 {
-  "name": "mdm-technical-support",
+  "name": "mdm-support-site",
   "version": "1.0.0",
   "description": "Professional MDM FAQ & Support Documentation",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "npm run update-index && vitepress dev docs --port 4000",
-    "build": "vitepress build docs && npm run update-index",
-    "preview": "vitepress preview docs",
+    "dev": "next dev",
+    "dev:clean": "node ./scripts/dev-clean.js",
+    "build": "next build",
+    "start": "next start",
     "update-index": "node scripts/maintenance/generate-index.js",
+    "update-bundles": "node scripts/maintenance/generate-bundles.js",
     "fix-markdown": "node scripts/maintenance/unified-formatter.js",
     "format": "prettier --write .",
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{js,ts,vue,css,md,json}": "prettier --write"
+    "*.{js,ts,css,md,json}": "prettier --write"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@logto/next": "^4.2.8",
+    "lucide-react": "^0.562.0",
+    "next": "14.2.35",
+    "nextra": "3.3.1",
+    "nextra-theme-docs": "3.3.1",
     "punycode": "^2.3.1",
-    "vue": "^3.4.0"
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "swr": "^2.3.8"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.16",
+    "@netlify/plugin-nextjs": "^5.15.5",
+    "@tailwindcss/postcss": "^4.1.18",
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^25.0.10",
-    "@vue/tsconfig": "^0.8.1",
+    "@types/react": "^19.2.3",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.23",
     "globby": "^16.1.0",
     "gray-matter": "^4.0.3",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "markdown-it": "^14.1.0",
+    "postcss": "^8.5.6",
     "prettier": "^3.8.1",
+    "tailwindcss": "^3.4.19",
     "terser": "^5.44.1",
-    "typescript": "^5.3.0",
-    "vitepress": "^1.6.4",
-    "vue": "^3.4.0"
+    "typescript": "^5.3.0"
   },
   "overrides": {
     "esbuild": "^0.25.0"
