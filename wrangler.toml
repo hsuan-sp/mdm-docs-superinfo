@@ -1,23 +1,11 @@
 name = "mdm-docs-superinfo"
 compatibility_date = "2026-01-20"
 
-# 1. 強制指定進入點，Pages 會找這個檔案來當 Worker
-main = ".open-next/worker.js"
-
-# 2. 核心旗標，除了 nodejs_compat，確保 opennext 運作穩定
+# 必須包含 nodejs_compat
 compatibility_flags = ["nodejs_compat"]
 
-# 3. 指定輸出目錄
+# 指向輸出目錄
 pages_build_output_dir = ".open-next"
-
-# 4. 限制資源限制（選配，避免 Worker 跑過頭）
-# [vars] 區塊放你的環境變數，如果沒在後台設定的話可以放這
-# NEXT_PUBLIC_LOGTO_ENDPOINT = "https://your-logto.com"
 
 [observability]
 enabled = true
-
-# 5. 這裡建議加上一個路由配置，確保所有動態請求都被攔截
-[[routes]]
-pattern = "/*"
-script = ".open-next/worker.js"
