@@ -7,7 +7,10 @@ export default async function handler(
   res: NextApiResponse
 ) {
   // 1. 伺服器端安全檢查 (Server-side Security Check)
-  const { isAuthenticated, claims } = await logtoClient.getContext(req, res);
+  const { isAuthenticated, claims } = await logtoClient.getLogtoContext(
+    req,
+    res
+  );
 
   if (!isAuthenticated || !claims) {
     return res.status(401).json({ error: "Unauthorized: Please sign in" });
@@ -27,6 +30,9 @@ export default async function handler(
       .status(403)
       .json({ error: "Forbidden: Education email required" });
   }
+
+  // 2. 安全性標頭：防止敏感數據在本地緩存
+  res.setHeader("Cache-Control", "no-store, max-age=0");
   try {
     const { lang } = req.query;
     const data = await getQAData(lang === "en" ? "en" : "zh");

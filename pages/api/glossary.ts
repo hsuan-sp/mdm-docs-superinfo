@@ -1,4 +1,6 @@
+import type { NextApiRequest, NextApiResponse } from "next";
 import { logtoClient } from "@/lib/logto";
+import { getGlossaryData } from "@/lib/data";
 
 export default async function handler(
   req: NextApiRequest,
@@ -28,6 +30,9 @@ export default async function handler(
       .status(403)
       .json({ error: "Forbidden: Education email required" });
   }
+
+  // 2. 安全性標頭：防止敏感數據在本地緩存
+  res.setHeader("Cache-Control", "no-store, max-age=0");
   try {
     const { lang } = req.query;
     const data = await getGlossaryData(lang === "en" ? "en" : "zh");

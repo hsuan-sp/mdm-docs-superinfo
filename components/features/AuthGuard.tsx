@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { useUser } from '@/hooks/useLogtoUser'
 import AuthGate from '../ui/AuthGate'
-import GlobalLoader from '../ui/GlobalLoader'
+import { ShieldCheck } from 'lucide-react'
 
 interface AuthGuardProps {
   children: React.ReactNode
@@ -57,9 +57,21 @@ const AuthGuard: React.FC<AuthGuardProps> = ({ children }) => {
     return <>{children}</>
   }
 
-  // 2. 載入中：對受保護頁面顯示全域 Loader
+  // 2. 載入中：對受保護頁面顯示品牌加載畫面
   if (isLoading) {
-    return <GlobalLoader />
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-black">
+        <div className="relative flex items-center justify-center mb-8">
+          <div className="absolute inset-0 w-16 h-16 bg-blue-500/20 rounded-full blur-xl animate-pulse" />
+          <div className="relative w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-500/40">
+            <ShieldCheck className="w-7 h-7 text-white animate-bounce" style={{ animationDuration: '2s' }} />
+          </div>
+        </div>
+        <p className="text-zinc-400 font-bold text-xs uppercase tracking-[0.3em] animate-pulse">
+          Secure Authenticating
+        </p>
+      </div>
+    )
   }
 
   // 3. 受保護路由 & 未登入：顯示 AuthGate
