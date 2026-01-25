@@ -5,27 +5,28 @@ const withNextra = nextra({
   themeConfig: "./theme.config.tsx",
 });
 
-// 判斷是否正在 GitHub Actions 環境中執行（用於 GitHub Pages 導出）
+// 判斷部署環境
 const isGithubActions = process.env.GITHUB_ACTIONS === "true";
+// 判斷是否在 Cloudflare 構建環境 (Cloudflare 會自動注入此變數)
+const isCloudflare = process.env.CF_PAGES === "1";
 
 export default withNextra({
   reactStrictMode: true,
 
   // --- 關鍵相容性設定 ---
   
-  // 1. 只有在 GitHub Actions 時才使用 'export'，Cloudflare 部署時不使用
-  output: isGithubActions ? "export" : undefined,
+  // 修改這裡：
+  // 1. GitHub Actions 使用 'export'
+  // 2. Cloudflare 使用 'standalone' (讓 OpenNext 找到它要的 manifest)
+  // 3. 本地開發維持預設 (undefined)
+  output: isGithubActions ? "export" : (isCloudflare ? "standalone" : undefined),
 
-  // 2. 靜態導出時，Next.js 內建圖片優化無法使用，必須關閉
   images: {
-    unoptimized: isGithubActions,
+    unoptimized: isGithubActions || isCloudflare, // Cloudflare 建議也開啟 unoptimized，或者使用專門的 loader
   },
 
-  // 3. 如果你的 GitHub Pages 網址有子路徑 (例如: username.github.io/my-repo/)
-  // 請取消下方註解並填入你的倉庫名稱。如果用自定義網域則不需要。
   basePath: isGithubActions ? '/mdm-docs-superinfo' : '',
 
-  // --- Webpack 安全設定 ---
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {

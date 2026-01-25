@@ -1,8 +1,10 @@
 name = "mdm-docs-superinfo"
 compatibility_date = "2026-01-20"
+
+# 必須包含 nodejs_compat 才能跑 Next.js 的伺服器邏輯
 compatibility_flags = ["nodejs_compat"]
 
-# 這一行是關鍵，取代了 main 和 [site]
+# 這是 Pages 的配置方式
 pages_build_output_dir = ".open-next"
 
 [observability]
