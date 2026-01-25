@@ -2,7 +2,7 @@ import 'nextra-theme-docs/style.css'
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import useSWR from 'swr'
 import { LanguageProvider } from '../hooks/useLanguage'
 import SecurityGuard from '../components/features/SecurityGuard'
@@ -12,37 +12,46 @@ import Footer from '../components/layout/Footer'
 // Fetcher
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
+// 嚴格定義公開路徑
+const PUBLIC_PATHS = ['/', '/unauthorized', '/changelog', '/api/logto/sign-in', '/api/logto/sign-out', '/404']
+
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
   const getLayout = (Component as any).getLayout || ((page: React.ReactNode) => page)
 
-  // 1. 定義受保護的路由 (僅限 guide 與 glossary)
-  const protectedPaths = ['/guide', '/glossary']
-  const isProtected = protectedPaths.some((path) => router.pathname.startsWith(path))
+  // 1. 精確判定是否為保護路徑 (排除首頁與白名單)
+  const isProtected = useMemo(() => {
+    // 如果是首頁 (精確比對)
+    if (router.pathname === '/') return false;
+    // 如果在白名單內
+    if (PUBLIC_PATHS.includes(router.pathname)) return false;
+    // 只針對 guide 和 glossary 保護
+    return router.pathname.startsWith('/guide') || router.pathname.startsWith('/glossary');
+  }, [router.pathname])
 
-  // 2. 呼叫權限判定 API
+  // 2. 只有保護路徑才啟用 SWR 守衛
   const { data, isLoading } = useSWR(isProtected ? '/api/check-auth' : null, fetcher, {
     revalidateOnFocus: false,
     shouldRetryOnError: false
   })
 
-  // 3. 全域授權守衛
+  // 3. 處理跳轉
   useEffect(() => {
-    if (isProtected && data && !data.authorized) {
+    if (!isProtected || isLoading) return;
+
+    if (data && !data.authorized) {
       if (data.reason === 'not_logged_in') {
-        // 標準跳轉至登入頁面
         window.location.href = '/api/logto/sign-in'
       } else {
-        // 已登入但網域非教育網域
         router.replace('/unauthorized')
       }
     }
-  }, [isProtected, data, router])
+  }, [isProtected, data, isLoading, router])
 
-  //受保護頁面在載入完成前，顯示 Loading 畫面，確保內容不洩漏
+  //受保護頁面渲染 Loading，首頁等公開頁面則秒開
   if (isProtected && (isLoading || !data)) {
     return (
-      <div className="min-h-screen flex items-center justify-center font-black text-blue-600 bg-white dark:bg-black">
+      <div className="min-h-screen flex items-center justify-center font-bold text-blue-600 bg-white dark:bg-black">
         🛡️ 安全身分核對中...
       </div>
     )
