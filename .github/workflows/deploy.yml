@@ -27,27 +27,28 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          # ⚠️ 關鍵修正：移除 cache: npm
+          # 因為倉庫裡沒有 package-lock.json，開啟快取會導致 Actions 報錯崩潰
 
       - name: Install dependencies
-        # 使用 --force 因為 Next 15 + React 18 可能會有依賴衝突警告
+        # 使用 npm install 而非 npm ci，並加上 --force 處理依賴衝突
         run: npm install --force
 
       - name: Build with Next.js
-        # 這會觸發 prebuild (gen-data) -> next build (export)
+        # 這會依序執行：prebuild (gen-data) -> next build (靜態導出)
         run: npm run build
         env:
-          # 如果你的程式碼在 Client 端有用到環境變數，要在這裡注入
-          # 雖然是靜態導出，但 Logto 的 Client ID 等資訊仍需填入
           LOGTO_ENDPOINT: ${{ secrets.LOGTO_ENDPOINT }}
           LOGTO_APP_ID: ${{ secrets.LOGTO_APP_ID }}
           LOGTO_BASE_URL: ${{ secrets.LOGTO_BASE_URL }}
           LOGTO_COOKIE_SECRET: ${{ secrets.LOGTO_COOKIE_SECRET }}
+          # 確保觸發 next.config.js 裡的 isGithubActions 邏輯
+          GITHUB_ACTIONS: "true"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Next.js 靜態導出的輸出資料夾預設是 out
+          # Next.js 靜態導出的預設資料夾
           path: out
 
   deploy:

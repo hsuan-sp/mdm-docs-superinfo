@@ -60,5 +60,4 @@ VERCEL_ENV_VARS.txt
 *.local
 
 # Generated Data
-lib/generated-data.jsonpackage-lock.json
-package-lock.json
+lib/generated-data.json
