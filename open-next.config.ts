@@ -1,22 +1,29 @@
-// open-next.config.ts
+import type { OpenNextConfig } from '@opennextjs/cloudflare';
 
-export default {
-    // 預設 function，維持空物件即可
-    default: {},
+const config: OpenNextConfig = {
+    default: {
+        override: {
+            wrapper: "cloudflare-node",
+            converter: "edge",
+            incrementalCache: "dummy",
+            tagCache: "dummy",
+            queue: "dummy",
+        },
+    },
+    // 💡 2026 年建議：顯式加入 edgeExternals 避免 node 核心套件報錯
+    edgeExternals: [],
 
-    // 定義一個名為 'edge' 的函數組
-    functions: {
-        edge: {
-            // 1. 強制運行時為 edge
-            runtime: "edge",
-
-            // 2. 匹配所有傳入的 HTTP 請求
-            patterns: ["*"],
-
-            // 3. ⚠️ 關鍵修正：明確告知 OpenNext 這些路由的來源檔案
-            // 'pages/**/*' 代表 "pages 資料夾下的所有檔案"
-            // 這能滿足其內部驗證器的要求，徹底解決崩潰問題
-            routes: ["pages/**/*"],
+    middleware: {
+        external: true,
+        override: {
+            wrapper: "cloudflare-edge",
+            converter: "edge",
+            proxyExternalRequest: "fetch",
+            incrementalCache: "dummy",
+            tagCache: "dummy",
+            queue: "dummy",
         },
     },
 };
+
+export default config;
