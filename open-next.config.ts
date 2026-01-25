@@ -1,16 +1,22 @@
 // open-next.config.ts
 
-// 這裡不需要任何 import
 export default {
-    // 1. 設定預設的 function
+    // 預設 function，維持空物件即可
     default: {},
 
-    // 2. 新增一個 functions 區塊，明確告訴 OpenNext 我們要用 Edge
+    // 定義一個名為 'edge' 的函數組
     functions: {
         edge: {
-            // 3. 強制所有路由 (*) 都跑在 edge runtime
+            // 1. 強制運行時為 edge
             runtime: "edge",
+
+            // 2. 匹配所有傳入的 HTTP 請求
             patterns: ["*"],
+
+            // 3. ⚠️ 關鍵修正：明確告知 OpenNext 這些路由的來源檔案
+            // 'pages/**/*' 代表 "pages 資料夾下的所有檔案"
+            // 這能滿足其內部驗證器的要求，徹底解決崩潰問題
+            routes: ["pages/**/*"],
         },
     },
 };
