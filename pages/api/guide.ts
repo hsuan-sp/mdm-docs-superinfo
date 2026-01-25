@@ -1,25 +1,38 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { withLogtoApiRoute } from "@logto/next";
-import { logtoConfig } from "@/lib/logto";
+import { type NextRequest } from "next/server";
+import { logtoClient } from "@/lib/logto";
 import { getQAData } from "@/lib/data";
 
+export const runtime = "edge";
+
 /**
- * Guide API - v4 Protected Route
+ * Guide API - Cloudflare Edge Implementation
+ * 採用標準 Edge Request/Response 與 getLogtoContext 身分檢查。
  */
-async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!req.user.isAuthenticated) {
-    return res.status(401).json({ error: "Unauthorized" });
+export default async function handler(req: NextRequest) {
+  const context = await logtoClient.getLogtoContext(req);
+
+  if (!context.isAuthenticated) {
+    return new Response(JSON.stringify({ error: "Unauthorized" }), {
+      status: 401,
+      headers: { "content-type": "application/json" },
+    });
   }
 
   try {
-    const { lang } = req.query;
+    const url = new URL(req.url);
+    const lang = url.searchParams.get("lang");
     const data = await getQAData(lang === "en" ? "en" : "zh");
-    res.setHeader("Cache-Control", "no-store, max-age=0");
-    res.status(200).json(data);
+
+    return new Response(JSON.stringify(data), {
+      status: 200,
+      headers: {
+        "content-type": "application/json",
+      },
+    });
   } catch (error) {
-    console.error("[Guide API Error]", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    return new Response(JSON.stringify({ error: "Internal Server Error" }), {
+      status: 500,
+      headers: { "content-type": "application/json" },
+    });
   }
 }
-
-export default withLogtoApiRoute(handler, logtoConfig);
