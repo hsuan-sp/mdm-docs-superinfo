@@ -1,24 +1,24 @@
-import { logtoClient } from "@/lib/logto";
+import type { NextApiRequest, NextApiResponse } from "next";
+import LogtoClient from "@logto/next";
+import { logtoConfig } from "@/lib/logto";
 import { isAuthorizedEmail } from "@/lib/auth";
 
 /**
- * Check Auth API (Pages Router)
- * 基於 withLogtoApiRoute 的標準實作
+ * Check Auth API (Secure Implementation)
  */
-export default logtoClient.withLogtoApiRoute(async (req, res) => {
-  const { isAuthenticated, claims } = req.user;
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const client = new LogtoClient(logtoConfig);
+  const { isAuthenticated, claims } = await client.getLogtoContext(req, res);
 
-  // 1. 檢查是否登入
   if (!isAuthenticated || !claims) {
     return res.status(401).json({ authorized: false, reason: "not_logged_in" });
   }
 
-  // 2. 獲取 Email 並校驗
-  // 同步檢查多個可能的 Email 欄位以增強相容性
-  const email =
-    claims.email ||
-    (claims as any).primary_email ||
-    (claims as any).email_address;
+  // 同時相容多個 Email 欄位
+  const email = claims.email || (claims as any).primary_email;
 
   if (!email) {
     return res
@@ -33,4 +33,4 @@ export default logtoClient.withLogtoApiRoute(async (req, res) => {
       .status(403)
       .json({ authorized: false, reason: "invalid_domain" });
   }
-});
+}
