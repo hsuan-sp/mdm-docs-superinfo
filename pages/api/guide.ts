@@ -1,15 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { logtoClient } from "@/lib/logto";
+import LogtoClient from "@logto/next";
+import { logtoConfig } from "@/lib/logto";
 import { getQAData } from "@/lib/data";
 
 /**
- * Guide API - Open Mode
+ * Guide API (High Stability)
  */
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const context = await (logtoClient as any).getContext(req, res);
+  const client = new LogtoClient(logtoConfig);
+  const context = await client.getContext(req, res);
 
   if (!context.isAuthenticated) {
     return res.status(401).json({ error: "Unauthorized" });
@@ -18,9 +20,9 @@ export default async function handler(
   try {
     const { lang } = req.query;
     const data = await getQAData(lang === "en" ? "en" : "zh");
-    res.setHeader("Cache-Control", "no-store");
     res.status(200).json(data);
   } catch (error) {
-    res.status(500).json({ error: "Server Error" });
+    console.error("[Guide API Error]", error);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 }

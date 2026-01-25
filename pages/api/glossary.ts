@@ -1,17 +1,18 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { logtoClient } from "@/lib/logto";
+import LogtoClient from "@logto/next";
+import { logtoConfig } from "@/lib/logto";
 import { getGlossaryData } from "@/lib/data";
 
 /**
- * Glossary API - Open Mode
- * 只做基礎登入檢查，不做網域過濾，確保網站立刻復活。
+ * Glossary API (High Stability)
  */
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  // 1. 使用 any 強制跳過型別檢測讀取 context (解決 Netlify Build 報錯)
-  const context = await (logtoClient as any).getContext(req, res);
+  // 伺服器端現場取回 Context
+  const client = new LogtoClient(logtoConfig);
+  const context = await client.getContext(req, res);
 
   if (!context.isAuthenticated) {
     return res.status(401).json({ error: "Unauthorized" });
@@ -20,9 +21,10 @@ export default async function handler(
   try {
     const { lang } = req.query;
     const data = await getGlossaryData(lang === "en" ? "en" : "zh");
-    res.setHeader("Cache-Control", "no-store");
+    res.setHeader("Cache-Control", "no-store, max-age=0");
     res.status(200).json(data);
   } catch (error) {
-    res.status(500).json({ error: "Server Error" });
+    console.error("[Glossary API Error]", error);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 }
