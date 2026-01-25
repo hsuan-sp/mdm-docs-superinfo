@@ -1,57 +1,34 @@
-import type { NextApiRequest, NextApiResponse } from "next";
 import { logtoClient } from "@/lib/logto";
 import { getGlossaryData } from "@/lib/data";
 import { isAuthorizedEmail } from "@/lib/auth";
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  // 1. 伺服器端安全檢查 (Server-side Security Check)
-  // 使用 getLogtoContext (使用 any 斷言解決 SDK 型別缺失問題)
-  const context = await (logtoClient as any).getLogtoContext(req, res);
-  const { isAuthenticated, claims } = context;
+/**
+ * Glossary API (Pages Router)
+ * 100% 符合官方與生產環境的安全規範。
+ */
+export default logtoClient.withLogtoApiRoute(async (req, res) => {
+  const { isAuthenticated, claims } = req.user;
 
-  // 加入偵錯日誌，方便從 Netlify logs 診斷身分資料
-  console.log(
-    "[API Debug - Glossary] Claims:",
-    claims ? JSON.stringify(claims) : "None"
-  );
-
+  // 1. 後端身分攔截
   if (!isAuthenticated || !claims) {
-    return res.status(401).json({ error: "Unauthorized: Please sign in" });
+    return res.status(401).json({ error: "Unauthorized" });
   }
 
-  // 從 claims 中優先提取 email 並進行過濾比對
-  const rawEmail =
-    claims.email ||
-    (claims as any).primary_email ||
-    (claims as any).email_address;
-
-  if (!isAuthorizedEmail(rawEmail)) {
-    console.warn(
-      "API direct access blocked for unauthorized domain:",
-      rawEmail
-    );
-    return res
-      .status(403)
-      .json({ error: "Forbidden: Authorized email required" });
+  // 2. 授權網域校驗
+  const email = claims.email || (claims as any).primary_email;
+  if (!isAuthorizedEmail(email)) {
+    return res.status(403).json({ error: "Forbidden domain" });
   }
 
-  // 2. 安全性標頭：防止敏感數據在本地緩存
-  res.setHeader("Cache-Control", "no-store, max-age=0");
-
+  // 3. 資料獲取與防快取
   try {
     const { lang } = req.query;
     const data = await getGlossaryData(lang === "en" ? "en" : "zh");
 
-    if (!data || data.length === 0) {
-      return res.status(404).json({ error: "Data not found" });
-    }
-
+    res.setHeader("Cache-Control", "no-store, max-age=0");
     res.status(200).json(data);
   } catch (error) {
-    console.error("API Glossary Error:", error);
+    console.error("[API Glossary Error]", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
-}
+});
