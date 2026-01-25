@@ -1,8 +1,7 @@
 import { logtoClient } from "@/lib/logto";
 
 /**
- * Logto Auth Routes for Pages Router
- * Handles /api/logto/sign-in, /api/logto/sign-in-callback, etc.
- * 使用 @/lib/logto 別名確保路徑正確。
+ * Logto Auth Handler - DO NOT WRAP THIS FUNCTION.
+ * 直接導出以解決 500 Internal Server Error。
  */
 export default logtoClient.handleAuthRoutes();

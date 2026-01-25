@@ -9,41 +9,41 @@ import SecurityGuard from '../components/features/SecurityGuard'
 import BackToTop from '../components/ui/BackToTop'
 import Footer from '../components/layout/Footer'
 
-// 定義高效率 Fetcher
+// Fetcher
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
   const getLayout = (Component as any).getLayout || ((page: React.ReactNode) => page)
 
-  // 1. 定義受保護的路由 (依照方案建議)
+  // 1. 定義受保護的路由 (僅限 guide 與 glossary)
   const protectedPaths = ['/guide', '/glossary']
   const isProtected = protectedPaths.some((path) => router.pathname.startsWith(path))
 
-  // 2. 呼叫整合判定 API
-  const { data, error, isLoading } = useSWR(isProtected ? '/api/check-auth' : null, fetcher, {
+  // 2. 呼叫權限判定 API
+  const { data, isLoading } = useSWR(isProtected ? '/api/check-auth' : null, fetcher, {
     revalidateOnFocus: false,
     shouldRetryOnError: false
   })
 
-  // 3. 處理跳轉邏輯
+  // 3. 全域授權守衛
   useEffect(() => {
     if (isProtected && data && !data.authorized) {
       if (data.reason === 'not_logged_in') {
-        // 重導向至 Logto 登入，並在成功後跳回當前頁面
-        window.location.href = `/api/logto/sign-in?callbackUrl=${encodeURIComponent(window.location.href)}`
+        // 標準跳轉至登入頁面
+        window.location.href = '/api/logto/sign-in'
       } else {
-        // 登入但網域不符
+        // 已登入但網域非教育網域
         router.replace('/unauthorized')
       }
     }
   }, [isProtected, data, router])
 
-  // 渲染內容：如果是受保護路由且還在載入身分，顯示 Loading 以免洩漏 HTML
+  //受保護頁面在載入完成前，顯示 Loading 畫面，確保內容不洩漏
   if (isProtected && (isLoading || !data)) {
     return (
       <div className="min-h-screen flex items-center justify-center font-black text-blue-600 bg-white dark:bg-black">
-        🛡️ 檢查權限中...
+        🛡️ 安全身分核對中...
       </div>
     )
   }
