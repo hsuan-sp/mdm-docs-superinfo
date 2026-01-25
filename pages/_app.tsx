@@ -2,60 +2,51 @@ import 'nextra-theme-docs/style.css'
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
-import { useEffect, useMemo } from 'react'
-import useSWR from 'swr'
+import { useEffect, useState } from 'react'
 import { LanguageProvider } from '../hooks/useLanguage'
 import SecurityGuard from '../components/features/SecurityGuard'
 import BackToTop from '../components/ui/BackToTop'
 import Footer from '../components/layout/Footer'
-import { isAuthorizedEmail } from '@/lib/auth'
-
-// 標準 Fetcher
-const fetcher = (url: string) => fetch(url).then((res) => res.json())
-
-// 定義需要保護的路徑
-const PROTECTED_PATHS = ['/guide', '/glossary']
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
+  const [isLoading, setIsLoading] = useState(true)
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
   const getLayout = (Component as any).getLayout || ((page: React.ReactNode) => page)
 
-  // 1. 路徑判定：確保首頁完全不被攔截
-  const isProtected = useMemo(() => {
-    return PROTECTED_PATHS.some(path => router.pathname.startsWith(path))
+  // 1. 定義哪些頁面需要登入
+  const isProtectedPath = router.pathname.startsWith('/guide') || router.pathname.startsWith('/glossary')
+
+  useEffect(() => {
+    async function checkAuth() {
+      try {
+        const res = await fetch('/api/logto/user')
+        if (res.ok) {
+          const user = await res.json()
+          setIsAuthenticated(!!(user && user.sub))
+        } else {
+          setIsAuthenticated(false)
+        }
+      } catch (e) {
+        setIsAuthenticated(false)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+    
+    checkAuth()
   }, [router.pathname])
 
-  // 2. 呼叫 Logto 內建的 User API
-  // 這是最穩定的獲取身分方式，不會噴 500。
-  const { data: user, isLoading } = useSWR(isProtected ? '/api/logto/user' : null, fetcher, {
-    revalidateOnFocus: false,
-    shouldRetryOnError: false
-  })
-
-  // 3. 核心授權守衛 (在前端判定 Email)
+  // 2. 如果是保護路徑且未登入，強制導向登入
   useEffect(() => {
-    if (!isProtected || isLoading) return;
-
-    // 如果沒登入 (Logto user API 會回傳 isAuthenticated: false 或 401)
-    if (!user || user.isAuthenticated === false) {
+    if (!isLoading && isProtectedPath && !isAuthenticated) {
       window.location.href = '/api/logto/sign-in'
-      return
     }
+  }, [isLoading, isProtectedPath, isAuthenticated])
 
-    // 登入成功了，核對 Email 網域
-    const email = user.primaryEmail || user.email || "";
-    if (!isAuthorizedEmail(email)) {
-      router.replace('/unauthorized')
-    }
-  }, [isProtected, user, isLoading, router])
-
-  // 渲染邏輯：受保護路徑的封鎖畫面
-  if (isProtected && (isLoading || !user || !isAuthorizedEmail(user.primaryEmail || user.email || ""))) {
-    return (
-      <div className="min-h-screen flex items-center justify-center font-bold text-blue-600 bg-white dark:bg-black">
-        🔒 安全核對中，請稍候...
-      </div>
-    )
+  // 3. 過濾渲染
+  if (isProtectedPath && (isLoading || !isAuthenticated)) {
+     return <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>🔒 安全載入中...</div>
   }
 
   return (

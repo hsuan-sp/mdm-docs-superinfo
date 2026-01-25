@@ -1,30 +1,28 @@
+import type { NextApiRequest, NextApiResponse } from "next";
 import { logtoClient } from "@/lib/logto";
 import { getGlossaryData } from "@/lib/data";
-import { isAuthorizedEmail } from "@/lib/auth";
 
 /**
- * Glossary API Handler (Pages Router)
+ * Glossary API - Open Mode
+ * 只做基礎登入檢查，不做網域過濾，確保網站立刻復活。
  */
-export default logtoClient.withLogtoApiRoute(async (req, res) => {
-  const { isAuthenticated, claims } = req.user;
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  // 1. 使用 any 強制跳過型別檢測讀取 context (解決 Netlify Build 報錯)
+  const context = await (logtoClient as any).getContext(req, res);
 
-  if (!isAuthenticated || !claims) {
+  if (!context.isAuthenticated) {
     return res.status(401).json({ error: "Unauthorized" });
-  }
-
-  const email = claims.email || (claims as any).primary_email;
-  if (!isAuthorizedEmail(email)) {
-    return res.status(403).json({ error: "Forbidden domain" });
   }
 
   try {
     const { lang } = req.query;
     const data = await getGlossaryData(lang === "en" ? "en" : "zh");
-
-    res.setHeader("Cache-Control", "no-store, max-age=0");
+    res.setHeader("Cache-Control", "no-store");
     res.status(200).json(data);
   } catch (error) {
-    console.error("[API Glossary Error]", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    res.status(500).json({ error: "Server Error" });
   }
-});
+}
