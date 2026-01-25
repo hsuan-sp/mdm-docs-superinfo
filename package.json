@@ -11,7 +11,7 @@
     "prebuild": "npm run gen-data",
     "dev": "npm run gen-data && next dev -p 4000",
     "build": "next build", 
-    "build:cf": "npx @opennextjs/cloudflare build && cp .open-next/worker.js .open-next/_worker.js",
+    "build:cf": "npx @opennextjs/cloudflare build --bundle-external jose && cp .open-next/worker.js .open-next/_worker.js",
     "build:gh": "npm run gen-data && next build",
     "start": "next start -p 4000",
     "lint": "next lint",
