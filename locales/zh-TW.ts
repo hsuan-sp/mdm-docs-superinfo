@@ -6,6 +6,7 @@ export const zhTW = {
     intro2: "台灣教育現場的專業技術指南",
     explore: "開始探索",
     searchGlossary: "查詢術語表",
+    learnMore: "深入了解",
     exploreThemes: "探索主題",
     mastery: "從基礎設定到進階管理，一切盡在掌握。",
     badge: "v4.0 專業版",

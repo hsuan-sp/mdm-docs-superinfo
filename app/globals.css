@@ -6,25 +6,43 @@
 
 /* 3. v4 設計系統配置 */
 @theme {
-  --font-sans:
-    "SF Pro Display", "Inter", "Noto Sans TC", -apple-system, system-ui,
-    sans-serif;
+  --font-sans: "SF Pro Display", "Inter", "Noto Sans TC", -apple-system, system-ui, sans-serif;
 
-  /* Apple 官網色彩系統 */
+  /* Apple Brand Colors */
   --color-apple-blue: #0071e3;
+  --color-apple-blue-hover: #0077ed;
+  --color-apple-purple: #9089fc;
+  --color-apple-text: #1d1d1f;
+  --color-apple-red: #ff3b30;
   --color-apple-gray: #86868b;
   --color-apple-bg: #f5f5f7;
+  --color-apple-border: rgba(0, 0, 0, 0.1);
+  --color-apple-card: rgba(255, 255, 255, 0.8);
 
+  /* Dark Mode Equivalents */
+  --color-apple-dark-text: #f5f5f7;
+  --color-apple-dark-gray: #a1a1a6;
+  --color-apple-dark-bg: #000000;
+  --color-apple-dark-border: rgba(255, 255, 255, 0.1);
+  --color-apple-dark-card: rgba(28, 28, 30, 0.6);
+
+  /* Grid & Accents */
   --color-grid-subtle: rgba(0, 0, 0, 0.02);
   --color-grid-accent: rgba(0, 0, 0, 0.04);
 
-  /* Fluid 字體系統 */
+  /* Fluid Typography */
   --text-fluid-xs: clamp(0.7rem, 0.6rem + 0.2vw, 0.8rem);
+  --text-fluid-sm: clamp(0.8rem, 0.7rem + 0.2vw, 0.9rem);
   --text-fluid-base: clamp(0.95rem, 0.85rem + 0.3vw, 1.05rem);
+  --text-fluid-lg: clamp(1.1rem, 1rem + 0.4vw, 1.25rem);
+  --text-fluid-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --text-fluid-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
   --text-fluid-4xl: clamp(2rem, 1.5rem + 1.5vw, 3rem);
 
+  /* Radius */
   --radius-apple: 1.25rem;
   --radius-apple-lg: 2.5rem;
+  --radius-apple-xl: 3rem;
 }
 
 /* 4. 全域基礎樣式 */

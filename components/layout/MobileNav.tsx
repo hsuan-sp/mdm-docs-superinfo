@@ -63,21 +63,21 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
     <div className="fixed inset-0 z-10000 lg:hidden text-balance">
       <div className="absolute inset-0 bg-black/70 backdrop-blur-md animate-reveal" onClick={onClose} />
       
-      <div className="absolute right-0 top-0 h-full w-[90vw] max-w-md bg-white dark:bg-zinc-900 shadow-2xl animate-in slide-in-from-right duration-300 flex flex-col overflow-hidden border-l border-zinc-200 dark:border-zinc-800">
+      <div className="absolute right-0 top-0 h-full w-[90vw] max-w-md bg-white dark:bg-apple-dark-bg shadow-2xl animate-in slide-in-from-right duration-300 flex flex-col overflow-hidden border-l border-apple-border dark:border-apple-dark-border">
         
         {/* Header */}
-        <div className="flex items-center justify-between px-6 border-b border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 h-18 shrink-0">
+        <div className="flex items-center justify-between px-6 border-b border-apple-border dark:border-apple-dark-border bg-white dark:bg-apple-dark-bg h-18 shrink-0">
           <div className="flex items-center gap-3">
             <div className="p-1 bg-apple-blue/10 rounded-lg">
               <img src="/logo-square.png" alt="Logo" className="h-7 w-7 object-contain" />
             </div>
             <div className="flex flex-col">
-              <h2 className="text-[1rem] font-bold text-[#1d1d1f] dark:text-white leading-tight">{isZh ? '極電資訊' : 'Superinfo'}</h2>
-              <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest mt-0.5">APPLE MDM Hub</p>
+              <h2 className="text-[1rem] font-bold text-apple-text dark:text-apple-dark-text leading-tight">{isZh ? '極電資訊' : 'Superinfo'}</h2>
+              <p className="text-[10px] font-bold text-apple-gray uppercase tracking-widest mt-0.5">APPLE MDM Hub</p>
             </div>
           </div>
-          <button onClick={onClose} className="p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all active:scale-90">
-            <X className="w-6 h-6 text-zinc-400" />
+          <button onClick={onClose} className="p-2 hover:bg-apple-bg dark:hover:bg-apple-dark-border rounded-full transition-all active:scale-90">
+            <X className="w-6 h-6 text-apple-gray" />
           </button>
         </div>
 
@@ -85,25 +85,25 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
         <div className="flex-1 overflow-y-auto p-6 space-y-8 no-scrollbar">
           
           {/* 使用者狀態區 */}
-          <div className="p-1 bg-zinc-50 dark:bg-zinc-800/30 rounded-3xl border border-zinc-100 dark:border-zinc-800/50">
+          <div className="p-1 bg-apple-bg dark:bg-apple-dark-border/30 rounded-3xl border border-apple-border dark:border-apple-dark-border/50">
             {user ? (
               <div className="flex flex-col p-2 space-y-2">
-                <div className="flex items-center gap-4 p-3 bg-white dark:bg-zinc-900 rounded-2xl shadow-sm">
+                <div className="flex items-center gap-4 p-3 bg-white dark:bg-apple-dark-bg rounded-2xl shadow-sm">
                   <div className="w-10 h-10 rounded-full bg-apple-blue text-white flex items-center justify-center font-bold text-sm shrink-0">
                     {user.email ? user.email[0].toUpperCase() : <UserIcon className="w-5 h-5" />}
                   </div>
                   <div className="flex flex-col min-w-0">
                     <span className="text-[10px] font-bold text-apple-blue uppercase tracking-widest leading-none">Authorized</span>
-                    <span className="text-sm font-bold text-zinc-800 dark:text-zinc-200 truncate mt-1">{user.email ?? 'Unknown User'}</span>
+                    <span className="text-sm font-bold text-apple-text dark:text-apple-dark-text truncate mt-1">{user.email ?? 'Unknown User'}</span>
                   </div>
                 </div>
-                <button onClick={() => signOut()} className="w-full flex items-center justify-center gap-2 px-5 py-3 text-[#ff3b30] font-bold text-[13px] hover:bg-red-50 dark:hover:bg-red-900/10 rounded-xl transition-all">
+                <button onClick={() => signOut()} className="w-full flex items-center justify-center gap-2 px-5 py-3 text-apple-red font-bold text-[13px] hover:bg-red-50 dark:hover:bg-red-900/10 rounded-xl transition-all">
                   <LogOut className="w-4 h-4 opacity-70" />
                   {t('userCenter.logout')}
                 </button>
               </div>
             ) : (
-              <button onClick={() => signIn()} className="w-full flex items-center justify-center gap-3 px-5 py-4 bg-apple-blue text-white rounded-2xl font-bold text-[14px] hover:bg-[#0077ed] shadow-lg shadow-blue-500/20">
+              <button onClick={() => signIn()} className="w-full flex items-center justify-center gap-3 px-5 py-4 bg-apple-blue text-white rounded-2xl font-bold text-[14px] hover:bg-apple-blue-hover shadow-lg shadow-apple-blue/20">
                 {t('userCenter.login')}
                 <ChevronRight className="w-4 h-4" />
               </button>
@@ -119,8 +119,8 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
                 onClick={() => navigate(link.path)}
                 className={`w-full flex items-center justify-between px-5 py-4 rounded-2xl font-bold transition-all duration-300 ${
                   pathname === link.path 
-                    ? 'bg-apple-blue text-white shadow-lg shadow-blue-500/20 translate-x-1' 
-                    : 'text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/80 hover:translate-x-1'
+                    ? 'bg-apple-blue text-white shadow-lg shadow-apple-blue/20 translate-x-1' 
+                    : 'text-apple-text dark:text-apple-dark-text hover:bg-apple-bg dark:hover:bg-apple-dark-border/80 hover:translate-x-1'
                 }`}
               >
                 <span className="text-[15px]">{link.label}</span>
@@ -129,8 +129,8 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
           </nav>
 
           {/* 常用連結 */}
-          <div className="pt-4 border-t border-zinc-100 dark:border-zinc-800">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[rgb(134,134,139)] px-4 mb-4">{t('resources.label')}</h3>
+          <div className="pt-4 border-t border-apple-border dark:border-apple-dark-border">
+            <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-apple-gray px-4 mb-4">{t('resources.label')}</h3>
             {resourceGroups.map((group: any, idx: number) => (
               <div key={idx} className="mb-6 last:mb-0">
                 <h4 className="text-[11px] font-bold text-[rgb(134,134,139)] px-4 mb-2">{group.title}</h4>
@@ -139,7 +139,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
                     <button
                       key={itemIdx}
                       onClick={() => navigateExternal(item.link)}
-                      className="w-full flex items-center justify-between px-5 py-3 text-sm font-bold text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 rounded-xl transition-all"
+                      className="w-full flex items-center justify-between px-5 py-3 text-sm font-bold text-apple-gray dark:text-apple-dark-gray hover:bg-apple-bg dark:hover:bg-apple-dark-border/50 rounded-xl transition-all"
                     >
                       <span className="flex-1 text-left truncate">{item.text}</span>
                       <ExternalLink className="w-3.5 h-3.5 text-zinc-300" />
@@ -151,25 +151,25 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* 系統設定 */}
-          <div className="pt-4 border-t border-zinc-100 dark:border-zinc-800 pb-10 space-y-4">
-              <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="w-full flex items-center justify-between p-4 bg-zinc-50 dark:bg-zinc-800/40 rounded-2xl transition-all hover:bg-zinc-100 dark:hover:bg-zinc-800">
+          <div className="pt-4 border-t border-apple-border dark:border-apple-dark-border pb-10 space-y-4">
+              <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="w-full flex items-center justify-between p-4 bg-apple-bg dark:bg-apple-dark-border/40 rounded-2xl transition-all hover:bg-apple-gray/5 dark:hover:bg-apple-dark-border">
                 <div className="flex items-center gap-3">
                   <div className={`p-2 rounded-xl ${theme === 'dark' ? 'bg-apple-blue/10 text-apple-blue' : 'bg-amber-500/10 text-amber-500'}`}>
                     {theme === 'dark' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
                   </div>
-                  <span className="text-sm font-bold text-[#1d1d1f] dark:text-zinc-200">Appearance</span>
+                  <span className="text-sm font-bold text-apple-text dark:text-apple-dark-text">Appearance</span>
                 </div>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-[rgb(134,134,139)]">{theme?.toUpperCase()}</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-apple-gray">{theme?.toUpperCase()}</span>
               </button>
 
-              <button onClick={() => setLanguage(language === 'zh-TW' ? 'en' : 'zh-TW')} className="w-full flex items-center justify-between p-4 bg-zinc-50 dark:bg-zinc-800/40 rounded-2xl transition-all hover:bg-zinc-100 dark:hover:bg-zinc-800">
+              <button onClick={() => setLanguage(language === 'zh-TW' ? 'en' : 'zh-TW')} className="w-full flex items-center justify-between p-4 bg-apple-bg dark:bg-apple-dark-border/40 rounded-2xl transition-all hover:bg-apple-gray/5 dark:hover:bg-apple-dark-border">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-zinc-100 dark:bg-zinc-700/50 rounded-xl text-zinc-500">
+                  <div className="p-2 bg-apple-bg dark:bg-apple-dark-border rounded-xl text-apple-gray">
                     <Globe className="w-4 h-4" />
                   </div>
-                  <span className="text-sm font-bold text-[#1d1d1f] dark:text-zinc-200">Language</span>
+                  <span className="text-sm font-bold text-apple-text dark:text-apple-dark-text">Language</span>
                 </div>
-                <div className="px-3 py-1 bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-700 rounded-lg text-xs font-bold text-apple-blue">
+                <div className="px-3 py-1 bg-white dark:bg-apple-dark-bg border border-apple-border dark:border-apple-dark-border rounded-lg text-xs font-bold text-apple-blue">
                   {language === 'zh-TW' ? 'ENGLISH' : '繁體中文'}
                 </div>
               </button>

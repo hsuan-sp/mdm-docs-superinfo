@@ -1,27 +1,17 @@
-import { getLogtoContext } from '@logto/next/server-actions';
-import { logtoConfig } from '@/app/logto';
+import { verifyAuth, getLang } from '@/lib/api-utils';
 import { getGlossaryData } from "@/lib/data";
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 export const dynamic = 'force-dynamic';
 
-export async function GET(request: NextRequest) {
-    const { isAuthenticated } = await getLogtoContext(logtoConfig);
+export async function GET(request: Request) {
+    const { errorResponse } = await verifyAuth();
+    if (errorResponse) return errorResponse;
 
-    // 1. 檢查身分
-    if (!isAuthenticated) {
-        return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
+    const lang = getLang(request);
+    const data = await getGlossaryData(lang);
 
-    // 2. 獲取參數
-    const { searchParams } = new URL(request.url);
-    const lang = searchParams.get('lang');
-
-    // 3. 獲取數據
-    const data = await getGlossaryData(lang === "en" ? "en" : "zh");
-
-    // 4. 回傳回應
     return NextResponse.json(data, {
-        headers: { 'Cache-Control': 'no-store, max-age=0' }
+        headers: { 'Cache-Control': 'no-store' }
     });
 }

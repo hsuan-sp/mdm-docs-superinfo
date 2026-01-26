@@ -13,18 +13,18 @@ const UnauthorizedPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-6 bg-zinc-50 dark:bg-black">
-      <div className="max-w-md w-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-3xl p-8 md:p-12 shadow-2xl text-center">
+    <div className="min-h-screen flex items-center justify-center p-6 bg-apple-bg dark:bg-apple-dark-bg">
+      <div className="max-w-md w-full bg-white dark:bg-apple-dark-card border border-apple-border dark:border-apple-dark-border rounded-3xl p-8 md:p-12 shadow-2xl text-center">
         <div className="w-20 h-20 bg-red-50 dark:bg-red-900/20 rounded-full flex items-center justify-center mx-auto mb-6">
           <span className="text-4xl">🚫</span>
         </div>
         
-        <h1 className="text-2xl md:text-3xl font-black text-zinc-900 dark:text-white mb-4 tracking-tight">
+        <h1 className="text-2xl md:text-3xl font-black text-apple-text dark:text-apple-dark-text mb-4 tracking-tight">
           存取被拒絕
         </h1>
         
-        <p className="text-zinc-500 dark:text-zinc-400 mb-8 leading-relaxed font-medium">
-          抱歉，此平台僅限使用 <span className="text-blue-600 dark:text-blue-400 font-bold">.edu.tw</span> 教育信箱登入。
+        <p className="text-apple-gray dark:text-apple-dark-gray mb-8 leading-relaxed font-medium">
+          抱歉，此平台僅限使用 <span className="text-apple-blue dark:text-apple-blue font-bold">.edu.tw</span> 教育信箱登入。
           <br /><br />
           請登出並使用符合資格的帳號重新登入。
         </p>
@@ -40,7 +40,7 @@ const UnauthorizedPage = () => {
           
           <Link 
             href="/"
-            className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-2xl font-bold hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all"
+            className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-apple-bg dark:bg-apple-dark-border text-apple-text dark:text-apple-dark-text rounded-2xl font-bold hover:bg-apple-gray/10 dark:hover:bg-apple-dark-border/80 transition-all border border-apple-border dark:border-apple-dark-border"
           >
             <Home className="w-4 h-4" />
             返回首頁

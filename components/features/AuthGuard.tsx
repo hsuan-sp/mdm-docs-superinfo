@@ -5,42 +5,44 @@ import { useUser } from '@/hooks/useLogtoUser'
 import { isAuthorizedEmail } from '@/lib/auth'
 import { ShieldCheck, AlertCircle } from 'lucide-react'
 
-// 1. 將 /404 改為 /not-found 以符合 Next.js 慣例
-const PUBLIC_ROUTES = ['/', '/not-found', '/unauthorized', '/changelog']
+// 1. 定義需要保護的路由，其餘路由（包含 404）皆視為公開
+const PROTECTED_ROUTES = ['/guide', '/glossary']
 
 const AuthGuard = ({ children }: PropsWithChildren) => {
   const router = useRouter()
   const pathname = usePathname() 
   const { user, isLoading, isAuthenticated } = useUser()
   
-  const isPublic = PUBLIC_ROUTES.includes(pathname) || pathname.startsWith('/api')
+  // 檢查當前路徑是否屬於受保護範圍
+  const isProtected = PROTECTED_ROUTES.some(route => 
+    pathname === route || pathname.startsWith(`${route}/`)
+  )
 
   useEffect(() => {
     // 🔍 偵測是否在 GitHub Pages 環境
     const isGitHubPages = typeof window !== 'undefined' && window.location.hostname.includes('github.io');
     if (isGitHubPages) return; // 靜態預覽模式不執行任何跳轉邏輯
 
-    // 2. 處理「未登入」：不再渲染 AuthGate，而是直接靜默跳轉到 API 登入端點
-    if (!isLoading && !isPublic && !isAuthenticated) {
-      console.log("[Guard] 未登入，直接執行 Logto 跳轉");
-      // 確保將當前 pathname 帶入，以便登入後 Logto 能導向回正確頁面
+    // 2. 處理「未登入」：如果是受保護路由且未登入，則跳轉至登入
+    if (!isLoading && isProtected && !isAuthenticated) {
+      console.log("[Guard] 受保護路由且未登入，執行 Logto 跳轉");
       window.location.href = `/api/logto/sign-in?redirect=${encodeURIComponent(pathname)}`;
       return;
     }
 
     // 3. 處理「授權失敗」：郵件不符合白名單
-    if (!isLoading && !isPublic && isAuthenticated && user?.email) {
+    if (!isLoading && isProtected && isAuthenticated && user?.email) {
       if (!isAuthorizedEmail(user.email)) {
         console.warn("[Guard] 郵件未獲授權，重定向至 unauthorized");
         router.replace('/unauthorized');
       }
     }
-  }, [isLoading, isAuthenticated, user, isPublic, pathname, router])
+  }, [isLoading, isAuthenticated, user, isProtected, pathname, router])
 
   // --- 渲染邏輯 ---
 
-  // 公開路由或已通過驗證：直接渲染
-  if (isPublic || (isAuthenticated && user?.email && isAuthorizedEmail(user.email))) {
+  // 非保護路由或已通過驗證：直接渲染
+  if (!isProtected || (isAuthenticated && user?.email && isAuthorizedEmail(user.email))) {
     return <>{children}</>
   }
 

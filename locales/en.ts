@@ -6,6 +6,7 @@ export const en = {
     intro2: "Professional MDM Guide for Taiwan Education",
     explore: "Get Started",
     searchGlossary: "Search Glossary",
+    learnMore: "Learn More",
     exploreThemes: "Explore Topics",
     mastery: "From basic setup to advanced management, master it all here.",
     badge: "v4.0 Professional",

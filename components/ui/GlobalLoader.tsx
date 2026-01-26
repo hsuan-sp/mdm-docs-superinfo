@@ -38,7 +38,7 @@ const LoaderBar = () => {
   return (
     <div className="fixed top-0 left-0 right-0 z-99999 pointer-events-none">
       <div 
-        className="h-0.75 bg-linear-to-r from-blue-500 via-blue-400 to-indigo-500 shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-all duration-300 ease-out"
+        className="h-0.75 bg-linear-to-r from-apple-blue via-apple-blue/80 to-purple-500 shadow-[0_0_10px_rgba(0,113,227,0.5)] transition-all duration-300 ease-out"
         style={{ 
           width: `${progress}%`, 
           opacity: progress >= 100 ? 0 : 1 
@@ -46,7 +46,7 @@ const LoaderBar = () => {
       />
       {/* 旋轉小圈圈 (選配) */}
       <div className="absolute right-4 top-4">
-        <div className={`w-4 h-4 border-2 border-blue-500/30 border-t-blue-500 rounded-full animate-spin transition-opacity duration-300 ${progress > 0 && progress < 100 ? 'opacity-100' : 'opacity-0'}`} />
+        <div className={`w-4 h-4 border-2 border-apple-blue/30 border-t-apple-blue rounded-full animate-spin transition-opacity duration-300 ${progress > 0 && progress < 100 ? 'opacity-100' : 'opacity-0'}`} />
       </div>
     </div>
   )

@@ -32,28 +32,28 @@ const Home: React.FC = () => {
     <div className="relative isolate min-h-screen overflow-hidden">
       {/* Background Decor */}
       <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
-        <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[72.1875rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#0071e3] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
+        <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[72.1875rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-apple-blue to-apple-purple opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
       </div>
 
       {/* Hero Section */}
       <div className="mx-auto max-w-7xl px-6 pt-32 pb-24 text-center lg:px-8">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-apple-bg dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 text-apple-blue mb-10 animate-reveal">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-apple-bg dark:bg-apple-dark-bg/50 border border-apple-border dark:border-apple-dark-border text-apple-blue mb-10 animate-reveal">
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-apple-blue/50 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-apple-blue"></span>
           </span>
           <p className="text-[11px] font-bold uppercase tracking-[0.2em]">{t('home.eyebrow')}</p>
         </div>
         
-        <h1 className="text-fluid-4xl font-bold tracking-tight text-[#1d1d1f] dark:text-white leading-[1.05] mb-10 animate-reveal [animation-delay:100ms] text-balance">
+        <h1 className="text-fluid-4xl font-bold tracking-tight text-apple-text dark:text-apple-dark-text leading-[1.05] mb-10 animate-reveal [animation-delay:100ms] text-balance">
           {t('home.title')}
         </h1>
         
         <div className="max-w-3xl mx-auto space-y-8 animate-reveal [animation-delay:200ms]">
-          <p className="text-xl md:text-2xl font-medium text-[#1d1d1f] dark:text-zinc-200 opacity-90">
+          <p className="text-xl md:text-2xl font-medium text-apple-text dark:text-apple-dark-text opacity-90">
             {t('home.intro1')}
           </p>
-          <p className="text-base md:text-lg text-[#86868b] dark:text-zinc-400 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-apple-gray dark:text-apple-dark-gray leading-relaxed max-w-2xl mx-auto">
             {t('home.intro2')}
           </p>
         </div>
@@ -61,14 +61,14 @@ const Home: React.FC = () => {
         <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6 animate-reveal [animation-delay:300ms]">
           <button
             onClick={() => router.push('/guide')}
-            className="w-full sm:w-auto rounded-full bg-apple-blue px-12 py-4 text-base font-bold text-white shadow-xl shadow-blue-500/20 hover:bg-[#0077ed] transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-3 group"
+            className="w-full sm:w-auto rounded-full bg-apple-blue px-12 py-4 text-base font-bold text-white shadow-xl shadow-apple-blue/20 hover:bg-apple-blue-hover transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-3 group"
           >
             {t('home.explore')}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
           <button
             onClick={() => router.push('/glossary')}
-            className="w-full sm:w-auto px-10 py-4 text-base font-bold text-[#1d1d1f] dark:text-white hover:text-apple-blue transition-all flex items-center justify-center gap-2 group"
+            className="w-full sm:w-auto px-10 py-4 text-base font-bold text-apple-text dark:text-apple-dark-text hover:text-apple-blue transition-all flex items-center justify-center gap-2 group"
           >
             {t('home.searchGlossary')} <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
@@ -86,22 +86,22 @@ const Home: React.FC = () => {
                 className="apple-card group cursor-pointer p-10 flex flex-col h-full"
                 style={{ animationDelay: `${idx * 100 + 500}ms` }}
               >
-                <div className="mb-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#f5f5f7] dark:bg-zinc-800 transition-all duration-500 group-hover:scale-110 text-4xl shadow-sm">
+                <div className="mb-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-apple-bg dark:bg-apple-dark-border transition-all duration-500 group-hover:scale-110 text-4xl shadow-sm">
                   {f.emoji || "✨"}
                 </div>
                 
-                <h3 className="text-2xl font-bold mb-3 text-[#1d1d1f] dark:text-white tracking-tight">
+                <h3 className="text-2xl font-bold mb-3 text-apple-text dark:text-apple-dark-text tracking-tight">
                   {f.title}
                 </h3>
                 <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-apple-blue opacity-70 mb-5">
                   {f.subtitle}
                 </p>
-                <p className="text-[16px] leading-[1.4] text-[#86868b] dark:text-zinc-400 font-medium flex-1">
+                <p className="text-[16px] leading-[1.4] text-apple-gray dark:text-apple-dark-gray font-medium flex-1">
                   {f.desc}
                 </p>
                 
                 <div className="mt-10 flex items-center gap-2 text-apple-blue font-bold text-sm tracking-tight group-hover:gap-3 transition-all">
-                   深入了解 <ArrowRight className="w-4 h-4" />
+                   {t('home.learnMore')} <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
             )

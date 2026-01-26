@@ -36,19 +36,19 @@ const AuthGate: React.FC<AuthGateProps> = ({ redirectPath = '/' }) => {
             </div>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-bold text-[#1d1d1f] dark:text-white mb-6 tracking-tight leading-[1.1] text-balance">
+          <h2 className="text-3xl md:text-5xl font-bold text-apple-text dark:text-apple-dark-text mb-6 tracking-tight leading-[1.1] text-balance">
             {t('authGate.title')}
           </h2>
           
           <p 
-            className="text-[rgb(134,134,139)] dark:text-zinc-400 font-medium mb-12 leading-relaxed max-w-md mx-auto text-lg"
+            className="text-apple-gray dark:text-apple-dark-gray font-medium mb-12 leading-relaxed max-w-md mx-auto text-lg"
             dangerouslySetInnerHTML={{ __html: t('authGate.subtitle') }}
           />
 
           <div className="flex flex-col w-full gap-5 max-w-sm">
             <button 
               onClick={handleSignIn}
-              className="w-full flex items-center justify-center gap-3 px-8 py-5 bg-apple-blue text-white rounded-full font-bold text-[17px] hover:bg-[#0077ed] hover:shadow-2xl hover:shadow-blue-500/20 active:scale-[0.98] transition-all group"
+              className="w-full flex items-center justify-center gap-3 px-8 py-5 bg-apple-blue text-white rounded-full font-bold text-[17px] hover:bg-apple-blue-hover hover:shadow-2xl hover:shadow-apple-blue/20 active:scale-[0.98] transition-all group"
             >
               {t('authGate.signInBtn')}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1transition-transform" />
@@ -56,15 +56,15 @@ const AuthGate: React.FC<AuthGateProps> = ({ redirectPath = '/' }) => {
 
             <Link 
               href="/"
-              className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[rgb(245,245,247)] dark:bg-zinc-800 text-[#1d1d1f] dark:text-white rounded-full font-bold text-[15px] hover:bg-[#e8e8ed] dark:hover:bg-zinc-700 transition-all active:scale-[0.98]"
+              className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-apple-bg dark:bg-apple-dark-border text-apple-text dark:text-apple-dark-text rounded-full font-bold text-[15px] hover:bg-apple-gray/10 dark:hover:bg-apple-dark-border/80 transition-all active:scale-[0.98]"
             >
               <Home className="w-4 h-4 opacity-70" />
               {t('authGate.backHome')}
             </Link>
           </div>
 
-          <div className="mt-16 pt-10 border-t border-zinc-100 dark:border-zinc-800 w-full">
-            <p className="text-[10px] font-bold text-[rgb(134,134,139)] dark:text-zinc-500 uppercase tracking-[0.4em]">
+          <div className="mt-16 pt-10 border-t border-apple-border dark:border-apple-dark-border w-full">
+            <p className="text-[10px] font-bold text-apple-gray dark:text-apple-dark-gray uppercase tracking-[0.4em]">
               Enhanced Security Environment
             </p>
           </div>

@@ -33,19 +33,19 @@ const Changelog: React.FC<ChangelogProps> = ({ zhLogs, enLogs }) => {
   }, [logs, selectedVersion])
 
   if (isLoading) return (
-    <div className="py-20 text-center text-zinc-400 animate-pulse font-black uppercase tracking-widest text-xs">
+    <div className="py-20 text-center text-apple-gray animate-pulse font-black uppercase tracking-widest text-xs">
       Loading Changelog...
     </div>
   )
 
   if (!user) return <AuthGate />
-  if (logs.length === 0) return <div className="py-20 text-center text-zinc-500 font-medium">{t('changelog.noLogs')}</div>
+  if (logs.length === 0) return <div className="py-20 text-center text-apple-gray font-medium">{t('changelog.noLogs')}</div>
 
   return (
     <div className="max-w-4xl mx-auto py-10 px-6 lg:px-0">
       {/* Version Selector */}
-      <div className="mb-12 p-6 bg-gray-50 dark:bg-zinc-900 rounded-3xl border border-gray-100 dark:border-zinc-800 flex flex-col md:flex-row items-start md:items-center gap-4">
-        <label htmlFor="version-select" className="text-sm font-black uppercase tracking-widest text-zinc-400">
+      <div className="mb-12 p-6 bg-apple-bg dark:bg-apple-dark-bg/60 rounded-3xl border border-apple-border dark:border-apple-dark-border flex flex-col md:flex-row items-start md:items-center gap-4">
+        <label htmlFor="version-select" className="text-sm font-black uppercase tracking-widest text-apple-gray">
           {t('changelog.selectVersion')}
         </label>
         <div className="relative flex-1 w-full md:max-w-xs">
@@ -53,7 +53,7 @@ const Changelog: React.FC<ChangelogProps> = ({ zhLogs, enLogs }) => {
             id="version-select"
             value={selectedVersion}
             onChange={(e) => setSelectedVersion(e.target.value)}
-            className="w-full pl-4 pr-10 py-2.5 bg-white dark:bg-black border border-gray-200 dark:border-zinc-800 rounded-xl appearance-none cursor-pointer focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all font-bold text-sm text-black dark:text-white"
+            className="w-full pl-4 pr-10 py-2.5 bg-white dark:bg-apple-dark-bg border border-apple-border dark:border-apple-dark-border rounded-xl appearance-none cursor-pointer focus:ring-4 focus:ring-apple-blue/10 focus:border-apple-blue transition-all font-bold text-sm text-apple-text dark:text-apple-dark-text"
           >
             <option value="ALL">{t('changelog.allVersions')}</option>
             {logs.map((log) => (
@@ -62,19 +62,19 @@ const Changelog: React.FC<ChangelogProps> = ({ zhLogs, enLogs }) => {
               </option>
             ))}
           </select>
-          <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400 pointer-events-none" />
+          <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-apple-gray pointer-events-none" />
         </div>
       </div>
 {/* Timeline Section */}
       <div className="space-y-16">
         {filteredLogs.map((log, index) => (
-          <article key={log.version} className="relative pl-8 md:pl-12 border-l-2 border-gray-100 dark:border-zinc-900 last:border-l-0">
-            <div className={`absolute -left-2.25 top-0 w-4 h-4 rounded-full border-4 border-white dark:border-black ${index === 0 && selectedVersion === 'ALL' ? 'bg-blue-600 scale-125' : 'bg-gray-300 dark:bg-zinc-700'}`} />
+          <article key={log.version} className="relative pl-8 md:pl-12 border-l-2 border-apple-bg dark:border-apple-dark-border last:border-l-0">
+            <div className={`absolute -left-2.25 top-0 w-4 h-4 rounded-full border-4 border-white dark:border-apple-dark-bg ${index === 0 && selectedVersion === 'ALL' ? 'bg-apple-blue scale-125' : 'bg-apple-gray dark:bg-apple-dark-gray'}`} />
             <header className="mb-6 flex flex-wrap items-baseline gap-4">
-              <h2 className="text-3xl font-black font-mono tracking-tight text-zinc-900 dark:text-zinc-100">v{log.version}</h2>
-              <div className="flex items-center gap-1.5 text-zinc-400 font-bold text-sm"><Calendar className="w-4 h-4" />{log.date}</div>
+              <h2 className="text-3xl font-black font-mono tracking-tight text-apple-text dark:text-apple-dark-text">v{log.version}</h2>
+              <div className="flex items-center gap-1.5 text-apple-gray font-bold text-sm"><Calendar className="w-4 h-4" />{log.date}</div>
             </header>
-            <div className="prose prose-zinc dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: log.content }} />
+            <div className="prose prose-zinc dark:prose-invert max-w-none prose-p:text-apple-gray dark:prose-p:text-apple-dark-gray prose-headings:text-apple-text dark:prose-headings:text-apple-dark-text" dangerouslySetInnerHTML={{ __html: log.content }} />
           </article>
         ))}
       </div>

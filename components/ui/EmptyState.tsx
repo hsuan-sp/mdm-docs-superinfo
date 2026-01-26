@@ -24,23 +24,23 @@ const EmptyState: React.FC<EmptyStateProps> = ({
   return (
     <div className="text-center py-24 px-8 bg-transparent animate-reveal">
       <div className="flex justify-center mb-8">
-        <div className="w-24 h-24 bg-[rgb(245,245,247)] dark:bg-zinc-900 rounded-apple-lg flex items-center justify-center text-[rgb(134,134,139)] shadow-inner">
+        <div className="w-24 h-24 bg-apple-bg dark:bg-apple-dark-border rounded-apple-lg flex items-center justify-center text-apple-gray dark:text-apple-dark-gray shadow-inner">
           {icon || <SearchX className="w-10 h-10" />}
         </div>
       </div>
       
-      <h3 className="text-2xl md:text-3xl font-bold text-[#1d1d1f] dark:text-white mb-4 tracking-tight">
+      <h3 className="text-2xl md:text-3xl font-bold text-apple-text dark:text-apple-dark-text mb-4 tracking-tight">
         {title || t('glossary.emptyState', { q: '' })}
       </h3>
       
-      <p className="text-[rgb(134,134,139)] dark:text-zinc-400 mb-12 max-w-sm mx-auto leading-relaxed font-medium text-lg">
+      <p className="text-apple-gray dark:text-apple-dark-gray mb-12 max-w-sm mx-auto leading-relaxed font-medium text-lg">
         {description || t('guide.searchPlaceholder')}
       </p>
       
       {actionText && (
         <button 
           onClick={onClear}
-          className="px-10 py-3.5 bg-apple-blue hover:bg-[#0077ed] text-white rounded-full font-bold transition-all active:scale-95 shadow-xl shadow-blue-500/20"
+          className="px-10 py-3.5 bg-apple-blue hover:bg-apple-blue-hover text-white rounded-full font-bold transition-all active:scale-95 shadow-xl shadow-apple-blue/20"
         >
           {actionText}
         </button>
