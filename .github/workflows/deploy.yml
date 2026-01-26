@@ -35,8 +35,11 @@ jobs:
         run: npm install --force
 
       - name: Build with Next.js
-        # 執行專屬 GitHub Pages 的靜態導出指令
-        run: npm run build:gh
+        # 執行 Next.js 建置，當 GITHUB_ACTIONS=true 時會自動觸發靜態導出 (output: 'export')
+        # 靜態導出不支援 API routes，因此在 GitHub Pages 部署時將其移除
+        run: |
+          rm -rf app/api
+          npm run build
         env:
           LOGTO_ENDPOINT: ${{ secrets.LOGTO_ENDPOINT }}
           LOGTO_APP_ID: ${{ secrets.LOGTO_APP_ID }}

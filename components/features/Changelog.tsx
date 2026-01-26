@@ -20,8 +20,7 @@ interface ChangelogProps {
 }
 
 const Changelog: React.FC<ChangelogProps> = ({ zhLogs, enLogs }) => {
-  const { language: locale } = useLanguage()
-  const t = translations[locale as keyof typeof translations]?.changelog || translations['zh-TW'].changelog
+  const { t, language: locale } = useLanguage()
   const { user, isLoading } = useUser()
   const [selectedVersion, setSelectedVersion] = useState<string>('ALL')
 
@@ -40,14 +39,14 @@ const Changelog: React.FC<ChangelogProps> = ({ zhLogs, enLogs }) => {
   )
 
   if (!user) return <AuthGate />
-  if (logs.length === 0) return <div className="py-20 text-center text-zinc-500 font-medium">{t.noLogs}</div>
+  if (logs.length === 0) return <div className="py-20 text-center text-zinc-500 font-medium">{t('changelog.noLogs')}</div>
 
   return (
     <div className="max-w-4xl mx-auto py-10 px-6 lg:px-0">
       {/* Version Selector */}
       <div className="mb-12 p-6 bg-gray-50 dark:bg-zinc-900 rounded-3xl border border-gray-100 dark:border-zinc-800 flex flex-col md:flex-row items-start md:items-center gap-4">
         <label htmlFor="version-select" className="text-sm font-black uppercase tracking-widest text-zinc-400">
-          {t.selectVersion}
+          {t('changelog.selectVersion')}
         </label>
         <div className="relative flex-1 w-full md:max-w-xs">
           <select 
@@ -56,7 +55,7 @@ const Changelog: React.FC<ChangelogProps> = ({ zhLogs, enLogs }) => {
             onChange={(e) => setSelectedVersion(e.target.value)}
             className="w-full pl-4 pr-10 py-2.5 bg-white dark:bg-black border border-gray-200 dark:border-zinc-800 rounded-xl appearance-none cursor-pointer focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all font-bold text-sm text-black dark:text-white"
           >
-            <option value="ALL">{t.allVersions}</option>
+            <option value="ALL">{t('changelog.allVersions')}</option>
             {logs.map((log) => (
               <option key={log.version} value={log.version}>
                 v{log.version} ({log.date})
@@ -66,8 +65,7 @@ const Changelog: React.FC<ChangelogProps> = ({ zhLogs, enLogs }) => {
           <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400 pointer-events-none" />
         </div>
       </div>
-
-      {/* Timeline Section */}
+{/* Timeline Section */}
       <div className="space-y-16">
         {filteredLogs.map((log, index) => (
           <article key={log.version} className="relative pl-8 md:pl-12 border-l-2 border-gray-100 dark:border-zinc-900 last:border-l-0">

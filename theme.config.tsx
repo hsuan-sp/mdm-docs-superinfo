@@ -18,7 +18,7 @@ const config = {
       <>
         <title>{title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/favicon.ico`} />
       </>
     )
   },
@@ -40,10 +40,10 @@ const config = {
     float: true, 
     title: '本頁目錄' 
   },
-  
-  search: { 
-    placeholder: '搜尋文件...' 
-  },
+
+  search: {
+    component: () => null
+  }
 }
 
 export default config

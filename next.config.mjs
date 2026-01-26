@@ -9,9 +9,19 @@ const withNextra = nextra({
   }
 })
 
+const isGitHubPages = process.env.GITHUB_ACTIONS === 'true'
+const basePath = isGitHubPages ? '/mdm-support-site' : ''
+
 // 2. 所有「主題」與「Next.js 原生」配置放在這裡
 export default withNextra({
-  
+  output: isGitHubPages ? 'export' : undefined,
+  basePath,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
+  images: {
+    unoptimized: isGitHubPages
+  },
   experimental: {
     turbo: {
       rules: {

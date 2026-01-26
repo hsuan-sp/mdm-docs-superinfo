@@ -6,38 +6,21 @@ import { translations } from '@/locales'
 import ReportIssue from '@/components/features/ReportIssue'
 
 const Footer = () => {
-  const { language } = useLanguage()
+  const { t } = useLanguage()
   const [mounted, setMounted] = useState(false)
-  const isZh = language === 'zh-TW'
 
-  // 防止 Hydration 錯誤，確保語系正確後才渲染
   useEffect(() => {
     setMounted(true)
   }, [])
 
-  const t = isZh ? {
-    company: "極電資訊有限公司",
-    badges: "Apple 授權教育經銷商｜Apple 校園體驗中心｜軟硬體專業諮詢",
-    slogan: "致力於給您最好的服務",
-    copyright: "Copyright © 2026 極電資訊｜Apple 授權教育經銷商",
-    info: "極電資訊有限公司 | 統一編號 23756990",
-  } : {
-    company: "Superinfo Computer Co., Ltd.",
-    badges: "Apple Authorized Education Specialist｜Apple Campus Experience Center｜Hardware & Software Advisory",
-    slogan: "Committed to excellence in service",
-    copyright: "Copyright © 2026 Superinfo｜Apple Authorized Education Specialist",
-    info: "Superinfo Computer Co., Ltd. | Tax ID 23756990",
-  }
-
-  // 渲染時保持容器結構，但內容等 mounted 後再顯示，避免 SEO 語系閃爍
   return (
-    <footer className="w-full pt-16 flex flex-col items-center text-center space-y-8 mt-20 mb-10 border-t border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50 backdrop-blur-sm rounded-[2.5rem] px-6 py-12 transition-colors duration-300">
-      <div className="space-y-4 px-4">
-        <h2 className="text-2xl md:text-3xl font-black text-zinc-900 dark:text-white tracking-widest uppercase">
-          {mounted ? t.company : "Superinfo"}
+    <footer className="w-full pt-20 flex flex-col items-center text-center space-y-12 mt-24 mb-16 px-6 py-16 animate-reveal">
+      <div className="space-y-6 max-w-3xl">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#1d1d1f] dark:text-white tracking-tight">
+          {mounted ? t('footer.company') : "Superinfo"}
         </h2>
-        <p className="text-[12px] md:text-[14px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest max-w-2xl mx-auto leading-relaxed">
-          {mounted ? t.badges : "Apple Authorized Education Specialist"}
+        <p className="text-[14px] md:text-[16px] font-medium text-[rgb(134,134,139)] leading-relaxed">
+          {mounted ? t('footer.badges') : "Apple Authorized Education Specialist"}
         </p>
       </div>
       
@@ -46,22 +29,24 @@ const Footer = () => {
           href="https://www.superinfo.com.tw" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm text-sm font-black text-blue-600 dark:text-blue-400 hover:text-blue-500 hover:scale-105 active:scale-95 transition-all"
+          className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-apple-blue text-white font-bold text-base shadow-lg shadow-blue-500/20 hover:bg-[#0077ed] transition-all hover:scale-[1.02] active:scale-95"
         >
-          {mounted ? t.slogan : "Superinfo Service"}
+          {mounted ? t('footer.slogan') : "Superinfo Service"}
         </a>
       </div>
 
-      <div className="w-12 h-px bg-zinc-200 dark:bg-zinc-800"></div>
+      <div className="w-16 h-px bg-zinc-200 dark:bg-zinc-800"></div>
 
-      <div className="space-y-3 pb-4">
-        <p className="text-[11px] font-bold text-zinc-400 dark:text-zinc-600 tracking-tighter">
-          {mounted ? t.copyright : "Copyright © 2026 Superinfo"}
-        </p>
-        <p className="text-[11px] font-bold text-zinc-400 dark:text-zinc-600 tracking-tighter">
-          {mounted ? t.info : ""}
-        </p>
-        <div className="pt-2 opacity-80 hover:opacity-100 transition-opacity">
+      <div className="space-y-4 pb-8">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-6">
+          <p className="text-[12px] font-medium text-[rgb(134,134,139)] tracking-tight">
+            {mounted ? t('footer.copyright') : "Copyright © 2026 Superinfo"}
+          </p>
+          <p className="text-[12px] font-medium text-[rgb(134,134,139)] tracking-tight border-t md:border-t-0 md:border-l border-zinc-200 dark:border-zinc-800 pt-2 md:pt-0 md:pl-6">
+            {mounted ? t('footer.info') : ""}
+          </p>
+        </div>
+        <div className="pt-6 opacity-60 hover:opacity-100 transition-opacity duration-500">
           <ReportIssue />
         </div>
       </div>

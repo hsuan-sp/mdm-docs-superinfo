@@ -11,6 +11,7 @@ import { Layout, Navbar } from 'nextra-theme-docs'
 import { getPageMap } from 'nextra/page-map'
 import { Logo, NavbarExtra } from '@/components/layout/NavbarItems'
 import type { Metadata } from 'next'
+import GeometricBackground from '@/components/ui/GeometricBackground'
 
 export const metadata: Metadata = {
   title: {
@@ -35,13 +36,13 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         />
       </head>
       <body>
+        <GeometricBackground />
         <UserProvider>
           <LanguageProvider>
             <Layout
               navbar={
                 <Navbar 
                   logo={<Logo />} 
-                  projectLink="https://github.com/hsuan-sp/mdm-docs-superinfo"
                 >
                   <NavbarExtra />
                 </Navbar>

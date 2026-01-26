@@ -5,99 +5,136 @@
 @import "../node_modules/nextra-theme-docs/dist/style.css" layer(base);
 
 /* 3. v4 設計系統配置 */
-/* 3. v4 設計系統配置 */
 @theme {
-  /* v4 建議使用 kebab-case 且直接定義在 theme 命名空間下 */
-  --font-sans: "Inter", "Noto Sans TC", -apple-system, sans-serif;
-  
-  /* 原版變數對接 */
+  --font-sans:
+    "SF Pro Display", "Inter", "Noto Sans TC", -apple-system, system-ui,
+    sans-serif;
+
+  /* Apple 官網色彩系統 */
+  --color-apple-blue: #0071e3;
+  --color-apple-gray: #86868b;
+  --color-apple-bg: #f5f5f7;
+
   --color-grid-subtle: rgba(0, 0, 0, 0.02);
   --color-grid-accent: rgba(0, 0, 0, 0.04);
-  
-  /* Fluid 字體系統：v4 建議將自定義值對應到命名空間 */
-  --text-fluid-xs: clamp(0.6rem, 0.45rem + 0.2vw, 0.7rem);
-  --text-fluid-4xl: clamp(1.7rem, 1.4rem + 0.7vw, 2.1rem);
-  
-  /* 如果要在 @theme 內定義原生變數，需確保不與內建命名衝突 */
-  --spacing-fluid-md: clamp(1.25rem, 1rem + 0.6vw, 1.75rem);
+
+  /* Fluid 字體系統 */
+  --text-fluid-xs: clamp(0.7rem, 0.6rem + 0.2vw, 0.8rem);
+  --text-fluid-base: clamp(0.95rem, 0.85rem + 0.3vw, 1.05rem);
+  --text-fluid-4xl: clamp(2rem, 1.5rem + 1.5vw, 3rem);
+
+  --radius-apple: 1.25rem;
+  --radius-apple-lg: 2.5rem;
 }
 
-/* 4. 全域基礎樣式 (不使用 @apply 以避免報錯) */
+/* 4. 全域基礎樣式 */
 @layer base {
   :root {
     --nextra-primary-hue: 210deg;
     --nextra-primary-saturation: 100%;
+    --radius-apple-val: 20px;
   }
 
   html {
     font-family: var(--font-sans);
-    font-size: clamp(14px, 0.875rem + 0.15vw, 16px);
+    font-size: 16px;
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
-    background-color: white;
-    color: rgb(24, 24, 27); /* zinc-900 */
-    -webkit-font-smoothing: antialiased;
-    
-    /* 原版背景漸變 */
+    background-color: #ffffff;
+    color: #1d1d1f;
+    line-height: 1.47059;
+    letter-spacing: -0.022em;
+
+    /* 質感背景 */
     background:
-      radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.08), transparent 40%),
-      radial-gradient(circle at 80% 80%, rgba(147, 51, 234, 0.06), transparent 40%),
-      radial-gradient(rgba(0,0,0,0.04) 1px, transparent 1px);
-    background-size: 100% 100%, 100% 100%, 32px 32px;
+      radial-gradient(at 0% 0%, rgba(0, 113, 227, 0.03) 0, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(147, 51, 234, 0.03) 0, transparent 50%);
     background-attachment: fixed;
   }
 
   .dark body {
-    background-color: rgb(9, 9, 11); /* zinc-950 */
-    color: rgb(244, 244, 245); /* zinc-100 */
+    background-color: #000000;
+    color: #f5f5f7;
     background:
-      radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.12), transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(147, 51, 234, 0.1), transparent 50%),
-      radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+      radial-gradient(at 0% 0%, rgba(0, 113, 227, 0.08) 0, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(147, 51, 234, 0.06) 0, transparent 50%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    letter-spacing: -0.015em;
+    font-weight: 600;
   }
 }
 
-/* 5. 組件樣式 (修正 !important 與 @apply 報錯) */
+/* 5. 組件樣式 */
 @layer components {
   /* Apple-style Navbar */
   .nextra-nav-container {
     backdrop-filter: saturate(180%) blur(20px) !important;
     background-color: rgba(255, 255, 255, 0.72) !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-    height: 4rem !important;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1) !important;
+    height: 3.5rem !important;
+    transition: background-color 0.3s ease;
   }
 
   .dark .nextra-nav-container {
     background-color: rgba(0, 0, 0, 0.72) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.1) !important;
   }
 
-  /* 側邊欄按鈕 (移除所有 @apply 以換取穩定性) */
+  /* 精緻卡片系列 */
+  .apple-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    border-radius: var(--radius-apple-lg);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition:
+      transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 0.4s ease;
+  }
+
+  .dark .apple-card {
+    background: rgba(28, 28, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .apple-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+  }
+
+  /* 側邊欄按鈕優化 */
   .sidebar-btn {
-    position: relative;
-    overflow: hidden;
-    padding: 0.875rem 1.25rem;
-    border-radius: 1rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
-    transition: all 0.3s ease-out;
-    border: 1px solid transparent;
+    transition: all 0.2s ease;
   }
 
-  .sidebar-btn:hover {
-    background-color: rgba(244, 244, 245, 1);
-    transform: translateX(4px);
+  .sidebar-btn:hover:not(.sidebar-btn-active) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .dark .sidebar-btn:hover:not(.sidebar-btn-active) {
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   .sidebar-btn-active {
-    background-color: rgb(37, 99, 235) !important;
-    color: white !important;
-    box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.2);
+    background-color: #0071e3 !important;
+    color: #ffffff !important;
   }
 
   /* 強制隱藏漢堡選單（桌機版），但在手機版保留 */
@@ -114,15 +151,35 @@
   }
 }
 
-/* 6. 功能性樣式 */
+/* 6. 功能性與動畫 */
 @layer utilities {
-  .text-fluid-4xl { font-size: var(--font-size-fluid-4xl); }
-  
-  ::-webkit-scrollbar { width: 10px; }
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-reveal {
+    animation: reveal 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
   ::-webkit-scrollbar-thumb {
-    background: #e5e5e5;
+    background: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    border: 3px solid transparent;
-    background-clip: content-box;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
   }
 }

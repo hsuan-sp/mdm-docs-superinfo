@@ -24,6 +24,18 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const hasFetched = useRef(false);
 
   const fetchUser = useCallback(async () => {
+    // 🔍 偵測是否在 GitHub Pages 環境 (根據主機名)
+    const isGitHubPages = typeof window !== 'undefined' && window.location.hostname.includes('github.io');
+
+    if (isGitHubPages) {
+      setData({ 
+        user: { sub: 'guest', email: 'collaborator@github.io', name: 'Collaborator (Static Preview)' }, 
+        auth: true 
+      });
+      setIsLoading(false);
+      return;
+    }
+
     setIsLoading(true);
     try {
       const res = await fetch("/api/logto/user", {
@@ -47,6 +59,9 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
         } : null, 
         auth: !!json.isAuthenticated 
       });
+    } catch (e) {
+      console.error("[useUser] Fetch failed (likely static build)", e);
+      setData({ user: null, auth: false });
     } finally {
       setIsLoading(false);
     }

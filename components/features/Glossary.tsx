@@ -23,32 +23,36 @@ const CATEGORIES = [
   'Hardware', 'Apps', 'Education', 'macOS', 'Jamf', 'Other',
 ]
 
-const Glossary: React.FC = () => {
-  // const router = useRouter() // 沒用到可以拿掉
-  const { language: locale } = useLanguage()
-  const t = translations[locale as keyof typeof translations]?.glossary || translations['zh-TW'].glossary
+interface GlossaryProps {
+  initialData?: GlossaryItem[];
+}
 
-  const [data, setData] = useState<GlossaryItem[]>([])
-  const [isLoading, setIsLoading] = useState(true)
+const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
+  const { t, language: locale } = useLanguage()
+
+  const [data, setData] = useState<GlossaryItem[]>(initialData || [])
+  const [isLoading, setIsLoading] = useState(!initialData)
   
   // 搜尋相關
   const [searchQuery, setSearchQuery] = useState('')
-  const debouncedQuery = useDebounce(searchQuery, 300) // 使用 debounce 優化效能
+  const debouncedQuery = useDebounce(searchQuery, 300) 
 
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc')
-  const [fontScale, setFontScale] = useState(1) // 預設改為 1 比較直覺
+  const [fontScale, setFontScale] = useState(1) 
   const [gridCols, setGridCols] = useState<1 | 2 | 3>(1)
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
   
-  const { user, isLoading: isAuthLoading } = useUser()
+  const { user, isLoading: isAuthLoading, isAuthenticated } = useUser()
 
   useEffect(() => {
-    // 登入中不執行 fetch，避免無謂請求
-    if (isAuthLoading || !user) return
+    const isGitHubPages = typeof window !== 'undefined' && window.location.hostname.includes('github.io');
+    if (initialData && data.length > 0) return;
+    if (isGitHubPages) return;
+    if (isAuthLoading) return;
+    if (!isAuthenticated) return;
 
     const fetchData = async () => {
-      // 這裡可以選擇不設 true，以避免切換語言時閃爍，看個人喜好
       setIsLoading(true) 
       try {
         const res = await fetch(`/api/glossary?lang=${locale}`)
@@ -63,7 +67,7 @@ const Glossary: React.FC = () => {
       }
     }
     fetchData()
-  }, [locale, user, isAuthLoading])
+  }, [locale, user, isAuthLoading, isAuthenticated, initialData])
 
   const getChapterCount = (cat: string) => {
     if (cat === 'All') return data.length
@@ -75,7 +79,6 @@ const Glossary: React.FC = () => {
   }
 
   const filteredTerms = useMemo(() => {
-    // 使用 debouncedQuery 來過濾
     const q = debouncedQuery.toLowerCase().trim()
     
     let filtered = data.filter(item => {
@@ -97,22 +100,21 @@ const Glossary: React.FC = () => {
       const termB = b.term.toUpperCase()
       return sortOrder === 'asc' ? termA.localeCompare(termB) : termB.localeCompare(termA)
     })
-  }, [data, debouncedQuery, selectedCategory, sortOrder]) // 依賴改為 debouncedQuery
+  }, [data, debouncedQuery, selectedCategory, sortOrder])
 
   const getCategoryName = (cat: string) => 
-    cat === 'All' ? t.allLabel : (t.categories as any)[cat] || cat
+    cat === 'All' ? t('glossary.allLabel') : t(`glossary.categories.${cat}` as any) || cat
 
-  // 抽離 Sidebar 邏輯保持乾淨
   const SidebarContent = () => (
     <div className="flex flex-col h-full overflow-y-auto no-scrollbar pb-10">
-      <div className="relative group mb-8 lg:mb-10">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400 group-focus-within:text-blue-500 transition-colors" />
+      <div className="relative group mb-10">
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-[#86868b] group-focus-within:text-apple-blue transition-colors" />
         <input 
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder={t.searchPlaceholder}
-          className="w-full pl-12 pr-10 py-3.5 bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 rounded-2xl text-[15px] focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all font-medium"
+          placeholder={t('glossary.searchPlaceholder')}
+          className="w-full pl-12 pr-10 py-4 bg-[#f5f5f7] dark:bg-zinc-900/50 border border-transparent focus:bg-white dark:focus:bg-black focus:border-[#0071e3] rounded-2xl text-[16px] outline-none transition-all font-medium"
         />
         {searchQuery && (
           <button 
@@ -124,57 +126,54 @@ const Glossary: React.FC = () => {
         )}
       </div>
 
-      {/* Category List */}
-      <div className="mb-8">
-        <p className="hidden lg:block text-[11px] font-black uppercase tracking-widest text-zinc-400 px-4 mb-4">{t.sidebarTitle}</p>
-        <nav className="grid grid-cols-2 lg:flex lg:flex-col gap-2">
+      <div className="mb-10">
+        <p className="hidden lg:block text-[11px] font-bold uppercase tracking-[0.2em] text-[#86868b] px-4 mb-5">{t('glossary.sidebarTitle')}</p>
+        <nav className="grid grid-cols-2 lg:flex lg:flex-col gap-1.5">
           {CATEGORIES.map(cat => (
             <button
               key={cat}
               onClick={() => { setSelectedCategory(cat); setIsDrawerOpen(false); }}
-              className={`sidebar-btn ${selectedCategory === cat ? 'sidebar-btn-active' : 'text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800/50'}`}
+              className={`sidebar-btn ${selectedCategory === cat ? 'sidebar-btn-active' : 'text-[#1d1d1f] dark:text-[#f5f5f7]'}`}
             >
               <span className="truncate pr-4 text-left">{getCategoryName(cat)}</span>
-              <span className={`text-[10px] font-black px-2 py-0.5 rounded-md ${selectedCategory === cat ? 'bg-white/20' : 'bg-zinc-100 dark:bg-zinc-800'}`}>{getChapterCount(cat)}</span>
+              <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md ${selectedCategory === cat ? 'bg-white/20' : 'bg-zinc-100 dark:bg-zinc-800'}`}>{getChapterCount(cat)}</span>
             </button>
           ))}
         </nav>
       </div>
 
-      {/* Layout Grid Switcher */}
-      <div className="mb-10 lg:mb-12 pt-2">
-        <p className="text-[11px] font-black uppercase tracking-widest text-zinc-400 px-1 mb-4">
-          {t.layoutTitle || '版面配置'}
+      <div className="mb-12">
+        <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#86868b] px-4 mb-5">
+          {t('glossary.layoutTitle')}
         </p>
-        <div className="flex items-center gap-2 p-1.5 bg-zinc-100/50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 rounded-2xl">
+        <div className="flex items-center gap-1.5 p-1.5 bg-[#f5f5f7] dark:bg-zinc-900/50 rounded-2xl">
           {[1, 2, 3].map((num) => (
             <button
               key={num}
               onClick={() => setGridCols(num as any)}
-              className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl transition-all ${
+              className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl transition-all ${
                 gridCols === num 
-                  ? 'bg-white dark:bg-zinc-800 text-[#0071e3] shadow-md border border-zinc-200 dark:border-zinc-700' 
-                  : 'text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200'
+                  ? 'bg-white dark:bg-zinc-800 text-apple-blue shadow-sm' 
+                  : 'text-[#86868b] hover:text-[#1d1d1f] dark:hover:text-white'
               }`}
             >
               {num === 1 && <ListIcon className="w-4 h-4" />}
               {num === 2 && <Grid className="w-4 h-4" />}
               {num === 3 && <LayoutGrid className="w-4 h-4" />}
-              <span className="text-xs font-black">{num}x</span>
+              <span className="text-xs font-bold">{num}x</span>
             </button>
           ))}
         </div>
       </div>
 
-      {/* Font Scale Control */}
-      <div className="mt-auto pt-6 border-t border-zinc-100 dark:border-zinc-800">
-        <p className="text-[11px] font-black uppercase tracking-widest text-zinc-400 mb-4">{t.fontScaleTitle}</p>
-        <div className="flex items-center justify-between p-1 bg-zinc-100 dark:bg-zinc-900 rounded-xl">
+      <div className="mt-auto pt-8 border-t border-zinc-100 dark:border-zinc-800">
+        <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#86868b] mb-5">{t('glossary.fontScaleTitle')}</p>
+        <div className="flex items-center justify-between p-1 bg-[#f5f5f7] dark:bg-zinc-900 rounded-xl">
           {[0.8, 0.9, 1, 1.1, 1.2].map(scale => (
             <button
               key={scale}
               onClick={() => setFontScale(scale)}
-              className={`flex-1 flex items-center justify-center py-2 rounded-lg text-[13px] font-bold transition-all ${fontScale === scale ? 'bg-white dark:bg-zinc-800 text-blue-600 shadow-sm' : 'text-zinc-400 hover:text-zinc-600'}`}
+              className={`flex-1 flex items-center justify-center py-2.5 rounded-lg text-[13px] font-bold transition-all ${fontScale === scale ? 'bg-white dark:bg-zinc-800 text-apple-blue shadow-sm' : 'text-[#86868b] hover:text-[#1d1d1f]'}`}
             >
               {scale === 0.8 ? 'A--' : scale === 0.9 ? 'A-' : scale === 1 ? 'A' : scale === 1.1 ? 'A+' : 'A++'}
             </button>
@@ -184,19 +183,19 @@ const Glossary: React.FC = () => {
     </div>
   )
 
-  if (isAuthLoading) return null // 這裡可以回傳一個全屏 loading
+  if (isAuthLoading) return null 
   if (!user) return <AuthGate />
 
   if (isLoading) {
     return (
-      <div className="flex flex-col lg:flex-row gap-0 lg:gap-12 py-10 opacity-60">
-        <aside className="hidden lg:block w-[320px] shrink-0 space-y-4">
-          <div className="h-12 w-full skeleton-pulse mb-8" />
-          <div className="h-64 w-full skeleton-pulse" />
+      <div className="flex flex-col lg:flex-row gap-0 lg:gap-16 py-12 opacity-60">
+        <aside className="hidden lg:block w-[320px] shrink-0 space-y-6">
+          <div className="h-14 w-full bg-[#f5f5f7] dark:bg-zinc-900 rounded-2xl animate-pulse" />
+          <div className="h-64 w-full bg-[#f5f5f7] dark:bg-zinc-900 rounded-2xl animate-pulse" />
         </aside>
-        <main className="flex-1 space-y-6">
-          {[1,2,3,4].map(i => (
-            <div key={i} className="h-48 w-full skeleton-pulse" />
+        <main className="flex-1 space-y-8">
+          {[1,2,3].map(i => (
+            <div key={i} className="h-56 w-full bg-[#f5f5f7] dark:bg-zinc-900 rounded-[2.5rem] animate-pulse" />
           ))}
         </main>
       </div>
@@ -205,7 +204,7 @@ const Glossary: React.FC = () => {
 
   return (
     <>
-      <div className="flex flex-col lg:flex-row gap-0 lg:gap-12 py-10">
+      <div className="flex flex-col lg:flex-row gap-0 lg:gap-16 py-12 animate-reveal">
           {/* Desktop Sidebar */}
           <aside className="hidden lg:block w-[320px] shrink-0 sticky top-28 h-[calc(100vh-8rem)]">
             <SidebarContent />
@@ -213,66 +212,61 @@ const Glossary: React.FC = () => {
 
           {/* Main Content Area */}
           <main className="flex-1 min-w-0 px-6 lg:px-0">
-            <div className="flex items-center justify-between mb-8">
-              <div className="text-sm font-bold text-zinc-400 uppercase tracking-widest flex items-center gap-2">
-                <Filter className="w-4 h-4 text-blue-500" />
-                {t.totalTerms.replace('{n}', filteredTerms.length.toString())}
+            <div className="flex items-center justify-between mb-10">
+              <div className="text-[12px] font-bold text-[#86868b] uppercase tracking-[0.2em] flex items-center gap-2.5">
+                <Filter className="w-3.5 h-3.5 text-apple-blue" />
+                {t('glossary.totalTerms', { n: filteredTerms.length })}
               </div>
               <button 
                 onClick={() => setSortOrder(prev => prev === 'asc' ? 'desc' : 'asc')}
-                className="flex items-center gap-2 text-[13px] font-black uppercase tracking-widest text-[#0071e3] transition-all active:scale-95"
+                className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.2em] text-apple-blue hover:opacity-80 transition-all active:scale-95"
               >
                 {sortOrder === 'asc' ? <SortAsc className="w-4 h-4" /> : <SortDesc className="w-4 h-4" />}
-                {sortOrder === 'asc' ? t.sortAZ : t.sortZA}
+                {sortOrder === 'asc' ? t('glossary.sortAZ') : t('glossary.sortZA')}
               </button>
             </div>
 
             {filteredTerms.length > 0 ? (
-              <div className={`grid grid-cols-1 ${gridCols === 2 ? 'md:grid-cols-2' : gridCols === 3 ? 'md:grid-cols-2 xl:grid-cols-3' : ''} gap-6`}>
-                {filteredTerms.map(item => (
+              <div className={`grid grid-cols-1 ${gridCols === 2 ? 'md:grid-cols-2' : gridCols === 3 ? 'md:grid-cols-2 xl:grid-cols-3' : ''} gap-8`}>
+                {filteredTerms.map((item, idx) => (
                   <article 
                     key={item.term}
-                    className={`group flex flex-col bg-white dark:bg-zinc-900 rounded-3xl border-2 border-zinc-200 dark:border-zinc-800 hover:border-blue-500/20 ${gridCols === 1 ? 'p-10 sm:p-12 md:p-16' : 'p-8 md:p-10'} shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden relative`}
+                    className={`apple-card flex flex-col ${gridCols === 1 ? 'p-10 sm:p-12 md:p-14' : 'p-8 md:p-10'} relative overflow-hidden`}
+                    style={{ animationDelay: `${idx * 50}ms` }}
                   >
-                    <div className="absolute top-0 right-0 w-48 h-48 bg-blue-500/5 blur-[80px] -translate-y-1/2 translate-x-1/2 group-hover:bg-blue-500/10 transition-all duration-700" />
-                    
                     <header className="mb-8 relative z-10">
                       <div className="flex flex-wrap gap-2 mb-6">
                         {(Array.isArray(item.category) ? item.category : [item.category]).map(cat => (
                           <span 
                             key={cat} 
-                            className="px-3 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 border border-blue-100 dark:border-blue-900/50"
+                            className="px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] bg-apple-blue/10 dark:bg-apple-blue/20 text-apple-blue border border-apple-blue/10"
                           >
                             {getCategoryName(cat)}
                           </span>
                         ))}
                       </div>
-                      <h3 className={`${gridCols === 1 ? 'text-2xl sm:text-3xl md:text-4xl' : 'text-xl md:text-2xl'} font-black tracking-tight text-[#1d1d1f] dark:text-zinc-100 group-hover:text-[#0071e3] transition-colors duration-300`}>
+                      <h3 className={`${gridCols === 1 ? 'text-3xl sm:text-4xl' : 'text-xl md:text-2xl'} font-bold tracking-tight text-[#1d1d1f] dark:text-white group-hover:text-apple-blue transition-colors duration-300`}>
                         {item.term}
                       </h3>
                     </header>
 
-                    {/* Definition 區塊：修正字體縮放應用 */}
                     <div 
-                      className={`flex-1 prose prose-zinc dark:prose-invert max-w-none text-zinc-600 dark:text-zinc-400 leading-relaxed prose-p:mb-6 mb-8 relative z-10 ${gridCols > 1 ? 'text-sm' : ''}`}
-                      // 使用 scale 來縮放字體，會比操作變數更穩定
+                      className={`flex-1 prose prose-zinc dark:prose-invert max-w-none text-[#515154] dark:text-zinc-400 leading-[1.6] mb-8 relative z-10 ${gridCols > 1 ? 'text-[15px]' : 'text-[17px]'}`}
                       style={{ fontSize: `${fontScale * 100}%` }}
                       dangerouslySetInnerHTML={{ __html: item.definition }}
                     />
 
-                    {/* Analogy 區塊 */}
                     {item.analogy && (
                       <div 
-                        className={`${gridCols === 1 ? 'p-6 sm:p-8' : 'p-5 md:p-6'} bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-200 dark:border-amber-900/30 rounded-3xl relative group-hover:border-amber-300 dark:group-hover:border-amber-800/40 transition-all z-10`}
-                        // 這裡維持原本邏輯，或者也改成百分比
-                         style={{ fontSize: `${fontScale * 100}%` }}
+                        className={`p-6 sm:p-8 bg-[#f5f5f7] dark:bg-zinc-800/50 rounded-3xl relative z-10 border border-transparent hover:border-apple-blue/10 transition-all`}
+                        style={{ fontSize: `${fontScale * 100}%` }}
                       >
-                        <div className="flex items-center gap-2 mb-4 text-amber-600 dark:text-amber-500 font-black text-xs uppercase tracking-[0.2em]">
-                          <Lightbulb className="w-4 h-4" />
-                          {t.analogyLabel}
+                        <div className="flex items-center gap-2 mb-4 text-[#86868b] dark:text-[#f5f5f7]/60 font-bold text-[11px] uppercase tracking-[0.2em]">
+                          <Lightbulb className="w-4 h-4 text-amber-500" />
+                          {t('glossary.analogyLabel')}
                         </div>
                         <div 
-                          className={`${gridCols === 1 ? 'text-[15px] md:text-[17px]' : 'text-sm'} text-zinc-800 dark:text-zinc-200 leading-relaxed font-bold italic opacity-90`}
+                          className={`${gridCols === 1 ? 'text-[16px] md:text-[18px]' : 'text-[15px]'} text-[#1d1d1f] dark:text-zinc-200 leading-relaxed font-medium italic`}
                           dangerouslySetInnerHTML={{ __html: item.analogy }}
                         />
                       </div>
@@ -281,42 +275,28 @@ const Glossary: React.FC = () => {
                 ))}
               </div>
             ) : (
-              <EmptyState onClear={() => { setSearchQuery(''); setSelectedCategory('All'); }} actionText={t.clearSearch} />
+              <EmptyState onClear={() => { setSearchQuery(''); setSelectedCategory('All'); }} actionText={t('glossary.clearSearch')} title={t('glossary.emptyState', { q: searchQuery })} />
             )}
           </main>
 
           {/* Mobile Floating Button */}
-          <div className="lg:hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-40">
+          <div className="lg:hidden fixed bottom-10 left-1/2 -translate-x-1/2 z-40">
             <button 
               onClick={() => setIsDrawerOpen(true)}
-              className="flex items-center gap-2 px-6 py-4 bg-[#0071e3] text-white rounded-full font-black text-[15px] shadow-2xl shadow-blue-500/40 active:scale-95 transition-all border border-blue-400/50"
+              className="flex items-center gap-2.5 px-8 py-4 bg-apple-blue text-white rounded-full font-bold text-[16px] shadow-2xl shadow-blue-500/30 active:scale-95 transition-all"
             >
               <Search className="w-5 h-5" />
-              {t.menuBtn}
+              {t('glossary.menuBtn')}
             </button>
           </div>
 
-          {/* Mobile Drawer Overlay */}
+          {/* Mobile Drawer */}
           {isDrawerOpen && (
-            <div className="fixed inset-0 z-100 lg:hidden">
-              <div 
-                className="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity animate-in fade-in duration-300" 
-                onClick={() => setIsDrawerOpen(false)} 
-              />
-              <div className="absolute bottom-0 left-0 w-full h-[85vh] bg-white dark:bg-zinc-900 rounded-t-[40px] shadow-2xl animate-in slide-in-from-bottom duration-500 overflow-hidden flex flex-col">
-                <div className="h-1.5 w-12 bg-zinc-200 dark:bg-zinc-800 rounded-full mx-auto mt-3 mb-6 shrink-0" />
-                
-                <div className="px-8 pb-4 flex items-center justify-between shrink-0">
-                  <h2 className="text-xl font-black text-zinc-900 dark:text-white uppercase tracking-tight">{t.drawerTitle}</h2>
-                  <button 
-                    onClick={() => setIsDrawerOpen(false)}
-                    className="p-2 bg-zinc-100 dark:bg-zinc-800 rounded-full text-zinc-500"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
-                </div>
-
-                <div className="flex-1 overflow-y-auto px-8 no-scrollbar pt-2">
+            <div className="fixed inset-0 z-[100] lg:hidden animate-reveal">
+              <div className="absolute inset-0 bg-black/40 backdrop-blur-md" onClick={() => setIsDrawerOpen(false)} />
+              <div className="absolute bottom-0 left-0 w-full h-[85vh] bg-white dark:bg-black rounded-t-[2.5rem] shadow-2xl flex flex-col overflow-hidden">
+                <div className="h-1.5 w-12 bg-zinc-200 dark:bg-zinc-800 rounded-full mx-auto mt-4 mb-6 shrink-0" />
+                <div className="flex-1 overflow-y-auto px-8 pb-12 no-scrollbar">
                   <SidebarContent />
                 </div>
               </div>

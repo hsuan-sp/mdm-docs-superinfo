@@ -1,0 +1,4065 @@
+{
+  "updatedAt": "2026-01-26T09:31:35.680Z",
+  "locales": {
+    "zh": {
+      "glossary": [
+        {
+          "term": "802.1X",
+          "file": "802-1x.md"
+        },
+        {
+          "term": "AAC (Automatic Assessment Configuration)",
+          "file": "aac-automatic-assessment-configuration.md"
+        },
+        {
+          "term": "ABM (Apple Business Manager)",
+          "file": "abm-apple-business-manager.md"
+        },
+        {
+          "term": "Accessibility Features (輔助使用功能)",
+          "file": "accessibility-features.md"
+        },
+        {
+          "term": "Account-Driven Device Enrollment",
+          "file": "account-driven-device-enrollment.md"
+        },
+        {
+          "term": "ACME (Automated Certificate Management Environment)",
+          "file": "acme.md"
+        },
+        {
+          "term": "Activation Lock Bypass Code (啟用鎖定繞過代碼)",
+          "file": "activation-lock-bypass-code.md"
+        },
+        {
+          "term": "Activation Lock (啟用鎖定)",
+          "file": "activation-lock.md"
+        },
+        {
+          "term": "ADE (Automated Device Enrollment)",
+          "file": "ade-automated-device-enrollment.md"
+        },
+        {
+          "term": "Admin Account (管理者帳號)",
+          "file": "admin-account.md"
+        },
+        {
+          "term": "AirDrop Codes (AirDrop 代碼)",
+          "file": "airdrop-codes.md"
+        },
+        {
+          "term": "AirDrop for Business",
+          "file": "airdrop-for-business.md"
+        },
+        {
+          "term": "AirDrop",
+          "file": "airdrop.md"
+        },
+        {
+          "term": "AirPlay",
+          "file": "airplay.md"
+        },
+        {
+          "term": "AirPrint",
+          "file": "airprint.md"
+        },
+        {
+          "term": "Always-on VPN",
+          "file": "always-on-vpn.md"
+        },
+        {
+          "term": "APNs (Apple Push Notification service)",
+          "file": "apns.md"
+        },
+        {
+          "term": "App Config (App Configuration)",
+          "file": "app-config.md"
+        },
+        {
+          "term": "App Privacy Permissions Visibility (App 隱私權限可見度)",
+          "file": "app-privacy-permissions-visibility.md"
+        },
+        {
+          "term": "App Store",
+          "file": "app-store.md"
+        },
+        {
+          "term": "App Thinning (App 精簡化)",
+          "file": "app-thinning-app.md"
+        },
+        {
+          "term": "Apple Classroom (Apple 課堂)",
+          "file": "apple-classroom-apple.md"
+        },
+        {
+          "term": "Apple Configurator",
+          "file": "apple-configurator.md"
+        },
+        {
+          "term": "Apple Intelligence Management",
+          "file": "apple-intelligence-management.md"
+        },
+        {
+          "term": "Apple Intelligence Reports (Apple Intelligence 報告與管理)",
+          "file": "apple-intelligence-reports-ai.md"
+        },
+        {
+          "term": "Apple Intelligence (Apple 智慧)",
+          "file": "apple-intelligence.md"
+        },
+        {
+          "term": "Apple Pencil",
+          "file": "apple-pencil.md"
+        },
+        {
+          "term": "Apple Silicon",
+          "file": "apple-silicon.md"
+        },
+        {
+          "term": "AppleCare+",
+          "file": "applecare.md"
+        },
+        {
+          "term": "ARD (Apple Remote Desktop)",
+          "file": "ard-apple-remote-desktop.md"
+        },
+        {
+          "term": "ASM (Apple School Manager)",
+          "file": "asm-apple-school-manager.md"
+        },
+        {
+          "term": "Asset Tag (資產標籤)",
+          "file": "asset-tag.md"
+        },
+        {
+          "term": "Audio Accessory Configuration (音訊配件設定)",
+          "file": "audio-accessory-configuration.md"
+        },
+        {
+          "term": "Automatic App Updates（自動更新 App）",
+          "file": "automatic-app-updates.md"
+        },
+        {
+          "term": "Automatic Reboot (自動重開機)",
+          "file": "automatic-reboot.md"
+        },
+        {
+          "term": "Background App Refresh（背景 App 重新整理）",
+          "file": "background-app-refresh.md"
+        },
+        {
+          "term": "Background Security Improvements (背景安全改良)",
+          "file": "background-security-improvements.md"
+        },
+        {
+          "term": "Battery Health (電池健康度)",
+          "file": "battery-health.md"
+        },
+        {
+          "term": "Blob URLs and Managed Open-In Improvement (Blob URL 與管理式 Open-In 改進)",
+          "file": "blob-urls-and-managed-open-in-improvement.md"
+        },
+        {
+          "term": "Blueprints",
+          "file": "blueprints.md"
+        },
+        {
+          "term": "Bonjour",
+          "file": "bonjour.md"
+        },
+        {
+          "term": "Bootstrap Token",
+          "file": "bootstrap-token.md"
+        },
+        {
+          "term": "Bundle ID",
+          "file": "bundle-id.md"
+        },
+        {
+          "term": "BYOD (Bring Your Own Device)",
+          "file": "byod-bring-your-own-device.md"
+        },
+        {
+          "term": "Camera Access Control per App (個別 App 相機存取控制)",
+          "file": "camera-access-control-per-app.md"
+        },
+        {
+          "term": "Captive Portal (強制入口網頁)",
+          "file": "captive-portal.md"
+        },
+        {
+          "term": "Casper Suite",
+          "file": "casper-suite.md"
+        },
+        {
+          "term": "CDN (Content Delivery Network)",
+          "file": "cdn-content-delivery-network.md"
+        },
+        {
+          "term": "Certificate Authority (CA)",
+          "file": "certificate-authority-ca.md"
+        },
+        {
+          "term": "Certificate (憑證)",
+          "file": "certificate.md"
+        },
+        {
+          "term": "Client Isolation (使用者隔離)",
+          "file": "client-isolation.md"
+        },
+        {
+          "term": "Command History",
+          "file": "command-history.md"
+        },
+        {
+          "term": "Compliance",
+          "file": "compliance.md"
+        },
+        {
+          "term": "Composer",
+          "file": "composer.md"
+        },
+        {
+          "term": "Configuration Profile Removal（描述檔移除）",
+          "file": "configuration-profile-removal.md"
+        },
+        {
+          "term": "Content Caching (內容快取)",
+          "file": "content-caching.md"
+        },
+        {
+          "term": "Continuity（接續互通）",
+          "file": "continuity.md"
+        },
+        {
+          "term": "Custom B2B App",
+          "file": "custom-b2b-app.md"
+        },
+        {
+          "term": "DDM App Management (宣告式 App 管理)",
+          "file": "ddm-app-management.md"
+        },
+        {
+          "term": "DDM (Declarative Device Management)",
+          "file": "ddm-declarative-device-management.md"
+        },
+        {
+          "term": "Declarative App Management (宣告式 App 管理)",
+          "file": "declarative-app-management.md"
+        },
+        {
+          "term": "Declarative Software Updates (宣告式軟體更新)",
+          "file": "declarative-software-updates.md"
+        },
+        {
+          "term": "Deprecated (已棄用)",
+          "file": "deprecated.md"
+        },
+        {
+          "term": "Device Group (裝置群組)",
+          "file": "device-group.md"
+        },
+        {
+          "term": "Device Name（裝置名稱）",
+          "file": "device-name.md"
+        },
+        {
+          "term": "DFU Mode (Device Firmware Update)",
+          "file": "dfu-mode-device-firmware-update.md"
+        },
+        {
+          "term": "DHCP (Dynamic Host Configuration Protocol)",
+          "file": "dhcp-dynamic-host-configuration-protocol.md"
+        },
+        {
+          "term": "Directory Service（目錄服務）",
+          "file": "directory-service.md"
+        },
+        {
+          "term": "DMG (Disk Image)",
+          "file": "dmg-disk-image.md"
+        },
+        {
+          "term": "DNS (Domain Name System)",
+          "file": "dns-domain-name-system.md"
+        },
+        {
+          "term": "DNS over HTTPS/TLS (DNS 加密協定)",
+          "file": "dns-over-https-tls.md"
+        },
+        {
+          "term": "Domain Capture (域名擷取)",
+          "file": "domain-capture.md"
+        },
+        {
+          "term": "Drag and Drop Multitasking (拖放式多工)",
+          "file": "drag-and-drop-multitasking.md"
+        },
+        {
+          "term": "Enforcement Deadline (強制執行截止日)",
+          "file": "enforcement-deadline.md"
+        },
+        {
+          "term": "Enrollment Customization (註冊自訂內容)",
+          "file": "enrollment-customization.md"
+        },
+        {
+          "term": "Enrollment Invitation",
+          "file": "enrollment-invitation.md"
+        },
+        {
+          "term": "eSIM",
+          "file": "esim.md"
+        },
+        {
+          "term": "Ethernet（乙太網路）",
+          "file": "ethernet.md"
+        },
+        {
+          "term": "Extension Attribute (擴充屬性)",
+          "file": "extension-attribute.md"
+        },
+        {
+          "term": "Face ID",
+          "file": "face-id.md"
+        },
+        {
+          "term": "Federated Authentication (聯合驗證)",
+          "file": "federated-authentication.md"
+        },
+        {
+          "term": "FileVault Unlock over SSH (透過 SSH 解鎖 FileVault)",
+          "file": "filevault-unlock-over-ssh.md"
+        },
+        {
+          "term": "FileVault",
+          "file": "filevault.md"
+        },
+        {
+          "term": "Find My（尋找）",
+          "file": "find-my.md"
+        },
+        {
+          "term": "Firmware Password",
+          "file": "firmware-password.md"
+        },
+        {
+          "term": "Firmware",
+          "file": "firmware.md"
+        },
+        {
+          "term": "Gatekeeper",
+          "file": "gatekeeper.md"
+        },
+        {
+          "term": "Global Proxy",
+          "file": "global-proxy.md"
+        },
+        {
+          "term": "Guided Access（引導使用模式）",
+          "file": "guided-access.md"
+        },
+        {
+          "term": "Handoff（接力）",
+          "file": "handoff.md"
+        },
+        {
+          "term": "iBeacon",
+          "file": "ibeacon.md"
+        },
+        {
+          "term": "iCloud Backup（iCloud 備份）",
+          "file": "icloud-backup-icloud.md"
+        },
+        {
+          "term": "Identity Provider (IdP)",
+          "file": "identity-provider-idp.md"
+        },
+        {
+          "term": "IMEI",
+          "file": "imei.md"
+        },
+        {
+          "term": "Install Application",
+          "file": "install-application.md"
+        },
+        {
+          "term": "Install Later",
+          "file": "install-later.md"
+        },
+        {
+          "term": "Intel Mac End-of-Support Milestone (Intel Mac 支援終止里程碑)",
+          "file": "intel-mac-end-of-support-milestone.md"
+        },
+        {
+          "term": "Intelligent Hub",
+          "file": "intelligent-hub.md"
+        },
+        {
+          "term": "Inventory Collection",
+          "file": "inventory-collection.md"
+        },
+        {
+          "term": "Inventory",
+          "file": "inventory.md"
+        },
+        {
+          "term": "IP Address (IP 位址)",
+          "file": "ip-address-ip.md"
+        },
+        {
+          "term": "iPaaS",
+          "file": "ipaas.md"
+        },
+        {
+          "term": "iPhone Mirroring (iPhone 鏡像)",
+          "file": "iphone-mirroring-iphone.md"
+        },
+        {
+          "term": "JamfAAD",
+          "file": "jamf-aad.md"
+        },
+        {
+          "term": "Jamf binary",
+          "file": "jamf-binary.md"
+        },
+        {
+          "term": "Jamf Connect",
+          "file": "jamf-connect.md"
+        },
+        {
+          "term": "Jamf Data Policy",
+          "file": "jamf-data-policy.md"
+        },
+        {
+          "term": "jamfHelper",
+          "file": "jamf-helper.md"
+        },
+        {
+          "term": "Jamf Now",
+          "file": "jamf-now.md"
+        },
+        {
+          "term": "Jamf Pro API",
+          "file": "jamf-pro-api.md"
+        },
+        {
+          "term": "Jamf Pro",
+          "file": "jamf-pro.md"
+        },
+        {
+          "term": "Jamf Protect",
+          "file": "jamf-protect.md"
+        },
+        {
+          "term": "Jamf Remote",
+          "file": "jamf-remote.md"
+        },
+        {
+          "term": "Jamf Safe Internet",
+          "file": "jamf-safe-internet.md"
+        },
+        {
+          "term": "Jamf School",
+          "file": "jamf-school.md"
+        },
+        {
+          "term": "Jamf Student",
+          "file": "jamf-student.md"
+        },
+        {
+          "term": "Jamf Teacher",
+          "file": "jamf-teacher.md"
+        },
+        {
+          "term": "Jamf Trust (Jamf Private Access)",
+          "file": "jamf-trust-jamf-private-access.md"
+        },
+        {
+          "term": "JSON (JavaScript Object Notation)",
+          "file": "json.md"
+        },
+        {
+          "term": "Kernel Extension (Kext)",
+          "file": "kernel-extension-kext.md"
+        },
+        {
+          "term": "Keychain (鑰匙圈)",
+          "file": "keychain.md"
+        },
+        {
+          "term": "LAPS (Local Administrator Password Solution)",
+          "file": "laps-local-administrator-password-solution.md"
+        },
+        {
+          "term": "LDAP",
+          "file": "ldap.md"
+        },
+        {
+          "term": "Lightning Connector",
+          "file": "lightning-connector.md"
+        },
+        {
+          "term": "Liquid Glass (液態玻璃設計)",
+          "file": "liquid-glass.md"
+        },
+        {
+          "term": "Local Account (本機帳號)",
+          "file": "local-account.md"
+        },
+        {
+          "term": "Location Services（定位服務）",
+          "file": "location-services.md"
+        },
+        {
+          "term": "Lost Mode (遺失模式)",
+          "file": "lost-mode.md"
+        },
+        {
+          "term": "MAC Address",
+          "file": "mac-address.md"
+        },
+        {
+          "term": "Managed App Framework (管理式 App 框架)",
+          "file": "managed-app-framework.md"
+        },
+        {
+          "term": "Managed Apple Account (管理式 Apple 帳號)",
+          "file": "managed-apple-account.md"
+        },
+        {
+          "term": "Managed Classes（管理化班級）",
+          "file": "managed-classes.md"
+        },
+        {
+          "term": "Managed Device Attestation",
+          "file": "managed-device-attestation.md"
+        },
+        {
+          "term": "Managed Open In",
+          "file": "managed-open-in.md"
+        },
+        {
+          "term": "MDM (Mobile Device Management)",
+          "file": "mdm-mobile-device-management.md"
+        },
+        {
+          "term": "MDM Profile (MDM 描述檔)",
+          "file": "mdm-profile-mdm.md"
+        },
+        {
+          "term": "mDNS (Multicast DNS)",
+          "file": "mdns-multicast-dns.md"
+        },
+        {
+          "term": "N-1 Strategy",
+          "file": "n-1-strategy.md"
+        },
+        {
+          "term": "Network Extension URL Filtering API (網路擴充功能 URL 過濾 API)",
+          "file": "network-extension-url-filtering-api.md"
+        },
+        {
+          "term": "NIST Benchmarks (資安基準)",
+          "file": "nist-benchmarks.md"
+        },
+        {
+          "term": "Notarization (公證)",
+          "file": "notarization.md"
+        },
+        {
+          "term": "OIDC (OpenID Connect)",
+          "file": "oidc-openid-connect.md"
+        },
+        {
+          "term": "OTA (Over-The-Air)",
+          "file": "ota-over-the-air.md"
+        },
+        {
+          "term": "Package (.pkg)",
+          "file": "package-pkg.md"
+        },
+        {
+          "term": "Passcode Policy（密碼原則）",
+          "file": "passcode-policy.md"
+        },
+        {
+          "term": "Passkeys",
+          "file": "passkeys.md"
+        },
+        {
+          "term": "Patch Management",
+          "file": "patch-management.md"
+        },
+        {
+          "term": "Payload",
+          "file": "payload.md"
+        },
+        {
+          "term": "Pending Command",
+          "file": "pending-command.md"
+        },
+        {
+          "term": "Platform SSO in Setup Assistant (設定輔助程式中的 Platform SSO)",
+          "file": "platform-sso-in-setup-assistant.md"
+        },
+        {
+          "term": "Platform SSO (平台單一登入)",
+          "file": "platform-sso.md"
+        },
+        {
+          "term": "Policy (原則/政策)",
+          "file": "policy.md"
+        },
+        {
+          "term": "PPPC (Privacy Preferences Policy Control)",
+          "file": "pppc-privacy-preferences-policy-control.md"
+        },
+        {
+          "term": "PreStage Enrollment",
+          "file": "prestage-enrollment.md"
+        },
+        {
+          "term": "Private Relay (私密轉送)",
+          "file": "private-relay.md"
+        },
+        {
+          "term": "Private Wi-Fi Address (私有 Wi-Fi 位址)",
+          "file": "private-wi-fi-address.md"
+        },
+        {
+          "term": "Profile (Configuration Profile)",
+          "file": "profile-configuration-profile.md"
+        },
+        {
+          "term": "Provisioning Profile",
+          "file": "provisioning-profile.md"
+        },
+        {
+          "term": "Proxy",
+          "file": "proxy.md"
+        },
+        {
+          "term": "Push Notification (推播通知)",
+          "file": "push-notification.md"
+        },
+        {
+          "term": "QR Code Enrollment",
+          "file": "qr-code-enrollment.md"
+        },
+        {
+          "term": "RADIUS",
+          "file": "radius.md"
+        },
+        {
+          "term": "Rapid Security Response (RSR)",
+          "file": "rapid-security-response-rsr.md"
+        },
+        {
+          "term": "Recon",
+          "file": "recon.md"
+        },
+        {
+          "term": "Recovery Lock",
+          "file": "recovery-lock.md"
+        },
+        {
+          "term": "Recovery Mode（復原模式）",
+          "file": "recovery-mode.md"
+        },
+        {
+          "term": "Remote Management",
+          "file": "remote-management.md"
+        },
+        {
+          "term": "Restrict App Downloads over Cellular (限制透過行動網路下載 App)",
+          "file": "restrict-app-downloads-over-cellular.md"
+        },
+        {
+          "term": "Restricted Software",
+          "file": "restricted-software.md"
+        },
+        {
+          "term": "Return to Service",
+          "file": "return-to-service.md"
+        },
+        {
+          "term": "Root Certificate",
+          "file": "root-certificate.md"
+        },
+        {
+          "term": "Rosetta 2",
+          "file": "rosetta-2.md"
+        },
+        {
+          "term": "Roster (班級名冊)",
+          "file": "roster.md"
+        },
+        {
+          "term": "SCEP (Simple Certificate Enrollment Protocol)",
+          "file": "scep-simple-certificate-enrollment-protocol.md"
+        },
+        {
+          "term": "Schoolwork App",
+          "file": "schoolwork-app.md"
+        },
+        {
+          "term": "Scope (範圍)",
+          "file": "scope.md"
+        },
+        {
+          "term": "Screen Time（螢幕使用時間）",
+          "file": "screen-time.md"
+        },
+        {
+          "term": "Script",
+          "file": "script.md"
+        },
+        {
+          "term": "Secure Token",
+          "file": "secure-token.md"
+        },
+        {
+          "term": "Security Update",
+          "file": "security-update.md"
+        },
+        {
+          "term": "Self Service",
+          "file": "self-service.md"
+        },
+        {
+          "term": "Setup Assistant",
+          "file": "setup-assistant.md"
+        },
+        {
+          "term": "Setup Pane Skipping (跳過設定輔助程式面板)",
+          "file": "setup-pane-skipping.md"
+        },
+        {
+          "term": "Shared iPad (共用 iPad)",
+          "file": "shared-ipad.md"
+        },
+        {
+          "term": "Single App Mode (Kiosk Mode)",
+          "file": "single-app-mode-kiosk-mode.md"
+        },
+        {
+          "term": "SIP (System Integrity Protection)",
+          "file": "sip-system-integrity-protection.md"
+        },
+        {
+          "term": "Site (Jamf Pro Sites)",
+          "file": "site-jamf-pro-sites.md"
+        },
+        {
+          "term": "Smart Group",
+          "file": "smart-group.md"
+        },
+        {
+          "term": "Software Update",
+          "file": "software-update.md"
+        },
+        {
+          "term": "SSID (Service Set Identifier)",
+          "file": "ssid-service-set-identifier.md"
+        },
+        {
+          "term": "Status Channel",
+          "file": "status-channel.md"
+        },
+        {
+          "term": "Student Information System（SIS，學生資訊系統）",
+          "file": "student-information-system-sis.md"
+        },
+        {
+          "term": "Supervision (受監管)",
+          "file": "supervision.md"
+        },
+        {
+          "term": "System Extension",
+          "file": "system-extension.md"
+        },
+        {
+          "term": "Temporary Session (Guest Mode)",
+          "file": "temporary-session-guest-mode.md"
+        },
+        {
+          "term": "TestFlight",
+          "file": "testflight.md"
+        },
+        {
+          "term": "TLS / SSL",
+          "file": "tls-ssl.md"
+        },
+        {
+          "term": "Token (代號/權杖)",
+          "file": "token.md"
+        },
+        {
+          "term": "Touch ID",
+          "file": "touch-id.md"
+        },
+        {
+          "term": "Transfer to Android Tool (移轉至 Android 工具)",
+          "file": "transfer-to-android-tool.md"
+        },
+        {
+          "term": "UIE (User-Initiated Enrollment)",
+          "file": "uie-user-initiated-enrollment.md"
+        },
+        {
+          "term": "Unified Logging",
+          "file": "unified-logging.md"
+        },
+        {
+          "term": "Universal Binary",
+          "file": "universal-binary.md"
+        },
+        {
+          "term": "Universal Control（通用控制）",
+          "file": "universal-control.md"
+        },
+        {
+          "term": "Update Inventory",
+          "file": "update-inventory.md"
+        },
+        {
+          "term": "USB-C",
+          "file": "usb-c.md"
+        },
+        {
+          "term": "User Approved MDM（使用者核准的 MDM）",
+          "file": "user-approved-mdm.md"
+        },
+        {
+          "term": "User Enrollment",
+          "file": "user-enrollment.md"
+        },
+        {
+          "term": "VLAN",
+          "file": "vlan.md"
+        },
+        {
+          "term": "Volume Owner",
+          "file": "volume-owner.md"
+        },
+        {
+          "term": "VPP (Volume Purchase Program)",
+          "file": "vpp-volume-purchase-program.md"
+        },
+        {
+          "term": "Web Clip (網頁捷徑)",
+          "file": "web-clip.md"
+        },
+        {
+          "term": "Wi-Fi Payload",
+          "file": "wi-fi-payload.md"
+        },
+        {
+          "term": "Wi-Fi 5",
+          "file": "wifi-5.md"
+        },
+        {
+          "term": "Wi-Fi 6",
+          "file": "wifi-6.md"
+        },
+        {
+          "term": "Wi-Fi 6E",
+          "file": "wifi-6e.md"
+        },
+        {
+          "term": "Wi-Fi 7",
+          "file": "wifi-7.md"
+        },
+        {
+          "term": "Window App (視窗化 App)",
+          "file": "window-app.md"
+        },
+        {
+          "term": "Wipe (清除裝置)",
+          "file": "wipe.md"
+        },
+        {
+          "term": "WPA / WPA2 / WPA3",
+          "file": "wpa-wpa2-wpa3.md"
+        },
+        {
+          "term": "Zero-Touch Deployment",
+          "file": "zero-touch-deployment.md"
+        },
+        {
+          "term": "Zero Trust",
+          "file": "zero-trust.md"
+        },
+        {
+          "term": "Zero-Wipe MDM Migration (零抹除 MDM 遷移)",
+          "file": "zero-wipe-mdm-migration.md"
+        }
+      ],
+      "qa": {
+        "account": {
+          "title": "帳號與伺服器",
+          "items": [
+            {
+              "id": "acc-1",
+              "title": "登入 Apple 校務管理 (ASM) 時，系統提示需同意新的條款與約定，這很重要嗎？",
+              "file": "acc-1.md"
+            },
+            {
+              "id": "acc-10",
+              "title": "學校的 Email 網域更換了（例如從 .edu.tw 改為 .xh.edu.tw），該怎麼更改管理式 Apple 帳號？",
+              "file": "acc-10.md"
+            },
+            {
+              "id": "acc-11",
+              "title": "【憑證陷阱】Apple 課堂突然全校失靈，顯示「描述檔無效」？",
+              "file": "acc-11.md"
+            },
+            {
+              "id": "acc-12",
+              "title": "【MDM 遷移】更換新 MDM 廠商時，可以「不抹除資料」直接轉移嗎？",
+              "file": "acc-12.md"
+            },
+            {
+              "id": "acc-13",
+              "title": "【自助重設】忘記管理式 Apple 帳號密碼，可以自己重置嗎？",
+              "file": "acc-13.md"
+            },
+            {
+              "id": "acc-14",
+              "title": "ASM 中新採購的裝置無法同步到 Jamf Pro？（ADE 伺服器代號續約）",
+              "file": "acc-14.md"
+            },
+            {
+              "id": "acc-15",
+              "title": "Jamf Pro 與 Jamf School 的主要差異為何？該如何選擇？",
+              "file": "acc-15.md"
+            },
+            {
+              "id": "acc-16",
+              "title": "如何在 Apple 校務管理中處理「網域衝突」並取回帳號主導權？",
+              "file": "acc-16.md"
+            },
+            {
+              "id": "acc-17",
+              "title": "如何結合 Platform SSO (PSSO) 實現 Mac 開機即解鎖 FileVault？",
+              "file": "acc-17.md"
+            },
+            {
+              "id": "acc-18",
+              "title": "更換 MDM 廠商時，VPP App 授權如何平順轉移？需要重新購買嗎？",
+              "file": "acc-18.md"
+            },
+            {
+              "id": "acc-19",
+              "title": "如何控管「管理式 Apple 帳號」是否能使用 Apple Intelligence 功能？",
+              "file": "acc-19.md"
+            },
+            {
+              "id": "acc-2",
+              "title": "推播憑證 (APNs Certificate) 過期會發生什麼事？如何續約？",
+              "file": "acc-2.md"
+            },
+            {
+              "id": "acc-20",
+              "title": "管理式 Apple 帳號支援「多重身分驗證 (MFA)」嗎？如何管理？",
+              "file": "acc-20.md"
+            },
+            {
+              "id": "acc-21",
+              "title": "「moemdm」跟「Jamf Pro」是一樣的東西嗎？為什麼學校需要兩個帳號？",
+              "file": "acc-21.md"
+            },
+            {
+              "id": "acc-22",
+              "title": "如何在 ASM 中批次建立管理式 Apple 帳號？使用 SFTP 還是手動 CSV 匯入？",
+              "file": "acc-22.md"
+            },
+            {
+              "id": "acc-23",
+              "title": "WWDC 2025 宣布的「防止個人 Apple 帳號登入組織裝置」功能如何設定？有什麼限制？",
+              "file": "acc-23.md"
+            },
+            {
+              "id": "acc-24",
+              "title": "管理式 Apple 帳號的 iCloud 儲存空間配額如何管理？學生作業滿了怎麼辦？",
+              "file": "acc-24.md"
+            },
+            {
+              "id": "acc-25",
+              "title": "ABM/ASM 的 API 可以用來做什麼自動化工作？需要開發能力嗎？",
+              "file": "acc-25.md"
+            },
+            {
+              "id": "acc-26",
+              "title": "管理式 Apple 帳號的「iCloud+ 功能」（如隱藏電子郵件、私密轉送）在教育環境該如何管理？",
+              "file": "acc-26.md"
+            },
+            {
+              "id": "acc-3",
+              "title": "如何重置學生的「管理式 Apple 帳號」密碼？",
+              "file": "acc-3.md"
+            },
+            {
+              "id": "acc-4",
+              "title": "Jamf Pro 顯示「VPP Token」即將過期，如何更新？",
+              "file": "acc-4.md"
+            },
+            {
+              "id": "acc-5",
+              "title": "我們學校有使用 Google Workspace / Microsoft 365，可以用這些帳號登入 Apple 服務嗎？",
+              "file": "acc-5.md"
+            },
+            {
+              "id": "acc-6",
+              "title": "學生畢業或離校了，我該如何處理他們的管理式 Apple 帳號？",
+              "file": "acc-6.md"
+            },
+            {
+              "id": "acc-7",
+              "title": "我可以使用個人的 Apple 帳號登入學校的 iPad 嗎？",
+              "file": "acc-7.md"
+            },
+            {
+              "id": "acc-8",
+              "title": "忘記 Jamf Pro 的管理員登入密碼怎麼辦？",
+              "file": "acc-8.md"
+            },
+            {
+              "id": "acc-9",
+              "title": "裝置一直顯示「連線失敗」或無法更新資產 (Inventory)？",
+              "file": "acc-9.md"
+            }
+          ]
+        },
+        "enrollment": {
+          "title": "裝置註冊",
+          "items": [
+            {
+              "id": "enr-1",
+              "title": "新買的 iPad 開機後沒有出現「遠端管理」畫面，該如何確認？",
+              "file": "enr-1.md"
+            },
+            {
+              "id": "enr-10",
+              "title": "在 Jamf Pro 修改了裝置名稱，為什麼 iPad 本機端仍顯示舊名字？",
+              "file": "enr-10.md"
+            },
+            {
+              "id": "enr-11",
+              "title": "已開啟「允許刪除 App」，為什麼學生長按仍無法「刪除」App？",
+              "file": "enr-11.md"
+            },
+            {
+              "id": "enr-12",
+              "title": "什麼是「共享 iPad (Shared iPad)」？如何讓多位學生共用同一台裝置且保有個人資料？",
+              "file": "enr-12.md"
+            },
+            {
+              "id": "enr-13",
+              "title": "如何防止學生自行移除 MDM 管理描述檔？",
+              "file": "enr-13.md"
+            },
+            {
+              "id": "enr-14",
+              "title": "如何讓 iPad 重置後自動連上 Wi-Fi 並完成註冊 (Return to Service)？",
+              "file": "enr-14.md"
+            },
+            {
+              "id": "enr-15",
+              "title": "iPad 顯示「無法使用」或因密碼輸入錯誤太多次鎖死，該如何處理？",
+              "file": "enr-15.md"
+            },
+            {
+              "id": "enr-16",
+              "title": "裝置顯示「描述檔無效」或運作異常緩慢，即使重置也無法解決？",
+              "file": "enr-16.md"
+            },
+            {
+              "id": "enr-17",
+              "title": "裝置被「啟動鎖定 (Activation Lock)」鎖住了，該如何解除？",
+              "file": "enr-17.md"
+            },
+            {
+              "id": "enr-18",
+              "title": "ASM 現在可以直接解除啟用鎖定嗎？還需要聯絡 Apple 客服嗎？",
+              "file": "enr-18.md"
+            },
+            {
+              "id": "enr-19",
+              "title": "【Mac 啟動鎖定】Mac 電腦維修回來後被鎖住，該如何徹底解決？",
+              "file": "enr-19.md"
+            },
+            {
+              "id": "enr-2",
+              "title": "可以手動安裝描述檔來註冊嗎？手動與自動註冊有何差別？",
+              "file": "enr-2.md"
+            },
+            {
+              "id": "enr-20",
+              "title": "【維修 SOP】廠商繳回資訊組來的維修替換機，如何快速恢復原本的教學設定？",
+              "file": "enr-20.md"
+            },
+            {
+              "id": "enr-21",
+              "title": "購買的機器沒有出現在 ASM 中，可以用 Apple Configurator 手動加入嗎？",
+              "file": "enr-21.md"
+            },
+            {
+              "id": "enr-22",
+              "title": "【Wi-Fi 遷移】學校要更換新的無線網路 SSID，如何確保 iPad 不會集體失聯？",
+              "file": "enr-22.md"
+            },
+            {
+              "id": "enr-23",
+              "title": "什麼是「零抹除 MDM 遷移」(Zero-Wipe MDM Migration)？iOS 26 新功能適合學校使用嗎？",
+              "file": "enr-23.md"
+            },
+            {
+              "id": "enr-24",
+              "title": "如何設定「強制執行截止日期」(Enforcement Deadline) 確保裝置按時完成 MDM 註冊或系統更新？",
+              "file": "enr-24.md"
+            },
+            {
+              "id": "enr-25",
+              "title": "PreStage 註冊時可以跳過哪些「設定輔助程式」步驟？教育場域的建議設定為何？",
+              "file": "enr-25.md"
+            },
+            {
+              "id": "enr-26",
+              "title": "iOS 26 的「Return to Service 保留 App」功能如何運作？實際效益為何？",
+              "file": "enr-26.md"
+            },
+            {
+              "id": "enr-27",
+              "title": "iOS 26 的「零抹除 MDM 遷移」實戰：從教育部 Jamf Pro 轉移至校內自建 MDM 的完整流程",
+              "file": "enr-27.md"
+            },
+            {
+              "id": "enr-3",
+              "title": "什麼是「受監管模式 (Supervised Mode)」？為什麼學校裝置一定要開啟？",
+              "file": "enr-3.md"
+            },
+            {
+              "id": "enr-4",
+              "title": "「使用者註冊 (User Enrollment)」與一般的裝置註冊有何不同？",
+              "file": "enr-4.md"
+            },
+            {
+              "id": "enr-5",
+              "title": "如何在學校網域環境下，順利進行「帳號驅動註冊」的服務偵測？",
+              "file": "enr-5.md"
+            },
+            {
+              "id": "enr-6",
+              "title": "開機卡在「正在擷取遠端管理設定」轉圈圈很久，該如何排查？",
+              "file": "enr-6.md"
+            },
+            {
+              "id": "enr-7",
+              "title": "在 PreStage 註冊期間，為什麼「初次安裝 App」會卡在設定輔助程式畫面？",
+              "file": "enr-7.md"
+            },
+            {
+              "id": "enr-8",
+              "title": "註冊時出現「設定描述檔安裝失敗 (Profile Installation Failed)」？",
+              "file": "enr-8.md"
+            },
+            {
+              "id": "enr-9",
+              "title": "Jamf Pro 指令一直顯示「擱置中 (Pending)」，但裝置明明有連網？",
+              "file": "enr-9.md"
+            }
+          ]
+        },
+        "apps": {
+          "title": "App 管理",
+          "items": [
+            {
+              "id": "app-1",
+              "title": "iPad 上的 App 一直顯示「等待中 (Waiting)」或無法安裝，如何排除？",
+              "file": "app-1.md"
+            },
+            {
+              "id": "app-10",
+              "title": "為什麼開啟 App 時，iPad 會跳出要求輸入 Apple 帳號密碼的對話框？",
+              "file": "app-10.md"
+            },
+            {
+              "id": "app-11",
+              "title": "如何派送「電子書 (PDF/ePub)」教材到學生 iPad？",
+              "file": "app-11.md"
+            },
+            {
+              "id": "app-12",
+              "title": "付費 App 的授權可以分給不同學校用嗎？(跨校 VPP)",
+              "file": "app-12.md"
+            },
+            {
+              "id": "app-13",
+              "title": "什麼是「受管理的應用程式設定 (Managed App Configuration)」？如何應用於大量部署？",
+              "file": "app-13.md"
+            },
+            {
+              "id": "app-14",
+              "title": "【TestFlight】可以讓老師使用「管理式 Apple 帳號」測試校內開發的 Beta 版 App 嗎？",
+              "file": "app-14.md"
+            },
+            {
+              "id": "app-15",
+              "title": "【App 更新策略】如何避免 App 在上課時間突然更新，導致斷線或頻寬塞車？",
+              "file": "app-15.md"
+            },
+            {
+              "id": "app-16",
+              "title": "我可以統一排版學生 iPad 的桌面嗎？（例如：把數學 App 放在第一頁）",
+              "file": "app-16.md"
+            },
+            {
+              "id": "app-17",
+              "title": "我在 ASM 已經「取得」了 App，為什麼 Jamf Pro 列表裡還是找不到？",
+              "file": "app-17.md"
+            },
+            {
+              "id": "app-18",
+              "title": "我的 App Store 圖示不見了！我也沒設限制，怎麼找回來？",
+              "file": "app-18.md"
+            },
+            {
+              "id": "app-19",
+              "title": "如何將 iPad 鎖定在「單一 App」進行考試？能設定讓學生自行退出嗎？",
+              "file": "app-19.md"
+            },
+            {
+              "id": "app-2",
+              "title": "不用登入 Apple 帳號也可以在 iPad 上安裝 App 嗎？",
+              "file": "app-2.md"
+            },
+            {
+              "id": "app-20",
+              "title": "新架構：什麼是「宣告式 App 管理 (Declarative App Management)」？",
+              "file": "app-20.md"
+            },
+            {
+              "id": "app-21",
+              "title": "如何防止學生利用 iOS 18 的功能「隱藏」或「鎖定」管理式 App？",
+              "file": "app-21.md"
+            },
+            {
+              "id": "app-22",
+              "title": "【番外篇-實務採購常見狀況】以 Procreate 與 Procreate Pocket 為例，這兩者有什麼差別？學校買錯了怎麼辦？",
+              "file": "app-22.md"
+            },
+            {
+              "id": "app-23",
+              "title": "什麼是「Declarative App Management (宣告式 App 管理)」？與傳統 VPP App 指派有什麼不同？",
+              "file": "app-23.md"
+            },
+            {
+              "id": "app-24",
+              "title": "iOS 26 如何限制學生只能透過 Wi-Fi 下載 App，避免消耗行動數據？",
+              "file": "app-24.md"
+            },
+            {
+              "id": "app-25",
+              "title": "macOS 26 的「宣告式 .pkg 部署」如何使用？與傳統 Jamf Policy 有何不同？",
+              "file": "app-25.md"
+            },
+            {
+              "id": "app-26",
+              "title": "如何管理 2024-2025 年新推出的 AI 輔助教學 App（如 Writing Tools、Image Playground）？",
+              "file": "app-26.md"
+            },
+            {
+              "id": "app-27",
+              "title": "如何透過 Jamf Pro 更新 App？(自動強制執行與手動強制更新)",
+              "file": "app-27.md"
+            },
+            {
+              "id": "app-3",
+              "title": "如果隱藏了 App Store，學生要如何獲取教學所需的 App？",
+              "file": "app-3.md"
+            },
+            {
+              "id": "app-4",
+              "title": "大量採購免費 App 時，有哪些容易被忽略的細節？",
+              "file": "app-4.md"
+            },
+            {
+              "id": "app-5",
+              "title": "如何平衡「自動安裝」與「網路頻寬」？大批 App 下載不動怎麼辦？",
+              "file": "app-5.md"
+            },
+            {
+              "id": "app-6",
+              "title": "管理式 App 與個人安裝的 App 有何不同？學生畢業後可以將 App 帶走嗎？",
+              "file": "app-6.md"
+            },
+            {
+              "id": "app-7",
+              "title": "我想用的 App 在 ASM 搜不到（例如特定地區限制或下架），該如何解決？",
+              "file": "app-7.md"
+            },
+            {
+              "id": "app-8",
+              "title": "可以派送網頁捷徑 (Web Clip) 到學生桌面上嗎？這算 App 嗎？",
+              "file": "app-8.md"
+            },
+            {
+              "id": "app-9",
+              "title": "更新 App 時，需要學生的 Apple 帳號密碼嗎？如何實現靜默更新？",
+              "file": "app-9.md"
+            }
+          ]
+        },
+        "classroom": {
+          "title": "課堂管理",
+          "items": [
+            {
+              "id": "cls-1",
+              "title": "老師可以透過「課堂 (Classroom)」App 看到每位學生的螢幕嗎？",
+              "file": "cls-1.md"
+            },
+            {
+              "id": "cls-10",
+              "title": "課堂結束後，老師如何一鍵「登出」所有學生的共用 iPad？",
+              "file": "cls-10.md"
+            },
+            {
+              "id": "cls-11",
+              "title": "為什麼 iPadOS 17 以後，網管反應抓不到裝置的真實 MAC 位址？(專用 Wi-Fi 位址)",
+              "file": "cls-11.md"
+            },
+            {
+              "id": "cls-12",
+              "title": "【考試防弊】如何避免學生用 Apple Intelligence (寫作工具) 或數學備忘錄作弊？",
+              "file": "cls-12.md"
+            },
+            {
+              "id": "cls-13",
+              "title": "【共用 iPad】不想要每節課都輸入帳號密碼，有「訪客模式」嗎？",
+              "file": "cls-13.md"
+            },
+            {
+              "id": "cls-14",
+              "title": "如何管理 AirDrop？避免學生上課亂傳梗圖雜圖干擾秩序？",
+              "file": "cls-14.md"
+            },
+            {
+              "id": "cls-15",
+              "title": "學生 iPad 故障，臨時借用備用機時，原本的資料還在嗎？",
+              "file": "cls-15.md"
+            },
+            {
+              "id": "cls-16",
+              "title": "學生上課故意關閉 Wi-Fi 或藍牙來躲避「課堂」監控，該怎麼辦？",
+              "file": "cls-16.md"
+            },
+            {
+              "id": "cls-17",
+              "title": "如何防止學生自己手動刪除 App？",
+              "file": "cls-17.md"
+            },
+            {
+              "id": "cls-18",
+              "title": "「Jamf Teacher」與「Apple 課堂」有什麼不同？老師該用哪一個？",
+              "file": "cls-18.md"
+            },
+            {
+              "id": "cls-19",
+              "title": "【實務排錯】Apple Pencil 無法配對或寫不出字，該如何排除？",
+              "file": "cls-19.md"
+            },
+            {
+              "id": "cls-2",
+              "title": "可以限制學生在課堂上只能使用特定的 App 嗎？(App 鎖定)",
+              "file": "cls-2.md"
+            },
+            {
+              "id": "cls-20",
+              "title": "學生利用「時鐘」App 的鬧鐘或計時器在課堂惡作劇，MDM 有辦法管嗎？",
+              "file": "cls-20.md"
+            },
+            {
+              "id": "cls-21",
+              "title": "老師可以強制將學生的畫面投影到 Apple TV 或大螢幕嗎？",
+              "file": "cls-21.md"
+            },
+            {
+              "id": "cls-22",
+              "title": "學校網路有分「老師」與「學生」不同網段 (VLAN)，「課堂」App 還能通嗎？",
+              "file": "cls-22.md"
+            },
+            {
+              "id": "cls-23",
+              "title": "全班 iPad 發出音效擾亂課堂秩序，老師可以一鍵「全班靜音」嗎？",
+              "file": "cls-23.md"
+            },
+            {
+              "id": "cls-24",
+              "title": "如何防止學生使用 iPadOS 26 的「視窗 App」功能在課堂分心？",
+              "file": "cls-24.md"
+            },
+            {
+              "id": "cls-25",
+              "title": "「課業」與「課堂」有什麼不同？老師該用哪一個？",
+              "file": "cls-25.md"
+            },
+            {
+              "id": "cls-26",
+              "title": "iOS 26.2 的「AirDrop 代碼」會影響學校的 AirDrop 管理政策嗎？學生會利用此功能繞過管控嗎？",
+              "file": "cls-26.md"
+            },
+            {
+              "id": "cls-27",
+              "title": "iOS 26 的「音訊配件設定」如何解決共用 iPad 的 AirPods/Beats 配對混亂？",
+              "file": "cls-27.md"
+            },
+            {
+              "id": "cls-3",
+              "title": "為什麼老師發送網頁導航，學生的 iPad 卻沒反應或卡住？",
+              "file": "cls-3.md"
+            },
+            {
+              "id": "cls-4",
+              "title": "全班太吵！老師如何一鍵「鎖定」所有學生的螢幕？",
+              "file": "cls-4.md"
+            },
+            {
+              "id": "cls-5",
+              "title": "【實務除錯】藍牙都開了，為什麼「課堂」App 還是顯示學生離線？",
+              "file": "cls-5.md"
+            },
+            {
+              "id": "cls-6",
+              "title": "學生可以自行退出或移除老師建立的「課堂」班級嗎？",
+              "file": "cls-6.md"
+            },
+            {
+              "id": "cls-7",
+              "title": "老師端 iPad 一直顯示「等待裝置...」或「離線」，指令發不出去怎麼辦？",
+              "file": "cls-7.md"
+            },
+            {
+              "id": "cls-8",
+              "title": "全班同時下載教材會讓網路癱瘓嗎？什麼是「內容快取 (Content Caching)」？",
+              "file": "cls-8.md"
+            },
+            {
+              "id": "cls-9",
+              "title": "如何管理學生 iPad 的「螢幕亮度」與「自動鎖定」？",
+              "file": "cls-9.md"
+            }
+          ]
+        },
+        "digital-learning": {
+          "title": "數位精進",
+          "items": [
+            {
+              "id": "dl-1",
+              "title": "升級 iPadOS 17 後，螢幕上的 VPN 圖示消失了，這樣正常嗎？",
+              "file": "dl-1.md"
+            },
+            {
+              "id": "dl-10",
+              "title": "學生以為把平板「重置」或「DFU 刷機」就能移除學校的監管，這樣有用嗎？",
+              "file": "dl-10.md"
+            },
+            {
+              "id": "dl-11",
+              "title": "學生畢業了，這台精進方案平板要如何轉移給新生使用？",
+              "file": "dl-11.md"
+            },
+            {
+              "id": "dl-12",
+              "title": "為什麼裝置連上 Wi-Fi 卻無法上網，或被學校防火牆阻擋？(私密 Wi-Fi 位址)",
+              "file": "dl-12.md"
+            },
+            {
+              "id": "dl-13",
+              "title": "如何防止學生登入個人 Apple 帳號並自行安裝非教學用 App？",
+              "file": "dl-13.md"
+            },
+            {
+              "id": "dl-14",
+              "title": "學生上課一直亂改 iPad 名稱，導致後台分不出是哪一台，怎麼辦？",
+              "file": "dl-14.md"
+            },
+            {
+              "id": "dl-15",
+              "title": "全班同時更新 iPadOS 會導致校網崩潰或塞車，有什麼標準解法？(內容快取)",
+              "file": "dl-15.md"
+            },
+            {
+              "id": "dl-16",
+              "title": "【更新實務】教育部 Jamf Pro 帳號無法使用排程更新，該如何操作才能提高成功率？",
+              "file": "dl-16.md"
+            },
+            {
+              "id": "dl-17",
+              "title": "學校希望統一全校平板的桌布（如放上校徽），並禁止學生隨意更換，該怎麼做？",
+              "file": "dl-17.md"
+            },
+            {
+              "id": "dl-18",
+              "title": "學生亂設螢幕密碼 (Passcode) 結果忘記了，一定要重置整台 iPad 嗎？",
+              "file": "dl-18.md"
+            },
+            {
+              "id": "dl-19",
+              "title": "老師反應「課堂 (Apple Classroom)」App 常常連不到學生畫面，或顯示離線，該怎麼檢查？",
+              "file": "dl-19.md"
+            },
+            {
+              "id": "dl-2",
+              "title": "在教育部系統看到某些裝置「未使用」或資料未上傳，如何排除？",
+              "file": "dl-2.md"
+            },
+            {
+              "id": "dl-20",
+              "title": "【資產維護】精進方案合約將於 2026 年結案，若平板出現功能故障或死機應如何處理？",
+              "file": "dl-20.md"
+            },
+            {
+              "id": "dl-21",
+              "title": "精進方案範圍內的 iPad 在 2026 年如何持續管理？建議保留 MDM 嗎？",
+              "file": "dl-21.md"
+            },
+            {
+              "id": "dl-22",
+              "title": "iOS 26 的 Network Extension URL Filtering API 對內容過濾服務有什麼影響？",
+              "file": "dl-22.md"
+            },
+            {
+              "id": "dl-23",
+              "title": "iOS 26 的「背景安全性改進」會自動安裝嗎？建議開啟還是關閉？",
+              "file": "dl-23.md"
+            },
+            {
+              "id": "dl-25",
+              "title": "2024-2026 年採購的新款 iPad（M4/A17 Pro）在精進方案環境中的整合建議",
+              "file": "dl-25.md"
+            },
+            {
+              "id": "dl-26",
+              "title": "如何使用 iOS 26 的「背景安全性改進」確保精進方案載具的基礎安全防護？",
+              "file": "dl-26.md"
+            },
+            {
+              "id": "dl-3",
+              "title": "裝置連線異常，如何執行「重置網路設定」？有什麼風險？",
+              "file": "dl-3.md"
+            },
+            {
+              "id": "dl-4",
+              "title": "如何建立「精進方案」專用的智慧型群組？",
+              "file": "dl-4.md"
+            },
+            {
+              "id": "dl-5",
+              "title": "學生刪除了 Jamf Trust App，會影響使用率計算嗎？該如何防範？",
+              "file": "dl-5.md"
+            },
+            {
+              "id": "dl-6",
+              "title": "教學需要用到某些網站，如何暫時解除封鎖？",
+              "file": "dl-6.md"
+            },
+            {
+              "id": "dl-7",
+              "title": "為什麼 iPad 的「iCloud 私密轉送」被強制關閉且無法開啟？這會影響隱私嗎？",
+              "file": "dl-7.md"
+            },
+            {
+              "id": "dl-8",
+              "title": "學校 Wi-Fi 訊號很差，精進方案的 iPad 可以接有線網路 (Ethernet) 嗎？",
+              "file": "dl-8.md"
+            },
+            {
+              "id": "dl-9",
+              "title": "MDM 會不會隨時監控學生的位置 (GPS)？這有隱私問題嗎？",
+              "file": "dl-9.md"
+            }
+          ]
+        },
+        "hardware": {
+          "title": "硬體排除",
+          "items": [
+            {
+              "id": "hw-1",
+              "title": "學校同時有 iPad 9 (Lightning) 以前的載具，與 iPad 10 (USB-C) 以後的載具，配件或 Apple Pencil 如何相容？",
+              "file": "hw-1.md"
+            },
+            {
+              "id": "hw-10",
+              "title": "Apple Pencil 無法配對或寫不出來？",
+              "file": "hw-10.md"
+            },
+            {
+              "id": "hw-11",
+              "title": "我想知道 iPad 的電池健康度，但後台看不到資料，應如何評估電池是否老化？",
+              "file": "hw-11.md"
+            },
+            {
+              "id": "hw-12",
+              "title": "聽說受潮會導致保固失效，哪裡可以看到 iPad 的受潮指示器 (LCI)？",
+              "file": "hw-12.md"
+            },
+            {
+              "id": "hw-13",
+              "title": "【效能與壽命】iPad 運行變得很卡，是因為電池老化的關係嗎？還是硬體不行了？",
+              "file": "hw-13.md"
+            },
+            {
+              "id": "hw-14",
+              "title": "【網路隱私】為什麼在學校 Wi-Fi 的防火牆或 DHCP Server 上，抓不到 iPad 的真實 MAC 位址？",
+              "file": "hw-14.md"
+            },
+            {
+              "id": "hw-15",
+              "title": "macOS 裝置管理：如何透過 MDM 控管外接磁碟 (USB/Thunderbolt) 的讀寫權限以防止資料外洩？",
+              "file": "hw-15.md"
+            },
+            {
+              "id": "hw-16",
+              "title": "【電池維護】Apple Pencil 放在筆槽裡超過三個月沒充電，會壞掉嗎？",
+              "file": "hw-16.md"
+            },
+            {
+              "id": "hw-17",
+              "title": "不用拆箱對序號，MDM 後台可以直接看到裝置的保固到期日嗎？",
+              "file": "hw-17.md"
+            },
+            {
+              "id": "hw-18",
+              "title": "如何啟用 iPad Pro 與 Mac 的 Wi-Fi 6E 160MHz 頻寬？為何我的裝置速度沒有提升？",
+              "file": "hw-18.md"
+            },
+            {
+              "id": "hw-19",
+              "title": "共用 iPad 如何避免 AirPods 配對混亂？iOS 26 的新功能有用嗎？",
+              "file": "hw-19.md"
+            },
+            {
+              "id": "hw-2",
+              "title": "iPad 在充電車內無法充電，是機器故障還是車子故障？",
+              "file": "hw-2.md"
+            },
+            {
+              "id": "hw-20",
+              "title": "學生反應螢幕看起來模糊（Liquid Glass 誤解）該如何處理？",
+              "file": "hw-20.md"
+            },
+            {
+              "id": "hw-21",
+              "title": "2024-2025 年新款 iPad 硬體規格差異：M4 iPad Pro、M2/M3 iPad Air、iPad mini 7 (A17 Pro) 在管理上有什麼不同？",
+              "file": "hw-21.md"
+            },
+            {
+              "id": "hw-22",
+              "title": "精進方案 iPad 9 (2021) 在 2026 年的續用建議：效能、系統支援與汰換時機評估",
+              "file": "hw-22.md"
+            },
+            {
+              "id": "hw-23",
+              "title": "如何使用 Apple Pencil Pro 的「尋找」(Find My) 功能追蹤校園遺失的觸控筆？",
+              "file": "hw-23.md"
+            },
+            {
+              "id": "hw-24",
+              "title": "學校同時擁有 Wi-Fi 6、Wi-Fi 6E、Wi-Fi 7 設備，如何規劃網路基礎設施升級？",
+              "file": "hw-24.md"
+            },
+            {
+              "id": "hw-3",
+              "title": "AirDrop 找不到其他裝置，或 AirPlay 找不到電視與投影機？",
+              "file": "hw-3.md"
+            },
+            {
+              "id": "hw-4",
+              "title": "螢幕破裂或觸控失靈，如何判定保固範圍與人為損壞？及合約末期維修建議。",
+              "file": "hw-4.md"
+            },
+            {
+              "id": "hw-5",
+              "title": "寒暑假長期不使用，平板該如何保存電池才不會損壞？",
+              "file": "hw-5.md"
+            },
+            {
+              "id": "hw-6",
+              "title": "螢幕觸控亂跳 (Ghost Touch) 或畫面無法翻轉（自動旋轉異常）如何處理？",
+              "file": "hw-6.md"
+            },
+            {
+              "id": "hw-7",
+              "title": "送修前必須關閉「尋找 (Find My)」嗎？怎麼關？",
+              "file": "hw-7.md"
+            },
+            {
+              "id": "hw-8",
+              "title": "可以用酒精清潔 iPad 螢幕嗎？有沒有損壞風險？",
+              "file": "hw-8.md"
+            },
+            {
+              "id": "hw-9",
+              "title": "連接聰穎鍵盤或巧控鍵盤 (Smart/Magic Keyboard) 但無反應，如何排除？",
+              "file": "hw-9.md"
+            }
+          ]
+        },
+        "mac": {
+          "title": "Mac 管理",
+          "items": [
+            {
+              "id": "mac-1",
+              "title": "Mac 需要綁定 AD (Active Directory) 嗎？現代化的建議是什麼？",
+              "file": "mac-1.md"
+            },
+            {
+              "id": "mac-10",
+              "title": "Jamf Pro 預設的「資產」報告中沒有我要的資訊（如特定檔案版本、最後重開機時間），該如何自訂收集？",
+              "file": "mac-10.md"
+            },
+            {
+              "id": "mac-11",
+              "title": "Mac 安裝軟體時顯示「來自未識別的開發者」或「無法打開」，如何解決？",
+              "file": "mac-11.md"
+            },
+            {
+              "id": "mac-12",
+              "title": "如何防止學生進入 Recovery Mode (復原模式) 格式化電腦？",
+              "file": "mac-12.md"
+            },
+            {
+              "id": "mac-13",
+              "title": "Google Meet 或 Zoom 想要分享螢幕，卻一直跳出權限請求？MDM 能自動全開嗎？",
+              "file": "mac-13.md"
+            },
+            {
+              "id": "mac-14",
+              "title": "學校有多台網路印表機，如何透過 Jamf Pro 派送設定給老師的 Mac？",
+              "file": "mac-14.md"
+            },
+            {
+              "id": "mac-15",
+              "title": "如何大量部署 Microsoft Office 並啟用授權？電腦教室與行政機有何不同？",
+              "file": "mac-15.md"
+            },
+            {
+              "id": "mac-16",
+              "title": "【Sequoia 新功能】如何管理或禁用「iPhone 鏡像輸出 (iPhone Mirroring)」？",
+              "file": "mac-16.md"
+            },
+            {
+              "id": "mac-17",
+              "title": "【硬體部署】學校電腦教室改用 Mac mini (M4) 有什麼優勢？",
+              "file": "mac-17.md"
+            },
+            {
+              "id": "mac-18",
+              "title": "【資產救援】Mac 送修回來或離職交接時被舊 Apple 帳號鎖住 (啟用鎖定)，怎麼辦？",
+              "file": "mac-18.md"
+            },
+            {
+              "id": "mac-19",
+              "title": "2026 年 macOS 部署與離線安裝進階策略：如何應對大規模新機註冊？",
+              "file": "mac-19.md"
+            },
+            {
+              "id": "mac-2",
+              "title": "如何管理 Mac 的本機管理者權限 (Local Admin)？",
+              "file": "mac-2.md"
+            },
+            {
+              "id": "mac-20",
+              "title": "macOS 26 的「透過 SSH 解鎖 FileVault」如何設定？有什麼安全考量？",
+              "file": "mac-20.md"
+            },
+            {
+              "id": "mac-21",
+              "title": "macOS 26 升級後，學生可以看到 MDM 設定的隱私權限，如何處理詢問？",
+              "file": "mac-21.md"
+            },
+            {
+              "id": "mac-22",
+              "title": "macOS 26 是最後支援 Intel Mac 的版本，現有 Intel Mac 可以用多久？",
+              "file": "mac-22.md"
+            },
+            {
+              "id": "mac-23",
+              "title": "【課室秩序】如何透過 MDM 控管或禁用「iPhone 鏡像輸出」，防止學生在課堂中進行遠端干擾？",
+              "file": "mac-23.md"
+            },
+            {
+              "id": "mac-24",
+              "title": "【考試防弊】如何管理 Safari 的「干擾控制 (Distraction Control)」，避免學生在網頁檢定中隱藏關鍵 UI？",
+              "file": "mac-24.md"
+            },
+            {
+              "id": "mac-25",
+              "title": "【資安稽核】如何利用 PSSO 實現「開機即登入」，並自動滿足教育部對資安強密碼之要求？",
+              "file": "mac-25.md"
+            },
+            {
+              "id": "mac-26",
+              "title": "【新舊互通】2026 混合環境管理：如何設定 Smart Group 正確區分 Intel 與 Apple Silicon 的軟體包？",
+              "file": "mac-26.md"
+            },
+            {
+              "id": "mac-27",
+              "title": "【自動化維管】利用 macOS 26 DDM 設定「智慧能源管理」：兼顧校園節能與凌晨自動更新。",
+              "file": "mac-27.md"
+            },
+            {
+              "id": "mac-28",
+              "title": "【現場救援】Mac 快速重置 (EACS) 後若自動註冊卡住，有哪些離線恢復與修復技巧？",
+              "file": "mac-28.md"
+            },
+            {
+              "id": "mac-29",
+              "title": "如何透過 Jamf Pro 統一推送系統更新 (iOS/iPadOS/macOS)？",
+              "file": "mac-29.md"
+            },
+            {
+              "id": "mac-3",
+              "title": "如何派送非 App Store 的軟體（如 Chrome, Adobe, Office）？",
+              "file": "mac-3.md"
+            },
+            {
+              "id": "mac-4",
+              "title": "如何制定 2026 年的 macOS 軟體更新策略？DDM 宣告式更新與傳統更新有何不同？",
+              "file": "mac-4.md"
+            },
+            {
+              "id": "mac-5",
+              "title": "如何強制 Mac 進行 macOS 系統更新？學生一直按「稍後提醒」怎麼辦？",
+              "file": "mac-5.md"
+            },
+            {
+              "id": "mac-6",
+              "title": "Mac 電腦教室如何像還原卡一樣，快速清除重置 (Wipe)？",
+              "file": "mac-6.md"
+            },
+            {
+              "id": "mac-7",
+              "title": "M 系列晶片 (Apple Silicon) 的 Mac 在管理上有什麼特殊限制？",
+              "file": "mac-7.md"
+            },
+            {
+              "id": "mac-8",
+              "title": "為什麼 MDM 要求開啟 FileVault？使用者忘記登入密碼時該如何救援？",
+              "file": "mac-8.md"
+            },
+            {
+              "id": "mac-9",
+              "title": "Jamf 的 Script (腳本) 功能 can do what? How to create and run?",
+              "file": "mac-9.md"
+            }
+          ]
+        },
+        "qa-education": {
+          "title": "教育實戰",
+          "items": [
+            {
+              "id": "edu-01",
+              "title": "iPadOS 17 以上沒有顯示 VPN 圖示，這樣網路過濾或是使用率資料回傳還有在作用嗎？",
+              "file": "edu-01.md"
+            },
+            {
+              "id": "edu-02",
+              "title": "「共用 iPad (Shared iPad)」跟一般個人 iPad 有什麼不同？適合什麼情境？",
+              "file": "edu-02.md"
+            },
+            {
+              "id": "edu-03",
+              "title": "老師的 iPad 跟學生的 iPad 在 MDM 設定上有什麼不同？",
+              "file": "edu-03.md"
+            },
+            {
+              "id": "edu-04",
+              "title": "班級輪替時（如走班、分組教學），如何快速整理平板給下一班使用？",
+              "file": "edu-04.md"
+            },
+            {
+              "id": "edu-05",
+              "title": "覺得平板變慢、卡卡的，是不是壞掉了？該怎麼處理？",
+              "file": "edu-05.md"
+            },
+            {
+              "id": "edu-06",
+              "title": "我可以登入自己的 Apple 帳號 下載以前買過的遊戲嗎？",
+              "file": "edu-06.md"
+            },
+            {
+              "id": "edu-07",
+              "title": "聽說 MDM 很耗電？這是真的嗎？",
+              "file": "edu-07.md"
+            },
+            {
+              "id": "edu-08",
+              "title": "收到 iOS 更新通知，我可以馬上更新嗎？還是要等學校通知？",
+              "file": "edu-08.md"
+            },
+            {
+              "id": "edu-09",
+              "title": "我要如何把 iPad 畫面投影到傳統電視或沒有 Apple TV 的教室？",
+              "file": "edu-09.md"
+            },
+            {
+              "id": "edu-10",
+              "title": "為什麼 App Store 不見了？我要怎麼下載 App？",
+              "file": "edu-10.md"
+            },
+            {
+              "id": "edu-11",
+              "title": "「引導使用模式 (Guided Access)」跟「單一 App 模式」有什麼不一樣？",
+              "file": "edu-11.md"
+            },
+            {
+              "id": "edu-12",
+              "title": "學生做完的作業（Keynote/Pages）要怎麼交給老師？",
+              "file": "edu-12.md"
+            },
+            {
+              "id": "edu-13",
+              "title": "可以用滑鼠或藍牙鍵盤操控 iPad 嗎？",
+              "file": "edu-13.md"
+            },
+            {
+              "id": "edu-14",
+              "title": "【密碼合規】為什麼 iPad 突然要求我設定 6 位數以上的密碼？",
+              "file": "edu-14.md"
+            },
+            {
+              "id": "edu-15",
+              "title": "【定位爭議】開啟「遺失模式」會侵犯我的隱私嗎？",
+              "file": "edu-15.md"
+            },
+            {
+              "id": "edu-16",
+              "title": "【軟體安裝】為什麼 iPad 不能像 Android 一樣安裝 APK（或第三方來源 App）？",
+              "file": "edu-16.md"
+            },
+            {
+              "id": "edu-17",
+              "title": "【實務排錯】為什麼學生的 iPad 找不到「螢幕錄製」按鈕，或是按鈕是灰色的？",
+              "file": "edu-17.md"
+            },
+            {
+              "id": "edu-18",
+              "title": "【網路排除】iPad 顯示已連上 Wi-Fi 也有打勾，但網頁都打不開（顯示無網路連線）？",
+              "file": "edu-18.md"
+            },
+            {
+              "id": "edu-19",
+              "title": "新要求：教育部資安稽核要求符合 NIST 標準，MDM 該如何配合？",
+              "file": "edu-19.md"
+            },
+            {
+              "id": "edu-20",
+              "title": "【實務排錯】學生將 iPad 密碼設為跟 Apple 帳號 一樣，導致帳號被鎖定怎麼辦？",
+              "file": "edu-20.md"
+            },
+            {
+              "id": "edu-21",
+              "title": "如何管理 iOS 18 新增的「訊息摘要 (Notification Summary)」功能？",
+              "file": "edu-21.md"
+            },
+            {
+              "id": "edu-22",
+              "title": "iOS 26.2 的 AirDrop 代碼機制對課堂檔案分享的實務影響與應對方式",
+              "file": "edu-22.md"
+            },
+            {
+              "id": "edu-23",
+              "title": "如何使用 iPadOS 26.2 的「視窗 App (Window App)」多工處理功能提升教學效率？",
+              "file": "edu-23.md"
+            },
+            {
+              "id": "edu-24",
+              "title": "iOS 26 的「寫作工具」(Writing Tools) 在正式評量或考試時該如何管理？哪些功能需要禁用？",
+              "file": "edu-24.md"
+            },
+            {
+              "id": "edu-25",
+              "title": "精進方案結束後，學生使用的 iPad 還可以繼續用於學習嗎？系統升級到 iOS 26 會有問題嗎？",
+              "file": "edu-25.md"
+            },
+            {
+              "id": "edu-26",
+              "title": "老師如何管理 iOS 26 的 Apple Intelligence「寫作工具」？",
+              "file": "edu-26.md"
+            },
+            {
+              "id": "edu-27",
+              "title": "學校如果想更換 MDM 廠商，一定要把 iPad 全部重灌 (Wipe) 嗎？",
+              "file": "edu-27.md"
+            },
+            {
+              "id": "edu-28",
+              "title": "學校 iPad/Mac 到達使用年限後，MDM 管理員應如何處理「退休」流程？",
+              "file": "edu-28.md"
+            },
+            {
+              "id": "edu-29",
+              "title": "在 AI 時代（iOS 26），MDM 如何輔助「數位公民教育」與行為管理？",
+              "file": "edu-29.md"
+            },
+            {
+              "id": "edu-30",
+              "title": "學校 Wi-Fi 斷網或不穩定時，MDM 管理的 iPad 還能上課嗎？備援方案為何？",
+              "file": "edu-30.md"
+            },
+            {
+              "id": "edu-31",
+              "title": "「教育部版 Jamf Pro」與「校方自購版」有什麼不同？可以互通嗎？",
+              "file": "edu-31.md"
+            },
+            {
+              "id": "edu-32",
+              "title": "學生忘記 iPad 解鎖密碼 (Passcode) 怎麼辦？老師可以幫忙重設嗎？",
+              "file": "edu-32.md"
+            }
+          ]
+        }
+      },
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-01-23",
+          "file": "v1.0.0.md"
+        }
+      ]
+    },
+    "en": {
+      "glossary": [
+        {
+          "term": "802.1X",
+          "file": "802-1x.md"
+        },
+        {
+          "term": "AAC (Automatic Assessment Configuration)",
+          "file": "aac-automatic-assessment-configuration.md"
+        },
+        {
+          "term": "ABM (Apple Business Manager)",
+          "file": "abm-apple-business-manager.md"
+        },
+        {
+          "term": "Accessibility Features",
+          "file": "accessibility-features.md"
+        },
+        {
+          "term": "Account-Driven Device Enrollment",
+          "file": "account-driven-device-enrollment.md"
+        },
+        {
+          "term": "ACME (Automated Certificate Management Environment)",
+          "file": "acme.md"
+        },
+        {
+          "term": "Activation Lock Bypass Code",
+          "file": "activation-lock-bypass-code.md"
+        },
+        {
+          "term": "Activation Lock",
+          "file": "activation-lock.md"
+        },
+        {
+          "term": "ADE (Automated Device Enrollment)",
+          "file": "ade.md"
+        },
+        {
+          "term": "Admin Account",
+          "file": "admin-account.md"
+        },
+        {
+          "term": "AirDrop Codes",
+          "file": "airdrop-codes.md"
+        },
+        {
+          "term": "AirDrop for Business",
+          "file": "airdrop-for-business.md"
+        },
+        {
+          "term": "AirDrop",
+          "file": "airdrop.md"
+        },
+        {
+          "term": "AirPlay",
+          "file": "airplay.md"
+        },
+        {
+          "term": "AirPrint",
+          "file": "airprint.md"
+        },
+        {
+          "term": "Always-on VPN",
+          "file": "always-on-vpn.md"
+        },
+        {
+          "term": "APNs (Apple Push Notification service)",
+          "file": "apns.md"
+        },
+        {
+          "term": "App Config (App Configuration)",
+          "file": "app-config.md"
+        },
+        {
+          "term": "App Privacy Permissions Visibility",
+          "file": "app-privacy-permissions-visibility.md"
+        },
+        {
+          "term": "App Store",
+          "file": "app-store.md"
+        },
+        {
+          "term": "App Thinning",
+          "file": "app-thinning.md"
+        },
+        {
+          "term": "Apple Classroom",
+          "file": "apple-classroom.md"
+        },
+        {
+          "term": "Apple Configurator",
+          "file": "apple-configurator.md"
+        },
+        {
+          "term": "Apple Intelligence Management",
+          "file": "apple-intelligence-management.md"
+        },
+        {
+          "term": "Apple Intelligence Reports",
+          "file": "apple-intelligence-reports.md"
+        },
+        {
+          "term": "Apple Intelligence",
+          "file": "apple-intelligence.md"
+        },
+        {
+          "term": "Apple Pencil",
+          "file": "apple-pencil.md"
+        },
+        {
+          "term": "Apple Silicon",
+          "file": "apple-silicon.md"
+        },
+        {
+          "term": "AppleCare+",
+          "file": "applecare.md"
+        },
+        {
+          "term": "ARD (Apple Remote Desktop)",
+          "file": "ard.md"
+        },
+        {
+          "term": "ASM (Apple School Manager)",
+          "file": "asm.md"
+        },
+        {
+          "term": "Asset Tag",
+          "file": "asset-tag.md"
+        },
+        {
+          "term": "Audio Accessory Configuration",
+          "file": "audio-accessory-configuration.md"
+        },
+        {
+          "term": "Automatic App Updates",
+          "file": "automatic-app-updates.md"
+        },
+        {
+          "term": "Automatic Reboot",
+          "file": "automatic-reboot.md"
+        },
+        {
+          "term": "Background App Refresh",
+          "file": "background-app-refresh.md"
+        },
+        {
+          "term": "Background Security Improvements",
+          "file": "background-security-improvements.md"
+        },
+        {
+          "term": "Battery Health",
+          "file": "battery-health.md"
+        },
+        {
+          "term": "Blob URLs and Managed Open-In Improvement",
+          "file": "blob-urls-and-managed-open-in-improvement.md"
+        },
+        {
+          "term": "Blueprints",
+          "file": "blueprints.md"
+        },
+        {
+          "term": "Bonjour",
+          "file": "bonjour.md"
+        },
+        {
+          "term": "Bootstrap Token",
+          "file": "bootstrap-token.md"
+        },
+        {
+          "term": "Bundle ID",
+          "file": "bundle-id.md"
+        },
+        {
+          "term": "BYOD (Bring Your Own Device)",
+          "file": "byod.md"
+        },
+        {
+          "term": "Camera Access Control per App",
+          "file": "camera-access-control-per-app.md"
+        },
+        {
+          "term": "Captive Portal",
+          "file": "captive-portal.md"
+        },
+        {
+          "term": "Casper Suite",
+          "file": "casper-suite.md"
+        },
+        {
+          "term": "CDN (Content Delivery Network)",
+          "file": "cdn.md"
+        },
+        {
+          "term": "Certificate Authority (CA)",
+          "file": "certificate-authority.md"
+        },
+        {
+          "term": "Certificate",
+          "file": "certificate.md"
+        },
+        {
+          "term": "Client Isolation",
+          "file": "client-isolation.md"
+        },
+        {
+          "term": "Command History",
+          "file": "command-history.md"
+        },
+        {
+          "term": "Compliance",
+          "file": "compliance.md"
+        },
+        {
+          "term": "Composer",
+          "file": "composer.md"
+        },
+        {
+          "term": "Configuration Profile Removal",
+          "file": "configuration-profile-removal.md"
+        },
+        {
+          "term": "Configuration Profile",
+          "file": "configuration-profile.md"
+        },
+        {
+          "term": "Content Caching",
+          "file": "content-caching.md"
+        },
+        {
+          "term": "Continuity",
+          "file": "continuity.md"
+        },
+        {
+          "term": "Custom B2B App",
+          "file": "custom-b2b-app.md"
+        },
+        {
+          "term": "DDM App Management",
+          "file": "ddm-app-management.md"
+        },
+        {
+          "term": "DDM (Declarative Device Management)",
+          "file": "ddm.md"
+        },
+        {
+          "term": "Declarative App Management",
+          "file": "declarative-app-management.md"
+        },
+        {
+          "term": "Declarative Software Updates",
+          "file": "declarative-software-updates.md"
+        },
+        {
+          "term": "Deprecated",
+          "file": "deprecated.md"
+        },
+        {
+          "term": "Device Group",
+          "file": "device-group.md"
+        },
+        {
+          "term": "Device Name",
+          "file": "device-name.md"
+        },
+        {
+          "term": "DFU Mode (Device Firmware Update)",
+          "file": "dfu-mode.md"
+        },
+        {
+          "term": "DHCP (Dynamic Host Configuration Protocol)",
+          "file": "dhcp.md"
+        },
+        {
+          "term": "Directory Service",
+          "file": "directory-service.md"
+        },
+        {
+          "term": "DMG (Disk Image)",
+          "file": "dmg.md"
+        },
+        {
+          "term": "DNS over HTTPS/TLS (DoH/DoT)",
+          "file": "dns-over-https-tls.md"
+        },
+        {
+          "term": "DNS (Domain Name System)",
+          "file": "dns.md"
+        },
+        {
+          "term": "Domain Capture",
+          "file": "domain-capture.md"
+        },
+        {
+          "term": "Drag and Drop Multitasking",
+          "file": "drag-and-drop-multitasking.md"
+        },
+        {
+          "term": "Enforcement Deadline",
+          "file": "enforcement-deadline.md"
+        },
+        {
+          "term": "Enrollment Customization",
+          "file": "enrollment-customization.md"
+        },
+        {
+          "term": "Enrollment Invitation",
+          "file": "enrollment-invitation.md"
+        },
+        {
+          "term": "eSIM",
+          "file": "esim.md"
+        },
+        {
+          "term": "Ethernet",
+          "file": "ethernet.md"
+        },
+        {
+          "term": "Extension Attribute",
+          "file": "extension-attribute.md"
+        },
+        {
+          "term": "Face ID",
+          "file": "face-id.md"
+        },
+        {
+          "term": "Federated Authentication",
+          "file": "federated-authentication.md"
+        },
+        {
+          "term": "FileVault Unlock over SSH",
+          "file": "filevault-unlock-over-ssh.md"
+        },
+        {
+          "term": "FileVault",
+          "file": "filevault.md"
+        },
+        {
+          "term": "Find My",
+          "file": "find-my.md"
+        },
+        {
+          "term": "Firmware Password",
+          "file": "firmware-password.md"
+        },
+        {
+          "term": "Firmware",
+          "file": "firmware.md"
+        },
+        {
+          "term": "Gatekeeper",
+          "file": "gatekeeper.md"
+        },
+        {
+          "term": "Global Proxy",
+          "file": "global-proxy.md"
+        },
+        {
+          "term": "Guided Access",
+          "file": "guided-access.md"
+        },
+        {
+          "term": "Handoff",
+          "file": "handoff.md"
+        },
+        {
+          "term": "iBeacon",
+          "file": "ibeacon.md"
+        },
+        {
+          "term": "iCloud Backup",
+          "file": "icloud-backup.md"
+        },
+        {
+          "term": "Identity Provider (IdP)",
+          "file": "identity-provider.md"
+        },
+        {
+          "term": "IMEI",
+          "file": "imei.md"
+        },
+        {
+          "term": "Install Application",
+          "file": "install-application.md"
+        },
+        {
+          "term": "Install Later",
+          "file": "install-later.md"
+        },
+        {
+          "term": "Intel Mac End-of-Support Milestone",
+          "file": "intel-mac-end-of-support-milestone.md"
+        },
+        {
+          "term": "Intelligent Hub",
+          "file": "intelligent-hub.md"
+        },
+        {
+          "term": "Inventory Collection",
+          "file": "inventory-collection.md"
+        },
+        {
+          "term": "Inventory",
+          "file": "inventory.md"
+        },
+        {
+          "term": "IP Address",
+          "file": "ip-address.md"
+        },
+        {
+          "term": "iPaaS",
+          "file": "ipaas.md"
+        },
+        {
+          "term": "iPhone Mirroring",
+          "file": "iphone-mirroring.md"
+        },
+        {
+          "term": "JamfAAD",
+          "file": "jamf-aad.md"
+        },
+        {
+          "term": "Jamf Binary",
+          "file": "jamf-binary.md"
+        },
+        {
+          "term": "Jamf Connect",
+          "file": "jamf-connect.md"
+        },
+        {
+          "term": "Jamf Data Policy",
+          "file": "jamf-data-policy.md"
+        },
+        {
+          "term": "jamfHelper",
+          "file": "jamf-helper.md"
+        },
+        {
+          "term": "Jamf Now",
+          "file": "jamf-now.md"
+        },
+        {
+          "term": "Jamf Private Access",
+          "file": "jamf-private-access.md"
+        },
+        {
+          "term": "Jamf Pro API",
+          "file": "jamf-pro-api.md"
+        },
+        {
+          "term": "Jamf Pro",
+          "file": "jamf-pro.md"
+        },
+        {
+          "term": "Jamf Protect",
+          "file": "jamf-protect.md"
+        },
+        {
+          "term": "Jamf Remote Assist",
+          "file": "jamf-remote.md"
+        },
+        {
+          "term": "Jamf Safe Internet",
+          "file": "jamf-safe-internet.md"
+        },
+        {
+          "term": "Jamf School",
+          "file": "jamf-school.md"
+        },
+        {
+          "term": "Jamf Student",
+          "file": "jamf-student.md"
+        },
+        {
+          "term": "Jamf Teacher",
+          "file": "jamf-teacher.md"
+        },
+        {
+          "term": "JSON (JavaScript Object Notation)",
+          "file": "json.md"
+        },
+        {
+          "term": "Kernel Extension (Kext)",
+          "file": "kernel-extension.md"
+        },
+        {
+          "term": "Keychain",
+          "file": "keychain.md"
+        },
+        {
+          "term": "LAPS (Local Administrator Password Solution)",
+          "file": "laps.md"
+        },
+        {
+          "term": "LDAP",
+          "file": "ldap.md"
+        },
+        {
+          "term": "Lightning Connector",
+          "file": "lightning-connector.md"
+        },
+        {
+          "term": "Liquid Glass",
+          "file": "liquid-glass.md"
+        },
+        {
+          "term": "Local Account",
+          "file": "local-account.md"
+        },
+        {
+          "term": "Location Services",
+          "file": "location-services.md"
+        },
+        {
+          "term": "Lost Mode",
+          "file": "lost-mode.md"
+        },
+        {
+          "term": "MAC Address",
+          "file": "mac-address.md"
+        },
+        {
+          "term": "Managed App Framework",
+          "file": "managed-app-framework.md"
+        },
+        {
+          "term": "Managed Apple Account",
+          "file": "managed-apple-account.md"
+        },
+        {
+          "term": "Managed Classes",
+          "file": "managed-classes.md"
+        },
+        {
+          "term": "Managed Device Attestation",
+          "file": "managed-device-attestation.md"
+        },
+        {
+          "term": "Managed Open In",
+          "file": "managed-open-in.md"
+        },
+        {
+          "term": "MDM Profile",
+          "file": "mdm-profile.md"
+        },
+        {
+          "term": "MDM (Mobile Device Management)",
+          "file": "mdm.md"
+        },
+        {
+          "term": "mDNS (Multicast DNS)",
+          "file": "mdns.md"
+        },
+        {
+          "term": "N-1 Strategy",
+          "file": "n-1-strategy.md"
+        },
+        {
+          "term": "Network Extension URL Filtering API",
+          "file": "network-extension-url-filtering-api.md"
+        },
+        {
+          "term": "NIST Benchmarks",
+          "file": "nist-benchmarks.md"
+        },
+        {
+          "term": "Notarization",
+          "file": "notarization.md"
+        },
+        {
+          "term": "OIDC (OpenID Connect)",
+          "file": "oidc.md"
+        },
+        {
+          "term": "OTA (Over-The-Air)",
+          "file": "ota.md"
+        },
+        {
+          "term": "Package (.pkg)",
+          "file": "package.md"
+        },
+        {
+          "term": "Passcode Policy",
+          "file": "passcode-policy.md"
+        },
+        {
+          "term": "Passkeys",
+          "file": "passkeys.md"
+        },
+        {
+          "term": "Patch Management",
+          "file": "patch-management.md"
+        },
+        {
+          "term": "Payload",
+          "file": "payload.md"
+        },
+        {
+          "term": "Pending Command",
+          "file": "pending-command.md"
+        },
+        {
+          "term": "Platform SSO in Setup Assistant",
+          "file": "platform-sso-in-setup-assistant.md"
+        },
+        {
+          "term": "Platform SSO",
+          "file": "platform-sso.md"
+        },
+        {
+          "term": "Policy",
+          "file": "policy.md"
+        },
+        {
+          "term": "PPPC",
+          "file": "pppc.md"
+        },
+        {
+          "term": "PreStage Enrollment",
+          "file": "prestage-enrollment.md"
+        },
+        {
+          "term": "iCloud Private Relay",
+          "file": "private-relay.md"
+        },
+        {
+          "term": "Private Wi-Fi Address",
+          "file": "private-wi-fi-address.md"
+        },
+        {
+          "term": "Provisioning Profile",
+          "file": "provisioning-profile.md"
+        },
+        {
+          "term": "Proxy",
+          "file": "proxy.md"
+        },
+        {
+          "term": "Push Notification",
+          "file": "push-notification.md"
+        },
+        {
+          "term": "QR Code Enrollment",
+          "file": "qr-code-enrollment.md"
+        },
+        {
+          "term": "RADIUS",
+          "file": "radius.md"
+        },
+        {
+          "term": "Rapid Security Response (RSR)",
+          "file": "rapid-security-response.md"
+        },
+        {
+          "term": "Recon",
+          "file": "recon.md"
+        },
+        {
+          "term": "Recovery Lock",
+          "file": "recovery-lock.md"
+        },
+        {
+          "term": "Recovery Mode",
+          "file": "recovery-mode.md"
+        },
+        {
+          "term": "Remote Management",
+          "file": "remote-management.md"
+        },
+        {
+          "term": "Restrict App Downloads over Cellular",
+          "file": "restrict-app-downloads-over-cellular.md"
+        },
+        {
+          "term": "Restricted Software",
+          "file": "restricted-software.md"
+        },
+        {
+          "term": "Return to Service",
+          "file": "return-to-service.md"
+        },
+        {
+          "term": "Root Certificate",
+          "file": "root-certificate.md"
+        },
+        {
+          "term": "Rosetta 2",
+          "file": "rosetta-2.md"
+        },
+        {
+          "term": "Roster",
+          "file": "roster.md"
+        },
+        {
+          "term": "SCEP (Simple Certificate Enrollment Protocol)",
+          "file": "scep.md"
+        },
+        {
+          "term": "Schoolwork App",
+          "file": "schoolwork-app.md"
+        },
+        {
+          "term": "Scope",
+          "file": "scope.md"
+        },
+        {
+          "term": "Screen Time",
+          "file": "screen-time.md"
+        },
+        {
+          "term": "Script",
+          "file": "script.md"
+        },
+        {
+          "term": "Secure Token",
+          "file": "secure-token.md"
+        },
+        {
+          "term": "Security Update",
+          "file": "security-update.md"
+        },
+        {
+          "term": "Self Service",
+          "file": "self-service.md"
+        },
+        {
+          "term": "Setup Assistant",
+          "file": "setup-assistant.md"
+        },
+        {
+          "term": "Setup Pane Skipping",
+          "file": "setup-pane-skipping.md"
+        },
+        {
+          "term": "Shared iPad",
+          "file": "shared-ipad.md"
+        },
+        {
+          "term": "Single App Mode",
+          "file": "single-app-mode.md"
+        },
+        {
+          "term": "SIP (System Integrity Protection)",
+          "file": "sip.md"
+        },
+        {
+          "term": "Sites",
+          "file": "sites.md"
+        },
+        {
+          "term": "Smart Group",
+          "file": "smart-group.md"
+        },
+        {
+          "term": "Software Update",
+          "file": "software-update.md"
+        },
+        {
+          "term": "SSID (Service Set Identifier)",
+          "file": "ssid.md"
+        },
+        {
+          "term": "Status Channel",
+          "file": "status-channel.md"
+        },
+        {
+          "term": "Student Information System (SIS)",
+          "file": "student-information-system.md"
+        },
+        {
+          "term": "Supervision",
+          "file": "supervision.md"
+        },
+        {
+          "term": "System Extension",
+          "file": "system-extension.md"
+        },
+        {
+          "term": "Temporary Session",
+          "file": "temporary-session.md"
+        },
+        {
+          "term": "TestFlight",
+          "file": "testflight.md"
+        },
+        {
+          "term": "TLS / SSL",
+          "file": "tls-ssl.md"
+        },
+        {
+          "term": "Token",
+          "file": "token.md"
+        },
+        {
+          "term": "Touch ID",
+          "file": "touch-id.md"
+        },
+        {
+          "term": "Transfer to Android Tool",
+          "file": "transfer-to-android-tool.md"
+        },
+        {
+          "term": "Unified Logging",
+          "file": "unified-logging.md"
+        },
+        {
+          "term": "Universal Binary",
+          "file": "universal-binary.md"
+        },
+        {
+          "term": "Universal Control",
+          "file": "universal-control.md"
+        },
+        {
+          "term": "Update Inventory",
+          "file": "update-inventory.md"
+        },
+        {
+          "term": "USB-C",
+          "file": "usb-c.md"
+        },
+        {
+          "term": "User Approved MDM",
+          "file": "user-approved-mdm.md"
+        },
+        {
+          "term": "User Enrollment",
+          "file": "user-enrollment.md"
+        },
+        {
+          "term": "User-Initiated Enrollment (UIE)",
+          "file": "user-initiated-enrollment.md"
+        },
+        {
+          "term": "VLAN",
+          "file": "vlan.md"
+        },
+        {
+          "term": "Volume Owner",
+          "file": "volume-owner.md"
+        },
+        {
+          "term": "VPP (Volume Purchase Program)",
+          "file": "vpp.md"
+        },
+        {
+          "term": "Web Clip",
+          "file": "web-clip.md"
+        },
+        {
+          "term": "Wi-Fi Payload",
+          "file": "wi-fi-payload.md"
+        },
+        {
+          "term": "Wi-Fi 5",
+          "file": "wifi-5.md"
+        },
+        {
+          "term": "Wi-Fi 6",
+          "file": "wifi-6.md"
+        },
+        {
+          "term": "Wi-Fi 6E",
+          "file": "wifi-6e.md"
+        },
+        {
+          "term": "Wi-Fi 7",
+          "file": "wifi-7.md"
+        },
+        {
+          "term": "Window App",
+          "file": "window-app.md"
+        },
+        {
+          "term": "Wipe",
+          "file": "wipe.md"
+        },
+        {
+          "term": "WPA / WPA2 / WPA3",
+          "file": "wpa.md"
+        },
+        {
+          "term": "Zero-Touch Deployment",
+          "file": "zero-touch.md"
+        },
+        {
+          "term": "Zero Trust",
+          "file": "zero-trust.md"
+        },
+        {
+          "term": "Zero-Wipe MDM Migration",
+          "file": "zero-wipe-mdm-migration.md"
+        }
+      ],
+      "qa": {
+        "account": {
+          "title": "Account & Server Management",
+          "items": [
+            {
+              "id": "acc-1",
+              "title": "The system prompted to agree to 'New Terms and Conditions' when logging into Apple School Manager (ASM). Is this important?",
+              "file": "acc-1.md"
+            },
+            {
+              "id": "acc-10",
+              "title": "Our school email domain has changed (e.g., from .edu.tw to .xh.edu.tw). How do I update the Managed Apple Accounts?",
+              "file": "acc-10.md"
+            },
+            {
+              "id": "acc-11",
+              "title": "Troubleshooting: Apple Classroom fails school-wide with 'Invalid Profile' (The Certificate Trap)",
+              "file": "acc-11.md"
+            },
+            {
+              "id": "acc-12",
+              "title": "Can I migrate to a new MDM provider without wiping device data?",
+              "file": "acc-12.md"
+            },
+            {
+              "id": "acc-13",
+              "title": "Can users reset their own Managed Apple Account passwords?",
+              "file": "acc-13.md"
+            },
+            {
+              "id": "acc-14",
+              "title": "Newly purchased devices are not syncing from ASM to Jamf Pro? (ADE Server Token Renewal)",
+              "file": "acc-14.md"
+            },
+            {
+              "id": "acc-15",
+              "title": "What are the main differences between Jamf Pro and Jamf School? How should we choose?",
+              "file": "acc-15.md"
+            },
+            {
+              "id": "acc-16",
+              "title": "How do I handle 'Domain Conflicts' in Apple School Manager and reclaim account ownership?",
+              "file": "acc-16.md"
+            },
+            {
+              "id": "acc-17",
+              "title": "How do I use Platform SSO (PSSO) to unlock FileVault at system boot?",
+              "file": "acc-17.md"
+            },
+            {
+              "id": "acc-18",
+              "title": "How do I transfer VPP App licenses smoothly when changing MDM providers?",
+              "file": "acc-18.md"
+            },
+            {
+              "id": "acc-19",
+              "title": "How do I control access to Apple Intelligence features for Managed Apple Accounts?",
+              "file": "acc-19.md"
+            },
+            {
+              "id": "acc-2",
+              "title": "What happens if our APNs Push Certificate expires? How do we renew it?",
+              "file": "acc-2.md"
+            },
+            {
+              "id": "acc-20",
+              "title": "Do Managed Apple Accounts support Multi-Factor Authentication (MFA)? How is it managed?",
+              "file": "acc-20.md"
+            },
+            {
+              "id": "acc-21",
+              "title": "Is 'moemdm' the same as 'Jamf Pro'? Why does the school need two accounts?",
+              "file": "acc-21.md"
+            },
+            {
+              "id": "acc-22",
+              "title": "How do I batch create Managed Apple Accounts? Should I use SFTP or CSV import?",
+              "file": "acc-22.md"
+            },
+            {
+              "id": "acc-23",
+              "title": "How do I configure the feature to prevent personal Apple Account logins on organizational devices?",
+              "file": "acc-23.md"
+            },
+            {
+              "id": "acc-24",
+              "title": "How is the iCloud storage quota managed for Managed Apple Accounts? What if a student runs out of space?",
+              "file": "acc-24.md"
+            },
+            {
+              "id": "acc-25",
+              "title": "What automation tasks can be performed using ABM/ASM APIs? Does it require development skills?",
+              "file": "acc-25.md"
+            },
+            {
+              "id": "acc-26",
+              "title": "How should iCloud+ features (e.g., Hide My Email, Private Relay) be managed for Managed Apple Accounts in schools?",
+              "file": "acc-26.md"
+            },
+            {
+              "id": "acc-3",
+              "title": "How do I reset a student's 'Managed Apple Account' password?",
+              "file": "acc-3.md"
+            },
+            {
+              "id": "acc-4",
+              "title": "Jamf Pro shows that the 'VPP Token' is about to expire. How do we update it?",
+              "file": "acc-4.md"
+            },
+            {
+              "id": "acc-5",
+              "title": "My school uses Google Workspace / Microsoft 365. Can we use these IDs to sign into Apple services?",
+              "file": "acc-5.md"
+            },
+            {
+              "id": "acc-6",
+              "title": "Students have graduated or left the school. How should I handle their Managed Apple Accounts?",
+              "file": "acc-6.md"
+            },
+            {
+              "id": "acc-7",
+              "title": "Can I use my personal Apple Account to sign in to a school iPad?",
+              "file": "acc-7.md"
+            },
+            {
+              "id": "acc-8",
+              "title": "What should I do if I forget the Jamf Pro administrator password?",
+              "file": "acc-8.md"
+            },
+            {
+              "id": "acc-9",
+              "title": "The device shows 'Connection Failed' or won't update Inventory. How do I fix it?",
+              "file": "acc-9.md"
+            }
+          ]
+        },
+        "enrollment": {
+          "title": "Enrollment & Device Setup",
+          "items": [
+            {
+              "id": "enr-1",
+              "title": "My new iPad didn't show the 'Remote Management' screen during setup. How do I fix this?",
+              "file": "enr-1.md"
+            },
+            {
+              "id": "enr-10",
+              "title": "I changed the device name in Jamf Pro, but the iPad still shows the old name locally. Why?",
+              "file": "enr-10.md"
+            },
+            {
+              "id": "enr-11",
+              "title": "'Allow App Deletion' is enabled, but students still can't delete apps. Why?",
+              "file": "enr-11.md"
+            },
+            {
+              "id": "enr-12",
+              "title": "What is 'Shared iPad'? How can students share devices and keep their data private?",
+              "file": "enr-12.md"
+            },
+            {
+              "id": "enr-13",
+              "title": "How do I prevent students from removing the MDM management profile?",
+              "file": "enr-13.md"
+            },
+            {
+              "id": "enr-14",
+              "title": "How do I make an iPad automatically connect to Wi-Fi and re-enroll after a reset? (Return to Service)",
+              "file": "enr-14.md"
+            },
+            {
+              "id": "enr-15",
+              "title": "The iPad shows 'iPad Unavailable' or is locked due to too many failed passcode attempts. What should I do?",
+              "file": "enr-15.md"
+            },
+            {
+              "id": "enr-16",
+              "title": "The device shows 'Invalid Profile' or is running extremely slow, even after a reset. Why?",
+              "file": "enr-16.md"
+            },
+            {
+              "id": "enr-17",
+              "title": "The device is locked by 'Activation Lock'. How do I unlock it?",
+              "file": "enr-17.md"
+            },
+            {
+              "id": "enr-18",
+              "title": "Can I remove Activation Lock directly in ASM now? Do I still need Apple Support?",
+              "file": "enr-18.md"
+            },
+            {
+              "id": "enr-19",
+              "title": "A Mac returned from repair is locked by Activation Lock. How do I fix it?",
+              "file": "enr-19.md"
+            },
+            {
+              "id": "enr-2",
+              "title": "Can we just install a profile manually? What is the difference between Manual and Automated Enrollment?",
+              "file": "enr-2.md"
+            },
+            {
+              "id": "enr-20",
+              "title": "How do I quickly restore settings to a replacement device from a repair vendor?",
+              "file": "enr-20.md"
+            },
+            {
+              "id": "enr-21",
+              "title": "Can I use Apple Configurator to manually add devices that don't appear in ASM?",
+              "file": "enr-21.md"
+            },
+            {
+              "id": "enr-22",
+              "title": "The school is changing its Wi-Fi SSID. How do I prevent iPads from losing connectivity?",
+              "file": "enr-22.md"
+            },
+            {
+              "id": "enr-23",
+              "title": "What is 'Zero-Wipe MDM Migration'? Is this new iOS 26 feature suitable for schools?",
+              "file": "enr-23.md"
+            },
+            {
+              "id": "enr-24",
+              "title": "How do I set an 'Enforcement Deadline' for MDM enrollment or system updates?",
+              "file": "enr-24.md"
+            },
+            {
+              "id": "enr-25",
+              "title": "Which Setup Assistant steps should I skip during PreStage Enrollment? What are the best practices for schools?",
+              "file": "enr-25.md"
+            },
+            {
+              "id": "enr-26",
+              "title": "How does the 'Preserve Managed Apps' feature in iOS 26 Return to Service work?",
+              "file": "enr-26.md"
+            },
+            {
+              "id": "enr-27",
+              "title": "Zero-Wipe MDM Migration: Moving devices from MOE Managed Jamf Pro to an In-House MDM.",
+              "file": "enr-27.md"
+            },
+            {
+              "id": "enr-3",
+              "title": "What is 'Supervised Mode'? Why is it essential for school-owned devices?",
+              "file": "enr-3.md"
+            },
+            {
+              "id": "enr-4",
+              "title": "What is the difference between 'User Enrollment' and standard Device Enrollment?",
+              "file": "enr-4.md"
+            },
+            {
+              "id": "enr-5",
+              "title": "How do we set up 'Service Discovery' for Account-Driven Enrollment on the campus network?",
+              "file": "enr-5.md"
+            },
+            {
+              "id": "enr-6",
+              "title": "The setup is stuck spinning on 'Retrieving remote management configuration'. How do I troubleshoot?",
+              "file": "enr-6.md"
+            },
+            {
+              "id": "enr-7",
+              "title": "Why does the device get stuck on 'Installing Apps' during PreStage enrollment/Setup Assistant?",
+              "file": "enr-7.md"
+            },
+            {
+              "id": "enr-8",
+              "title": "Enrollment fails with 'Profile Installation Failed'. Why?",
+              "file": "enr-8.md"
+            },
+            {
+              "id": "enr-9",
+              "title": "Jamf Pro commands are stuck in 'Pending', but the device is definitely online. Why?",
+              "file": "enr-9.md"
+            }
+          ]
+        },
+        "apps": {
+          "title": "App & Content Distribution",
+          "items": [
+            {
+              "id": "app-1",
+              "title": "Apps on the iPad are stuck on 'Waiting' or failing to install. How do I troubleshoot this?",
+              "file": "app-1.md"
+            },
+            {
+              "id": "app-10",
+              "title": "Why does the iPad prompt for an Apple ID password when opening an app?",
+              "file": "app-10.md"
+            },
+            {
+              "id": "app-11",
+              "title": "How do I distribute E-books (PDF/ePub) to student iPads?",
+              "file": "app-11.md"
+            },
+            {
+              "id": "app-12",
+              "title": "Can paid app licenses be shared between different schools? (Cross-school VPP)",
+              "file": "app-12.md"
+            },
+            {
+              "id": "app-13",
+              "title": "What is 'Managed App Configuration'? How is it used for mass deployment?",
+              "file": "app-13.md"
+            },
+            {
+              "id": "app-14",
+              "title": "Can teachers use Managed Apple Accounts to test school-developed Beta apps in TestFlight?",
+              "file": "app-14.md"
+            },
+            {
+              "id": "app-15",
+              "title": "How do I prevent apps from updating during class time to avoid network congestion?",
+              "file": "app-15.md"
+            },
+            {
+              "id": "app-16",
+              "title": "Can I standardize the iPad Home Screen layout for students?",
+              "file": "app-16.md"
+            },
+            {
+              "id": "app-17",
+              "title": "I 'purchased' an app in ASM, but it's not appearing in my Jamf Pro list. Why?",
+              "file": "app-17.md"
+            },
+            {
+              "id": "app-18",
+              "title": "The App Store icon disappeared! How do I get it back?",
+              "file": "app-18.md"
+            },
+            {
+              "id": "app-19",
+              "title": "How do I lock an iPad into a 'Single App' for exams? Can students exit themselves?",
+              "file": "app-19.md"
+            },
+            {
+              "id": "app-2",
+              "title": "Can we install apps on iPads without signing into an Apple ID?",
+              "file": "app-2.md"
+            },
+            {
+              "id": "app-20",
+              "title": "What is 'Declarative App Management' (DDM)?",
+              "file": "app-20.md"
+            },
+            {
+              "id": "app-21",
+              "title": "How do I prevent students from 'hiding' or 'locking' Managed Apps in iOS 18?",
+              "file": "app-21.md"
+            },
+            {
+              "id": "app-22",
+              "title": "Purchasing Procreate vs. Procreate Pocket: What's the difference, and what if we bought the wrong version?",
+              "file": "app-22.md"
+            },
+            {
+              "id": "app-23",
+              "title": "What is 'Declarative App Management' (DDM), and how does it differ from traditional VPP?",
+              "file": "app-23.md"
+            },
+            {
+              "id": "app-24",
+              "title": "How do I restrict student iPads to download apps only over Wi-Fi to save cellular data?",
+              "file": "app-24.md"
+            },
+            {
+              "id": "app-25",
+              "title": "How do I use 'Declarative .pkg Deployment' in macOS 26? How does it differ from Jamf Policies?",
+              "file": "app-25.md"
+            },
+            {
+              "id": "app-26",
+              "title": "How to manage the AI-assisted teaching apps in 2024–2025 (e.g., Writing Tools, Image Playground)?",
+              "file": "app-26.md"
+            },
+            {
+              "id": "app-27",
+              "title": "How to update apps via Jamf Pro? (Automated Enforcement and Manual Force Update)",
+              "file": "app-27.md"
+            },
+            {
+              "id": "app-3",
+              "title": "If the App Store is hidden, how can students get the apps they need for class?",
+              "file": "app-3.md"
+            },
+            {
+              "id": "app-4",
+              "title": "What details should we keep in mind when 'purchasing' free apps in bulk?",
+              "file": "app-4.md"
+            },
+            {
+              "id": "app-5",
+              "title": "How do we balance automated app installs with limited school bandwidth?",
+              "file": "app-5.md"
+            },
+            {
+              "id": "app-6",
+              "title": "What is the difference between Managed Apps and personally installed apps? Can students take their apps with them after graduation?",
+              "file": "app-6.md"
+            },
+            {
+              "id": "app-7",
+              "title": "I cannot find the app I want in ASM (due to regional restrictions or removal). How do I solve this?",
+              "file": "app-7.md"
+            },
+            {
+              "id": "app-8",
+              "title": "Can I deploy Web Clips to student home screens? Are they considered apps?",
+              "file": "app-8.md"
+            },
+            {
+              "id": "app-9",
+              "title": "Do I need the student's Apple ID password to update apps? How can I achieve silent updates?",
+              "file": "app-9.md"
+            }
+          ]
+        },
+        "classroom": {
+          "title": "Apple Classroom & Teaching Tools",
+          "items": [
+            {
+              "id": "cls-1",
+              "title": "Can teachers see every student's screen using the Apple Classroom app?",
+              "file": "cls-1.md"
+            },
+            {
+              "id": "cls-10",
+              "title": "How can a teacher 'Log Out' all students from Shared iPads after class?",
+              "file": "cls-10.md"
+            },
+            {
+              "id": "cls-11",
+              "title": "Why can't I see the device's real MAC address after iPadOS 17? (Private Wi-Fi Address)",
+              "file": "cls-11.md"
+            },
+            {
+              "id": "cls-12",
+              "title": "How do I prevent students from cheating using Apple Intelligence (Writing Tools) or Math Notes?",
+              "file": "cls-12.md"
+            },
+            {
+              "id": "cls-13",
+              "title": "On a [Shared iPad], can students log in without a password? Is there a 'Guest Mode'?",
+              "file": "cls-13.md"
+            },
+            {
+              "id": "cls-14",
+              "title": "How do I manage AirDrop to prevent students from sending distracting images during class?",
+              "file": "cls-14.md"
+            },
+            {
+              "id": "cls-15",
+              "title": "If a student iPad fails and they use a loaner, will their data still be there?",
+              "file": "cls-15.md"
+            },
+            {
+              "id": "cls-16",
+              "title": "Students are disabling Wi-Fi or Bluetooth to avoid Apple Classroom monitoring. What can I do?",
+              "file": "cls-16.md"
+            },
+            {
+              "id": "cls-17",
+              "title": "How do I prevent students from manually deleting apps?",
+              "file": "cls-17.md"
+            },
+            {
+              "id": "cls-18",
+              "title": "What is the difference between 'Jamf Teacher' and 'Apple Classroom'? Which one should I use?",
+              "file": "cls-18.md"
+            },
+            {
+              "id": "cls-19",
+              "title": "Troubleshooting: Apple Pencil won't pair or write. How do I fix it?",
+              "file": "cls-19.md"
+            },
+            {
+              "id": "cls-2",
+              "title": "Can I restrict students to using only one specific app during my lesson?",
+              "file": "cls-2.md"
+            },
+            {
+              "id": "cls-20",
+              "title": "Students are using the 'Clock' app for pranks (alarms/timers). Can MDM control this?",
+              "file": "cls-20.md"
+            },
+            {
+              "id": "cls-21",
+              "title": "Can a teacher force a student's screen to project to an Apple TV?",
+              "file": "cls-21.md"
+            },
+            {
+              "id": "cls-22",
+              "title": "The school network is divided into 'Teacher' and 'Student' VLANs. Will Apple Classroom still work?",
+              "file": "cls-22.md"
+            },
+            {
+              "id": "cls-23",
+              "title": "iPads are making noise and disrupting class. Can the teacher 'Mute All' at once?",
+              "file": "cls-23.md"
+            },
+            {
+              "id": "cls-24",
+              "title": "How do I prevent students from getting distracted by 'Windowed Apps' in iPadOS 26?",
+              "file": "cls-24.md"
+            },
+            {
+              "id": "cls-25",
+              "title": "Classroom vs. Schoolwork apps: What's the difference, and which should teachers use?",
+              "file": "cls-25.md"
+            },
+            {
+              "id": "cls-26",
+              "title": "Will the 'AirDrop Code' in iOS 26.2 affect school management policies? Can students use it to bypass restrictions?",
+              "file": "cls-26.md"
+            },
+            {
+              "id": "cls-27",
+              "title": "How does the 'Audio Accessory Configuration' in iOS 26 solve AirPods pairing confusion in labs?",
+              "file": "cls-27.md"
+            },
+            {
+              "id": "cls-3",
+              "title": "Why is the web navigation failing when I try to push a URL to student iPads?",
+              "file": "cls-3.md"
+            },
+            {
+              "id": "cls-4",
+              "title": "The class is too loud! How do I 'Lock' all student screens at once?",
+              "file": "cls-4.md"
+            },
+            {
+              "id": "cls-5",
+              "title": "Troubleshooting: Bluetooth is on, but why does Apple Classroom show the students as 'Offline'?",
+              "file": "cls-5.md"
+            },
+            {
+              "id": "cls-6",
+              "title": "Can students leave or remove 'Classroom' classes created by the teacher?",
+              "file": "cls-6.md"
+            },
+            {
+              "id": "cls-7",
+              "title": "The teacher iPad shows 'Waiting for devices...' or 'Offline'. Why aren't commands sending?",
+              "file": "cls-7.md"
+            },
+            {
+              "id": "cls-8",
+              "title": "Will simultaneous downloads by the whole class crash the network? What is 'Content Caching'?",
+              "file": "cls-8.md"
+            },
+            {
+              "id": "cls-9",
+              "title": "How do I manage 'Screen Brightness' and 'Auto-Lock' on student iPads?",
+              "file": "cls-9.md"
+            }
+          ]
+        },
+        "digital-learning": {
+          "title": "Campus Digital Initiatives",
+          "items": [
+            {
+              "id": "dl-1",
+              "title": "The VPN icon disappeared after updating to iPadOS 17. Is this normal?",
+              "file": "dl-1.md"
+            },
+            {
+              "id": "dl-10",
+              "title": "Can students remove school management by 'Resetting' or 'DFU Restoring' the iPad?",
+              "file": "dl-10.md"
+            },
+            {
+              "id": "dl-11",
+              "title": "How do I transfer 'Digital Initiative' iPads from graduating students to new students?",
+              "file": "dl-11.md"
+            },
+            {
+              "id": "dl-12",
+              "title": "Why can't my device get online even when connected to Wi-Fi, or why is it blocked by the firewall?",
+              "file": "dl-12.md"
+            },
+            {
+              "id": "dl-13",
+              "title": "How do I prevent students from signing into personal Apple Accounts and installing non-educational apps?",
+              "file": "dl-13.md"
+            },
+            {
+              "id": "dl-14",
+              "title": "Students keep changing their iPad names, making it hard to track assets. How can I fix this?",
+              "file": "dl-14.md"
+            },
+            {
+              "id": "dl-15",
+              "title": "Updating all iPads at once crashes our school network. What is the standard solution? (Content Caching)",
+              "file": "dl-15.md"
+            },
+            {
+              "id": "dl-16",
+              "title": "MOE Jamf Pro accounts can't use 'Scheduled Updates'. How do I increase update success rates?",
+              "file": "dl-16.md"
+            },
+            {
+              "id": "dl-17",
+              "title": "How do I set a unify school wallpaper and prevent students from changing it?",
+              "file": "dl-17.md"
+            },
+            {
+              "id": "dl-18",
+              "title": "A student forgot their iPad passcode. Do I have to factory reset the whole device?",
+              "file": "dl-18.md"
+            },
+            {
+              "id": "dl-19",
+              "title": "Troubleshooting: Apple Classroom keeps losing student connections or showing 'Offline'.",
+              "file": "dl-19.md"
+            },
+            {
+              "id": "dl-2",
+              "title": "The MOE dashboard shows some devices as 'Unused' or failing to upload data. How do we fix this?",
+              "file": "dl-2.md"
+            },
+            {
+              "id": "dl-20",
+              "title": "Maintenance: The Digital Initiative contract ends in 2026. What should I do if iPads fail or die?",
+              "file": "dl-20.md"
+            },
+            {
+              "id": "dl-21",
+              "title": "How should Digital Initiative iPads be managed after 2026? Should we keep the MDM?",
+              "file": "dl-21.md"
+            },
+            {
+              "id": "dl-22",
+              "title": "How does the iOS 26 Network Extension URL Filtering API impact school content filters?",
+              "file": "dl-22.md"
+            },
+            {
+              "id": "dl-23",
+              "title": "Will the iOS 26 'Background Security Improvements' install automatically? Should I leave it on or off?",
+              "file": "dl-23.md"
+            },
+            {
+              "id": "dl-25",
+              "title": "Integration Recommendations for New iPads (M4/A17 Pro) in the Digital Learning Project (2024–2026)",
+              "file": "dl-25.md"
+            },
+            {
+              "id": "dl-26",
+              "title": "How to use the iOS 26 'Background Security Improvements' to maintain security for project devices.",
+              "file": "dl-26.md"
+            },
+            {
+              "id": "dl-3",
+              "title": "How do I perform a 'Reset Network Settings'? What are the risks to my MDM connection?",
+              "file": "dl-3.md"
+            },
+            {
+              "id": "dl-4",
+              "title": "How do I create Smart Groups specifically for tracking different phases of our hardware rollout?",
+              "file": "dl-4.md"
+            },
+            {
+              "id": "dl-5",
+              "title": "Students are deleting the Jamf Trust app. How does this affect compliance, and how do we prevent it?",
+              "file": "dl-5.md"
+            },
+            {
+              "id": "dl-6",
+              "title": "How can I temporarily unblock certain websites needed for teaching?",
+              "file": "dl-6.md"
+            },
+            {
+              "id": "dl-7",
+              "title": "Why is 'iCloud Private Relay' forced off on school iPads? Does this affect privacy?",
+              "file": "dl-7.md"
+            },
+            {
+              "id": "dl-8",
+              "title": "If school Wi-Fi is poor, can I connect the iPad to a wired network (Ethernet)?",
+              "file": "dl-8.md"
+            },
+            {
+              "id": "dl-9",
+              "title": "Does MDM monitor the student's location (GPS) at all times?",
+              "file": "dl-9.md"
+            }
+          ]
+        },
+        "hardware": {
+          "title": "Hardware & Maintenance",
+          "items": [
+            {
+              "id": "hw-1",
+              "title": "We have both older Lightning iPads and newer USB-C models. How do we manage accessories and Apple Pencils?",
+              "file": "hw-1.md"
+            },
+            {
+              "id": "hw-10",
+              "title": "Apple Pencil won't pair or write?",
+              "file": "hw-10.md"
+            },
+            {
+              "id": "hw-11",
+              "title": "How do I check iPad battery health? Why can't I see this data in the MDM console?",
+              "file": "hw-11.md"
+            },
+            {
+              "id": "hw-12",
+              "title": "I heard that moisture exposure voids the warranty. Where is the iPad Liquid Contact Indicator (LCI)?",
+              "file": "hw-12.md"
+            },
+            {
+              "id": "hw-13",
+              "title": "My iPad is lagging. Is it because of battery aging or old hardware?",
+              "file": "hw-13.md"
+            },
+            {
+              "id": "hw-14",
+              "title": "Why can't our firewall see the iPad's real MAC address?",
+              "file": "hw-14.md"
+            },
+            {
+              "id": "hw-15",
+              "title": "How do I restrict USB/Thunderbolt drive access on macOS to prevent data leaks?",
+              "file": "hw-15.md"
+            },
+            {
+              "id": "hw-16",
+              "title": "Will the Apple Pencil break if left in its tray for 3 months without charging?",
+              "file": "hw-16.md"
+            },
+            {
+              "id": "hw-17",
+              "title": "Can I see device warranty expiration dates directly in the MDM console?",
+              "file": "hw-17.md"
+            },
+            {
+              "id": "hw-18",
+              "title": "How do I enable Wi-Fi 6E 160MHz on iPad Pro and Mac? Why isn't my speed improving?",
+              "file": "hw-18.md"
+            },
+            {
+              "id": "hw-19",
+              "title": "How do I avoid AirPods pairing confusion in Shared iPad environments? Does iOS 26 fix this?",
+              "file": "hw-19.md"
+            },
+            {
+              "id": "hw-2",
+              "title": "An iPad isn't charging inside the cart. Is the device faulty or the cart?",
+              "file": "hw-2.md"
+            },
+            {
+              "id": "hw-20",
+              "title": "Students are reporting the screen looks 'Blurry' (Liquid Glass Design). How do I handle this?",
+              "file": "hw-20.md"
+            },
+            {
+              "id": "hw-21",
+              "title": "2024-2025 iPad Hardware Differences: M4 Pro, M2/M3 Air, iPad mini 7 (A17 Pro).",
+              "file": "hw-21.md"
+            },
+            {
+              "id": "hw-22",
+              "title": "The iPad 9 (2021) in 2026: Performance evaluation and end-of-life planning.",
+              "file": "hw-22.md"
+            },
+            {
+              "id": "hw-23",
+              "title": "How do I use 'Find My' to track lost Apple Pencil Pro styluses on campus?",
+              "file": "hw-23.md"
+            },
+            {
+              "id": "hw-24",
+              "title": "Managing Wi-Fi 6, 6E, and 7: How to plan school network upgrades for a mixed fleet.",
+              "file": "hw-24.md"
+            },
+            {
+              "id": "hw-3",
+              "title": "AirDrop won't find other devices, or AirPlay can't see the classroom Apple TV. Why?",
+              "file": "hw-3.md"
+            },
+            {
+              "id": "hw-4",
+              "title": "The screen is cracked or the touch response is failing. How is warranty vs. accidental damage determined?",
+              "file": "hw-4.md"
+            },
+            {
+              "id": "hw-5",
+              "title": "How should we store iPads during the summer break to prevent battery damage?",
+              "file": "hw-5.md"
+            },
+            {
+              "id": "hw-6",
+              "title": "How do I handle 'Ghost Touch' or issues with auto-rotation on the screen?",
+              "file": "hw-6.md"
+            },
+            {
+              "id": "hw-7",
+              "title": "Must 'Find My' be turned off before repair? How?",
+              "file": "hw-7.md"
+            },
+            {
+              "id": "hw-8",
+              "title": "Can I clean the iPad screen with alcohol? Is there a risk of damage?",
+              "file": "hw-8.md"
+            },
+            {
+              "id": "hw-9",
+              "title": "The Smart or Magic Keyboard is not responding. How do I troubleshoot it?",
+              "file": "hw-9.md"
+            }
+          ]
+        },
+        "mac": {
+          "title": "Advanced Mac Management",
+          "items": [
+            {
+              "id": "mac-1",
+              "title": "Should we still bind our Macs to Active Directory (AD)? What is the modern recommendation?",
+              "file": "mac-1.md"
+            },
+            {
+              "id": "mac-10",
+              "title": "Default Jamf Pro inventory lacks specific info (like file versions or last reboot). How do I collect custom data?",
+              "file": "mac-10.md"
+            },
+            {
+              "id": "mac-11",
+              "title": "Why does my Mac show 'Unidentified Developer' or 'Cannot be opened' when installing software?",
+              "file": "mac-11.md"
+            },
+            {
+              "id": "mac-12",
+              "title": "How do I prevent students from entering Recovery Mode to format the computer?",
+              "file": "mac-12.md"
+            },
+            {
+              "id": "mac-13",
+              "title": "Google Meet or Zoom keeps asking for 'Screen Recording' permissions. Can MDM enable this automatically?",
+              "file": "mac-13.md"
+            },
+            {
+              "id": "mac-14",
+              "title": "How do I deploy multiple network printers to teacher Macs using Jamf Pro?",
+              "file": "mac-14.md"
+            },
+            {
+              "id": "mac-15",
+              "title": "How do I mass-deploy Microsoft Office and activate licenses? Lab vs. Administrative Macs?",
+              "file": "mac-15.md"
+            },
+            {
+              "id": "mac-16",
+              "title": "How do I manage or disable 'iPhone Mirroring' in macOS Sequoia?",
+              "file": "mac-16.md"
+            },
+            {
+              "id": "mac-17",
+              "title": "What are the advantages of using the Mac mini (M4/M5) for school labs?",
+              "file": "mac-17.md"
+            },
+            {
+              "id": "mac-18",
+              "title": "A Mac is locked by a former user's Apple ID (Activation Lock). How do I recover it?",
+              "file": "mac-18.md"
+            },
+            {
+              "id": "mac-19",
+              "title": "2026 macOS Deployment: Advanced strategies for large-scale enrollment.",
+              "file": "mac-19.md"
+            },
+            {
+              "id": "mac-2",
+              "title": "How do we manage Local Admin privileges for staff and students on Macs?",
+              "file": "mac-2.md"
+            },
+            {
+              "id": "mac-20",
+              "title": "How do I configure 'Unlock FileVault via SSH' in macOS 26?",
+              "file": "mac-20.md"
+            },
+            {
+              "id": "mac-21",
+              "title": "macOS 26 Transparency: Students can see MDM privacy settings. How do I handle questions?",
+              "file": "mac-21.md"
+            },
+            {
+              "id": "mac-22",
+              "title": "macOS 26: The end of the Intel Mac era. How much longer can Intel Macs be used?",
+              "file": "mac-22.md"
+            },
+            {
+              "id": "mac-23",
+              "title": "Classroom Order: How to manage or disable 'iPhone Mirroring' to prevent student distractions.",
+              "file": "mac-23.md"
+            },
+            {
+              "id": "mac-24",
+              "title": "Exam Security: Managing Safari 'Distraction Control' to prevent cheating during web-based tests.",
+              "file": "mac-24.md"
+            },
+            {
+              "id": "mac-25",
+              "title": "Security Auditing: Using PSSO 2.0 to achieve 'Boot-to-Desktop' and meet strong password requirements.",
+              "file": "mac-25.md"
+            },
+            {
+              "id": "mac-26",
+              "title": "Mixed Fleet Management: Using Smart Groups to distinguish between Intel and Apple Silicon software packages.",
+              "file": "mac-26.md"
+            },
+            {
+              "id": "mac-27",
+              "title": "Automated Maintenance: Using macOS 26 DDM for 'Smart Energy Management' (Eco-friendly vs. Scheduled Updates).",
+              "file": "mac-27.md"
+            },
+            {
+              "id": "mac-28",
+              "title": "First-Aid: What to do if Mac Enrollment hangs after a 'Wipe All Content and Settings' (EACS) reset.",
+              "file": "mac-28.md"
+            },
+            {
+              "id": "mac-29",
+              "title": "How to push system updates (iOS/iPadOS/macOS) via Jamf Pro?",
+              "file": "mac-29.md"
+            },
+            {
+              "id": "mac-3",
+              "title": "How do we distribute non-App Store software like Chrome, Adobe CC, or Office?",
+              "file": "mac-3.md"
+            },
+            {
+              "id": "mac-4",
+              "title": "How should we design our macOS update strategy for 2026? How does DDM change things?",
+              "file": "mac-4.md"
+            },
+            {
+              "id": "mac-5",
+              "title": "How do I force a Mac to perform system updates? Students keep clicking 'Remind Me Later'.",
+              "file": "mac-5.md"
+            },
+            {
+              "id": "mac-6",
+              "title": "How can I quickly reset (wipe) a Mac lab, similar to using recovery cards?",
+              "file": "mac-6.md"
+            },
+            {
+              "id": "mac-7",
+              "title": "What special restrictions apply to managing Apple Silicon (M-series) Macs?",
+              "file": "mac-7.md"
+            },
+            {
+              "id": "mac-8",
+              "title": "Why does MDM require FileVault? How do I recover a forgotten login password?",
+              "file": "mac-8.md"
+            },
+            {
+              "id": "mac-9",
+              "title": "What can Jamf Scripts do? How do I create and run them?",
+              "file": "mac-9.md"
+            }
+          ]
+        },
+        "qa-education": {
+          "title": "Education Scenarios & FAQ",
+          "items": [
+            {
+              "id": "edu-01",
+              "title": "The VPN icon is missing on iPadOS. Are network filtering and usage reporting still working?",
+              "file": "edu-01.md"
+            },
+            {
+              "id": "edu-02",
+              "title": "What is 'Shared iPad' and how does it differ from a standard iPad? When should we use it?",
+              "file": "edu-02.md"
+            },
+            {
+              "id": "edu-03",
+              "title": "What are the configuration differences between Teacher iPads and Student iPads?",
+              "file": "edu-03.md"
+            },
+            {
+              "id": "edu-04",
+              "title": "How do we quickly reset iPads between different classes or rotating groups?",
+              "file": "edu-04.md"
+            },
+            {
+              "id": "edu-05",
+              "title": "The iPad feels slow or laggy. Is it faulty? How do we fix it?",
+              "file": "edu-05.md"
+            },
+            {
+              "id": "edu-06",
+              "title": "Can I sign into my personal Apple Account to download games I bought before?",
+              "file": "edu-06.md"
+            },
+            {
+              "id": "edu-07",
+              "title": "I heard MDM drains the battery quickly. Is this true?",
+              "file": "edu-07.md"
+            },
+            {
+              "id": "edu-08",
+              "title": "I received an iOS update notification. Can I update immediately or should I wait?",
+              "file": "edu-08.md"
+            },
+            {
+              "id": "edu-09",
+              "title": "How do I project my iPad screen to a traditional TV or a classroom without Apple TV?",
+              "file": "edu-09.md"
+            },
+            {
+              "id": "edu-10",
+              "title": "Why is the App Store missing? How do I download apps?",
+              "file": "edu-10.md"
+            },
+            {
+              "id": "edu-11",
+              "title": "What is the difference between 'Guided Access' and 'Single App Mode'?",
+              "file": "edu-11.md"
+            },
+            {
+              "id": "edu-12",
+              "title": "How do students submit their work (Keynote/Pages) to the teacher?",
+              "file": "edu-12.md"
+            },
+            {
+              "id": "edu-13",
+              "title": "Can I use a mouse or a Bluetooth keyboard with my iPad?",
+              "file": "edu-13.md"
+            },
+            {
+              "id": "edu-14",
+              "title": "Why is my iPad suddenly requiring a 6-digit (or longer) passcode?",
+              "file": "edu-14.md"
+            },
+            {
+              "id": "edu-15",
+              "title": "Does enabling 'Lost Mode' infringe on my privacy?",
+              "file": "edu-15.md"
+            },
+            {
+              "id": "edu-16",
+              "title": "Why can't iPads install 'APKs' (or third-party apps) like Android devices?",
+              "file": "edu-16.md"
+            },
+            {
+              "id": "edu-17",
+              "title": "Why is the 'Screen Recording' button missing or grayed out on student iPads?",
+              "file": "edu-17.md"
+            },
+            {
+              "id": "edu-18",
+              "title": "The iPad shows it's connected to Wi-Fi, but I can't open any web pages. Why?",
+              "file": "edu-18.md"
+            },
+            {
+              "id": "edu-19",
+              "title": "MOE Cybersecurity Audit: How does MDM help comply with NIST standards?",
+              "file": "edu-19.md"
+            },
+            {
+              "id": "edu-20",
+              "title": "Troubleshooting: A student used the same password for their iPad and Apple Account, and now both are locked.",
+              "file": "edu-20.md"
+            },
+            {
+              "id": "edu-21",
+              "title": "How do I manage the new 'Notification Summary' AI feature in iOS 18?",
+              "file": "edu-21.md"
+            },
+            {
+              "id": "edu-22",
+              "title": "The AirDrop Code Mechanism: Practical impact on classroom file sharing and how to adapt.",
+              "file": "edu-22.md"
+            },
+            {
+              "id": "edu-23",
+              "title": "Boosting classroom productivity with iPadOS 26.2 'Windowed Apps' multitasking.",
+              "file": "edu-23.md"
+            },
+            {
+              "id": "edu-24",
+              "title": "Managing 'Writing Tools' (AI) during exams: Which features should be restricted?",
+              "file": "edu-24.md"
+            },
+            {
+              "id": "edu-25",
+              "title": "Can iPads from the Digital Learning Project (MOE) still be used after the project expires? Is upgrading to iPadOS 26 safe?",
+              "file": "edu-25.md"
+            },
+            {
+              "id": "edu-26",
+              "title": "How do teachers manage Apple Intelligence 'Writing Tools' in the classroom?",
+              "file": "edu-26.md"
+            },
+            {
+              "id": "edu-27",
+              "title": "If a school changes MDM providers, is it mandatory to wipe all iPads?",
+              "file": "edu-27.md"
+            },
+            {
+              "id": "edu-28",
+              "title": "How should MDM administrators handle the 'Retirement' process for iPad/Mac hardware?",
+              "file": "edu-28.md"
+            },
+            {
+              "id": "edu-29",
+              "title": "In the AI Era (iOS 26), how can MDM assist with Digital Citizenship and behavior management?",
+              "file": "edu-29.md"
+            },
+            {
+              "id": "edu-30",
+              "title": "Can MDM-managed iPads still be used if the school Wi-Fi is down? What are the backup plans?",
+              "file": "edu-30.md"
+            },
+            {
+              "id": "edu-31",
+              "title": "What is the difference between the 'MOE Managed Jamf Pro' and 'School-Purchased Jamf Pro'?",
+              "file": "edu-31.md"
+            },
+            {
+              "id": "edu-32",
+              "title": "What if a student forgets their iPad passcode? Can a teacher help reset it?",
+              "file": "edu-32.md"
+            }
+          ]
+        }
+      },
+      "changelog": [
+        {
+          "version": "v1.0.0",
+          "date": "2026-01-23",
+          "file": "v1.0.0.md"
+        }
+      ]
+    }
+  }
+}

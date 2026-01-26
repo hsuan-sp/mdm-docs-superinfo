@@ -2,6 +2,8 @@ import { signIn, signOut, handleSignIn, getLogtoContext } from '@logto/next/serv
 import { logtoConfig } from '@/app/logto';
 import { NextRequest, NextResponse } from 'next/server';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(
     request: NextRequest,
     { params }: { params: Promise<{ action: string }> }
@@ -23,10 +25,11 @@ export async function GET(
 
     if (action === 'callback') {
         try {
-            await handleSignIn(logtoConfig, new URL(request.url));
+            await handleSignIn(logtoConfig, request.nextUrl.searchParams);
+            // handleSignIn normally throws a redirect. If it reaches here, manually redirect.
+            return NextResponse.redirect(new URL('/', request.url));
         } catch (error: any) {
-            // Next.js redirect () 實際上是透過丟出一個特殊 error 來運作的
-            // 我們不應該捕捉它，否則跳轉會失效
+            // Respect Next.js internal redirects
             if (error.digest?.startsWith('NEXT_REDIRECT') || error.message === 'NEXT_REDIRECT') {
                 throw error;
             }
@@ -39,7 +42,7 @@ export async function GET(
     }
 
     if (action === 'user') {
-        const context = await getLogtoContext(logtoConfig);
+        const context = await getLogtoContext(logtoConfig, { fetchUserInfo: true });
         return NextResponse.json(context);
     }
 

@@ -19,34 +19,46 @@ function useDebounce<T>(value: T, delay: number): T {
 }
 
 interface GuideProps {
-  allData: QAModule[]
+  initialData?: QAModule[]
 }
 
-const Guide: React.FC = () => {
+const Guide: React.FC<GuideProps> = ({ initialData }) => {
   // const router = useRouter() // 沒用到可以移除
-  const { language: locale } = useLanguage()
-  const t = translations[locale as keyof typeof translations]?.guide || translations['zh-TW'].guide
+  const { t, language: locale } = useLanguage()
 
-  const [allData, setAllData] = useState<QAModule[]>([])
-  const [isDataLoading, setIsDataLoading] = useState(true)
+  const [allData, setAllData] = useState<QAModule[]>(initialData || [])
+  const [isDataLoading, setIsDataLoading] = useState(!initialData)
   
   // 搜尋與篩選
   const [searchQuery, setSearchQuery] = useState('')
-  const debouncedQuery = useDebounce(searchQuery, 300) // 加入 Debounce
+  const debouncedQuery = useDebounce(searchQuery, 300) 
   
   const [activeSource, setActiveSource] = useState<string | 'All'>('All')
   const [openItems, setOpenItems] = useState<Set<string>>(new Set())
-  const [fontScale, setFontScale] = useState(1) // 預設 1
+  const [fontScale, setFontScale] = useState(1) 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
   
-  const { user, isLoading: isAuthLoading } = useUser()
+  const { user, isLoading: isAuthLoading, isAuthenticated } = useUser()
   
   // Infinite Scroll State
   const [visibleCount, setVisibleCount] = useState(20)
 
   useEffect(() => {
-    if (isAuthLoading || !user) return
+    // 🔍 偵測是否在 GitHub Pages 環境
+    const isGitHubPages = typeof window !== 'undefined' && window.location.hostname.includes('github.io');
+
+    // 1. 如果已有初始資料且非切換語言情境，就不再 fetch
+    if (initialData && allData.length > 0) return;
+
+    // 2. 如果在 GitHub Pages (靜態環境)，API 已被移除，不應進行 fetch
+    if (isGitHubPages) return;
+
+    // 3. 登入中不執行 fetch
+    if (isAuthLoading) return;
     
+    // 4. 未登入且非 GitHub Pages，不 fetch (安全考慮)
+    if (!isAuthenticated) return;
+
     const fetchData = async () => {
       setIsDataLoading(true)
       try {
@@ -62,7 +74,7 @@ const Guide: React.FC = () => {
       }
     }
     fetchData()
-  }, [locale, user, isAuthLoading])
+  }, [locale, user, isAuthLoading, isAuthenticated, initialData])
 
   // Reset visible count on search/filter change
   useEffect(() => {
@@ -168,14 +180,14 @@ const Guide: React.FC = () => {
 
   const SidebarContent = () => (
     <div className="flex flex-col h-full overflow-y-auto no-scrollbar pb-10">
-      <div className="relative group mb-8 lg:mb-10">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400 group-focus-within:text-blue-500 transition-colors" />
+      <div className="relative group mb-10">
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-[#86868b] group-focus-within:text-apple-blue transition-colors" />
         <input 
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder={t.searchPlaceholder}
-          className="w-full pl-12 pr-10 py-3.5 bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 rounded-2xl text-[15px] focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all font-medium"
+          placeholder={t('guide.searchPlaceholder')}
+          className="w-full pl-12 pr-10 py-4 bg-[#f5f5f7] dark:bg-zinc-900/50 border border-transparent focus:bg-white dark:focus:bg-black focus:border-[#0071e3] rounded-2xl text-[16px] outline-none transition-all font-medium"
         />
         {searchQuery && (
           <button 
@@ -188,57 +200,57 @@ const Guide: React.FC = () => {
       </div>
 
       <div className="mb-6">
-        <p className="text-[11px] font-black uppercase tracking-widest text-zinc-400 px-2 mb-4">{t.categoryTitle || '章節篩選'}</p>
-        <nav className="grid grid-cols-2 lg:flex lg:flex-col gap-2">
+        <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#86868b] px-4 mb-5">{t('guide.categoryTitle')}</p>
+        <nav className="grid grid-cols-2 lg:flex lg:flex-col gap-1.5">
           <button
             onClick={() => { setActiveSource('All'); setIsDrawerOpen(false); }}
-            className={`sidebar-btn ${activeSource === 'All' ? 'sidebar-btn-active' : 'text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800/50'}`}
+            className={`sidebar-btn ${activeSource === 'All' ? 'sidebar-btn-active' : 'text-[#1d1d1f] dark:text-[#f5f5f7]'}`}
           >
             <div className="flex items-center gap-3">
-              <Menu className="w-4 h-4" />
-              {t.allQuestions}
+              <Menu className="w-4 h-4 opacity-70" />
+              {t('guide.allQuestions')}
             </div>
-            <span className={`text-[10px] font-black px-2 py-0.5 rounded-md ${activeSource === 'All' ? 'bg-white/20' : 'bg-zinc-100 dark:bg-zinc-800'}`}>{totalCount}</span>
+            <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md ${activeSource === 'All' ? 'bg-white/20' : 'bg-zinc-100 dark:bg-zinc-800'}`}>{totalCount}</span>
           </button>
           
           {allData.map(module => (
             <button
               key={module.source}
               onClick={() => { setActiveSource(module.source); setIsDrawerOpen(false); }}
-              className={`sidebar-btn ${activeSource === module.source ? 'sidebar-btn-active' : 'text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800/50'}`}
+              className={`sidebar-btn ${activeSource === module.source ? 'sidebar-btn-active' : 'text-[#1d1d1f] dark:text-[#f5f5f7]'}`}
             >
               <span className="truncate pr-4 text-left">{module.source}</span>
-              <span className={`text-[10px] font-black px-2 py-0.5 rounded-md ${activeSource === module.source ? 'bg-white/20' : 'bg-zinc-100 dark:bg-zinc-800'}`}>{getChapterCount(module.source)}</span>
+              <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md ${activeSource === module.source ? 'bg-white/20' : 'bg-zinc-100 dark:bg-zinc-800'}`}>{getChapterCount(module.source)}</span>
             </button>
           ))}
         </nav>
       </div>
 
-      <div className="grid grid-cols-2 gap-2 mb-8">
+      <div className="grid grid-cols-2 gap-2 mb-10">
         <button 
           onClick={expandAll}
-          className="flex items-center justify-center gap-2 px-3 py-3 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-xl text-[12px] font-black uppercase tracking-widest hover:bg-blue-100 border border-blue-100 dark:border-blue-900/30 transition-all"
+          className="flex items-center justify-center gap-2 px-3 py-3 bg-apple-blue/5 text-apple-blue rounded-xl text-[12px] font-bold uppercase tracking-[0.1em] hover:bg-apple-blue/10 transition-all border border-apple-blue/10"
         >
           <Maximize2 className="w-3.5 h-3.5" />
-          {t.expandAll}
+          {t('guide.expandAll')}
         </button>
         <button 
           onClick={collapseAll}
-          className="flex items-center justify-center gap-2 px-3 py-3 bg-zinc-50 dark:bg-zinc-900/50 text-zinc-500 dark:text-zinc-400 rounded-xl text-[12px] font-black uppercase tracking-widest hover:bg-zinc-100 border border-zinc-100 dark:border-zinc-800 transition-all"
+          className="flex items-center justify-center gap-2 px-3 py-3 bg-zinc-100 dark:bg-zinc-900 text-[#86868b] rounded-xl text-[12px] font-bold uppercase tracking-[0.1em] hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-all border border-transparent"
         >
           <Minimize2 className="w-3.5 h-3.5" />
-          {t.collapseAll}
+          {t('guide.collapseAll')}
         </button>
       </div>
 
-      <div className="mt-auto pt-6 border-t border-zinc-100 dark:border-zinc-800">
-        <p className="text-[11px] font-black uppercase tracking-widest text-zinc-400 mb-4">{t.fontScaleTitle}</p>
-        <div className="flex items-center justify-between p-1 bg-zinc-100 dark:bg-zinc-900 rounded-xl">
+      <div className="mt-auto pt-8 border-t border-zinc-100 dark:border-zinc-800">
+        <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#86868b] mb-5">{t('guide.fontScaleTitle')}</p>
+        <div className="flex items-center justify-between p-1 bg-[#f5f5f7] dark:bg-zinc-900 rounded-xl">
           {[0.85, 0.9, 1, 1.1, 1.15].map(scale => (
             <button
               key={scale}
               onClick={() => setFontScale(scale)}
-              className={`flex-1 flex items-center justify-center py-2 rounded-lg text-[13px] font-bold transition-all ${fontScale === scale ? 'bg-white dark:bg-zinc-800 text-blue-600 shadow-sm' : 'text-zinc-400 hover:text-zinc-600'}`}
+              className={`flex-1 flex items-center justify-center py-2.5 rounded-lg text-[13px] font-bold transition-all ${fontScale === scale ? 'bg-white dark:bg-zinc-800 text-apple-blue shadow-sm' : 'text-[#86868b] hover:text-[#1d1d1f]'}`}
             >
               {scale === 0.85 ? 'A--' : scale === 0.9 ? 'A-' : scale === 1 ? 'A' : scale === 1.1 ? 'A+' : 'A++'}
             </button>
@@ -253,14 +265,14 @@ const Guide: React.FC = () => {
 
   if (isDataLoading) {
     return (
-      <div className="flex flex-col lg:flex-row gap-0 lg:gap-12 py-10 opacity-60">
-        <aside className="hidden lg:block w-[320px] shrink-0 space-y-4">
-          <div className="h-12 w-full skeleton-pulse mb-8" />
-          <div className="h-64 w-full skeleton-pulse" />
+      <div className="flex flex-col lg:flex-row gap-0 lg:gap-16 py-12 opacity-60">
+        <aside className="hidden lg:block w-[320px] shrink-0 space-y-6">
+          <div className="h-14 w-full bg-[#f5f5f7] dark:bg-zinc-900 rounded-2xl animate-pulse" />
+          <div className="h-64 w-full bg-[#f5f5f7] dark:bg-zinc-900 rounded-2xl animate-pulse" />
         </aside>
-        <main className="flex-1 space-y-8">
-          {[1,2,3].map(i => (
-            <div key={i} className="h-32 w-full skeleton-pulse" />
+        <main className="flex-1 space-y-10">
+          {[1,2].map(i => (
+            <div key={i} className="h-40 w-full bg-[#f5f5f7] dark:bg-zinc-900 rounded-[2.5rem] animate-pulse" />
           ))}
         </main>
       </div>
@@ -269,7 +281,7 @@ const Guide: React.FC = () => {
 
   return (
     <>
-      <div className="flex flex-col lg:flex-row gap-0 lg:gap-12 py-10">
+      <div className="flex flex-col lg:flex-row gap-0 lg:gap-16 py-12 animate-reveal">
           {/* Desktop Sidebar */}
           <aside className="hidden lg:block w-[320px] shrink-0 sticky top-28 h-[calc(100vh-8rem)]">
             <SidebarContent />
@@ -278,34 +290,34 @@ const Guide: React.FC = () => {
           {/* Main Content Area */}
           <main className="flex-1 min-w-0 px-6 lg:px-0">
             {searchQuery && (
-              <div className="mb-10 p-6 bg-blue-50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/30 rounded-3xl flex items-center justify-between animate-in fade-in slide-in-from-top-4">
-                <p className="text-[#0071e3] font-bold">
-                  {t.searchResult.replace('{q}', searchQuery)}
+              <div className="mb-12 p-8 bg-apple-blue/5 border border-apple-blue/10 rounded-[2.5rem] flex items-center justify-between">
+                <p className="text-apple-blue font-bold text-lg">
+                  {t('guide.searchResult', { q: searchQuery })}
                 </p>
                 <button 
                   onClick={() => setSearchQuery('')}
-                  className="text-xs font-black uppercase tracking-widest text-zinc-400 hover:text-blue-600"
+                  className="text-[12px] font-bold uppercase tracking-[0.2em] text-[#86868b] hover:text-apple-blue transition-colors"
                 >
-                  {t.clearSearch}
+                  {t('guide.clearSearch')}
                 </button>
               </div>
             )}
 
             {visibleModules.length > 0 ? (
-              <div className="space-y-16">
+              <div className="space-y-24">
                 {visibleModules.map(module => (
-                  <section key={module.source} id={module.source} className="scroll-mt-32 space-y-8">
-                    <div className="p-6 bg-blue-50/50 dark:bg-blue-900/10 rounded-2xl flex items-center justify-between border border-blue-100/50 dark:border-blue-900/20">
-                      <h2 className="text-xl font-black tracking-tight text-[#0071e3] m-0">
+                  <section key={module.source} id={module.source} className="scroll-mt-32 space-y-10">
+                    <div className="p-8 bg-apple-bg dark:bg-zinc-900/40 rounded-[2.5rem] flex items-center justify-between border border-transparent">
+                      <h2 className="text-2xl font-bold tracking-tight text-apple-blue m-0">
                         {module.source}
                       </h2>
                     </div>
 
-                    <div className="space-y-4">
+                    <div className="space-y-6">
                     {module.sections.map((section, sIdx) => (
-                      <div key={sIdx} className="space-y-6">
+                      <div key={sIdx} className="space-y-8">
                         {section.title !== module.source && (
-                          <h3 className="text-base font-black text-zinc-800 dark:text-zinc-200 mt-10 mb-4 border-b border-zinc-100 dark:border-zinc-800 pb-3">
+                          <h3 className="text-lg font-bold text-[#1d1d1f] dark:text-[#f5f5f7] mt-12 mb-6 px-4 border-l-4 border-apple-blue/30 leading-none">
                             {section.title}
                           </h3>
                         )}
@@ -313,50 +325,50 @@ const Guide: React.FC = () => {
                           {section.items.map(item => (
                             <div 
                               key={item.id}
-                              className={`group transition-all duration-300 rounded-3xl border-2 ${
+                              className={`apple-card group transition-all duration-500 overflow-hidden ${
                                 openItems.has(item.id) 
-                                  ? 'bg-white dark:bg-zinc-900 border-blue-500/30 shadow-2xl shadow-blue-500/10' 
-                                  : 'bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 hover:border-blue-500/20 hover:shadow-xl'
+                                  ? 'bg-white dark:bg-zinc-900 ring-2 ring-apple-blue/20 shadow-2xl scale-[1.01]' 
+                                  : ''
                               }`}
                             >
                               <button 
                                 onClick={() => toggleItem(item.id)}
-                                className="w-full text-left p-6 sm:p-7 md:p-8 flex items-start gap-4 md:gap-5"
+                                className="w-full text-left p-8 sm:p-10 flex items-start gap-6"
                               >
                                 <div className="flex-1 min-w-0">
                                   {item.important && (
-                                    <span className="inline-flex items-center px-2.5 py-1 mb-4 bg-[#ff3b30] text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-lg shadow-lg shadow-red-500/20">
-                                      {t.important}
+                                    <span className="inline-flex items-center px-3 py-1 mb-5 bg-[#ff3b30] text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-full shadow-lg shadow-red-500/20">
+                                      {t('guide.important')}
                                     </span>
                                   )}
-                                  <h4 className={`text-base sm:text-lg md:text-xl font-bold leading-snug transition-colors ${
-                                    openItems.has(item.id) ? 'text-[#0071e3]' : 'text-[#1d1d1f] dark:text-zinc-100'
+                                  <h4 className={`text-lg sm:text-xl font-bold leading-tight transition-colors ${
+                                    openItems.has(item.id) ? 'text-apple-blue' : 'text-[#1d1d1f] dark:text-white'
                                   }`}>
                                     {item.question}
                                   </h4>
                                 </div>
-                                <div className={`mt-1.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
+                                <div className={`mt-1.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition-all duration-500 ${
                                   openItems.has(item.id) 
-                                    ? 'rotate-180 bg-blue-600 text-white shadow-lg shadow-blue-500/20' 
-                                    : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400'
+                                    ? 'rotate-180 bg-apple-blue text-white shadow-xl shadow-blue-500/20' 
+                                    : 'bg-[#f5f5f7] dark:bg-zinc-800 text-[#86868b]'
                                 }`}>
                                   <ChevronDown className="w-5 h-5" />
                                 </div>
                               </button>
 
                               {openItems.has(item.id) && (
-                                <div className="px-6 pb-8 pt-0 sm:px-7 md:px-8 md:pb-10 animate-in fade-in slide-in-from-top-2 duration-300">
+                                <div className="px-8 pb-10 pt-0 sm:px-10 sm:pb-12 animate-reveal">
                                   {/* 內容區域：修正字體縮放應用 */}
                                   <div 
-                                    className="prose prose-zinc dark:prose-invert max-w-none text-zinc-600 dark:text-zinc-400 leading-relaxed prose-p:mb-6 prose-headings:text-zinc-800 dark:prose-headings:text-zinc-100"
+                                    className="prose prose-zinc dark:prose-invert max-w-none text-[#515154] dark:text-zinc-400 leading-[1.6] prose-p:mb-6 prose-headings:text-[#1d1d1f] dark:prose-headings:text-white"
                                     // 直接使用百分比縮放
                                     style={{ fontSize: `${fontScale * 100}%` }}
                                     dangerouslySetInnerHTML={{ __html: item.answer }}
                                   />
                                   {item.tags && item.tags.length > 0 && (
-                                    <div className="mt-10 flex flex-wrap gap-2">
+                                    <div className="mt-10 flex flex-wrap gap-2.5">
                                       {item.tags.map(tag => (
-                                        <span key={tag} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 rounded-full text-[11px] font-bold border border-zinc-200 dark:border-zinc-700">
+                                        <span key={tag} className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-[#f5f5f7] dark:bg-zinc-800 text-[#86868b] dark:text-zinc-400 rounded-full text-[11px] font-bold border border-transparent">
                                           <Tag className="w-3.5 h-3.5" />
                                           {tag}
                                         </span>
@@ -376,48 +388,34 @@ const Guide: React.FC = () => {
                 
                 {/* Scroll Sentinel */}
                 {hasMore && (
-                  <div id="scroll-sentinel" className="py-8 flex justify-center">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full animate-ping" />
+                  <div id="scroll-sentinel" className="py-12 flex justify-center">
+                    <div className="w-3 h-3 bg-apple-blue rounded-full animate-ping" />
                   </div>
                 )}
               </div>
             ) : (
-              <EmptyState onClear={() => { setSearchQuery(''); setActiveSource('All'); }} actionText={t.clearSearch} />
+              <EmptyState onClear={() => { setSearchQuery(''); setActiveSource('All'); }} actionText={t('guide.clearSearch')} />
             )}
           </main>
 
           {/* Mobile Floating Button */}
-          <div className="lg:hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-40">
+          <div className="lg:hidden fixed bottom-10 left-1/2 -translate-x-1/2 z-40">
             <button 
               onClick={() => setIsDrawerOpen(true)}
-              className="flex items-center gap-2 px-6 py-4 bg-[#0071e3] text-white rounded-full font-black text-[15px] shadow-2xl shadow-blue-500/40 active:scale-95 transition-all border border-blue-400/50"
+              className="flex items-center gap-2.5 px-8 py-4 bg-apple-blue text-white rounded-full font-bold text-[16px] shadow-2xl shadow-blue-500/30 active:scale-95 transition-all"
             >
               <Search className="w-5 h-5" />
-              {t.menuBtn}
+              {t('guide.menuBtn')}
             </button>
           </div>
 
           {/* Mobile Drawer Overlay */}
           {isDrawerOpen && (
-            <div className="fixed inset-0 z-100 lg:hidden">
-              <div 
-                className="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity animate-in fade-in duration-300" 
-                onClick={() => setIsDrawerOpen(false)} 
-              />
-              <div className="absolute bottom-0 left-0 w-full h-[85vh] bg-white dark:bg-zinc-900 rounded-t-[40px] shadow-2xl animate-in slide-in-from-bottom duration-500 overflow-hidden flex flex-col">
-                <div className="h-1.5 w-12 bg-zinc-200 dark:bg-zinc-800 rounded-full mx-auto mt-3 mb-6 shrink-0" />
-                
-                <div className="px-8 pb-4 flex items-center justify-between shrink-0">
-                  <h2 className="text-xl font-black text-zinc-900 dark:text-white uppercase tracking-tight">{t.drawerTitle}</h2>
-                  <button 
-                    onClick={() => setIsDrawerOpen(false)}
-                    className="p-2 bg-zinc-100 dark:bg-zinc-800 rounded-full text-zinc-500"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
-                </div>
-
-                <div className="flex-1 overflow-y-auto px-8 no-scrollbar pt-2">
+            <div className="fixed inset-0 z-[100] lg:hidden animate-reveal">
+              <div className="absolute inset-0 bg-black/40 backdrop-blur-md" onClick={() => setIsDrawerOpen(false)} />
+              <div className="absolute bottom-0 left-0 w-full h-[85vh] bg-white dark:bg-black rounded-t-[2.5rem] shadow-2xl flex flex-col overflow-hidden">
+                <div className="h-1.5 w-12 bg-zinc-200 dark:bg-zinc-800 rounded-full mx-auto mt-4 mb-6 shrink-0" />
+                <div className="flex-1 overflow-y-auto px-8 pb-12 no-scrollbar">
                   <SidebarContent />
                 </div>
               </div>

@@ -16,6 +16,10 @@ const AuthGuard = ({ children }: PropsWithChildren) => {
   const isPublic = PUBLIC_ROUTES.includes(pathname) || pathname.startsWith('/api')
 
   useEffect(() => {
+    // 🔍 偵測是否在 GitHub Pages 環境
+    const isGitHubPages = typeof window !== 'undefined' && window.location.hostname.includes('github.io');
+    if (isGitHubPages) return; // 靜態預覽模式不執行任何跳轉邏輯
+
     // 2. 處理「未登入」：不再渲染 AuthGate，而是直接靜默跳轉到 API 登入端點
     if (!isLoading && !isPublic && !isAuthenticated) {
       console.log("[Guard] 未登入，直接執行 Logto 跳轉");
