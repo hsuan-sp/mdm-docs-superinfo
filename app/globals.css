@@ -100,9 +100,8 @@
     box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.2);
   }
 
-  /* 強制隱藏 UI */
-  .nextra-sidebar-container,
-  .nextra-hamburger {
+  /* 強制隱藏漢堡選單（桌機版），但在手機版保留 */
+  .lg\:hidden .nextra-hamburger {
     display: none !important;
   }
 

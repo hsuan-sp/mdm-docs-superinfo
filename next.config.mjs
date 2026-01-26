@@ -12,12 +12,13 @@ const withNextra = nextra({
 // 2. 所有「主題」與「Next.js 原生」配置放在這裡
 export default withNextra({
   
-  // Next.js 16 頂層 Turbo 配置
-  turbo: {
-    rules: {
-      '*.css': {
-        loaders: ['postcss-loader'],
-        as: 'css'
+  experimental: {
+    turbo: {
+      rules: {
+        '*.css': {
+          loaders: ['postcss-loader'],
+          as: 'css'
+        }
       }
     }
   },

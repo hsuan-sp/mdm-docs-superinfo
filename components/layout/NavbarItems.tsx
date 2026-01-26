@@ -15,14 +15,21 @@ export const Logo = () => {
   const { language } = useLanguage()
   const isZh = language === 'zh-TW'
   return (
-    <Link href="/" className="flex items-center gap-2 select-none group branding-logo-container">
-      <img src="/logo-square.png" alt="Logo" className="h-5 md:h-6 w-auto transition-transform duration-500 group-hover:rotate shrink-0" />
-      <div className="flex flex-col md:flex-row md:items-baseline md:gap-1.5 overflow-hidden">
-        <span className="font-black text-zinc-900 dark:text-white whitespace-nowrap leading-tight" style={{ fontSize: 'clamp(11px, 2.5vw, 17px)' }}>
+    <Link href="/" className="flex items-center gap-3 select-none group branding-logo-container relative">
+      <div className="relative">
+        <div className="absolute inset-0 bg-blue-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <img 
+          src="/logo-square.png" 
+          alt="Logo" 
+          className="h-6 md:h-7 w-auto transition-all duration-700 group-hover:rotate-[360deg] group-hover:scale-110 shrink-0 relative z-10" 
+        />
+      </div>
+      <div className="flex flex-col overflow-hidden">
+        <span className="font-black text-zinc-900 dark:text-white whitespace-nowrap leading-tight tracking-tight transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
           {isZh ? '極電資訊' : 'Superinfo'}
         </span>
-        <span className="font-medium text-zinc-700 dark:text-zinc-300 md:text-zinc-400 md:dark:text-zinc-500 whitespace-nowrap" style={{ fontSize: 'clamp(10px, 2vw, 14px)' }}>
-          {isZh ? 'Apple MDM 知識庫' : 'Apple MDM Hub'}
+        <span className="font-bold text-zinc-400 dark:text-zinc-500 whitespace-nowrap leading-none mt-0.5" style={{ fontSize: 'clamp(10px, 2vw, 11px)' }}>
+          {isZh ? 'APPLE MDM Hub' : 'APPLE MDM Hub'}
         </span>
       </div>
     </Link>

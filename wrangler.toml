@@ -9,7 +9,3 @@ pages_build_output_dir = ".open-next"
 
 [observability]
 enabled = true
-
-[build]
-# 強制 esbuild 在最後打包階段忽略 jose
-extra_external = ["jose"]

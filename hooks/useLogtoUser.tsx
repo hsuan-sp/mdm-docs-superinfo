@@ -26,15 +26,27 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const fetchUser = useCallback(async () => {
     setIsLoading(true);
     try {
-      // 確保路徑與你的 API 檔案結構一致 (app/api/logto/user/route.ts)
       const res = await fetch("/api/logto/user", {
-        cache: 'no-store', // Next.js 16 強制不快取驗證請求
+        cache: 'no-store',
       }); 
-      if (!res.ok) throw new Error("Unauthorized");
+      if (!res.ok) {
+        if (res.status === 401) {
+          console.log("[useUser] User is not authenticated");
+        } else {
+          console.error("[useUser] Failed to fetch user:", res.statusText);
+        }
+        setData({ user: null, auth: false });
+        return;
+      }
       const json = await res.json();
-      setData({ user: json.user || null, auth: !!json.isAuthenticated });
-    } catch (err) {
-      setData({ user: null, auth: false });
+      setData({ 
+        user: json.claims ? {
+          sub: json.claims.sub,
+          email: json.claims.email,
+          name: json.claims.name || json.claims.username
+        } : null, 
+        auth: !!json.isAuthenticated 
+      });
     } finally {
       setIsLoading(false);
     }
@@ -48,11 +60,7 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, [fetchUser]);
 
   const signIn = (redirectPath?: string) => {
-    // 💡 關鍵修正：Next.js 16 下，確保拿到的是絕對路徑的 pathname
-    // 如果沒傳，則抓當前 window.location.pathname
     const path = redirectPath || window.location.pathname;
-    
-    // 強制導向到 API Route，這會觸發我們手動拼湊 redirect_uri 的後端邏輯
     const target = `/api/logto/sign-in?redirect=${encodeURIComponent(path)}`;
     window.location.href = target;
   };
