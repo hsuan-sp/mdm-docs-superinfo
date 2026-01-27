@@ -83,26 +83,26 @@ const Home: React.FC = () => {
               <div 
                 key={f.id} 
                 onClick={() => handleRoute(f.id)}
-                className="apple-card group cursor-pointer p-10 flex flex-col h-full"
+                className="apple-card group cursor-pointer p-8 md:p-10 flex flex-col h-full min-h-[320px] relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
                 style={{ animationDelay: `${idx * 100 + 500}ms` }}
               >
-                <div className="mb-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-apple-bg dark:bg-apple-dark-border transition-all duration-500 group-hover:scale-110 text-4xl shadow-sm">
+                <div className="absolute top-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity text-apple-blue">
+                  <ArrowRight className="w-6 h-6 -rotate-45" />
+                </div>
+
+                <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-apple-bg dark:bg-apple-dark-border transition-all duration-500 group-hover:scale-110 text-4xl shadow-sm z-10">
                   {f.emoji || "✨"}
                 </div>
                 
-                <h3 className="text-2xl font-bold mb-3 text-apple-text dark:text-apple-dark-text tracking-tight">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 text-apple-text dark:text-apple-dark-text tracking-tight z-10">
                   {f.title}
                 </h3>
-                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-apple-blue opacity-70 mb-5">
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-apple-blue opacity-70 mb-4 z-10">
                   {f.subtitle}
                 </p>
-                <p className="text-[16px] leading-[1.4] text-apple-gray dark:text-apple-dark-gray font-medium flex-1">
+                <p className="text-base leading-relaxed text-apple-gray dark:text-apple-dark-gray font-medium flex-1 z-10">
                   {f.desc}
                 </p>
-                
-                <div className="mt-10 flex items-center gap-2 text-apple-blue font-bold text-sm tracking-tight group-hover:gap-3 transition-all">
-                   {t('home.learnMore')} <ArrowRight className="w-4 h-4" />
-                </div>
               </div>
             )
           })}

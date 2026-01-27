@@ -1,22 +1,29 @@
 /**
  * Tailwind CSS v4 - Main Application Stylesheet
- * Using CSS-first configuration with @import and @theme directives
+ * 
+ * 整合所有設計系統變數與自定義配置
+ * 完全取代 tailwind.config.mjs
  */
 
-/* Import Tailwind CSS v4 */
+/* 1. 核心匯入 */
 @import "tailwindcss";
 
-/* Import Nextra theme styles (layered to prevent conflicts) */
-@import "../node_modules/nextra-theme-docs/dist/style.css" layer(nextra);
+/* 2. Nextra 主題樣式 (隔離層) */
+@import "../node_modules/nextra-theme-docs/dist/style.css" layer(base);
 
-/* Theme Configuration */
+/* 3. 設計系統配置 (Theme Configuration) */
 @theme {
-  /* Typography */
+  /* 斷點 (Screens) - 保留預設並擴充 */
+  --breakpoint-xs: 480px;
+  --breakpoint-3xl: 2560px;
+  --breakpoint-4xl: 3840px;
+
+  /* 字體 (Typography) */
   --font-sans:
     "SF Pro Display", "Inter", "Noto Sans TC", -apple-system, system-ui,
     sans-serif;
 
-  /* Apple Brand Colors */
+  /* 顏色系統 (Color Palette) - Apple Style */
   --color-apple-blue: #0071e3;
   --color-apple-blue-hover: #0077ed;
   --color-apple-purple: #9089fc;
@@ -27,7 +34,7 @@
   --color-apple-border: rgba(0, 0, 0, 0.1);
   --color-apple-card: rgba(255, 255, 255, 0.8);
 
-  /* Dark Mode */
+  /* Dark Mode Equivalents */
   --color-apple-dark-text: #f5f5f7;
   --color-apple-dark-gray: #a1a1a6;
   --color-apple-dark-bg: #000000;
@@ -38,7 +45,17 @@
   --color-grid-subtle: rgba(0, 0, 0, 0.02);
   --color-grid-accent: rgba(0, 0, 0, 0.04);
 
-  /* Fluid Typography */
+  /* 響應式字體大小 (Responsive Font Sizes) */
+  --text-xs-responsive: clamp(0.625rem, 0.75rem, 0.875rem);
+  --text-sm-responsive: clamp(0.75rem, 0.875rem, 1rem);
+  --text-base-responsive: clamp(0.875rem, 1rem, 1.125rem);
+  --text-lg-responsive: clamp(1rem, 1.125rem, 1.25rem);
+  --text-xl-responsive: clamp(1.125rem, 1.25rem, 1.5rem);
+  --text-2xl-responsive: clamp(1.25rem, 1.5rem, 1.75rem);
+  --text-3xl-responsive: clamp(1.5rem, 1.875rem, 2.25rem);
+  --text-4xl-responsive: clamp(1.875rem, 2.25rem, 3rem);
+
+  /* 舊版 fluid 變數 (保留兼容性) */
   --text-fluid-xs: clamp(0.7rem, 0.6rem + 0.2vw, 0.8rem);
   --text-fluid-sm: clamp(0.8rem, 0.7rem + 0.2vw, 0.9rem);
   --text-fluid-base: clamp(0.95rem, 0.85rem + 0.3vw, 1.05rem);
@@ -47,13 +64,74 @@
   --text-fluid-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
   --text-fluid-4xl: clamp(2rem, 1.5rem + 1.5vw, 3rem);
 
-  /* Radius */
+  /* 間距 (Spacing) */
+  --spacing-compact: 0.5rem;
+  --spacing-normal: 1rem;
+  --spacing-comfortable: 1.5rem;
+  --spacing-spacious: 2rem;
+
+  /* 圓角 (Border Radius) */
   --radius-apple: 1.25rem;
-  --radius-apple-lg: 2.5rem;
-  --radius-apple-xl: 3rem;
+  --radius-apple-lg: 2.5rem; /* 40px */
+  --radius-apple-xl: 3rem; /* 48px */
+  --radius-4xl: 2rem; /* 32px */
+  --radius-5xl: 2.5rem; /* 40px */
+
+  /* 動畫 (Animations) */
+  --animate-in: fadeIn 0.3s ease-in-out;
+  --animate-out: fadeOut 0.3s ease-in-out;
+  --animate-slide-up: slideUp 0.4s ease-out;
+  --animate-slide-down: slideDown 0.4s ease-out;
+  --animate-reveal: reveal 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* 背景模糊 (Backdrop Blur) */
+  --backdrop-blur-xs: 2px;
 }
 
-/* Base Styles */
+/* 4. 全域設置與基礎樣式 */
 :root {
   --nextra-primary-hue: 210deg;
   --nextra-primary-saturation: 100%;
@@ -71,8 +149,8 @@ html {
 body {
   background-color: #ffffff;
   color: #1d1d1f;
-  line-height: 1.47059;
-  letter-spacing: -0.022em;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
 
   /* Subtle background */
   background:
@@ -95,9 +173,11 @@ h3,
 h4,
 h5,
 h6 {
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
   font-weight: 600;
 }
+
+/* 5. 組件樣式 (Component Styles) */
 
 /* Apple-style Navbar */
 .nextra-nav-container {
@@ -155,26 +235,62 @@ h6 {
 }
 
 .sidebar-btn-active {
-  background-color: #0071e3 !important;
+  background-color: var(--color-apple-blue) !important;
   color: #ffffff !important;
 }
 
-/* Hide Nextra sidebar */
-.lg\:hidden .nextra-hamburger {
-  display: none !important;
-}
-
-/* Typography */
-.prose p {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  margin-bottom: 1rem;
-  color: rgb(82, 82, 91);
-}
-
-/* Utility Classes */
+/* Utilities */
 .text-balance {
   text-wrap: balance;
+}
+
+/* Fallback Utility Classes (Explicit Definition) */
+/* These ensure compatibility even if variable mapping has edge cases */
+.text-fluid-xs {
+  font-size: var(--text-fluid-xs);
+}
+.text-fluid-sm {
+  font-size: var(--text-fluid-sm);
+}
+.text-fluid-base {
+  font-size: var(--text-fluid-base);
+}
+.text-fluid-lg {
+  font-size: var(--text-fluid-lg);
+}
+.text-fluid-xl {
+  font-size: var(--text-fluid-xl);
+}
+.text-fluid-2xl {
+  font-size: var(--text-fluid-2xl);
+}
+.text-fluid-4xl {
+  font-size: var(--text-fluid-4xl);
+}
+
+.text-xs-responsive {
+  font-size: var(--text-xs-responsive);
+}
+.text-sm-responsive {
+  font-size: var(--text-sm-responsive);
+}
+.text-base-responsive {
+  font-size: var(--text-base-responsive);
+}
+.text-lg-responsive {
+  font-size: var(--text-lg-responsive);
+}
+.text-xl-responsive {
+  font-size: var(--text-xl-responsive);
+}
+.text-2xl-responsive {
+  font-size: var(--text-2xl-responsive);
+}
+.text-3xl-responsive {
+  font-size: var(--text-3xl-responsive);
+}
+.text-4xl-responsive {
+  font-size: var(--text-4xl-responsive);
 }
 
 /* Mobile Touch Targets */
@@ -184,34 +300,6 @@ h6 {
 
 .min-w-touch-target {
   min-width: 44px;
-}
-
-/* Mobile Optimizations */
-@media (max-width: 1023px) {
-  * {
-    -webkit-tap-highlight-color: rgba(0, 113, 227, 0.1);
-  }
-
-  button,
-  a {
-    touch-action: manipulation;
-  }
-}
-
-/* Animations */
-.animate-reveal {
-  animation: reveal 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-@keyframes reveal {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* Scrollbar */
@@ -249,4 +337,25 @@ h6 {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+}
+
+/* Nextra Overrides - Fix Layout Issues */
+.nextra-sidebar-container,
+button[aria-label*="sidebar"],
+button[aria-label*="Menu"],
+.nextra-hamburger {
+  display: none !important;
+}
+
+/* Vibrant Emojis */
+@font-face {
+  font-family: "VibrantEmoji";
+  src: url("https://fonts.gstatic.com/s/notocoloremoji/v24/Yq6P-KqIXIk05puL3vOndM-n0YI.woff2")
+    format("woff2");
+  unicode-range: U+1F000-1F9FF, U+2600-26FF, U+2700-27BF;
+}
+
+.emoji-vibrant {
+  font-family:
+    "VibrantEmoji", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
 }
