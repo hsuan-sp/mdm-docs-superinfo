@@ -36,11 +36,14 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
     window.location.hostname.includes("github.io");
   const isStaticPreview = isGhPagesEnv || isGhPagesRuntime;
 
-  const mockUser = {
-    sub: "guest",
-    email: "guest@superinfo.com.tw", // 使用授權網域，避免被 Guard 擋住
-    name: "Guest (Static Preview)",
-  };
+  const mockUser = React.useMemo(
+    () => ({
+      sub: "guest",
+      email: "guest@superinfo.com.tw", // 使用授權網域，避免被 Guard 擋住
+      name: "Guest (Static Preview)",
+    }),
+    []
+  );
 
   // Initialize with auth state if we know it's a static preview
   const [data, setData] = useState<{ user: LogtoUser | null; auth: boolean }>({

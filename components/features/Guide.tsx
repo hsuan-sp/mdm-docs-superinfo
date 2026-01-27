@@ -368,7 +368,7 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
     setOpenItems(next);
   };
 
-  const expandAll = () => {
+  const expandAll = useCallback(() => {
     const allIds = new Set<string>();
     filteredFullData.forEach((module) => {
       module.sections.forEach((section) => {
@@ -377,12 +377,12 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
     });
     setOpenItems(allIds);
     setIsDrawerOpen(false);
-  };
+  }, [filteredFullData]);
 
-  const collapseAll = () => {
+  const collapseAll = useCallback(() => {
     setOpenItems(new Set());
     setIsDrawerOpen(false);
-  };
+  }, []);
 
   const memoizedSidebar = useMemo(
     () => (
@@ -408,7 +408,6 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
       allData,
       totalCount,
       fontScale,
-      locale,
       expandAll,
       collapseAll,
       getChapterCount,

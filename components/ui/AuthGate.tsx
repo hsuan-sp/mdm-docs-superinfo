@@ -18,11 +18,11 @@ interface AuthGateProps {
 const AuthGate: React.FC<AuthGateProps> = ({ redirectPath = "/" }) => {
   const { t } = useLanguage();
 
-  const handleSignIn = () => {
+  const handleSignIn = React.useCallback(() => {
     const apiEndpoint = "/api/logto/sign-in";
     const finalTarget = encodeURIComponent(redirectPath);
     window.location.href = `${apiEndpoint}?redirect=${finalTarget}`;
-  };
+  }, [redirectPath]);
 
   // 自動跳轉邏輯
   React.useEffect(() => {
