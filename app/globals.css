@@ -1,12 +1,20 @@
-/* 1. 核心匯入：v4 專用語法 */
+/**
+ * Tailwind CSS v4 - Main Application Stylesheet
+ * Using CSS-first configuration with @import and @theme directives
+ */
+
+/* Import Tailwind CSS v4 */
 @import "tailwindcss";
 
-/* 2. 物理隔離：防止 Nextra 內部層級衝突 */
-@import "../node_modules/nextra-theme-docs/dist/style.css" layer(base);
+/* Import Nextra theme styles (layered to prevent conflicts) */
+@import "../node_modules/nextra-theme-docs/dist/style.css" layer(nextra);
 
-/* 3. v4 設計系統配置 */
+/* Theme Configuration */
 @theme {
-  --font-sans: "SF Pro Display", "Inter", "Noto Sans TC", -apple-system, system-ui, sans-serif;
+  /* Typography */
+  --font-sans:
+    "SF Pro Display", "Inter", "Noto Sans TC", -apple-system, system-ui,
+    sans-serif;
 
   /* Apple Brand Colors */
   --color-apple-blue: #0071e3;
@@ -19,7 +27,7 @@
   --color-apple-border: rgba(0, 0, 0, 0.1);
   --color-apple-card: rgba(255, 255, 255, 0.8);
 
-  /* Dark Mode Equivalents */
+  /* Dark Mode */
   --color-apple-dark-text: #f5f5f7;
   --color-apple-dark-gray: #a1a1a6;
   --color-apple-dark-bg: #000000;
@@ -45,159 +53,200 @@
   --radius-apple-xl: 3rem;
 }
 
-/* 4. 全域基礎樣式 */
-@layer base {
-  :root {
-    --nextra-primary-hue: 210deg;
-    --nextra-primary-saturation: 100%;
-    --radius-apple-val: 20px;
+/* Base Styles */
+:root {
+  --nextra-primary-hue: 210deg;
+  --nextra-primary-saturation: 100%;
+  --radius-apple-val: 20px;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #ffffff;
+  color: #1d1d1f;
+  line-height: 1.47059;
+  letter-spacing: -0.022em;
+
+  /* Subtle background */
+  background:
+    radial-gradient(at 0% 0%, rgba(0, 113, 227, 0.03) 0, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(147, 51, 234, 0.03) 0, transparent 50%);
+  background-attachment: fixed;
+}
+
+.dark body {
+  background-color: #000000;
+  color: #f5f5f7;
+  background:
+    radial-gradient(at 0% 0%, rgba(0, 113, 227, 0.08) 0, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(147, 51, 234, 0.06) 0, transparent 50%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+
+/* Apple-style Navbar */
+.nextra-nav-container {
+  backdrop-filter: saturate(180%) blur(20px) !important;
+  background-color: rgba(255, 255, 255, 0.72) !important;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1) !important;
+  height: 3.5rem !important;
+  transition: background-color 0.3s ease;
+}
+
+.dark .nextra-nav-container {
+  background-color: rgba(0, 0, 0, 0.72) !important;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Apple Card */
+.apple-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-apple-lg);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s ease;
+}
+
+.dark .apple-card {
+  background: rgba(28, 28, 30, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.apple-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* Sidebar */
+.sidebar-btn {
+  padding: 0.75rem 1.25rem;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.sidebar-btn:hover:not(.sidebar-btn-active) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark .sidebar-btn:hover:not(.sidebar-btn-active) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-btn-active {
+  background-color: #0071e3 !important;
+  color: #ffffff !important;
+}
+
+/* Hide Nextra sidebar */
+.lg\:hidden .nextra-hamburger {
+  display: none !important;
+}
+
+/* Typography */
+.prose p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: rgb(82, 82, 91);
+}
+
+/* Utility Classes */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Mobile Touch Targets */
+.min-h-touch-target {
+  min-height: 44px;
+}
+
+.min-w-touch-target {
+  min-width: 44px;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 1023px) {
+  * {
+    -webkit-tap-highlight-color: rgba(0, 113, 227, 0.1);
   }
 
-  html {
-    font-family: var(--font-sans);
-    font-size: 16px;
-    scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  body {
-    background-color: #ffffff;
-    color: #1d1d1f;
-    line-height: 1.47059;
-    letter-spacing: -0.022em;
-
-    /* 質感背景 */
-    background:
-      radial-gradient(at 0% 0%, rgba(0, 113, 227, 0.03) 0, transparent 50%),
-      radial-gradient(at 100% 0%, rgba(147, 51, 234, 0.03) 0, transparent 50%);
-    background-attachment: fixed;
-  }
-
-  .dark body {
-    background-color: #000000;
-    color: #f5f5f7;
-    background:
-      radial-gradient(at 0% 0%, rgba(0, 113, 227, 0.08) 0, transparent 50%),
-      radial-gradient(at 100% 0%, rgba(147, 51, 234, 0.06) 0, transparent 50%);
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    letter-spacing: -0.015em;
-    font-weight: 600;
+  button,
+  a {
+    touch-action: manipulation;
   }
 }
 
-/* 5. 組件樣式 */
-@layer components {
-  /* Apple-style Navbar */
-  .nextra-nav-container {
-    backdrop-filter: saturate(180%) blur(20px) !important;
-    background-color: rgba(255, 255, 255, 0.72) !important;
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1) !important;
-    height: 3.5rem !important;
-    transition: background-color 0.3s ease;
-  }
+/* Animations */
+.animate-reveal {
+  animation: reveal 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
 
-  .dark .nextra-nav-container {
-    background-color: rgba(0, 0, 0, 0.72) !important;
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.1) !important;
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-
-  /* 精緻卡片系列 */
-  .apple-card {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(20px);
-    border-radius: var(--radius-apple-lg);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    transition:
-      transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-      box-shadow 0.4s ease;
-  }
-
-  .dark .apple-card {
-    background: rgba(28, 28, 30, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .apple-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
-  }
-
-  /* 側邊欄按鈕優化 */
-  .sidebar-btn {
-    padding: 0.75rem 1.25rem;
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.2s ease;
-  }
-
-  .sidebar-btn:hover:not(.sidebar-btn-active) {
-    background-color: rgba(0, 0, 0, 0.05);
-  }
-
-  .dark .sidebar-btn:hover:not(.sidebar-btn-active) {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-
-  .sidebar-btn-active {
-    background-color: #0071e3 !important;
-    color: #ffffff !important;
-  }
-
-  /* 強制隱藏漢堡選單（桌機版），但在手機版保留 */
-  .lg\:hidden .nextra-hamburger {
-    display: none !important;
-  }
-
-  /* Typography */
-  .prose p {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-    color: rgb(82, 82, 91); /* zinc-600 */
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* 6. 功能性與動畫 */
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
 
-  .animate-reveal {
-    animation: reveal 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  }
+::-webkit-scrollbar-track {
+  background: transparent;
+}
 
-  @keyframes reveal {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
 
-  ::-webkit-scrollbar {
-    width: 8px;
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 1023px) {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
-  ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-  }
-  .dark ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.1);
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

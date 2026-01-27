@@ -89,14 +89,14 @@ const SidebarContent: React.FC<{
       <div className="grid grid-cols-2 gap-2 mb-10">
         <button 
           onClick={expandAll}
-          className="flex items-center justify-center gap-2 px-3 py-3 bg-apple-blue/5 text-apple-blue rounded-xl text-[12px] font-bold uppercase tracking-[0.1em] hover:bg-apple-blue/10 transition-all border border-apple-blue/10"
+          className="flex items-center justify-center gap-2 px-3 py-3 bg-apple-blue/5 text-apple-blue rounded-xl text-[12px] font-bold uppercase tracking-widest hover:bg-apple-blue/10 transition-all border border-apple-blue/10"
         >
           <Maximize2 className="w-3.5 h-3.5" />
           {t('guide.expandAll')}
         </button>
         <button 
           onClick={collapseAll}
-          className="flex items-center justify-center gap-2 px-3 py-3 bg-apple-bg dark:bg-apple-dark-bg text-apple-gray rounded-xl text-[12px] font-bold uppercase tracking-[0.1em] hover:bg-apple-gray/10 transition-all border border-transparent"
+          className="flex items-center justify-center gap-2 px-3 py-3 bg-apple-bg dark:bg-apple-dark-bg text-apple-gray rounded-xl text-[12px] font-bold uppercase tracking-widest hover:bg-apple-gray/10 transition-all border border-transparent"
         >
           <Minimize2 className="w-3.5 h-3.5" />
           {t('guide.collapseAll')}
@@ -321,7 +321,7 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
         </aside>
         <main className="flex-1 space-y-10">
           {[1,2].map(i => (
-            <div key={i} className="h-40 w-full bg-apple-bg dark:bg-apple-dark-bg rounded-[2.5rem] animate-pulse" />
+            <div key={i} className="h-40 w-full bg-apple-bg dark:bg-apple-dark-bg rounded-apple-lg animate-pulse" />
           ))}
         </main>
       </div>
@@ -366,7 +366,7 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
             </div>
 
             {searchQuery && (
-              <div className="mb-12 p-8 bg-apple-blue/5 border border-apple-blue/10 rounded-[2.5rem] flex items-center justify-between">
+              <div className="mb-12 p-8 bg-apple-blue/5 border border-apple-blue/10 rounded-apple-lg flex items-center justify-between">
                 <p className="text-apple-blue font-bold text-lg">
                   {t('guide.searchResult', { q: searchQuery })}
                 </p>
@@ -383,7 +383,7 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
               <div className="space-y-24">
                 {visibleModules.map(module => (
                   <section key={module.source} id={module.source} className="scroll-mt-32 space-y-10">
-                    <div className="p-8 bg-apple-bg dark:bg-apple-dark-bg/40 rounded-[2.5rem] flex items-center justify-between border border-transparent">
+                    <div className="p-8 bg-apple-bg dark:bg-apple-dark-bg/40 rounded-apple-lg flex items-center justify-between border border-transparent">
                       <h2 className="text-2xl font-bold tracking-tight text-apple-blue m-0">
                         {module.source}
                       </h2>
@@ -487,9 +487,9 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
 
           {/* Mobile Drawer Overlay */}
           {isDrawerOpen && (
-            <div className="fixed inset-0 z-[100] lg:hidden animate-reveal">
+            <div className="fixed inset-0 z-100 lg:hidden animate-reveal">
               <div className="absolute inset-0 bg-black/40 backdrop-blur-md" onClick={() => setIsDrawerOpen(false)} />
-              <div className="absolute bottom-0 left-0 w-full h-[85vh] bg-white dark:bg-apple-dark-bg rounded-t-[2.5rem] shadow-2xl flex flex-col overflow-hidden">
+              <div className="absolute bottom-0 left-0 w-full h-[85vh] bg-white dark:bg-apple-dark-bg rounded-t-apple-lg shadow-2xl flex flex-col overflow-hidden">
                 <div className="h-1.5 w-12 bg-apple-bg dark:bg-apple-dark-border rounded-full mx-auto mt-4 mb-6 shrink-0" />
                 <div className="flex-1 overflow-y-auto px-8 pb-12 no-scrollbar">
                   {memoizedSidebar}

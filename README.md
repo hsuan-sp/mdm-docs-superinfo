@@ -1,11 +1,11 @@
 # 極電資訊 Apple MDM 專業知識庫 (Professional Knowledge Base)
 
-**當前版本 (Current Version):** 1.1.0
-**重構日期 (Restructured):** 2026-01-23
+**當前版本 (Current Version):** 1.2.0
+**最後更新 (Last Updated):** 2026-01-27
 
-![VitePress](https://img.shields.io/badge/VitePress-1.6.4+-646CFF.svg) ![Node](https://img.shields.io/badge/Node-20%2B-339933.svg) ![Environment](https://img.shields.io/badge/Specs-2026_Tahoe-blue.svg)
+![Next.js](https://img.shields.io/badge/Next.js-16.1-black.svg) ![Node](https://img.shields.io/badge/Node-22%2B-339933.svg) ![Tailwind](https://img.shields.io/badge/Tailwind-v4-38bdf8.svg)
 
-本專案為極電資訊 (Superinfo) 專為台灣教育場域打造的 Apple MDM 專業知識庫。2026 年 1 月完成大規模結構重構，實現「內容與邏輯分離」，大幅提升維護效率與資料安全性。
+本專案為極電資訊 (Superinfo) 專為台灣教育場域打造的 Apple MDM 專業知識庫。2026 年 1 月完成大規模架構遷移，從 VitePress 升級至 **Next.js 16 App Router + Nextra 4**，實現「內容與邏輯分離」，大幅提升維護效率與資料安全性。
 
 ---
 
@@ -34,25 +34,54 @@
 
 ## 🏗️ 技術架構 (Modern Stack)
 
-- **框架**: Next.js 15 (App Router) + Nextra 4
-- **驗證**: Logto (OIDC)
-- **部署**: Vercel (動態) / GitHub Pages (靜態預覽)
+- **框架**: Next.js 16 (App Router) + Nextra 4
+- **驗證**: Logto (OIDC) - 僅限 Vercel 部署
+- **部署**: Vercel (動態 + API) / GitHub Pages (純靜態)
 - **樣式**: Tailwind CSS v4 (Apple-Style Design System)
-
 
 ## 🌐 部署平台支援 (Deployment Platforms)
 
-專案目前支援雙平台佈署，並自動根據環境調整行為：
+專案支援雙平台部署，並自動根據環境調整行為：
 
-1. **Vercel (推薦)**:
-   - **網址**: [https://mdm-support-site.vercel.app/](https://mdm-support-site.vercel.app/) (生產環境)
-   - **功能**: 具備完整的身分驗證 (OTP)、登入日誌紀錄與全站安全性攔截。
-   - **運作機制**: 使用 Vercel Edge Middleware 與 Serverless Functions 進行後端驗證。
+1. **Vercel (推薦) - 完整功能版**:
 
-2. **GitHub Pages (靜態預覽)**:
-   - **網址**: `https://hsuan-sp.github.io/mdm-support-site/` (備援與公開預覽)
-   - **功能**: **純靜態顯示**，不處理登入邏輯，適合快速檢閱內容。
-   - **運作機制**: 系統會偵測網域，若為 `.github.io` 則自動隱藏登入/登出 UI，直接開放內容閱讀。
+   - **網址**: [https://mdm-support-site.vercel.app/](https://mdm-support-site.vercel.app/)
+   - **功能**: 具備完整的 Logto 身分驗證、登入日誌紀錄與全站安全性攔截
+   - **運作機制**: 使用 Vercel Edge Middleware 與 Serverless Functions 進行後端驗證
+
+2. **GitHub Pages - 靜態預覽版**:
+   - **網址**: `https://hsuan-sp.github.io/mdm-support-site/`
+   - **功能**: **純靜態顯示**，不包含登入邏輯，適合快速檢閱內容
+   - **運作機制**: 靜態導出（output: 'export'），API 路由在構建時被移除
+
+
+---
+
+## 🚀 快速開始 (Quick Start)
+
+### For New Contributors (跨平台開發設定)
+
+**一鍵設定 (推薦):**
+
+```bash
+./scripts/setup-dev-env.sh
+```
+
+**手動設定:**
+
+```bash
+# 1. 配置 Git 使用 LF 換行符
+git config core.autocrlf false
+git config core.eol lf
+
+# 2. 安裝依賴
+npm install
+
+# 3. 啟動開發伺服器
+npm run dev
+```
+
+**詳細說明:** 請參閱 [`docs/CROSS_PLATFORM_SETUP.md`](docs/CROSS_PLATFORM_SETUP.md) 了解完整的跨平台開發配置。
 
 ---
 

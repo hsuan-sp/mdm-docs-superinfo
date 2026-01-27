@@ -1,283 +1,268 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/**
+ * Tailwind CSS v4 - Main Stylesheet
+ * Using CSS-first configuration with @import and @theme directives
+ */
 
-@layer base {
-  :root {
-    --nextra-primary-hue: 210deg; /* More standard blue */
-    --nextra-primary-saturation: 100%;
-    /* Clean, modern grid - very subtle */
-    --grid-color: rgba(0, 0, 0, 0.02);
-    --grid-accent: rgba(0, 0, 0, 0.04);
+/* Import Tailwind CSS v4 (replaces @tailwind directives) */
+@import "tailwindcss";
 
-    /* Fluid Typography System - Refined for better readability */
-    --font-xs: clamp(0.6rem, 0.45rem + 0.2vw, 0.7rem);
-    --font-sm: clamp(0.7rem, 0.6rem + 0.2vw, 0.8rem);
-    --font-base: clamp(0.85rem, 0.7rem + 0.25vw, 0.95rem);
-    --font-lg: clamp(0.95rem, 0.8rem + 0.3vw, 1.05rem);
-    --font-xl: clamp(1.05rem, 0.9rem + 0.35vw, 1.15rem);
-    --font-2xl: clamp(1.2rem, 1rem + 0.4vw, 1.35rem);
-    --font-3xl: clamp(1.4rem, 1.1rem + 0.5vw, 1.65rem);
-    --font-4xl: clamp(1.7rem, 1.4rem + 0.7vw, 2.1rem);
+/* Theme Configuration using @theme directive */
+@theme {
+  /* Typography */
+  --font-sans:
+    "Inter", "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
 
-    /* Fluid Spacing System - More generous whitespace */
-    --spacing-xs: clamp(0.3rem, 0.25rem + 0.15vw, 0.45rem);
-    --spacing-sm: clamp(0.6rem, 0.5rem + 0.3vw, 0.9rem);
-    --spacing-md: clamp(1.25rem, 1rem + 0.6vw, 1.75rem);
-    --spacing-lg: clamp(2rem, 1.5rem + 1vw, 2.5rem);
-    --spacing-xl: clamp(3rem, 2rem + 2vw, 4.5rem);
-  }
+  /* Apple Brand Colors */
+  --color-apple-blue: #0071e3;
+  --color-apple-blue-hover: #0077ed;
+  --color-apple-purple: #9089fc;
+  --color-apple-text: #1d1d1f;
+  --color-apple-red: #ff3b30;
+  --color-apple-gray: #86868b;
+  --color-apple-bg: #f5f5f7;
+  --color-apple-border: rgba(0, 0, 0, 0.1);
+  --color-apple-card: rgba(255, 255, 255, 0.8);
 
-  .dark {
-    --grid-color: rgba(255, 255, 255, 0.02);
-    --grid-accent: rgba(255, 255, 255, 0.04);
-  }
+  /* Dark Mode */
+  --color-apple-dark-text: #f5f5f7;
+  --color-apple-dark-gray: #a1a1a6;
+  --color-apple-dark-bg: #000000;
+  --color-apple-dark-border: rgba(255, 255, 255, 0.1);
+  --color-apple-dark-card: rgba(28, 28, 30, 0.6);
 
-  html {
-    font-family:
-      "Inter",
-      "Noto Sans TC",
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      sans-serif;
-    /* Smooth font scaling */
-    font-size: clamp(14px, 0.875rem + 0.15vw, 16px);
-  }
+  /* Grid & Accents */
+  --color-grid-subtle: rgba(0, 0, 0, 0.02);
+  --color-grid-accent: rgba(0, 0, 0, 0.04);
 
-  body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    @apply bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100;
+  /* Fluid Typography */
+  --text-fluid-xs: clamp(0.7rem, 0.6rem + 0.2vw, 0.8rem);
+  --text-fluid-sm: clamp(0.8rem, 0.7rem + 0.2vw, 0.9rem);
+  --text-fluid-base: clamp(0.95rem, 0.85rem + 0.3vw, 1.05rem);
+  --text-fluid-lg: clamp(1.1rem, 1rem + 0.4vw, 1.25rem);
+  --text-fluid-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --text-fluid-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --text-fluid-4xl: clamp(2rem, 1.5rem + 1.5vw, 3rem);
 
-    /* Beautiful gradient background with subtle texture */
-    background:
-      radial-gradient(
-        circle at 20% 20%,
-        rgba(59, 130, 246, 0.08),
-        transparent 40%
-      ),
-      radial-gradient(
-        circle at 80% 80%,
-        rgba(147, 51, 234, 0.06),
-        transparent 40%
-      ),
-      radial-gradient(var(--grid-accent) 1px, transparent 1px);
-    background-size:
-      100% 100%,
-      100% 100%,
-      clamp(24px, 1.5rem + 0.5vw, 32px) clamp(24px, 1.5rem + 0.5vw, 32px);
-    background-attachment: fixed;
-  }
+  /* Border Radius */
+  --radius-apple: 1.25rem;
+  --radius-apple-lg: 2.5rem;
+  --radius-apple-xl: 3rem;
 
-  .dark body {
-    background:
-      radial-gradient(
-        circle at 20% 20%,
-        rgba(59, 130, 246, 0.12),
-        transparent 50%
-      ),
-      radial-gradient(
-        circle at 80% 80%,
-        rgba(147, 51, 234, 0.1),
-        transparent 50%
-      ),
-      radial-gradient(var(--grid-accent) 1px, transparent 1px);
-    background-size:
-      100% 100%,
-      100% 100%,
-      clamp(24px, 1.5rem + 0.5vw, 32px) clamp(24px, 1.5rem + 0.5vw, 32px);
-    background-attachment: fixed;
-  }
+  /* Spacing */
+  --spacing-xs: clamp(0.3rem, 0.25rem + 0.15vw, 0.45rem);
+  --spacing-sm: clamp(0.6rem, 0.5rem + 0.3vw, 0.9rem);
+  --spacing-md: clamp(1.25rem, 1rem + 0.6vw, 1.75rem);
+  --spacing-lg: clamp(2rem, 1.5rem + 1vw, 2.5rem);
+  --spacing-xl: clamp(3rem, 2rem + 2vw, 4.5rem);
 }
 
-/* Global Typography & Interactive Rules */
-@layer components {
-  /* Fluid Typography Utilities */
-  .text-fluid-xs {
-    font-size: var(--font-xs);
-  }
-  .text-fluid-sm {
-    font-size: var(--font-sm);
-  }
-  .text-fluid-base {
-    font-size: var(--font-base);
-  }
-  .text-fluid-lg {
-    font-size: var(--font-lg);
-  }
-  .text-fluid-xl {
-    font-size: var(--font-xl);
-  }
-  .text-fluid-2xl {
-    font-size: var(--font-2xl);
-  }
-  .text-fluid-3xl {
-    font-size: var(--font-3xl);
-  }
-  .text-fluid-4xl {
-    font-size: var(--font-4xl);
-  }
-
-  /* Fluid Spacing Utilities */
-  .gap-fluid-xs {
-    gap: var(--spacing-xs);
-  }
-  .gap-fluid-sm {
-    gap: var(--spacing-sm);
-  }
-  .gap-fluid-md {
-    gap: var(--spacing-md);
-  }
-  .gap-fluid-lg {
-    gap: var(--spacing-lg);
-  }
-  .gap-fluid-xl {
-    gap: var(--spacing-xl);
-  }
-
-  /* Prevent italics universally if desired, or just use non-italic utility */
-  .italic {
-    font-style: normal !important;
-  }
-  em {
-    font-style: normal !important;
-    font-weight: 600;
-    color: rgb(37, 99, 235);
-  }
-
-  strong {
-    font-weight: 700;
-  }
-
-  /* Interactive Elements: High Opacity & Hover Effects */
-  a,
-  button,
-  [role="button"] {
-    @apply opacity-100 transition-opacity duration-200;
-  }
-
-  /* Non-interactive text slightly softer */
-  p,
-  li,
-  span:not(.font-bold) {
-    @apply text-zinc-600 dark:text-zinc-400;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply text-zinc-900 dark:text-zinc-100 opacity-100 font-bold;
-  }
+/* Base Styles */
+:root {
+  --nextra-primary-hue: 210deg;
+  --nextra-primary-saturation: 100%;
+  --radius-apple-val: 20px;
 }
 
-/* Premium Apple-style Glassmorphism Navbar */
+html {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #ffffff;
+  color: #1d1d1f;
+  line-height: 1.47059;
+  letter-spacing: -0.022em;
+
+  /* Subtle background gradients */
+  background:
+    radial-gradient(at 0% 0%, rgba(0, 113, 227, 0.03) 0, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(147, 51, 234, 0.03) 0, transparent 50%);
+  background-attachment: fixed;
+}
+
+.dark body {
+  background-color: #000000;
+  color: #f5f5f7;
+  background:
+    radial-gradient(at 0% 0%, rgba(0, 113, 227, 0.08) 0, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(147, 51, 234, 0.06) 0, transparent 50%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+
+/* Component Styles */
+
+/* Apple-style Navbar */
 .nextra-nav-container {
   backdrop-filter: saturate(180%) blur(20px) !important;
   background-color: rgba(255, 255, 255, 0.72) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-  height: 3.5rem !important; /* Compact mobile navbar */
-  transition: all 0.3s ease;
-}
-
-@media (min-width: 768px) {
-  .nextra-nav-container {
-    height: 4rem !important;
-  }
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1) !important;
+  height: 3.5rem !important;
+  transition: background-color 0.3s ease;
 }
 
 .dark .nextra-nav-container {
   background-color: rgba(0, 0, 0, 0.72) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1) !important;
 }
 
-/* Ensure Navbar Brand and Menu Items are Visible */
-.nextra-nav-container nav {
-  @apply px-4 md:px-6 h-full flex items-center justify-between !important;
-  max-width: 1440px;
-  margin: 0 auto;
+/* Apple Card Component */
+.apple-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-apple-lg);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s ease;
 }
 
-@media (max-width: 1024px) {
-  .nextra-nav-container nav {
-    @apply gap-2 !important;
+.dark .apple-card {
+  background: rgba(28, 28, 30, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.apple-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* Sidebar Styles */
+.sidebar-btn {
+  padding: 0.75rem 1.25rem;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.sidebar-btn:hover:not(.sidebar-btn-active) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark .sidebar-btn:hover:not(.sidebar-btn-active) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-btn-active {
+  background-color: #0071e3 !important;
+  color: #ffffff !important;
+}
+
+/* Typography */
+.prose p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: rgb(82, 82, 91);
+}
+
+/* Utility Classes */
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Mobile Touch Target Enhancement */
+.min-h-touch-target {
+  min-height: 44px;
+}
+
+.min-w-touch-target {
+  min-width: 44px;
+}
+
+/* Smoother Mobile Transitions */
+@media (max-width: 1023px) {
+  * {
+    -webkit-tap-highlight-color: rgba(0, 113, 227, 0.1);
+  }
+
+  button,
+  a {
+    touch-action: manipulation;
   }
 }
 
-/* Mobile Search Bar Optimization */
-.nextra-search {
-  @apply max-w-[120px] sm:max-w-[200px] md:max-w-xs transition-all duration-300;
+/* Animations */
+.animate-reveal {
+  animation: reveal 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.nextra-nav-container a,
-.nextra-nav-container button {
-  @apply transition-all duration-300;
-}
-
-/* Sidebar Refinement */
-.nextra-sidebar-container {
-  background-color: transparent !important;
-  padding-top: 3.5rem !important; /* Match mobile navbar height */
-}
-
-@media (min-width: 768px) {
-  .nextra-sidebar-container {
-    padding-top: 4rem !important;
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.nextra-sidebar-container [role="menu"] {
-  @apply space-y-1 px-4;
-}
-
-.nextra-sidebar-container a {
-  @apply rounded-xl font-bold transition-all duration-200 !important;
-}
-
-.nextra-sidebar-container .active {
-  @apply bg-blue-50 text-blue-600 dark:bg-blue-900/20 dark:text-blue-400 !important;
-}
-
-/* Main Content Area */
-.nextra-body {
-  @apply max-w-[1440px] mx-auto px-4 md:px-6; /* Ensure padding on mobile */
-}
-
-/* Typography Scale */
-h1 {
-  @apply text-4xl font-black tracking-tight mb-8;
-}
-h2 {
-  @apply text-2xl font-bold tracking-tight mb-6;
-}
-
-/* Custom Scrollbar */
+/* Refined Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
+  height: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #e5e5e5;
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  border: 3px solid transparent;
-  background-clip: content-box;
 }
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
 .dark ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: rgba(255, 255, 255, 0.1);
 }
 
-/* Footer Section - Ensure Integration */
-.global-footer {
-  @apply mt-20;
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
 }
 
-/* Vibrant Emojis via Noto Color Emoji */
+/* Hide scrollbar on mobile for cleaner UI */
+@media (max-width: 1023px) {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Nextra Overrides */
+.nextra-sidebar-container,
+button[aria-label*="sidebar"],
+button[aria-label*="Menu"],
+.nextra-hamburger {
+  display: none !important;
+}
+
+/* Vibrant Emojis */
 @font-face {
   font-family: "VibrantEmoji";
   src: url("https://fonts.gstatic.com/s/notocoloremoji/v24/Yq6P-KqIXIk05puL3vOndM-n0YI.woff2")
@@ -288,82 +273,4 @@ h2 {
 .emoji-vibrant {
   font-family:
     "VibrantEmoji", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
-}
-/* 隱藏 Nextra 預設的側邊欄和 hamburger */
-.nextra-sidebar-container,
-button[aria-label*="sidebar"],
-button[aria-label*="Menu"],
-.nextra-hamburger {
-  display: none !important;
-}
-
-/* Guide & Glossary 內容字體優化 - 支援差異化動態縮放 */
-.prose {
-  --current-font-scale: 1; /* 基礎倍率 */
-  /* 標題縮放公式：增幅減半，避免標題過大 */
-  --heading-scale: calc(1 + (var(--current-font-scale) - 1) * 0.4);
-}
-
-.prose h1,
-.prose h2 {
-  font-size: calc(var(--heading-scale) * 1.15rem) !important;
-  font-weight: 800 !important;
-}
-
-.prose h3,
-.prose h4,
-.prose h5,
-.prose h6 {
-  font-size: calc(var(--heading-scale) * 1.05rem) !important;
-  font-weight: 700 !important;
-  margin-top: 1.5em !important;
-  margin-bottom: 0.8em !important;
-  line-height: 1.4 !important;
-}
-
-.prose p,
-.prose li {
-  /* 內文維持 1:1 縮放比例 */
-  font-size: calc(var(--current-font-scale) * 0.95rem) !important;
-  line-height: 1.7 !important;
-  margin-bottom: 1em !important;
-}
-
-.prose ul,
-.prose ol {
-  padding-left: 1.5em !important;
-}
-
-/* 側邊欄按鈕優化 - 更好按、更精緻 */
-.sidebar-btn {
-  @apply relative overflow-hidden transition-all duration-300 ease-out py-3.5 px-5 rounded-2xl flex items-center justify-between font-bold text-[14px];
-  border: 1px solid transparent;
-}
-
-.sidebar-btn:hover {
-  @apply bg-zinc-100 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 translate-x-1;
-}
-
-.sidebar-btn-active {
-  @apply bg-blue-600 text-white shadow-xl shadow-blue-500/20 border-blue-500 !important;
-  transform: translateX(4px);
-}
-
-.sidebar-btn-active:hover {
-  @apply bg-blue-700 brightness-110;
-}
-
-/* 全域載入動畫容器 */
-.global-loader-overlay {
-  @apply fixed inset-0 z-[11000] flex flex-col items-center justify-center bg-white dark:bg-zinc-950 transition-opacity duration-500;
-}
-
-.loader-progress-bar {
-  @apply fixed top-0 left-0 h-1 bg-blue-600 z-[12000] transition-all duration-300;
-  box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
-}
-
-/* 骨架屏補強 */
-.skeleton-pulse {
-  @apply animate-pulse bg-zinc-100 dark:bg-zinc-800 rounded-2xl;
 }

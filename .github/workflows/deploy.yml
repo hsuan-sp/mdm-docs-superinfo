@@ -41,10 +41,6 @@ jobs:
           rm -rf app/api
           npm run build
         env:
-          LOGTO_ENDPOINT: ${{ secrets.LOGTO_ENDPOINT }}
-          LOGTO_APP_ID: ${{ secrets.LOGTO_APP_ID }}
-          LOGTO_BASE_URL: ${{ secrets.LOGTO_BASE_URL }}
-          LOGTO_COOKIE_SECRET: ${{ secrets.LOGTO_COOKIE_SECRET }}
           GITHUB_ACTIONS: "true"
 
       - name: Upload artifact

@@ -250,7 +250,7 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
         </aside>
         <main className="flex-1 space-y-8">
           {[1,2,3].map(i => (
-            <div key={i} className="h-56 w-full bg-apple-bg dark:bg-apple-dark-bg rounded-[2.5rem] animate-pulse" />
+            <div key={i} className="h-56 w-full bg-apple-bg dark:bg-apple-dark-bg rounded-apple-lg animate-pulse" />
           ))}
         </main>
       </div>
@@ -366,7 +366,7 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
           {isDrawerOpen && (
             <div className="fixed inset-0 z-100 lg:hidden animate-reveal">
               <div className="absolute inset-0 bg-black/40 backdrop-blur-md" onClick={() => setIsDrawerOpen(false)} />
-              <div className="absolute bottom-0 left-0 w-full h-[85vh] bg-white dark:bg-apple-dark-bg rounded-t-[2.5rem] shadow-2xl flex flex-col overflow-hidden">
+              <div className="absolute bottom-0 left-0 w-full h-[85vh] bg-white dark:bg-apple-dark-bg rounded-t-apple-lg shadow-2xl flex flex-col overflow-hidden">
                 <div className="h-1.5 w-12 bg-apple-bg dark:bg-apple-dark-border rounded-full mx-auto mt-4 mb-6 shrink-0" />
                 <div className="flex-1 overflow-y-auto px-8 pb-12 no-scrollbar">
                   {memoizedSidebar}

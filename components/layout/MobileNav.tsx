@@ -111,13 +111,13 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* 常用導航 */}
-          <nav className="space-y-3">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[rgb(134,134,139)] px-4 mb-2">Navigation</h3>
+          <nav className="space-y-1.5">
+            <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[rgb(134,134,139)] px-4 mb-3">Navigation</h3>
             {navLinks.map((link) => (
               <button
                 key={link.path}
                 onClick={() => navigate(link.path)}
-                className={`w-full flex items-center justify-between px-5 py-4 rounded-2xl font-bold transition-all duration-300 ${
+                className={`w-full flex items-center justify-between px-6 py-3.5 rounded-2xl font-bold transition-all duration-300 min-h-touch-target active:scale-[0.98] ${
                   pathname === link.path 
                     ? 'bg-apple-blue text-white shadow-lg shadow-apple-blue/20 translate-x-1' 
                     : 'text-apple-text dark:text-apple-dark-text hover:bg-apple-bg dark:hover:bg-apple-dark-border/80 hover:translate-x-1'
@@ -139,10 +139,10 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
                     <button
                       key={itemIdx}
                       onClick={() => navigateExternal(item.link)}
-                      className="w-full flex items-center justify-between px-5 py-3 text-sm font-bold text-apple-gray dark:text-apple-dark-gray hover:bg-apple-bg dark:hover:bg-apple-dark-border/50 rounded-xl transition-all"
+                      className="w-full flex items-center justify-between px-6 py-3.5 text-sm font-bold text-apple-gray dark:text-apple-dark-gray hover:bg-apple-bg dark:hover:bg-apple-dark-border/50 rounded-xl transition-all min-h-touch-target active:scale-[0.98]"
                     >
                       <span className="flex-1 text-left truncate">{item.text}</span>
-                      <ExternalLink className="w-3.5 h-3.5 text-zinc-300" />
+                      <ExternalLink className="w-3.5 h-3.5 text-zinc-300 shrink-0" />
                     </button>
                   ))}
                 </div>
@@ -151,8 +151,8 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* 系統設定 */}
-          <div className="pt-4 border-t border-apple-border dark:border-apple-dark-border pb-10 space-y-4">
-              <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="w-full flex items-center justify-between p-4 bg-apple-bg dark:bg-apple-dark-border/40 rounded-2xl transition-all hover:bg-apple-gray/5 dark:hover:bg-apple-dark-border">
+          <div className="pt-4 border-t border-apple-border dark:border-apple-dark-border pb-10 space-y-3">
+              <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="w-full flex items-center justify-between p-4 bg-apple-bg dark:bg-apple-dark-border/40 rounded-2xl transition-all hover:bg-apple-gray/5 dark:hover:bg-apple-dark-border min-h-touch-target active:scale-[0.98]">
                 <div className="flex items-center gap-3">
                   <div className={`p-2 rounded-xl ${theme === 'dark' ? 'bg-apple-blue/10 text-apple-blue' : 'bg-amber-500/10 text-amber-500'}`}>
                     {theme === 'dark' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
@@ -162,7 +162,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
                 <span className="text-[10px] font-bold uppercase tracking-widest text-apple-gray">{theme?.toUpperCase()}</span>
               </button>
 
-              <button onClick={() => setLanguage(language === 'zh-TW' ? 'en' : 'zh-TW')} className="w-full flex items-center justify-between p-4 bg-apple-bg dark:bg-apple-dark-border/40 rounded-2xl transition-all hover:bg-apple-gray/5 dark:hover:bg-apple-dark-border">
+              <button onClick={() => setLanguage(language === 'zh-TW' ? 'en' : 'zh-TW')} className="w-full flex items-center justify-between p-4 bg-apple-bg dark:bg-apple-dark-border/40 rounded-2xl transition-all hover:bg-apple-gray/5 dark:hover:bg-apple-dark-border min-h-touch-target active:scale-[0.98]">
                 <div className="flex items-center gap-3">
                   <div className="p-2 bg-apple-bg dark:bg-apple-dark-border rounded-xl text-apple-gray">
                     <Globe className="w-4 h-4" />

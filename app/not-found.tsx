@@ -29,17 +29,17 @@ export default function NotFound() {
           dangerouslySetInnerHTML={{ __html: t('error404.subtitle') }}
         />
 
-        <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 justify-center px-2 sm:px-0">
           <Link 
             href="/"
-            className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-apple-blue text-white rounded-2xl font-black text-[15px] hover:bg-apple-blue-hover transition-all shadow-xl shadow-apple-blue/20 active:scale-95"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-apple-blue text-white rounded-2xl font-black text-[15px] hover:bg-apple-blue-hover transition-all shadow-xl shadow-apple-blue/20 active:scale-95 min-h-touch-target"
           >
             <Home className="w-4 h-4" />
             {t('error404.backHome')}
           </Link>
           <button 
             onClick={() => window.history.back()}
-            className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-apple-bg dark:bg-apple-dark-border text-apple-text dark:text-apple-dark-text rounded-2xl font-black text-[15px] hover:bg-apple-gray/10 dark:hover:bg-apple-dark-border/80 transition-all active:scale-95 border border-apple-border dark:border-apple-dark-border"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-apple-bg dark:bg-apple-dark-border text-apple-text dark:text-apple-dark-text rounded-2xl font-black text-[15px] hover:bg-apple-gray/10 dark:hover:bg-apple-dark-border/80 transition-all active:scale-95 border border-apple-border dark:border-apple-dark-border min-h-touch-target"
           >
             <ArrowLeft className="w-4 h-4" />
             {t('error404.backPrev')}

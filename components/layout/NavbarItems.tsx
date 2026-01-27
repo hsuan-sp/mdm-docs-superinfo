@@ -87,7 +87,8 @@ export const NavbarExtra = () => {
       {/* 手機版漢堡選單按鈕 */}
       <button 
         onClick={() => setIsMobileNavOpen(true)} 
-        className="lg:hidden p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors"
+        className="lg:hidden p-2.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all active:scale-95 min-h-touch-target min-w-touch-target flex items-center justify-center"
+        aria-label="Open menu"
       >
         <svg className="w-6 h-6 text-zinc-700 dark:text-zinc-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />

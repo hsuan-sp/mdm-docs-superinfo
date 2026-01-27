@@ -32,7 +32,7 @@ const Home: React.FC = () => {
     <div className="relative isolate min-h-screen overflow-hidden">
       {/* Background Decor */}
       <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
-        <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[72.1875rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-apple-blue to-apple-purple opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
+        <div className="relative left-[calc(50%-11rem)] aspect-1155/678 w-288.75 -translate-x-1/2 rotate-30 bg-linear-to-tr from-apple-blue to-apple-purple opacity-20 sm:left-[calc(50%-30rem)] sm:w-288.75"></div>
       </div>
 
       {/* Hero Section */}
