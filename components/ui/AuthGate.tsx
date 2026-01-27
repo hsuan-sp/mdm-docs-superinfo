@@ -33,7 +33,7 @@ const AuthGate: React.FC<AuthGateProps> = ({ redirectPath = "/" }) => {
       const timer = setTimeout(handleSignIn, 1500); // 1.5秒後自動跳轉，給用戶一點提示
       return () => clearTimeout(timer);
     }
-  }, [redirectPath]);
+  }, [redirectPath, handleSignIn]);
 
   return (
     <div className="min-h-[80vh] flex items-center justify-center p-6 bg-transparent animate-reveal">

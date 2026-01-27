@@ -103,7 +103,7 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
     } finally {
       setIsLoading(false);
     }
-  }, [data.auth]);
+  }, [data.auth, mockUser]);
 
   useEffect(() => {
     if (!hasFetched.current) {
