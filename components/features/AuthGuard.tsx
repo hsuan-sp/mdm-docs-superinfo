@@ -21,12 +21,6 @@ const AuthGuard = ({ children }: PropsWithChildren) => {
   });
 
   useEffect(() => {
-    // 🔍 偵測是否在 GitHub Pages 環境
-    const isGitHubPages =
-      typeof window !== "undefined" &&
-      window.location.hostname.includes("github.io");
-    if (isGitHubPages) return;
-
     // 2. 處理「未登入」：如果是受保護路由且未登入，則跳轉至登入
     if (!isLoading && isProtected && !isAuthenticated) {
       console.log(

@@ -12,7 +12,6 @@
     "prebuild": "npm run gen-data",
     "dev": "npm run gen-data && next dev -p 4000",
     "build": "next build",
-    "build:static": "npm run gen-data && export GITHUB_ACTIONS=true && rm -rf app/api && next build",
     "start": "next start -p 4000",
     "lint": "next lint",
     "prepare": "husky"

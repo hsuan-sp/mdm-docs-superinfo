@@ -35,23 +35,16 @@
 ## 🏗️ 技術架構 (Modern Stack)
 
 - **框架**: Next.js 16 (App Router) + Nextra 4
-- **驗證**: Logto (OIDC) - 僅限 Vercel 部署
-- **部署**: Vercel (動態 + API) / GitHub Pages (純靜態)
+- **驗證**: Logto (OIDC)
 - **樣式**: Tailwind CSS v4 (Apple-Style Design System)
 
-## 🌐 部署平台支援 (Deployment Platforms)
+## 🌐 部署平台支援 (Deployment Platform)
 
-專案支援雙平台部署，並自動根據環境調整行為：
+專案採用 Vercel 作為唯一部署平台，以支援完整的身分驗證與安全性功能：
 
-1. **Vercel (推薦) - 完整功能版**:
-   - **網址**: [https://mdm-docs-superinfo.vercel.app/](https://mdm-docs-superinfo.vercel.app/)
-   - **功能**: 具備完整的 Logto 身分驗證、登入日誌紀錄與全站安全性攔截
-   - **運作機制**: 使用 Vercel Edge Middleware 與 Serverless Functions 進行後端驗證
-
-2. **GitHub Pages - 靜態預覽版**:
-   - **網址**: [https://hsuan-sp.github.io/mdm-docs-superinfo/](https://hsuan-sp.github.io/mdm-docs-superinfo/)
-   - **功能**: **純靜態顯示**，不包含登入邏輯，適合快速檢閱內容
-   - **運作機制**: 靜態導出（output: 'export'），API 路由在構建時被移除
+- **網址**: [https://mdm-docs-superinfo.vercel.app/](https://mdm-docs-superinfo.vercel.app/)
+- **功能**: 具備完整的 Logto 身分驗證、登入日誌紀錄與全站安全性攔截。
+- **運作機制**: 使用 Vercel Edge Middleware 與 Serverless Functions 進行後端與 OIDC 驗證。
 
 ---
 

@@ -180,20 +180,12 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
   // 🔍 避免在英文語系下閃過中文初值
   const isInitialZH = locale === "zh-TW";
   const [allData, setAllData] = useState<QAModule[]>(() => {
-    // GitHub Pages 或有初始資料時直接使用
-    const isGH =
-      typeof window !== "undefined" &&
-      window.location.hostname.includes("github.io");
-    if ((isGH || isInitialZH) && initialData) return initialData;
+    if (isInitialZH && initialData) return initialData;
     return [];
   });
-  const [isDataLoading, setIsDataLoading] = useState(() => {
-    const isGH =
-      typeof window !== "undefined" &&
-      window.location.hostname.includes("github.io");
-    if (isGH && initialData) return false;
-    return !isInitialZH || !initialData;
-  });
+  const [isDataLoading, setIsDataLoading] = useState(
+    !isInitialZH || !initialData
+  );
   const [searchQuery, setSearchQuery] = useState("");
   const debouncedQuery = useDebounce(searchQuery, 300);
 
@@ -209,11 +201,6 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
   const [visibleCount, setVisibleCount] = useState(20);
 
   useEffect(() => {
-    // 🔍 偵測是否在 GitHub Pages 環境
-    const isGitHubPages =
-      typeof window !== "undefined" &&
-      window.location.hostname.includes("github.io");
-    if (isGitHubPages) return;
     if (isAuthLoading) return;
     if (!isAuthenticated) return;
 

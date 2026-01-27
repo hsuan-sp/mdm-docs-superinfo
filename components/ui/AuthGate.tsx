@@ -1,12 +1,6 @@
 "use client";
 import React from "react";
-import {
-  Lock,
-  ChevronRight,
-  Home,
-  ShieldCheck,
-  ArrowRight,
-} from "lucide-react";
+import { Lock, Home, ShieldCheck, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useLanguage } from "../../hooks/useLanguage";
 
@@ -26,14 +20,9 @@ const AuthGate: React.FC<AuthGateProps> = ({ redirectPath = "/" }) => {
 
   // 自動跳轉邏輯
   React.useEffect(() => {
-    const isGH =
-      typeof window !== "undefined" &&
-      window.location.hostname.includes("github.io");
-    if (!isGH) {
-      const timer = setTimeout(handleSignIn, 1500); // 1.5秒後自動跳轉，給用戶一點提示
-      return () => clearTimeout(timer);
-    }
-  }, [redirectPath, handleSignIn]);
+    const timer = setTimeout(handleSignIn, 1500); // 1.5秒後自動跳轉，給用戶一點提示
+    return () => clearTimeout(timer);
+  }, [handleSignIn]);
 
   return (
     <div className="min-h-[80vh] flex items-center justify-center p-6 bg-transparent animate-reveal">
