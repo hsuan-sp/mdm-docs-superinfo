@@ -1,0 +1,195 @@
+/* =========================================
+   極電資訊 (Superinfo) 2026 Logto Custom CSS
+   Style: Apple Minimalist Pro
+   Features: Domain Locking, Gradient Header, Fluid Typography
+   ========================================= */
+
+/* 1. 全局重置與字體 */
+:root {
+  --font-sans:
+    "SF Pro Display", "PingFang TC", "Inter", -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  --apple-blue: #0071e3;
+  --apple-blue-hover: #0077ed;
+  --apple-bg: #f5f5f7;
+  --apple-card-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: var(--font-sans) !important;
+  background-color: var(--apple-bg) !important;
+  color: #1d1d1f !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* 2. 主卡片容器：極簡懸浮設計 */
+#app main[class*="main"] {
+  position: relative !important;
+  padding: 0 !important;
+  border-radius: 24px !important;
+  background: #ffffff !important;
+  box-shadow: var(--apple-card-shadow) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  max-width: 440px !important;
+  width: 100% !important;
+  margin: 40px auto !important;
+  border: 1px solid rgba(0, 0, 0, 0.02) !important;
+}
+
+/* 3. 品牌 Header：深邃藍漸層 (Header Background) */
+#app main[class*="main"]::before {
+  content: "";
+  display: block;
+  height: 140px;
+  background: linear-gradient(135deg, #0071e3 0%, #1c52b5 100%);
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* 4. Logotype：懸浮微陰影 (Logo) */
+#app main[class*="main"] img {
+  display: block !important;
+  margin: -50px auto 16px !important;
+  background: #ffffff !important;
+  padding: 12px !important;
+  border-radius: 22px !important; /* iOS App Icon Continuous Curve */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+  width: 90px !important;
+  height: 90px !important;
+  object-fit: contain !important;
+  z-index: 50 !important;
+  position: relative !important;
+}
+
+/* 5. 雙語標題：極致清晰 (Titles) */
+#app main[class*="main"]::after {
+  content: "極電資訊 Apple MDM 資料庫\\00000a Superinfo Apple MDM Hub";
+  white-space: pre-wrap;
+  display: block;
+  position: absolute;
+  top: 32px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.98);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.35;
+  z-index: 20;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+/* 隱藏原始標題 */
+#app main h1,
+#app main h2 {
+  display: none !important;
+}
+
+/* 6. 表單區域：呼吸感 (Form Area) */
+#app form {
+  padding: 10px 48px 48px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+/* 7. 提示訊息 (Notice Box) */
+#app form::before {
+  content: "請使用教育網域信箱 (@*.edu.tw) 登入";
+  display: block;
+  text-align: center;
+  background: #f5f5f7;
+  color: #6e6e73;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+/* 8. 輸入框：Apple Input Style */
+#app input[type="email"] {
+  height: 52px !important;
+  border-radius: 12px !important;
+  background: #f5f5f7 !important;
+  border: 1px solid transparent !important;
+  font-size: 16px !important;
+  padding: 0 16px !important;
+  color: #1d1d1f !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#app input[type="email"]:focus {
+  background: #ffffff !important;
+  border-color: #0071e3 !important;
+  box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.1) !important;
+}
+
+/* 9. 登入按鈕：智能鎖定邏輯 (Smart Submit Button) */
+#app button[type="submit"] {
+  height: 52px !important;
+  border-radius: 980px !important; /* Pill Shape */
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  margin-top: 24px;
+  background: #e5e5e7 !important; /* Disabled color */
+  color: #86868b !important;
+  pointer-events: none !important;
+  cursor: not-allowed !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+}
+
+/* 10. UNLOCK STATE: Domain Matching */
+/* 支援 .edu.tw 和 superinfo.com.tw */
+#app
+  form:has(input[type="email"][value*="@"][value$="edu.tw"])
+  button[type="submit"],
+#app
+  form:has(input[type="email"][value*="@"][value*="superinfo.com.tw"])
+  button[type="submit"] {
+  background: #0071e3 !important; /* Apple Blue */
+  color: #ffffff !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3) !important;
+  transform: translateY(0);
+}
+
+#app form:has(input[type="email"][value$="edu.tw"]) button[type="submit"]:hover,
+#app
+  form:has(input[type="email"][value*="superinfo.com.tw"])
+  button[type="submit"]:hover {
+  background: #0077ed !important;
+  transform: translateY(-1px);
+}
+
+#app
+  form:has(input[type="email"][value$="edu.tw"])
+  button[type="submit"]:active,
+#app
+  form:has(input[type="email"][value*="superinfo.com.tw"])
+  button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+/* 11. Footer */
+#app form::after {
+  content: "Powered by Logto Identity Cloud • © 2026 Superinfo";
+  display: block;
+  text-align: center;
+  font-size: 11px;
+  color: #86868b;
+  margin-top: 24px;
+  opacity: 0.6;
+}
+
+/* 隱藏其他社交登入或不必要元素 (Optional) */
+.social-login,
+.divider {
+  display: none !important;
+}

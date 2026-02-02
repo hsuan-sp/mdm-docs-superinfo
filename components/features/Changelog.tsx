@@ -32,13 +32,8 @@ const Changelog: React.FC<ChangelogProps> = ({ zhLogs, enLogs }) => {
     return logs.filter(log => log.version === selectedVersion)
   }, [logs, selectedVersion])
 
-  if (isLoading) return (
-    <div className="py-20 text-center text-apple-gray animate-pulse font-black uppercase tracking-widest text-xs">
-      Loading Changelog...
-    </div>
-  )
-
-  if (!user) return <AuthGate />
+  if (isLoading) return null;
+  if (!user) return <AuthGate />;
   if (logs.length === 0) return <div className="py-20 text-center text-apple-gray font-medium">{t('changelog.noLogs')}</div>
 
   return (

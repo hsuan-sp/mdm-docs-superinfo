@@ -72,89 +72,96 @@ const SidebarContent: React.FC<{
   ];
 
   return (
-    <div className="flex flex-col h-full overflow-y-auto no-scrollbar pb-10">
-      <div className="relative group mb-10">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-apple-gray group-focus-within:text-apple-blue transition-colors" />
+    <div className="flex flex-col h-full overflow-y-auto no-scrollbar pb-10 px-1">
+      <div className="relative group mb-8 mt-2">
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-apple-gray" />
         <input
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder={t("glossary.searchPlaceholder")}
-          className="w-full pl-12 pr-10 py-4 bg-apple-bg dark:bg-apple-dark-bg/50 border border-transparent focus:bg-white dark:focus:bg-black focus:border-apple-blue rounded-2xl text-[16px] outline-none transition-all font-medium"
+          className="input-apple pl-10 pr-10"
         />
         {searchQuery && (
           <button
             onClick={() => setSearchQuery("")}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-apple-gray hover:text-apple-text transition-colors"
           >
             <X className="w-4 h-4" />
           </button>
         )}
       </div>
 
-      <div className="mb-10">
-        <p className="hidden lg:block text-[11px] font-bold uppercase tracking-[0.2em] text-apple-gray px-4 mb-5">
+      <div className="mb-8">
+        <p className="hidden lg:block text-xs font-medium text-apple-gray mb-3 px-1">
           {t("glossary.sidebarTitle")}
         </p>
-        <nav className="grid grid-cols-2 lg:flex lg:flex-col gap-1.5">
-          {CATEGORIES.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => {
-                setSelectedCategory(cat);
-                setIsDrawerOpen(false);
-              }}
-              className={`sidebar-btn ${selectedCategory === cat ? "sidebar-btn-active" : "text-apple-text dark:text-apple-dark-text"}`}
-            >
-              <span className="truncate pr-4 text-left">
-                {getCategoryName(cat)}
-              </span>
-              <span
-                className={`text-[10px] font-bold px-2 py-0.5 rounded-md ${selectedCategory === cat ? "bg-white/20" : "bg-apple-bg dark:bg-apple-dark-border"}`}
+        <nav className="space-y-1">
+          {CATEGORIES.map((cat) => {
+            const isActive = selectedCategory === cat;
+            return (
+              <button
+                key={cat}
+                onClick={() => {
+                  setSelectedCategory(cat);
+                  setIsDrawerOpen(false);
+                }}
+                className={`sidebar-btn w-full ${isActive ? "sidebar-btn-active" : ""}`}
               >
-                {getChapterCount(cat)}
-              </span>
-            </button>
-          ))}
+                <span className="truncate pr-4 text-left font-semibold tracking-tight">
+                  {getCategoryName(cat)}
+                </span>
+                <span
+                  className={`text-[10px] font-extrabold px-2 py-0.5 rounded-lg ${isActive ? "bg-white/20 text-white" : "bg-apple-bg dark:bg-apple-dark-border text-apple-gray"}`}
+                >
+                  {getChapterCount(cat)}
+                </span>
+              </button>
+            );
+          })}
         </nav>
       </div>
 
-      <div className="mb-12">
-        <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-apple-gray px-4 mb-5">
+      <div className="mb-10">
+        <p className="text-xs font-medium text-apple-gray mb-3 px-1">
           {t("glossary.layoutTitle")}
         </p>
-        <div className="flex items-center gap-1.5 p-1.5 bg-apple-bg dark:bg-apple-dark-bg/50 rounded-2xl">
+        <div className="flex items-center gap-1">
           {[1, 2, 3].map((num) => (
             <button
               key={num}
               onClick={() => setGridCols(num as any)}
-              className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl transition-all ${
+              className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg transition-all text-sm font-medium ${
                 gridCols === num
-                  ? "bg-white dark:bg-apple-dark-border text-apple-blue shadow-sm"
-                  : "text-apple-gray hover:text-apple-text dark:hover:text-white"
+                  ? "bg-white dark:bg-apple-dark-border text-apple-blue shadow-sm border border-apple-border"
+                  : "text-apple-gray hover:text-apple-text hover:bg-apple-bg"
               }`}
             >
               {num === 1 && <ListIcon className="w-4 h-4" />}
-              {num === 2 && <Grid className="w-4 h-4" />}
-              {num === 3 && <LayoutGrid className="w-4 h-4" />}
-              <span className="text-xs font-bold">{num}x</span>
+              {num === 2 && <Grid className="w-3.5 h-3.5" />}
+              {num === 3 && <LayoutGrid className="w-3.5 h-3.5" />}
+              <span className="text-[12px] font-black">{num}x</span>
             </button>
           ))}
         </div>
       </div>
 
       <div className="mt-auto pt-8 border-t border-apple-border dark:border-apple-dark-border">
-        <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-apple-gray mb-5">
-          {t("glossary.fontScaleTitle")}
+        <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-apple-gray/60 mb-4 px-1">
+          {t("guide.fontScaleTitle")}
         </p>
-        <div className="flex items-center justify-between p-1 bg-apple-bg dark:bg-apple-dark-bg rounded-xl">
-          {[0.8, 0.9, 1, 1.1, 1.2].map((scale) => (
+        <div className="flex items-center justify-between p-1 bg-apple-bg dark:bg-apple-dark-bg/50 rounded-2xl border border-apple-border dark:border-apple-dark-border">
+          {[0.85, 0.9, 1, 1.1, 1.15].map((scale) => (
             <button
               key={scale}
               onClick={() => setFontScale(scale)}
-              className={`flex-1 flex items-center justify-center py-2.5 rounded-lg text-[13px] font-bold transition-all ${fontScale === scale ? "bg-white dark:bg-apple-dark-border text-apple-blue shadow-sm" : "text-apple-gray hover:text-apple-text"}`}
+              className={`flex-1 flex items-center justify-center py-2 rounded-xl text-[12px] font-black transition-all ${
+                fontScale === scale 
+                  ? "bg-white dark:bg-apple-dark-border text-apple-blue shadow-lg shadow-black/5" 
+                  : "text-apple-gray/60 hover:text-apple-text"
+              }`}
             >
-              {scale === 0.8
+              {scale === 0.85
                 ? "A--"
                 : scale === 0.9
                   ? "A-"
@@ -301,17 +308,16 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
 
   if (isLoading) {
     return (
-      <div className="flex flex-col lg:flex-row gap-0 lg:gap-16 py-12 opacity-60">
-        <aside className="hidden lg:block w-[320px] shrink-0 space-y-6">
-          <div className="h-14 w-full bg-apple-bg dark:bg-apple-dark-bg rounded-2xl animate-pulse" />
-          <div className="h-64 w-full bg-apple-bg dark:bg-apple-dark-bg rounded-2xl animate-pulse" />
+      <div className="flex flex-col lg:flex-row gap-0 lg:gap-16 py-12">
+        <aside className="hidden lg:block w-[320px] shrink-0 space-y-6 px-4">
+          <div className="skeleton h-14 w-full rounded-2xl" />
+          <div className="skeleton h-80 w-full rounded-2xl" />
+          <div className="skeleton h-24 w-full rounded-2xl" />
         </aside>
-        <main className="flex-1 space-y-8">
+        <main className="flex-1 px-6 lg:px-0 space-y-10">
+          <div className="lg:hidden -mx-6 mb-10 h-16 skeleton rounded-none" />
           {[1, 2, 3].map((i) => (
-            <div
-              key={i}
-              className="h-56 w-full bg-apple-bg dark:bg-apple-dark-bg rounded-apple-lg animate-pulse"
-            />
+            <div key={i} className="skeleton-card skeleton mb-8" />
           ))}
         </main>
       </div>
@@ -320,42 +326,49 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
 
   return (
     <>
-      <div className="flex flex-col lg:flex-row gap-0 lg:gap-16 py-12 animate-reveal">
+      <div className="flex flex-col lg:flex-row gap-0 lg:gap-16 py-12 animate-enter-up">
         {/* Desktop Sidebar */}
-        <aside className="hidden lg:block w-[320px] shrink-0 sticky top-28 h-[calc(100vh-8rem)]">
-          {memoizedSidebar}
+        <aside className="hidden lg:block w-85 shrink-0 sticky top-28 h-[calc(100vh-8rem)]">
+          <div className="sidebar-glass-container h-full">
+            {memoizedSidebar}
+          </div>
         </aside>
 
         {/* Main Content Area */}
-        <main className="flex-1 min-w-0 px-6 lg:px-0">
-          {/* Mobile Category Sidebar (Horizontal Scroll) */}
-          <div className="lg:hidden -mx-6 px-6 mb-10 sticky top-14 bg-white/80 dark:bg-apple-dark-bg/80 backdrop-blur-xl z-30 border-b border-apple-border dark:border-apple-dark-border py-4 overflow-x-auto no-scrollbar flex items-center gap-2">
-            {[
-              "All",
-              "Core",
-              "Enrollment",
-              "Apple",
-              "Security",
-              "Network",
-              "Hardware",
-              "Apps",
-              "Education",
-              "macOS",
-              "Jamf",
-              "Other",
-            ].map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                className={`whitespace-nowrap px-5 py-2.5 rounded-full text-[13px] font-bold transition-all ${
-                  selectedCategory === cat
-                    ? "bg-apple-blue text-white shadow-lg shadow-apple-blue/25"
-                    : "bg-apple-bg dark:bg-apple-dark-border text-apple-gray"
-                }`}
+        <main className="flex-1 min-w-0 px-6 lg:px-0 lg:max-w-4xl xl:max-w-5xl">
+          {/* Mobile Category Sidebar (Horizontal Scroll) with Filter Trigger */}
+          <div className="lg:hidden -mx-6 mb-10 sticky top-14 bg-white/80 dark:bg-apple-dark-bg/80 backdrop-blur-xl z-30 border-b border-apple-border dark:border-apple-dark-border flex items-center">
+            
+            {/* Scrollable Categories */}
+            <div className="flex-1 overflow-x-auto no-scrollbar flex items-center gap-2 px-4 py-4 mask-fade-right">
+              {[
+                "All", "Core", "Enrollment", "Apple", "Security", "Network",
+                "Hardware", "Apps", "Education", "macOS", "Jamf", "Other",
+              ].map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`whitespace-nowrap px-4 py-2 rounded-full text-[13px] font-bold transition-all shrink-0 ${
+                    selectedCategory === cat
+                      ? "bg-apple-blue text-white shadow-lg shadow-apple-blue/25"
+                      : "bg-apple-bg dark:bg-apple-dark-border text-apple-gray dark:text-apple-dark-gray"
+                  }`}
+                >
+                  {getCategoryName(cat)}
+                </button>
+              ))}
+            </div>
+
+            {/* Fixed Filter/Search Trigger */}
+            <div className="pr-4 pl-2 shrink-0 border-l border-apple-border dark:border-apple-dark-border/50 bg-transparent">
+              <button 
+                onClick={() => setIsDrawerOpen(true)}
+                className="p-2.5 bg-apple-bg dark:bg-apple-dark-border/50 text-apple-gray dark:text-apple-dark-text rounded-full active:scale-95 transition-all"
+                aria-label="Search and Filters"
               >
-                {getCategoryName(cat)}
+                <Search className="w-5 h-5" />
               </button>
-            ))}
+            </div>
           </div>
 
           <div className="flex items-center justify-between mb-10">
@@ -387,7 +400,7 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
               {filteredTerms.map((item, idx) => (
                 <article
                   key={item.term}
-                  className={`apple-card flex flex-col ${gridCols === 1 ? "p-10 sm:p-12 md:p-14" : "p-8 md:p-10"} relative overflow-hidden`}
+                  className={`apple-card flex flex-col ${gridCols === 1 ? "p-10 sm:p-12 md:p-14" : "p-8 md:p-10"} relative overflow-hidden animate-enter-up`}
                   style={{ animationDelay: `${idx * 50}ms` }}
                 >
                   <header className="mb-8 relative z-10">
@@ -398,7 +411,7 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
                       ).map((cat) => (
                         <span
                           key={cat}
-                          className="px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] bg-apple-blue/10 dark:bg-apple-blue/20 text-apple-blue border border-apple-blue/10"
+                          className="px-3 py-1.5 rounded-full text-[10px] font-extrabold uppercase tracking-[0.2em] bg-apple-blue/10 dark:bg-apple-blue/20 text-apple-blue border border-apple-blue/5"
                         >
                           {getCategoryName(cat)}
                         </span>
@@ -427,7 +440,7 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
                         {t("glossary.analogyLabel")}
                       </div>
                       <div
-                        className={`${gridCols === 1 ? "text-[16px] md:text-[18px]" : "text-[15px]"} text-apple-text dark:text-apple-dark-text leading-relaxed font-medium italic`}
+                        className={`${gridCols === 1 ? "text-[16px] md:text-[18px]" : "text-[15px]"} text-apple-text dark:text-apple-dark-text leading-relaxed font-medium`}
                         dangerouslySetInnerHTML={{ __html: item.analogy }}
                       />
                     </div>
@@ -447,26 +460,18 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
           )}
         </main>
 
-        {/* Mobile Floating Button */}
-        <div className="lg:hidden fixed bottom-10 left-1/2 -translate-x-1/2 z-40">
-          <button
-            onClick={() => setIsDrawerOpen(true)}
-            className="flex items-center gap-2.5 px-8 py-4 bg-apple-blue text-white rounded-full font-bold text-[16px] shadow-2xl shadow-blue-500/30 active:scale-95 transition-all"
-          >
-            <Search className="w-5 h-5" />
-            {t("glossary.menuBtn")}
-          </button>
-        </div>
 
         {/* Mobile Drawer */}
         {isDrawerOpen && (
           <div className="fixed inset-0 z-100 lg:hidden animate-reveal">
             <div
-              className="absolute inset-0 bg-black/40 backdrop-blur-md"
+              className="absolute inset-0 bg-black/40 backdrop-blur-md transition-opacity duration-300"
               onClick={() => setIsDrawerOpen(false)}
             />
-            <div className="absolute bottom-0 left-0 w-full h-[85vh] bg-white dark:bg-apple-dark-bg rounded-t-apple-lg shadow-2xl flex flex-col overflow-hidden">
-              <div className="h-1.5 w-12 bg-apple-bg dark:bg-apple-dark-border rounded-full mx-auto mt-4 mb-6 shrink-0" />
+            <div className="absolute bottom-0 left-0 w-full h-[85vh] bg-white dark:bg-apple-dark-bg mobile-sheet shadow-2xl flex flex-col overflow-hidden border-t border-apple-border dark:border-apple-dark-border">
+              {/* Simple Sheet Handle */}
+              <div className="h-1.5 w-12 bg-zinc-200 dark:bg-zinc-800 rounded-full mx-auto mt-4 mb-6 shrink-0" />
+              
               <div className="flex-1 overflow-y-auto px-8 pb-12 no-scrollbar">
                 {memoizedSidebar}
               </div>

@@ -15,21 +15,23 @@ export const Logo = () => {
   const { language } = useLanguage()
   const isZh = language === 'zh-TW'
   return (
-    <div className="flex items-center gap-3 select-none group branding-logo-container relative">
+    <div className="flex items-center gap-3.5 select-none group branding-logo-container relative cursor-pointer">
       <div className="relative">
-        <div className="absolute inset-0 bg-blue-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-        <img 
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo-square.png`} 
-          alt="Logo" 
-          className="h-6 md:h-7 w-auto transition-all duration-700 group-hover:rotate-360 group-hover:scale-110 shrink-0 relative z-10" 
-        />
+        <div className="absolute inset-0 bg-apple-blue/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+        <div className="relative z-10 p-1.5 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md rounded-xl shadow-sm border border-zinc-200/50 dark:border-zinc-800/50 group-hover:border-apple-blue/30 transition-all duration-500 group-hover:scale-105">
+          <img 
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo-square.png`} 
+            alt="Logo" 
+            className="h-6 md:h-7 w-auto transition-transform duration-700 group-hover:rotate-12 shrink-0" 
+          />
+        </div>
       </div>
-      <div className="flex flex-col overflow-hidden">
-        <span className="font-bold text-zinc-900 dark:text-white whitespace-nowrap leading-tight tracking-tight transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
+      <div className="flex flex-col">
+        <span className="font-bold text-zinc-950 dark:text-zinc-50 whitespace-nowrap leading-tight tracking-tight transition-colors group-hover:text-apple-blue" style={{ fontSize: 'clamp(15px, 2.5vw, 19px)' }}>
           {isZh ? '極電資訊' : 'Superinfo'}
         </span>
-        <span className="font-medium text-zinc-400 dark:text-zinc-500 whitespace-nowrap leading-none mt-0.5" style={{ fontSize: 'clamp(10px, 2vw, 11px)' }}>
-          APPLE MDM Hub
+        <span className="font-bold text-zinc-400 dark:text-zinc-500 whitespace-nowrap leading-none mt-1 tracking-widest" style={{ fontSize: 'clamp(9px, 2vw, 10px)' }}>
+          APPLE MDM HUB
         </span>
       </div>
     </div>
@@ -46,7 +48,6 @@ export const NavbarExtra = () => {
   const [resourcesOpen, setResourcesOpen] = useState(false)
   
   const isZh = language === 'zh-TW'
-  // Directly access complex groups array for now
   const resourceGroups = translations[language].resources.groups;
 
   useEffect(() => {
@@ -63,22 +64,25 @@ export const NavbarExtra = () => {
   ]
 
   return (
-    <div className="flex items-center gap-2 md:gap-3">
+    <div className="flex items-center gap-2 md:gap-4">
       {/* 1. 中間導覽連結 (桌面版) */}
-      <nav className="hidden lg:flex items-center gap-1 mx-4">
+      <nav className="hidden lg:flex items-center gap-1.5 mx-6">
         {navLinks.map((link) => {
           const isActive = pathname === link.path
           return (
             <Link
               key={link.path}
               href={link.path}
-              className={`px-3 py-1.5 rounded-full text-sm font-bold transition-all ${
+              className={`px-4 py-2 rounded-full text-[13px] font-bold transition-all duration-300 relative group overflow-hidden ${
                 isActive 
-                  ? 'bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400' 
-                  : 'text-zinc-600 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:bg-zinc-800'
+                  ? 'text-apple-blue bg-apple-blue/5 dark:bg-apple-blue/10' 
+                  : 'text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50'
               }`}
             >
               {link.label}
+              {isActive && (
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-apple-blue rounded-full" />
+              )}
             </Link>
           )
         })}
@@ -87,7 +91,7 @@ export const NavbarExtra = () => {
       {/* 手機版漢堡選單按鈕 */}
       <button 
         onClick={() => setIsMobileNavOpen(true)} 
-        className="lg:hidden p-2.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all active:scale-95 min-h-touch-target min-w-touch-target flex items-center justify-center"
+        className="lg:hidden p-2.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all active:scale-95 flex items-center justify-center border border-transparent hover:border-zinc-200 dark:hover:border-zinc-700 shadow-sm md:shadow-none"
         aria-label="Open menu"
       >
         <svg className="w-6 h-6 text-zinc-700 dark:text-zinc-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -96,36 +100,36 @@ export const NavbarExtra = () => {
       </button>
 
       {/* --- 右側功能按鈕區 --- */}
-      <div className="hidden lg:flex items-center gap-1">
+      <div className="hidden lg:flex items-center gap-2">
         
         {/* 資源下拉選單 */}
         <div className="relative">
           <button
             onClick={() => setResourcesOpen(!resourcesOpen)}
-            className="flex items-center gap-1.5 px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all text-sm font-bold text-zinc-700 dark:text-zinc-300"
+            className={`flex items-center gap-1.5 px-4 py-2 hover:bg-zinc-100/80 dark:hover:bg-zinc-800/80 rounded-full transition-all text-[13px] font-bold ${resourcesOpen ? 'text-apple-blue bg-apple-blue/5 dark:bg-apple-blue/10' : 'text-zinc-600 dark:text-zinc-400'}`}
           >
             <span>{t('resources.label')}</span>
-            <ChevronDown className={`w-4 h-4 transition-transform ${resourcesOpen ? 'rotate-180' : ''}`} />
+            <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${resourcesOpen ? 'rotate-180' : ''}`} />
           </button>
 
           {resourcesOpen && (
             <>
               <div className="fixed inset-0 z-40" onClick={() => setResourcesOpen(false)} />
-              <div className="absolute right-0 mt-2 w-80 bg-white dark:bg-zinc-900 rounded-2xl shadow-2xl border border-zinc-200 dark:border-zinc-800 z-50 overflow-hidden animate-reveal">
+              <div className="absolute right-0 mt-3 w-80 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-zinc-200/50 dark:border-zinc-800/50 z-50 overflow-hidden animate-reveal p-2">
                 {resourceGroups.map((group: any, idx: number) => (
-                  <div key={idx} className={`p-4 ${idx > 0 ? 'border-t border-zinc-100 dark:border-zinc-800' : ''}`}>
-                    <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-400 mb-3">{group.title}</h3>
-                    <div className="space-y-1">
+                  <div key={idx} className="mb-1 last:mb-0">
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-zinc-400/80 px-4 py-2.5">{group.title}</h3>
+                    <div className="space-y-0.5">
                       {group.items.map((item: any, itemIdx: number) => (
                         <a
                           key={itemIdx}
                           href={item.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg transition-all group"
+                          className="flex items-center gap-3 px-4 py-2.5 text-[13.5px] font-medium text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-xl transition-all group"
                         >
                           <span className="flex-1 truncate">{item.text}</span>
-                          <ExternalLink className="w-3.5 h-3.5 text-zinc-400 group-hover:text-blue-600 shrink-0" />
+                          <ExternalLink className="w-3.5 h-3.5 text-zinc-300 dark:text-zinc-600 group-hover:text-blue-500 transition-colors" />
                         </a>
                       ))}
                     </div>
@@ -136,20 +140,25 @@ export const NavbarExtra = () => {
           )}
         </div>
 
+        <div className="h-4 w-px bg-zinc-200 dark:bg-zinc-800 mx-1" />
+
         {/* 主題切換 */}
         <button 
           onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')} 
-          className="p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all"
+          className="p-2.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all active:scale-90 relative group"
         >
-          {resolvedTheme === 'dark' ? <Sun className="w-5 h-5 text-yellow-500" /> : <Moon className="w-5 h-5 text-zinc-600" />}
+          <div className="relative z-10">
+            {resolvedTheme === 'dark' ? <Sun className="w-4.5 h-4.5 text-amber-500" /> : <Moon className="w-4.5 h-4.5 text-zinc-600" />}
+          </div>
+          <span className="absolute inset-0 bg-zinc-100 dark:bg-zinc-800 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300" />
         </button>
 
         {/* 語言切換 */}
         <button 
           onClick={() => setLanguage(language === 'zh-TW' ? 'en' : 'zh-TW')} 
-          className="flex items-center gap-1.5 px-3 py-2 hover:bg-[rgb(245,245,247)] dark:hover:bg-zinc-800 rounded-full transition-all text-sm font-bold text-zinc-700 dark:text-zinc-300 border border-transparent hover:border-zinc-200 dark:hover:border-zinc-700"
+          className="flex items-center gap-2 px-3.5 py-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all text-[11px] font-bold text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-600 shadow-sm"
         >
-          <Globe className="w-4 h-4" />
+          <Globe className="w-3.5 h-3.5 opacity-70" />
           <span>{isZh ? 'EN' : '中文'}</span>
         </button>
       </div>

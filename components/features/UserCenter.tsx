@@ -18,8 +18,8 @@ const UserCenter: React.FC = () => {
 
   if (!mounted || isLoading) {
     return (
-      <div className="flex items-center gap-2">
-        <div className="w-9 h-9 rounded-full bg-apple-bg dark:bg-apple-dark-border animate-pulse" />
+      <div className="flex items-center gap-2 px-2">
+        <div className="w-9 h-9 rounded-full bg-zinc-100 dark:bg-zinc-800 animate-pulse border border-zinc-200/50 dark:border-zinc-700/50" />
       </div>
     )
   }
@@ -33,18 +33,18 @@ const UserCenter: React.FC = () => {
   }
 
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-3 pl-2">
       {user ? (
         <div className="flex items-center gap-3">
-          <div className="hidden xl:flex flex-col items-end leading-none">
-            <span className="text-[10px] font-bold text-apple-gray uppercase tracking-widest mb-0.5">Authorized</span>
-            <span className="text-[12px] font-bold text-apple-text dark:text-apple-dark-text">
+          <div className="hidden xl:flex flex-col items-end leading-none select-none">
+            <span className="text-[9px] font-bold text-apple-blue dark:text-blue-400 uppercase tracking-widest mb-1.5 opacity-80">Authorized</span>
+            <span className="text-[12.5px] font-bold text-zinc-900 dark:text-zinc-50 tracking-tight">
               {(user.email ?? 'User').split('@')[0]}
             </span>
           </div>
           
           <div 
-            className="w-9 h-9 rounded-full bg-apple-blue text-white flex items-center justify-center font-bold text-sm shadow-lg shadow-apple-blue/20 cursor-help select-none ring-2 ring-white dark:ring-apple-dark-bg ring-offset-2 ring-offset-apple-blue/10 transition-all hover:scale-105"
+            className="w-9 h-9 rounded-full bg-apple-blue text-white flex items-center justify-center font-bold text-[13px] shadow-lg shadow-apple-blue/20 cursor-help select-none ring-1 ring-apple-blue/50 dark:ring-blue-400/50 ring-offset-2 ring-offset-white dark:ring-offset-zinc-950 transition-all hover:scale-105 active:scale-95"
             title={`已登入：${user.email ?? 'Unknown'}`}
           >
             {getAvatarContent()}
@@ -52,16 +52,16 @@ const UserCenter: React.FC = () => {
 
           <button
             onClick={() => signOut()}
-            className="flex items-center gap-2 px-4 py-2 hover:bg-apple-bg dark:hover:bg-apple-dark-border rounded-full text-[13px] font-bold text-apple-text dark:text-apple-dark-text transition-all active:scale-95 border border-transparent hover:border-apple-border dark:hover:border-apple-dark-border"
+            className="flex items-center gap-2 px-4 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full text-[12px] font-bold text-zinc-600 dark:text-zinc-400 transition-all active:scale-95 border border-zinc-200/50 dark:border-zinc-800/50 hover:border-zinc-300 dark:hover:border-zinc-600 shadow-sm"
           >
-            <LogOut className="w-3.5 h-3.5 opacity-70" />
+            <LogOut className="w-3.5 h-3.5 opacity-60" />
             <span className="hidden md:inline">{t('userCenter.logout')}</span>
           </button>
         </div>
       ) : (
         <button
           onClick={() => signIn()}
-          className="flex items-center gap-2 px-5 py-2 bg-apple-blue text-white rounded-full text-[13px] font-bold hover:bg-apple-blue-hover transition-all active:scale-95 shadow-md shadow-apple-blue/10 group"
+          className="flex items-center gap-2 px-5 py-2.5 bg-zinc-950 dark:bg-zinc-50 text-white dark:text-zinc-950 rounded-full text-[13px] font-bold hover:opacity-90 transition-all active:scale-95 shadow-xl shadow-zinc-950/10 dark:shadow-zinc-50/10 group"
         >
           <LogIn className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           <span>{t('userCenter.login')}</span>

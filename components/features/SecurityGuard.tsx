@@ -137,23 +137,7 @@ const SecurityGuard: React.FC = () => {
 
   if (!isMounted) return null
 
-  return (
-    <div 
-      id="geometric-watermark" 
-      className="fixed inset-0 pointer-events-none z-0 select-none mix-blend-multiply dark:mix-blend-overlay"
-      aria-hidden="true"
-    >
-      <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <pattern id="hexPattern" x="0" y="0" width="100" height="87" patternUnits="userSpaceOnUse">
-            <path d="M50 0 L93.3 25 L93.3 62 L50 87 L6.7 62 L6.7 25 Z" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-zinc-200 dark:text-zinc-800" opacity="0.3"/>
-            <circle cx="50" cy="43.5" r="1.5" fill="currentColor" className="text-zinc-300 dark:text-zinc-700" opacity="0.2"/>
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#hexPattern)" />
-      </svg>
-    </div>
-  )
+  return null
 }
 
 export default SecurityGuard
