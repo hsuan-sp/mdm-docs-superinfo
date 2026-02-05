@@ -397,6 +397,43 @@ html.dark {
   border-color: rgba(255, 255, 255, 0.15) !important;
 }
 
+/* ======= USER CENTER / ZINC COLORS ======= */
+.dark .text-zinc-900,
+.dark .text-zinc-800,
+.dark .text-zinc-700 {
+  color: #ffffff !important;
+}
+
+.dark .text-zinc-600,
+.dark .text-zinc-500,
+.dark .text-zinc-400 {
+  color: #a1a1aa !important;
+}
+
+.dark .bg-zinc-100,
+.dark .bg-zinc-50 {
+  background-color: #27272a !important;
+}
+
+.dark .bg-zinc-950 {
+  background-color: #fafafa !important;
+}
+
+.dark .border-zinc-200,
+.dark .border-zinc-300,
+.dark [class*="border-zinc-200"],
+.dark [class*="border-zinc-300"] {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.dark .hover\:bg-zinc-100:hover {
+  background-color: #3f3f46 !important;
+}
+
+.dark .ring-offset-white {
+  --tw-ring-offset-color: #09090b !important;
+}
+
 h1,
 h2,
 h3,
