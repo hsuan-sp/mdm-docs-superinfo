@@ -5,7 +5,6 @@ import AuthGate from '../ui/AuthGate'
 import { useUser } from '../../hooks/useLogtoUser'
 import { translations } from '../../locales'
 import { useLanguage } from '../../hooks/useLanguage'
-import BackButton from '../ui/BackButton'
 
 interface LogEntry {
   version: string
@@ -39,11 +38,6 @@ const Changelog: React.FC<ChangelogProps> = ({ zhLogs, enLogs }) => {
 
   return (
     <div className="max-w-4xl mx-auto py-10 px-6 lg:px-0">
-      {/* Back Button */}
-      <div className="mb-8">
-        <BackButton />
-      </div>
-
       {/* Version Selector */}
       <div className="mb-12 p-6 bg-apple-bg dark:bg-apple-dark-bg/60 rounded-3xl border border-apple-border dark:border-apple-dark-border flex flex-col md:flex-row items-start md:items-center gap-4">
         <label htmlFor="version-select" className="text-sm font-black uppercase tracking-widest text-apple-gray">
