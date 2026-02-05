@@ -214,14 +214,40 @@ html {
 }
 
 body {
-  color: var(--color-apple-text);
+  color: #000000;
   line-height: 1.6;
   letter-spacing: -0.01em;
   background-color: transparent !important;
 }
 
 .dark body {
-  color: var(--color-apple-dark-text);
+  color: #ffffff;
+}
+
+/* ======= FORCE DARK MODE BACKGROUNDS ======= */
+/* These rules bypass Tailwind and force correct colors */
+html.dark {
+  background-color: #000000 !important;
+}
+
+.dark .bg-white,
+.dark [class*="bg-apple-bg"],
+.dark [class*="bg-apple-card"] {
+  background-color: #1c1c1e !important;
+}
+
+.dark .text-apple-text,
+.dark [class*="text-apple-text"] {
+  color: #ffffff !important;
+}
+
+.dark .text-apple-gray {
+  color: #8e8e93 !important;
+}
+
+/* Background component dark mode */
+.dark .geometric-bg {
+  background-color: #000000 !important;
 }
 
 h1,
