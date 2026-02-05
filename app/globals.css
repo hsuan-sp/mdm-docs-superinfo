@@ -13,7 +13,7 @@
 
 /* 3. 設計系統配置 (Theme Configuration) */
 @theme {
-  /* 斷點 (Screens) - 保留預設並擴充 */
+  /* 斷點 (Screens) */
   --breakpoint-xs: 480px;
   --breakpoint-3xl: 2560px;
   --breakpoint-4xl: 3840px;
@@ -24,52 +24,34 @@
     -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-serif: "Noto Serif TC", "PingFang TC", serif;
 
-  /* High-Contrast Color System - WCAG AA+ Compliant */
+  /* Color System - Mapped to Dynamic CSS Variables */
+  --color-apple-blue: var(--apple-blue);
+  --color-apple-blue-hover: var(--apple-blue-hover);
+  --color-apple-blue-bg: var(--apple-blue-bg);
 
-  /* Primary Blue - Vibrant yet readable */
-  --color-apple-blue: #0066cc;
-  --color-apple-blue-hover: #0052cc;
-  --color-apple-blue-bg: #e6f2ff;
+  --color-apple-red: var(--apple-red); /* Added for Important tags */
 
-  /* Light Mode - Maximum Readability */
-  --color-apple-text: #000000; /* Truly pure black for max contrast */
-  --color-apple-text-secondary: #404040; /* Dark gray */
-  --color-apple-gray: #666666;
-  --color-apple-bg: #ffffff;
-  --color-apple-bg-secondary: #f5f5f7; /* Apple's classic light gray */
-  --color-apple-border: rgba(0, 0, 0, 0.15); /* Slightly clearer borders */
-  --color-apple-card: #ffffff;
+  --color-apple-text: var(--apple-text);
+  --color-apple-text-secondary: var(--apple-text-secondary);
+  --color-apple-gray: var(--apple-gray);
+  --color-apple-bg: var(--apple-bg);
+  --color-apple-bg-secondary: var(--apple-bg-secondary);
+  --color-apple-border: var(--apple-border);
+  --color-apple-card: var(--apple-card);
 
-  /* Dark Mode - Maximum Readability */
-  --color-apple-dark-text: #ffffff; /* Pure white */
-  --color-apple-dark-text-secondary: #d1d1d6; /* Apple's accessible light gray */
-  --color-apple-dark-gray: #8e8e93; /* Apple's system gray */
-  --color-apple-dark-bg: #000000; /* Pure black */
-  --color-apple-dark-bg-secondary: #1c1c1e; /* Apple's system grouped background */
-  --color-apple-dark-border: rgba(
-    255,
-    255,
-    255,
-    0.2
-  ); /* Clearer borders in dark mode */
-  --color-apple-dark-card: #1c1c1e;
-
-  /* Dark Mode Blue - High Visibility */
-  --color-dark-blue-primary: #0a84ff; /* Apple's systematic dark mode blue */
+  /* Legacy/Specific Dark Mode Vars (Mapped for compatibility) */
+  --color-apple-dark-text: #ffffff;
+  --color-apple-dark-bg: #000000;
+  --color-dark-blue-primary: #0a84ff;
   --color-dark-blue-hover: #409cff;
 
-  /* Precision Grid System - Subtle Blue */
-  --grid-color-main: rgba(0, 102, 204, 0.06);
-  --grid-color-sub: rgba(0, 102, 204, 0.02);
-
-  --grid-pattern:
-    linear-gradient(to right, var(--grid-color-main) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--grid-color-main) 1px, transparent 1px),
-    linear-gradient(to right, var(--grid-color-sub) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--grid-color-sub) 1px, transparent 1px);
+  /* Grid System */
+  --grid-color-main: var(--grid-main);
+  --grid-color-sub: var(--grid-sub);
+  --grid-pattern: var(--grid-pattern-val);
   --grid-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
 
-  /* 響應式字體大小 (Responsive Font Sizes) */
+  /* Responsive Text */
   --text-xs-responsive: clamp(0.625rem, 0.75rem, 0.875rem);
   --text-sm-responsive: clamp(0.75rem, 0.875rem, 1rem);
   --text-base-responsive: clamp(0.875rem, 1rem, 1.125rem);
@@ -79,29 +61,7 @@
   --text-3xl-responsive: clamp(1.5rem, 1.875rem, 2.25rem);
   --text-4xl-responsive: clamp(1.875rem, 2.25rem, 3rem);
 
-  /* 舊版 fluid 變數 (保留兼容性) */
-  --text-fluid-xs: clamp(0.7rem, 0.6rem + 0.2vw, 0.8rem);
-  --text-fluid-sm: clamp(0.8rem, 0.7rem + 0.2vw, 0.9rem);
-  --text-fluid-base: clamp(0.95rem, 0.85rem + 0.3vw, 1.05rem);
-  --text-fluid-lg: clamp(1.1rem, 1rem + 0.4vw, 1.25rem);
-  --text-fluid-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
-  --text-fluid-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
-  --text-fluid-4xl: clamp(2rem, 1.5rem + 1.5vw, 3rem);
-
-  /* 間距 (Spacing) */
-  --spacing-compact: 0.5rem;
-  --spacing-normal: 1rem;
-  --spacing-comfortable: 1.5rem;
-  --spacing-spacious: 2rem;
-
-  /* 圓角 (Border Radius) */
-  --radius-apple: 1.25rem;
-  --radius-apple-lg: 2.5rem; /* 40px */
-  --radius-apple-xl: 3rem; /* 48px */
-  --radius-4xl: 2rem; /* 32px */
-  --radius-5xl: 2.5rem; /* 40px */
-
-  /* 動畫 (Animations) */
+  /* Animations */
   --animate-in: fadeIn 0.3s ease-in-out;
   --animate-out: fadeOut 0.3s ease-in-out;
   --animate-slide-up: slideUp 0.4s ease-out;
@@ -150,7 +110,6 @@
       transform: translateY(0);
     }
   }
-
   @keyframes float {
     0%,
     100% {
@@ -161,10 +120,8 @@
     }
   }
 
-  /* 背景模糊 (Backdrop Blur) */
   --backdrop-blur-xs: 2px;
 
-  /* Skeleton Loading */
   @keyframes skeleton-pulse {
     0% {
       background-color: rgba(0, 0, 0, 0.05);
@@ -176,7 +133,6 @@
       background-color: rgba(0, 0, 0, 0.05);
     }
   }
-
   @keyframes skeleton-pulse-dark {
     0% {
       background-color: rgba(255, 255, 255, 0.05);
@@ -197,9 +153,55 @@
 
 /* 4. 全域設置與基礎樣式 */
 :root {
+  /* Default Theme (Light) */
+  --apple-blue: #0066cc;
+  --apple-blue-hover: #0052cc;
+  --apple-blue-bg: #e6f2ff;
+
+  --apple-red: #ff3b30; /* Important tags */
+
+  --apple-text: #000000;
+  --apple-text-secondary: #404040;
+  --apple-gray: #666666;
+  --apple-bg: #ffffff;
+  --apple-bg-secondary: #f5f5f7;
+  --apple-border: rgba(0, 0, 0, 0.15);
+  --apple-card: #ffffff;
+
+  /* Grid */
+  --grid-main: rgba(0, 82, 204, 0.08);
+  --grid-sub: rgba(0, 82, 204, 0.03);
+  --grid-pattern-val:
+    linear-gradient(to right, var(--grid-main) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-main) 1px, transparent 1px),
+    linear-gradient(to right, var(--grid-sub) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-sub) 1px, transparent 1px);
+
   --nextra-primary-hue: 210deg;
   --nextra-primary-saturation: 100%;
   --radius-apple-val: 20px;
+}
+
+/* Dark Theme Override */
+.dark {
+  color-scheme: dark;
+
+  --apple-red: #ff453a; /* Dark mode Important tags */
+  --apple-text: #ffffff;
+  --apple-text-secondary: #d1d1d6;
+  --apple-gray: #8e8e93;
+  --apple-bg: #000000;
+  --apple-bg-secondary: #1c1c1e;
+  --apple-border: rgba(255, 255, 255, 0.2);
+  --apple-card: #1c1c1e;
+
+  --apple-blue: #0a84ff;
+  --apple-blue-hover: #409cff;
+  --apple-blue-bg: #1a1a1a;
+
+  /* Subtle Grid in Dark Mode */
+  --grid-main: rgba(255, 255, 255, 0.08);
+  --grid-sub: rgba(255, 255, 255, 0.03);
 }
 
 html {
