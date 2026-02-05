@@ -689,6 +689,10 @@ article {
   color: var(--color-apple-dark-text);
 }
 
+.sidebar-btn:active {
+  transform: scale(0.98);
+}
+
 .sidebar-btn-active {
   background-color: var(--color-apple-blue) !important;
   color: #ffffff !important;

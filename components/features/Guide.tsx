@@ -13,6 +13,7 @@ import {
   Settings2,
   Filter,
 } from "lucide-react";
+import { Skeleton } from "@/components/ui/Skeleton";
 import { QAModule } from "../../types";
 import EmptyState from "../../components/ui/EmptyState";
 import { translations } from "../../locales";
@@ -434,18 +435,29 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
 
   if (isDataLoading) {
     return (
-      <div className="flex flex-col lg:flex-row gap-0 lg:gap-16 py-12">
-        <aside className="hidden lg:block w-[320px] shrink-0 space-y-6 px-4">
-          <div className="skeleton h-14 w-full rounded-2xl" />
-          <div className="skeleton h-80 w-full rounded-2xl" />
-          <div className="skeleton h-24 w-full rounded-2xl" />
-        </aside>
-        <main className="flex-1 px-6 lg:px-0 space-y-10">
-          <div className="lg:hidden -mx-6 mb-10 h-16 skeleton rounded-none" />
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="skeleton-card skeleton mb-8" />
-          ))}
-        </main>
+      <div className="flex flex-col lg:flex-row min-h-screen pt-20">
+        {/* Sidebar Skeleton */}
+        <div className="hidden lg:block w-72 shrink-0 p-8 border-r border-apple-border dark:border-apple-dark-border">
+           <Skeleton className="h-10 w-full mb-6 rounded-xl" />
+           <div className="space-y-4">
+             {[1, 2, 3, 4, 5].map((i) => (
+               <Skeleton key={i} className="h-8 w-full rounded-lg" />
+             ))}
+           </div>
+        </div>
+        
+        {/* Content Skeleton */}
+        <div className="flex-1 p-6 lg:p-10 max-w-5xl mx-auto w-full">
+           <div className="flex gap-4 mb-10">
+             <Skeleton className="h-12 w-full rounded-2xl" />
+             <Skeleton className="h-12 w-32 rounded-2xl" />
+           </div>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+             {[1, 2, 3, 4].map((i) => (
+               <Skeleton key={i} className="h-64 rounded-3xl" />
+             ))}
+           </div>
+        </div>
       </div>
     );
   }
