@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useLanguage } from '../../hooks/useLanguage'
 import { Globe, ChevronDown, ExternalLink, Moon, Sun } from 'lucide-react'
@@ -9,6 +10,16 @@ import { useTheme } from 'next-themes'
 import { translations } from '../../locales'
 import UserCenter from '../features/UserCenter'
 import MobileNav from './MobileNav'
+
+interface ResourceItem {
+  text: string;
+  link: string;
+}
+
+interface ResourceGroup {
+  title: string;
+  items: ResourceItem[];
+}
 
 // Logo 組件
 export const Logo = () => {
@@ -19,10 +30,12 @@ export const Logo = () => {
       <div className="relative">
         <div className="absolute inset-0 bg-apple-blue/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
         <div className="relative z-10 p-1.5 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md rounded-xl shadow-sm border border-zinc-200/50 dark:border-zinc-800/50 group-hover:border-apple-blue/30 transition-all duration-500 group-hover:scale-105">
-          <img 
+          <Image 
             src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo-square.png`} 
             alt="極電資訊 Apple MDM Hub Logo" 
-            className="h-6 md:h-7 w-auto transition-transform duration-700 group-hover:rotate-12 shrink-0" 
+            width={28}
+            height={28}
+            className="h-6 w-6 md:h-7 md:w-7 transition-transform duration-700 group-hover:rotate-12 shrink-0"
           />
         </div>
       </div>
@@ -118,11 +131,11 @@ export const NavbarExtra = () => {
             <>
               <div className="fixed inset-0 z-40" onClick={() => setResourcesOpen(false)} />
               <div className="absolute right-0 mt-3 w-80 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-zinc-200/50 dark:border-zinc-800/50 z-50 overflow-hidden animate-reveal p-2">
-                {resourceGroups.map((group: any, idx: number) => (
+                {resourceGroups.map((group: ResourceGroup, idx: number) => (
                   <div key={idx} className="mb-1 last:mb-0">
                     <h3 className="text-[10px] font-bold uppercase tracking-widest text-zinc-400/80 px-4 py-2.5">{group.title}</h3>
                     <div className="space-y-0.5">
-                      {group.items.map((item: any, itemIdx: number) => (
+                      {group.items.map((item: ResourceItem, itemIdx: number) => (
                         <a
                           key={itemIdx}
                           href={item.link}

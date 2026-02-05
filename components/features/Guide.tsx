@@ -1,5 +1,7 @@
 "use client";
 import React, { useState, useMemo, useEffect, useCallback } from "react";
+import { translations, TranslationType } from "../../locales";
+import { PathsToLeaves } from "../../lib/i18n-utils";
 import {
   Search,
   ChevronDown,
@@ -18,7 +20,6 @@ import { Skeleton } from "@/components/ui/Skeleton";
 import NoResults from "@/components/ui/NoResults"; // Added NoResults import
 import { QAModule } from "../../types";
 import EmptyState from "../../components/ui/EmptyState";
-import { translations } from "../../locales";
 import { useLanguage } from "../../hooks/useLanguage";
 import { useUser } from "../../hooks/useLogtoUser";
 import AuthGate from "../ui/AuthGate";
@@ -47,7 +48,7 @@ const SidebarContent: React.FC<{
   fontScale: number;
   setFontScale: (v: number) => void;
   setIsDrawerOpen: (v: boolean) => void;
-  t: any;
+  t: (key: PathsToLeaves<TranslationType>, params?: Record<string, any>) => string;
 }> = ({
   searchQuery,
   setSearchQuery,
