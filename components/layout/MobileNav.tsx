@@ -69,14 +69,14 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
         <div className="flex items-center justify-between px-6 bg-white/40 dark:bg-zinc-950/40 h-20 shrink-0 border-b border-zinc-100 dark:border-zinc-900">
           <div className="flex items-center gap-3.5">
             <div className="p-2 bg-apple-blue/10 rounded-2xl border border-apple-blue/20 shadow-sm">
-              <img src="/logo-square.png" alt="Logo" className="h-6.5 w-6.5 object-contain" />
+              <img src="/logo-square.png" alt="極電資訊 Apple MDM Hub Logo" className="h-6.5 w-6.5 object-contain" />
             </div>
             <div className="flex flex-col">
               <h2 className="text-[15px] font-bold text-zinc-900 dark:text-zinc-50 leading-tight tracking-tight">{isZh ? '極電資訊' : 'Superinfo'}</h2>
               <p className="text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest mt-0.5">APPLE MDM HUB</p>
             </div>
           </div>
-          <button onClick={onClose} className="p-2.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all active:scale-90 border border-transparent hover:border-zinc-200 dark:hover:border-zinc-700">
+          <button onClick={onClose} className="p-2.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all active:scale-90 border border-transparent hover:border-zinc-200 dark:hover:border-zinc-700" aria-label="Close menu">
             <X className="w-5 h-5 text-zinc-500" />
           </button>
         </div>

@@ -367,6 +367,20 @@ html.dark {
   color: #8e8e93 !important;
 }
 
+/* Select focus-visible for keyboard accessibility */
+select:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px var(--color-apple-blue),
+    0 0 0 4px rgba(0, 102, 204, 0.2);
+}
+
+.dark select:focus-visible {
+  box-shadow:
+    0 0 0 2px #0a84ff,
+    0 0 0 4px rgba(10, 132, 255, 0.3);
+}
+
 /* ======= BUTTONS ======= */
 .dark .btn-apple-secondary {
   border-color: #0a84ff !important;
@@ -679,6 +693,19 @@ article {
   background-color: var(--color-apple-blue) !important;
   color: #ffffff !important;
   font-weight: 600 !important;
+}
+
+.sidebar-btn:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px var(--color-apple-blue),
+    0 0 0 4px rgba(0, 102, 204, 0.2);
+}
+
+.dark .sidebar-btn:focus-visible {
+  box-shadow:
+    0 0 0 2px #0a84ff,
+    0 0 0 4px rgba(10, 132, 255, 0.3);
 }
 
 /* Sidebar Container - Clean solid background */

@@ -21,7 +21,7 @@ export const Logo = () => {
         <div className="relative z-10 p-1.5 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md rounded-xl shadow-sm border border-zinc-200/50 dark:border-zinc-800/50 group-hover:border-apple-blue/30 transition-all duration-500 group-hover:scale-105">
           <img 
             src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo-square.png`} 
-            alt="Logo" 
+            alt="極電資訊 Apple MDM Hub Logo" 
             className="h-6 md:h-7 w-auto transition-transform duration-700 group-hover:rotate-12 shrink-0" 
           />
         </div>
@@ -107,6 +107,8 @@ export const NavbarExtra = () => {
           <button
             onClick={() => setResourcesOpen(!resourcesOpen)}
             className={`flex items-center gap-1.5 px-4 py-2 hover:bg-zinc-100/80 dark:hover:bg-zinc-800/80 rounded-full transition-all text-[13px] font-bold ${resourcesOpen ? 'text-apple-blue bg-apple-blue/5 dark:bg-apple-blue/10' : 'text-zinc-600 dark:text-zinc-400'}`}
+            aria-label="Toggle resources menu"
+            aria-expanded={resourcesOpen}
           >
             <span>{t('resources.label')}</span>
             <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${resourcesOpen ? 'rotate-180' : ''}`} />
@@ -146,6 +148,7 @@ export const NavbarExtra = () => {
         <button 
           onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')} 
           className="p-2.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all active:scale-90 relative group"
+          aria-label={resolvedTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
         >
           <div className="relative z-10">
             {resolvedTheme === 'dark' ? <Sun className="w-4.5 h-4.5 text-amber-500" /> : <Moon className="w-4.5 h-4.5 text-zinc-600" />}
@@ -157,6 +160,7 @@ export const NavbarExtra = () => {
         <button 
           onClick={() => setLanguage(language === 'zh-TW' ? 'en' : 'zh-TW')} 
           className="flex items-center gap-2 px-3.5 py-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all text-[11px] font-bold text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-600 shadow-sm"
+          aria-label={language === 'zh-TW' ? 'Switch to English' : '切換至中文'}
         >
           <Globe className="w-3.5 h-3.5 opacity-70" />
           <span>{isZh ? 'EN' : '中文'}</span>
