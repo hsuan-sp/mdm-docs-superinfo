@@ -31,27 +31,32 @@
   --color-apple-blue-hover: #0052cc;
   --color-apple-blue-bg: #e6f2ff;
 
-  /* Light Mode - High Contrast with Premium Feel */
-  --color-apple-text: #1a1a1a; /* Near-black for body text (softer than pure black, still 18:1) */
-  --color-apple-text-secondary: #4a4a4a; /* Dark gray for secondary (11:1 ratio) */
-  --color-apple-gray: #6b6b6b; /* Medium gray for tertiary (6.5:1 ratio) */
-  --color-apple-bg: #ffffff; /* Pure white background */
-  --color-apple-bg-secondary: #f8f9fa; /* Very light gray for subtle cards */
-  --color-apple-border: rgba(0, 0, 0, 0.12);
+  /* Light Mode - Maximum Readability */
+  --color-apple-text: #000000; /* Truly pure black for max contrast */
+  --color-apple-text-secondary: #404040; /* Dark gray */
+  --color-apple-gray: #666666;
+  --color-apple-bg: #ffffff;
+  --color-apple-bg-secondary: #f5f5f7; /* Apple's classic light gray */
+  --color-apple-border: rgba(0, 0, 0, 0.15); /* Slightly clearer borders */
   --color-apple-card: #ffffff;
 
-  /* Dark Mode - High Contrast with Depth */
-  --color-apple-dark-text: #f5f5f5; /* Soft white for body text (less harsh than pure white) */
-  --color-apple-dark-text-secondary: #b8b8b8; /* Light gray for secondary */
-  --color-apple-dark-gray: #999999; /* Medium gray for tertiary */
-  --color-apple-dark-bg: #0a0a0a; /* Near-black background (softer than pure black) */
-  --color-apple-dark-bg-secondary: #1c1c1c; /* Dark gray for cards */
-  --color-apple-dark-border: rgba(255, 255, 255, 0.12);
-  --color-apple-dark-card: rgba(255, 255, 255, 0.04);
+  /* Dark Mode - Maximum Readability */
+  --color-apple-dark-text: #ffffff; /* Pure white */
+  --color-apple-dark-text-secondary: #d1d1d6; /* Apple's accessible light gray */
+  --color-apple-dark-gray: #8e8e93; /* Apple's system gray */
+  --color-apple-dark-bg: #000000; /* Pure black */
+  --color-apple-dark-bg-secondary: #1c1c1e; /* Apple's system grouped background */
+  --color-apple-dark-border: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Clearer borders in dark mode */
+  --color-apple-dark-card: #1c1c1e;
 
-  /* Dark Mode Blue - Bright and vibrant */
-  --color-dark-blue-primary: #5db4f7;
-  --color-dark-blue-hover: #4da8e8;
+  /* Dark Mode Blue - High Visibility */
+  --color-dark-blue-primary: #0a84ff; /* Apple's systematic dark mode blue */
+  --color-dark-blue-hover: #409cff;
 
   /* Precision Grid System - Subtle Blue */
   --grid-color-main: rgba(0, 102, 204, 0.06);

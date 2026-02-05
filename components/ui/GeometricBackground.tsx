@@ -13,7 +13,7 @@ import React from 'react'
  */
 const GeometricBackground: React.FC = () => {
   return (
-    <div className="fixed inset-0 -z-50 pointer-events-none overflow-hidden bg-white dark:bg-[#020202] transition-colors duration-700">
+    <div className="fixed inset-0 -z-50 pointer-events-none overflow-hidden bg-white dark:bg-black transition-colors duration-700">
       {/* 
          Medical Blueprint Grid with ultra-wide structural masking 
          The mask is now much larger (95%) to avoid "blocky" transitions at the edges.
