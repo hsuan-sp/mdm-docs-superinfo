@@ -68,7 +68,7 @@ const Home: React.FC = () => {
           </button>
           <button
             onClick={() => router.push('/glossary')}
-            className="btn-apple-link w-full sm:w-auto group text-xl font-bold hover:opacity-100 transition-opacity"
+            className="btn-apple-link w-full sm:w-auto group text-xl font-bold"
           >
             {t('home.searchGlossary')} 
             <ChevronRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-500" />
