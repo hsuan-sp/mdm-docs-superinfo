@@ -42,6 +42,10 @@
   /* Legacy/Specific Dark Mode Vars (Mapped for compatibility) */
   --color-apple-dark-text: #ffffff;
   --color-apple-dark-bg: #000000;
+  --color-apple-dark-bg-secondary: #1c1c1e;
+  --color-apple-dark-border: rgba(255, 255, 255, 0.15);
+  --color-apple-dark-card: #1c1c1e;
+  --color-apple-dark-gray: #8e8e93;
   --color-dark-blue-primary: #0a84ff;
   --color-dark-blue-hover: #409cff;
 
