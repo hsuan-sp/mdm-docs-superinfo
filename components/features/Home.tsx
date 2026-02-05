@@ -84,7 +84,10 @@ const Home: React.FC = () => {
               <div 
                 key={f.id} 
                 onClick={() => handleRoute(f.id)}
-                className="apple-card group cursor-pointer p-10 md:p-12 flex flex-col h-full min-h-85 relative overflow-hidden transition-all duration-700 bg-white/60 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 hover:shadow-2xl hover:shadow-black/5 dark:hover:shadow-white/5 hover:-translate-y-2 ring-1 ring-inset ring-black/5 dark:ring-white/5 animate-enter-up"
+                onKeyDown={(e) => e.key === 'Enter' && handleRoute(f.id)}
+                role="button"
+                tabIndex={0}
+                className="apple-card group cursor-pointer p-10 md:p-12 flex flex-col h-full min-h-85 relative overflow-hidden transition-all duration-700 bg-white/60 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 hover:shadow-2xl hover:shadow-black/5 dark:hover:shadow-white/5 hover:-translate-y-2 ring-1 ring-inset ring-black/5 dark:ring-white/5 animate-enter-up focus-visible:ring-2 focus-visible:ring-apple-blue focus-visible:ring-offset-2 focus-visible:outline-none"
                 style={{ animationDelay: `${idx * 100 + 500}ms` }}
               >
                 {/* Refined Sheen Effect */}

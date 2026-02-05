@@ -28,7 +28,7 @@ const BackToTop: React.FC = () => {
         visible 
           ? 'translate-y-0 opacity-100 scale-100' 
           : 'translate-y-16 opacity-0 scale-75 pointer-events-none'
-      } hover:scale-110 active:scale-95 group`}
+      } hover:scale-110 active:scale-95 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-apple-blue focus-visible:outline-none group`}
       aria-label="Back to Top"
     >
       {/* 呼吸波紋動畫 */}

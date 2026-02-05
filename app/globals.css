@@ -728,6 +728,14 @@ article {
   transform: scale(0.96);
 }
 
+.btn-apple-primary:focus-visible {
+  outline: none;
+  ring: 2px solid #ffffff;
+  box-shadow:
+    0 0 0 2px var(--color-apple-blue),
+    0 0 0 4px rgba(255, 255, 255, 0.8);
+}
+
 .dark .btn-apple-primary {
   background-color: var(--color-dark-blue-primary);
   color: #000000 !important; /* Black text on bright blue in dark mode */
@@ -764,6 +772,13 @@ article {
   transform: scale(0.98);
 }
 
+.btn-apple-secondary:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px var(--color-apple-blue),
+    0 0 0 4px rgba(0, 102, 204, 0.3);
+}
+
 /* Tertiary Button - Text Link (always visible) */
 .btn-apple-link {
   display: inline-flex;
@@ -782,6 +797,12 @@ article {
 .btn-apple-link:hover {
   color: var(--color-apple-blue-hover) !important;
   text-decoration: underline;
+}
+
+.btn-apple-link:focus-visible {
+  outline: none;
+  text-decoration: underline;
+  box-shadow: 0 2px 0 0 var(--color-apple-blue);
 }
 
 .dark .btn-apple-link {
