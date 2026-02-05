@@ -91,7 +91,7 @@ const SidebarContent: React.FC<{
         {searchQuery && (
           <button
             onClick={() => setSearchQuery("")}
-            className="absolute right-1 top-1/2 -translate-y-1/2 p-2 text-apple-gray hover:text-apple-text transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+            className="absolute right-1 top-1/2 -translate-y-1/2 p-2 text-apple-gray hover:text-apple-text transition-colors min-h-11 min-w-11 flex items-center justify-center"
             aria-label="Clear search"
           >
             <X className="w-4 h-4" />

@@ -104,7 +104,7 @@ export const NavbarExtra = () => {
       {/* 手機版漢堡選單按鈕 */}
       <button 
         onClick={() => setIsMobileNavOpen(true)} 
-        className="lg:hidden p-2.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all active:scale-95 flex items-center justify-center border border-transparent hover:border-zinc-200 dark:hover:border-zinc-700 shadow-sm md:shadow-none min-h-[44px] min-w-[44px]"
+        className="lg:hidden p-2.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all active:scale-95 flex items-center justify-center border border-transparent hover:border-zinc-200 dark:hover:border-zinc-700 shadow-sm md:shadow-none min-h-11 min-w-11"
         aria-label="Open menu"
       >
         <svg className="w-6 h-6 text-zinc-700 dark:text-zinc-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -160,7 +160,7 @@ export const NavbarExtra = () => {
         {/* 主題切換 */}
         <button 
           onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')} 
-          className="p-2.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all active:scale-90 relative group min-h-[44px] min-w-[44px] flex items-center justify-center"
+          className="p-2.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all active:scale-90 relative group min-h-11 min-w-11 flex items-center justify-center"
           aria-label={resolvedTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
         >
           <div className="relative z-10">
@@ -172,7 +172,7 @@ export const NavbarExtra = () => {
         {/* 語言切換 */}
         <button 
           onClick={() => setLanguage(language === 'zh-TW' ? 'en' : 'zh-TW')} 
-          className="flex items-center gap-2 px-3.5 py-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all text-[11px] font-bold text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-600 shadow-sm min-h-[44px] min-w-[44px] justify-center"
+          className="flex items-center gap-2 px-3.5 py-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all text-[11px] font-bold text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-600 shadow-sm min-h-11 min-w-11 justify-center"
           aria-label={language === 'zh-TW' ? 'Switch to English' : '切換至中文'}
         >
           <Globe className="w-3.5 h-3.5 opacity-70" />
