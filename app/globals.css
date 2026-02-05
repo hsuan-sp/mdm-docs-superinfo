@@ -236,18 +236,165 @@ html.dark {
   background-color: #1c1c1e !important;
 }
 
+/* Background component dark mode */
+.dark .geometric-bg {
+  background-color: #000000 !important;
+}
+
+/* ======= DARK MODE TEXT COLORS ======= */
+/* All text should be white or light gray in dark mode */
+.dark body,
+.dark p,
+.dark span,
+.dark div,
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark label,
+.dark a:not(.btn-apple-primary),
+.dark li {
+  color: #ffffff;
+}
+
 .dark .text-apple-text,
 .dark [class*="text-apple-text"] {
   color: #ffffff !important;
 }
 
-.dark .text-apple-gray {
+.dark .text-apple-gray,
+.dark [class*="text-apple-gray"],
+.dark .text-gray-500,
+.dark .text-gray-600,
+.dark .text-gray-700 {
+  color: #a1a1a6 !important;
+}
+
+/* Secondary text - slightly dimmed */
+.dark .text-apple-text-secondary,
+.dark [class*="text-secondary"] {
+  color: #d1d1d6 !important;
+}
+
+/* ======= NAVBAR & LOGO ======= */
+.dark .nextra-nav-container,
+.dark nav {
+  color: #ffffff !important;
+}
+
+/* Logo and brand text */
+.dark [class*="logo"],
+.dark [class*="brand"],
+.dark .text-xl,
+.dark .font-bold {
+  color: #ffffff !important;
+}
+
+/* Navbar links */
+.dark nav a,
+.dark .nextra-nav-container a {
+  color: #ffffff !important;
+}
+
+.dark nav a:hover {
+  color: #0a84ff !important;
+}
+
+/* ======= SIDEBAR ======= */
+.dark .sidebar-btn,
+.dark aside button,
+.dark aside a {
+  color: #d1d1d6 !important;
+}
+
+.dark .sidebar-btn:hover,
+.dark aside button:hover,
+.dark aside a:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .sidebar-btn-active {
+  background-color: #0a84ff !important;
+  color: #ffffff !important;
+}
+
+/* Sidebar container */
+.dark .sidebar-glass-container,
+.dark aside {
+  background-color: rgba(28, 28, 30, 0.8) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ======= CARDS & CONTENT ======= */
+.dark .apple-card {
+  background-color: #1c1c1e !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .apple-card:hover {
+  background-color: #2c2c2e !important;
+}
+
+/* Card content text */
+.dark .apple-card p,
+.dark .apple-card span,
+.dark .apple-card h1,
+.dark .apple-card h2,
+.dark .apple-card h3,
+.dark .apple-card h4 {
+  color: #ffffff !important;
+}
+
+/* ======= INPUTS & FORMS ======= */
+.dark input,
+.dark textarea,
+.dark select,
+.dark .input-apple {
+  background-color: #2c2c2e !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
   color: #8e8e93 !important;
 }
 
-/* Background component dark mode */
-.dark .geometric-bg {
-  background-color: #000000 !important;
+/* ======= BUTTONS ======= */
+.dark .btn-apple-secondary {
+  border-color: #0a84ff !important;
+  color: #0a84ff !important;
+}
+
+.dark .btn-apple-link {
+  color: #0a84ff !important;
+}
+
+/* ======= PILLS & TAGS ======= */
+.dark .pill-apple {
+  background-color: #2c2c2e !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #d1d1d6 !important;
+}
+
+.dark .pill-apple.active {
+  background-color: #0a84ff !important;
+  color: #ffffff !important;
+}
+
+/* ======= SEARCH ======= */
+.dark [class*="search"] input {
+  background-color: #2c2c2e !important;
+  color: #ffffff !important;
+}
+
+/* ======= BORDERS ======= */
+.dark [class*="border-apple"],
+.dark .border {
+  border-color: rgba(255, 255, 255, 0.15) !important;
 }
 
 h1,
