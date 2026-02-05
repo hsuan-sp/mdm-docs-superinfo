@@ -2,16 +2,18 @@
 import React, { useState, useMemo, useEffect } from "react";
 import {
   Search,
+  SearchX,
   X,
-  Lightbulb,
+  Menu,
+  ChevronDown,
   SortAsc,
   SortDesc,
-  Filter,
-  Grid,
+  Type,
   List as ListIcon,
   LayoutGrid,
 } from "lucide-react";
 import { Skeleton } from "@/components/ui/Skeleton";
+import NoResults from "@/components/ui/NoResults";
 import { GlossaryItem } from "@/types";
 import EmptyState from "@/components/ui/EmptyState";
 import { translations } from "@/locales";
@@ -86,7 +88,7 @@ const SidebarContent: React.FC<{
         {searchQuery && (
           <button
             onClick={() => setSearchQuery("")}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-apple-gray hover:text-apple-text transition-colors"
+            className="absolute right-1 top-1/2 -translate-y-1/2 p-2 text-apple-gray hover:text-apple-text transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label="Clear search"
           >
             <X className="w-4 h-4" />
@@ -448,31 +450,21 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
 
                   {item.analogy && (
                     <div
-                      className={`p-6 sm:p-8 bg-apple-bg dark:bg-apple-dark-card rounded-3xl relative z-10 border border-transparent hover:border-apple-blue/10 transition-all`}
-                      style={{ fontSize: `${fontScale * 100}%` }}
+                      className={`relative z-10 p-6 rounded-2xl bg-apple-bg dark:bg-apple-dark-border/30 border border-apple-border dark:border-apple-dark-border ${gridCols === 1 ? "text-[15px]" : "text-[13px]"}`}
                     >
-                      <div className="flex items-center gap-2 mb-4 text-apple-gray dark:text-apple-dark-text/60 font-bold text-[11px] uppercase tracking-[0.2em]">
-                        <Lightbulb className="w-4 h-4 text-amber-500" />
-                        {t("glossary.analogyLabel")}
-                      </div>
-                      <div
-                        className={`${gridCols === 1 ? "text-[16px] md:text-[18px]" : "text-[15px]"} text-apple-text dark:text-apple-dark-text leading-relaxed font-medium`}
-                        dangerouslySetInnerHTML={{ __html: item.analogy }}
-                      />
+                      <span className="block text-[10px] font-black uppercase tracking-widest text-apple-blue mb-2">
+                        {t("glossary.analogy")}
+                      </span>
+                      <p className="text-apple-text dark:text-apple-dark-text font-medium leading-relaxed">
+                        {item.analogy}
+                      </p>
                     </div>
                   )}
                 </article>
               ))}
             </div>
           ) : (
-            <EmptyState
-              onClear={() => {
-                setSearchQuery("");
-                setSelectedCategory("All");
-              }}
-              actionText={t("glossary.clearSearch")}
-              title={t("glossary.emptyState", { q: searchQuery })}
-            />
+            <NoResults query={searchQuery} onClear={() => setSearchQuery("")} />
           )}
         </main>
 

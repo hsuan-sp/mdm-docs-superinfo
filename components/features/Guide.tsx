@@ -12,8 +12,10 @@ import {
   Minimize2,
   Settings2,
   Filter,
+  SearchX, // Added SearchX
 } from "lucide-react";
 import { Skeleton } from "@/components/ui/Skeleton";
+import NoResults from "@/components/ui/NoResults"; // Added NoResults import
 import { QAModule } from "../../types";
 import EmptyState from "../../components/ui/EmptyState";
 import { translations } from "../../locales";
@@ -76,7 +78,7 @@ const SidebarContent: React.FC<{
         {searchQuery && (
           <button
             onClick={() => setSearchQuery("")}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-apple-gray hover:text-apple-text transition-colors"
+            className="absolute right-1 top-1/2 -translate-y-1/2 p-2 text-apple-gray hover:text-apple-text transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label="Clear search"
           >
             <X className="w-4 h-4" />

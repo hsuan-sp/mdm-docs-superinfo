@@ -63,7 +63,21 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
     <div className="fixed inset-0 z-10000 lg:hidden text-balance shadow-2xl">
       <div className="absolute inset-0 bg-black/60 backdrop-blur-xl animate-reveal" onClick={onClose} />
       
-      <div className="absolute right-0 top-0 h-full w-[85vw] max-w-sm bg-white/95 dark:bg-zinc-950/95 backdrop-blur-2xl animate-in slide-in-from-right duration-500 ease-apple-out flex flex-col overflow-hidden border-l border-zinc-200/50 dark:border-zinc-800/50 shadow-2xl">
+      <div 
+        className="absolute right-0 top-0 h-full w-[85vw] max-w-sm bg-white/95 dark:bg-zinc-950/95 backdrop-blur-2xl animate-in slide-in-from-right duration-500 ease-apple-out flex flex-col overflow-hidden border-l border-zinc-200/50 dark:border-zinc-800/50 shadow-2xl touch-pan-x"
+        onTouchStart={(e) => {
+          const touchStart = e.touches[0].clientX;
+          e.currentTarget.setAttribute("data-touch-start", touchStart.toString());
+        }}
+        onTouchMove={(e) => {
+          const touchStart = Number(e.currentTarget.getAttribute("data-touch-start"));
+          const currentTouch = e.touches[0].clientX;
+          const diff = currentTouch - touchStart;
+          if (diff > 50) { // Swipe right threshold
+             onClose();
+          }
+        }}
+      >
         
         {/* Header */}
         <div className="flex items-center justify-between px-6 bg-white/40 dark:bg-zinc-950/40 h-20 shrink-0 border-b border-zinc-100 dark:border-zinc-900">
