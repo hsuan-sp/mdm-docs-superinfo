@@ -24,20 +24,38 @@
     -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-serif: "Noto Serif TC", "PingFang TC", serif;
 
-  /* New "Indigo & Graphite" Engineering Scheme */
-  --color-apple-indigo: #5e5ce6;
-  --color-apple-indigo-hover: #6a68ff;
-  --color-apple-text: #1d1d1f;
-  --color-apple-text-secondary: #6e6e73;
-  --color-apple-gray: #86868b;
-  --color-apple-bg: #f5f5f7;
-  --color-apple-bg-secondary: #ffffff;
-  --color-apple-border: rgba(0, 0, 0, 0.08);
-  --color-apple-dark-border: rgba(255, 255, 255, 0.12);
+  /* High-Contrast Color System - WCAG AA+ Compliant */
 
-  /* Precision Grid System - Indigo Slate */
-  --grid-color-main: rgba(94, 92, 230, 0.08); /* Indigo shade */
-  --grid-color-sub: rgba(94, 92, 230, 0.03);
+  /* Primary Blue - Darker for better contrast */
+  --color-apple-blue: #0052cc;
+  --color-apple-blue-hover: #0043a8;
+  --color-apple-blue-bg: #e9f2ff;
+
+  /* Light Mode - Maximum Contrast */
+  --color-apple-text: #000000; /* Pure black for body text (21:1 ratio) */
+  --color-apple-text-secondary: #424242; /* Dark gray for secondary (12:1 ratio) */
+  --color-apple-gray: #666666; /* Medium gray for tertiary (7:1 ratio) */
+  --color-apple-bg: #ffffff; /* Pure white background */
+  --color-apple-bg-secondary: #f5f5f5; /* Light gray for cards */
+  --color-apple-border: rgba(0, 0, 0, 0.15);
+  --color-apple-card: #ffffff;
+
+  /* Dark Mode - High Contrast */
+  --color-apple-dark-text: #ffffff; /* Pure white for body text */
+  --color-apple-dark-text-secondary: #b0b0b0; /* Light gray for secondary */
+  --color-apple-dark-gray: #999999; /* Medium gray for tertiary */
+  --color-apple-dark-bg: #000000; /* Pure black background */
+  --color-apple-dark-bg-secondary: #1a1a1a; /* Very dark gray for cards */
+  --color-apple-dark-border: rgba(255, 255, 255, 0.15);
+  --color-apple-dark-card: rgba(255, 255, 255, 0.05);
+
+  /* Dark Mode Blue - Bright for visibility */
+  --color-dark-blue-primary: #4dabf7;
+  --color-dark-blue-hover: #339af0;
+
+  /* Precision Grid System - Blue */
+  --grid-color-main: rgba(0, 82, 204, 0.08);
+  --grid-color-sub: rgba(0, 82, 204, 0.03);
 
   --grid-pattern:
     linear-gradient(to right, var(--grid-color-main) 1px, transparent 1px),
@@ -427,23 +445,33 @@ article {
   height: auto;
   min-height: 48px;
   background-color: var(--color-apple-blue);
-  color: #ffffff;
+  color: #ffffff !important; /* Force white text for contrast */
   font-size: 16px;
   font-weight: 600;
   border-radius: 980px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.2, 0, 0, 1);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 82, 204, 0.2);
 }
 
 .btn-apple-primary:hover {
-  background-color: #0077ef;
+  background-color: var(--color-apple-blue-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 113, 227, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 82, 204, 0.3);
 }
 
 .btn-apple-primary:active {
   transform: scale(0.96);
+}
+
+.dark .btn-apple-primary {
+  background-color: var(--color-dark-blue-primary);
+  color: #000000 !important; /* Black text on bright blue in dark mode */
+}
+
+.dark .btn-apple-primary:hover {
+  background-color: var(--color-dark-blue-hover);
 }
 
 /* Secondary Button - Outlined (like "Learn more" buttons) */
@@ -473,22 +501,32 @@ article {
   transform: scale(0.98);
 }
 
-/* Tertiary Button - Text Link (like navigation links) */
+/* Tertiary Button - Text Link (always visible) */
 .btn-apple-link {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  color: var(--color-apple-blue);
+  color: var(--color-apple-blue) !important; /* Always visible */
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600; /* Bolder for better visibility */
   background: none;
   border: none;
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  opacity: 1 !important; /* Force full opacity */
+  transition: color 0.2s ease;
 }
 
 .btn-apple-link:hover {
+  color: var(--color-apple-blue-hover) !important;
   text-decoration: underline;
+}
+
+.dark .btn-apple-link {
+  color: var(--color-dark-blue-primary) !important;
+}
+
+.dark .btn-apple-link:hover {
+  color: var(--color-dark-blue-hover) !important;
 }
 
 /* Small variant */

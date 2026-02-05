@@ -19,6 +19,7 @@ import { translations } from "../../locales";
 import { useLanguage } from "../../hooks/useLanguage";
 import { useUser } from "../../hooks/useLogtoUser";
 import AuthGate from "../ui/AuthGate";
+import BackButton from "../ui/BackButton";
 
 // 如果沒有 useDebounce，可以簡單寫一個或暫時不用
 function useDebounce<T>(value: T, delay: number): T {
@@ -460,6 +461,11 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
 
         {/* Main Content Area */}
         <main className="flex-1 min-w-0 px-6 lg:px-0 lg:max-w-4xl xl:max-w-5xl">
+          {/* Back Button */}
+          <div className="mb-6">
+            <BackButton />
+          </div>
+
           {/* Mobile Category Sidebar (Horizontal Scroll) with Filter Trigger */}
           <div className="lg:hidden -mx-6 mb-10 sticky top-14 bg-white/80 dark:bg-apple-dark-bg/80 backdrop-blur-xl z-30 border-b border-apple-border dark:border-apple-dark-border flex items-center">
             
