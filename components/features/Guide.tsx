@@ -128,19 +128,19 @@ const SidebarContent: React.FC<{
         </nav>
       </div>
 
-      <div className="grid grid-cols-2 gap-3 mb-8">
+      <div className="flex flex-col gap-2.5 mb-8">
         <button
           onClick={expandAll}
-          className="btn-apple-secondary btn-sm w-full"
+          className="btn-apple-secondary btn-sm w-full justification-center"
         >
-          <Maximize2 className="w-3.5 h-3.5" />
+          <Maximize2 className="w-4 h-4" />
           {t("guide.expandAll")}
         </button>
         <button
           onClick={collapseAll}
-          className="btn-apple-secondary btn-sm w-full text-apple-gray border-apple-gray/30 hover:bg-apple-gray/5 hover:text-apple-text hover:border-apple-gray"
+          className="btn-apple-secondary btn-sm w-full text-apple-gray border-apple-gray/30 hover:bg-apple-gray/5 hover:text-apple-text hover:border-apple-gray justification-center"
         >
-          <Minimize2 className="w-3.5 h-3.5" />
+          <Minimize2 className="w-4 h-4" />
           {t("guide.collapseAll")}
         </button>
       </div>
