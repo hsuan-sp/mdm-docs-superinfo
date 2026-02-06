@@ -30,6 +30,7 @@
   "devDependencies": {
     "@aws-crypto/crc32": "^5.2.0",
     "@aws-crypto/crc32c": "^5.2.0",
+    "@eslint/eslintrc": "^3.3.3",
     "@tailwindcss/postcss": "^4.0.0",
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^22.13.14",

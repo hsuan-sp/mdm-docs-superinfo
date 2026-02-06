@@ -1,1 +1,8 @@
-[{"version":"1.0.0","date":"2026-01-23","type":"major","content":"<h2>初始發布 (v1.0.0)</h2>\n<p>正式推出「極電資訊 Apple MDM 專業知識庫」。本平台為台灣的 IT 管理人員與教育工作者提供精確、且經過實戰驗證的 Apple 裝置管理指南。</p>\n<h2>內容與系統總覽</h2>\n<ul>\n<li><strong>完全雙語化內容</strong>：包含 223 個專業術語與 217 篇實用問答文章，均提供繁體中文與英文版本。</li>\n<li><strong>技術基準</strong>：所有內容均基於 2026 年最新技術規範構建，包括 iOS 26、macOS Tahoe 以及 DDM (宣告式裝置管理) 協定。</li>\n<li><strong>核心管理領域</strong>：\n<ol>\n<li>帳號與伺服器管理</li>\n<li>裝置註冊與部署</li>\n<li>App 與 VPP 授權管理</li>\n<li>Apple 課堂與教學工具</li>\n<li>教育部數位精進計畫 (台灣)</li>\n<li>硬體維修與故障排除</li>\n<li>進階 Mac 系統管理</li>\n<li>教育現場實戰情境</li>\n</ol>\n</li>\n</ul>\n<h2>關鍵系統模組</h2>\n<ul>\n<li><strong>動態知識引擎</strong>：基於 SSG 的高性能搜尋引擎，支援即時語系切換。</li>\n<li><strong>專業報修系統</strong>：整合於頁尾的報修系統，可自動擷取頁面上下文以提高支援效率。</li>\n<li><strong>自動化維護</strong>：內置 Markdown 校對腳本與維護索引生成器，確保內容一致性。</li>\n</ul>\n"}]
+[
+  {
+    "version": "1.0.0",
+    "date": "February 2026",
+    "type": "major",
+    "content": "<h2>初始發布 (v1.0.0)</h2>\n<p>正式推出「極電資訊 Apple MDM 專業知識庫」。本平台為台灣的 IT 管理人員與教育工作者提供精確、且經過實戰驗證的 Apple 裝置管理指南。</p>\n<h2>內容與系統總覽</h2>\n<ul>\n<li><strong>完全雙語化內容</strong>：包含 223 個專業術語與 217 篇實用問答文章，均提供繁體中文與英文版本。</li>\n<li><strong>技術基準</strong>：所有內容均基於 2026 年最新技術規範構建，包括 iOS 26、macOS Tahoe 以及 DDM (宣告式裝置管理) 協定。</li>\n<li><strong>核心管理領域</strong>：\n<ol>\n<li>帳號與伺服器管理</li>\n<li>裝置註冊與部署</li>\n<li>App 與 VPP 授權管理</li>\n<li>Apple 課堂與教學工具</li>\n<li>教育部數位精進計畫 (台灣)</li>\n<li>硬體維修與故障排除</li>\n<li>進階 Mac 系統管理</li>\n<li>教育現場實戰情境</li>\n</ol>\n</li>\n</ul>\n<h2>關鍵系統模組</h2>\n<ul>\n<li><strong>動態知識引擎</strong>：基於 SSG 的高性能搜尋引擎，支援即時語系切換。</li>\n<li><strong>專業報修系統</strong>：整合於頁尾的報修系統，可自動擷取頁面上下文以提高支援效率。</li>\n<li><strong>自動化維護</strong>：內置 Markdown 校對腳本與維護索引生成器，確保內容一致性。</li>\n</ul>\n"
+  }
+]

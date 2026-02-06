@@ -12,6 +12,7 @@ import {
   LayoutGrid,
   Grid,
   Filter,
+  Menu,
 } from "lucide-react";
 import { Skeleton } from "@/components/ui/Skeleton";
 import NoResults from "@/components/ui/NoResults";
@@ -34,7 +35,10 @@ const SidebarContent: React.FC<{
   fontScale: number;
   setFontScale: (v: number) => void;
   setIsDrawerOpen: (v: boolean) => void;
-  t: (key: PathsToLeaves<TranslationType>, params?: TranslationParams) => string;
+  t: (
+    key: PathsToLeaves<TranslationType>,
+    params?: TranslationParams
+  ) => string;
 }> = ({
   searchQuery,
   setSearchQuery,
@@ -91,7 +95,27 @@ const SidebarContent: React.FC<{
           {t("glossary.sidebarTitle")}
         </p>
         <nav className="space-y-1">
-          {CATEGORIES.map((cat) => {
+          {/* "全部" 選項 - 與 Guide 一致，有圖示 */}
+          <button
+            onClick={() => {
+              setSelectedCategory("All");
+              setIsDrawerOpen(false);
+            }}
+            className={`sidebar-btn w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue rounded-lg ${selectedCategory === "All" ? "sidebar-btn-active" : ""}`}
+          >
+            <div className="flex items-center gap-2 font-extrabold tracking-tight">
+              <Menu className="w-4 h-4" />
+              <span>{getCategoryName("All")}</span>
+            </div>
+            <span
+              className={`text-[10px] font-black px-2 py-0.5 rounded-lg ${selectedCategory === "All" ? "bg-white/20 text-white" : "bg-apple-bg dark:bg-apple-dark-border text-apple-gray"}`}
+            >
+              {getChapterCount("All")}
+            </span>
+          </button>
+
+          {/* 子分類選項 */}
+          {CATEGORIES.filter((cat) => cat !== "All").map((cat) => {
             const isActive = selectedCategory === cat;
             return (
               <button
@@ -100,13 +124,13 @@ const SidebarContent: React.FC<{
                   setSelectedCategory(cat);
                   setIsDrawerOpen(false);
                 }}
-                className={`sidebar-btn w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue rounded-lg ${isActive ? "sidebar-btn-active" : ""}`}
+                className={`sidebar-btn focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue rounded-lg ${isActive ? "sidebar-btn-active" : ""}`}
               >
-                <span className="truncate pr-4 text-left font-semibold tracking-tight">
+                <span className="truncate pr-4 text-left font-bold">
                   {getCategoryName(cat)}
                 </span>
                 <span
-                  className={`text-[10px] font-extrabold px-2 py-0.5 rounded-lg ${isActive ? "bg-white/20 text-white" : "bg-apple-bg dark:bg-apple-dark-border text-apple-gray"}`}
+                  className={`text-[10px] font-black px-2 py-0.5 rounded-lg ${isActive ? "bg-white/20 text-white" : "bg-apple-bg dark:bg-apple-dark-border text-apple-gray"}`}
                 >
                   {getChapterCount(cat)}
                 </span>
@@ -150,8 +174,8 @@ const SidebarContent: React.FC<{
               key={scale}
               onClick={() => setFontScale(scale)}
               className={`flex-1 flex items-center justify-center py-2 rounded-xl text-[12px] font-black transition-all min-h-11 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue ${
-                fontScale === scale 
-                  ? "bg-white dark:bg-apple-dark-border text-apple-blue shadow-lg shadow-black/5" 
+                fontScale === scale
+                  ? "bg-white dark:bg-apple-dark-border text-apple-blue shadow-lg shadow-black/5"
                   : "text-apple-gray/60 hover:text-apple-text"
               }`}
             >
@@ -196,7 +220,7 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
   const [gridCols, setGridCols] = useState<1 | 2 | 3>(1);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const lastLocale = React.useRef<string | null>(null);
-  
+
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true);
@@ -205,10 +229,10 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
   // Handle ESC key to close drawer
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setIsDrawerOpen(false);
+      if (e.key === "Escape") setIsDrawerOpen(false);
     };
-    if (isDrawerOpen) window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
+    if (isDrawerOpen) window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
   }, [isDrawerOpen]);
 
   const { user, isLoading: isAuthLoading, isAuthenticated } = useUser();
@@ -249,14 +273,17 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
     fetchData();
   }, [locale, user, isAuthLoading, isAuthenticated, initialData, data.length]);
 
-  const getChapterCount = useCallback((cat: string) => {
-    if (cat === "All") return data.length;
-    return data.filter((item) =>
-      Array.isArray(item.category)
-        ? item.category.includes(cat)
-        : item.category === cat
-    ).length;
-  }, [data]);
+  const getChapterCount = useCallback(
+    (cat: string) => {
+      if (cat === "All") return data.length;
+      return data.filter((item) =>
+        Array.isArray(item.category)
+          ? item.category.includes(cat)
+          : item.category === cat
+      ).length;
+    },
+    [data]
+  );
 
   const filteredTerms = useMemo(() => {
     const q = debouncedQuery.toLowerCase().trim();
@@ -286,11 +313,14 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
     });
   }, [data, debouncedQuery, selectedCategory, sortOrder]);
 
-  const getCategoryName = useCallback((cat: string) =>
-    cat === "All"
-      ? t("glossary.allLabel")
-      : t(`glossary.categories.${cat}` as PathsToLeaves<TranslationType>) || cat,
-  [t]);
+  const getCategoryName = useCallback(
+    (cat: string) =>
+      cat === "All"
+        ? t("glossary.allLabel")
+        : t(`glossary.categories.${cat}` as PathsToLeaves<TranslationType>) ||
+          cat,
+    [t]
+  );
 
   const memoizedSidebar = useMemo(
     () => (
@@ -309,7 +339,15 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
         t={t}
       />
     ),
-    [searchQuery, selectedCategory, gridCols, fontScale, t, getCategoryName, getChapterCount]
+    [
+      searchQuery,
+      selectedCategory,
+      gridCols,
+      fontScale,
+      t,
+      getCategoryName,
+      getChapterCount,
+    ]
   );
 
   if (isAuthLoading) return null;
@@ -320,28 +358,28 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
       <div className="flex flex-col lg:flex-row min-h-screen pt-20">
         {/* Sidebar Skeleton */}
         <div className="hidden lg:block w-72 shrink-0 p-6 border-r border-apple-border dark:border-apple-dark-border">
-           <Skeleton className="h-10 w-full mb-8 rounded-xl" />
-           <div className="space-y-4">
-             {[1, 2, 3, 4, 5, 6].map((i) => (
-               <Skeleton key={i} className="h-9 w-full rounded-lg" />
-             ))}
-           </div>
+          <Skeleton className="h-10 w-full mb-8 rounded-xl" />
+          <div className="space-y-4">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <Skeleton key={i} className="h-9 w-full rounded-lg" />
+            ))}
+          </div>
         </div>
-        
+
         {/* Content Skeleton */}
         <div className="flex-1 p-6 lg:p-10 max-w-7xl mx-auto w-full">
-           <div className="flex justify-between items-center mb-10">
-             <Skeleton className="h-8 w-48 rounded-lg" />
-             <div className="flex gap-2">
-                <Skeleton className="h-10 w-10 rounded-lg" />
-                <Skeleton className="h-10 w-10 rounded-lg" />
-             </div>
-           </div>
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-             {[1, 2, 3, 4, 5, 6].map((i) => (
-               <Skeleton key={i} className="h-64 rounded-3xl" />
-             ))}
-           </div>
+          <div className="flex justify-between items-center mb-10">
+            <Skeleton className="h-8 w-48 rounded-lg" />
+            <div className="flex gap-2">
+              <Skeleton className="h-10 w-10 rounded-lg" />
+              <Skeleton className="h-10 w-10 rounded-lg" />
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <Skeleton key={i} className="h-64 rounded-3xl" />
+            ))}
+          </div>
         </div>
       </div>
     );
@@ -360,7 +398,7 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
         {/* Main Content Area */}
         <main className="flex-1 min-w-0 px-6 lg:px-0 lg:max-w-4xl xl:max-w-5xl">
           {/* Mobile Filter Trigger Button (Removed in favor of FAB) */}
-          
+
           <div className="flex items-center justify-between mb-10">
             <div className="text-[12px] font-bold text-apple-gray uppercase tracking-[0.2em] flex items-center gap-2.5">
               <Filter className="w-3.5 h-3.5 text-apple-blue" />
@@ -440,41 +478,43 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
           )}
         </main>
 
-
         {/* Mobile Floating Filter Button */}
-        {mounted && createPortal(
-          <button
-            onClick={() => setIsDrawerOpen(true)}
-            className="lg:hidden fixed bottom-8 left-6 w-12 h-12 rounded-full bg-apple-blue/90 text-white shadow-2xl shadow-apple-blue/30 backdrop-blur-md flex items-center justify-center z-140 transition-all active:scale-90 hover:scale-105 animate-in fade-in zoom-in duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-apple-blue"
-            aria-label="Filter"
-          >
-            <Search className="w-5 h-5" />
-            {/* Active Indicator Dot */}
-            {selectedCategory !== 'All' && (
-               <span className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full border-2 border-white dark:border-zinc-900" />
-            )}
-          </button>,
-          document.body
-        )}
+        {mounted &&
+          createPortal(
+            <button
+              onClick={() => setIsDrawerOpen(true)}
+              className="lg:hidden fixed bottom-8 left-6 w-12 h-12 rounded-full bg-apple-blue/90 text-white shadow-2xl shadow-apple-blue/30 backdrop-blur-md flex items-center justify-center z-140 transition-all active:scale-90 hover:scale-105 animate-in fade-in zoom-in duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-apple-blue"
+              aria-label="Filter"
+            >
+              <Search className="w-5 h-5" />
+              {/* Active Indicator Dot */}
+              {selectedCategory !== "All" && (
+                <span className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full border-2 border-white dark:border-zinc-900" />
+              )}
+            </button>,
+            document.body
+          )}
 
         {/* Mobile Drawer - Rendered via Portal */}
-        {mounted && isDrawerOpen && createPortal(
-          <div className="fixed inset-0 z-200 lg:hidden animate-in fade-in duration-200">
-            <div
-              className="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity"
-              onClick={() => setIsDrawerOpen(false)}
-            />
-            <div className="absolute bottom-0 left-0 w-full h-[85vh] bg-white dark:bg-apple-dark-bg mobile-sheet shadow-2xl flex flex-col overflow-hidden border-t border-apple-border dark:border-apple-dark-border animate-in slide-in-from-bottom duration-300 rounded-t-3xl">
-              {/* Simple Sheet Handle */}
-              <div className="h-1.5 w-12 bg-zinc-200 dark:bg-zinc-700/50 rounded-full mx-auto mt-4 mb-6 shrink-0" />
-              
-              <div className="flex-1 overflow-y-auto px-8 pb-12 no-scrollbar">
-                {memoizedSidebar}
+        {mounted &&
+          isDrawerOpen &&
+          createPortal(
+            <div className="fixed inset-0 z-200 lg:hidden animate-in fade-in duration-200">
+              <div
+                className="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity"
+                onClick={() => setIsDrawerOpen(false)}
+              />
+              <div className="absolute bottom-0 left-0 w-full h-[85vh] bg-white dark:bg-apple-dark-bg mobile-sheet shadow-2xl flex flex-col overflow-hidden border-t border-apple-border dark:border-apple-dark-border animate-in slide-in-from-bottom duration-300 rounded-t-3xl">
+                {/* Simple Sheet Handle */}
+                <div className="h-1.5 w-12 bg-zinc-200 dark:bg-zinc-700/50 rounded-full mx-auto mt-4 mb-6 shrink-0" />
+
+                <div className="flex-1 overflow-y-auto px-8 pb-12 no-scrollbar">
+                  {memoizedSidebar}
+                </div>
               </div>
-            </div>
-          </div>,
-          document.body
-        )}
+            </div>,
+            document.body
+          )}
       </div>
     </>
   );
