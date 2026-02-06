@@ -695,12 +695,12 @@ article {
    ============================================== */
 
 .apple-card {
-  /* --- Base Material: Clearer Glass (Lower opacity = Less Ceramic) --- */
-  background: rgba(255, 255, 255, 0.4);
+  /* --- Base Material: Crystal Clear Glass --- */
+  background: rgba(255, 255, 255, 0.3);
 
-  /* --- Frosted Glass Effect --- */
-  backdrop-filter: blur(35px) saturate(200%);
-  -webkit-backdrop-filter: blur(35px) saturate(200%);
+  /* --- Frosted Glass Effect (Reduced Blur for Clarity) --- */
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
 
   /* --- Surface Tension Geometry --- */
   border-radius: 28px;
@@ -711,9 +711,10 @@ article {
     /* Floating shadow */
     0 16px 40px -12px rgba(0, 0, 0, 0.1),
     0 4px 12px -4px rgba(0, 0, 0, 0.05),
-    /* Sharp Rim Light (Top & Left) */ inset 1px 1px 0 0 rgba(255, 255, 255, 1),
+    /* Sharp Rim Light (Top & Left) */ inset 1px 1px 0 0
+      rgba(255, 255, 255, 0.8),
     /* Soft Reflection (Bottom & Right) */ inset -1px -1px 0 0
-      rgba(255, 255, 255, 0.3);
+      rgba(255, 255, 255, 0.2);
 
   /* --- Performance hints --- */
   will-change: transform, filter, box-shadow;
@@ -735,13 +736,13 @@ article {
   content: "";
   position: absolute;
   inset: 0;
-  /* Subtle noise texture helps distinguish glass from plastic/ceramic */
+  /* Reduced noise opacity for cleaner look */
   background-image:
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E"),
     linear-gradient(
       135deg,
-      rgba(255, 255, 255, 0.5) 0%,
-      rgba(255, 255, 255, 0.1) 40%,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.05) 40%,
       transparent 100%
     );
   opacity: 1;
@@ -877,9 +878,9 @@ article {
 /* Sidebar Container - Unified Liquid Glass Panel */
 /* Sidebar Container - Unified Liquid Glass Panel */
 .sidebar-glass-container {
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(35px) saturate(200%);
-  -webkit-backdrop-filter: blur(35px) saturate(200%);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 24px;
   padding: 1.5rem;
@@ -888,8 +889,8 @@ article {
   box-shadow:
     0 16px 40px -12px rgba(0, 0, 0, 0.1),
     0 4px 12px -4px rgba(0, 0, 0, 0.05),
-    inset 1px 1px 0 0 rgba(255, 255, 255, 1),
-    inset -1px -1px 0 0 rgba(255, 255, 255, 0.3);
+    inset 1px 1px 0 0 rgba(255, 255, 255, 0.8),
+    inset -1px -1px 0 0 rgba(255, 255, 255, 0.2);
 }
 
 .dark .sidebar-glass-container {
