@@ -85,17 +85,20 @@ const Changelog: React.FC<ChangelogProps> = ({ zhLogs, enLogs }) => {
       {/* Timeline Content */}
       <div className="relative space-y-12">
         {/* Timeline Line (Desktop only) */}
-        <div className="hidden md:block absolute left-8 top-8 bottom-8 w-0.5 bg-linear-to-b from-apple-blue/50 via-apple-border/50 to-transparent dark:from-apple-blue/30 dark:via-white/10" />
+        <div className="hidden md:block absolute left-32 top-8 bottom-8 w-0.5 bg-linear-to-b from-apple-blue/50 via-apple-border/50 to-transparent dark:from-apple-blue/30 dark:via-white/10" />
 
         {filteredLogs.map((log, index) => (
-          <article key={log.version} className="relative md:pl-28 group">
-            {/* Timeline Dot */}
-            <div className="hidden md:flex absolute left-5.75 top-8 w-4 h-4 rounded-full border-[3px] border-white dark:border-[#0d0d0f] bg-apple-blue shadow-[0_0_0_4px_rgba(10,132,255,0.15)] z-10 group-hover:scale-110 transition-transform duration-300" />
+          <article key={log.version} className="relative md:pl-48 group">
+            {/* Timeline Dot - Centered on 128px line (128-7=121) */}
+            <div className="hidden md:flex absolute left-[121px] top-8 w-4 h-4 rounded-full border-[3px] border-white dark:border-[#121212] bg-apple-blue shadow-[0_0_0_4px_rgba(10,132,255,0.15)] z-10 group-hover:scale-110 transition-transform duration-300" />
 
             {/* Version Label (Left side on desktop) */}
-            <div className="hidden md:flex absolute left-0 top-7 flex-col items-end pr-8 w-24 text-right">
-              <span className="font-mono font-bold text-apple-blue text-lg">
+            <div className="hidden md:flex absolute left-0 top-7 w-28 flex-col items-end pr-6 text-right">
+              <span className="font-mono font-bold text-apple-blue text-xl tracking-tight">
                 v{log.version}
+              </span>
+              <span className="text-xs font-semibold text-apple-gray mt-1 opacity-70">
+                {log.date}
               </span>
             </div>
 
