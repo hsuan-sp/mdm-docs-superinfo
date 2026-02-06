@@ -1,10 +1,10 @@
 "use client"
 import React, { useState, useMemo } from 'react'
 import { Calendar, ChevronDown } from 'lucide-react'
-import AuthGate from '../ui/AuthGate'
-import { useUser } from '../../hooks/useLogtoUser'
-import { translations } from '../../locales'
-import { useLanguage } from '../../hooks/useLanguage'
+import AuthGate from '@/components/ui/AuthGate'
+import { useUser } from '@/hooks/useLogtoUser'
+import { translations } from '@/locales'
+import { useLanguage } from '@/hooks/useLanguage'
 
 interface LogEntry {
   version: string
@@ -48,7 +48,7 @@ const Changelog: React.FC<ChangelogProps> = ({ zhLogs, enLogs }) => {
             id="version-select"
             value={selectedVersion}
             onChange={(e) => setSelectedVersion(e.target.value)}
-            className="w-full pl-4 pr-10 py-2.5 bg-white dark:bg-apple-dark-bg border border-apple-border dark:border-apple-dark-border rounded-xl appearance-none cursor-pointer focus:ring-4 focus:ring-apple-blue/10 focus:border-apple-blue transition-all font-bold text-sm text-apple-text dark:text-apple-dark-text"
+            className="w-full pl-4 pr-10 py-2.5 bg-white dark:bg-apple-dark-bg border border-apple-border dark:border-apple-dark-border rounded-xl appearance-none cursor-pointer focus:ring-4 focus:ring-apple-blue/10 focus:border-apple-blue transition-all font-bold text-sm text-apple-text dark:text-apple-dark-text min-h-11"
           >
             <option value="ALL">{t('changelog.allVersions')}</option>
             {logs.map((log) => (

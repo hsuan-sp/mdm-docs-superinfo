@@ -7,8 +7,10 @@ import { useConfig } from 'nextra-theme-docs'
 import { createPortal } from 'react-dom'
 import { Mail, Copy, X, FileText, Check } from 'lucide-react'
 
+import { LucideIconComponent } from '@/types'
+
 // 1. 複製按鈕小元件 (保持不變)
-const CopyButton = ({ text, label, icon: Icon }: { text: string, label: string, icon: any }) => {
+const CopyButton = ({ text, label, icon: Icon }: { text: string, label: string, icon: LucideIconComponent }) => {
   const [copied, setCopied] = useState(false)
 
   const handleCopy = () => {
@@ -20,7 +22,7 @@ const CopyButton = ({ text, label, icon: Icon }: { text: string, label: string, 
   return (
     <button 
       onClick={handleCopy}
-      className={`flex items-center justify-center gap-2 w-full py-2 rounded-lg transition text-xs font-bold ${
+      className={`flex items-center justify-center gap-2 w-full py-2 rounded-lg transition text-xs font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 ${
         copied 
           ? 'bg-green-600 text-white hover:bg-green-700' 
           : 'bg-blue-600 text-white hover:bg-blue-700'
@@ -33,12 +35,21 @@ const CopyButton = ({ text, label, icon: Icon }: { text: string, label: string, 
   )
 }
 
+// 定義 Nextra Config 的最小需求介面
+interface NextraConfig {
+  normalizePagesResult?: {
+    activeMetadata?: {
+      title?: string;
+    };
+  };
+}
+
 const ReportIssue = () => {
   const { language } = useLanguage()
   const pathname = usePathname() // ✅ 3. 取代原本的 router.asPath
   
-  // ✅ 4. 使用 any 繞過 TS(2339)，因為 Nextra 4 的 LayoutContext 型別尚未完全對齊 App Router
-  const config = useConfig() as any 
+  // ✅ 4. 使用自定義介面取代 any，確保型別安全
+  const config = useConfig() as unknown as NextraConfig 
   
   const [showDialog, setShowDialog] = useState(false)
   const [mounted, setMounted] = useState(false)
@@ -137,7 +148,7 @@ Description:
       <button
         onClick={openReport}
         title={t.title}
-        className="inline-flex items-center gap-2 px-4 py-2 text-sm text-zinc-600 dark:text-zinc-400 bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 rounded-full hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-600 dark:hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all font-medium"
+        className="inline-flex items-center gap-2 px-4 py-2.5 text-sm text-zinc-600 dark:text-zinc-400 bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 rounded-full hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-600 dark:hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
       >
         <Mail className="w-4 h-4" />
         {t.label}
@@ -161,7 +172,7 @@ Description:
               </h3>
               <button 
                 onClick={() => setShowDialog(false)}
-                className="text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200 transition"
+                className="text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200 transition min-h-11 min-w-11 flex items-center justify-center -mr-2 -mt-2 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -197,7 +208,7 @@ Description:
 
             <div className="flex justify-end pt-4 border-t border-zinc-100 dark:border-zinc-800">
               <button 
-                className="px-5 py-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-600 dark:text-zinc-300 rounded-lg text-sm font-bold transition flex items-center gap-2"
+                className="px-5 py-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-600 dark:text-zinc-300 rounded-lg text-sm font-bold transition flex items-center gap-2 min-h-11 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400"
                 onClick={() => setShowDialog(false)}
               >
                 {t.close}

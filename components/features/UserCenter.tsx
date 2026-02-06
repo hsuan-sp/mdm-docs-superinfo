@@ -44,15 +44,17 @@ const UserCenter: React.FC = () => {
           </div>
           
           <div 
-            className="w-9 h-9 rounded-full bg-apple-blue text-white flex items-center justify-center font-bold text-[13px] shadow-lg shadow-apple-blue/20 cursor-help select-none ring-1 ring-apple-blue/50 dark:ring-blue-400/50 ring-offset-2 ring-offset-white dark:ring-offset-zinc-950 transition-all hover:scale-105 active:scale-95"
+            className="w-9 h-9 rounded-full bg-apple-blue text-white flex items-center justify-center font-bold text-[13px] shadow-lg shadow-apple-blue/20 cursor-help select-none ring-1 ring-apple-blue/50 dark:ring-blue-400/50 ring-offset-2 ring-offset-white dark:ring-offset-zinc-950 transition-all hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue"
             title={`已登入：${user.email ?? 'Unknown'}`}
+            tabIndex={0}
+            role="img"
           >
             {getAvatarContent()}
           </div>
 
           <button
             onClick={() => signOut()}
-            className="flex items-center gap-2 px-4 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full text-[12px] font-bold text-zinc-600 dark:text-zinc-400 transition-all active:scale-95 border border-zinc-200/50 dark:border-zinc-800/50 hover:border-zinc-300 dark:hover:border-zinc-600 shadow-sm"
+            className="flex items-center gap-2 px-4 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full text-[12px] font-bold text-zinc-600 dark:text-zinc-400 transition-all active:scale-95 border border-zinc-200/50 dark:border-zinc-800/50 hover:border-zinc-300 dark:hover:border-zinc-600 shadow-sm min-h-11 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue"
           >
             <LogOut className="w-3.5 h-3.5 opacity-60" />
             <span className="hidden md:inline">{t('userCenter.logout')}</span>
@@ -61,7 +63,7 @@ const UserCenter: React.FC = () => {
       ) : (
         <button
           onClick={() => signIn()}
-          className="flex items-center gap-2 px-5 py-2.5 bg-zinc-950 dark:bg-zinc-50 text-white dark:text-zinc-950 rounded-full text-[13px] font-bold hover:opacity-90 transition-all active:scale-95 shadow-xl shadow-zinc-950/10 dark:shadow-zinc-50/10 group"
+          className="flex items-center gap-2 px-5 py-2.5 bg-zinc-950 dark:bg-zinc-50 text-white dark:text-zinc-950 rounded-full text-[13px] font-bold hover:opacity-90 transition-all active:scale-95 shadow-xl shadow-zinc-950/10 dark:shadow-zinc-50/10 group min-h-11 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-zinc-500"
         >
           <LogIn className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           <span>{t('userCenter.login')}</span>

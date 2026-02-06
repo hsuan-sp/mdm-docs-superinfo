@@ -40,7 +40,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({
       {actionText && (
         <button 
           onClick={onClear}
-          className="px-10 py-3.5 bg-apple-blue hover:bg-apple-blue-hover text-white rounded-full font-bold transition-all active:scale-95 shadow-xl shadow-apple-blue/20"
+          className="px-10 py-3.5 bg-apple-blue hover:bg-apple-blue-hover text-white rounded-full font-bold transition-all active:scale-95 shadow-xl shadow-apple-blue/20 min-h-11 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-apple-blue"
         >
           {actionText}
         </button>

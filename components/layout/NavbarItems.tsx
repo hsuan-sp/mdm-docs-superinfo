@@ -4,12 +4,12 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { useLanguage } from '../../hooks/useLanguage'
+import { useLanguage } from '@/hooks/useLanguage'
 import { Globe, ChevronDown, ExternalLink, Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
-import { translations } from '../../locales'
-import UserCenter from '../features/UserCenter'
-import MobileNav from './MobileNav'
+import { translations } from '@/locales'
+import UserCenter from '@/components/features/UserCenter'
+import MobileNav from '@/components/layout/MobileNav'
 
 interface ResourceItem {
   text: string;
@@ -86,7 +86,7 @@ export const NavbarExtra = () => {
             <Link
               key={link.path}
               href={link.path}
-              className={`px-4 py-2 rounded-full text-[13px] font-bold transition-all duration-300 relative group overflow-hidden ${
+              className={`px-4 py-2 rounded-full text-[13px] font-bold transition-all duration-300 relative group overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue ${
                 isActive 
                   ? 'text-apple-blue bg-apple-blue/5 dark:bg-apple-blue/10' 
                   : 'text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50'
@@ -104,7 +104,7 @@ export const NavbarExtra = () => {
       {/* 手機版漢堡選單按鈕 */}
       <button 
         onClick={() => setIsMobileNavOpen(true)} 
-        className="lg:hidden p-2.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all active:scale-95 flex items-center justify-center border border-transparent hover:border-zinc-200 dark:hover:border-zinc-700 shadow-sm md:shadow-none min-h-11 min-w-11"
+        className="lg:hidden p-2.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all active:scale-95 flex items-center justify-center border border-transparent hover:border-zinc-200 dark:hover:border-zinc-700 shadow-sm md:shadow-none min-h-11 min-w-11 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue"
         aria-label="Open menu"
       >
         <svg className="w-6 h-6 text-zinc-700 dark:text-zinc-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -119,7 +119,7 @@ export const NavbarExtra = () => {
         <div className="relative">
           <button
             onClick={() => setResourcesOpen(!resourcesOpen)}
-            className={`flex items-center gap-1.5 px-4 py-2 hover:bg-zinc-100/80 dark:hover:bg-zinc-800/80 rounded-full transition-all text-[13px] font-bold ${resourcesOpen ? 'text-apple-blue bg-apple-blue/5 dark:bg-apple-blue/10' : 'text-zinc-600 dark:text-zinc-400'}`}
+            className={`flex items-center gap-1.5 px-4 py-2 hover:bg-zinc-100/80 dark:hover:bg-zinc-800/80 rounded-full transition-all text-[13px] font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue ${resourcesOpen ? 'text-apple-blue bg-apple-blue/5 dark:bg-apple-blue/10' : 'text-zinc-600 dark:text-zinc-400'}`}
             aria-label="Toggle resources menu"
             aria-expanded={resourcesOpen}
           >
@@ -141,7 +141,7 @@ export const NavbarExtra = () => {
                           href={item.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-3 px-4 py-2.5 text-[13.5px] font-medium text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-xl transition-all group"
+                          className="flex items-center gap-3 px-4 py-2.5 text-[13.5px] font-medium text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-xl transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue/50"
                         >
                           <span className="flex-1 truncate">{item.text}</span>
                           <ExternalLink className="w-3.5 h-3.5 text-zinc-300 dark:text-zinc-600 group-hover:text-blue-500 transition-colors" />
@@ -160,7 +160,7 @@ export const NavbarExtra = () => {
         {/* 主題切換 */}
         <button 
           onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')} 
-          className="p-2.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all active:scale-90 relative group min-h-11 min-w-11 flex items-center justify-center"
+          className="p-2.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all active:scale-90 relative group min-h-11 min-w-11 flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue"
           aria-label={resolvedTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
         >
           <div className="relative z-10">
@@ -172,7 +172,7 @@ export const NavbarExtra = () => {
         {/* 語言切換 */}
         <button 
           onClick={() => setLanguage(language === 'zh-TW' ? 'en' : 'zh-TW')} 
-          className="flex items-center gap-2 px-3.5 py-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all text-[11px] font-bold text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-600 shadow-sm min-h-11 min-w-11 justify-center"
+          className="flex items-center gap-2 px-3.5 py-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-all text-[11px] font-bold text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-600 shadow-sm min-h-11 min-w-11 justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue"
           aria-label={language === 'zh-TW' ? 'Switch to English' : '切換至中文'}
         >
           <Globe className="w-3.5 h-3.5 opacity-70" />

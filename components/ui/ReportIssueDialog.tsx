@@ -4,12 +4,19 @@ import React, { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom' // ✅ 導入 Portal
 import { X, Copy, Check } from 'lucide-react'
 
+interface ReportTranslations {
+  dialogTitle?: string;
+  dialogDesc?: string;
+  close?: string;
+  [key: string]: string | undefined; // 允許其他屬性以便相容
+}
+
 interface ReportIssueDialogProps {
   isOpen: boolean
   onClose: () => void
   template: string
   email: string
-  t: any
+  t: ReportTranslations
 }
 
 const ReportIssueDialog: React.FC<ReportIssueDialogProps> = ({ isOpen, onClose, template, email, t }) => {

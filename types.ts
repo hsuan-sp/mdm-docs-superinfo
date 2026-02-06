@@ -32,3 +32,23 @@ export interface ChangelogItem {
   type: string;
   content: string;
 }
+
+// Resource types for navigation menus
+export interface ResourceItem {
+  text: string;
+  link: string;
+}
+
+export interface ResourceGroup {
+  title: string;
+  items: ResourceItem[];
+}
+
+// Translation function parameter types
+export type TranslationParams = Record<string, string | number>;
+
+// Lucide icon component type
+export type LucideIconComponent = React.ComponentType<{
+  className?: string;
+  size?: number | string;
+}>;

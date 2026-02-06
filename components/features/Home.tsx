@@ -10,6 +10,15 @@ import {
 import { translations } from '@/locales'
 import { useLanguage } from '@/hooks/useLanguage'
 
+// 定義 Feature 介面以取代 any 型別
+interface Feature {
+  id: string;
+  title: string;
+  subtitle: string;
+  desc: string;
+  emoji?: string;
+}
+
 const Home: React.FC = () => {
   const router = useRouter()
   const { t, language: locale } = useLanguage()
@@ -17,7 +26,7 @@ const Home: React.FC = () => {
   // Since features is an array, we access it from the raw translations object for now
   // OR we can define a standard for arrays in our i18n system.
   // For simplicity, let's get the features array directly.
-  const features = translations[locale as keyof typeof translations].home.features;
+  const features = translations[locale as keyof typeof translations].home.features as Feature[];
 
   const handleRoute = (id: string) => {
     if (id === 'glossary') {
@@ -61,14 +70,14 @@ const Home: React.FC = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-10 animate-enter-up delay-400">
           <button
             onClick={() => router.push('/guide')}
-            className="btn-apple-primary w-full sm:w-auto px-16 py-5 group shadow-2xl shadow-apple-blue/20 text-xl font-black"
+            className="btn-apple-primary w-full sm:w-auto px-16 py-5 group shadow-2xl shadow-apple-blue/20 text-xl font-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-apple-blue"
           >
             {t('home.explore')}
             <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-500" />
           </button>
           <button
             onClick={() => router.push('/glossary')}
-            className="btn-apple-link w-full sm:w-auto group text-xl font-bold"
+            className="btn-apple-link w-full sm:w-auto group text-xl font-bold rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue"
           >
             {t('home.searchGlossary')} 
             <ChevronRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-500" />
@@ -79,7 +88,7 @@ const Home: React.FC = () => {
       {/* Feature Grid */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 pb-40 lg:px-8">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((f: any, idx: number) => {
+          {features.map((f: Feature, idx: number) => {
             return (
               <div 
                 key={f.id} 

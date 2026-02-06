@@ -1,16 +1,13 @@
 "use client";
-import React, { useState, useMemo, useEffect } from "react";
-import { translations, TranslationType } from "@/locales";
+import React, { useState, useMemo, useEffect, useCallback } from "react";
+import { createPortal } from "react-dom";
+import { TranslationType } from "@/locales";
 import { PathsToLeaves } from "@/lib/i18n-utils";
 import {
   Search,
-  SearchX,
   X,
-  Menu,
-  ChevronDown,
   SortAsc,
   SortDesc,
-  Type,
   List as ListIcon,
   LayoutGrid,
   Grid,
@@ -18,21 +15,11 @@ import {
 } from "lucide-react";
 import { Skeleton } from "@/components/ui/Skeleton";
 import NoResults from "@/components/ui/NoResults";
-import { GlossaryItem } from "@/types";
-import EmptyState from "@/components/ui/EmptyState";
+import { TranslationParams, GlossaryItem } from "@/types";
 import { useLanguage } from "@/hooks/useLanguage";
 import { useUser } from "@/hooks/useLogtoUser";
-import AuthGate from "../ui/AuthGate";
-
-// 如果沒有 useDebounce，可以簡單寫一個或暫時不用
-function useDebounce<T>(value: T, delay: number): T {
-  const [debouncedValue, setDebouncedValue] = React.useState(value);
-  React.useEffect(() => {
-    const handler = setTimeout(() => setDebouncedValue(value), delay);
-    return () => clearTimeout(handler);
-  }, [value, delay]);
-  return debouncedValue;
-}
+import useDebounce from "@/hooks/useDebounce";
+import AuthGate from "@/components/ui/AuthGate";
 
 // --- 子組件：側邊欄內容 (獨立出來避免重渲染效能問題) ---
 const SidebarContent: React.FC<{
@@ -47,7 +34,7 @@ const SidebarContent: React.FC<{
   fontScale: number;
   setFontScale: (v: number) => void;
   setIsDrawerOpen: (v: boolean) => void;
-  t: (key: PathsToLeaves<TranslationType>, params?: Record<string, any>) => string;
+  t: (key: PathsToLeaves<TranslationType>, params?: TranslationParams) => string;
 }> = ({
   searchQuery,
   setSearchQuery,
@@ -91,7 +78,7 @@ const SidebarContent: React.FC<{
         {searchQuery && (
           <button
             onClick={() => setSearchQuery("")}
-            className="absolute right-1 top-1/2 -translate-y-1/2 p-2 text-apple-gray hover:text-apple-text transition-colors min-h-11 min-w-11 flex items-center justify-center"
+            className="absolute right-1 top-1/2 -translate-y-1/2 p-2 text-apple-gray hover:text-apple-text transition-colors min-h-11 min-w-11 flex items-center justify-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue"
             aria-label="Clear search"
           >
             <X className="w-4 h-4" />
@@ -113,7 +100,7 @@ const SidebarContent: React.FC<{
                   setSelectedCategory(cat);
                   setIsDrawerOpen(false);
                 }}
-                className={`sidebar-btn w-full ${isActive ? "sidebar-btn-active" : ""}`}
+                className={`sidebar-btn w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue rounded-lg ${isActive ? "sidebar-btn-active" : ""}`}
               >
                 <span className="truncate pr-4 text-left font-semibold tracking-tight">
                   {getCategoryName(cat)}
@@ -138,7 +125,7 @@ const SidebarContent: React.FC<{
             <button
               key={num}
               onClick={() => setGridCols(num as any)}
-              className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg transition-all text-sm font-medium ${
+              className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg transition-all text-sm font-medium min-h-11 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue ${
                 gridCols === num
                   ? "bg-white dark:bg-apple-dark-border text-apple-blue shadow-sm border border-apple-border"
                   : "text-apple-gray hover:text-apple-text hover:bg-apple-bg"
@@ -162,7 +149,7 @@ const SidebarContent: React.FC<{
             <button
               key={scale}
               onClick={() => setFontScale(scale)}
-              className={`flex-1 flex items-center justify-center py-2 rounded-xl text-[12px] font-black transition-all ${
+              className={`flex-1 flex items-center justify-center py-2 rounded-xl text-[12px] font-black transition-all min-h-11 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue ${
                 fontScale === scale 
                   ? "bg-white dark:bg-apple-dark-border text-apple-blue shadow-lg shadow-black/5" 
                   : "text-apple-gray/60 hover:text-apple-text"
@@ -209,6 +196,20 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
   const [gridCols, setGridCols] = useState<1 | 2 | 3>(1);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const lastLocale = React.useRef<string | null>(null);
+  
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Handle ESC key to close drawer
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsDrawerOpen(false);
+    };
+    if (isDrawerOpen) window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, [isDrawerOpen]);
 
   const { user, isLoading: isAuthLoading, isAuthenticated } = useUser();
 
@@ -248,14 +249,14 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
     fetchData();
   }, [locale, user, isAuthLoading, isAuthenticated, initialData, data.length]);
 
-  const getChapterCount = (cat: string) => {
+  const getChapterCount = useCallback((cat: string) => {
     if (cat === "All") return data.length;
     return data.filter((item) =>
       Array.isArray(item.category)
         ? item.category.includes(cat)
         : item.category === cat
     ).length;
-  };
+  }, [data]);
 
   const filteredTerms = useMemo(() => {
     const q = debouncedQuery.toLowerCase().trim();
@@ -285,10 +286,11 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
     });
   }, [data, debouncedQuery, selectedCategory, sortOrder]);
 
-  const getCategoryName = (cat: string) =>
+  const getCategoryName = useCallback((cat: string) =>
     cat === "All"
       ? t("glossary.allLabel")
-      : t(`glossary.categories.${cat}` as any) || cat;
+      : t(`glossary.categories.${cat}` as PathsToLeaves<TranslationType>) || cat,
+  [t]);
 
   const memoizedSidebar = useMemo(
     () => (
@@ -307,7 +309,7 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
         t={t}
       />
     ),
-    [searchQuery, selectedCategory, gridCols, fontScale, locale, data.length]
+    [searchQuery, selectedCategory, gridCols, fontScale, t, getCategoryName, getChapterCount]
   );
 
   if (isAuthLoading) return null;
@@ -357,41 +359,8 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
 
         {/* Main Content Area */}
         <main className="flex-1 min-w-0 px-6 lg:px-0 lg:max-w-4xl xl:max-w-5xl">
-          {/* Mobile Category Sidebar (Horizontal Scroll) with Filter Trigger */}
-          <div className="lg:hidden -mx-6 mb-10 sticky top-14 bg-white/80 dark:bg-apple-dark-bg/80 backdrop-blur-xl z-30 border-b border-apple-border dark:border-apple-dark-border flex items-center">
-            
-            {/* Scrollable Categories */}
-            <div className="flex-1 overflow-x-auto no-scrollbar flex items-center gap-2 px-4 py-4 mask-fade-right">
-              {[
-                "All", "Core", "Enrollment", "Apple", "Security", "Network",
-                "Hardware", "Apps", "Education", "macOS", "Jamf", "Other",
-              ].map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`whitespace-nowrap px-4 py-2 rounded-full text-[13px] font-bold transition-all shrink-0 ${
-                    selectedCategory === cat
-                      ? "bg-apple-blue text-white shadow-lg shadow-apple-blue/25"
-                      : "bg-apple-bg dark:bg-apple-dark-border text-apple-gray dark:text-apple-dark-gray"
-                  }`}
-                >
-                  {getCategoryName(cat)}
-                </button>
-              ))}
-            </div>
-
-            {/* Fixed Filter/Search Trigger */}
-            <div className="pr-4 pl-2 shrink-0 border-l border-apple-border dark:border-apple-dark-border/50 bg-transparent">
-              <button 
-                onClick={() => setIsDrawerOpen(true)}
-                className="p-2.5 bg-apple-bg dark:bg-apple-dark-border/50 text-apple-gray dark:text-apple-dark-text rounded-full active:scale-95 transition-all"
-                aria-label="Search and Filters"
-              >
-                <Search className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-
+          {/* Mobile Filter Trigger Button (Removed in favor of FAB) */}
+          
           <div className="flex items-center justify-between mb-10">
             <div className="text-[12px] font-bold text-apple-gray uppercase tracking-[0.2em] flex items-center gap-2.5">
               <Filter className="w-3.5 h-3.5 text-apple-blue" />
@@ -401,7 +370,7 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
               onClick={() =>
                 setSortOrder((prev) => (prev === "asc" ? "desc" : "asc"))
               }
-              className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.2em] text-apple-blue hover:opacity-80 transition-all active:scale-95"
+              className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.2em] text-apple-blue hover:opacity-80 transition-all active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue rounded-lg px-2 py-1"
             >
               {sortOrder === "asc" ? (
                 <SortAsc className="w-4 h-4" />
@@ -472,22 +441,39 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
         </main>
 
 
-        {/* Mobile Drawer */}
-        {isDrawerOpen && (
-          <div className="fixed inset-0 z-100 lg:hidden animate-reveal">
+        {/* Mobile Floating Filter Button */}
+        {mounted && createPortal(
+          <button
+            onClick={() => setIsDrawerOpen(true)}
+            className="lg:hidden fixed bottom-8 left-6 w-12 h-12 rounded-full bg-apple-blue/90 text-white shadow-2xl shadow-apple-blue/30 backdrop-blur-md flex items-center justify-center z-140 transition-all active:scale-90 hover:scale-105 animate-in fade-in zoom-in duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-apple-blue"
+            aria-label="Filter"
+          >
+            <Search className="w-5 h-5" />
+            {/* Active Indicator Dot */}
+            {selectedCategory !== 'All' && (
+               <span className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full border-2 border-white dark:border-zinc-900" />
+            )}
+          </button>,
+          document.body
+        )}
+
+        {/* Mobile Drawer - Rendered via Portal */}
+        {mounted && isDrawerOpen && createPortal(
+          <div className="fixed inset-0 z-200 lg:hidden animate-in fade-in duration-200">
             <div
-              className="absolute inset-0 bg-black/40 backdrop-blur-md transition-opacity duration-300"
+              className="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity"
               onClick={() => setIsDrawerOpen(false)}
             />
-            <div className="absolute bottom-0 left-0 w-full h-[85vh] bg-white dark:bg-apple-dark-bg mobile-sheet shadow-2xl flex flex-col overflow-hidden border-t border-apple-border dark:border-apple-dark-border">
+            <div className="absolute bottom-0 left-0 w-full h-[85vh] bg-white dark:bg-apple-dark-bg mobile-sheet shadow-2xl flex flex-col overflow-hidden border-t border-apple-border dark:border-apple-dark-border animate-in slide-in-from-bottom duration-300 rounded-t-3xl">
               {/* Simple Sheet Handle */}
-              <div className="h-1.5 w-12 bg-zinc-200 dark:bg-zinc-800 rounded-full mx-auto mt-4 mb-6 shrink-0" />
+              <div className="h-1.5 w-12 bg-zinc-200 dark:bg-zinc-700/50 rounded-full mx-auto mt-4 mb-6 shrink-0" />
               
               <div className="flex-1 overflow-y-auto px-8 pb-12 no-scrollbar">
                 {memoizedSidebar}
               </div>
             </div>
-          </div>
+          </div>,
+          document.body
         )}
       </div>
     </>

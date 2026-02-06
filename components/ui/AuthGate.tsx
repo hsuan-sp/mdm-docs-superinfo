@@ -2,7 +2,7 @@
 import React from "react";
 import { Lock, Home, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { useLanguage } from "../../hooks/useLanguage";
+import { useLanguage } from "@/hooks/useLanguage";
 
 interface AuthGateProps {
   redirectPath?: string;
@@ -50,7 +50,7 @@ const AuthGate: React.FC<AuthGateProps> = ({ redirectPath = "/" }) => {
         {/* Primary CTA */}
         <button
           onClick={handleSignIn}
-          className="btn-apple-primary w-full"
+          className="btn-apple-primary w-full min-h-11 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-apple-blue"
         >
           {t("authGate.signInBtn")}
           <ArrowRight className="w-5 h-5" />
@@ -59,7 +59,7 @@ const AuthGate: React.FC<AuthGateProps> = ({ redirectPath = "/" }) => {
         {/* Secondary Link */}
         <Link
           href="/"
-          className="btn-apple-link mt-6"
+          className="btn-apple-link mt-6 min-h-11 inline-flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue rounded-lg"
         >
           <Home className="w-4 h-4" />
           {t("authGate.backHome")}

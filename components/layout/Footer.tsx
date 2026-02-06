@@ -29,7 +29,7 @@ const Footer = () => {
           href="https://www.superinfo.com.tw" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-apple-blue text-white font-bold text-base shadow-lg shadow-apple-blue/20 hover:bg-apple-blue-hover transition-all hover:scale-[1.02] active:scale-95"
+          className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-apple-blue text-white font-bold text-base shadow-lg shadow-apple-blue/20 hover:bg-apple-blue-hover transition-all hover:scale-[1.02] active:scale-95 min-h-11 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-apple-blue"
         >
           {mounted ? t('footer.slogan') : "Superinfo Service"}
         </a>

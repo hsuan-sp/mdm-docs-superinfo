@@ -1,38 +1,26 @@
 "use client";
 import React, { useState, useMemo, useEffect, useCallback } from "react";
-import { translations, TranslationType } from "../../locales";
-import { PathsToLeaves } from "../../lib/i18n-utils";
+import { createPortal } from "react-dom";
+import { translations, TranslationType } from "@/locales";
+import { PathsToLeaves } from "@/lib/i18n-utils";
 import {
   Search,
   ChevronDown,
   Tag,
-  AlertCircle,
   X,
   ChevronRight,
   Menu,
   Maximize2,
   Minimize2,
-  Settings2,
   Filter,
-  SearchX, // Added SearchX
 } from "lucide-react";
 import { Skeleton } from "@/components/ui/Skeleton";
-import NoResults from "@/components/ui/NoResults"; // Added NoResults import
-import { QAModule } from "../../types";
-import EmptyState from "../../components/ui/EmptyState";
-import { useLanguage } from "../../hooks/useLanguage";
-import { useUser } from "../../hooks/useLogtoUser";
-import AuthGate from "../ui/AuthGate";
-
-// 如果沒有 useDebounce，可以簡單寫一個或暫時不用
-function useDebounce<T>(value: T, delay: number): T {
-  const [debouncedValue, setDebouncedValue] = React.useState(value);
-  React.useEffect(() => {
-    const handler = setTimeout(() => setDebouncedValue(value), delay);
-    return () => clearTimeout(handler);
-  }, [value, delay]);
-  return debouncedValue;
-}
+import { QAModule, TranslationParams } from "@/types";
+import EmptyState from "@/components/ui/EmptyState";
+import { useLanguage } from "@/hooks/useLanguage";
+import { useUser } from "@/hooks/useLogtoUser";
+import useDebounce from "@/hooks/useDebounce";
+import AuthGate from "@/components/ui/AuthGate";
 
 // --- 子組件：側邊欄內容 (獨立出來避免重渲染效能問題) ---
 const SidebarContent: React.FC<{
@@ -48,7 +36,7 @@ const SidebarContent: React.FC<{
   fontScale: number;
   setFontScale: (v: number) => void;
   setIsDrawerOpen: (v: boolean) => void;
-  t: (key: PathsToLeaves<TranslationType>, params?: Record<string, any>) => string;
+  t: (key: PathsToLeaves<TranslationType>, params?: TranslationParams) => string;
 }> = ({
   searchQuery,
   setSearchQuery,
@@ -79,7 +67,7 @@ const SidebarContent: React.FC<{
         {searchQuery && (
           <button
             onClick={() => setSearchQuery("")}
-            className="absolute right-1 top-1/2 -translate-y-1/2 p-2 text-apple-gray hover:text-apple-text transition-colors min-h-11 min-w-11 flex items-center justify-center"
+            className="absolute right-1 top-1/2 -translate-y-1/2 p-2 text-apple-gray hover:text-apple-text transition-colors min-h-11 min-w-11 flex items-center justify-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue"
             aria-label="Clear search"
           >
             <X className="w-4 h-4" />
@@ -98,7 +86,7 @@ const SidebarContent: React.FC<{
               setActiveSource("All");
               setIsDrawerOpen(false);
             }}
-            className={`sidebar-btn w-full ${activeSource === "All" ? "sidebar-btn-active" : ""}`}
+            className={`sidebar-btn w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue rounded-lg ${activeSource === "All" ? "sidebar-btn-active" : ""}`}
           >
             <div className="flex items-center gap-2 font-extrabold tracking-tight">
               <Menu className="w-4 h-4" />
@@ -118,7 +106,7 @@ const SidebarContent: React.FC<{
                   setActiveSource(module.source);
                   setIsDrawerOpen(false);
                 }}
-                className={`sidebar-btn ${isActive ? "sidebar-btn-active" : ""}`}
+                className={`sidebar-btn focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue rounded-lg ${isActive ? "sidebar-btn-active" : ""}`}
               >
                 <span className="truncate pr-4 text-left font-bold">{module.source}</span>
                 <span
@@ -211,6 +199,24 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
 
   // Infinite Scroll State
   const [visibleCount, setVisibleCount] = useState(20);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Handle ESC key to close drawer
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsDrawerOpen(false);
+    };
+    if (isDrawerOpen) window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, [isDrawerOpen]);
 
   useEffect(() => {
     if (isAuthLoading) return;
@@ -476,48 +482,6 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
 
         {/* Main Content Area */}
         <main className="flex-1 min-w-0 px-6 lg:px-0 lg:max-w-4xl xl:max-w-5xl">
-          {/* Mobile Category Sidebar (Horizontal Scroll) with Filter Trigger */}
-          <div className="lg:hidden -mx-6 mb-10 sticky top-14 bg-white/80 dark:bg-apple-dark-bg/80 backdrop-blur-xl z-30 border-b border-apple-border dark:border-apple-dark-border flex items-center">
-            
-            {/* Scrollable Categories */}
-            <div className="flex-1 overflow-x-auto no-scrollbar flex items-center gap-2 px-4 py-4 mask-fade-right">
-              <button
-                onClick={() => setActiveSource("All")}
-                className={`whitespace-nowrap px-4 py-2 rounded-full text-[13px] font-bold transition-all shrink-0 ${
-                  activeSource === "All"
-                    ? "bg-apple-blue text-white shadow-lg shadow-apple-blue/25"
-                    : "bg-apple-bg dark:bg-apple-dark-border text-apple-gray dark:text-apple-dark-gray"
-                }`}
-              >
-                {t("guide.allLabel")}
-              </button>
-              {allData.map((module) => (
-                <button
-                  key={module.source}
-                  onClick={() => setActiveSource(module.source)}
-                  className={`whitespace-nowrap px-4 py-2 rounded-full text-[13px] font-bold transition-all shrink-0 ${
-                    activeSource === module.source
-                      ? "bg-apple-blue text-white shadow-lg shadow-apple-blue/25"
-                      : "bg-apple-bg dark:bg-apple-dark-border text-apple-gray dark:text-apple-dark-gray"
-                  }`}
-                >
-                  {module.source}
-                </button>
-              ))}
-            </div>
-
-            {/* Fixed Filter/Search Trigger */}
-            <div className="pr-4 pl-2 shrink-0 border-l border-apple-border dark:border-apple-dark-border/50 bg-transparent">
-              <button 
-                onClick={() => setIsDrawerOpen(true)}
-                className="p-2.5 bg-apple-bg dark:bg-apple-dark-border/50 text-apple-gray dark:text-apple-dark-text rounded-full active:scale-95 transition-all"
-                aria-label="Search and Filters"
-              >
-                <Search className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-
           {searchQuery && (
             <div className="mb-12 p-8 bg-apple-blue/5 border border-apple-blue/10 rounded-apple-lg flex items-center justify-between">
               <p className="text-apple-blue font-bold text-lg">
@@ -566,7 +530,7 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
                             >
                               <button
                                 onClick={() => toggleItem(item.id)}
-                                className="w-full text-left p-8 sm:p-10 flex items-start gap-6"
+                                className="w-full text-left p-8 sm:p-10 flex items-start gap-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-apple-blue rounded-3xl"
                               >
                                 <div className="flex-1 min-w-0">
                                   {item.important && (
@@ -649,22 +613,39 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
         </main>
 
 
-        {/* Mobile Drawer Overlay */}
-        {isDrawerOpen && (
-          <div className="fixed inset-0 z-100 lg:hidden animate-reveal">
+        {/* Mobile Floating Filter Button */}
+        {mounted && createPortal(
+          <button
+            onClick={() => setIsDrawerOpen(true)}
+            className="lg:hidden fixed bottom-8 left-6 w-12 h-12 rounded-full bg-apple-blue/90 text-white shadow-2xl shadow-apple-blue/30 backdrop-blur-md flex items-center justify-center z-140 transition-all active:scale-90 hover:scale-105 animate-in fade-in zoom-in duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-apple-blue"
+            aria-label="Filter"
+          >
+            <Search className="w-5 h-5" />
+            {/* Active Indicator Dot */}
+            {activeSource !== 'All' && (
+               <span className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full border-2 border-white dark:border-zinc-900" />
+            )}
+          </button>,
+          document.body
+        )}
+
+        {/* Mobile Drawer Overlay - Rendered via Portal */}
+        {mounted && isDrawerOpen && createPortal(
+          <div className="fixed inset-0 z-200 lg:hidden animate-in fade-in duration-200">
             <div
-              className="absolute inset-0 bg-black/40 backdrop-blur-md transition-opacity duration-300"
+              className="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity"
               onClick={() => setIsDrawerOpen(false)}
             />
-            <div className="absolute bottom-0 left-0 w-full h-[85vh] bg-white dark:bg-apple-dark-bg mobile-sheet shadow-2xl flex flex-col overflow-hidden border-t border-apple-border dark:border-apple-dark-border">
+            <div className="absolute bottom-0 left-0 w-full h-[85vh] bg-white dark:bg-apple-dark-bg mobile-sheet shadow-2xl flex flex-col overflow-hidden border-t border-apple-border dark:border-apple-dark-border animate-in slide-in-from-bottom duration-300 rounded-t-3xl">
               {/* Simple Sheet Handle */}
-              <div className="h-1.5 w-12 bg-zinc-200 dark:bg-zinc-800 rounded-full mx-auto mt-4 mb-6 shrink-0" />
+              <div className="h-1.5 w-12 bg-zinc-200 dark:bg-zinc-700/50 rounded-full mx-auto mt-4 mb-6 shrink-0" />
               
               <div className="flex-1 overflow-y-auto px-8 pb-12 no-scrollbar">
                 {memoizedSidebar}
               </div>
             </div>
-          </div>
+          </div>,
+          document.body
         )}
       </div>
     </>
