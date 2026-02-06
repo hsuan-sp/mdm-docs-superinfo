@@ -12,7 +12,6 @@ import { getPageMap } from "nextra/page-map";
 import { Logo, NavbarExtra } from "@/components/layout/NavbarItems";
 import type { Metadata } from "next";
 import GeometricBackground from "@/components/ui/GeometricBackground";
-import { LiquidGlassFilter } from "@/components/ui/LiquidGlassFilter";
 
 export const metadata: Metadata = {
   title: {
@@ -46,7 +45,6 @@ export default async function RootLayout({
         />
       </head>
       <body>
-        <LiquidGlassFilter />
         <GeometricBackground />
         <UserProvider>
           <LanguageProvider>
