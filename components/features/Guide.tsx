@@ -481,14 +481,14 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
     <>
       <div className="flex flex-col lg:flex-row gap-0 lg:gap-16 py-12 animate-enter-up">
         {/* Desktop Sidebar */}
-        <aside className="hidden lg:block w-85 shrink-0 sticky top-28 h-[calc(100vh-8rem)]">
+        <aside className="hidden lg:block w-85 shrink-0 sticky top-28 h-[calc(100vh-8rem)] ml-6">
           <div className="sidebar-glass-container h-full">
             {memoizedSidebar}
           </div>
         </aside>
 
         {/* Main Content Area */}
-        <main className="flex-1 min-w-0 px-6 lg:px-0 lg:max-w-4xl xl:max-w-5xl">
+        <main className="flex-1 min-w-0 px-6 lg:px-10 xl:px-12 lg:max-w-6xl xl:max-w-7xl mx-auto">
           {searchQuery && (
             <div className="mb-12 p-8 bg-apple-blue/5 border border-apple-blue/10 rounded-apple-lg flex items-center justify-between">
               <p className="text-apple-blue font-bold text-lg">
