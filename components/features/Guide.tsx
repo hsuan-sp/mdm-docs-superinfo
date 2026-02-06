@@ -18,6 +18,7 @@ import { Skeleton } from "@/components/ui/Skeleton";
 import { QAModule, TranslationParams } from "@/types";
 import EmptyState from "@/components/ui/EmptyState";
 import { useLanguage } from "@/hooks/useLanguage";
+import CardSheen from "@/components/ui/CardSheen";
 import { useUser } from "@/hooks/useLogtoUser";
 import useDebounce from "@/hooks/useDebounce";
 import AuthGate from "@/components/ui/AuthGate";
@@ -535,6 +536,7 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
                                   : ""
                               }`}
                             >
+                              <CardSheen />
                               <button
                                 onClick={() => toggleItem(item.id)}
                                 className="w-full text-left p-8 sm:p-10 flex items-start gap-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-apple-blue rounded-3xl"

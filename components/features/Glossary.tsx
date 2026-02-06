@@ -18,6 +18,7 @@ import { Skeleton } from "@/components/ui/Skeleton";
 import NoResults from "@/components/ui/NoResults";
 import { TranslationParams, GlossaryItem } from "@/types";
 import { useLanguage } from "@/hooks/useLanguage";
+import CardSheen from "@/components/ui/CardSheen";
 import { useUser } from "@/hooks/useLogtoUser";
 import useDebounce from "@/hooks/useDebounce";
 import AuthGate from "@/components/ui/AuthGate";
@@ -430,9 +431,10 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
               {filteredTerms.map((item, idx) => (
                 <article
                   key={item.term}
-                  className={`apple-card flex flex-col ${gridCols === 1 ? "p-10 sm:p-12 md:p-14" : "p-8 md:p-10"} relative overflow-hidden animate-enter-up`}
+                  className={`apple-card group flex flex-col ${gridCols === 1 ? "p-10 sm:p-12 md:p-14" : "p-8 md:p-10"} relative overflow-hidden animate-enter-up`}
                   style={{ animationDelay: `${idx * 50}ms` }}
                 >
+                  <CardSheen />
                   <header className="mb-8 relative z-10">
                     <div className="flex flex-wrap gap-2 mb-6">
                       {(Array.isArray(item.category)

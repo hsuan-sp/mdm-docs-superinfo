@@ -1349,3 +1349,54 @@ button[aria-label*="Menu"],
   font-family:
     "VibrantEmoji", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
 }
+
+/* ========================================
+   ANIMATIONS: Background Blobs
+   ======================================== */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* ========================================
+   NAVBAR: Liquid Glass Header
+   ======================================== */
+/* Target Nextra's default navbar class usually (nav) or nextra-nav-container */
+.nextra-nav-container nav,
+nav.nextra-navbar {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.3s ease;
+}
+
+.dark .nextra-nav-container nav,
+.dark nav.nextra-navbar {
+  background-color: rgba(18, 18, 20, 0.6) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 24px -5px rgba(0, 0, 0, 0.3) !important;
+}

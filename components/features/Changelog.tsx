@@ -4,6 +4,7 @@ import { Calendar, ChevronDown } from "lucide-react";
 import AuthGate from "@/components/ui/AuthGate";
 import { useUser } from "@/hooks/useLogtoUser";
 import { translations } from "@/locales";
+import CardSheen from "@/components/ui/CardSheen";
 import { useLanguage } from "@/hooks/useLanguage";
 
 interface LogEntry {
@@ -103,8 +104,9 @@ const Changelog: React.FC<ChangelogProps> = ({ zhLogs, enLogs }) => {
             </div>
 
             <div
-              className={`apple-card p-8 md:p-10 transition-all duration-300 ${index === 0 && selectedVersion === "ALL" ? "ring-2 ring-apple-blue/20 dark:ring-apple-blue/10 shadow-xl" : ""}`}
+              className={`apple-card group relative overflow-hidden p-8 md:p-10 transition-all duration-300 ${index === 0 && selectedVersion === "ALL" ? "ring-2 ring-apple-blue/20 dark:ring-apple-blue/10 shadow-xl" : ""}`}
             >
+              <CardSheen />
               <header className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-apple-border/50 dark:border-white/5">
                 <div className="flex items-center gap-4">
                   <div className="md:hidden font-mono font-bold text-white bg-apple-blue px-3 py-1 rounded-lg text-sm">

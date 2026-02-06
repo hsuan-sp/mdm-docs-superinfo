@@ -3,6 +3,7 @@
 import React from "react";
 // ✅ Nextra 4 / App Router 下必須從 next/navigation 引入 useRouter
 import { useRouter } from "next/navigation";
+import CardSheen from "@/components/ui/CardSheen";
 import {
   User,
   Package,
@@ -107,8 +108,8 @@ const Home: React.FC = () => {
                 className="apple-card group cursor-pointer p-10 md:p-12 flex flex-col h-full min-h-85 animate-enter-up focus-visible:ring-2 focus-visible:ring-apple-blue focus-visible:ring-offset-2 focus-visible:outline-none"
                 style={{ animationDelay: `${idx * 100 + 500}ms` }}
               >
-                {/* Refined Sheen Effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 bg-linear-to-tr from-transparent via-white/20 dark:via-white/5 to-transparent -translate-x-full group-hover:translate-x-full rotate-45 pointer-events-none" />
+                {/* Refined Glass Sheen */}
+                <CardSheen />
 
                 <div className="absolute top-0 right-0 p-10 opacity-0 group-hover:opacity-100 transition-all duration-700 transform translate-x-4 group-hover:translate-x-0 text-apple-blue z-20">
                   <ArrowRight className="w-8 h-8" />
