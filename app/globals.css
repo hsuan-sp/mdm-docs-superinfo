@@ -785,33 +785,42 @@ article {
    READABILITY VARIANT: For Guide & Glossary
    ============================================== */
 .apple-card-content {
-  /* Solid base for text readability */
-  background: rgba(255, 255, 255, 0.9) !important;
-  backdrop-filter: blur(20px) !important;
-  border-radius: 24px !important;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04) !important;
+  /* Hybrid approach: High readability but retains glass feel */
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(25px) !important;
+  border-radius: 28px !important; /* Unified radius */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 4px 24px -5px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
 
-  /* Ensure overflow is hidden to clip sheen */
+  /* Ensure overflow is hidden to clip any inner effects */
   overflow: hidden !important;
   position: relative;
   isolation: isolate;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .dark .apple-card-content {
-  background: #1c1c1e !important; /* Proper Dark Mode Content BG */
+  background: rgba(30, 30, 35, 0.6) !important; /* Translucent Dark Glass */
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2) !important;
+  box-shadow:
+    0 8px 32px -8px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
 }
 
-/* Disable hover scaling/sheen distractions for content */
+/* Restore subtle hover effects for interaction */
 .apple-card-content:hover {
-  transform: none !important;
-  background: rgba(255, 255, 255, 0.95) !important;
+  transform: translateY(-4px) scale(1.005) !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  box-shadow:
+    0 20px 40px -12px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9) !important;
 }
 
 .dark .apple-card-content:hover {
-  background: #252528 !important;
+  background: rgba(40, 40, 45, 0.7) !important;
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.6) !important;
 }
 
 /* ==============================================
@@ -1433,4 +1442,50 @@ nav.nextra-navbar {
   background-color: rgba(18, 18, 20, 0.6) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
   box-shadow: 0 4px 24px -5px rgba(0, 0, 0, 0.3) !important;
+}
+/* ========================================
+   TYPOGRAPHY OVERRIDES: High Contrast Dark Mode
+   ======================================== */
+.prose strong,
+.prose b {
+  font-weight: 700;
+  color: #1d1d1f; /* Light mode: Apple standard dark gray */
+}
+
+/* Dark Mode: Switch to Apple Blue for emphasis */
+.dark .prose strong,
+.dark .prose b {
+  color: #0a84ff !important; /* Apple Blue Vivid */
+}
+
+/* Links */
+.prose a {
+  color: #0071e3;
+  text-decoration-color: rgba(0, 113, 227, 0.4);
+}
+
+.dark .prose a {
+  color: #409cff; /* Lighter blue for dark mode */
+  text-decoration-color: rgba(64, 156, 255, 0.4);
+}
+
+/* Inline Code */
+.prose :not(pre) > code {
+  color: #d63384; /* Standard semantic pink/red */
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.15em 0.3em;
+  border-radius: 0.3em;
+}
+
+.dark .prose :not(pre) > code {
+  color: #ff375f; /* Apple Pink/Red */
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Headings in Dark Mode */
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose h4 {
+  color: #f5f5f7; /* Almost white */
 }
