@@ -511,7 +511,7 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
                   id={module.id} // use slug as ID
                   className="scroll-mt-32 space-y-10"
                 >
-                  <div className="p-8 bg-gradient-to-r from-apple-bg to-apple-bg/80 dark:from-white/[0.03] dark:to-transparent rounded-2xl flex items-center justify-between border border-apple-border/50 dark:border-white/5">
+                  <div className="p-8 bg-linear-to-r from-apple-bg to-apple-bg/80 dark:from-white/3 dark:to-transparent rounded-2xl flex items-center justify-between border border-apple-border/50 dark:border-white/5">
                     <h2 className="text-2xl font-bold tracking-tight text-apple-blue m-0">
                       {module.source}
                     </h2>
