@@ -215,7 +215,7 @@ export const en = {
     slogan: "Committed to excellence in service",
     copyright:
       "Copyright © 2026 Superinfo｜Apple Authorized Education Specialist",
-    info: "Superinfo Computer Co., Ltd. | Tax ID 23758990",
+    info: "Superinfo Computer Co., Ltd. | Tax ID 23756990",
   },
   auth: {
     title: "Authentication",

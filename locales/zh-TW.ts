@@ -214,7 +214,7 @@ export const zhTW = {
     badges: "Apple 授權教育經銷商 | Apple 校園體驗中心 | 軟硬體專業諮詢",
     slogan: "致力於給您最好的服務",
     copyright: "Copyright © 2026 極電資訊｜Apple 授權教育經銷商",
-    info: "極電資訊有限公司 | 統一編號 23758990",
+    info: "極電資訊有限公司 | 統一編號 23756990",
   },
   auth: {
     title: "身分驗證",
