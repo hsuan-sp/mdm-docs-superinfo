@@ -36,7 +36,10 @@ const SidebarContent: React.FC<{
   fontScale: number;
   setFontScale: (v: number) => void;
   setIsDrawerOpen: (v: boolean) => void;
-  t: (key: PathsToLeaves<TranslationType>, params?: TranslationParams) => string;
+  t: (
+    key: PathsToLeaves<TranslationType>,
+    params?: TranslationParams
+  ) => string;
 }> = ({
   searchQuery,
   setSearchQuery,
@@ -92,7 +95,9 @@ const SidebarContent: React.FC<{
               <Menu className="w-4 h-4" />
               <span>{t("guide.allQuestions")}</span>
             </div>
-            <span className={`text-[10px] font-black px-2 py-0.5 rounded-lg ${activeSource === "All" ? "bg-white/20 text-white" : "bg-apple-bg dark:bg-apple-dark-border text-apple-gray"}`}>
+            <span
+              className={`text-[10px] font-black px-2 py-0.5 rounded-lg ${activeSource === "All" ? "bg-white/20 text-white" : "bg-apple-bg dark:bg-apple-dark-border text-apple-gray"}`}
+            >
               {totalCount}
             </span>
           </button>
@@ -108,7 +113,9 @@ const SidebarContent: React.FC<{
                 }}
                 className={`sidebar-btn focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue rounded-lg ${isActive ? "sidebar-btn-active" : ""}`}
               >
-                <span className="truncate pr-4 text-left font-bold">{module.source}</span>
+                <span className="truncate pr-4 text-left font-bold">
+                  {module.source}
+                </span>
                 <span
                   className={`text-[10px] font-black px-2 py-0.5 rounded-lg ${isActive ? "bg-white/20 text-white" : "bg-apple-bg dark:bg-apple-dark-border text-apple-gray"}`}
                 >
@@ -147,8 +154,8 @@ const SidebarContent: React.FC<{
               key={scale}
               onClick={() => setFontScale(scale)}
               className={`flex-1 flex items-center justify-center py-2 rounded-xl text-[12px] font-black transition-all ${
-                fontScale === scale 
-                  ? "bg-white dark:bg-apple-dark-border text-apple-blue shadow-lg shadow-black/5" 
+                fontScale === scale
+                  ? "bg-white dark:bg-apple-dark-border text-apple-blue shadow-lg shadow-black/5"
                   : "text-apple-gray/60 hover:text-apple-text"
               }`}
             >
@@ -212,10 +219,10 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
   // Handle ESC key to close drawer
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setIsDrawerOpen(false);
+      if (e.key === "Escape") setIsDrawerOpen(false);
     };
-    if (isDrawerOpen) window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
+    if (isDrawerOpen) window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
   }, [isDrawerOpen]);
 
   useEffect(() => {
@@ -447,25 +454,25 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
       <div className="flex flex-col lg:flex-row min-h-screen pt-20">
         {/* Sidebar Skeleton */}
         <div className="hidden lg:block w-72 shrink-0 p-8 border-r border-apple-border dark:border-apple-dark-border">
-           <Skeleton className="h-10 w-full mb-6 rounded-xl" />
-           <div className="space-y-4">
-             {[1, 2, 3, 4, 5].map((i) => (
-               <Skeleton key={i} className="h-8 w-full rounded-lg" />
-             ))}
-           </div>
+          <Skeleton className="h-10 w-full mb-6 rounded-xl" />
+          <div className="space-y-4">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <Skeleton key={i} className="h-8 w-full rounded-lg" />
+            ))}
+          </div>
         </div>
-        
+
         {/* Content Skeleton */}
         <div className="flex-1 p-6 lg:p-10 max-w-5xl mx-auto w-full">
-           <div className="flex gap-4 mb-10">
-             <Skeleton className="h-12 w-full rounded-2xl" />
-             <Skeleton className="h-12 w-32 rounded-2xl" />
-           </div>
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-             {[1, 2, 3, 4].map((i) => (
-               <Skeleton key={i} className="h-64 rounded-3xl" />
-             ))}
-           </div>
+          <div className="flex gap-4 mb-10">
+            <Skeleton className="h-12 w-full rounded-2xl" />
+            <Skeleton className="h-12 w-32 rounded-2xl" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[1, 2, 3, 4].map((i) => (
+              <Skeleton key={i} className="h-64 rounded-3xl" />
+            ))}
+          </div>
         </div>
       </div>
     );
@@ -504,7 +511,7 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
                   id={module.id} // use slug as ID
                   className="scroll-mt-32 space-y-10"
                 >
-                  <div className="p-8 bg-apple-bg dark:bg-apple-dark-bg/40 rounded-apple-lg flex items-center justify-between border border-transparent">
+                  <div className="p-8 bg-gradient-to-r from-apple-bg to-apple-bg/80 dark:from-white/[0.03] dark:to-transparent rounded-2xl flex items-center justify-between border border-apple-border/50 dark:border-white/5">
                     <h2 className="text-2xl font-bold tracking-tight text-apple-blue m-0">
                       {module.source}
                     </h2>
@@ -522,9 +529,9 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
                           {section.items.map((item) => (
                             <div
                               key={item.id}
-                              className={`apple-card group transition-all duration-500 overflow-hidden ${
+                              className={`apple-card group transition-all duration-500 ${
                                 openItems.has(item.id)
-                                  ? "bg-white dark:bg-apple-dark-card ring-2 ring-apple-blue/20 shadow-2xl scale-[1.01]"
+                                  ? "ring-1 ring-apple-blue/30 dark:ring-apple-blue/20 shadow-xl dark:shadow-2xl dark:shadow-apple-blue/5"
                                   : ""
                               }`}
                             >
@@ -612,41 +619,43 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
           )}
         </main>
 
-
         {/* Mobile Floating Filter Button */}
-        {mounted && createPortal(
-          <button
-            onClick={() => setIsDrawerOpen(true)}
-            className="lg:hidden fixed bottom-8 left-6 w-12 h-12 rounded-full bg-apple-blue/90 text-white shadow-2xl shadow-apple-blue/30 backdrop-blur-md flex items-center justify-center z-140 transition-all active:scale-90 hover:scale-105 animate-in fade-in zoom-in duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-apple-blue"
-            aria-label="Filter"
-          >
-            <Search className="w-5 h-5" />
-            {/* Active Indicator Dot */}
-            {activeSource !== 'All' && (
-               <span className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full border-2 border-white dark:border-zinc-900" />
-            )}
-          </button>,
-          document.body
-        )}
+        {mounted &&
+          createPortal(
+            <button
+              onClick={() => setIsDrawerOpen(true)}
+              className="lg:hidden fixed bottom-8 left-6 w-12 h-12 rounded-full bg-apple-blue/90 text-white shadow-2xl shadow-apple-blue/30 backdrop-blur-md flex items-center justify-center z-140 transition-all active:scale-90 hover:scale-105 animate-in fade-in zoom-in duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-apple-blue"
+              aria-label="Filter"
+            >
+              <Search className="w-5 h-5" />
+              {/* Active Indicator Dot */}
+              {activeSource !== "All" && (
+                <span className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full border-2 border-white dark:border-zinc-900" />
+              )}
+            </button>,
+            document.body
+          )}
 
         {/* Mobile Drawer Overlay - Rendered via Portal */}
-        {mounted && isDrawerOpen && createPortal(
-          <div className="fixed inset-0 z-200 lg:hidden animate-in fade-in duration-200">
-            <div
-              className="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity"
-              onClick={() => setIsDrawerOpen(false)}
-            />
-            <div className="absolute bottom-0 left-0 w-full h-[85vh] bg-white dark:bg-apple-dark-bg mobile-sheet shadow-2xl flex flex-col overflow-hidden border-t border-apple-border dark:border-apple-dark-border animate-in slide-in-from-bottom duration-300 rounded-t-3xl">
-              {/* Simple Sheet Handle */}
-              <div className="h-1.5 w-12 bg-zinc-200 dark:bg-zinc-700/50 rounded-full mx-auto mt-4 mb-6 shrink-0" />
-              
-              <div className="flex-1 overflow-y-auto px-8 pb-12 no-scrollbar">
-                {memoizedSidebar}
+        {mounted &&
+          isDrawerOpen &&
+          createPortal(
+            <div className="fixed inset-0 z-200 lg:hidden animate-in fade-in duration-200">
+              <div
+                className="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity"
+                onClick={() => setIsDrawerOpen(false)}
+              />
+              <div className="absolute bottom-0 left-0 w-full h-[85vh] bg-white dark:bg-apple-dark-bg mobile-sheet shadow-2xl flex flex-col overflow-hidden border-t border-apple-border dark:border-apple-dark-border animate-in slide-in-from-bottom duration-300 rounded-t-3xl">
+                {/* Simple Sheet Handle */}
+                <div className="h-1.5 w-12 bg-zinc-200 dark:bg-zinc-700/50 rounded-full mx-auto mt-4 mb-6 shrink-0" />
+
+                <div className="flex-1 overflow-y-auto px-8 pb-12 no-scrollbar">
+                  {memoizedSidebar}
+                </div>
               </div>
-            </div>
-          </div>,
-          document.body
-        )}
+            </div>,
+            document.body
+          )}
       </div>
     </>
   );

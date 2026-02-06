@@ -69,15 +69,16 @@ const SidebarContent: React.FC<{
   ];
 
   return (
-    <div className="flex flex-col h-full overflow-y-auto no-scrollbar pb-10 px-1">
-      <div className="relative group mb-8 mt-2">
+    <div className="flex flex-col h-full overflow-y-auto no-scrollbar pb-10">
+      {/* Search Input */}
+      <div className="relative mb-6">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-apple-gray" />
         <input
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder={t("glossary.searchPlaceholder")}
-          className="input-apple pl-10 pr-10"
+          className="w-full pl-10 pr-10 py-2.5 bg-apple-bg dark:bg-apple-dark-bg-secondary border border-apple-border dark:border-apple-dark-border rounded-lg text-[15px] outline-none focus:border-apple-blue focus:ring-2 focus:ring-apple-blue/20 transition-all"
         />
         {searchQuery && (
           <button
@@ -90,8 +91,9 @@ const SidebarContent: React.FC<{
         )}
       </div>
 
-      <div className="mb-8">
-        <p className="hidden lg:block text-xs font-medium text-apple-gray mb-3 px-1">
+      {/* Category Navigation */}
+      <div className="mb-6">
+        <p className="text-xs font-medium text-apple-gray mb-3 px-1">
           {t("glossary.sidebarTitle")}
         </p>
         <nav className="space-y-1">
@@ -465,9 +467,10 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
                       <span className="block text-[10px] font-black uppercase tracking-widest text-apple-blue mb-2">
                         {t("glossary.analogyLabel")}
                       </span>
-                      <p className="text-apple-text dark:text-apple-dark-text font-medium leading-relaxed">
-                        {item.analogy}
-                      </p>
+                      <div
+                        className="prose prose-zinc dark:prose-invert max-w-none text-apple-text dark:text-apple-dark-text font-medium leading-relaxed"
+                        dangerouslySetInnerHTML={{ __html: item.analogy }}
+                      />
                     </div>
                   )}
                 </article>
