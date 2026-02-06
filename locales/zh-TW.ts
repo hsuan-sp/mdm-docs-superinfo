@@ -207,6 +207,7 @@ export const zhTW = {
     currentUser: "目前登入",
     guest: "訪客用戶",
     reportSubject: "[頁面問題回報] MDM 知識庫",
+    authorized: "已授權",
   },
   footer: {
     company: "極電資訊有限公司",

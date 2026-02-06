@@ -1,7 +1,7 @@
 # 極電資訊 Apple MDM 專業知識庫 (Professional Knowledge Base)
 
-**當前版本 (Current Version):** 1.2.0
-**最後更新 (Last Updated):** 2026-01-27
+**當前版本 (Current Version):** 1.0.0
+**最後更新 (Last Updated):** February 2026
 
 ![Next.js](https://img.shields.io/badge/Next.js-16.1-black.svg) ![Node](https://img.shields.io/badge/Node-22%2B-339933.svg) ![Tailwind](https://img.shields.io/badge/Tailwind-v4-38bdf8.svg)
 

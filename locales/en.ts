@@ -207,6 +207,7 @@ export const en = {
     currentUser: "Current User",
     guest: "Guest User",
     reportSubject: "[Issue Report] Support Site",
+    authorized: "Authorized",
   },
   footer: {
     company: "Superinfo Computer",

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Lock, Home, ArrowRight } from "lucide-react";
+import { Lock, Home, ArrowRight, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { useLanguage } from "@/hooks/useLanguage";
 
@@ -10,7 +10,7 @@ interface AuthGateProps {
 
 /**
  * AuthGate - Apple-style Authentication Gate
- * 
+ *
  * 設計原則：
  * - 極簡設計，大量留白
  * - 清晰的視覺層次
@@ -20,10 +20,13 @@ interface AuthGateProps {
 const AuthGate: React.FC<AuthGateProps> = ({ redirectPath = "/" }) => {
   const { t } = useLanguage();
 
+  const [isLoading, setIsLoading] = React.useState(false);
+
   const handleSignIn = React.useCallback(() => {
+    setIsLoading(true);
     const apiEndpoint = "/api/logto/sign-in";
     const finalTarget = encodeURIComponent(redirectPath);
-    window.location.href = `${apiEndpoint}?redirect=${finalTarget}`;
+    window.location.assign(`${apiEndpoint}?redirect=${finalTarget}`);
   }, [redirectPath]);
 
   return (
@@ -50,10 +53,17 @@ const AuthGate: React.FC<AuthGateProps> = ({ redirectPath = "/" }) => {
         {/* Primary CTA */}
         <button
           onClick={handleSignIn}
-          className="btn-apple-primary w-full min-h-11 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-apple-blue"
+          disabled={isLoading}
+          className={`btn-apple-primary w-full min-h-11 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-apple-blue ${isLoading ? "opacity-80 cursor-wait" : ""}`}
         >
-          {t("authGate.signInBtn")}
-          <ArrowRight className="w-5 h-5" />
+          {isLoading ? (
+            <Loader2 className="w-5 h-5 animate-spin" />
+          ) : (
+            <>
+              {t("authGate.signInBtn")}
+              <ArrowRight className="w-5 h-5" />
+            </>
+          )}
         </button>
 
         {/* Secondary Link */}
