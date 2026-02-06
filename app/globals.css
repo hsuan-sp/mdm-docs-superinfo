@@ -765,7 +765,7 @@ article {
 
 /* --- HOVER: Enhanced glass effect --- */
 .apple-card:hover {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.45);
   transform: translateY(-8px) scale(1.02);
   border-color: rgba(0, 0, 0, 0.08);
 
@@ -778,7 +778,40 @@ article {
 }
 
 .apple-card:hover::before {
-  opacity: 0.8;
+  opacity: 1;
+}
+
+/* ==============================================
+   READABILITY VARIANT: For Guide & Glossary
+   ============================================== */
+.apple-card-content {
+  /* Solid base for text readability */
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(20px) !important;
+  border-radius: 24px !important;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04) !important;
+
+  /* Ensure overflow is hidden to clip sheen */
+  overflow: hidden !important;
+  position: relative;
+  isolation: isolate;
+}
+
+.dark .apple-card-content {
+  background: #1c1c1e !important; /* Proper Dark Mode Content BG */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Disable hover scaling/sheen distractions for content */
+.apple-card-content:hover {
+  transform: none !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+.dark .apple-card-content:hover {
+  background: #252528 !important;
 }
 
 /* ==============================================
