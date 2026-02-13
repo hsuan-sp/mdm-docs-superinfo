@@ -628,7 +628,7 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
               className="lg:hidden fixed bottom-8 left-6 w-12 h-12 rounded-full bg-apple-blue/90 text-white shadow-2xl shadow-apple-blue/30 backdrop-blur-md flex items-center justify-center z-140 transition-all active:scale-90 hover:scale-105 animate-in fade-in zoom-in duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-apple-blue"
               aria-label="Filter"
             >
-              <Search className="w-5 h-5" />
+              <Filter className="w-5 h-5" />
               {/* Active Indicator Dot */}
               {activeSource !== "All" && (
                 <span className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full border-2 border-white dark:border-zinc-900" />
