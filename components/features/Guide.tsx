@@ -22,6 +22,7 @@ import { useLanguage } from "@/hooks/useLanguage";
 import { useUser } from "@/hooks/useLogtoUser";
 import useDebounce from "@/hooks/useDebounce";
 import AuthGate from "@/components/ui/AuthGate";
+import { highlightHtml } from "@/lib/highlight";
 
 // --- 子組件：側邊欄內容 (獨立出來避免重渲染效能問題) ---
 const SidebarContent: React.FC<{
@@ -552,9 +553,13 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
                                         ? "text-apple-blue"
                                         : "text-apple-text dark:text-apple-dark-text"
                                     }`}
-                                  >
-                                    {item.question}
-                                  </h4>
+                                    dangerouslySetInnerHTML={{
+                                      __html: highlightHtml(
+                                        item.question,
+                                        debouncedQuery
+                                      ),
+                                    }}
+                                  />
                                 </div>
                                 <div
                                   className={`mt-1.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition-all duration-500 ${
@@ -575,7 +580,10 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
                                     // 直接使用百分比縮放
                                     style={{ fontSize: `${fontScale * 100}%` }}
                                     dangerouslySetInnerHTML={{
-                                      __html: item.answer,
+                                      __html: highlightHtml(
+                                        item.answer,
+                                        debouncedQuery
+                                      ),
                                     }}
                                   />
                                   {item.tags && item.tags.length > 0 && (

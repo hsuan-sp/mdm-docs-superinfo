@@ -22,6 +22,7 @@ import { useLanguage } from "@/hooks/useLanguage";
 import { useUser } from "@/hooks/useLogtoUser";
 import useDebounce from "@/hooks/useDebounce";
 import AuthGate from "@/components/ui/AuthGate";
+import { highlightHtml } from "@/lib/highlight";
 
 // --- 子組件：側邊欄內容 (獨立出來避免重渲染效能問題) ---
 const SidebarContent: React.FC<{
@@ -450,15 +451,18 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
                     </div>
                     <h3
                       className={`${gridCols === 1 ? "text-3xl sm:text-4xl" : "text-xl md:text-2xl"} font-bold tracking-tight text-apple-text dark:text-apple-dark-text group-hover:text-apple-blue transition-colors duration-300`}
-                    >
-                      {item.term}
-                    </h3>
+                      dangerouslySetInnerHTML={{
+                        __html: highlightHtml(item.term, debouncedQuery),
+                      }}
+                    />
                   </header>
 
                   <div
                     className={`flex-1 prose prose-zinc dark:prose-invert max-w-none text-apple-gray dark:text-apple-dark-gray leading-[1.6] mb-8 relative z-10 ${gridCols > 1 ? "text-[15px]" : "text-[17px]"}`}
                     style={{ fontSize: `${fontScale * 100}%` }}
-                    dangerouslySetInnerHTML={{ __html: item.definition }}
+                    dangerouslySetInnerHTML={{
+                      __html: highlightHtml(item.definition, debouncedQuery),
+                    }}
                   />
 
                   {item.analogy && (
@@ -470,7 +474,9 @@ const Glossary: React.FC<GlossaryProps> = ({ initialData }) => {
                       </span>
                       <div
                         className="prose prose-zinc dark:prose-invert max-w-none text-apple-text dark:text-apple-dark-text font-medium leading-relaxed"
-                        dangerouslySetInnerHTML={{ __html: item.analogy }}
+                        dangerouslySetInnerHTML={{
+                          __html: highlightHtml(item.analogy, debouncedQuery),
+                        }}
                       />
                     </div>
                   )}
