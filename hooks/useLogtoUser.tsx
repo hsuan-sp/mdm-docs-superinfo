@@ -17,7 +17,7 @@ interface LogtoUser {
 
 interface UserContextType {
   user: LogtoUser | null;
-  displayName: string; // ✅ 用於 UI 顯示的名稱 (Email 前綴或 Name)
+  displayName: string;
   isAuthenticated: boolean;
   isAuthorized: boolean;
   isLoading: boolean;
@@ -38,10 +38,28 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
   const [isLoading, setIsLoading] = useState(true);
   const hasFetched = useRef(false);
 
+  // ✅ 深層清理函數：自動處理 Cookie 以外的所有殘留資料
+  const clearLocalPersistence = useCallback(() => {
+    try {
+      localStorage.clear();
+      sessionStorage.clear();
+      // 清除所有非 HttpOnly 的 Cookie (透過過期時間)
+      document.cookie.split(";").forEach((c) => {
+        document.cookie = c
+          .replace(/^ +/, "")
+          .replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+      });
+      console.warn(
+        "[Self-Healing] Local caches and non-HttpOnly cookies cleared."
+      );
+    } catch (e) {
+      console.error("[Self-Healing] Cleanup failed", e);
+    }
+  }, []);
+
   const fetchUser = useCallback(async () => {
     setIsLoading(true);
     try {
-      // ✅ 使用 cache: 'no-cache' 並加上 timestamp 破解任何潛在的 Cookie/API 緩存污染
       const res = await fetch(`/api/logto/user?t=${Date.now()}`, {
         cache: "no-store",
         headers: { Pragma: "no-cache", "Cache-Control": "no-cache" },
@@ -54,15 +72,25 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
       const json = await res.json();
 
       const email = json.userInfo?.email || json.claims?.email;
-      const name =
-        json.userInfo?.name || json.claims?.name || json.claims?.username;
+
+      // ✅ 自動偵測並應對會話污染
+      if (json.isAuthenticated && !email) {
+        console.error(
+          "[Auth] Corrupted session detected (Auth without Email). Triggering auto-repair..."
+        );
+        clearLocalPersistence();
+        // 我們不自動重定向 signOut 以避免死循環，但清除快取後讓 Guard 顯示提示
+      }
 
       setData({
         user: json.isAuthenticated
           ? {
               sub: json.claims?.sub || json.userInfo?.sub,
               email: email || undefined,
-              name: name || undefined,
+              name:
+                json.userInfo?.name ||
+                json.claims?.name ||
+                json.claims?.username,
             }
           : null,
         auth: !!json.isAuthenticated,
@@ -73,7 +101,7 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
     } finally {
       setIsLoading(false);
     }
-  }, []);
+  }, [clearLocalPersistence]);
 
   useEffect(() => {
     if (!hasFetched.current) {
@@ -84,20 +112,23 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const signIn = (redirectPath?: string) => {
     const path = redirectPath || window.location.pathname;
-    const target = `/api/logto/sign-in?redirect=${encodeURIComponent(path)}`;
-    window.location.replace(target);
+    window.location.replace(
+      `/api/logto/sign-in?redirect=${encodeURIComponent(path)}`
+    );
   };
 
   const signOut = () => {
-    // ✅ 直接跳向 Sign-out 端點，確保 Cookie 從伺服器端徹底抹除
+    // 登出時順便執行深層清理
+    clearLocalPersistence();
     window.location.replace("/api/logto/sign-out");
   };
 
   const getDisplayName = () => {
     if (!data.user) return "";
-    if (data.user.name) return data.user.name;
-    if (data.user.email) return data.user.email.split("@")[0];
-    return "User";
+    return (
+      data.user.name ||
+      (data.user.email ? data.user.email.split("@")[0] : "Authorized")
+    );
   };
 
   return (
@@ -105,7 +136,7 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
       value={{
         user: data.user,
         displayName: getDisplayName(),
-        isAuthenticated: data.auth,
+        isAuthenticated: data.auth && !!data.user?.email, // 只有完整身分才算認證
         isAuthorized:
           data.auth &&
           !!data.user?.email &&
