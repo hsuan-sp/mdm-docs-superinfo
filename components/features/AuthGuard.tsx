@@ -81,17 +81,16 @@ const AuthGuard = ({ children }: PropsWithChildren) => {
             <ShieldCheck className="w-8 h-8 text-amber-500" />
           </div>
           <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-2">
-            Profile Incomplete
+            身分資料未同步
           </h2>
           <p className="text-sm text-zinc-500 dark:text-zinc-400 max-w-xs mb-8">
-            We couldn&apos;t retrieve your email address. This usually happens
-            after registration. Please re-sync to continue.
+            系統目前無法取得您的有效郵件資訊。這通常發生在初次註冊後，請嘗試「重置會話」並重新登入以完成同步。
           </p>
           <button
-            onClick={() => signIn(pathname)}
-            className="px-8 py-3 bg-apple-blue text-white rounded-full font-bold text-sm shadow-xl shadow-apple-blue/20 hover:scale-105 active:scale-95 transition-all outline-none"
+            onClick={() => (window.location.href = "/api/logto/sign-out")}
+            className="px-8 py-3 bg-zinc-950 dark:bg-zinc-50 text-white dark:text-zinc-950 rounded-full font-bold text-sm shadow-xl shadow-zinc-950/20 hover:scale-105 active:scale-95 transition-all outline-none"
           >
-            Sync Account Profile
+            重置會話並重新登入
           </button>
         </div>
       </div>
