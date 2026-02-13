@@ -244,6 +244,10 @@ export const en = {
     signInBtn: "Sign In to Access",
     backHome: "Back to Home",
     badge: "Secure Access Control",
+    zombieTitle: "Identity Not Synced",
+    zombieDesc:
+      "System cannot retrieve your valid email. This usually happens after first registration, please reset session and sign-in again to complete sync.",
+    zombieBtn: "Reset Session & Re-login",
   },
   error404: {
     title: "Page Not Found",

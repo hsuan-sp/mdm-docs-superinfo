@@ -242,6 +242,10 @@ export const zhTW = {
     signInBtn: "立即登入存取",
     backHome: "返回首頁",
     badge: "安全存取受控",
+    zombieTitle: "身分資料未同步",
+    zombieDesc:
+      "系統目前無法取得您的有效郵件資訊。這通常發生在初次註冊後，請嘗試「重置會話」並重新登入以完成同步。",
+    zombieBtn: "重置會話並重新登入",
   },
   error404: {
     title: "頁面失蹤了",
