@@ -1,0 +1,256 @@
+{
+  "id": "digital-learning",
+  "source": "精進方案",
+  "sections": [
+    {
+      "title": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)",
+      "items": [
+        {
+          "id": "dl-1",
+          "question": "升級 iPadOS 17 後，螢幕上的 VPN 圖示消失了，這樣正常嗎？",
+          "answer": "<p><strong>完全正常。這是配合教育部「臺灣學術網路內容傳遞網路 (CDN)」服務政策，Jamf Trust 架構調整後的正常現象。</strong></p>\n<p>根據教育部精進方案政策，為最佳化連線效率並減少對 CDN 服務的干擾，Jamf Trust 主要採用 <strong>「DNS Proxy」</strong> 與 <strong>「內容過濾 (Content Filter)」</strong> 架構。（技術補充：在 <strong>iOS 26</strong> 中，部分過濾服務可能進一步結合 <strong>「URL Filtering API」</strong> 提供更細緻的網址辨識能力，但其核心運作邏輯仍符合教育部的規範。）</p>\n<h2>技術變革重點 ：</h2>\n<ol>\n<li><strong>圖示消失</strong> ：因為不再建立全域或 Per-App VPN 通道，狀態列自然不會顯示「VPN」字樣。這不代表防護失效。</li>\n<li><strong>效能提升</strong> ：新架構大幅降低了電力消耗，並解決了舊版架構下偶爾發生的網路卡頓與 App 更新失敗問題。</li>\n<li><strong>相容性</strong> ：此架構完全相容於教育部推行的 CDN 服務，確保教學內容能就近高速存取，不再繞道 VPN 伺服器。</li>\n</ol>\n<h2>如何確認防護運作中？</h2>\n<ul>\n<li><strong>檢查 App</strong> ：開啟 <strong>Jamf Trust App</strong> ，若畫面顯示 <strong>綠色盾牌 (Protected)</strong> ，即代表防護與資料蒐集功能正常。</li>\n<li><strong>後台檢查</strong> ：在 Jamf Pro 的裝置紀錄中，確認相關的「內容過濾」與「DNS 設定」描述檔狀態為「已安裝」。</li>\n</ul>\n<h2>實務建議 ：</h2>\n<p>若您在 Jamf Trust App 中看到關於「未設定螢幕密碼」或「系統版本過舊」的黃色/紅色警告，只要除了這些警告之外，盾牌仍是綠色或顯示連線中，即可忽略，這不影響教育部的使用率資料回報。</p>\n",
+          "important": true,
+          "tags": ["iPadOS 17", "VPN", "Jamf Trust", "精進方案", "架構調整"],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-2",
+          "question": "在教育部系統看到某些裝置「未使用」或資料未上傳，如何排除？",
+          "answer": "<p><strong>資料缺漏通常源於 Jamf Trust App 未在背景執行、裝置長期離線，或描述檔安裝不全。</strong></p>\n<p>教育部精進方案的使用率計算，高度依賴 Jamf Trust App 在背景的活躍度。若資料為零，請依序排查：</p>\n<h2>常見成因與解法 ：</h2>\n<ol>\n<li>\n<p><strong>Jamf Trust 被「上滑關閉」 (最常見)</strong> ：</p>\n<ul>\n<li><strong>現象</strong> ：學生習慣在多工列將所有 App 上滑關閉。這會直接殺死 Jamf Trust 的背景程序，導致資料無法回傳。</li>\n<li><strong>對策</strong> ：需教育學生 <strong>「不要關閉 Jamf Trust」</strong> 。它是系統服務的一部分，需常駐背景。</li>\n</ul>\n</li>\n<li>\n<p><strong>網路環境阻擋</strong> ：</p>\n<ul>\n<li><strong>現象</strong> ：裝置雖有連上 Wi-Fi，但防火牆阻擋了 Jamf Trust 回報資料的主機 (通常是 AWS 或 Jamf Cloud 端點)。</li>\n<li><strong>對策</strong> ：嘗試切換至手機熱點測試。若資料開始上傳，請網管檢查校園防火牆規則。</li>\n</ul>\n</li>\n<li>\n<p><strong>描述檔狀態異常</strong> ：</p>\n<ul>\n<li><strong>現象</strong> ：Jamf Trust App 雖已安裝，但缺少對應的 DNS Proxy 設定檔。</li>\n<li><strong>對策</strong> ：在 Jamf Pro 對該裝置執行 <strong>「更新資產 (Update Inventory)」</strong> ，或嘗試重新推送 Jamf Trust 設定。</li>\n</ul>\n</li>\n</ol>\n<h2>實務建議 ：</h2>\n<p>教育部的報表通常有 <strong>T+1 (延遲一天)</strong> 的特性。今日修復完成的裝置，資料可能等到明後天才能在儀表板上看到更新，若沒有馬上反應最新狀況無需著急。</p>\n",
+          "important": true,
+          "tags": ["資料回報", "故障排除", "Jamf Trust", "使用率"],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-3",
+          "question": "裝置連線異常，如何執行「重置網路設定」？有什麼風險？",
+          "answer": "<p><strong>「重置網路設定」是解決頑固連線問題的最後手段，</strong> 但必須注意 Wi-Fi 設定檔的銜接，以免變成脫管設備。</p>\n<p>** 操作風險警告 (JAJH-STU 案例) ** ：</p>\n<p>若貴校正在進行 Wi-Fi 架構轉換（例如從舊 SSID 遷移至精進方案標準 SSID）， <strong>絕對不可先刪除舊的 Wi-Fi 描述檔</strong> 。</p>\n<ul>\n<li>\n<p><strong>正確流程</strong> ：先推送新 Wi-Fi 設定 -&gt; 確認連線 -&gt; 再移除舊設定。</p>\n</li>\n<li>\n<p><strong>錯誤後果</strong> ：若先刪除舊設定或貿然重置網路，裝置將因無法連上任何網路而無法接收 MDM 的新指令，</p>\n</li>\n</ul>\n<p>必須逐台人工手動連網救援。</p>\n<p><strong>標準重置步驟</strong> ：</p>\n<ol>\n<li>\n<p>前往 <strong>「設定」&gt;「一般」&gt;「移轉或重置 iPad」&gt;「重置」</strong> 。</p>\n</li>\n<li>\n<p>選擇 <strong>「重置網路設定」</strong> 。裝置將會重啟。</p>\n</li>\n<li>\n<p><strong>重啟後影響</strong> ：</p>\n</li>\n</ol>\n<ul>\n<li>\n<p>所有已記住的 Wi-Fi 密碼與藍牙配對紀錄將被清除。</p>\n</li>\n<li>\n<p>MDM 推送的 Wi-Fi 描述檔通常會在裝置解鎖並掃描到網路後自動重新套用</p>\n</li>\n</ul>\n<p>（前提是裝置能先連上網路與 MDM 溝通）。</p>\n<p><strong>適用時機</strong> ：</p>\n<p>當裝置出現「無法加入網路」、藍牙完全搜不到裝置，</p>\n<p>或 Jamf Trust 持續顯示連線錯誤且無法透過重開機解決時。</p>\n",
+          "important": false,
+          "tags": ["故障排除", "重置", "網路", "Wi-Fi 遷移"],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-4",
+          "question": "如何建立「精進方案」專用的智慧型群組？",
+          "answer": "<p><strong>智慧型群組 (Smart Group) 是管理大量精進方案載具的核心工具，</strong> 能根據「資產標籤」或「採購年度」自動歸類裝置。</p>\n<p><strong>透過智慧型群組，您可以精準地對「112 年度採購」或「114 年度擴充」的裝置派送不同的 App 與限制。</strong> 建立邏輯與範例 ** ：</p>\n<ol>\n<li><strong>依命名規則篩選 (推薦)</strong> ：</li>\n</ol>\n<ul>\n<li>\n<p>若您在 PreStage 註冊時已設定命名規則（如：<code>114-SchoolCode-001</code>）。</p>\n</li>\n<li>\n<p><strong>條件設定</strong> ：Device Name <strong>like</strong> <code>114-%</code>。</p>\n</li>\n<li>\n<p><strong>效果</strong> ：所有 114 年度入庫的裝置會自動進入此群組。</p>\n</li>\n</ul>\n<ol>\n<li><strong>依資產標籤 (Asset Tag) 篩選</strong> ：</li>\n</ol>\n<ul>\n<li>\n<p>若您有在 Jamf Pro 中匯入資產標籤。</p>\n</li>\n<li>\n<p><strong>條件設定</strong> ：Asset Tag <strong>is</strong> <code>MOE-2025-001</code> …等。</p>\n</li>\n</ul>\n<ol>\n<li><strong>依 Jamf Trust 安裝狀態 (監控用)</strong> ：</li>\n</ol>\n<ul>\n<li>\n<p><strong>條件設定</strong> ：Application Title <strong>has</strong> <code>Jamf Trust</code>。</p>\n</li>\n<li>\n<p><strong>用途</strong> ：可用來反向篩選「未安裝 Jamf Trust」的裝置，作為異常排除清單。</p>\n</li>\n</ul>\n<p><strong>操作路徑</strong> ：</p>\n<p>登入 Jamf Pro &gt; <strong>「裝置」&gt;「智慧型裝置群組」&gt;「新增」</strong> 。</p>\n<p>設定好條件後，勾選 <strong>「在儀表板中顯示」</strong> ，即可隨時監控該批次裝置的數量變化。</p>\n",
+          "important": false,
+          "tags": ["群組管理", "自動化", "智慧型群組", "Smart Group"],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-5",
+          "question": "學生刪除了 Jamf Trust App，會影響使用率計算嗎？該如何防範？",
+          "answer": "<p>**會嚴重影響。Jamf Trust 是流量回報的唯一感應器，一旦被刪除，<strong>該裝置在教育部報表中將被視為「未使用」。</strong> 為了保證學校的 KPI 達標，管理員必須採取強硬的防護措施： <strong>防範措施一：禁止刪除 App (最有效)</strong> 1. 在 Jamf Pro 編輯該批裝置的 **「限制 (Restrictions)」** 描述檔。</p>\n<ol>\n<li>\n<p><strong>取消勾選</strong>「允許移除 App (Allow removing apps)」** 。</p>\n</li>\n<li>\n<p><strong>效果</strong> ：學生長按任何 App 圖示時，都不會出現「刪除 App」的選項，</p>\n</li>\n</ol>\n<p>這是最根本的解決之道。 <strong>防範措施二：設定自動修復</strong> 1. 在 Jamf Pro 的 Jamf Trust App 設定頁面中。</p>\n<ol>\n<li>\n<p>將分發方法設為 <strong>「自動安裝/提示安裝」</strong> 。</p>\n</li>\n<li>\n<p>確保 Jamf Trust 隨時在 Scope 範圍內。</p>\n</li>\n</ol>\n<p>即便學生透過特殊手段刪除了 App，裝置在下次 Check-in 時也會被強制重新安裝。</p>\n<p><strong>實務建議</strong> ：</p>\n<p>建議建立一個 <strong>「缺少 Jamf Trust」</strong> 的智慧型群組</p>\n<p>（條件：Application Title <strong>does not have</strong> Jamf Trust）。</p>\n<p>若此群組的裝置數量 &gt; 0，代表有裝置脫離監控，需立即處理。</p>\n",
+          "important": false,
+          "tags": ["資料回報", "安全性", "Jamf Trust", "限制描述檔"],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-6",
+          "question": "教學需要用到某些網站，如何暫時解除封鎖？",
+          "answer": "<p>**精進方案的過濾規則由上級單位（教育局）控管。極度不建議做更動，<strong>但若真的臨時急需使用，建議採取「排除」策略而非修改阻擋名單。</strong> 在不影響全校政策的前提下，可依需求選擇解法： **方法一：暫時將裝置排除 (Jamf Trust Scope Exclusion)** 1. 登入 Jamf Pro。</p>\n<ol>\n<li>\n<p>找到 Jamf Trust 的 <strong>「設定描述檔 (DNS Proxy / Content Filter)」</strong> 。</p>\n</li>\n<li>\n<p>進入 <strong>「範圍 (Scope)」&gt;「排除 (Exclusion)」</strong> 。</p>\n</li>\n<li>\n<p>將老師的教學 iPad 或特定班級群組加入排除清單。</p>\n</li>\n<li>\n<p>儲存後，裝置下次 Check-in 時會移除過濾設定，即可瀏覽 YouTube。</p>\n</li>\n<li>\n<p><strong>重要</strong> ：課後務必移除排除，否則該裝置將長期失去防護與資料回報功能。 <strong>方法二：使用 AirPlay 投影教師機*</strong> 若只是要「看影片」而非讓學生「操作」，</p>\n</li>\n</ol>\n<p>建議由老師使用自己的 iPad（通常過濾較寬鬆）播放，並透過 Apple TV 投影至大螢幕。</p>\n<p><strong>實務建議：風險控管*</strong> 資料中斷** ：裝置一旦被排除在 Jamf Trust 範圍外， **流量資料回報將會停止** 。</p>\n<p>請勿長期排除學生機，以免影響學校使用率回報上的 KPI。</p>\n<ul>\n<li><strong>內容管控</strong> ：解除過濾後，學生可存取所有網站（包含色情暴力），</li>\n</ul>\n<p>請老師務必加強現場巡堂和留意學生閱覽狀況。</p>\n",
+          "important": false,
+          "tags": [
+            "內容過濾",
+            "例外開放",
+            "YouTube",
+            "Jamf Trust",
+            "DNS Proxy"
+          ],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-7",
+          "question": "為什麼 iPad 的「iCloud 私密轉送」被強制關閉且無法開啟？這會影響隱私嗎？",
+          "answer": "<p>**這是為了確保「Jamf Trust」能正常運作所實施的統一政策。</p>\n<p>** 若開啟此功能，將導致學校的內容過濾失效且資料無法回報。 ** 現況說明 ** ：</p>\n<p>在精進方案的受監管載具上，您通常會發現「設定」&gt;「iCloud」&gt;「私密轉送」的開關呈現 <strong>灰色（反白）且顯示為「關閉」</strong> 。</p>\n<p>這是由教育局或學校端透過 MDM 描述檔強制執行的限制。</p>\n<p><strong>為什麼必須關閉？（技術衝突）</strong> 1. <strong>過濾失效</strong> ：iCloud 私密轉送 (Private Relay) 會將 DNS 查詢加密並繞道 Apple 的轉送站。</p>\n<p>這會讓 Jamf Trust 無法辨識學生是否正在瀏覽色情或惡意網站，導致「色情守門員」功能破功。</p>\n<ol>\n<li><strong>資料遺失</strong> ：由於流量被加密隱藏，Jamf Trust 無法計算流量與使用時間，</li>\n</ol>\n<p>這會直接導致學校在教育部報表上的 <strong>使用率資料異常（變低或為零）</strong> ，影響 KPI 考核。 <strong>這會侵犯隱私嗎？*</strong> 不會** 。關閉私密轉送僅代表「流量不經過 Apple 的雙重加密通道」，</p>\n<p>而是回歸標準的網路傳輸模式。</p>\n<ul>\n<li>學校的 MDM 與過濾機制依然遵循教育部的資安規範，僅針對不良網站進行阻擋，</li>\n</ul>\n<p>並統計「使用時數」，管理員無法看到學生具體的 Google 搜尋關鍵字或私人訊息內容。</p>\n<p><strong>實務建議</strong> ：</p>\n<p>若您發現有學生的 iPad 竟然 <strong>可以開啟</strong> 私密轉送，代表該裝置可能 <strong>脫離了管理</strong> 或 <strong>未收到限制描述檔</strong> 。</p>\n<p>請務必在 Jamf Pro 中對該裝置執行「更新資產 (Update Inventory)」或重新派送限制設定。</p>\n",
+          "important": false,
+          "tags": ["iCloud", "私密轉送", "精進方案", "政策解惑"],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-8",
+          "question": "學校 Wi-Fi 訊號很差，精進方案的 iPad 可以接有線網路 (Ethernet) 嗎？",
+          "answer": "<p>**可以。無論是傳統 Lightning 還是新款 USB-C 介面的 iPad，皆支援透過轉接器連接有線網路。</p>\n<p>** 硬體需求與選擇 ** ：</p>\n<ol>\n<li><strong>Lightning 機型 (精進方案多數載具，如 iPad 9 代)</strong> ：</li>\n</ol>\n<ul>\n<li>\n<p><strong>專用轉接器</strong> ：推薦使用 <strong>Belkin Ethernet + Power Adapter with Lightning Connector</strong> 。</p>\n</li>\n<li>\n<p><strong>限制</strong> ：Lightning 接口供電能力極弱，務必使用「帶有充電孔」的轉接頭並接上電源完成供電，否則常會顯示「配件耗電量過高」而無法運作。</p>\n</li>\n</ul>\n<ol>\n<li><strong>USB-C 機型 (如 iPad 10 代、iPad Air、iPad Pro)</strong> ：</li>\n</ol>\n<ul>\n<li>\n<p><strong>通用型 USB-C 轉 RJ45</strong> ：標準 USB-C 網卡通常可「隨插即用」。</p>\n</li>\n<li>\n<p><strong>建議方案</strong> ：即便不需要額外供電即可驅動，仍建議使用 <strong>「帶有 PD 充電孔的轉接頭/Hub」</strong> ，確保邊充電邊上網，避免教學途中斷電。</p>\n</li>\n</ul>\n<ol>\n<li><strong>RJ-45 網路線</strong> ：連接至教室牆上的資訊插座。</li>\n</ol>\n<p><strong>操作與設定</strong> ：</p>\n<ol>\n<li>\n<p>將轉接器插入 iPad 的 Lightning 孔。</p>\n</li>\n<li>\n<p><strong>重要步驟：接上電源</strong> 。請務必將充電線插上轉接器的供電孔</p>\n</li>\n</ol>\n<p>（Lightning 介面推動網卡通常需要外部電力）。</p>\n<ol>\n<li>\n<p>接上網路線。</p>\n</li>\n<li>\n<p>iPad 的「設定」中會多出一個 <strong>「乙太網路 (Ethernet)」</strong> 選項。</p>\n</li>\n<li>\n<p>點入後確認 IP 是否抓取正常（通常為 DHCP）。</p>\n</li>\n</ol>\n<p><strong>實務建議</strong> ：</p>\n<ul>\n<li>\n<p><strong>Jamf Trust 支援</strong> ：無論是 Wi-Fi 或有線網路，Jamf Trust 的防護功能與流量計算皆能正常運作。</p>\n</li>\n<li>\n<p><strong>優先權</strong> ：當有線網路連通時，iPad 會自動優先使用有線網路，減少 Wi-Fi 負載。</p>\n</li>\n<li>\n<p><strong>防火牆規則</strong> ：請確認有線網路環境（VLAN）同樣放行了 Apple 與 Jamf 的相關服務通訊埠。</p>\n</li>\n</ul>\n",
+          "important": false,
+          "tags": ["網路", "有線連接", "Ethernet", "Lightning", "iPad 9"],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-9",
+          "question": "MDM 會不會隨時監控學生的位置 (GPS)？這有隱私問題嗎？",
+          "answer": "<p>**不會。Apple 的隱私架構嚴格限制了 MDM 的定位權限。</p>\n<p>** 正常使用狀態下，學校無法取得裝置 GPS 座標。 ** 唯一例外：遺失模式 (Lost Mode) <strong>只有當裝置被標記為「遺失」時，管理員才能啟動定位追蹤。</strong> 隱私權限對照表 ** ：</p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align:left\">狀態</th>\n<th style=\"text-align:left\">管理員權限</th>\n<th style=\"text-align:left\">學生端提示</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align:left\"><strong>一般使用中</strong></td>\n<td style=\"text-align:left\"><strong>無法定位</strong></td>\n<td style=\"text-align:left\">無</td>\n</tr>\n<tr>\n<td style=\"text-align:left\"><strong>遺失模式啟動</strong></td>\n<td style=\"text-align:left\"><strong>可取得單次座標</strong></td>\n<td style=\"text-align:left\">鎖定畫面顯示「此 iPad 已遺失…」</td>\n</tr>\n</tbody>\n</table>\n<p>|</p>\n<p><strong>解除遺失模式</strong> | <strong>立即停止定位</strong> | 顯示「MDM 曾定位此裝置」的通知 | <strong>實務建議</strong> ：</p>\n<ul>\n<li>\n<p>學校 MDM <strong>看不見</strong> 學生的照片、簡訊、瀏覽紀錄（僅能過濾網域，不能看具體網頁內容）。</p>\n</li>\n<li>\n<p>定位功能僅用於「找回資產」，絕非用來監控學生放學後的行蹤。</p>\n</li>\n</ul>\n<p>這符合 GDPR 與教育部資安規範。</p>\n",
+          "important": false,
+          "tags": ["隱私", "定位", "GPS", "遺失模式"],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-10",
+          "question": "學生以為把平板「重置」或「DFU 刷機」就能移除學校的監管，這樣有用嗎？",
+          "answer": "<p><strong>完全無效。這只會導致裝置資料全數遺失，並在重新開機後再次被強制鎖入學校的 MDM 管理畫面。</strong></p>\n<p>學生常誤以為 MDM 只是安裝在平板裡的一個 APP，只要「重灌」就能洗掉。但實際上是建立在 <strong>「綁定硬體序號」</strong> 與 <strong>「雲端伺服器」</strong> 的層級，並非單純的本機軟體。</p>\n<h2>技術流程解析 (為何徒勞無功？) ：</h2>\n<ol>\n<li>\n<p><strong>回到原點 (Setup Assistant)</strong> ：</p>\n<ul>\n<li>裝置經過 DFU 刷機或重置後，系統會被清空並回到「Hello (哈囉)」歡迎畫面（設定輔助程式）。此時裝置看起來像是全新的。</li>\n</ul>\n</li>\n<li>\n<p><strong>雲端驗證 (The Gatekeeper)</strong> ：</p>\n<ul>\n<li><strong>關鍵時刻</strong> ：當學生選擇語言、並將裝置連上 Wi-Fi 試圖啟用時，iPad 的底層系統必須強制向 <strong>Apple 啟動伺服器 (Activation Server)</strong> 報到。伺服器會立即比對該裝置的 <strong>序號 (Serial Number)</strong> 。</li>\n</ul>\n</li>\n<li>\n<p><strong>強制召回 (Chain of Trust)</strong> ：</p>\n<ul>\n<li>Apple 伺服器確認此序號歸屬於「學校 ASM (Apple School Manager)」後，會拒絕讓使用者將其設為私人裝置，並強制切換至 <strong>「遠端管理 (Remote Management)」</strong> 畫面。</li>\n<li><strong>結果</strong> ：畫面會顯示「此 iPad 將由 XX 學校自動設定」。</li>\n</ul>\n</li>\n<li>\n<p><strong>死胡同 (Dead End)</strong> ：</p>\n<ul>\n<li>若 MDM 設定為「強制註冊」，學生將無法跳過此步驟。</li>\n<li>若學校有啟用帳號驗證，學生若無管理員帳密，裝置就會 <strong>卡在設定畫面動彈不得</strong> ，完全無法進入主畫面使用。</li>\n<li>若學生「重置」或「DFU 刷機」失敗，裝置就會卡在復原模式甚至完全無法開機，造成校方的行政負擔。</li>\n</ul>\n</li>\n</ol>\n<h2>實務建議 ：</h2>\n<ul>\n<li><strong>資料災難</strong> ：刷機對於資料的清除是幾乎不可逆的操作，可以預設學生未備份的照片、Goodnotes 筆記與作業等等將 <strong>永久消失，無法救回</strong> 。</li>\n<li><strong>行政負擔</strong> ：若學生刷機失敗，最終只能將變磚的裝置交回 資訊組。管理員需花時間透過 DFU 模式回復裝置，並重新執行佈署流程 (Re-enrollment) 才能讓裝置恢復教學用途。</li>\n</ul>\n",
+          "important": false,
+          "tags": ["ADE", "ASM", "DFU", "重置", "啟用鎖定", "遠端管理"],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-11",
+          "question": "學生畢業了，這台精進方案平板要如何轉移給新生使用？",
+          "answer": "<p><strong>善用「Return to Service (RTS)」功能，可實現「清除裝置」與「重新部署」的無縫接軌，無需人工手動重連 Wi-Fi。</strong></p>\n<p>每年畢業季常是裝置管理的重頭戲，建議採用以下自動化流程：</p>\n<h2>標準作業流程 (SOP) ：</h2>\n<ol>\n<li>\n<p><strong>畢業生備份 (T-2 週)</strong> ：</p>\n<ul>\n<li>通知學生將個人照片、作業匯出至 Google Drive、隨身碟等處。</li>\n<li>若學生使用個人 Apple 帳號或 Google 帳號，提醒學生登出個人帳號 (雖 MDM 可強制清除裝置，但建議學生自行登出以避免雲端鎖定爭議)。</li>\n</ul>\n</li>\n<li>\n<p><strong>執行 Return to Service (推薦)</strong> ：</p>\n<ul>\n<li>在 Jamf Pro 的裝置清單中選取畢業生裝置。</li>\n<li>發送 <strong>「清除裝置 (Wipe Device)」</strong> 指令。</li>\n<li><strong>關鍵步驟</strong> ：在指令選項中勾選 <strong>「Return to Service」</strong> ，並指定學校的 Wi-Fi 設定檔 (Profile)。</li>\n<li><strong>效果</strong> ：裝置清除後，會自動連上 Wi-Fi，跳過語系設定，直接進入「遠端管理」畫面等待新生登入。</li>\n</ul>\n</li>\n<li>\n<p><strong>實體清潔與盤點</strong> ：</p>\n<ul>\n<li>收回裝置後，檢查螢幕與外觀。使用 75% 酒精清潔（建議噴在布上擦拭）。</li>\n<li>若暑假期間需封存，請將電量維持在 50%-60% 關機存放，避免電池過放損壞。</li>\n</ul>\n</li>\n<li>\n<p><strong>新生發放</strong> ：</p>\n<ul>\n<li>新生拿到裝置後，開機即可看到「遠端管理」畫面，依據這屆新生的 PreStage Enrollment 設定（如：需輸入學號密碼驗證或自動完成）進行啟用。</li>\n</ul>\n</li>\n</ol>\n",
+          "important": false,
+          "tags": ["畢業", "資產轉移", "Return to Service", "自動化"],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-12",
+          "question": "為什麼裝置連上 Wi-Fi 卻無法上網，或被學校防火牆阻擋？(私密 Wi-Fi 位址)",
+          "answer": "<p><strong>這通常是因為 iPad 啟用了「私密 Wi-Fi 位址 (Private Wi-Fi Address)」，導致學校防火牆或 DHCP 伺服器無法根據 MAC 位址辨識該裝置。</strong></p>\n<h2>問題成因與技術背景 ：</h2>\n<p>自 iOS 14 起引入私密位址功能，而自 <strong>iOS 18</strong> 起，此功能進一步細分為：</p>\n<ul>\n<li>\n<p><strong>固定 (Fixed)</strong> ：在此 Wi-Fi 網路下使用固定的隨機位址（預設值）。</p>\n</li>\n<li>\n<p><strong>輪替 (Rotating)</strong> ：位址約每兩週更換一次，安全性最高，但最容易導致校園網路系統（需綁定 MAC）失效。</p>\n</li>\n</ul>\n<h2>解決方案 (MDM 統一關閉) ：</h2>\n<p>管理員不應要求學生逐一調整，而應透過 Jamf Pro 統一派送 Wi-Fi 描述檔：</p>\n<ol>\n<li>\n<p>進入 Jamf Pro 的 <strong>「設定描述檔」</strong> &gt; <strong>「Wi-Fi」</strong> 設定。</p>\n</li>\n<li>\n<p>在 <strong>私密位址 (Private Wi-Fi Address)</strong> 選項中，選擇 <strong>「停用 (Disabled)」</strong> 。</p>\n</li>\n<li>\n<p><strong>效果</strong> ：iPad 連接此 SSID 時，會強制使用硬體真實 MAC 位址，使網管設施（如 MAC 認證、資安記錄）能正確運作。</p>\n</li>\n</ol>\n<h2>實務建議 ：</h2>\n<ul>\n<li>若學校網路僅針對部分設備放行，建議在 MDM 派送時一併勾選「停用位址隨機化」，這能從根本上避免學生因位址輪替而頻繁斷線或被防火牆阻擋。</li>\n<li>此設定僅對 MDM 派送的 Wi-Fi 設定檔有效。若學生是手動點選連線的 Wi-Fi，則仍需手動進入「設定」&gt;「Wi-Fi」&gt;「點選 i 圖示」關閉私密位址。</li>\n</ul>\n",
+          "important": true,
+          "tags": ["網路", "MAC Address", "私密位址", "DHCP", "故障排除"],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-13",
+          "question": "如何防止學生登入個人 Apple 帳號並自行安裝非教學用 App？",
+          "answer": "<p><strong>這是 iPad 部署核心的管控項目。若要避免 App 購買權限混亂與個人資料隱私問題，必須透過「限制」描述檔，直接鎖死帳號登入與 App Store 安裝權限。</strong></p>\n<p>精進方案載具為學校公有資產，不應允許學生登入私人帳號，以免造成 App 購買權限混亂與個人資料隱私問題。</p>\n<h2>標準防護設定 (Jamf Pro) ：</h2>\n<ol>\n<li>\n<p><strong>鎖定帳號修改 (最核心)</strong> ：</p>\n<ul>\n<li>在限制描述檔 (Restrictions) &gt; 功能 (Functionality)。</li>\n<li><strong>取消勾選</strong> <code>Allow modifying account settings</code> (允許修改帳號設定)。</li>\n<li><strong>效果</strong> ：iPad 的「設定」頁面中，最上方的 Apple 帳號區塊會變成灰色（反白），學生完全無法登入或登出任何帳號。</li>\n</ul>\n</li>\n<li>\n<p><strong>停用 App Store</strong> ：</p>\n<ul>\n<li><strong>取消勾選</strong> <code>Allow installing apps using App Store</code>。</li>\n<li><strong>效果</strong> ：App Store 圖示會直接從主畫面上消失，徹底杜絕學生自行安裝 App 的管道。所有 App 應由 MDM 統一透過 VPP (裝置型指派) 派送。</li>\n</ul>\n</li>\n</ol>\n",
+          "important": false,
+          "tags": ["Apple 帳號", "App Store", "限制", "App 管理", "資產政策"],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-14",
+          "question": "學生上課一直亂改 iPad 名稱，導致後台分不出是哪一台，怎麼辦？",
+          "answer": "<p><strong>這是課堂管理常見的困擾。除了「禁止修改」外，您還需要「批次更名」工具來快速校正全校裝置。</strong></p>\n<h2>解決方案三部曲 ：</h2>\n<ol>\n<li>\n<p><strong>止血：禁止本機修改 (Restrictions)</strong> ：</p>\n<ul>\n<li>在 Jamf Pro 的限制描述檔中， <strong>取消勾選</strong> <code>Allow modifying device name</code> (允許修改裝置名稱)。</li>\n<li><strong>效果</strong> ：學生在「設定」&gt;「一般」&gt;「關於本機」中，名稱欄位會變灰，無法點擊編輯。</li>\n</ul>\n</li>\n<li>\n<p><strong>治療：使用 The MUT 批次更名 (推薦)</strong> ：</p>\n<ul>\n<li>面對全校數百台名稱已亂掉的 iPad，請使用 <strong>The MUT (Mass Update Tool)</strong> 進行批次刷寫。</li>\n<li><strong>下載位置</strong> ：請在 macOS 的 <strong>Mac App Store</strong> 搜尋並下載 <strong>“The MUT”</strong> (免費工具，由 Jamf 員工開發)。</li>\n<li><strong>操作方式</strong> ：\n<ol>\n<li>準備一個 CSV 檔案，包含兩欄： <strong>Serial Number</strong> (序號) 與 <strong>Device Name</strong> (欲設定的正確名稱)。</li>\n<li>開啟 The MUT，登入您的 Jamf Pro URL 與帳號。</li>\n<li>上傳 CSV，對應欄位後點擊 <strong>“Update”</strong> 。</li>\n<li>系統會瞬間將數百台裝置的名稱指令發送出去。</li>\n</ol>\n</li>\n</ul>\n</li>\n<li>\n<p><strong>預防：啟用強制命名 (Enforce Naming)</strong> ：</p>\n<ul>\n<li>即便改了名，為了防止未來再被變更，建議在 Jamf Pro 的智能群組或裝置紀錄中，啟用 <strong>「Enforce Mobile Device Name (強制執行行動裝置名稱)」</strong> 。</li>\n<li><strong>效果</strong> ：這是一個背景監控機制，一旦 Jamf 偵測到裝置本機名稱與後台紀錄不符（如被學生繞過限制修改），MDM 會自動重新發送指令將其更正回標準名稱。這是 2026 年管理大量載具的標準做法。</li>\n</ul>\n</li>\n</ol>\n<h2>實務建議 ：</h2>\n<p>在未來的採購中，可以選擇在 <strong>PreStage Enrollments</strong> 的設定裡直接規範「行動裝置名稱」格式（例如：<code>114-Class-%SERIALNUMBER%</code>），這樣新機一拆封連網就會自動命名，完全無需後續人工介入。</p>\n",
+          "important": false,
+          "tags": ["裝置名稱", "資產管理", "The MUT", "批次處理", "限制"],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-15",
+          "question": "全班同時更新 iPadOS 會導致校網崩潰或塞車，有什麼標準解法？(內容快取)",
+          "answer": "<p><strong>針對高密度 Wi-Fi 學校，架設 macOS 的「內容快取 (Content Caching)」是解決頻寬瓶頸的關鍵，但實作上必須解決跨網段 (VLAN) 的通訊阻礙。</strong></p>\n<p>利用學校現有的 Mac (如電腦教室 iMac 或 Mac mini) 作為快取伺服器，可以讓第一台 iPad 下載更新後，後續數十台裝置直接透過區網 (LAN) 極速抓取檔案。然而，校園網路架構經常將「有線網路 (Mac 所在)」與「無線網路 (iPad 所在)」切割為不同的邏輯網段 (VLAN)，導致 iPad 透過 mDNS 廣播時找不到這台快取伺服器。</p>\n<h2>標準架設步驟 ：</h2>\n<ol>\n<li><strong>硬體需求</strong> ：建議使用配備 Apple 晶片 (M1-M5) 的 Mac，並安裝 <strong>macOS 15 (Sequoia)</strong> 或更新版本。</li>\n<li><strong>開啟服務</strong> ：前往 <strong>「系統設定」&gt;「一般」&gt;「共享」</strong> ，勾選 <strong>「內容快取」</strong> 。待狀態顯示為 <strong>綠燈</strong> 即代表服務運作中。</li>\n</ol>\n<h2>跨網段探索的三種解決方案 (依操作難易度排序) ：</h2>\n<h3>方案一：Mac 連接學生 Wi-Fi (最簡單、老師可自助)</h3>\n<p>若您無法請求網管更改設定，這是最快的「緊急解決方案」。</p>\n<ul>\n<li>\n<p><strong>操作方式</strong> ：讓這台 Mac <strong>同時開啟 Wi-Fi</strong> ，並連線到與學生平板相同的 SSID (例如 <code>TANet-Roaming</code> 或學校專用 SSID)。</p>\n</li>\n<li>\n<p><strong>原理</strong> ：讓 Mac 與 iPad 處於同一個無線網段內，直接打通 mDNS 發現路徑。</p>\n</li>\n<li>\n<p><strong>缺點</strong> ：雖然能通，但 Mac 透過 Wi-Fi 分發快取資料時會佔用無線頻寬 (Airtime)，效能不如有線網路穩定，但在無法更改網路架構時，這是唯一解法。</p>\n</li>\n</ul>\n<h3>方案二：設定 mDNS Relay / Bonjour Gateway (網管層級最佳解)</h3>\n<p>這是不更動線路架構下的最佳正規解法。</p>\n<ul>\n<li>\n<p><strong>操作方式</strong> ：請網管人員在核心交換器 (L3 Switch) 或防火牆 (如 Fortinet/Aruba) 上開啟 <strong>mDNS Relay</strong> 或 <strong>Bonjour Gateway</strong> 功能。</p>\n</li>\n<li>\n<p><strong>設定重點</strong> ：設定規則允許 <strong>UDP Port 5353</strong> 的封包在「有線網段 VLAN」與「無線網段 VLAN」之間轉發。一旦打通，iPad 即可跨網段發現有線網路上的 Mac。</p>\n</li>\n</ul>\n<h3>方案三：設定 DNS TXT 紀錄 (進階正規解)</h3>\n<p>這是 Apple 官方推薦的標準做法，但依賴學校對 DNS 的控制權。</p>\n<ul>\n<li>\n<p><strong>限制</strong> ：許多中小學使用教網中心 DNS，無權限自行修改。</p>\n</li>\n<li>\n<p><strong>操作方式</strong> ：若貴校有自管的 Internal DNS，請新增一筆 <code>_aaplcache._tcp</code> 的 <strong>TXT Record</strong> ，內容指向該 Mac 的 IP 位址。</p>\n</li>\n</ul>\n<h2>如何驗證運作狀態？</h2>\n<ol>\n<li>在 Mac 上開啟 <strong>「活動監視器 (Activity Monitor)」</strong> 。</li>\n<li>按下 <code>Command + 2</code> 或點選選單列的 <strong>「快取 (Cache)」</strong> 分頁。</li>\n<li>當 iPad 開始下載更新時，觀察 <strong>「來自快取的資料 (Data served from cache)」</strong> 數值是否顯著增加。</li>\n</ol>\n<h2>實務建議 ：</h2>\n<p>請務必在 Mac 的「顯示器」或「能源節約」設定中，開啟 <strong>「防止電腦在顯示器關閉時自動休眠」</strong> 。若 Mac 進入休眠模式，快取服務將可能中斷，導致 iPad 轉而向外網下載，再次塞爆頻寬。</p>\n",
+          "important": false,
+          "tags": [
+            "內容快取",
+            "Content Caching",
+            "頻寬最佳化",
+            "VLAN",
+            "mDNS Relay",
+            "macOS"
+          ],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-16",
+          "question": "【更新實務】教育部 Jamf Pro 帳號無法使用排程更新，該如何操作才能提高成功率？",
+          "answer": "<p><strong>由於教育部 Jamf Pro 環境未開放新版「Managed Software Updates」排程功能，學校只能使用舊版指令。要提高成功率，關鍵在於「先確認資產連線」再發送更新。</strong></p>\n<p>許多更新失敗的案例，是因為裝置早已處於「失聯」狀態（例如：Wi-Fi 斷線、長期休眠導致 MDM 通訊中斷），此時直接發送 OS 更新指令毫無意義。</p>\n<h2>標準操作 SOP (請嚴格遵守順序) ：</h2>\n<ol>\n<li>\n<p><strong>第一步：喚醒裝置與更新資產 (Update Inventory)</strong> ：</p>\n<ul>\n<li>在發送龐大的更新指令前，請先對目標群組發送 <strong>「資產更新 (Update Inventory)」</strong> 指令。</li>\n<li><strong>目的</strong> ：確認裝置目前是「活著」的，並取得最新的 <strong>電量 (Battery Level)</strong> 與 <strong>可用空間 (Available Space)</strong> 資料。</li>\n<li><strong>篩選技巧</strong>：若裝置連 Update Inventory 都卡在 Pending，代表它根本收不到指令，請勿對其發送 OS 更新，需進行實體喚醒（解鎖螢幕連網）。</li>\n</ul>\n</li>\n<li>\n<p><strong>第二步：篩選合格裝置 (Smart Group)</strong> ：</p>\n<ul>\n<li>推薦依據剛更新完的資產資料，建立智慧型群組過濾出「可更新名單」：\n<ul>\n<li>電池電量大於 50% (Apple 硬性規定，低於此數值指令會直接失敗)</li>\n<li>可用空間大於 10 GB (避免下載到一半空間不足)</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>\n<p><strong>第三步：發送舊版更新指令</strong> ：</p>\n<ul>\n<li>針對上述「合格群組」，使用 <strong>「動作 (Mass Actions)」</strong> &gt; <strong>「Send Remote Commands」</strong> 。</li>\n<li>選擇 <strong>「(Update OS version on supervised devices)」</strong> 。</li>\n<li><strong>關鍵設定</strong> ：\n<ul>\n<li><strong>Target version</strong> : 選擇 <code>Latest version based on device eligibility</code>。</li>\n<li><strong>Action</strong> : 務必選擇 <strong><code>Download and install the update, and restart devices after installation</code></strong> 。</li>\n</ul>\n</li>\n<li><strong>注意</strong> ：若只選 Download，若是沒有主動去點安裝，更新並不會主動完成。</li>\n</ul>\n</li>\n<li>\n<p><strong>第四步：監控與分流</strong> ：</p>\n<ul>\n<li>若學校無內容快取 (Content Caching) 伺服器，請務必 <strong>分批發送</strong> (例如一次一個班)，以免瞬間塞爆對外頻寬導致下載逾時。</li>\n</ul>\n</li>\n</ol>\n",
+          "important": false,
+          "tags": ["軟體更新", "Jamf Pro", "權限限制", "資產更新", "Inventory"],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-17",
+          "question": "學校希望統一全校平板的桌布（如放上校徽），並禁止學生隨意更換，該怎麼做？",
+          "answer": "<p><strong>這是展示學校識別與強化資產管理的常見需求。建議採取「自動化派送圖片」搭配「限制權限」的組合拳。</strong></p>\n<p>除了手動發送指令，更推薦使用 Jamf Pro 智慧型群組的 <strong>「自動化管理」</strong> 功能，實現「裝置一入庫，桌布自動換」的無人值守運作。</p>\n<h2>實作步驟 (Jamf Pro) ：</h2>\n<h3>方法一：自動化派送 (Automated Management) - 推薦</h3>\n<ul>\n<li><strong>情境</strong> ：當裝置被歸類到該群組（如：新生班級）的瞬間，系統自動換圖，無需人工介入。</li>\n<li><strong>路徑</strong> ：進入該 <strong>智慧型裝置群組</strong> &gt; 點選上方的 <strong>「自動化管理 (Automated Management)」</strong> 頁籤。</li>\n<li><strong>設定</strong> ：點選 <strong>「設定桌布 (Set Wallpaper)」</strong> 旁的按鈕。</li>\n<li><strong>上傳</strong> ：上傳校徽桌布（建議解析度符合該型號 iPad 螢幕解析度，格式 JPG/PNG），選擇套用於「鎖定畫面」與「主畫面」。</li>\n<li><strong>效果</strong> ：只要有任何裝置符合條件進入此群組，桌布就會被強制替換。</li>\n</ul>\n<h3>方法二：手動大量派送 (Mass Actions)</h3>\n<ul>\n<li><strong>情境</strong> ：臨時慶典或校運會，想一次性更換現有裝置桌布。</li>\n<li><strong>路徑</strong> ：在群組頁面點選右下角 <strong>「檢視 (View)」</strong> &gt; <strong>「動作 (Action)」</strong> &gt; <strong>「Send Remote Commands」</strong> 。</li>\n<li><strong>選擇指令</strong> ：選擇 <strong>「設定背景圖片（僅限受監管）」</strong> 並在下面選項選擇上傳桌布或鎖定畫面的圖片。</li>\n</ul>\n<h3>關鍵步驟：鎖定修改 (Restrictions)</h3>\n<ul>\n<li><strong>路徑</strong> ：在限制描述檔 (Restrictions) &gt; 功能 (Functionality)。</li>\n<li><strong>設定</strong> ：取消勾選 <strong><code>Allow modifying wallpaper (允許修改背景圖片)</code></strong> 。</li>\n<li><strong>效果</strong> ：學生 iPad 設定中的「背景圖片」選項會變成灰色（反白），無法自行更換成其他圖片。</li>\n</ul>\n<h3>進階應用：鎖定畫面訊息 (Lock Screen Message)</h3>\n<p>若不想每台修圖壓字，可使用 <strong>「鎖定畫面訊息」</strong> 描述檔設定。</p>\n<ul>\n<li>\n<p><strong>設定</strong> ：在「如果遺失，請傳回…」的欄位中填入 Jamf 變數，例如： <code>歸屬：$DEVICENAME</code>、<code>資產編號：$ASSET_TAG</code> 等。</p>\n</li>\n<li>\n<p><strong>效果</strong> ：這些變數會自動抓取後台資料，顯示在每一台 iPad 鎖定畫面的最下方，盤點時一目了然。</p>\n</li>\n</ul>\n",
+          "important": false,
+          "tags": [
+            "桌布",
+            "鎖定畫面",
+            "限制",
+            "資產管理",
+            "自動化管理",
+            "Automated Management"
+          ],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-18",
+          "question": "學生亂設螢幕密碼 (Passcode) 結果忘記了，一定要重置整台 iPad 嗎？",
+          "answer": "<p><strong>不用。MDM 具備「清除密碼 (Clear Passcode)」指令，可在「保留所有資料」的前提下移除鎖定。</strong></p>\n<h2>標準救援步驟 (Jamf Pro) ：</h2>\n<ol>\n<li>\n<p><strong>確認連線</strong> ：首先確認該裝置目前是否處於開機且連網狀態。</p>\n</li>\n<li>\n<p><strong>發送指令</strong> ：</p>\n<ul>\n<li>進入 Jamf Pro 的裝置紀錄。</li>\n<li>點選 <strong>「管理 (Management)」</strong> 頁籤 &gt; <strong>「快速動作 (Quick Actions)」</strong> 或 <strong>「Send Remote Commands」</strong> 。</li>\n<li>點擊 <strong>「清除密碼 (Clear Passcode)」</strong> (部分介面顯示為 Remove Passcode)。</li>\n</ul>\n</li>\n<li>\n<p><strong>效果</strong> ：</p>\n<ul>\n<li>約 3-5 秒後，iPad 螢幕會變黑並短暫轉圈。</li>\n<li>喚醒後， <strong>密碼已被移除</strong> ，直接滑動即可進入主畫面。</li>\n<li><strong>注意</strong> ：原本設定的 Touch ID / Face ID 指紋也會一併被清除，需重新設定。</li>\n</ul>\n</li>\n</ol>\n<h2>特殊狀況：如果 iPad 剛好沒網路怎麼辦？</h2>\n<p>若學生開啟了飛航模式，或 Wi-Fi 剛好斷線，MDM 指令會收不到。</p>\n<ul>\n<li><strong>救援大招：強制接上有線網路</strong> ：\n<ul>\n<li><strong>Lightning 機型 (如 iPad 9)</strong> ：使用「Lightning 對乙太網路轉接器」(務必接上電源供電)。</li>\n<li><strong>USB-C 機型 (如 iPad 10, A16 iPad)</strong> ：使用普通的「USB-C 轉乙太網路轉接器」（通常不需供電即可運作，但建議接上有 PD 充電孔的 Hub）。</li>\n<li><strong>操作</strong> ：在鎖定畫面下插入轉接器與網路線，iPad 會自動抓取有線網路 (DHCP)。一旦連上網，卡在雲端的「清除密碼」指令就會立刻生效解鎖。</li>\n</ul>\n</li>\n</ul>\n<h2>實務建議：最後手段</h2>\n<p>只有在「無法連網」且「轉接器也無效或沒有轉換器」的死局下，才需要進入 DFU/復原 模式重置整台裝置。</p>\n",
+          "important": false,
+          "tags": ["密碼", "Passcode", "解鎖", "Clear Passcode", "故障排除"],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-19",
+          "question": "老師反應「課堂 (Apple Classroom)」App 常常連不到學生畫面，或顯示離線，該怎麼檢查？",
+          "answer": "<p><strong>Apple Classroom 極度依賴「藍牙廣播」與「端點互通」。若連線失敗，請依序執行以下三階段檢查。</strong></p>\n<p>身為 資訊組長或系管師，建議先排除前端環境問題，若涉及核心網路則需報請縣網中心或廠商協助。</p>\n<h2>第一階段：教師與學生端本機檢查 (最常見)</h2>\n<ol>\n<li><strong>藍牙權限</strong> ：確認雙方藍牙皆已開啟。在 <strong>iOS 26</strong> 中，請確認「設定」&gt;「隱私權與安全性」&gt;「藍牙」中， <strong>「課堂」App 的權限已勾選開啟</strong> 。</li>\n<li><strong>同一 Wi-Fi SSID</strong> ：確認師生是否連線至相同的基地台名稱 (如：<code>TANet-Roaming</code> 或學校專用 SSID)。即使是不同頻段 (2.4G/5G)，只要 SSID 不同就有可能因隔離而斷線。</li>\n<li><strong>螢幕狀態</strong> ：學生機若處於休眠鎖定狀態，老師端會顯示離線。請學生解鎖螢幕後再次嘗試。</li>\n</ol>\n<h2>第二階段：MDM 描述檔檢查</h2>\n<ul>\n<li><strong>教育組態描述檔</strong> ：進入「設定」&gt;「一般」&gt;「VPN 與裝置管理」，確認 <strong>「教育組態 (Education Profile)」</strong> 是否存在且未過期。</li>\n<li><strong>指令同步</strong> ：若名單不符，請在 Jamf Pro 對該班級或裝置發送 <strong>「更新資產 (Update Inventory)」</strong> 以強制重新派送名單。</li>\n</ul>\n<h2>第三階段：校園網路環境 (組長協助聯繫)</h2>\n<p>若上述皆正常但仍無法連線，通常是 Wi-Fi 裝置阻擋了 <strong>mDNS (Bonjour)</strong> 協定。</p>\n<ul>\n<li><strong>操作限制</strong> ：資訊組長通常無法自行調整防火牆或核心交換器的 <strong>mDNS Relay</strong> 或 <strong>Client Isolation (使用者隔離)</strong> ，請記錄此現象並報請教網中心或網路維護廠商，請求放行 <strong>TCP/UDP Port 3283, 3284</strong> 。</li>\n</ul>\n<h2>實務建議 ：</h2>\n<p>若僅特定班級連不上，請優先檢查該教室 AP 是否有過載或韌體異常導致封包丟失。</p>\n",
+          "important": false,
+          "tags": ["Apple Classroom", "課堂管理", "故障排除", "藍牙", "mDNS"],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-20",
+          "question": "【資產維護】精進方案合約將於 2026 年結案，若平板出現功能故障或死機應如何處理？",
+          "answer": "<p><strong>精進方案迎來合約最後一年，硬體故障將進入高峰期。若裝置無人為損壞跡象，請務必在合約到期前及早回報以更換備機或進行維修。</strong></p>\n<p>隨著首批 iPad 9 經過近四年的校園高強度使用，除了電力問題外，各類內部元件也可能出現自然損耗。請 資訊組長/系管師協助各班盤點以下狀況：</p>\n<h2>常見硬體故障分類 ：</h2>\n<ol>\n<li>\n<p><strong>電力相關故障</strong> ：</p>\n<ul>\n<li><strong>無法開機</strong> ：主機板電源管理 IC 或 CPU 相關線路故障。</li>\n<li><strong>無法充電</strong> ：電池模組老化、充電 IC 損壞，或 Lightning 埠內部損耗導致完全無法供電。</li>\n<li><strong>電池老化/膨脹</strong> ：螢幕有明顯被撐開跡象，或續航力極度異常。</li>\n</ul>\n</li>\n<li>\n<p><strong>顯示與感應器故障</strong> ：</p>\n<ul>\n<li><strong>螢幕線條</strong> ：液晶面板排線老化，導致畫面出現固定色線或閃爍。</li>\n<li><strong>特定功能失效</strong> ：Wi-Fi 無法開啟、藍牙失效、或陀螺儀 (加速度計) 損壞導致螢幕無法自動旋轉。</li>\n</ul>\n</li>\n</ol>\n<h2>報修與備機權益說明 ：</h2>\n<ul>\n<li><strong>非人為損壞判斷</strong> ：只要裝置外觀完整， <strong>無螢幕破裂</strong> 、 <strong>無機身彎曲</strong> 或 <strong>無明顯撞擊凹痕</strong> ，上述故障通常被認定為硬體自然失效，屬於保固與維護合約範疇。</li>\n<li><strong>及早回報更換</strong> ：若發現上述異常，請務必第一時間聯繫我們。在合約維護期間內，若判定為非人為故障，學校應積極行使「更換備機」的權利，確保教學載具數量充足。</li>\n</ul>\n<h2>利用 Jamf Pro 輔助盤點 ：</h2>\n<ol>\n<li><strong>失聯篩選</strong> ：建立智慧型群組，條件設為資產更新時間超過 30 天。這類裝置極大機率是因無法開機或充電失效或其他連線問題而失聯。</li>\n<li><strong>硬體資訊檢查</strong> ：檢視裝置紀錄中的 <code>Wi-Fi Address</code> 或其他硬體欄位，若顯示為 <code>Unknown</code> 或其他異常資訊，就會需要檢查裝置。</li>\n</ol>\n<h2>實務建議 ：</h2>\n<p>請務必趕在 <strong>2026 年夏天</strong> 保固維護合約截止前，完成全校性的大盤點與報修流程。一旦合約到期，後續的硬體維修將回歸學校自主管理流程，建議在合約保護期內確保所有公有載具皆處於可正常運作的狀態。</p>\n",
+          "important": true,
+          "tags": [
+            "硬體維修",
+            "無法開機",
+            "無法充電",
+            "螢幕線條",
+            "Wi-Fi 失效",
+            "備機更換"
+          ],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-21",
+          "question": "精進方案範圍內的 iPad 在 2026 年如何持續管理？建議保留 MDM 嗎？",
+          "answer": "<p><strong>精進方案範圍內的 iPad 屬於學校資產，建議持續透過 MDM 進行管理，以維護裝置安全、教學品質與資產完整性。</strong></p>\n<h2>為什麼建議保留 MDM？</h2>\n<h3>1. 資訊安全考量</h3>\n<ul>\n<li><strong>網路安全</strong> ：持續過濾不當網站內容，保護學生網路使用安全。</li>\n<li><strong>App 管理</strong> ：控制可安裝的 App，避免學生安裝遊戲或不當應用程式。</li>\n<li><strong>裝置保護</strong> ：防止裝置被任意重置或移除管理設定。</li>\n<li><strong>合規要求</strong> ：協助學校符合資通安全管理相關規範。</li>\n</ul>\n<h3>2. 教學管理需求</h3>\n<ul>\n<li><strong>App 部署</strong> ：持續為各年級推送適合的教學 App。</li>\n<li><strong>設定管理</strong> ：統一管理 Wi-Fi 設定、電子郵件設定等。</li>\n<li><strong>課堂控制</strong> ：若搭配「課堂」App 使用，需要 MDM 支援。</li>\n<li><strong>遠端協助</strong> ：IT 人員可遠端診斷和解決問題。</li>\n</ul>\n<h3>3. 資產管理功能</h3>\n<ul>\n<li><strong>裝置追蹤</strong> ：透過 MDM 掌握每台裝置的位置和使用狀態。</li>\n<li><strong>保固管理</strong> ：記錄裝置序號、購買日期、保固到期日。</li>\n<li><strong>故障追蹤</strong> ：及時發現電池老化、硬體故障等問題。</li>\n<li><strong>盤點作業</strong> ：定期盤點時可透過 MDM 快速核對裝置清單。</li>\n</ul>\n<h2>2026 年度建議執行的管理作業 ：</h2>\n<h3>1. 裝置健康檢查</h3>\n<ul>\n<li><strong>電池狀態</strong> ：檢查電池健康度，評估是否需要更換。</li>\n<li><strong>儲存空間</strong> ：清理不必要的快取和檔案，釋放空間。</li>\n<li><strong>系統版本</strong> ：評估是否需要統一更新至 iOS 26。</li>\n<li><strong>外觀檢查</strong> ：記錄螢幕裂痕、機身損壞等狀況。</li>\n</ul>\n<h3>2. MDM 設定檢視</h3>\n<ul>\n<li><strong>限制政策</strong> ：檢討現有的限制設定是否仍符合教學需求。</li>\n<li><strong>App 清單</strong> ：移除不再使用的 App，新增新學期需要的 App。</li>\n<li><strong>Wi-Fi 設定</strong> ：更新 Wi-Fi 密碼或新增網路設定。</li>\n<li><strong>內容過濾</strong> ：檢視過濾規則是否需要調整。</li>\n</ul>\n<h3>3. 使用模式調整</h3>\n<p><strong>假設不再需要追求使用率指標</strong> ，可考慮以下調整：</p>\n<ul>\n<li>\n<p><strong>彈性借用制</strong> ：教師依課程需要申請借用 iPad 推車，而非固定配置。</p>\n</li>\n<li>\n<p><strong>減少強制使用</strong> ：讓 iPad 成為教學輔助工具，而非每堂課都必須使用。</p>\n</li>\n<li>\n<p><strong>多元應用</strong> ：鼓勵教師在真正需要時使用，提升使用品質而非數量。</p>\n</li>\n<li>\n<p><strong>教師自主</strong> ：尊重教師的教學專業判斷，決定何時使用數位工具。</p>\n</li>\n</ul>\n<p><strong>假設仍需維持一定使用情況</strong> ，則可：</p>\n<ul>\n<li>\n<p><strong>定期檢視使用記錄</strong> ：透過 MDM 了解各班使用頻率。</p>\n</li>\n<li>\n<p><strong>協助教師整合</strong> ：提供教師增能研習，協助將 iPad 融入教學。</p>\n</li>\n<li>\n<p><strong>分享優良案例</strong> ：鼓勵教師分享有效的教學應用方式。</p>\n</li>\n</ul>\n<h3>4. 資料管理建議</h3>\n<ul>\n<li><strong>學生資料清理</strong> ：學生畢業或轉學時，建議透過 MDM 清除裝置資料。</li>\n<li><strong>使用記錄備份</strong> ：假設未來需要提供使用說明，建議保留相關記錄。</li>\n<li><strong>設定備份</strong> ：保留目前的 MDM 設定描述檔，作為未來參考。</li>\n</ul>\n<h2>常見情境處理建議 ：</h2>\n<h3>情境 1：學生畢業離校</h3>\n<p><strong>建議使用「返回服務」(Return to Service) 功能</strong> ：</p>\n<p>此功能自 <strong>iOS 17</strong> 起推出，在 <strong>iOS 26</strong> 的 DDM 架構下運行更為穩定，提供極速的裝置重置方式：</p>\n<p><strong>功能特點</strong> ：</p>\n<ul>\n<li>\n<p><strong>安全清除使用者資料</strong> ：徹底清除學生的個人檔案、照片、瀏覽記錄等。</p>\n</li>\n<li>\n<p><strong>保留受管理的 App</strong> ：不需要重新下載教學 App，大幅節省時間。</p>\n</li>\n<li>\n<p><strong>保留 MDM 設定</strong> ：Wi-Fi、限制政策等設定保持不變。</p>\n</li>\n<li>\n<p><strong>快速完成</strong> ：建議相較傳統「清除並重新註冊」快 50-70%。</p>\n</li>\n</ul>\n<p><strong>操作方式</strong> （Jamf Pro）：</p>\n<ol>\n<li>\n<p>在 Jamf Pro 中選擇要重置的裝置。</p>\n</li>\n<li>\n<p>點選「管理」&gt;「指令」。</p>\n</li>\n<li>\n<p>選擇 <strong>「Return to Service（返回服務）」</strong> 。</p>\n</li>\n<li>\n<p>選擇保留選項：</p>\n<ul>\n<li>✅ 保留受管理的 App</li>\n<li>✅ 保留 MDM 設定描述檔</li>\n<li>✅ 清除使用者資料</li>\n</ul>\n</li>\n<li>\n<p>執行指令。</p>\n</li>\n</ol>\n<p><strong>與傳統方式的比較</strong> ：</p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align:left\">項目</th>\n<th style=\"text-align:left\">傳統「清除並重新註冊」</th>\n<th style=\"text-align:left\">Return to Service（iOS 26+）</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align:left\">清除使用者資料</td>\n<td style=\"text-align:left\">✅</td>\n<td style=\"text-align:left\">✅</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">保留受管理的 App</td>\n<td style=\"text-align:left\">❌ 需重新下載</td>\n<td style=\"text-align:left\">✅ 立即可用</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">保留 MDM 設定</td>\n<td style=\"text-align:left\">❌ 需重新套用</td>\n<td style=\"text-align:left\">✅ 自動保留</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">所需時間</td>\n<td style=\"text-align:left\">30-60 分鐘</td>\n<td style=\"text-align:left\">5-15 分鐘</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">網路頻寬消耗</td>\n<td style=\"text-align:left\">高（需重新下載所有 App）</td>\n<td style=\"text-align:left\">低（僅同步設定）</td>\n</tr>\n</tbody>\n</table>\n<h3>情境 2：裝置故障或損壞</h3>\n<ul>\n<li>透過 MDM 確認裝置保固狀態。</li>\n<li>假設已過保固，評估維修成本是否合理。</li>\n<li>建議建立備用機制，讓教學不因單一裝置故障中斷。</li>\n</ul>\n<h3>情境 3：教師反應不想使用</h3>\n<ul>\n<li>尊重教師的教學專業判斷。</li>\n<li>了解不使用的原因（技術困難？教材不適合？時間不足？）。</li>\n<li>提供必要的技術支援和教學資源。</li>\n<li>建議維持裝置的基本管理，但不強制使用頻率。</li>\n</ul>\n<h3>情境 4：裝置閒置或使用率低</h3>\n<ul>\n<li>是否為正常的教學需求波動（如某些科目較不適合使用）。</li>\n<li>是否可將部分裝置轉為其他用途（如教師研習、行政使用）。</li>\n<li>是否需要調整借用機制，讓需要的教師更容易取得。</li>\n</ul>\n<h2>技術管理要點 ：</h2>\n<ul>\n<li><strong>保持裝置線上</strong> ：定期連接 Wi-Fi，讓 MDM 能推送指令。</li>\n<li><strong>更新管理設定</strong> ：視需要調整自動更新政策。</li>\n<li><strong>監控異常狀況</strong> ：注意是否有裝置長期離線或狀態異常。</li>\n<li><strong>備份重要設定</strong> ：定期匯出 MDM 設定，避免意外遺失。</li>\n</ul>\n<h2>建議的管理頻率 ：</h2>\n<ul>\n<li><strong>每日</strong> ：監控 MDM 系統是否正常運作。</li>\n<li><strong>每週</strong> ：檢視是否有裝置報修 or 異常。</li>\n<li><strong>每月</strong> ：檢視整體使用狀況，評估是否需要調整。</li>\n<li><strong>每學期</strong> ：進行完整的裝置盤點和健康檢查。</li>\n</ul>\n",
+          "important": true,
+          "tags": ["精進方案", "2026", "MDM 管理", "裝置維護", "資產管理"],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-22",
+          "question": "iOS 26 的 Network Extension URL Filtering API 對內容過濾服務有什麼影響？",
+          "answer": "<p><strong>iOS 26、iPadOS 26 與 macOS 26 引入的「Network Extension URL Filtering API」是內容過濾技術的技術升級選項。建議學校了解這項發展，但需注意精進方案的載具仍優先遵循教育部規範的「內容過濾 (Content Filter)」與「DNS Proxy」架構運作。</strong></p>\n<h2>內容過濾技術的演進 ：</h2>\n<table>\n<thead>\n<tr>\n<th style=\"text-align:left\">時期</th>\n<th style=\"text-align:left\">技術方式</th>\n<th style=\"text-align:left\">優點</th>\n<th style=\"text-align:left\">可能的限制</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align:left\"><strong>iOS 15 以前</strong></td>\n<td style=\"text-align:left\">Per-App VPN</td>\n<td style=\"text-align:left\">技術成熟</td>\n<td style=\"text-align:left\">狀態列顯示 VPN 圖示；可能較耗電</td>\n</tr>\n<tr>\n<td style=\"text-align:left\"><strong>iOS 16-25</strong></td>\n<td style=\"text-align:left\">DNS Proxy</td>\n<td style=\"text-align:left\">無 VPN 圖示；輕量化</td>\n<td style=\"text-align:left\">僅能過濾網域名稱，無法精確過濾完整 URL</td>\n</tr>\n<tr>\n<td style=\"text-align:left\"><strong>iOS 26+</strong></td>\n<td style=\"text-align:left\">URL Filtering API</td>\n<td style=\"text-align:left\">效能優化；省電；精確過濾</td>\n<td style=\"text-align:left\">需要 iOS 26 或更新版本</td>\n</tr>\n</tbody>\n</table>\n<h2>iOS 26 URL Filtering API 的技術特性 ：</h2>\n<h3>1. 更精確的過濾能力</h3>\n<ul>\n<li><strong>過去限制</strong> ：只能辨識網域（如 <code>example.com</code>），同網域下所有內容都會被同樣處理。</li>\n<li><strong>新技術優勢</strong> ：可識別完整 URL 路徑（如 <code>example.com/inappropriate-content</code>）。</li>\n<li><strong>實際應用</strong> ：可封鎖特定頁面，而保留同網域的其他正常內容。</li>\n</ul>\n<h3>2. 隱私友善的設計</h3>\n<ul>\n<li><strong>裝置端判斷</strong> ：大部分過濾判斷在裝置上透過 Bloom Filter 完成，不需將完整瀏覽記錄傳送至雲端。</li>\n<li><strong>匿名查詢機制 (PIR)</strong> ：當需要雲端資料庫核對時，採用「私密資訊檢索 (Private Information Retrieval, PIR)」技術，伺服器無法得知裝置具體查詢了哪個網址。</li>\n<li><strong>雙重隱秘傳輸</strong> ：透過 Oblivious HTTP (OHTTP) 中繼轉發，確保 Apple 或服務提供商皆無法將查詢內容與特定使用者身分關聯。</li>\n<li><strong>不解密內容</strong> ：僅檢查網址資訊，不會且無法解密 HTTPS 連線內容。</li>\n</ul>\n<h3>3. 效能與使用體驗優化</h3>\n<ul>\n<li><strong>系統層級整合</strong> ：由作業系統底層直接處理，效率更高。</li>\n<li><strong>背景運作</strong> ：不會在畫面上顯示額外圖示或提示。</li>\n<li><strong>電池續航</strong> ：建議相較舊架構更省電。</li>\n</ul>\n<h2>對學校的可能影響 ：</h2>\n<h3>1. 教育平台相容性</h3>\n<ul>\n<li>\n<p><strong>可能的改善</strong> ：</p>\n<ul>\n<li>新技術建議能更準確識別教育部與縣市教網中心的教學平台。</li>\n<li>假設能減少數位教科書或教學影片被誤判為需要過濾的內容。</li>\n<li>建議內容過濾廠商可建立更精確的教育平台允許名單。</li>\n</ul>\n</li>\n<li>\n<p><strong>學校可以做的</strong> ：</p>\n<ul>\n<li>觀察更新後教學平台是否運作更順暢。</li>\n<li>若仍有誤擋情況，建議透過服務廠商回報。</li>\n</ul>\n</li>\n</ul>\n<h3>2. 管理設定調整</h3>\n<ul>\n<li>\n<p><strong>好消息</strong> ：</p>\n<ul>\n<li>假設使用 Jamf Trust 或類似服務，建議會自動切換至新技術。</li>\n<li>學校 IT 管理者通常無需手動修改設定。</li>\n<li>舊版 iOS 裝置建議仍可使用原有技術。</li>\n</ul>\n</li>\n<li>\n<p><strong>建議注意</strong> ：</p>\n<ul>\n<li>裝置更新至 iOS 26 後，觀察過濾效果是否正常。</li>\n<li>假設發現異常，可先檢查 MDM 設定是否正確。</li>\n<li>必要時可聯繫內容過濾服務提供商確認。</li>\n</ul>\n</li>\n</ul>\n<h3>3. 過濾效果評估</h3>\n<ul>\n<li>\n<p><strong>可能的優勢</strong> ：</p>\n<ul>\n<li>建議誤擋率可能降低（正常教學內容較不易被錯誤封鎖）。</li>\n<li>建議覆蓋率可能提升（能處理更複雜的網址結構）。</li>\n<li>假設對加密網站的過濾效果可能更好。</li>\n</ul>\n</li>\n<li>\n<p><strong>評估方式</strong> ：</p>\n<ul>\n<li>詢問教師在使用教學網站時是否遇到阻擋。</li>\n<li>觀察學生使用 iPad 時是否能正常存取教學資源。</li>\n<li>假設有內容過濾報表，可比較更新前後的誤擋情況。</li>\n</ul>\n</li>\n</ul>\n<h2>給學校的建議 ：</h2>\n<h3>系統更新策略</h3>\n<ul>\n<li>\n<p><strong>建議考量因素</strong> ：</p>\n<ul>\n<li>iOS 26 提供更好的內容過濾技術。</li>\n<li>假設希望獲得最佳過濾效果，建議逐步更新裝置。</li>\n<li>假設擔心相容性，建議可先在少數測試機上驗證。</li>\n</ul>\n</li>\n<li>\n<p><strong>更新時機建議</strong> ：</p>\n<ul>\n<li>假設決定更新，建議選擇學期初或寒暑假進行。</li>\n<li>建議預留時間觀察更新後的運作狀況。</li>\n<li>假設發現問題，保留部分未更新裝置作為備用。</li>\n</ul>\n</li>\n</ul>\n<h3>內容過濾服務評估</h3>\n<ul>\n<li>\n<p><strong>假設學校正在使用內容過濾服務</strong> ：</p>\n<ul>\n<li>建議了解服務提供商是否已支援新 API。</li>\n<li>假設服務已停止或到期，評估是否需要繼續訂閱。</li>\n<li>建議基本的不當內容過濾功能通常仍建議保留。</li>\n</ul>\n</li>\n<li>\n<p><strong>假設學校未使用內容過濾服務</strong> ：</p>\n<ul>\n<li>評估是否有保護學生網路安全的必要性。</li>\n<li>iOS 26 的新技術讓內容過濾更有效率。</li>\n<li>可諮詢其他學校的使用經驗作為參考。</li>\n</ul>\n</li>\n</ul>\n<h3>技術支援準備</h3>\n<ul>\n<li><strong>教師說明</strong> ：向教師說明這是技術升級，可能改善教學平台使用體驗。</li>\n<li><strong>問題回報</strong> ：建立管道讓教師回報網站無法存取的問題。</li>\n<li><strong>測試流程</strong> ：建議建立常用教學網站清單，更新後進行測試。</li>\n<li><strong>備案準備</strong> ：假設遇到嚴重問題，準備暫時調整過濾設定的方案。</li>\n</ul>\n",
+          "important": true,
+          "tags": [
+            "Jamf Trust",
+            "URL Filtering",
+            "iOS 26",
+            "內容過濾",
+            "網路安全"
+          ],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-23",
+          "question": "iOS 26 的「背景安全性改進」會自動安裝嗎？建議開啟還是關閉？",
+          "answer": "<p><strong>iOS 26 的「背景安全性改進」(Background Security Improvements) 會在適當時機自動安裝重要的安全修補。建議大多數學校保持此功能開啟，讓裝置維持基本安全防護。</strong></p>\n<h2>什麼是背景安全性改進？</h2>\n<h3>功能說明 ：</h3>\n<ul>\n<li><strong>設計目的</strong> ：快速修補重大安全漏洞，而不需要進行完整的系統更新。</li>\n<li><strong>前身技術</strong> ：延續「快速安全回應」(Rapid Security Response) 的概念並改進。</li>\n<li><strong>修補範圍</strong> ：主要針對 Safari 瀏覽器核心、系統安全框架等關鍵元件。</li>\n</ul>\n<h3>運作特性 ：</h3>\n<ul>\n<li><strong>檔案大小</strong> ：通常僅數十 MB，遠小於完整系統更新。</li>\n<li><strong>安裝時機</strong> ：在裝置充電且閒置時自動安裝。</li>\n<li><strong>重新啟動</strong> ：建議大多數情況下不需要重新啟動。</li>\n<li><strong>使用者感受</strong> ：幾乎不影響正常使用。</li>\n</ul>\n<h2>與標準系統更新的差異 ：</h2>\n<ul>\n<li><strong>背景安全性改進</strong> ：僅修補特定安全漏洞。</li>\n<li><strong>標準系統更新</strong> （如 iOS 26.1 → 26.2）：包含新功能、多項修正、完整測試。</li>\n</ul>\n<h2>對學校的意義 ：</h2>\n<h3>1. 減輕管理負擔</h3>\n<ul>\n<li><strong>面臨的挑戰</strong> ：精進方案範圍內的 iPad 數量多，分散在各班級。IT 人力有限，難以逐台手動更新。集中更新可能影響教學時間。</li>\n<li><strong>建議的幫助</strong> ：安全修補自動在背景完成，無需 IT 人員介入。不影響課堂時間，通常在課後或夜間進行。假設裝置長期停留在舊版系統，仍能獲得基本安全防護。</li>\n</ul>\n<h3>2. 維持安全防護</h3>\n<ul>\n<li><strong>安全考量</strong> ：網路上持續出現新的安全威脅。舊版系統的已知漏洞可能被惡意利用。學校網路環境通常較開放，需要額外保護。</li>\n<li><strong>建議的保障</strong> ：背景安全性改進提供及時的漏洞修補。假設無法立即進行完整系統更新，至少能獲得關鍵防護。建議降低裝置遭受攻擊或感染惡意軟體的風險。</li>\n</ul>\n<h3>3. 教學連續性</h3>\n<ul>\n<li><strong>避免干擾</strong> ：傳統完整更新可能需要 30-60 分鐘。更新期間裝置無法使用，影響教學。背景安全性改進建議在課後自動完成。</li>\n</ul>\n<h2>管理建議 ：</h2>\n<h3>建議做法：保持預設開啟</h3>\n<ul>\n<li><strong>適用對象</strong> ：建議適用於大多數學校。</li>\n<li><strong>理由</strong> ：確保裝置維持基本安全防護。不需要 IT 人員額外操作。假設對教學影響極小。</li>\n<li><strong>風險評估</strong> ：極低機率可能影響特定 App 相容性。通常僅修補安全問題，不改變功能。假設發生問題，可透過 MDM 統一處理。</li>\n</ul>\n<h3>替代做法：透過 MDM 延遲安裝</h3>\n<ul>\n<li>\n<p><strong>適用情境</strong> ：假設學校使用非常特殊的客製化教學 App。假設過去曾因安全更新造成 App 無法使用。假設有專職 IT 團隊能夠進行測試和評估。</p>\n</li>\n<li>\n<p><strong>操作方式</strong> ：</p>\n<ol>\n<li>在 MDM 系統的限制設定中。</li>\n<li>尋找「軟體更新」相關選項。</li>\n<li>關閉「允許背景安全性改進」。</li>\n</ol>\n</li>\n<li>\n<p><strong>注意事項</strong> ：裝置將暴露於已知安全漏洞。建議建立替代的測試和更新流程。假設選擇此做法，建議定期檢視是否仍有必要。</p>\n</li>\n</ul>\n<h2>實務管理建議 ：</h2>\n<h3>檢視與監控</h3>\n<ul>\n<li>在「設定」&gt;「一般」&gt;「軟體更新」檢視安裝狀態。</li>\n<li>假設使用 MDM，部分系統可查詢安裝記錄。</li>\n<li>定期檢查是否有裝置因故未安裝更新。</li>\n</ul>\n<h3>問題處理</h3>\n<ul>\n<li>\n<p><strong>假設教師回報 App 異常</strong> ：</p>\n<ol>\n<li>先確認異常是否發生在安裝更新之後。</li>\n<li>嘗試重新啟動 App 或裝置。</li>\n<li>假設問題持續，可嘗試移除該安全更新（在裝置的「關於本機」中操作）。</li>\n<li>向 App 開發商或內容提供商回報相容性問題。</li>\n</ol>\n</li>\n<li>\n<p><strong>假設發現多台裝置有類似問題</strong> ：</p>\n<ul>\n<li>建議可考慮透過 MDM 暫時關閉自動安裝。</li>\n<li>等待 App 開發商修正相容性問題。</li>\n<li>評估是否為特定版本的問題。</li>\n</ul>\n</li>\n</ul>\n<h3>教育溝通</h3>\n<ul>\n<li><strong>向教師說明</strong> ：這是為了保護裝置安全的自動機制。通常不會影響正常使用。假設發現異常，歡迎隨時回報。</li>\n<li><strong>向學生說明</strong> ：iPad 會自動安裝安全更新保護裝置。不會影響已儲存的作業或資料。建議定期為 iPad 充電，讓更新能順利完成。</li>\n</ul>\n<h2>與完整系統更新的搭配 ：</h2>\n<h3>建議的更新策略</h3>\n<ul>\n<li><strong>背景安全性改進</strong> ：保持開啟，自動處理緊急安全問題。</li>\n<li><strong>標準系統更新</strong> ：假設需要新功能或重大改進，再安排完整更新。</li>\n<li><strong>更新時機</strong> ：建議選擇學期初、寒暑假等適當時間進行完整更新。</li>\n</ul>\n<h3>版本管理建議</h3>\n<ul>\n<li>假設裝置停留在 iOS 26.x，背景安全性改進能提供基本防護。</li>\n<li>假設教學穩定，不一定要追求最新的完整版本。</li>\n<li>建議至少一年進行一次完整的系統更新評估。</li>\n</ul>\n",
+          "important": false,
+          "tags": [
+            "背景安全性改進",
+            "iOS 26",
+            "安全更新",
+            "自動化",
+            "系統更新"
+          ],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-25",
+          "question": "2024-2026 年採購的新款 iPad（M4/A17 Pro）在精進方案環境中的整合建議",
+          "answer": "<p><strong>許多學校在精進方案合約期間（2022-2026），因擴班、硬體故障或特殊需求而額外採購新款 iPad（如 M4 iPad Pro、M2 iPad Air、iPad mini 7）。這些新機與精進方案主力的 iPad 9 在硬體規格上有顯著差異，混合管理時需注意配件相容性、充電規劃與 MDM 設定。</strong></p>\n<h2>硬體差異與管理挑戰 ：</h2>\n<h3>1. 介面轉型 (Lightning to USB-C)</h3>\n<ul>\n<li><strong>iPad 9 (精進方案主力)</strong> ：使用 Lightning 介面。</li>\n<li><strong>新款 iPad</strong> ：全線改用 USB-C 介面。</li>\n<li><strong>管理建議</strong> ：\n<ul>\n<li><strong>線材分區</strong> ：充電車需重新配置線材，建議使用顏色標籤區分 Lightning (如藍色) 與 USB-C (如紅色)，避免學生硬插造成損壞。</li>\n<li><strong>轉接頭備置</strong> ：若需連接舊有的有線網路轉接器或投影線，需額外採購 USB-C 轉接頭。</li>\n</ul>\n</li>\n</ul>\n<h3>2. Apple Pencil 相容性混亂</h3>\n<ul>\n<li><strong>iPad 9</strong> ：僅支援 Apple Pencil (第 1 代)。</li>\n<li><strong>新款 iPad</strong> ：視型號支援 Apple Pencil Pro、Apple Pencil (USB-C) 或第 2 代（已停產）。</li>\n<li><strong>管理建議</strong> ：新款 iPad 建議優先配發 <strong>Apple Pencil (USB-C)</strong> ，因其磁吸但不支援無線充電的特性與舊款較接近，且單價較低，降低遺失成本。</li>\n</ul>\n<h3>3. Apple Intelligence 權限分級</h3>\n<ul>\n<li><strong>iPad 9</strong> ：硬體不支援。</li>\n<li><strong>M4 / A17 Pro 機型</strong> ：完整支援 Apple Intelligence。</li>\n<li><strong>管理建議</strong> ：\n<ul>\n<li><strong>Smart Group 區分</strong> ：建立智慧型群組區分「AI Ready 裝置」與「一般裝置」。</li>\n<li><strong>防弊考量</strong> ：在考試期間，針對高階機型需額外派送「禁用寫作工具」的 DDM 宣告 (需 iOS 18.1+)。</li>\n</ul>\n</li>\n</ul>\n<h2>MDM 策略調整 ：</h2>\n<ol>\n<li><strong>OS 版本管控</strong> ：新款機型出廠即為 iOS 17/18，與舊機可能有版本差。建議將全校最低版本限制設為 iOS 17.5+，以維持功能一致。</li>\n<li><strong>App 部署分流</strong> ：部分高階繪圖或 AI 運算 App (如 Final Cut Pro for iPad) 僅限新機使用。透過 Smart Group 的「Model」條件進行精準派送，避免在舊機上佔用空間。</li>\n</ol>\n<h2>充電與電力維護 ：</h2>\n<ul>\n<li><strong>PD 快充支援</strong> ：新款 iPad 支援更高的充電功率。若充電車仍為舊式的 10W/12W USB-A 介面，充電速度會極慢且可能充不飽。</li>\n<li><strong>升級建議</strong> ：評估將部分充電車插座更換為支援 <strong>USB-PD (Power Delivery)</strong> 的模組。</li>\n</ul>\n",
+          "important": true,
+          "tags": ["新舊混合", "M4", "A17 Pro", "配件管理", "充電車規劃"],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        },
+        {
+          "id": "dl-26",
+          "question": "如何使用 iOS 26 的「背景安全性改進」確保精進方案載具的基礎安全防護？",
+          "answer": "<p><strong>在維護大量精進方案載具時，最令網管人員頭痛的是「使用者不更新系統」導致的資安風險。</strong></p>\n<p>iOS 26 引進了全新的「背景安全性改進 (Background Security Improvements)」架構，讓關鍵的安全補丁能在「不重啟裝置」且「不打擾教學」的情況下自動安裝。</p>\n<h2>技術背景與現狀 ：</h2>\n<ul>\n<li><strong>過去挑戰</strong> ：傳統系統更新 (iOS Updates) 檔案龐大且需重啟，學生往往選擇忽略。若長期不更新，裝置將暴露在已知漏洞中，影響校園網路安全。</li>\n<li><strong>iOS 26 新機制</strong> ：Apple 會針對關鍵的安全漏洞發送體積極小的補丁（數十 MB）。系統會在閒置（如半夜充電）時自動完成補丁。</li>\n</ul>\n<h2>管理員應如何設定？ (Jamf Pro) ：</h2>\n<ol>\n<li><strong>開啟權限</strong> ：在「限制 (Restrictions)」描述檔中，確認已勾選 <strong>「允許背景安全性改進 (Allow Background Security Improvements)」</strong> 。</li>\n<li><strong>靜默執行</strong> ：此功能為系統級自動化，管理員無需發送特定的 Remote Command。只需確保裝置定期連網且電量充足。</li>\n</ol>\n<h2>安全性與教學的平衡 ：</h2>\n<ul>\n<li><strong>無縫更新</strong> ：補丁安裝通常不需要重啟。學生第二天開機即可獲得防護，完全不影響第一節課的教學。</li>\n<li><strong>回滾機制</strong> ：若補丁引起 App 相容性問題，雖然極少見，管理員仍可透過指令撤銷該次安全補丁。</li>\n</ul>\n<h2>實務建議 ：</h2>\n<p>雖然「背景安全性改進」能處理急迫的漏洞，但 <strong>它不能替代完整的系統更新</strong> 。建議學校仍應每學期安排一次（如寒暑假）統一升級主版本號 (例如從 18.0 升至 18.1)，以獲得完整的功能改進。</p>\n",
+          "important": true,
+          "tags": [
+            "iOS 26",
+            "安全性更新",
+            "自動化管理",
+            "背景安全性改進",
+            "資產維護"
+          ],
+          "category": "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+        }
+      ]
+    }
+  ]
+}

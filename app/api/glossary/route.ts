@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { loadGlossary } from "@/lib/content";
+import { getGlossaryData } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
 
@@ -10,7 +10,7 @@ export async function GET(request: Request) {
   const locale = lang === "en" ? "en" : "zh";
 
   try {
-    const data = await loadGlossary(locale);
+    const data = await getGlossaryData(locale);
     return NextResponse.json(data);
   } catch (error) {
     console.error("[API] Failed to load glossary:", error);

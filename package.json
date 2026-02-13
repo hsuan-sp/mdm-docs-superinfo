@@ -7,8 +7,10 @@
   },
   "type": "module",
   "scripts": {
+    "gen-data": "node scripts/build-data.mjs",
     "gen-index": "node scripts/generate-index.mjs",
-    "dev": "lsof -ti:4000 | xargs kill -9 2>/dev/null; next dev -p 4000",
+    "prebuild": "npm run gen-data",
+    "dev": "lsof -ti:4000 | xargs kill -9 2>/dev/null; npm run gen-data && next dev -p 4000",
     "build": "next build",
     "start": "next start -p 4000",
     "lint": "next lint",

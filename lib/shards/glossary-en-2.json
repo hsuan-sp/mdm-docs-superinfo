@@ -1,0 +1,352 @@
+[
+  {
+    "term": "Inventory",
+    "definition": "<p>In a device management context, <strong>Inventory</strong> refers to the comprehensive database containing the current state of every organizational hardware and software asset.</p>\n<p>Key inventory data points:</p>\n<ul>\n<li>\n<p><strong>Hardware details</strong> : Serial number, model, processor type, and total RAM.</p>\n</li>\n<li>\n<p><strong>Software details</strong> : Current OS version and a list of all installed applications.</p>\n</li>\n<li>\n<p><strong>Security status</strong> : Encryption status (FileVault/Activation Lock), security patch level, and passcode compliance.</p>\n</li>\n<li>\n<p><strong>Network status</strong> : Current IP address, MAC address, and last check-in time.</p>\n</li>\n<li>\n<p><strong>User assignment</strong> : Which specific student or staff member is the primary user of the hardware.</p>\n</li>\n</ul>\n<p>This centralized record is essential for IT teams to perform security audits, plan for hardware refresh cycles, and provide fast technical support.</p>\n",
+    "analogy": "<p>This is the school IT’s <strong>“Central Asset Registry”</strong> or <strong>“Master List.”</strong> Just as a school library keeps a detailed list of every book it owns, where it’s shelved, and who has currently borrowed it, the IT inventory is a centralized record of every iPad and Mac in the school.</p>\n<p>It tells IT exactly where each device is, how old it is, and whether it’s “healthy” or needs a repair, making it much easier to ensure every student has the tools they need to succeed.</p>\n",
+    "category": ["Core"],
+    "tags": []
+  },
+  {
+    "term": "Inventory Collection",
+    "definition": "<h2>Definition</h2>\n<p>Inventory Collection is the core management process where Jamf Pro gathers detailed information from school devices, including hardware specs, installed apps, system settings, and battery health. While this typically happens automatically once a day, administrators can manually trigger an “Update Inventory” command to get an immediate snapshot of a device’s current state. This data is the foundation for all school IT reports and <strong>Smart Groups</strong> .</p>\n<h2>Plain English</h2>\n<p>Think of this as the “Daily School Census.” Every day, each iPad sends a quick report back to the school headquarters saying, “I have this much battery left,” “I am using this version of the system,” and “I have these apps installed.” It allows IT to make sure all school property is healthy and up-to-date without ever having to touch the physical device.</p>\n",
+    "analogy": "",
+    "category": ["Jamf", "Core"],
+    "tags": []
+  },
+  {
+    "term": "IP Address",
+    "definition": "<p>An <strong>IP Address</strong> (Internet Protocol Address) is a unique numerical label assigned to every device connected to a computer network.</p>\n<p>It serves two primary functions:</p>\n<ul>\n<li>\n<p><strong>Identification</strong> : uniquely identifying a specific host or network interface.</p>\n</li>\n<li>\n<p><strong>Addressing</strong> : Providing the location of the host in the network so data reaches the correct destination.</p>\n</li>\n</ul>\n<h2>Common Types:</h2>\n<ul>\n<li><strong>Dynamic IP (DHCP)</strong> : Automatically and temporarily assigned by a server; the address may change over time.</li>\n<li><strong>Static IP</strong> : Manually and permanently assigned; the address remains constant.</li>\n<li><strong>Private IP</strong> : Used within the school’s internal network (e.g., <code>10.x.x.x</code> or <code>192.168.x.x</code>).</li>\n<li><strong>Public IP</strong> : The address seen by the rest of the world on the internet.</li>\n</ul>\n",
+    "analogy": "<p>Think of this as your device’s <strong>“Digital Street Address.”</strong> Just like a mail carrier needs a physical address to deliver a letter to your house, the internet needs an <strong>IP address</strong> to send data to your specific iPad.</p>\n<p>Some addresses are owned forever ( <strong>Static</strong> ), while others are like a hotel room number ( <strong>Dynamic</strong> )—you use it while you’re checked in, but it might be given to someone else after you “check out” and leave the network.</p>\n",
+    "category": ["Network"],
+    "tags": []
+  },
+  {
+    "term": "iPaaS",
+    "definition": "<h2>Definition</h2>\n<p>iPaaS (Integration Platform as a Service) is a suite of cloud services that enables organizations to integrate disparate applications, data sources, and business processes. In an enterprise environment, MDM systems can leverage iPaaS to connect with other management systems (such as HR databases or ERP software) to automate workflows, like automatically creating a user account when a new staff member is hired.</p>\n<h2>Plain English</h2>\n<p>Think of this as the “Universal Adapter” for the digital world. A large organization like a school uses many different types of software that don’t always speak the same language. iPaaS acts as a “Middleman” that translates between them, allowing the IT system to automatically talk to the HR system without a human having to type the data twice.</p>\n",
+    "analogy": "",
+    "category": ["Other"],
+    "tags": []
+  },
+  {
+    "term": "iPhone Mirroring",
+    "definition": "<h2>Definition</h2>\n<p>iPhone Mirroring is a continuity feature introduced in macOS 15 that allows users to view and fully interact with their iPhone directly on their Mac screen. While highly productive, MDM administrators can disable this feature on shared school hardware to prevent personal data leakage or to ensure that users are not bypassing Mac-level security monitoring software by performing tasks within the mirrored iPhone window.</p>\n<h2>Plain English</h2>\n<p>Think of this as a “Virtual Smartphone” inside your computer. You can use your phone apps and send texts right from your Mac screen. However, because this can show personal photos and messages on a school computer, or allow someone to work in a “hidden window” that the school’s safety software can’t see, IT may choose to turn this feature off on certain computers to keep everyone safe.</p>\n",
+    "analogy": "",
+    "category": ["macOS", "Security"],
+    "tags": []
+  },
+  {
+    "term": "Jamf Binary",
+    "definition": "<p>The <strong>Jamf Binary</strong> (frequently referred to as the <code>Jamf</code> command-line tool) is the management agent that powers advanced control on macOS.</p>\n<p>Operational roles:</p>\n<ul>\n<li>\n<p><strong>Local Engine</strong> : It is the “brain” on the Mac that executes instructions sent from the Jamf Pro server.</p>\n</li>\n<li>\n<p><strong>Policies</strong> : Unlike standard MDM profiles, the binary allows for complex “Policies” that can run scripts, install specialized software packages, and perform system maintenance.</p>\n</li>\n<li>\n<p><strong>Check-ins</strong> : The binary periodically “checks in” with the server to see if there are any new tasks to perform.</p>\n</li>\n</ul>\n<p><strong>Note</strong> : While iPads use Apple’s built-in MDM framework alone, Macs use a combination of standard MDM and the Jamf Binary to provide deeper management capabilities.</p>\n",
+    "analogy": "<p>Think of this as the <strong>“On-Site Manager”</strong> living inside your Mac.</p>\n<p>While the main school office (the MDM server) gives the big-picture orders, the <strong>On-Site Manager</strong> is the person who actually does the heavy physical work—like unpacking and installing your apps, fixing your system settings, and making sure the computer is following all the school’s safety rules.</p>\n<p>Without this silent helper working in the background, the school wouldn’t be able to fix your Mac’s problems from their office.</p>\n",
+    "category": ["Jamf", "macOS"],
+    "tags": []
+  },
+  {
+    "term": "Jamf Connect",
+    "definition": "<p><strong>Jamf Connect</strong> is a security and identity solution designed to synchronize local Mac accounts with cloud-based identity providers.</p>\n<p>Key benefits:</p>\n<ul>\n<li>\n<p><strong>Unified Login</strong> : Allows users to log in to their Mac using their institutional cloud credentials (e.g., Google Workspace or Microsoft Entra ID).</p>\n</li>\n<li>\n<p><strong>Password Sync</strong> : Ensures that if a user changes their school password online, their Mac login password is automatically updated to match.</p>\n</li>\n<li>\n<p><strong>MFA Enforcement</strong> : Enables Multi-Factor Authentication during the initial setup of a new Mac, significantly improving security.</p>\n</li>\n<li>\n<p><strong>Zero-Touch</strong> : Facilitates the creation of a local user account on-the-fly during the first login.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>This is the <strong>“Cloud ID Portal”</strong> for your Mac.</p>\n<p>Instead of having a separate, confusing password just for your laptop, <strong>Jamf Connect</strong> lets you log in using your regular school email and password.</p>\n<p>It’s like having a <strong>“Single Master Key”</strong> —if you change your school password in your browser, your Mac password automatically updates to match, so you only ever have to remember one single set of login details for everything you do at school.</p>\n",
+    "category": ["Jamf", "Security", "macOS"],
+    "tags": []
+  },
+  {
+    "term": "Jamf Data Policy",
+    "definition": "<h2>Definition</h2>\n<p>Jamf Data Policy is a Data Loss Prevention (DLP) capability within the Jamf ecosystem. It allows administrators to set specific rules to prevent sensitive institutional data from being leaked via methods like AirDrop, screenshots, or copy-pasting into unauthorized apps. All violations are logged and can be audited by the IT department to ensure compliance with school data security policies.</p>\n<h2>Plain English</h2>\n<p>Think of this as a “Digital Safety Net.” It prevents sensitive school information (like exam papers or student records) from being shared where it shouldn’t be. If someone tries to take a screenshot of a secret document or AirDrop it to a personal device, this “Safety Net” catches it and stops it, making sure school secrets stay safe.</p>\n",
+    "analogy": "",
+    "category": ["Jamf", "Security"],
+    "tags": []
+  },
+  {
+    "term": "Jamf Now",
+    "definition": "<h2>Definition</h2>\n<p>Jamf Now is a streamlined, cloud-based MDM solution designed for small organizations or individual departments. It offers a simplified interface for essential tasks like device enrollment, app distribution, and security setting enforcement. While it lacks the advanced scripting and complex automation features of <strong>Jamf Pro</strong> , it is highly user-friendly and ideal for smaller schools or businesses with basic management needs.</p>\n<h2>Plain English</h2>\n<p>Think of this as the “Essentials Version” of the management software. While Jamf Pro is like a professional “Swiss Army Knife” with hundreds of tools, Jamf Now is more like a simple, reliable pocketknife. It has just the right tools for smaller schools to get the job done quickly and easily without needing a team of expert engineers.</p>\n",
+    "analogy": "",
+    "category": ["Jamf"],
+    "tags": []
+  },
+  {
+    "term": "Jamf Private Access",
+    "definition": "<h2>Definition</h2>\n<p>Jamf Private Access (managed through the <strong>Jamf Trust</strong> app) is a Zero Trust Network Access (ZTNA) solution. It ensures that only authorized, secure, and compliant devices can access private school resources. Unlike a traditional VPN that gives a user full access to a network, Private Access creates a “Micro-tunnel” only for the specific apps required, while also checking the “health” of the device before allowing a connection.</p>\n<h2>Plain English</h2>\n<p>Think of this as a “Smart Security Gate” for school files. Instead of just checking your ID card at the entrance, this system also checks if you have a fever (if your device has a virus) and if you are wearing the right uniform (if your device follows school security rules). Only if you and your device pass all the checks will the gate open—and even then, it only lets you go to the specific “room” (the app) you need, not the whole building.</p>\n",
+    "analogy": "",
+    "category": ["Jamf", "Security", "Network"],
+    "tags": []
+  },
+  {
+    "term": "Jamf Pro",
+    "definition": "<p><strong>Jamf Pro</strong> is an enterprise-grade Apple device management (MDM) solution, considered the flagship of the Jamf ecosystem.</p>\n<p>Distinguishing features:</p>\n<ul>\n<li>\n<p><strong>Scalability</strong> : Designed to manage tens of thousands of devices across global organizations.</p>\n</li>\n<li>\n<p><strong>Power</strong> : Offers deep customization through custom scripts, extension attributes, and complex policy engines.</p>\n</li>\n<li>\n<p><strong>Automation</strong> : Features robust “Smart Group” logic that can trigger actions automatically as device conditions change.</p>\n</li>\n<li>\n<p><strong>Ecosystem</strong> : Integrates extensively with third-party tools via a powerful REST API.</p>\n</li>\n</ul>\n<p>Jamf Pro is the preferred choice for schools and businesses that require the highest level of administrative control and automation for their Apple fleet.</p>\n",
+    "analogy": "<p>Think of this as the <strong>“Professional DSLR Camera”</strong> of device management.</p>\n<p>It has hundreds of specialized buttons, menus, and settings that can be customized to do almost anything you can imagine. While it takes an expert (the school’s IT team) to learn and operate it correctly, it is the most powerful tool available to ensure that every iPad and Mac in the school is set up perfectly for a safe and productive learning experience.</p>\n",
+    "category": ["Core", "Jamf"],
+    "tags": []
+  },
+  {
+    "term": "Jamf Pro API",
+    "definition": "<h2>Definition</h2>\n<p>The Jamf Pro API (specifically the Pro API v2) is a developer interface that allows IT administrators to automate management tasks via code. Instead of manually clicking through the web interface, administrators can use scripts to perform bulk operations—such as creating hundreds of policies at once, importing large lists of devices, or generating custom reports. It enables a high level of efficiency and integration with other school systems.</p>\n<h2>Plain English</h2>\n<p>Think of this as the “Remote Control” for the school’s management system. Instead of an IT person having to manually click a button 500 times to set up 500 iPads, they can use the “Remote Control” (the API) to do it all with a single command. It saves a massive amount of time and ensures that everything is set up perfectly without any human errors.</p>\n",
+    "analogy": "",
+    "category": ["Jamf", "Other"],
+    "tags": []
+  },
+  {
+    "term": "Jamf Protect",
+    "definition": "<h2>Definition</h2>\n<p>Jamf Protect is a specialized endpoint security solution built specifically for the Mac. It uses Apple’s native <strong>Endpoint Security Framework</strong> to monitor for malicious behavior, provide real-time threat detection, and automate responses to malware. Because it is built “for Mac, by Jamf,” it does not slow down system performance the way traditional cross-platform antivirus software often does, while providing superior visibility into macOS-specific threats.</p>\n<h2>Plain English</h2>\n<p>Think of this as a “Professional Bodyguard” that only protects Macs. Most antivirus programs are like heavy, clunky suits of armor that slow the computer down. Jamf Protect is different—it’s like a highly trained bodyguard who is invisible and doesn’t slow you down, but is always watching for “bad people” (malware) trying to break into your computer. If it sees something suspicious, it acts instantly to keep you safe.</p>\n",
+    "analogy": "",
+    "category": ["Jamf", "Security", "macOS"],
+    "tags": []
+  },
+  {
+    "term": "Jamf Remote Assist",
+    "definition": "<h2>Definition</h2>\n<p>Jamf Remote Assist is a built-in remote desktop tool within Jamf Pro. It allows IT administrators to securely connect to a user’s Mac directly through a web browser to perform screen sharing, terminal commands, and file transfers for troubleshooting. It supports both “Attended” mode (where the user must grant permission) and “Unattended” mode for remote maintenance, eliminating the need for third-party remote control software.</p>\n<h2>Plain English</h2>\n<p>Think of this as a “Digital Window” for the IT team. If you’re having trouble with your Mac, the IT person can look through this digital window (with your permission) to see your screen and help you fix the problem from their office. It’s like having a tech expert sitting right next to you, even if they are in another building or another city.</p>\n",
+    "analogy": "",
+    "category": ["Jamf", "macOS"],
+    "tags": []
+  },
+  {
+    "term": "Jamf Safe Internet",
+    "definition": "<p><strong>Jamf Safe Internet</strong> is a comprehensive network security and content filtering service designed specifically for educational institutions.</p>\n<p>Protective features:</p>\n<ul>\n<li>\n<p><strong>Filtering</strong> : Blocks access to inappropriate or dangerous categories of websites (e.g., adult content, gambling, or piracy).</p>\n</li>\n<li>\n<p><strong>Phishing Defense</strong> : Identifies and blocks malicious links designed to steal school login credentials.</p>\n</li>\n<li>\n<p><strong>Reporting</strong> : Provides administrators with insights into web usage trends and security threats.</p>\n</li>\n<li>\n<p><strong>Deployment</strong> : Integrated directly into Jamf Pro or Jamf School for easy “no-touch” rollout to student devices.</p>\n</li>\n</ul>\n<p>Because it operates at the DNS level, it protects students whether they are using the school Wi-Fi or their home network.</p>\n",
+    "analogy": "<p>Think of this as your <strong>“Digital Bodyguard.”</strong> Before you load any website, the bodyguard quickly checks the “address” to make sure it isn’t a scam or a dangerous hidden site. If it’s a <strong>“bad neighborhood”</strong> on the internet, the bodyguard steps in and blocks the site immediately.</p>\n<p>It works everywhere—protecting you and the school’s private data from hackers and harmful content whether you’re in the classroom or at the park.</p>\n",
+    "category": ["Jamf", "Security", "Network"],
+    "tags": []
+  },
+  {
+    "term": "Jamf School",
+    "definition": "<p><strong>Jamf School</strong> is a specialized MDM solution tailored explicitly for the K-12 educational landscape.</p>\n<p>Focus areas:</p>\n<ul>\n<li>\n<p><strong>Ease of Use</strong> : A simplified interface designed to be managed by educators or dedicated IT staff with less engineering experience than Jamf Pro requires.</p>\n</li>\n<li>\n<p><strong>Teacher Tools</strong> : Includes the <strong>Jamf Teacher</strong> app, which gives classroom teachers direct, simple control over student iPads during their lessons.</p>\n</li>\n<li>\n<p><strong>Integration</strong> : Deeply synchronized with <strong>Apple School Manager (ASM)</strong> for easy roster and class management.</p>\n</li>\n<li>\n<p><strong>Parental Control</strong> : Includes a parent-facing app to extend management logic to the home environment.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as the <strong>“Education Edition”</strong> of the management software.</p>\n<p>While the “Professional” version (Jamf Pro) is built for systems engineers managing thousands of computers, <strong>Jamf School</strong> is built for teachers and school staff.</p>\n<p>It makes it easy for a teacher to manage a classroom of 30 iPads without needing a degree in computer science, while still giving the school all the security and control it needs to keep students safe.</p>\n",
+    "category": ["Jamf", "Education"],
+    "tags": []
+  },
+  {
+    "term": "Jamf Student",
+    "definition": "<p><strong>Jamf Student</strong> is a dedicated companion application for student iPads that facilitates a managed learning environment.</p>\n<p>Key functions:</p>\n<ul>\n<li>\n<p><strong>Lesson Participation</strong> : Allows students to receive websites, documents, and app links pushed directly from the <strong>Jamf Teacher</strong> app.</p>\n</li>\n<li>\n<p><strong>Communication</strong> : Provides a secure portal for students to ask for help or submit specific classroom assignments.</p>\n</li>\n<li>\n<p><strong>Restrictions</strong> : It is the endpoint that receives and executes “focused learning” commands, such as locking the iPad into a single required app for a test.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as the <strong>“Learner’s Digital Portal”</strong> on the iPad.</p>\n<p>It’s the app that “listens” for the teacher’s instructions. When a teacher wants everyone to look at the same specific webpage, they send the link, and the <strong>Jamf Student</strong> app automatically “catches” it and opens it for the student.</p>\n<p>It helps keep every student in the room synchronized during a lesson so nobody falls behind or gets distracted.</p>\n",
+    "category": ["Jamf", "Education"],
+    "tags": []
+  },
+  {
+    "term": "Jamf Teacher",
+    "definition": "<p><strong>Jamf Teacher</strong> is a classroom management application that empowers educators to manage student technology directly and instantly.</p>\n<p>Core capabilities:</p>\n<ul>\n<li>\n<p><strong>App Lock</strong> : Force a class of iPads into a single specific app (e.g., a calculator or a quiz app).</p>\n</li>\n<li>\n<p><strong>Web Restrictions</strong> : Create a “Safe List” of websites that students are allowed to visit during a specific lesson.</p>\n</li>\n<li>\n<p><strong>Content Pushing</strong> : Instantly send links, documents, or apps to every student at once.</p>\n</li>\n<li>\n<p><strong>Attention Request</strong> : Send notifications to student screens to get their attention during a transition.</p>\n</li>\n</ul>\n<p>Teachers can manage their own specific classes based on synchronized rosters from <strong>Apple School Manager</strong> .</p>\n",
+    "analogy": "<p>Think of this as the <strong>“Digital Pointer”</strong> or <strong>“Classroom Remote Control”</strong> for the modern teacher.</p>\n<p>Instead of a teacher having to walk around the room to see what every student is doing on their screen, they can use this app on their own iPad to keep everyone focused. With one single button, the teacher can make sure all 30 students are looking at the exact same textbook page at the same time, preventing anyone from getting lost or distracted by games.</p>\n",
+    "category": ["Jamf", "Education"],
+    "tags": []
+  },
+  {
+    "term": "JamfAAD",
+    "definition": "<h2>Definition</h2>\n<p>JamfAAD is a background process on macOS responsible for coordinating with Microsoft Entra ID (formerly Azure AD) for device registration and <strong>Compliance</strong> verification. When a user tries to access a protected school resource like Office 365 or Microsoft Teams, JamfAAD provides proof to Microsoft that the Mac is managed and meets all required school security standards before allowing the user to sign in.</p>\n<h2>Plain English</h2>\n<p>Think of this as a “Digital Diplomat” who speaks to Microsoft. When you try to open Word or Teams, the “Microsoft Security Guard” might block you. JamfAAD steps in and shows the guard an official letter that says, “Don’t worry, this computer is safe and belongs to the school.” Once the guard sees the letter, they let you in to do your work.</p>\n",
+    "analogy": "",
+    "category": ["Jamf", "Security"],
+    "tags": []
+  },
+  {
+    "term": "jamfHelper",
+    "definition": "<h2>Definition</h2>\n<p>jamfHelper is a built-in messaging utility for macOS management. IT administrators use it via scripts to display custom dialog boxes, notification windows, or progress bars to the user. It is the primary tool for informing users about required software updates, gathering simple user input, or providing visual feedback during the execution of a management policy.</p>\n<h2>Plain English</h2>\n<p>Think of this as the “Digital Bulletin Board.” It’s the tool the IT team uses to put a message on your screen when something important is happening—like when your computer needs to restart for an update. It’s a simple way for the tech team to talk to you through your computer screen so you always know what’s going on.</p>\n",
+    "analogy": "",
+    "category": ["macOS", "Jamf"],
+    "tags": []
+  },
+  {
+    "term": "JSON (JavaScript Object Notation)",
+    "definition": "<h2>Definition</h2>\n<p>JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. In MDM, JSON is frequently used to write advanced configuration schemas or to transmit data between systems via APIs. Its structure is based on “Key-Value pairs.”</p>\n<h2>Plain English</h2>\n<p>Think of this as a “Digital Standard Form.” It’s a very organized way for computer systems to send information to each other. For example, instead of a messy paragraph, a system sends: <code>{ &quot;Name&quot;: &quot;Student A&quot;, &quot;Grade&quot;: 5 }</code>. Because the format is always the same, the receiving computer knows exactly where to find each piece of information without making mistakes.</p>\n",
+    "analogy": "",
+    "category": ["Other"],
+    "tags": []
+  },
+  {
+    "term": "Kernel Extension (Kext)",
+    "definition": "<p>A <strong>Kernel Extension (Kext)</strong> is a specialized bundle of code that extends the native functionality of the macOS kernel.</p>\n<p>Key characteristics:</p>\n<ul>\n<li>\n<p><strong>Deep Access</strong> : Operates at the “Ring 0” level, the absolute core of the operating system.</p>\n</li>\n<li>\n<p><strong>Risk Profile</strong> : Because Kexts run with the highest possible privileges, a bug in a Kext can cause a complete system crash (Kernel Panic), and a vulnerability can compromise the entire machine.</p>\n</li>\n<li>\n<p><strong>Modern Status</strong> : Apple is actively deprecating Kexts. Modern macOS versions require <strong>System Extensions</strong> (which run in user space) instead. Installing a legacy Kext now requires booting into Recovery Mode and manually downgrading system security settings.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as <strong>“Open-Heart Surgery”</strong> for your computer’s operating system.</p>\n<p>It’s a way to add new features by changing the most vital, core part of the body (the Kernel). While this makes the computer very powerful, it’s also very risky—one slip could stop the heart completely.</p>\n<p>This is why Apple now prefers <strong>“Minimally Invasive Surgery”</strong> (System Extensions) instead, which is much safer and easier to recover from if something goes wrong.</p>\n",
+    "category": ["Core"],
+    "tags": []
+  },
+  {
+    "term": "Keychain",
+    "definition": "<p>The <strong>Keychain</strong> is Apple’s integrated password management system included in macOS, iOS, and iPadOS.</p>\n<p>Stored items include:</p>\n<ul>\n<li>\n<p><strong>Credentials</strong> : Usernames and passwords for websites, servers, and apps.</p>\n</li>\n<li>\n<p><strong>Certificates</strong> : Digital identities used for Wi-Fi (802.1X) and VPN authentication.</p>\n</li>\n<li>\n<p><strong>Encryption</strong> : Private keys used for secure communication.</p>\n</li>\n<li>\n<p><strong>Secure Notes</strong> : Confidential information entered by the user.</p>\n</li>\n</ul>\n<p>Once a user logs in to their device, the Keychain automatically unlocks, providing seamless authentication across the system without requiring constant re-entry of passwords.</p>\n",
+    "analogy": "<p>Think of this as the system’s <strong>“Universal Key Ring”</strong> or <strong>“Secure Lockbox.”</strong> You don’t have to carry around dozens of individual keys (your passwords) in your pocket; you just keep them all in this secure, encrypted box (the Keychain).</p>\n<p>Once you unlock the box with your fingerprint or startup password, the system automatically reaches in and grabs whichever specific key you need to unlock a website or the school Wi-Fi, so you don’t even have to think about it.</p>\n",
+    "category": ["Security"],
+    "tags": []
+  },
+  {
+    "term": "LAPS (Local Administrator Password Solution)",
+    "definition": "<p><strong>Local Administrator Password Solution (LAPS)</strong> is a security framework designed to manage and rotate local admin credentials on fleet devices.</p>\n<p>Security mechanism:</p>\n<ul>\n<li>\n<p><strong>Uniqueness</strong> : Ensures every single managed computer has a different, unique local administrator password.</p>\n</li>\n<li>\n<p><strong>Rotation</strong> : Automatically changes the password after a set period (e.g., every 30 days) or after it has been viewed by IT.</p>\n</li>\n<li>\n<p><strong>Escrow</strong> : The current password is typically stored securely in the MDM or directory service for authorized retrieval.</p>\n</li>\n<li>\n<p><strong>Defense</strong> : Prevents <strong>“Lateral Movement”</strong> attacks where compromising one computer’s password would otherwise grant access to every computer in the organization.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as an <strong>“Automatic Lock-Changing System.”</strong> In the past, every classroom door in a school might have used the same “Master Key.” If a thief stole that key, they could enter every room.</p>\n<p>With <strong>LAPS</strong> , every single door has a different, unique code that changes every few days. Even if someone steals a code today, it won’t work on the next door, and it won’t even work on the <em>same</em> door tomorrow.</p>\n",
+    "category": ["Security"],
+    "tags": []
+  },
+  {
+    "term": "LDAP",
+    "definition": "<p><strong>Lightweight Directory Access Protocol (LDAP)</strong> is an open, vendor-neutral standard for accessing and maintaining distributed directory information services.</p>\n<p>Common uses in MDM:</p>\n<ul>\n<li>\n<p><strong>User Lookup</strong> : Connecting the MDM to <strong>Active Directory</strong> or <strong>OpenLDAP</strong> to search for users.</p>\n</li>\n<li>\n<p><strong>Group Sync</strong> : Importing student and teacher groups (e.g., “Grade 5 Staff”) directly into the MDM for scoping policies.</p>\n</li>\n<li>\n<p><strong>Authentication</strong> : Verifying a username and password against the central database during enrollment.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>This is the <strong>“Common Language”</strong> used to check the school’s central phonebook.</p>\n<p>Just as two people from different countries might use English to communicate, different computer systems (like your MDM and your Email Server) use <strong>LDAP</strong> to “ask” the central database for information.</p>\n<p>It allows the MDM to ask questions like: “Who is in Grade 5?” or “Is this password correct for Mr. Smith?”.</p>\n",
+    "category": ["Apple"],
+    "tags": []
+  },
+  {
+    "term": "Lightning Connector",
+    "definition": "<p>The <strong>Lightning Connector</strong> is Apple’s proprietary 8-pin physical data and power interface.</p>\n<p>Hardware context:</p>\n<ul>\n<li>\n<p><strong>Usage</strong> : Standard port for iPhone 5 through iPhone 14, and entry-level iPads up until the 9th Generation.</p>\n</li>\n<li>\n<p><strong>Comparison</strong> : Supports USB 2.0 speeds (slower than modern USB-C).</p>\n</li>\n<li>\n<p><strong>Phased Out</strong> : While modern devices now use <strong>USB-C</strong> to comply with international regulations, Lightning is still prevalent in education due to the long lifespan of iPad fleets.</p>\n</li>\n<li>\n<p><strong>Design</strong> : Reversible design, allowing the cable to be plugged in face up or face down.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>This is the <strong>“Classic”</strong> Apple charging port.</p>\n<p>Unlike the new, oval-shaped <strong>USB-C</strong> ports that you see on the latest iPads and laptops, the Lightning cable is the smaller, flat connector that only works with older Apple devices.</p>\n<p>While it’s getting phased out like old DVD players, school “iPad carts” often still have hundreds of these cables to keep the older student tablets charged and ready for class.</p>\n",
+    "category": ["Hardware"],
+    "tags": []
+  },
+  {
+    "term": "Liquid Glass",
+    "definition": "<p><strong>Liquid Glass</strong> is the advanced visual design language introduced by Apple in <strong>OS version 26</strong> , drawing heavy inspiration from the spatial computing interface of visionOS.</p>\n<p>Visual characteristics:</p>\n<ul>\n<li>\n<p><strong>Materiality</strong> : Features increased transparency, dynamic light reflections, and real-time blurring logic.</p>\n</li>\n<li>\n<p><strong>Depth</strong> : Creates a fluid sense of depth where interface elements (like windows or dock icons) feel like they are floating on different layers of glass.</p>\n</li>\n<li>\n<p><strong>Adaptability</strong> : The interface reacts subtly to environmental lighting conditions captured by the device’s sensors.</p>\n</li>\n</ul>\n<p><strong>MDM Context</strong> : Administrators should note that users can adjust the “opacity” of this effect in settings. Onboarding materials should clarify that this transparency is a stylistic choice, not a display hardware defect.</p>\n",
+    "analogy": "<p>Imagine your iPad screen as a sheet of <strong>“Living Glass.”</strong> When you move the device or change the lighting in the room, the icons and windows subtly catch the light and reflect it, just like real glass objects would. It makes the interface feel lighter, more breathable, and more “alive” than the flat, painted-on buttons of the past.</p>\n",
+    "category": ["Core"],
+    "tags": []
+  },
+  {
+    "term": "Local Account",
+    "definition": "<p>A <strong>Local Account</strong> is a user profile that resides strictly on the individual computer’s hard drive.</p>\n<p>Key differences from Network Accounts:</p>\n<ul>\n<li>\n<p><strong>Authentication</strong> : Usage is verified against a local database on the machine, not a central server.</p>\n</li>\n<li>\n<p><strong>Scope</strong> : Credentials work <strong>only</strong> on that specific Mac; they cannot be used to log in to other computers.</p>\n</li>\n<li>\n<p><strong>Use Case</strong> : Typically reserved for the primary “Administrator” account used by IT for maintenance, or for specialized stations (like a theater lighting controller) that do not require network connectivity.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as a <strong>“Room-Specific Key.”</strong> This key (the account) only opens one specific door (one computer). If you try to use it on any other computer in the building, it won’t work.</p>\n<p>It’s different from a school <strong>“ID Badge”</strong> (Network Account) which scans you into any classroom, library, or lab computer across the entire campus.</p>\n",
+    "category": ["Core"],
+    "tags": []
+  },
+  {
+    "term": "Location Services",
+    "definition": "<p><strong>Location Services</strong> is the framework that allows Apple devices to determine their geographical position.</p>\n<p>Inputs used for positioning:</p>\n<ul>\n<li>\n<p><strong>GPS/GLONASS</strong> : Satellite signals (most accurate outdoors).</p>\n</li>\n<li>\n<p><strong>Wi-Fi</strong> : Triangulation based on known Wi-Fi hotspot locations.</p>\n</li>\n<li>\n<p><strong>Cellular</strong> : Proximity to cell towers.</p>\n</li>\n<li>\n<p><strong>iBeacons</strong> : Micro-location awareness indoors.</p>\n</li>\n</ul>\n<p><strong>MDM Policy</strong> : For school-owned devices, administrators often force Location Services to be <strong>“On”</strong> to ensure that <strong>Lost Mode</strong> functions correctly if a device goes missing.</p>\n",
+    "analogy": "<p>Think of this as your device’s <strong>“Digital Map and Radar.”</strong> When it’s on, your iPad always knows exactly where it is in the world. For the school, this is like having a <strong>“Safety Tracker.”</strong> If you lose your iPad in a park or forget it in a classroom, the IT team can look at a map to see exactly where it is so they can go pick it up and return it to you.</p>\n",
+    "category": ["Apple", "Core"],
+    "tags": []
+  },
+  {
+    "term": "Lost Mode",
+    "definition": "<p><strong>Lost Mode</strong> is a powerful recovery protocol available for supervised iOS and iPadOS devices.</p>\n<p>When activated by IT:</p>\n<ul>\n<li>\n<p><strong>Lock Down</strong> : The device is immediately locked and cannot be unlocked by the user.</p>\n</li>\n<li>\n<p><strong>Messaging</strong> : A custom message (e.g., “Property of School - Call 555-0199”) is displayed on the Lock Screen.</p>\n</li>\n<li>\n<p><strong>Tracking</strong> : The device begins reporting its GPS coordinates to the MDM server, even if Location Services were previously disabled.</p>\n</li>\n<li>\n<p><strong>Privacy</strong> : Personal data remains encrypted and inaccessible during the lock state.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as a <strong>“Remote Digital Handcuff.”</strong> If a student leaves their iPad on a bus, IT can press a button to instantly freeze it. The screen will display a “Return to…” message, and the iPad will start shouting its location to the school’s map.</p>\n<p>It renders the device completely useless to a thief while helping the school get it back safely.</p>\n",
+    "category": ["Security"],
+    "tags": []
+  },
+  {
+    "term": "MAC Address",
+    "definition": "<p>A <strong>MAC Address</strong> (Media Access Control Address) is the unique hardware identifier assigned to a network interface (Wi-Fi or Ethernet card).</p>\n<p>Privacy developments:</p>\n<ul>\n<li>\n<p><strong>Hardware MAC</strong> : The permanent, physical ID burned into the chip.</p>\n</li>\n<li>\n<p><strong>Private Wi-Fi Address</strong> : A feature where the device generates a <strong>randomized</strong> MAC address for each Wi-Fi network it joins. This prevents tracking across different locations (e.g., a coffee shop cannot see that the same device visited yesterday).</p>\n</li>\n</ul>\n<p><strong>MDM Impact</strong> : Schools often need to disable “Private Wi-Fi Address” on their internal networks so they can reliably identify and filter specific devices.</p>\n",
+    "analogy": "<p>Think of this as the <strong>“Fingerprint”</strong> of your device’s Wi-Fi card.</p>\n<p>Technically, every device has a unique fingerprint. However, to stop strangers from tracking your movements as you visit different shops, your device now wears <strong>“Digital Gloves”</strong> (Private Wi-Fi Address).</p>\n<p>Every time you enter a new building, you put on a different pair of gloves, so the network sees a different print and can’t trace it back to the real you.</p>\n",
+    "category": ["Network"],
+    "tags": []
+  },
+  {
+    "term": "Managed App Framework",
+    "definition": "<p>The <strong>Managed App Framework</strong> (announced at WWDC 2025) is the modern successor to the legacy “Managed App Configuration” standard.</p>\n<p>Capabilities:</p>\n<ul>\n<li>\n<p><strong>Dynamic Updates</strong> : Allows apps to receive configuration changes (settings, server URLs) in real-time without needing a restart.</p>\n</li>\n<li>\n<p><strong>Secure Channel</strong> : Establishes a direct, encrypted pipeline between the MDM and the app for delivering sensitive items like identity certificates.</p>\n</li>\n<li>\n<p><strong>Pull Model</strong> : Apps can proactively request updated settings from the system, rather than waiting passively for a push.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>In the past, giving an app its settings was like <strong>“Leaving a note in a mailbox”</strong> —the app could only read the note when it first opened.</p>\n<p>The new <strong>Managed App Framework</strong> is more like <strong>“Instant Messaging.”</strong> The app can talk to the school system <em>while</em> you are using it to get the latest security updates or server changes instantly. It’s faster, safer, and means your apps are always set up perfectly without you having to restart them.</p>\n",
+    "category": ["DDM"],
+    "tags": []
+  },
+  {
+    "term": "Managed Apple Account",
+    "definition": "<p>A <strong>Managed Apple Account</strong> (formerly known as Managed Apple ID) is a professional identity owned and governed by the organization, not the individual.</p>\n<p>Key differences from personal IDs:</p>\n<ul>\n<li>\n<p><strong>Ownership</strong> : Created and managed in bulk through <strong>Apple School Manager (ASM)</strong> or Apple Business Manager.</p>\n</li>\n<li>\n<p><strong>Services</strong> : Provides access to core collaboration tools like iCloud Drive, Notes, and Schoolwork/Classroom.</p>\n</li>\n<li>\n<p><strong>Restrictions</strong> : Users cannot make private App Store purchases, and features like “Find My” are disabled (organizations use MDM Lost Mode instead).</p>\n</li>\n<li>\n<p><strong>Federation</strong> : Can be linked to Microsoft Azure or Google Workspace so students use their existing school email password to sign in.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as your <strong>“Official School ID Card”</strong> for the digital world.</p>\n<p>Just like your school email address belongs to the school, this specific Apple account belongs to the school too. It is strictly for school work, storing your class files, and using school apps.</p>\n<p>Because the school owns it, they can help you if you forget your password, but you shouldn’t use it for your personal TikTok or for buying personal games.</p>\n",
+    "category": ["Apple"],
+    "tags": []
+  },
+  {
+    "term": "Managed Classes",
+    "definition": "<p><strong>Managed Classes</strong> are pedagogical groupings defined within the MDM or synchronized from Apple School Manager.</p>\n<p>Data structure includes:</p>\n<ul>\n<li>\n<p><strong>Roster</strong> : A list of student Managed Apple IDs and their assigned devices.</p>\n</li>\n<li>\n<p><strong>Instructors</strong> : The teacher(s) authorized to manage these specific students.</p>\n</li>\n<li>\n<p><strong>Schedule</strong> : Timeframes when the class is active (optional).</p>\n</li>\n<li>\n<p><strong>Automation</strong> : This data automatically populates the <strong>Apple Classroom</strong> app, allowing teachers to view screens and launch apps for their students without manual setup.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as your <strong>“Digital Class Register.”</strong> When a teacher walks into a room and opens the Apple Classroom app, the system has already organized everything: the names of the 30 students for that specific period and their iPad connection details are all loaded and ready to go.</p>\n<p>The teacher operates the “dashboard” to instantly have the whole class open a textbook or check if anyone is playing a game, without having to manually type in serial numbers or names.</p>\n",
+    "category": ["Education", "Jamf"],
+    "tags": []
+  },
+  {
+    "term": "Managed Device Attestation",
+    "definition": "<p><strong>Managed Device Attestation</strong> is a high-security feature that cryptographically verifies the identity and integrity of a device.</p>\n<p>How it works:</p>\n<ul>\n<li>\n<p><strong>Secure Enclave</strong> : The device uses its built-in hardware security chip to generate a cryptographic key.</p>\n</li>\n<li>\n<p><strong>Apple Server</strong> : This key is sent to Apple’s attestation servers to verify that the device is a genuine Apple product (not a hackintosh or simulator) and has not been compromised.</p>\n</li>\n<li>\n<p><strong>Outcome</strong> : The device receives a “certificate of authenticity” that it presents to the MDM or Wi-Fi network to gain access.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as <strong>“Digital Biometric Verification”</strong> for the device itself.</p>\n<p>In the past, the system just asked for an “ID Card” (the serial number), which could be forged. Now, the system asks for a <strong>“Fingerprint”</strong> or <strong>“DNA Scan”</strong> of the machine’s actual hardware.</p>\n<p>It proves beyond a doubt that the device is a real, physical iPad following the rules, and not an impostor or a fake computer program pretending to be a school device.</p>\n",
+    "category": ["Security"],
+    "tags": []
+  },
+  {
+    "term": "Managed Open In",
+    "definition": "<p><strong>Managed Open In</strong> is a foundational Data Loss Prevention (DLP) for iOS and iPadOS.</p>\n<p>Functionality:</p>\n<ul>\n<li>\n<p><strong>Separation</strong> : It creates a virtual wall between “Managed Apps” (installed by the school) and “Unmanaged Apps” (installed by the user).</p>\n</li>\n<li>\n<p><strong>Restriction</strong> : Administrators can prevent school documents (e.g., from Managed Mail) from being opened in personal apps (e.g., WhatsApp or personal Dropbox).</p>\n</li>\n<li>\n<p><strong>Flow Control</strong> : Conversely, it can also prevent personal data from entering corporate apps to maintain a sterile work environment.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>This is the school’s <strong>“Data Boundary Rule.”</strong> It’s like saying, “You can use these confidential school documents on the school’s official desks ( <strong>Managed Apps</strong> ), but you are strictly forbidden from taking those documents over to the coffee shop across the street ( <strong>Personal Apps</strong> ).”</p>\n<p>It ensures that sensitive school secrets and student grades stay safely inside the school’s “fenced” digital garden.</p>\n",
+    "category": ["Security"],
+    "tags": []
+  },
+  {
+    "term": "MDM (Mobile Device Management)",
+    "definition": "<p><strong>Mobile Device Management (MDM)</strong> is the standard framework for managing Apple hardware in an organization.</p>\n<p>Core capabilities:</p>\n<ul>\n<li>\n<p><strong>Configuration</strong> : Pushing settings for Wi-Fi, Email, and VPN.</p>\n</li>\n<li>\n<p><strong>Security</strong> : Enforcing passcodes, encryption, and restricting features like the camera.</p>\n</li>\n<li>\n<p><strong>Deployment</strong> : Installing and updating apps and books remotely.</p>\n</li>\n<li>\n<p><strong>Inventory</strong> : Reporting on device status, OS version, and installed software.</p>\n</li>\n</ul>\n<p>MDM relies on the Apple Push Notification service (APNs) to maintain constant contact with devices.</p>\n",
+    "analogy": "<p>Think of MDM as a <strong>“Remote Control for the School District.”</strong> Instead of an IT person having to physically touch and configure every single student’s iPad one by one, they have a centralized dashboard.</p>\n<p>If a new library app is needed or a security update is released, the school can <strong>“broadcast”</strong> these changes to hundreds of devices at once, ensuring every student has the exact same set of tools ready for class.</p>\n",
+    "category": ["Core"],
+    "tags": []
+  },
+  {
+    "term": "MDM Profile",
+    "definition": "<p>The <strong>MDM Profile</strong> (Mobile Device Management Profile) is the critical configuration file that establishes trust between a device and the management server.</p>\n<p>Its lifecycle:</p>\n<ul>\n<li>\n<p><strong>Installation</strong> : Marks the official “Enrollment” of the device. Grants the MDM server permission to send commands.</p>\n</li>\n<li>\n<p><strong>Operation</strong> : Acts as the conduit for all subsequent settings (Wi-Fi, apps, restrictions).</p>\n</li>\n<li>\n<p><strong>Removal</strong> : If this single profile is removed, the trust relationship is broken. All managed settings, managed apps, and secure certificates are immediately wiped from the device.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as the device’s <strong>“Employment Contract.”</strong> By installing this profile, the device agrees to follow the school’s rules in exchange for getting access to school resources (like an ID card, office keys, and a desk).</p>\n<p>If you <strong>“tear up the contract”</strong> (remove the profile), you are no longer an employee. You have to immediately give back your ID card and keys—meaning all your school apps and Wi-Fi access disappear instantly.</p>\n",
+    "category": ["Core"],
+    "tags": []
+  },
+  {
+    "term": "mDNS (Multicast DNS)",
+    "definition": "<p><strong>Multicast DNS (mDNS)</strong> is the underlying “zero-configuration” network protocol that powers Apple’s <strong>Bonjour</strong> service.</p>\n<p>How it works:</p>\n<ul>\n<li>\n<p><strong>Discovery</strong> : Devices use UDP port 5353 to broadcast their availability on the local network.</p>\n</li>\n<li>\n<p><strong>Resolution</strong> : It allows devices to translate local hostnames (like <code>My-iPad.local</code>) into IP addresses without a central DNS server.</p>\n</li>\n<li>\n<p><strong>Challenge</strong> : By default, mDNS signals do not cross between different network subnets (VLANs). In large schools, IT creates an <strong>“mDNS Gateway”</strong> or <strong>“Bonjour Reflector”</strong> to allow AirPlay and AirPrint to work across the entire campus.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as a <strong>“Local PA System”</strong> for computers.</p>\n<p>Devices use this to shout, “I’m a printer in Hallway A!” or “I’m an AirPlay screen in Room 302!” to anyone nearby who is listening.</p>\n<p>Because it’s a “local shout,” the signal usually can’t be heard in other buildings or floors unless the school’s <strong>“Sound Engineers”</strong> (the network team) set up a special relay system to broadcast the message further.</p>\n",
+    "category": ["Network"],
+    "tags": []
+  },
+  {
+    "term": "N-1 Strategy",
+    "definition": "<p>An <strong>N-1 Strategy</strong> is a standard IT policy for defining software support lifecycles.</p>\n<p>The formula:</p>\n<ul>\n<li>\n<p><strong>N</strong> : The current, latest major version of the operating system (e.g., iOS 18).</p>\n</li>\n<li>\n<p><strong>N-1</strong> : The immediately preceding major version (e.g., iOS 17).</p>\n</li>\n</ul>\n<p><strong>Policy</strong> : IT commits to fully supporting only these two versions. Devices running older software ( <strong>N-2</strong> , e.g., iOS 16) are considered “End of Life” for support purposes. They may still work, but IT will not troubleshoot issues or guarantee that new apps will function on them.</p>\n",
+    "analogy": "<p>Think of this as the <strong>“Manufacturer’s Warranty”</strong> for software.</p>\n<p>Just as a car company might keep spare parts for the newest model and the previous one, software companies (and school IT) focus their energy on the current version and the one just before it.</p>\n<p>If your iPad is running a system that is 3 or 4 years old, it’s like driving a vintage car—parts are hard to find, and the mechanic might not be able to fix it anymore.</p>\n",
+    "category": ["Core"],
+    "tags": []
+  },
+  {
+    "term": "Network Extension URL Filtering API",
+    "definition": "<p>The <strong>Network Extension URL Filtering API</strong> is a modern, privacy-preserving framework in iOS and macOS for content filtering.</p>\n<p>Key advantages over legacy VPNs:</p>\n<ul>\n<li>\n<p><strong>Performance</strong> : Filtering happens directly on the device’s network stack, eliminating the bottleneck of routing traffic through a tunnel.</p>\n</li>\n<li>\n<p><strong>Privacy</strong> : The API evaluates web requests (URLs) without needing to decrypt the actual data packets (SSL Inspection), maintaining user privacy.</p>\n</li>\n<li>\n<p><strong>Selective Blocking</strong> : Used by tools like <strong>Jamf Safe Internet</strong> to instantly block specific categories (e.g., Gambling) while allowing everything else to flow freely.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Previously, school web filtering was like a <strong>“Security Checkpoint”</strong> where every single car (piece of data) had to stop and be searched, which made traffic very slow.</p>\n<p>This new technology is like a <strong>“Smart GPS”</strong> built inside every car.</p>\n<p>The car itself knows which “roads” (websites) are dangerous and simply <strong>refuses to turn down those streets</strong> . This makes the internet faster and saves battery because the car just drives normally without waiting in line at a checkpoint.</p>\n",
+    "category": ["Network"],
+    "tags": []
+  },
+  {
+    "term": "NIST Benchmarks",
+    "definition": "<p>The <strong>NIST (National Institute of Standards and Technology) Benchmarks</strong> are a globally recognized set of cybersecurity best practices.</p>\n<p>Educational adoption:</p>\n<ul>\n<li>\n<p><strong>Baseline</strong> : Many government education departments adopt these standards as the minimum requirement for school-owned devices.</p>\n</li>\n<li>\n<p><strong>Requirements</strong> : Typically mandate a 6-digit complex passcode, automatic OS updates, 15-minute auto-lock timers, and full-disk encryption.</p>\n</li>\n<li>\n<p><strong>Compliance</strong> : MDM systems use these benchmarks to “audit” device fleets and flag any iPad that is not secure enough.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as the <strong>“Digital Safety Inspection Certificate.”</strong> Just as a school building has to pass a fire safety inspection (checking for fire extinguishers and clear exits), every iPad must pass this <strong>“Digital Inspection”</strong> to prove it is safe enough for students to use.</p>\n<p>It ensures that the tablet has strong locks, stays up-to-date, and keeps your private work safe from hackers, just like a building code keeps you safe from fires.</p>\n",
+    "category": ["Security", "Education"],
+    "tags": []
+  },
+  {
+    "term": "Notarization",
+    "definition": "<p><strong>Notarization</strong> is an automated security screening system provided by Apple for macOS software distributed outside the App Store.</p>\n<p>The process:</p>\n<ol>\n<li>\n<p><strong>Submission</strong> : A developer sends their app to Apple’s notarization service.</p>\n</li>\n<li>\n<p><strong>Scan</strong> : Apple scans the code for known malware and security issues (but does not review the content).</p>\n</li>\n<li>\n<p><strong>Ticket</strong> : If clean, Apple issues a digital “ticket” (stapled to the app).</p>\n</li>\n<li>\n<p><strong>Execution</strong> : When a user opens the app, macOS <strong>Gatekeeper</strong> checks for this ticket. If present, the app is allowed to run. If missing, it is blocked.</p>\n</li>\n</ol>\n",
+    "analogy": "<p>Think of this as a <strong>“Certificate of Good Health”</strong> for software.</p>\n<p>Just as food is inspected for safety before it reaches the supermarket shelf, Apple inspects software for “viruses” and “bugs.”</p>\n<p>If it passes the inspection, it gets a <strong>“Safety Seal”</strong> (the notarization). When you try to open the app, your Mac checks for that seal to make sure it’s safe for you to eat (use).</p>\n",
+    "category": ["Security"],
+    "tags": []
+  },
+  {
+    "term": "OIDC (OpenID Connect)",
+    "definition": "<p><strong>OpenID Connect (OIDC)</strong> is a modern identity authentication protocol built on top of the OAuth 2.0 framework.</p>\n<p>Key features:</p>\n<ul>\n<li>\n<p><strong>Standard</strong> : Used by major providers like Google, Microsoft, and Okta.</p>\n</li>\n<li>\n<p><strong>Workflow</strong> : It allows a client (like an iPad or Jamf Connect) to verify the identity of a user based on authentication performed by an authorization server.</p>\n</li>\n<li>\n<p><strong>Tokens</strong> : Instead of sending actual passwords back and forth, it uses secure “ID Tokens,” reducing the risk of password theft.</p>\n</li>\n<li>\n<p><strong>MFA</strong> : Natively supports Multi-Factor Authentication workflows.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as the <strong>“Global Digital Passport”</strong> for the internet.</p>\n<p>Instead of having to create a new name and password for every single school website or app, OIDC is the technology that lets you use your one <strong>“Official ID”</strong> (your Google or Microsoft account).</p>\n<p>Once you show your ID once, you get a <strong>“Visitor’s Badge”</strong> (a Token) that lets you walk into all the school’s other “Digital Rooms” without having to stop and show your ID card again at every single door.</p>\n",
+    "category": ["Security"],
+    "tags": []
+  },
+  {
+    "term": "OTA (Over-The-Air)",
+    "definition": "<p><strong>Over-the-Air (OTA)</strong> refers to the wireless transmission method used to distribute software updates, settings, and commands to devices.</p>\n<p>Operational benefits:</p>\n<ul>\n<li>\n<p><strong>No Cables</strong> : Eliminates the need to physically connect devices to a computer (like Apple Configurator) via USB.</p>\n</li>\n<li>\n<p><strong>Remote Management</strong> : Allows IT to manage devices that are off-campus, such as iPads being used for homework at a student’s house.</p>\n</li>\n<li>\n<p><strong>Efficiency</strong> : Enables simultaneous updates to thousands of devices across a network without manual intervention.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>This is <strong>“Wireless Magic.”</strong> In the old days, if you wanted to update a phone or install a program, you had to plug it into a computer with a cable and wait.</p>\n<p>Now, the “updates” just <strong>fly through the air</strong> and land on your device automatically. As long as you have Wi-Fi, the school’s IT team can fix problems or give you new apps without ever having to touch your iPad.</p>\n",
+    "category": ["Core"],
+    "tags": []
+  },
+  {
+    "term": "Package (.pkg)",
+    "definition": "<p>A <strong>Package (.pkg)</strong> is the standard flat-file installation format for macOS software deployment.</p>\n<p>Components:</p>\n<ul>\n<li>\n<p><strong>Payload</strong> : The actual files (apps, fonts, scripts) to be installed.</p>\n</li>\n<li>\n<p><strong>Scripts</strong> : “Pre-install” and “Post-install” scripts that run commands to set up the environment (e.g., activate a license key).</p>\n</li>\n<li>\n<p><strong>Receipts</strong> : A record left on the Mac so the system knows what was installed.</p>\n</li>\n</ul>\n<p><strong>MDM Usage</strong> : Admins wrap complex software (like Microsoft Office or Adobe Creative Cloud) into PKG files to deploy them silently to thousands of Macs at once.</p>\n",
+    "analogy": "<p>Think of this as a <strong>“Digital IKEA Box.”</strong> It doesn’t just contain the furniture (the software); it also includes the tools and an <strong>“Instruction Manual”</strong> (scripts) for the computer.</p>\n<p>When the school sends this box to a Mac, the Mac opens it, reads the manual, and puts every piece in exactly the right place automatically—building the furniture while the student is busy doing something else.</p>\n",
+    "category": ["macOS"],
+    "tags": []
+  },
+  {
+    "term": "Passcode Policy",
+    "definition": "<p>A <strong>Passcode Policy</strong> is an MDM payload that defines the mandatory password requirements for a managed device.</p>\n<p>Configurable rules:</p>\n<ul>\n<li>\n<p><strong>Complexity</strong> : Determine if the code can be simple logic (4 digits) or must be complex (alphanumeric).</p>\n</li>\n<li>\n<p><strong>History</strong> : Prevent users from reusing old passwords (e.g., “Cannot use previous 5 passwords”).</p>\n</li>\n<li>\n<p><strong>Age</strong> : Force users to change their password every X days (e.g., 90 days).</p>\n</li>\n<li>\n<p><strong>Attempts</strong> : Set the maximum number of failed attempts before the device is automatically wiped (e.g., 10 attempts).</p>\n</li>\n</ul>\n",
+    "analogy": "<p>A Passcode Policy is like <strong>“Setting the Standards for Classroom Keys.”</strong> Instead of letting students use a cheap, simple lock that anyone can guess (like “1234”), the school creates a rule saying every lock must be a <strong>“Heavy Duty 6-Pin Lock.”</strong> This ensures that if a student forgets their iPad on the bus, the thief can’t just guess the code, keeping the important school records inside locked up tight.</p>\n",
+    "category": ["Security", "Core"],
+    "tags": []
+  },
+  {
+    "term": "Passkeys",
+    "definition": "<p><strong>Passkeys</strong> are a next-generation authentication standard developed by Apple and the FIDO Alliance to replace traditional passwords.</p>\n<p>Security advantages:</p>\n<ul>\n<li>\n<p><strong>Biometric</strong> : Credentials are unlocked using Face ID or Touch ID, ensuring only the physical user can access them.</p>\n</li>\n<li>\n<p><strong>Cryptography</strong> : Based on public-key infrastructure (PKI). A unique key pair is generated for each account; the private key never leaves the user’s device.</p>\n</li>\n<li>\n<p><strong>Phishing Resistant</strong> : Because the user does not know a “text string” to type in, they cannot accidentally give their password to a fake website.</p>\n</li>\n<li>\n<p><strong>Recovery</strong> : Passkeys can be synchronized via iCloud Keychain, ensuring they are available across all user devices.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as <strong>“Replacing your password with your face.”</strong> Instead of having to remember and type a complicated code like “P@ssw0rd123,” your device creates a secret, un-copyable <strong>“Digital Key”</strong> just for you.</p>\n<p>When you want to log in, you simply look at the camera. It’s faster, impossible to forget, and a hacker can’t “guess” it or steal it from you because it doesn’t exist as a word you can write down.</p>\n",
+    "category": ["Security"],
+    "tags": []
+  },
+  {
+    "term": "Patch Management",
+    "definition": "<p><strong>Patch Management</strong> is the automated workflow for identifying, distributing, and installing software updates for third-party applications.</p>\n<p>Jamf Pro capabilities:</p>\n<ul>\n<li>\n<p><strong>Monitoring</strong> : Checks the fleet for vulnerable versions of common software (e.g., Google Chrome, Zoom, Microsoft Office).</p>\n</li>\n<li>\n<p><strong>Automation</strong> : Subscribes to manufacturer feeds to detect when a new version is released.</p>\n</li>\n<li>\n<p><strong>Enforcement</strong> : Automatically pushes the update package to computers that need it, minimizing the “window of vulnerability.”</p>\n</li>\n<li>\n<p><strong>Reporting</strong> : Provides real-time dashboards showing exactly which computers are patched and which are still risky.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as <strong>“Automatic Security Repairs.”</strong> When a software company finds a “hole” (a bug) in their program, they release a <strong>“patch”</strong> to fix it.</p>\n<p>IT uses Patch Management to make sure that as soon as a fix is available, it is automatically applied to every computer in the school. It’s like having a maintenance team that automatically fixes every leaky pipe in school the moment it’s found, without you having to call them.</p>\n",
+    "category": ["macOS", "Jamf"],
+    "tags": []
+  },
+  {
+    "term": "Payload",
+    "definition": "<p>A <strong>Payload</strong> is the fundamental unit of configuration within an MDM <strong>Configuration Profile</strong> .</p>\n<p>Structure:</p>\n<ul>\n<li>\n<p><strong>A Profile</strong> = The container (e.g., “Student Wi-Fi Policy”).</p>\n</li>\n<li>\n<p><strong>A Payload</strong> = The specific setting item inside that container (e.g., “The Wi-Fi Password” or “The Root Certificate”).</p>\n</li>\n</ul>\n<p>Multiple payloads can be bundled into a single profile to deliver a complete configuration (e.g., setting up Email, Wi-Fi, and VPN all at once).</p>\n",
+    "analogy": "<p>This is a <strong>“Single Instruction”</strong> inside a rulebook.</p>\n<p>If a <strong>Profile</strong> is the complete “Student Handbook,” a <strong>Payload</strong> is just one specific paragraph inside it—like “Rule 1: Use the school Wi-Fi” or “Rule 2: Don’t use the camera.”</p>\n<p>IT combines these individual instructions (payloads) into one big package (the profile) to tell the iPad exactly how to behave.</p>\n",
+    "category": ["Core"],
+    "tags": []
+  }
+]

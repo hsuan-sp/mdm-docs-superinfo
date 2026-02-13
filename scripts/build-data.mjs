@@ -76,23 +76,23 @@ function logger(msg, type = "INFO") {
 
 const SOURCE_TITLE_MAP = {
   zh: {
-    "account": "帳號與伺服器",
-    "enrollment": "裝置部署",
-    "apps": "App 與內容",
-    "classroom": "課堂管理",
+    account: "帳號與伺服器",
+    enrollment: "裝置部署",
+    apps: "App 與內容",
+    classroom: "課堂管理",
     "digital-learning": "精進方案",
-    "hardware": "維修保固",
-    "mac": "Mac 管理",
+    hardware: "維修保固",
+    mac: "Mac 管理",
     "qa-education": "校園實務 Q&A",
   },
   en: {
-    "account": "Account & Server",
-    "enrollment": "Zero-Touch Deployment",
-    "apps": "Apps & Content",
-    "classroom": "Classroom Tools",
+    account: "Account & Server",
+    enrollment: "Zero-Touch Deployment",
+    apps: "Apps & Content",
+    classroom: "Classroom Tools",
     "digital-learning": "Digital Initiative",
-    "hardware": "Service & Support",
-    "mac": "Mac Management",
+    hardware: "Service & Support",
+    mac: "Mac Management",
     "qa-education": "Campus Case Q&A",
   },
 };
@@ -124,7 +124,7 @@ function generate() {
       if (fs.existsSync(glossaryDir)) {
         const files = fs
           .readdirSync(glossaryDir)
-          .filter((f) => f.endsWith(".md"));
+          .filter((f) => f.endsWith(".mdx"));
         const terms = files
           .map((file) => {
             try {
@@ -146,7 +146,7 @@ function generate() {
               const analogy = parts[1] ? parts[1].trim() : "";
 
               return {
-                term: String(data.term || path.basename(file, ".md")),
+                term: String(data.term || path.basename(file, ".mdx")),
                 definition: renderMarkdown(definition),
                 analogy: renderMarkdown(analogy),
                 category: data.category || [],
@@ -186,7 +186,7 @@ function generate() {
       QA_ORDER.forEach((slug) => {
         const dir = path.join(rootDir, "qa", slug);
         if (fs.existsSync(dir)) {
-          const files = fs.readdirSync(dir).filter((f) => f.endsWith(".md"));
+          const files = fs.readdirSync(dir).filter((f) => f.endsWith(".mdx"));
           if (files.length === 0) return;
 
           const items = files
@@ -195,8 +195,8 @@ function generate() {
                 const content = fs.readFileSync(path.join(dir, file), "utf-8");
                 const { data, content: mdBody } = matter(content);
                 return {
-                  id: String(data.id || path.basename(file, ".md")),
-                  question: String(data.title || path.basename(file, ".md")),
+                  id: String(data.id || path.basename(file, ".mdx")),
+                  question: String(data.title || path.basename(file, ".mdx")),
                   answer: renderMarkdown(mdBody.trim()),
                   important: Boolean(data.important),
                   tags: Array.isArray(data.tags)
@@ -237,7 +237,7 @@ function generate() {
       if (fs.existsSync(changelogDir)) {
         const files = fs
           .readdirSync(changelogDir)
-          .filter((f) => f.endsWith(".md"));
+          .filter((f) => f.endsWith(".mdx"));
         const logs = files
           .map((file) => {
             try {
@@ -247,7 +247,7 @@ function generate() {
               );
               const { data, content: mdBody } = matter(content);
               return {
-                version: String(data.version || path.basename(file, ".md")),
+                version: String(data.version || path.basename(file, ".mdx")),
                 date: String(
                   data.date || new Date().toISOString().split("T")[0]
                 ),

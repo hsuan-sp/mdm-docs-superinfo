@@ -1,0 +1,163 @@
+[
+  {
+    "term": "Unified Logging",
+    "definition": "<p><strong>Unified Logging</strong> is the central system for capturing and storing diagnostic messages on Apple platforms.</p>\n<p>Key features:</p>\n<ul>\n<li>\n<p><strong>Centralization</strong> : Collects logs from the kernel, drivers, and user apps into one single database.</p>\n</li>\n<li>\n<p><strong>Privacy</strong> : Automatically redacts sensitive info (like passwords) unless a special profile is installed.</p>\n</li>\n<li>\n<p><strong>Troubleshooting</strong> : Administrators use the <code>log</code> command or <strong>Console.app</strong> to view these streams. It is the definitive way to find out<em>why</em>a profile failed to install or<em>why</em> an app is crashing.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as the <strong>“Black Box Flight Recorder”</strong> for your iPad or Mac.</p>\n<p>It silently keeps a detailed diary of everything the computer is doing—from “Connected to Wi-Fi” to “Opened Calculator.”</p>\n<p>If the <strong>“plane”</strong> (your device) crashes, the <strong>“Investigators”</strong> (the tech team) look at the black box diary to see exactly what happened in the seconds before the trouble started.</p>\n",
+    "category": ["Core"],
+    "tags": []
+  },
+  {
+    "term": "Universal Binary",
+    "definition": "<p>A <strong>Universal Binary</strong> is a macOS application package that contains executable code for multiple processor architectures.</p>\n<p>Structure:</p>\n<ul>\n<li>\n<p><strong>Fat Binary</strong> : It includes code for both <strong>Intel</strong> (x86_64) and <strong>Apple Silicon</strong> (ARM64) chips inside a single app file.</p>\n</li>\n<li>\n<p><strong>Workflow</strong> : When the user double-clicks the app, macOS automatically chooses the correct code for the computer’s chip.</p>\n</li>\n<li>\n<p><strong>Benefit</strong> : Ensures the app runs at maximum native speed on an M3 MacBook Air<em>and</em>an old Intel iMac, without needing <strong>Rosetta 2</strong> .</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as a <strong>“Bilingual Book.”</strong> Instead of buying one book in English and another in French, you buy one book that has every page written in both languages side-by-side.</p>\n<p>If you are an English reader (Apple Silicon), you just read the English parts. If you are a French reader (Intel), you read the French parts. It works perfectly for everyone without needing a translator.</p>\n",
+    "category": ["macOS"],
+    "tags": []
+  },
+  {
+    "term": "Universal Control",
+    "definition": "<p><strong>Universal Control</strong> is a Continuity feature that allows a single keyboard and mouse to control multiple nearby Apple devices.</p>\n<p>Functionality:</p>\n<ul>\n<li>\n<p><strong>Zero Setup</strong> : Devices signed into the same iCloud account automatically detect each other.</p>\n</li>\n<li>\n<p><strong>Cross-Platform</strong> : A cursor can move from a Mac screen onto an iPad screen seamlessly.</p>\n</li>\n<li>\n<p><strong>Drag &amp; Drop</strong> : Files can be dragged from one device to another.</p>\n</li>\n<li>\n<p><strong>MDM Control</strong> : Schools often disable this on shared or lab computers to prevent students from accidentally (or intentionally) moving files between machines during exams.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as <strong>“Cursor Teleportation.”</strong> If you place your iPad next to your Mac, your mouse has the superpower to <strong>glide right off the edge</strong> of the computer screen and appear instantly on the iPad screen.</p>\n<p>You can even grab a photo from your iPad and drag it onto your Mac to paste it into a report. It makes your two separate devices feel like one giant, powerful workspace.</p>\n",
+    "category": ["Apple", "macOS"],
+    "tags": []
+  },
+  {
+    "term": "Update Inventory",
+    "definition": "<p><strong>Update Inventory</strong> is the standard MDM command that forces a device to refresh its data record on the server.</p>\n<p>Data points refreshed:</p>\n<ul>\n<li>\n<p><strong>Device Info</strong> : OS Version, Battery Level, Storage usage.</p>\n</li>\n<li>\n<p><strong>Apps</strong> : List of all installed applications and versions.</p>\n</li>\n<li>\n<p><strong>Security</strong> : Current status of Passcode, Encryption, and System Integrity Protection.</p>\n</li>\n<li>\n<p><strong>Profiles</strong> : List of installed configuration profiles.</p>\n</li>\n</ul>\n<p>This command is the “heartbeat” of management; if a device hasn’t updated its inventory in 30 days, the data on the server is considered stale and unreliable.</p>\n",
+    "analogy": "<p>Think of this as a <strong>“Digital Roll Call.”</strong> Just like a teacher needs to scan the room to count the students and check if everyone has their textbooks ready before starting a lesson, the tech office sends this command to <strong>count all your apps</strong> and check your iPad’s health.</p>\n<p>It ensures the school’s records are 100% accurate and up-to-date.</p>\n",
+    "category": ["Core"],
+    "tags": []
+  },
+  {
+    "term": "USB-C",
+    "definition": "<p><strong>USB-C</strong> is the universal connector standard used by modern Apple devices (iPad 10+, MacBook, iPhone 15+).</p>\n<p>Capabilities:</p>\n<ul>\n<li>\n<p><strong>Power</strong> : High-wattage charging (Power Delivery).</p>\n</li>\n<li>\n<p><strong>Data</strong> : High-speed file transfer (up to 40Gbps with Thunderbolt).</p>\n</li>\n<li>\n<p><strong>Video</strong> : Connects directly to projectors and monitors.</p>\n</li>\n<li>\n<p><strong>Accessories</strong> : Supports ethernet dongles, microphones, and hard drives.</p>\n</li>\n</ul>\n<p><strong>MDM Context</strong> : Because USB-C makes it so easy to plug in flash drives, schools often use <strong>“USB Restricted Mode”</strong> profiles to stop students from copying school data onto personal drives.</p>\n",
+    "analogy": "<p>Think of this as the <strong>“Universal Connection Hole.”</strong> In the old days, you had different cables for charging (Lightning), connecting to a screen (HDMI), and moving files (USB-A). Now, one single <strong>USB-C</strong> port does it all.</p>\n<p>It’s faster, the cable works even if you flip it upside down, and it makes it much easier to keep your iPad charged and ready for the school day.</p>\n",
+    "category": ["Hardware"],
+    "tags": []
+  },
+  {
+    "term": "User Approved MDM",
+    "definition": "<p><strong>User Approved MDM (UAMDM)</strong> is a trusted status for macOS enrollments.</p>\n<p>Distinction:</p>\n<ul>\n<li>\n<p><strong>Automated Enrollment</strong> : Automatically “User Approved” because the device was registered by the organization (Apple Business Manager).</p>\n</li>\n<li>\n<p><strong>Manual Enrollment</strong> : If a user manually installs a profile, they<em>must</em> also go into System Settings and click “Approve” to grant UAMDM status.</p>\n</li>\n<li>\n<p><strong>Privileges</strong> : Only UAMDM devices can accept sensitive security payloads (like Kernel Extensions or Full Disk Access controls) silently. Without this status, the MDM is considered “Untrusted” for deep system changes.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as a <strong>“Certificate of High Trust.”</strong> If you hire a cleaner for your house, they can clean the windows. But if you want to give them the keys to the <strong>Main Security Gate</strong> , you need to sign a special legal document saying, <strong>“Yes, I trust them completely.”</strong> User Approved MDM is that signature. Without it, the MDM can only do basic cleaning; it’s not allowed to touch the locks.</p>\n",
+    "category": ["Enrollment", "macOS"],
+    "tags": []
+  },
+  {
+    "term": "User Enrollment",
+    "definition": "<h2>Definition</h2>\n<p>User Enrollment is a specialized MDM onboarding mode designed specifically for <strong>Bring Your Own Device (BYOD)</strong> programs. It creates a dedicated “managed volume” for school data (such as school email and managed apps) that is completely separate from the user’s personal data. The school’s IT department has NO access to the user’s personal photos, messages, or apps, and the user can unenroll their device at any time to remove all school data instantly.</p>\n<h2>Plain English</h2>\n<p>This is the “Church and State” of device management. It’s like having a secure “School Locker” inside your personal phone. The school can see and manage what’s inside the locker (your school work and email), but it’s completely impossible for them to see what’s in the rest of your phone. Your private photos and games stay 100% private, and the school can’t even “remote wipe” your personal device.</p>\n",
+    "analogy": "",
+    "category": ["Enrollment"],
+    "tags": []
+  },
+  {
+    "term": "User-Initiated Enrollment (UIE)",
+    "definition": "<p><strong>User-Initiated Enrollment (UIE)</strong> is a voluntary onboarding workflow for Apple devices.</p>\n<p>Characteristics:</p>\n<ul>\n<li>\n<p><strong>Trigger</strong> : The user manually visits an enrollment URL or scans a QR code.</p>\n</li>\n<li>\n<p><strong>Ownership</strong> : Often implies the device is “User Owned” (BYOD), though sometimes used for organization-owned devices that were not purchased via Apple/Reseller channels.</p>\n</li>\n<li>\n<p><strong>Supervision</strong> : By default, UIE devices are <strong>not</strong> Supervised (unless enrolled via Apple Configurator).</p>\n</li>\n<li>\n<p><strong>Control</strong> : The user retains the ability to remove the MDM profile (and thus unenroll the device) at any time.</p>\n</li>\n</ul>\n<p><strong>Education Context</strong> : Generally not recommended for student-owned 1:1 programs because students can easily remove the management profile to bypass restrictions.</p>\n",
+    "analogy": "<p>This is a <strong>“Voluntary Enrollment Plan.”</strong> Instead of the school “drafting” the iPad into service automatically (the ADE method), the student chooses to sign up for school management themselves.</p>\n<p>However, because it’s voluntary, the student can also choose to <strong>“quit”</strong> the plan at any time, meaning the school’s security rules will stop working the moment they decide to leave.</p>\n",
+    "category": ["Enrollment"],
+    "tags": []
+  },
+  {
+    "term": "VLAN",
+    "definition": "<h2>Definition</h2>\n<p>A Virtual Local Area Network (VLAN) is a logical subnetwork within a physical network. Schools often use VLANs to separate different types of traffic—such as “Academic Network,” “Administrative Network,” and “Guest Wi-Fi”—onto their own isolated channels. This prevents “broadcast noise” from slowing down the network and ensures that guests cannot access sensitive school servers.</p>\n<h2>Plain English</h2>\n<p>Think of this as “Invisible Walls” inside your network cable. Even though everyone is using the same physical “Internet Pipe,” the VLANs act like dividers that slice the pipe into several smaller, private tunnels. Water in Tunnel A (the guest Wi-Fi) can never leak into Tunnel B (the school’s private exam server), keeping everything organized and secure.</p>\n",
+    "analogy": "",
+    "category": ["Network"],
+    "tags": []
+  },
+  {
+    "term": "Volume Owner",
+    "definition": "<p>The <strong>Volume Owner</strong> is a security designation within the macOS architecture on Apple Silicon (M-series) Macs.</p>\n<p>Privileges:</p>\n<ul>\n<li>\n<p><strong>Exclusivity</strong> : Only a Volume Owner can authorize software updates, modify startup security settings (e.g., enable booting from external drives), or authorize a factory reset in Recovery Mode.</p>\n</li>\n<li>\n<p><strong>Creation</strong> : The first user to claim the Mac setup becomes the first Volume Owner.</p>\n</li>\n<li>\n<p><strong>MDM Role</strong> : MDM uses a <strong>Bootstrap Token</strong> to act as a “Virtual Volume Owner,” allowing it to push updates and manage security without needing the physical user’s password.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as the <strong>“Homeowner with the Title Deed.”</strong> Even if many people live in a house (the Mac), only the legal owner has the right to renovate the kitchen or change the front door locks.</p>\n<p>If you aren’t the official <strong>“Volume Owner,”</strong> the Mac will refuse to let you install a major system update or change its deepest security settings, making the machine much harder to “break” or hack.</p>\n",
+    "category": ["Security"],
+    "tags": []
+  },
+  {
+    "term": "VPP (Volume Purchase Program)",
+    "definition": "<p><strong>VPP (Volume Purchase Program)</strong> is the Apple licensing framework for bulk app and book distribution.</p>\n<p>Mechanics:</p>\n<ul>\n<li>\n<p><strong>Ownership</strong> : The organization buys the licenses (e.g., 500 copies of Procreate), not the user.</p>\n</li>\n<li>\n<p><strong>Distribution</strong> : Licenses are assigned to devices or Apple IDs via MDM (“Managed Distribution”).</p>\n</li>\n<li>\n<p><strong>Revocation</strong> : If a student leaves or graduates, the school can <strong>revoke</strong> the license and reclaim it to the central pool, ready to be assigned to a new incoming student.</p>\n</li>\n<li>\n<p><strong>Cost</strong> : Eliminates the need to repurchase software every year.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as the school’s <strong>“Digital Library.”</strong> Instead of every student having to use their own money to buy a textbook, the school buys 500 copies. The school <strong>“lends”</strong> a copy to each student.</p>\n<p>When the school year is over, the school <strong>“takes the book back”</strong> electronically and puts it back on the shelf, ready for the next class to use.</p>\n",
+    "category": ["Apple"],
+    "tags": []
+  },
+  {
+    "term": "Web Clip",
+    "definition": "<p>A <strong>Web Clip</strong> is a configuration profile payload that places a website shortcut on an iOS or iPadOS Home Screen.</p>\n<p>Features:</p>\n<ul>\n<li>\n<p><strong>Appearance</strong> : Looks exactly like a regular app icon.</p>\n</li>\n<li>\n<p><strong>Function</strong> : When tapped, it launches Safari (or a dedicated full-screen web view) directly to a specified URL.</p>\n</li>\n<li>\n<p><strong>Customization</strong> : IT can define the icon image, the display name, and whether the clip is removable by the user.</p>\n</li>\n<li>\n<p><strong>Use Case</strong> : Commonly used for quick access to school portals, library catalogs, or IT help desks.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as a <strong>“Smart Bookmark.”</strong> Instead of having to open a browser and type in a long address for the school’s learning website, IT places a special <strong>Button</strong> on your iPad that looks just like an app.</p>\n<p>You tap it, and it <strong>teleports</strong> you straight to the correct website instantly. It’s a great time-saver for students.</p>\n",
+    "category": ["Apps"],
+    "tags": []
+  },
+  {
+    "term": "Wi-Fi 5",
+    "definition": "<p><strong>Wi-Fi 5</strong> (IEEE 802.11ac) is an older wireless standard introduced in 2014, operating exclusively in the 5 GHz frequency band.</p>\n<p>Key characteristics:</p>\n<ul>\n<li>\n<p><strong>Speed</strong> : significantly faster than Wi-Fi 4 (802.11n), allowing for HD video streaming.</p>\n</li>\n<li>\n<p><strong>MU-MIMO</strong> : Introduced the ability for routers to talk to multiple devices simultaneously (Wave 2), though less efficiently than Wi-Fi 6.</p>\n</li>\n<li>\n<p><strong>Legacy Status</strong> : While still functional, it struggles in high-density environments like modern classrooms where every student has a device.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as a <strong>“Wide Highway.”</strong> Before Wi-Fi 5 (Wi-Fi 4), we drove on narrow country roads (2.4 GHz). Wi-Fi 5 built a <strong>wide, fast highway</strong> (5 GHz) that allowed cars to drive much faster.</p>\n<p>However, as more cars (Ipads) joined the road, the highway started to get congested because the traffic lights (router) weren’t smart enough to manage the flow efficiently.</p>\n",
+    "category": ["Network"],
+    "tags": []
+  },
+  {
+    "term": "Wi-Fi 6",
+    "definition": "<p><strong>Wi-Fi 6</strong> (IEEE 802.11ax) is the wireless standard that succeeded Wi-Fi 5, focusing on <strong>efficiency</strong> and capacity in crowded environments rather than just raw peak speed.</p>\n<p>Key improvements for schools:</p>\n<ul>\n<li>\n<p><strong>OFDMA</strong> : Allows one transmission to deliver data to multiple devices at once (like a delivery truck making multiple stops), reducing latency in classrooms with 30+ iPads.</p>\n</li>\n<li>\n<p><strong>Target Wake Time (TWT)</strong> : Allows devices to “sleep” and wake up only when scheduled to send data, significantly saving battery life on iPads and MacBooks.</p>\n</li>\n<li>\n<p><strong>BSS Coloring</strong> : Reduces interference from neighboring classrooms’ Wi-Fi networks.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as a <strong>“Smart Bus System.”</strong></p>\n<p><strong>Wi-Fi 5</strong> was like a fleet of cars carrying one person each. If 30 students needed data, 30 cars had to line up, causing a traffic jam. <strong>Wi-Fi 6</strong> uses <strong>OFDMA</strong> , which is like a <strong>bus</strong> . One bus can pick up data for 30 students at once and deliver it in a single trip. The road is less crowded, and everyone gets to their destination (website) smoother and faster, even during a busy lesson.</p>\n",
+    "category": ["Network"],
+    "tags": []
+  },
+  {
+    "term": "Wi-Fi 6E",
+    "definition": "<p><strong>Wi-Fi 6E</strong> is the extension of the Wi-Fi 6 standard into the 6 GHz frequency band.</p>\n<p>Advantages for schools:</p>\n<ul>\n<li>\n<p><strong>Spectrum</strong> : Adds huge amounts of new “airspace” (1200 MHz) exclusively for 6E devices, avoiding interference from older Wi-Fi 5 devices.</p>\n</li>\n<li>\n<p><strong>Speed</strong> : Supports <strong>160MHz channels</strong> , effectively doubling the throughput for compatible devices (iPad Pro M2+, MacBook Pro M2+).</p>\n</li>\n<li>\n<p><strong>Latency</strong> : Significantly reduces lag, critical for AR/VR applications and high-density classroom testing.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as <strong>“Adding a Double-Decker Express Highway”</strong> to the school’s internet.</p>\n<p>Most Wi-Fi works on “crowded local streets.” Wi-Fi 6E opens up a brand-new, wider highway where modern iPads can travel twice as fast without getting stuck in <strong>“internet traffic”</strong> caused by older phones and laptops.</p>\n<p>It makes downloading large textbooks and projects feel almost instant.</p>\n",
+    "category": ["Network"],
+    "tags": []
+  },
+  {
+    "term": "Wi-Fi 7",
+    "definition": "<p><strong>Wi-Fi 7</strong> (IEEE 802.11be) is the cutting-edge wireless standard designed for extremely high throughput and low latency.</p>\n<p>Key innovations for education:</p>\n<ul>\n<li>\n<p><strong>320MHz Channels</strong> : Doubles the bandwidth of Wi-Fi 6E, offering massive capacity for 8K video and AR/VR classrooms.</p>\n</li>\n<li>\n<p><strong>Multi-Link Operation (MLO)</strong> : Allows a device (like an iPhone 16) to connect to multiple bands (e.g., 5GHz and 6GHz)<em>simultaneously</em> to send and receive data. This dramatically reduces latency and connection drops.</p>\n</li>\n<li>\n<p><strong>4K QAM</strong> : Packs 20% more data into each signal transmission for higher peak speeds.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as a <strong>“Multi-Lane Superhighway.”</strong> Previous Wi-Fi was like a car that could only drive in one lane at a time. If that lane got jammed, you slowed down.</p>\n<p>Wi-Fi 7 with <strong>MLO</strong> is like a futuristic car that can drive on the Local Road (2.4GHz), the Highway (5GHz), and the Express Lane (6GHz) <strong>all at the same time</strong> . It splits your data across all empty lanes so you never get stuck in traffic, making it perfect for real-time virtual reality lessons.</p>\n",
+    "category": ["Network"],
+    "tags": []
+  },
+  {
+    "term": "Wi-Fi Payload",
+    "definition": "<p>A <strong>Wi-Fi Payload</strong> is the section of an MDM profile that configures wireless connectivity settings.</p>\n<p>Contents:</p>\n<ul>\n<li>\n<p><strong>SSID</strong> : The name of the network to join.</p>\n</li>\n<li>\n<p><strong>Auto-Join</strong> : Whether the device should connect automatically when in range.</p>\n</li>\n<li>\n<p><strong>Security Type</strong> : E.g., WPA2/WPA3 Personal (Password) or Enterprise (RADIUS/Certificate).</p>\n</li>\n<li>\n<p><strong>Credentials</strong> : The pre-filled password or identity certificate required to authenticate.</p>\n</li>\n</ul>\n<p>By deploying this payload, IT ensures devices connect to the secure network immediately without user intervention.</p>\n",
+    "analogy": "<p>Think of this as an <strong>“Automatic Login Sheet.”</strong> Instead of a teacher having to shout the Wi-Fi password across the room 30 times, IT <strong>“whispers”</strong> the password directly into the iPad’s memory through the MDM.</p>\n<p>The iPad <strong>“reads”</strong> the password and connects to the internet automatically, so you’re ready to start working the moment you walk into the building.</p>\n",
+    "category": ["Network"],
+    "tags": []
+  },
+  {
+    "term": "Window App",
+    "definition": "<p><strong>Window App</strong> is the advanced windowing environment introduced in iPadOS 26, evolving from Stage Manager.</p>\n<p>Capabilities:</p>\n<ul>\n<li>\n<p><strong>Floating Windows</strong> : Apps can be resized, overlapped, and moved freely, similar to macOS.</p>\n</li>\n<li>\n<p><strong>Grouping</strong> : Users can create “App Pairs” or workspaces (e.g., Safari + Notes for research) that are saved together.</p>\n</li>\n<li>\n<p><strong>External Display</strong> : Full support for extending the desktop to a monitor (up to 6K) rather than just mirroring, effectively turning the iPad into a desktop workstation.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>In the past, using apps on an iPad was like <strong>“reading one book at a time”</strong> on your lap.</p>\n<p>With <strong>Window App</strong> , using your iPad is like sitting at a <strong>“Professional Desk.”</strong> You can have your textbook open, your notepad next to it, and a calculator floating on top—all at once. You can resize them and move them around just like you do on a laptop, making homework much faster.</p>\n",
+    "category": ["Core"],
+    "tags": []
+  },
+  {
+    "term": "Wipe",
+    "definition": "<p>A <strong>Wipe</strong> (or Remote Wipe) is the MDM command to factory reset a device.</p>\n<p>Consequences:</p>\n<ul>\n<li>\n<p><strong>Deletion</strong> : Permanently erases all user data, apps, accounts, and settings.</p>\n</li>\n<li>\n<p><strong>Reset</strong> : Returns the operating system to its “out-of-box” state (“Hello” screen).</p>\n</li>\n<li>\n<p><strong>Security</strong> : Used as a last resort for lost/stolen devices to prevent data theft.</p>\n</li>\n<li>\n<p><strong>lifecycle</strong> : Used at the end of a school year to prepare an iPad for a new student.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>This is the <strong>“Digital Reset Button.”</strong> When IT sends this command, it tells the iPad to completely <strong>“forget”</strong> everything it knows—every photo, every app, and every setting is erased.</p>\n<p>The iPad then wakes up looking exactly as it did the day it was first taken out of its box, clean and ready for a fresh start.</p>\n",
+    "category": ["Core"],
+    "tags": []
+  },
+  {
+    "term": "WPA / WPA2 / WPA3",
+    "definition": "<p><strong>WPA (Wi-Fi Protected Access)</strong> is the family of security protocols used to secure wireless networks.</p>\n<p>Generations:</p>\n<ul>\n<li>\n<p><strong>WPA3 (Latest)</strong> : Mandatory for Wi-Fi 6E. Provides stronger encryption (SAE) and protection against password guessing attacks.</p>\n</li>\n<li>\n<p><strong>WPA2 (Standard)</strong> : The current standard for most devices.</p>\n</li>\n<li>\n<p><strong>Enterprise Mode</strong> : Schools typically use WPA2/WPA3-Enterprise, which authenticates each user individually (via <strong>802.1X</strong> ) rather than using a single shared class password.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of these as the <strong>“Different Levels of Locks”</strong> on your school’s front door.</p>\n<ul>\n<li>\n<p><strong>WPA1</strong> was like a simple latch (too easy to break).</p>\n</li>\n<li>\n<p><strong>WPA2</strong> is like a strong deadbolt lock.</p>\n</li>\n<li>\n<p><strong>WPA3</strong> is the newest <strong>“Smart Lock”</strong> that is nearly impossible for a thief to pick.</p>\n</li>\n</ul>\n<p>The school uses these high-level locks to make sure only students and teachers can get onto the school Wi-Fi, keeping everyone’s data safe.</p>\n",
+    "category": ["Network", "Security"],
+    "tags": []
+  },
+  {
+    "term": "Zero Trust",
+    "definition": "<p><strong>Zero Trust</strong> is a modern security architecture based on the principle: <strong>“Never Trusted, Always Verified.”</strong> Key concepts:</p>\n<ul>\n<li>\n<p><strong>No Perimeter</strong> : Being “inside the school building” does not automatically grant access.</p>\n</li>\n<li>\n<p><strong>Continuous Auth</strong> : Every request (opening a file, accessing email) is checked.</p>\n</li>\n<li>\n<p><strong>Context</strong> : Access depends on<em>Who</em>you are (User ID),<em>What</em>device you have (Managed?), and<em>Where</em> you are.</p>\n</li>\n<li>\n<p><strong>Risk Assessment</strong> : If a device is outdated or infected, access is blocked immediately, even if the password is correct.</p>\n</li>\n</ul>\n",
+    "analogy": "<p>Think of this as the <strong>“Strict Security Guard”</strong> mode.</p>\n<p>In the past, if you were inside the school building, everybody assumed you belonged there.</p>\n<p>Under <strong>Zero Trust</strong> , the building is full of <strong>“locked doors.”</strong> No matter who you are, the school’s system asks to see your <strong>“ID card”</strong> and check your <strong>fingerprints</strong> every single time you want to open a door. It’s strict, but it keeps everyone’s data much safer.</p>\n",
+    "category": ["Security"],
+    "tags": []
+  },
+  {
+    "term": "Zero-Touch Deployment",
+    "definition": "<p><strong>Zero-Touch Deployment</strong> is a hands-off distribution model for Apple devices.</p>\n<p>Workflow:</p>\n<ol>\n<li>\n<p><strong>Purchase</strong> : School buys devices from Apple/Reseller.</p>\n</li>\n<li>\n<p><strong>Assign</strong> : Devices are automatically added to <strong>Apple School Manager (ASM)</strong> .</p>\n</li>\n<li>\n<p><strong>Ship</strong> : Unopened boxes are shipped directly to students’ homes.</p>\n</li>\n<li>\n<p><strong>Setup</strong> : Student opens the box and connects to Wi-Fi.</p>\n</li>\n<li>\n<p><strong>Enroll</strong> : The device checks in with Apple, sees it belongs to the school, downloads the MDM profile, and installs all apps automatically.</p>\n</li>\n</ol>\n",
+    "analogy": "<p>Think of this as <strong>“Instant School iPad Magic.”</strong> The school’s IT team doesn’t even have to open the box. They can send a brand-new iPad straight to your home.</p>\n<p>The moment you turn it on and connect to your home Wi-Fi, the iPad <strong>“realizes”</strong> it belongs to the school and automatically begins setting itself up with your email, textbooks, and apps—all by itself!</p>\n",
+    "category": ["Enrollment"],
+    "tags": []
+  },
+  {
+    "term": "Zero-Wipe MDM Migration",
+    "definition": "<p><strong>Zero-Wipe MDM Migration</strong> is a transition feature in iOS/iPadOS and macOS that allows devices to switch MDM servers without erasing user data.</p>\n<p>Mechanism (Declarative Device Management):</p>\n<ol>\n<li>\n<p><strong>Unenroll</strong> : The device gracefully leaves the old MDM server.</p>\n</li>\n<li>\n<p><strong>Transfer</strong> : It retains user data (photos, files) and apps.</p>\n</li>\n<li>\n<p><strong>Re-enroll</strong> : It immediately enrolls into the <em>new</em> MDM server designated in Apple School Manager.</p>\n</li>\n<li>\n<p><strong>Takeover</strong> : The new server takes ownership of the existing managed apps.</p>\n</li>\n</ol>\n<p><strong>Warning for Schools</strong> : While promising, this process can be risky for <strong>Shared iPads</strong> or devices with complex profiles, often leading to “zombie” apps that cannot be updated.</p>\n",
+    "analogy": "<p>In the past, switching to a new management system was like <strong>“tearing down a house and rebuilding it”</strong> just to change the landlord.</p>\n<p>Now, <strong>Zero-Wipe Migration</strong> is like <strong>“keeping your house and furniture exactly as is, but just hiring a new security guard.”</strong> All your photos and homework stay on the iPad, but the school gets to manage it using a newer, better system.</p>\n",
+    "category": ["MDM"],
+    "tags": []
+  }
+]

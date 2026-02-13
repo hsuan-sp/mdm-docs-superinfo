@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { loadGuide } from "@/lib/content";
+import { getQAData } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
 
@@ -10,7 +10,7 @@ export async function GET(request: Request) {
   const locale = lang === "en" ? "en" : "zh";
 
   try {
-    const data = await loadGuide(locale);
+    const data = await getQAData(locale);
     return NextResponse.json(data);
   } catch (error) {
     console.error("[API] Failed to load guide:", error);
