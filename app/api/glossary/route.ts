@@ -1,17 +1,22 @@
-import { verifyAuth, getLang } from '@/lib/api-utils';
-import { getGlossaryData } from "@/lib/data";
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
+import { loadGlossary } from "@/lib/content";
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 export async function GET(request: Request) {
-    const { errorResponse } = await verifyAuth();
-    if (errorResponse) return errorResponse;
+  const { searchParams } = new URL(request.url);
+  const lang = searchParams.get("lang") || "zh-TW";
 
-    const lang = getLang(request);
-    const data = await getGlossaryData(lang);
+  const locale = lang === "en" ? "en" : "zh";
 
-    return NextResponse.json(data, {
-        headers: { 'Cache-Control': 'no-store' }
-    });
+  try {
+    const data = await loadGlossary(locale);
+    return NextResponse.json(data);
+  } catch (error) {
+    console.error("[API] Failed to load glossary:", error);
+    return NextResponse.json(
+      { error: "Failed to load glossary" },
+      { status: 500 }
+    );
+  }
 }

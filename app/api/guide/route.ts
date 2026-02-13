@@ -1,17 +1,22 @@
-import { verifyAuth, getLang } from '@/lib/api-utils';
-import { getQAData } from "@/lib/data";
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
+import { loadGuide } from "@/lib/content";
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 export async function GET(request: Request) {
-    const { errorResponse } = await verifyAuth();
-    if (errorResponse) return errorResponse;
+  const { searchParams } = new URL(request.url);
+  const lang = searchParams.get("lang") || "zh-TW";
 
-    const lang = getLang(request);
-    const data = await getQAData(lang);
+  const locale = lang === "en" ? "en" : "zh";
 
-    return NextResponse.json(data, {
-        headers: { 'Cache-Control': 'no-store' }
-    });
+  try {
+    const data = await loadGuide(locale);
+    return NextResponse.json(data);
+  } catch (error) {
+    console.error("[API] Failed to load guide:", error);
+    return NextResponse.json(
+      { error: "Failed to load guide" },
+      { status: 500 }
+    );
+  }
 }
