@@ -66,11 +66,9 @@ export default async function RootLayout({
               nextThemes={{ defaultTheme: "light" }}
               toc={{ float: true, title: "本頁目錄" }}
             >
-              <AuthGuard>
-                <SecurityGuard />
-                {children}
-                <BackToTop />
-              </AuthGuard>
+              <SecurityGuard key="security-guard" />
+              <AuthGuard key="auth-guard">{children}</AuthGuard>
+              <BackToTop key="back-to-top" />
             </Layout>
           </LanguageProvider>
         </UserProvider>

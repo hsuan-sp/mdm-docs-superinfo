@@ -14,4 +14,5 @@ export default withNextra({
     optimizePackageImports: ["lucide-react", "date-fns", "framer-motion"],
   },
   reactStrictMode: true,
+  pageExtensions: ["js", "jsx", "ts", "tsx"],
 });
