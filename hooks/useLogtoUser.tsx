@@ -7,6 +7,7 @@ import React, {
   useCallback,
   useRef,
 } from "react";
+import { isAuthorizedEmail } from "@/lib/auth";
 
 interface LogtoUser {
   sub: string;
@@ -16,7 +17,9 @@ interface LogtoUser {
 
 interface UserContextType {
   user: LogtoUser | null;
-  isAuthenticated: boolean; // ✅ Logto 官方定義：是否有會話
+  displayName: string; // ✅ 用於 UI 顯示的名稱 (Email 前綴或 Name)
+  isAuthenticated: boolean;
+  isAuthorized: boolean;
   isLoading: boolean;
   signIn: (redirectPath?: string) => void;
   signOut: () => void;
@@ -38,14 +41,18 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
   const fetchUser = useCallback(async () => {
     setIsLoading(true);
     try {
-      const res = await fetch("/api/logto/user", { cache: "no-store" });
+      // ✅ 使用 cache: 'no-cache' 並加上 timestamp 破解任何潛在的 Cookie/API 緩存污染
+      const res = await fetch(`/api/logto/user?t=${Date.now()}`, {
+        cache: "no-store",
+        headers: { Pragma: "no-cache", "Cache-Control": "no-cache" },
+      });
+
       if (!res.ok) {
         setData({ user: null, auth: false });
         return;
       }
       const json = await res.json();
 
-      // ✅ 依照 Logto 規範同時從 Claims 與 UserInfo 解析 Email
       const email = json.userInfo?.email || json.claims?.email;
       const name =
         json.userInfo?.name || json.claims?.name || json.claims?.username;
@@ -58,7 +65,7 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
               name: name || undefined,
             }
           : null,
-        auth: !!json.isAuthenticated, // 這是標準的登入狀態
+        auth: !!json.isAuthenticated,
       });
     } catch (e) {
       console.error("[useUser] Fetch failed", e);
@@ -78,18 +85,31 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
   const signIn = (redirectPath?: string) => {
     const path = redirectPath || window.location.pathname;
     const target = `/api/logto/sign-in?redirect=${encodeURIComponent(path)}`;
-    window.location.href = target;
+    window.location.replace(target);
   };
 
   const signOut = () => {
-    window.location.href = "/api/logto/sign-out";
+    // ✅ 直接跳向 Sign-out 端點，確保 Cookie 從伺服器端徹底抹除
+    window.location.replace("/api/logto/sign-out");
+  };
+
+  const getDisplayName = () => {
+    if (!data.user) return "";
+    if (data.user.name) return data.user.name;
+    if (data.user.email) return data.user.email.split("@")[0];
+    return "User";
   };
 
   return (
     <UserContext.Provider
       value={{
         user: data.user,
-        isAuthenticated: data.auth, // ✅ 回歸標準，有登入就是 true
+        displayName: getDisplayName(),
+        isAuthenticated: data.auth,
+        isAuthorized:
+          data.auth &&
+          !!data.user?.email &&
+          isAuthorizedEmail(data.user?.email),
         isLoading,
         signIn,
         signOut,

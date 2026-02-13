@@ -2,7 +2,7 @@
 import React, { useEffect, PropsWithChildren } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useUser } from "@/hooks/useLogtoUser";
-import { isAuthorizedEmail } from "@/lib/auth"; // 這是我們原本用來檢查網域的工具
+import { isAuthorizedEmail } from "@/lib/auth";
 import { LogOut, UserCheck } from "lucide-react";
 import GeometricBackground from "@/components/ui/GeometricBackground";
 import { useLanguage } from "@/hooks/useLanguage";
@@ -35,38 +35,40 @@ const AuthGuard = ({ children }: PropsWithChildren) => {
     }
   }, [isLoading, isAuthenticated, user, isProtected, pathname, router, signIn]);
 
-  // --- 引導新使用者：剛註冊完沒有 Email 的狀態 ---
-  const isFirstTimeRegistrationFlow =
+  // --- 引導新使用者：剛註冊完沒有 Email 的狀態 (或 Cookie 污染導致沒拿到權限) ---
+  const isZombieSession =
     isProtected && !isLoading && isAuthenticated && !user?.email;
 
-  if (isFirstTimeRegistrationFlow) {
+  if (isZombieSession) {
     return (
       <div className="min-h-screen flex items-center justify-center relative bg-apple-bg overflow-hidden px-6">
         <GeometricBackground />
         <div className="relative z-10 w-full max-w-sm bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl border border-zinc-200/50 dark:border-zinc-800/50 rounded-4xl p-10 text-center shadow-2xl">
           <div className="w-16 h-16 bg-apple-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
-            <UserCheck className="w-8 h-8 text-apple-blue" />
+            <UserCheck className="w-8 h-8 text-apple-blue shadow-lg shadow-apple-blue/20" />
           </div>
           <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-3 tracking-tight">
             {t("authGate.zombieTitle")}
           </h2>
-          <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-8 leading-relaxed">
+          <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-8 leading-relaxed font-medium">
             {t("authGate.zombieDesc")}
           </p>
           <button
             onClick={() => signOut()}
-            className="w-full h-12 bg-zinc-950 dark:bg-zinc-50 text-white dark:text-zinc-950 rounded-2xl font-bold text-[14px] flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl shadow-black/5"
+            className="w-full h-12 bg-zinc-950 dark:bg-zinc-50 text-white dark:text-zinc-950 rounded-2xl font-black text-[14px] flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl shadow-black/10"
           >
             <LogOut className="w-4 h-4" />
             {t("authGate.zombieBtn")}
           </button>
+          <p className="mt-6 text-[11px] text-zinc-500 dark:text-zinc-500 opacity-60">
+            Session ID: {user?.sub?.slice(0, 8)}... (Auto-cleanup enabled)
+          </p>
         </div>
       </div>
     );
   }
 
   // --- 通過條件 ---
-  // 非保護路徑，或是 (已認證 + 有Email + 通過白名單)
   const isFullyAuthorized =
     !isProtected ||
     (isAuthenticated && user?.email && isAuthorizedEmail(user.email));
