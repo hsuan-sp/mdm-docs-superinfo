@@ -1,120 +1,270 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
+import MarkdownIt from "markdown-it";
 
-/**
- * Modernized Index Generator for MDM Support Site
- * Generates both Markdown and JSON indices.
- */
+const md = new MarkdownIt({
+  html: true,
+  linkify: true,
+  typographer: true,
+  breaks: false,
+});
+
+// 排版優化 (保留原有邏輯)
+function enhanceTypography(text) {
+  if (!text) return "";
+  return text
+    .split("\n")
+    .map((line) => {
+      const trimmed = line.trim();
+      if (
+        trimmed.startsWith("|") ||
+        trimmed.startsWith("#") ||
+        trimmed.startsWith(">") ||
+        trimmed.startsWith("- ") ||
+        trimmed.startsWith("* ") ||
+        /^\d+\. /.test(trimmed) ||
+        trimmed.startsWith("**") ||
+        trimmed.startsWith("___") ||
+        trimmed.startsWith("```")
+      ) {
+        return line;
+      }
+      return line
+        .replace(/([\u4e00-\u9fa5])([a-zA-Z0-9])/g, "$1 $2")
+        .replace(/([a-zA-Z0-9])([\u4e00-\u9fa5])/g, "$1 $2")
+        .replace(/([\u4e00-\u9fa5]),/g, "$1，")
+        .replace(/([\u4e00-\u9fa5]):/g, "$1：")
+        .replace(/([\u4e00-\u9fa5]);/g, "$1；")
+        .replace(/([\u4e00-\u9fa5])!/g, "$1！")
+        .replace(/([\u4e00-\u9fa5])\?/g, "$1？")
+        .replace(/\.\.\./g, "…")
+        .replace(/--/g, "—")
+        .replace(/([\u4e00-\u9fa5])"/g, "$1”")
+        .replace(/"([\u4e00-\u9fa5])/g, "“$1");
+    })
+    .join("\n");
+}
+
+function renderMarkdown(text) {
+  if (!text) return "";
+  return md.render(enhanceTypography(text));
+}
 
 const CWD = process.cwd();
-const MD_DATA_DIR = path.join(CWD, "md_data");
-const MAINTENANCE_DIR = path.join(CWD, "maintenance");
+const CONTENT_DIR = path.join(CWD, "content");
+const OUTPUT_FILE = path.join(CWD, "lib", "generated-data.json");
 const LOCALES = ["zh", "en"];
+const QA_ORDER = [
+  "account",
+  "enrollment",
+  "apps",
+  "classroom",
+  "digital-learning",
+  "hardware",
+  "mac",
+  "qa-education",
+];
 
-const SOURCE_MAP = {
-    zh: {
-        account: "帳號與伺服器", enrollment: "裝置註冊", apps: "App 管理",
-        classroom: "課堂管理", "digital-learning": "數位精進", hardware: "硬體排除",
-        mac: "Mac 管理", "qa-education": "教育實戰",
-    },
-    en: {
-        account: "Account & Server Management", enrollment: "Enrollment & Device Setup",
-        apps: "App & Content Distribution", classroom: "Apple Classroom & Teaching Tools",
-        "digital-learning": "Campus Digital Initiatives", hardware: "Hardware & Maintenance",
-        mac: "Advanced Mac Management", "qa-education": "Education Scenarios & FAQ",
-    }
+const SOURCE_TITLE_MAP = {
+  zh: {
+    account: "帳號與伺服器",
+    enrollment: "裝置部署",
+    apps: "App 與內容",
+    classroom: "課堂管理",
+    "digital-learning": "精進方案",
+    hardware: "維修保固",
+    mac: "Mac 管理",
+    "qa-education": "校園實務 Q&A",
+  },
+  en: {
+    account: "Account & Server",
+    enrollment: "Zero-Touch Deployment",
+    apps: "Apps & Content",
+    classroom: "Classroom Tools",
+    "digital-learning": "Digital Initiative",
+    hardware: "Service & Support",
+    mac: "Mac Management",
+    "qa-education": "Campus Case Q&A",
+  },
 };
 
-function getFiles(dir) {
-    if (!fs.existsSync(dir)) return [];
-    return fs.readdirSync(dir).filter(f => f.endsWith(".md")).sort();
-}
-
-function parseFile(filePath) {
-    const content = fs.readFileSync(filePath, "utf-8");
-    const { data } = matter(content);
-    return data;
-}
-
 function generate() {
-    console.log("🚀 Starting Index Generation...");
-    if (!fs.existsSync(MAINTENANCE_DIR)) fs.mkdirSync(MAINTENANCE_DIR, { recursive: true });
+  console.log("🚀 開始生成全站索引 (from .mdx content)...");
 
-    const fullIndex = {
-        updatedAt: new Date().toISOString(),
-        locales: {}
-    };
+  if (!fs.existsSync(CONTENT_DIR)) {
+    console.error(`❌ Content directory not found: ${CONTENT_DIR}`);
+    process.exit(1);
+  }
 
-    LOCALES.forEach(locale => {
-        const root = path.join(MD_DATA_DIR, locale);
-        const glossaryDir = path.join(root, "glossary");
-        const qaRootDir = path.join(root, "qa");
-        const changelogDir = path.join(root, "changelog");
+  const database = {
+    qa: { zh: [], en: [] },
+    glossary: { zh: [], en: [] },
+    changelog: { zh: [], en: [] },
+    meta: {
+      generatedAt: new Date().toISOString(),
+      version: "2.0.0-mdx",
+    },
+  };
 
-        const localeData = {
-            glossary: [],
-            qa: {},
-            changelog: []
-        };
+  LOCALES.forEach((locale) => {
+    const rootDir = path.join(CONTENT_DIR, locale === "en" ? "en" : "zh");
 
-        // 1. Glossary
-        const glossaryFiles = getFiles(glossaryDir);
-        localeData.glossary = glossaryFiles.map(f => {
-            const data = parseFile(path.join(glossaryDir, f));
-            return { term: data.term || f.replace(".md", ""), file: f };
-        });
+    // 1. Glossary Processing
+    const glossaryDir = path.join(rootDir, "glossary");
+    if (fs.existsSync(glossaryDir)) {
+      const files = fs
+        .readdirSync(glossaryDir)
+        .filter((f) => f.endsWith(".mdx") || f.endsWith(".md"));
 
-        // 2. QA
-        const categories = Object.keys(SOURCE_MAP[locale]);
-        categories.forEach(cat => {
-            const catDir = path.join(qaRootDir, cat);
-            const files = getFiles(catDir);
-            if (files.length > 0) {
-                localeData.qa[cat] = {
-                    title: SOURCE_MAP[locale][cat],
-                    items: files.map(f => {
-                        const data = parseFile(path.join(catDir, f));
-                        return { id: data.id, title: data.title || f, file: f };
-                    })
+      const terms = files
+        .map((file) => {
+          try {
+            const content = fs.readFileSync(
+              path.join(glossaryDir, file),
+              "utf-8"
+            );
+            const { data, content: mdBody } = matter(content);
+
+            const analogyMarker =
+              locale === "en" ? "## Analogy" : "## 白話文比喻";
+            const definitionMarker =
+              locale === "en" ? "## Term Definition" : "## 術語定義";
+
+            const parts = mdBody.split(analogyMarker);
+            const definition = parts[0].replace(definitionMarker, "").trim();
+            const analogy = parts[1] ? parts[1].trim() : "";
+
+            return {
+              term: String(
+                data.term || path.basename(file, path.extname(file))
+              ),
+              definition: renderMarkdown(definition),
+              analogy: renderMarkdown(analogy),
+              category: data.category || [],
+              tags: Array.isArray(data.tags)
+                ? data.tags
+                : data.tags
+                  ? [data.tags]
+                  : [],
+            };
+          } catch (e) {
+            console.error(`Error processing glossary ${file}:`, e);
+            return null;
+          }
+        })
+        .filter(Boolean)
+        .sort((a, b) => a.term.localeCompare(b.term));
+
+      database.glossary[locale] = terms;
+      console.log(`✓ [${locale}] Indexed ${terms.length} glossary terms`);
+    }
+
+    // 2. Q&A Processing
+    const qaRootDir = path.join(rootDir, "qa");
+    if (fs.existsSync(qaRootDir)) {
+      // Instead of relying on files order, we use QA_ORDER to structure the data
+      const modules = [];
+
+      QA_ORDER.forEach((slug) => {
+        const dir = path.join(qaRootDir, slug);
+        if (fs.existsSync(dir)) {
+          const files = fs
+            .readdirSync(dir)
+            .filter((f) => f.endsWith(".mdx") || f.endsWith(".md"));
+
+          const items = files
+            .map((file) => {
+              try {
+                const content = fs.readFileSync(path.join(dir, file), "utf-8");
+                const { data, content: mdBody } = matter(content);
+
+                return {
+                  id: String(
+                    data.id || path.basename(file, path.extname(file))
+                  ),
+                  question: String(
+                    data.title || path.basename(file, path.extname(file))
+                  ),
+                  answer: renderMarkdown(mdBody.trim()),
+                  important: Boolean(data.important),
+                  category: data.category || SOURCE_TITLE_MAP[locale][slug],
+                  tags: Array.isArray(data.tags)
+                    ? data.tags
+                    : data.tags
+                      ? [data.tags]
+                      : [],
                 };
-            }
-        });
+              } catch (e) {
+                console.error(`Error processing QA ${file}:`, e);
+                return null;
+              }
+            })
+            .filter(Boolean)
+            .sort((a, b) =>
+              (a.id || "").localeCompare(b.id || "", undefined, {
+                numeric: true,
+              })
+            );
 
-        // 3. Changelog
-        const changelogFiles = getFiles(changelogDir);
-        localeData.changelog = changelogFiles.map(f => {
-            const data = parseFile(path.join(changelogDir, f));
-            return { version: data.version, date: data.date, file: f };
-        }).sort((a,b) => b.date.localeCompare(a.date));
+          if (items.length > 0) {
+            modules.push({
+              id: slug,
+              source: SOURCE_TITLE_MAP[locale][slug] || slug,
+              sections: [
+                {
+                  title: items[0]?.category || SOURCE_TITLE_MAP[locale][slug],
+                  items,
+                },
+              ],
+            });
+          }
+        }
+      });
 
-        fullIndex.locales[locale] = localeData;
+      database.qa[locale] = modules;
+      console.log(`✓ [${locale}] Indexed ${modules.length} QA modules`);
+    }
 
-        // Generate Markdown
-        let md = `# Maintenance Index (${locale.toUpperCase()})\n\n`;
-        md += `> Automatically generated at ${new Date().toLocaleString()}\n\n`;
+    // 3. Changelog Processing
+    const changelogDir = path.join(rootDir, "changelog");
+    if (fs.existsSync(changelogDir)) {
+      const files = fs
+        .readdirSync(changelogDir)
+        .filter((f) => f.endsWith(".mdx") || f.endsWith(".md"));
 
-        md += `## Glossary (${localeData.glossary.length})\n\n`;
-        localeData.glossary.forEach(t => md += `- **${t.term}** (\`${t.file}\`)\n`);
+      const logs = files
+        .map((file) => {
+          try {
+            const content = fs.readFileSync(
+              path.join(changelogDir, file),
+              "utf-8"
+            );
+            const { data, content: mdBody } = matter(content);
 
-        md += `\n## Q&A Categories\n\n`;
-        Object.entries(localeData.qa).forEach(([key, val]) => {
-            md += `### ${val.title} (${val.items.length})\n`;
-            val.items.forEach(i => md += `- [\`${i.id}\`] ${i.title} (\`${i.file}\`)\n`);
-            md += "\n";
-        });
+            return {
+              version: String(
+                data.version || path.basename(file, path.extname(file))
+              ),
+              date: String(data.date || new Date().toISOString().split("T")[0]),
+              type: String(data.type || "patch"),
+              content: renderMarkdown(mdBody.trim()),
+            };
+          } catch (e) {
+            console.error(`Error processing changelog ${file}:`, e);
+            return null;
+          }
+        })
+        .filter(Boolean)
+        .sort((a, b) => b.date.localeCompare(a.date));
 
-        md += `## Changelog\n\n`;
-        localeData.changelog.forEach(l => md += `- **v${l.version}** (${l.date})\n`);
+      database.changelog[locale] = logs;
+      console.log(`✓ [${locale}] Indexed ${logs.length} changelog entries`);
+    }
+  });
 
-        fs.writeFileSync(path.join(MAINTENANCE_DIR, `INDEX_${locale.toUpperCase()}.md`), md);
-        console.log(`✅ Generated INDEX_${locale.toUpperCase()}.md`);
-    });
-
-    // Generate JSON
-    fs.writeFileSync(path.join(MAINTENANCE_DIR, "INDEX.json"), JSON.stringify(fullIndex, null, 2));
-    console.log("✅ Generated INDEX.json");
-    console.log("✨ Done.");
+  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(database, null, 2));
+  console.log(`✅ Index generated successfully at: ${OUTPUT_FILE}`);
 }
 
 generate();
