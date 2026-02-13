@@ -2,104 +2,85 @@
 import React, { useEffect, PropsWithChildren } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useUser } from "@/hooks/useLogtoUser";
-import { ShieldCheck, Sparkles } from "lucide-react";
+import { isAuthorizedEmail } from "@/lib/auth"; // 這是我們原本用來檢查網域的工具
+import { LogOut, UserCheck } from "lucide-react";
 import GeometricBackground from "@/components/ui/GeometricBackground";
 
-// 1. 定義需要保護的路由 (基礎路徑)
 const PROTECTED_ROUTES = ["/guide", "/glossary"];
 
 const AuthGuard = ({ children }: PropsWithChildren) => {
   const router = useRouter();
   const pathname = usePathname();
-  const {
-    user,
-    isLoading,
-    isAuthenticated,
-    isAuthorized,
-    isLogtoAuthenticated,
-    signIn,
-    signOut,
-  } = useUser();
+  const { user, isLoading, isAuthenticated, signIn, signOut } = useUser();
 
-  // 檢查當前路徑是否屬於受保護範圍
   const isProtected = PROTECTED_ROUTES.some((route) => {
     const regex = new RegExp(`^(\/(zh|en))?${route}(\/|$)`);
     return regex.test(pathname);
   });
 
   useEffect(() => {
-    // --- 狀況 1：未登入受保護區塊 ---
-    if (!isLoading && isProtected && !isLogtoAuthenticated) {
-      console.log("[Guard] Unauthenticated entry, redirecting to login...");
+    // 1. 完全沒登入受保護路徑 -> 丟回登入
+    if (!isLoading && isProtected && !isAuthenticated) {
       signIn(pathname);
       return;
     }
 
-    // --- 狀況 2：已有 Email 資料但權限不足 (Unauthorized) ---
-    if (!isLoading && isProtected && isAuthenticated && !isAuthorized) {
-      console.warn("[Guard] Unauthorized access (Email not in whitelist).");
-      router.replace("/unauthorized");
+    // 2. 有登入也有 Email -> 檢查白名單
+    if (!isLoading && isProtected && isAuthenticated && user?.email) {
+      if (!isAuthorizedEmail(user.email)) {
+        router.replace("/unauthorized");
+      }
     }
-  }, [
-    isLoading,
-    isLogtoAuthenticated,
-    isAuthenticated,
-    isAuthorized,
-    isProtected,
-    pathname,
-    router,
-    signIn,
-  ]);
+  }, [isLoading, isAuthenticated, user, isProtected, pathname, router, signIn]);
 
-  // --- 優先判定：幽靈會話 (剛註冊完，拿不到 Email) ---
-  // 只有當使用者試圖進入「保護區塊」時，我們才顯示這個提示畫面
-  const isZombie =
-    isProtected && !isLoading && isLogtoAuthenticated && !user?.email;
+  // --- 引導新使用者：剛註冊完沒有 Email 的狀態 ---
+  const isFirstTimeRegistrationFlow =
+    isProtected && !isLoading && isAuthenticated && !user?.email;
 
-  if (isZombie) {
+  if (isFirstTimeRegistrationFlow) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-apple-bg">
+      <div className="min-h-screen flex items-center justify-center relative bg-apple-bg overflow-hidden px-6">
         <GeometricBackground />
-        <div className="relative z-10 flex flex-col items-center text-center px-8 py-12 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-2xl shadow-2xl rounded-[32px] border border-zinc-200/50 dark:border-zinc-800/50 max-w-sm">
-          <div className="w-20 h-20 bg-blue-500/10 rounded-full flex items-center justify-center mb-8 relative">
-            <div className="absolute inset-0 bg-blue-500/20 rounded-full animate-ping opacity-20" />
-            <Sparkles className="w-10 h-10 text-blue-500" />
+        <div className="relative z-10 w-full max-w-sm bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl border border-zinc-200/50 dark:border-zinc-800/50 rounded-[32px] p-10 text-center shadow-2xl">
+          <div className="w-16 h-16 bg-apple-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <UserCheck className="w-8 h-8 text-apple-blue" />
           </div>
-          <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50 mb-4 tracking-tight">
-            歡迎加入！
+          <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-3 tracking-tight">
+            🎉 註冊成功！
           </h2>
-          <p className="text-[15px] text-zinc-500 dark:text-zinc-400 mb-10 leading-relaxed font-medium">
-            您已成功建立帳號。由於這是您的第一次登入，系統需要重置會話以同步您的權限與信箱資訊。
+          <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-8 leading-relaxed">
+            歡迎加入極電資訊！由於這是您第一次使用，系統需要請您先「執行登出」並重新登入一次，以正式啟用您的郵件權限。
           </p>
           <button
             onClick={() => signOut()}
-            className="w-full py-4 bg-zinc-950 dark:bg-zinc-50 text-white dark:text-zinc-950 rounded-2xl font-bold text-[15px] shadow-2xl shadow-zinc-950/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
+            className="w-full h-12 bg-zinc-950 dark:bg-zinc-50 text-white dark:text-zinc-950 rounded-2xl font-bold text-[14px] flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl shadow-black/5"
           >
-            完成初始化並登入
+            <LogOut className="w-4 h-4" />
+            登出並完成啟用
           </button>
         </div>
       </div>
     );
   }
 
-  // --- 渲染邏輯 ---
+  // --- 通過條件 ---
+  // 非保護路徑，或是 (已認證 + 有Email + 通過白名單)
+  const isFullyAuthorized =
+    !isProtected ||
+    (isAuthenticated && user?.email && isAuthorizedEmail(user.email));
 
-  // 通過授權或非保護區域：直接渲染
-  if (!isProtected || isAuthorized) {
+  if (isFullyAuthorized) {
     return <>{children}</>;
   }
 
-  // 切換中的過渡 UI
+  // --- 載入狀態 ---
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-apple-bg">
+    <div className="min-h-screen flex items-center justify-center bg-apple-bg">
       <GeometricBackground />
       <div className="relative z-10 flex flex-col items-center">
-        <div className="relative w-16 h-16 mb-6">
-          <div className="absolute inset-0 border-4 border-apple-blue/10 rounded-full" />
-          <div className="absolute inset-0 border-4 border-apple-blue border-t-transparent rounded-full animate-spin" />
-        </div>
-        <p className="text-[11px] font-bold uppercase tracking-[0.4em] text-apple-gray animate-pulse">
-          Verifying Identity
+        <div className="w-12 h-12 border-4 border-apple-blue/20 border-t-apple-blue rounded-full animate-spin mb-4" />
+        <p className="text-[10px] font-black uppercase tracking-[0.4em] text-apple-gray animate-pulse">
+          AUTHENTICATING
         </p>
       </div>
     </div>

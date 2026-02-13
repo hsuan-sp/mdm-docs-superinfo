@@ -41,7 +41,7 @@ const UserCenter: React.FC = () => {
               {t("userCenter.authorized")}
             </span>
             <span className="text-[12.5px] font-bold text-zinc-900 dark:text-zinc-50 tracking-tight">
-              {user?.email ? user.email.split("@")[0] : "Authorized"}
+              {user?.email ? user.email.split("@")[0] : "User"}
             </span>
           </div>
 

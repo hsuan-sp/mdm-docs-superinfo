@@ -7,7 +7,6 @@ import React, {
   useCallback,
   useRef,
 } from "react";
-import { isAuthorizedEmail } from "@/lib/auth";
 
 interface LogtoUser {
   sub: string;
@@ -17,9 +16,7 @@ interface LogtoUser {
 
 interface UserContextType {
   user: LogtoUser | null;
-  isAuthenticated: boolean; // 已認證且資料完整 (有 Email)
-  isAuthorized: boolean; // 符合白名單
-  isLogtoAuthenticated: boolean; // Logto 端的原始狀態
+  isAuthenticated: boolean; // ✅ Logto 官方定義：是否有會話
   isLoading: boolean;
   signIn: (redirectPath?: string) => void;
   signOut: () => void;
@@ -48,7 +45,7 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
       }
       const json = await res.json();
 
-      // ✅ 從多個來源提取 Email (Logto 規範)
+      // ✅ 依照 Logto 規範同時從 Claims 與 UserInfo 解析 Email
       const email = json.userInfo?.email || json.claims?.email;
       const name =
         json.userInfo?.name || json.claims?.name || json.claims?.username;
@@ -61,7 +58,7 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
               name: name || undefined,
             }
           : null,
-        auth: !!json.isAuthenticated,
+        auth: !!json.isAuthenticated, // 這是標準的登入狀態
       });
     } catch (e) {
       console.error("[useUser] Fetch failed", e);
@@ -92,12 +89,7 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
     <UserContext.Provider
       value={{
         user: data.user,
-        isAuthenticated: data.auth && !!data.user?.email,
-        isAuthorized:
-          data.auth &&
-          !!data.user?.email &&
-          isAuthorizedEmail(data.user?.email),
-        isLogtoAuthenticated: data.auth,
+        isAuthenticated: data.auth, // ✅ 回歸標準，有登入就是 true
         isLoading,
         signIn,
         signOut,
