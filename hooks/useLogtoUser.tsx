@@ -17,9 +17,9 @@ interface LogtoUser {
 
 interface UserContextType {
   user: LogtoUser | null;
-  isAuthenticated: boolean;
-  isAuthorized: boolean;
-  isLogtoAuthenticated: boolean;
+  isAuthenticated: boolean; // 已認證 (且包含基礎資料)
+  isAuthorized: boolean; // 已授權 (Email 在白名單)
+  isLogtoAuthenticated: boolean; // 原始認證狀態 (只要有 Token 就算)
   isLoading: boolean;
   signIn: (redirectPath?: string) => void;
   signOut: () => void;
@@ -49,12 +49,18 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
         return;
       }
       const json = await res.json();
+
+      // ✅ 關鍵修復：Logto 的 Email 可能藏在 claims 或 userInfo 裡
+      const email = json.userInfo?.email || json.claims?.email;
+      const name =
+        json.userInfo?.name || json.claims?.name || json.claims?.username;
+
       setData({
-        user: json.claims
+        user: json.isAuthenticated
           ? {
-              sub: json.claims.sub,
-              email: json.claims.email,
-              name: json.claims.name || json.claims.username,
+              sub: json.claims?.sub || json.userInfo?.sub,
+              email: email,
+              name: name,
             }
           : null,
         auth: !!json.isAuthenticated,
@@ -88,13 +94,14 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
     <UserContext.Provider
       value={{
         user: data.user,
-        // ✅ 寬鬆判定：只要 Logto 說有登入就算 (防止 UI 重置)
-        isAuthenticated: data.auth,
-        // ✅ 嚴格判定：用於受保護路由，必須有登入且有 Email 且在白名單
+        // 是否已登入且順利拿到 Email
+        isAuthenticated: data.auth && !!data.user?.email,
+        // 是否在白名單
         isAuthorized:
           data.auth &&
           !!data.user?.email &&
           isAuthorizedEmail(data.user?.email),
+        // 原始 Logto 認證標記
         isLogtoAuthenticated: data.auth,
         isLoading,
         signIn,
