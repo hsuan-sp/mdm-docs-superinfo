@@ -4,6 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useUser } from "@/hooks/useLogtoUser";
 import { isAuthorizedEmail } from "@/lib/auth";
 import { ShieldCheck } from "lucide-react";
+import GeometricBackground from "@/components/ui/GeometricBackground";
 
 // 1. 定義需要保護的路由 (基礎路徑)
 const PROTECTED_ROUTES = ["/guide", "/glossary"];
@@ -53,16 +54,19 @@ const AuthGuard = ({ children }: PropsWithChildren) => {
 
   // 載入中或是正在跳轉的過渡狀態：顯示 Loading
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-black">
-      <div className="relative">
-        <div className="absolute inset-0 w-16 h-16 bg-blue-500/20 rounded-full blur-xl animate-pulse" />
-        <ShieldCheck className="relative w-12 h-12 text-blue-600 animate-bounce mb-4" />
+    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+      <GeometricBackground />
+      <div className="relative z-10 flex flex-col items-center">
+        <div className="relative">
+          <div className="absolute inset-0 w-16 h-16 bg-apple-blue/20 rounded-full blur-xl animate-pulse" />
+          <ShieldCheck className="relative w-12 h-12 text-apple-blue animate-bounce mb-4" />
+        </div>
+        <p className="text-[10px] font-black uppercase tracking-[0.4em] text-apple-gray animate-pulse">
+          {isAuthenticated
+            ? "Verifying Authority"
+            : "Redirecting to Security Login"}
+        </p>
       </div>
-      <p className="text-[10px] font-black uppercase tracking-[0.4em] text-zinc-400 animate-pulse">
-        {isAuthenticated
-          ? "Verifying Authority"
-          : "Redirecting to Security Login"}
-      </p>
     </div>
   );
 };
