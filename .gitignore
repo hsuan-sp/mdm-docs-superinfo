@@ -61,3 +61,4 @@ VERCEL_ENV_VARS.txt
 
 # Generated Data
 lib/generated-data.json
+lib/shards/
