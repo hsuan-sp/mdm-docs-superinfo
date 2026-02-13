@@ -38,7 +38,7 @@ const CardSheen: React.FC<CardSheenProps> = ({ className }) => {
             opacity-0 group-hover:opacity-100
             transform translate-x-[-30%] translate-y-[-30%]
             group-hover:translate-x-[0%] group-hover:translate-y-[0%]
-            transition-transform duration-[3000ms] ease-out
+            transition-transform duration-3000 ease-out
           "
           style={{ willChange: "transform, opacity" }}
         />

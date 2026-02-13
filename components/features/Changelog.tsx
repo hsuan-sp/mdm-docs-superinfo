@@ -91,7 +91,7 @@ const Changelog: React.FC<ChangelogProps> = ({ zhLogs, enLogs }) => {
         {filteredLogs.map((log, index) => (
           <article key={log.version} className="relative md:pl-48 group">
             {/* Timeline Dot - Centered on 128px line (128-7=121) */}
-            <div className="hidden md:flex absolute left-[121px] top-8 w-4 h-4 rounded-full border-[3px] border-white dark:border-[#121212] bg-apple-blue shadow-[0_0_0_4px_rgba(10,132,255,0.15)] z-10 group-hover:scale-110 transition-transform duration-300" />
+            <div className="hidden md:flex absolute left-30.25 top-8 w-4 h-4 rounded-full border-[3px] border-white dark:border-[#121212] bg-apple-blue shadow-[0_0_0_4px_rgba(10,132,255,0.15)] z-10 group-hover:scale-110 transition-transform duration-300" />
 
             {/* Version Label (Left side on desktop) */}
             <div className="hidden md:flex absolute left-0 top-7 w-28 flex-col items-end pr-6 text-right">
