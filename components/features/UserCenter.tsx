@@ -9,7 +9,7 @@ import { useUser } from "@/hooks/useLogtoUser";
 
 const UserCenter: React.FC = () => {
   const { t } = useLanguage();
-  const { user, isLoading, signIn, signOut } = useUser();
+  const { user, isLoading, isAuthenticated, signIn, signOut } = useUser();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -34,20 +34,20 @@ const UserCenter: React.FC = () => {
 
   return (
     <div className="flex items-center gap-3 pl-2">
-      {user ? (
+      {isAuthenticated ? (
         <div className="flex items-center gap-3">
           <div className="hidden xl:flex flex-col items-end leading-none select-none">
             <span className="text-[9px] font-bold text-apple-blue dark:text-blue-400 uppercase tracking-widest mb-1.5 opacity-80">
               {t("userCenter.authorized")}
             </span>
             <span className="text-[12.5px] font-bold text-zinc-900 dark:text-zinc-50 tracking-tight">
-              {(user.email ?? "User").split("@")[0]}
+              {(user?.email ?? "User").split("@")[0]}
             </span>
           </div>
 
           <div
             className="w-9 h-9 rounded-full bg-apple-blue text-white flex items-center justify-center font-bold text-[13px] shadow-lg shadow-apple-blue/20 cursor-help select-none ring-1 ring-apple-blue/50 dark:ring-blue-400/50 ring-offset-2 ring-offset-white dark:ring-offset-zinc-950 transition-all hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue"
-            title={`已登入：${user.email ?? "Unknown"}`}
+            title={`已登入：${user?.email ?? "Unknown"}`}
             tabIndex={0}
             role="img"
           >

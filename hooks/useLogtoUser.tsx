@@ -17,6 +17,7 @@ interface LogtoUser {
 interface UserContextType {
   user: LogtoUser | null;
   isAuthenticated: boolean;
+  isLogtoAuthenticated: boolean;
   isLoading: boolean;
   signIn: (redirectPath?: string) => void;
   signOut: () => void;
@@ -85,7 +86,9 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
     <UserContext.Provider
       value={{
         user: data.user,
-        isAuthenticated: data.auth,
+        // ✅ 嚴格判定：必須有 auth flag 且必須拿到 email 才算真正的授權成功
+        isAuthenticated: data.auth && !!data.user?.email,
+        isLogtoAuthenticated: data.auth,
         isLoading,
         signIn,
         signOut,

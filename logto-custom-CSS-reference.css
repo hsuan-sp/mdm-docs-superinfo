@@ -1,0 +1,255 @@
+/* =========================================
+   極電資訊 (Superinfo) 2026 Logto Custom CSS
+   Style: Apple Minimalist Pro (V4 - Universal Dark Mode)
+   ========================================= */
+
+/* 1. 設計變數 (CSS Variables) - 預設淺色 */
+:root {
+  --custom-primary: #0071e3;
+  --custom-primary-hover: #0077ed;
+  --custom-card-bg: #ffffff;
+  --custom-border: rgba(0, 0, 0, 0.02);
+  --custom-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  --custom-logo-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  --custom-text-main: #1d1d1f;
+  --custom-text-sub: #86868b;
+  --custom-input-bg: #f5f5f7;
+  --custom-input-text: #1d1d1f;
+  --custom-header-gradient: linear-gradient(135deg, #0071e3 0%, #104291 100%);
+  --custom-header-text: #ffffff;
+  --custom-btn-disabled-bg: #e5e5e7;
+  --custom-btn-disabled-text: #99999f;
+}
+
+/* 2. 深色模式觸發器 (涵蓋 Logto 預覽切換 + 系統設定) */
+/* 當 html 或 body 有 dark 類別，或 data-theme 為 dark 時觸發 */
+:root[data-theme="dark"],
+html.dark,
+body.dark,
+.dark {
+  --custom-primary: #0a84ff;
+  --custom-card-bg: #1c1c1e; /* 深灰卡片 */
+  --custom-border: rgba(255, 255, 255, 0.08);
+  --custom-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  --custom-logo-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  --custom-text-main: #f5f5f7;
+  --custom-text-sub: #a1a1a6;
+  --custom-input-bg: #2c2c2e;
+  --custom-input-text: #ffffff;
+  --custom-header-gradient: linear-gradient(135deg, #0a84ff 0%, #00457c 100%);
+  --custom-btn-disabled-bg: #3a3a3c;
+  --custom-btn-disabled-text: #636366;
+}
+
+/* 系統偏好深色時也觸發 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --custom-primary: #0a84ff;
+    --custom-card-bg: #1c1c1e;
+    --custom-border: rgba(255, 255, 255, 0.08);
+    --custom-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    --custom-logo-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    --custom-text-main: #f5f5f7;
+    --custom-text-sub: #a1a1a6;
+    --custom-input-bg: #2c2c2e;
+    --custom-input-text: #ffffff;
+    --custom-header-gradient: linear-gradient(135deg, #0a84ff 0%, #00457c 100%);
+    --custom-btn-disabled-bg: #3a3a3c;
+    --custom-btn-disabled-text: #636366;
+  }
+}
+
+/* 3. 修正 Logto 背景問題 */
+/* 強制將 body 與 app 背景設為透明，讓 Logto 的主題色能透出來，或由我們控制 */
+body,
+#app {
+  background-color: transparent !important;
+  color: var(--custom-text-main) !important;
+}
+
+/* 4. 主卡片容器 (Floating Card) */
+#app main[class*="main"] {
+  position: relative !important;
+  padding: 0 !important;
+  border-radius: 24px !important;
+
+  /* 核心修正：使用變數並加上 !important */
+  background-color: var(--custom-card-bg) !important;
+  background: var(--custom-card-bg) !important;
+
+  box-shadow: var(--custom-shadow) !important;
+  border: 1px solid var(--custom-border) !important;
+  overflow: visible !important;
+  display: flex !important;
+  flex-direction: column !important;
+  max-width: 440px !important;
+  width: 92% !important;
+  margin: 60px auto !important;
+}
+
+#app main[class*="main"] > div:first-child {
+  border-radius: 24px !important;
+  overflow: hidden !important;
+}
+
+/* 5. 品牌 Header */
+#app main[class*="main"]::before {
+  content: "";
+  display: block;
+  height: 160px;
+  background: var(--custom-header-gradient);
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 24px 24px 0 0 !important;
+}
+
+#app main[class*="main"]::after {
+  content: "Superinfo Apple MDM Hub\A 極電資訊行動裝置管理資料庫";
+  white-space: pre-wrap;
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: var(--custom-header-text);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  z-index: 20;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+}
+
+/* 6. Logo */
+#app main[class*="main"] img {
+  display: block !important;
+  margin: -50px auto 24px !important;
+  background: var(--custom-card-bg) !important;
+  padding: 12px !important;
+  border-radius: 22px !important;
+  box-shadow: var(--custom-logo-shadow) !important;
+  width: 84px !important;
+  height: 84px !important;
+  object-fit: contain !important;
+  z-index: 50 !important;
+  position: relative !important;
+  border: 4px solid var(--custom-card-bg) !important;
+}
+
+/* 隱藏元素 */
+#app main h1,
+#app main h2,
+div[class*="_title_"] {
+  display: none !important;
+}
+
+/* 7. 表單 */
+#app form {
+  padding: 0 40px 48px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+}
+
+#app form::before {
+  content: "⚠️ 請使用教育網域信箱 (@*.edu.tw) 登入";
+  display: block;
+  text-align: center;
+  background: var(--custom-input-bg);
+  color: var(--custom-text-sub);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-bottom: 4px;
+  border: 1px solid var(--custom-border);
+}
+
+/* 8. 輸入框 */
+#app input:not([type="checkbox"]):not([type="radio"]) {
+  height: 52px !important;
+  border-radius: 12px !important;
+  background: var(--custom-input-bg) !important;
+  border: 1px solid transparent !important;
+  font-size: 16px !important;
+  padding: 0 16px !important;
+  color: var(--custom-input-text) !important;
+  box-shadow: none !important;
+}
+
+#app input:not([type="checkbox"]):not([type="radio"]):focus {
+  background: var(--custom-card-bg) !important;
+  border-color: var(--custom-primary) !important;
+  box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.15) !important;
+}
+
+/* 修正輸入框內文字顏色，防止瀏覽器自動填充導致變色 */
+#app input:-webkit-autofill,
+#app input:-webkit-autofill:hover,
+#app input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--custom-text-main) !important;
+  -webkit-box-shadow: 0 0 0px 1000px var(--custom-input-bg) inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#app input::placeholder {
+  color: var(--custom-text-sub) !important;
+}
+
+/* 9. Smart Button */
+#app button[type="submit"] {
+  height: 52px !important;
+  border-radius: 980px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  background: var(--custom-btn-disabled-bg) !important;
+  color: var(--custom-btn-disabled-text) !important;
+  pointer-events: none !important;
+  cursor: not-allowed !important;
+  border: none !important;
+  width: 100% !important;
+  margin-top: 12px !important;
+}
+
+#app form:has(input[value*="@"][value*=".edu.tw"]) button[type="submit"],
+#app
+  form:has(input[value*="@"][value*="superinfo.com.tw"])
+  button[type="submit"] {
+  background: linear-gradient(
+    135deg,
+    var(--custom-primary) 0%,
+    var(--custom-primary-hover) 100%
+  ) !important;
+  color: #ffffff !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3) !important;
+}
+
+/* 10. Footer */
+div[class*="_footer_"] {
+  opacity: 0.6 !important;
+  font-size: 11px !important;
+  margin-top: 20px !important;
+  color: var(--custom-text-sub) !important;
+}
+
+#app form::after {
+  content: "Powered by Superinfo • Apple Authorized Reseller";
+  display: block;
+  text-align: center;
+  font-size: 11px;
+  color: var(--custom-text-sub);
+  margin-top: 32px;
+  opacity: 0.6;
+}
+
+#app a {
+  color: var(--custom-primary) !important;
+}
+.divider,
+[class*="_divider_"] {
+  display: none !important;
+}
