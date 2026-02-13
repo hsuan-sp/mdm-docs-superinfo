@@ -7,6 +7,7 @@ import React, {
   useCallback,
   useRef,
 } from "react";
+import { isAuthorizedEmail } from "@/lib/auth";
 
 interface LogtoUser {
   sub: string;
@@ -17,6 +18,7 @@ interface LogtoUser {
 interface UserContextType {
   user: LogtoUser | null;
   isAuthenticated: boolean;
+  isAuthorized: boolean;
   isLogtoAuthenticated: boolean;
   isLoading: boolean;
   signIn: (redirectPath?: string) => void;
@@ -86,8 +88,13 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
     <UserContext.Provider
       value={{
         user: data.user,
-        // ✅ 嚴格判定：必須有 auth flag 且必須拿到 email 才算真正的授權成功
-        isAuthenticated: data.auth && !!data.user?.email,
+        // ✅ 寬鬆判定：只要 Logto 說有登入就算 (防止 UI 重置)
+        isAuthenticated: data.auth,
+        // ✅ 嚴格判定：用於受保護路由，必須有登入且有 Email 且在白名單
+        isAuthorized:
+          data.auth &&
+          !!data.user?.email &&
+          isAuthorizedEmail(data.user?.email),
         isLogtoAuthenticated: data.auth,
         isLoading,
         signIn,
