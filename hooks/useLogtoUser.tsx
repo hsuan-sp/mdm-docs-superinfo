@@ -17,9 +17,9 @@ interface LogtoUser {
 
 interface UserContextType {
   user: LogtoUser | null;
-  isAuthenticated: boolean;
-  isAuthorized: boolean;
-  isLogtoAuthenticated: boolean;
+  isAuthenticated: boolean; // 已認證且資料完整 (有 Email)
+  isAuthorized: boolean; // 符合白名單
+  isLogtoAuthenticated: boolean; // Logto 端的原始狀態
   isLoading: boolean;
   signIn: (redirectPath?: string) => void;
   signOut: () => void;
@@ -38,10 +38,6 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
   const [isLoading, setIsLoading] = useState(true);
   const hasFetched = useRef(false);
 
-  const signOut = useCallback(() => {
-    window.location.href = "/api/logto/sign-out";
-  }, []);
-
   const fetchUser = useCallback(async () => {
     setIsLoading(true);
     try {
@@ -52,28 +48,17 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
       }
       const json = await res.json();
 
+      // ✅ 從多個來源提取 Email (Logto 規範)
       const email = json.userInfo?.email || json.claims?.email;
-
-      // ✅ 關鍵自癒邏輯：
-      // 如果 Logto 說 isAuthenticated=true，但 Email 完全消失。
-      // 代表這是一個 Session 損壞或 Scope 遺失的殭屍會話。
-      if (json.isAuthenticated && !email) {
-        console.warn(
-          "[Auth] Corrupted session detected (No Email). Auto-clearing..."
-        );
-        signOut(); // 直接觸發登出清理 Cookie
-        return;
-      }
+      const name =
+        json.userInfo?.name || json.claims?.name || json.claims?.username;
 
       setData({
         user: json.isAuthenticated
           ? {
               sub: json.claims?.sub || json.userInfo?.sub,
               email: email || undefined,
-              name:
-                json.userInfo?.name ||
-                json.claims?.name ||
-                json.claims?.username,
+              name: name || undefined,
             }
           : null,
         auth: !!json.isAuthenticated,
@@ -84,7 +69,7 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
     } finally {
       setIsLoading(false);
     }
-  }, [signOut]);
+  }, []);
 
   useEffect(() => {
     if (!hasFetched.current) {
@@ -95,9 +80,12 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const signIn = (redirectPath?: string) => {
     const path = redirectPath || window.location.pathname;
-    // 確保路徑是絕對的
     const target = `/api/logto/sign-in?redirect=${encodeURIComponent(path)}`;
-    window.location.replace(target); // 使用 replace 避免瀏覽器歷史堆疊問題
+    window.location.href = target;
+  };
+
+  const signOut = () => {
+    window.location.href = "/api/logto/sign-out";
   };
 
   return (
