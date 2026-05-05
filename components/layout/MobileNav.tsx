@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { useRouter, usePathname } from "next/navigation";
+import Image from "next/image";
 import { useLanguage } from "@/hooks/useLanguage";
 import { translations } from "@/locales";
 import {
@@ -101,9 +102,11 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
         <div className="flex items-center justify-between px-6 bg-white/40 dark:bg-zinc-950/40 h-20 shrink-0 border-b border-zinc-100 dark:border-zinc-900">
           <div className="flex items-center gap-3.5">
             <div className="p-2 bg-apple-blue/10 rounded-2xl border border-apple-blue/20 shadow-sm">
-              <img
+              <Image
                 src="/logo-square.png"
                 alt="極電資訊 Apple MDM Hub Logo"
+                width={26}
+                height={26}
                 className="h-6.5 w-6.5 object-contain"
               />
             </div>

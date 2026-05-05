@@ -57,7 +57,7 @@ export default async function RootLayout({
                 </Navbar>
               }
               search={null}
-              footer={<CustomFooter key="footer" />}
+              footer={<CustomFooter />}
               pageMap={pageMap}
               docsRepositoryBase="https://github.com/hsuan-sp/mdm-docs-superinfo/tree/main"
               editLink="編輯此頁"

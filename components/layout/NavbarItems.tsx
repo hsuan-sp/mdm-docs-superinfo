@@ -60,7 +60,7 @@ export const Logo = () => {
 
 // Navbar 右側功能區 (包含中間選單與右側按鈕)
 export const NavbarExtra = () => {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const { language, setLanguage, t } = useLanguage();
   const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
@@ -187,8 +187,7 @@ export const NavbarExtra = () => {
           onClick={async (e) => {
             const newTheme = resolvedTheme === "dark" ? "light" : "dark";
 
-            // @ts-ignore - Viewhelper for TS
-            if (!document.startViewTransition) {
+            if (!(document as any).startViewTransition) {
               setTheme(newTheme);
               return;
             }
@@ -200,8 +199,7 @@ export const NavbarExtra = () => {
               Math.max(y, window.innerHeight - y)
             );
 
-            // @ts-ignore
-            const transition = document.startViewTransition(() => {
+            const transition = (document as any).startViewTransition(() => {
               flushSync(() => {
                 setTheme(newTheme);
               });
