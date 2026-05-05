@@ -1,44 +1,42 @@
 ---
 id: hw-7
 
-title: "Must 'Find My' be turned off before repair? How?"
+title: "Must 'Find My' be turned off before repair? How do I do it?"
 
-category: "Section 6: Hardware Maintenance & Troubleshooting"
+category: "Section 6: Hardware & Maintenance"
 
 important: true
 
-tags: ["Repair", "Find My", "Activation Lock", "Maintenance", "Activation Lock"]
+tags: ["Repair", "Find My", "Activation Lock", "Maintenance"]
 ---
 
-**Yes, this is almost always a requirement for repair. Failure to disable 'Find My' triggers 'Activation Lock,' which prevents service centers from performing the necessary diagnostics or parts replacement, leading to the device being returned unrepaired.**
-
-Based on how the device is managed in your school, follow the appropriate method:
+**Yes, this is a mandatory requirement for official repairs. Failure to disable 'Find My' triggers 'Activation Lock,' which prevents authorized service centers from performing diagnostics or hardware replacement, resulting in the device being returned unrepaired.**
 
 ## Option 1: Admin Remote Unlock via Jamf Pro (Recommended)
 
-If the device is Supervised, the administrator has the highest authority and can handle this remotely:
+If the device is **Supervised**, the IT administrator can handle this remotely via the management console:
 
-1. Locate the device in Jamf Pro.
-
+1. Locate the specific device in Jamf Pro.
 2. Send the **"Disable Activation Lock"** command.
-3. **Effect**: Even if a student is logged in with a personal account, this command overrides the lock on Apple's servers, allowing for repair.
+3. **Effect**: This overrides the lock on Apple's servers for that specific serial number. It is the most reliable method when the device screen is unresponsive.
 
-## Option 2: Student Manually Turns Off on iPad
+## Option 2: Manual Sign-out on the iPad
 
-1. Go to **Settings > [User Name] > Find My**.
+If the screen is functional and the student is present:
+
+1. Go to **[Settings]** > **[User Name]** > **[Find My]**.
 2. Tap **"Find My iPad"** and toggle it OFF.
-3. The system will require the password for that Apple ID.
+3. The student must enter their Apple ID password to confirm.
 
 ## Option 3: Web-Based Remote Removal
 
-If the device screen is broken and unusable:
+If the screen is broken or the device will not power on:
 
-1. Ask the student to log in at [iCloud.com/find](https://www.icloud.com/find).
-
-2. Select the specific iPad from "All Devices".
+1. Have the student log in at [iCloud.com/find](https://www.icloud.com/find) using another device.
+2. Select the specific iPad from the "All Devices" list.
 3. Click **"Remove from Account"**.
-4. **Note**: Do _not_ select "Erase iPad," as this can complicate the post-repair setup.
+4. **Warning**: Do _not_ select "Erase iPad," as this does not necessarily remove the activation lock in all scenarios and can complicate redeployment.
 
-## Institutional Advice:
+## Expert Strategy:
 
-When collecting devices for repair, the IT lead must verify that every unit sent to the vendor has been "Removed from Account." Failure to do so can cause repair delays of several weeks.
+Before submitting a hardware repair batch, IT Coordinators should strictly verify the Activation Lock status of every unit in Jamf Pro. Incorporating a mandatory "Activation Lock Released" checkbox into your school's internal repair submission workflow prevents entire batches from being rejected and returned by the Apple Authorized Service Provider due to a single locked device.

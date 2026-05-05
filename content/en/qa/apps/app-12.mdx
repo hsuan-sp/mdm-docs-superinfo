@@ -1,25 +1,32 @@
 ---
 id: app-12
 
-title: "Can paid app licenses be shared between different schools? (Cross-school VPP)"
+title: "Can paid app licenses be shared between different schools? (Cross-school VPP transfers)"
 
 category: "Section 3: App Management & Distribution"
 
 important: false
 
-tags: ["VPP Locations", "Resource Sharing", "ASM"]
+tags: ["VPP Locations", "Resource Sharing", "Volume Purchase Program", "ASM"]
 ---
 
-**Yes. This is achieved through 'Location' management within Apple School Manager (ASM).**
+**Yes, absolutely—provided that both schools operate under the umbrella of the _exact same_ Apple School Manager (ASM) organization. This is orchestrated utilizing ASM's internal "Location" management hierarchy.**
 
-This is highly effective for centralized procurement by a school district or a main campus.
+This capability is a mission-critical asset management tool for school districts handling centralized procurement or massive K-12 campuses with distinct Middle and High School divisions:
 
-## How it Works:
+## The Logic of Cross-Location Transfers:
 
-1. **Centralized Purchase**: A Super Admin purchases 10,000 licenses at a "Main Office" location in ASM.
-2. **Internal Transfer**: Use the **Transfer Licenses** feature to move, for example, 1,000 licenses to "Elementary School A" and 500 to "Junior High B."
-3. **Independent Management**: The administrators at each school log in to their local MDM and see only the licenses allocated to their specific location.
+1. **Centralized Procurement**:
+   - The District Super Admin creates a root location named "District IT Headquarters" in ASM and executes a bulk purchase of 10,000 licenses for a premium special-education app.
+2. **Frictionless Internal Transfers**:
+   - Using the **[Transfer Licenses]** feature in ASM, the Super Admin allocates 1,000 licenses to the sub-location "Elementary School A" and 500 to "Junior High B."
+   - **The Advantage**: This transaction occurs instantaneously at the database level; it requires no financial reconciliation or downloading of new certificates.
+3. **Decentralized Deployment**:
+   - The IT Director at "Elementary School A" logs into their local Jamf Pro instance (which is cryptographically bound only to the "Elementary School A" Location Token). They will exclusively see and manage their allocated 1,000 licenses, fully insulated from the district's broader inventory.
 
-## Benefits:
+## Strict Technical Limitation: Cross-ASM Transfers are Impossible
 
-Allows for "Bulk Procurement / Negotiated Pricing" while maintaining "Independent School Management," greatly simplifying the accounting process.
+- A common misconception is that licenses can be sent from School A's independent ASM instance to School B's independent ASM instance. **This is fundamentally prohibited by Apple's architecture.**
+- App licenses (whether $0 or paid) are permanently fused to the **[Organization ID]** that procured them.
+
+> **Important Recommendation**: If your school plans to independently procure devices in the future, we strongly recommend continuing to use your existing ASM organization and Location hierarchy rather than applying for a brand-new, independent ASM account. If you migrate to a new ASM organization, all previously purchased app licenses cannot be transferred, and every educational app would need to be repurchased and redeployed from scratch.

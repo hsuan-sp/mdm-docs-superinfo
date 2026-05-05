@@ -1,40 +1,39 @@
 ---
 id: app-11
 
-title: "How do I distribute E-books (PDF/ePub) to student iPads?"
+title: "How do I distribute E-books (PDF/ePub) to student iPads? Can I buy books via ASM?"
 
 category: "Section 3: App Management & Distribution"
 
 important: false
 
-tags: ["E-books", "Material Distribution", "PDF", "Restrictions"]
+tags:
+  [
+    "E-books",
+    "Material Distribution",
+    "Volume Purchase Program",
+    "Digital Learning",
+  ]
 ---
 
-**Apple School Manager (ASM) in many regions (including Taiwan) does not support the direct purchase or distribution of content from the Apple Books Store.**
+**Due to regional licensing restrictions (including Taiwan), Apple School Manager (ASM) does not currently support the bulk procurement of content from the Apple Books Store.**
 
-However, you can still distribute your own PDFs or ePub files to students using several methods:
+This means you cannot "purchase" paid or free books through ASM in the same way you acquire apps. However, if your teaching staff has created custom materials or legally acquired digital textbooks (PDF or ePub files), there are three effective distribution methods:
 
-## Option 1: Distribution via MDM
+## Option 1: Native MDM Deployment (For lightweight, mandatory texts)
 
-1. **Upload to Jamf Pro**: In the "eBooks" section of Jamf Pro, you can directly upload PDF or ePub files.
-2. **Assign to Devices**: Scope these custom e-books to your target device groups.
-3. **Student Access**: Students will find these materials ready for reading in the native **Books** app on their iPads.
+1. **Upload to Jamf Pro**: Navigate to the **[eBooks]** section within Jamf Pro. Here, you can directly upload your PDF or ePub files.
+2. **Scope the Deployment**: Assign these custom e-books to specific Smart Groups (e.g., "All 7th Grade iPads").
+3. **Student Experience**: The files are silently pushed. When students open the native Apple **Books** app, the school-provided materials will be resting on their digital bookshelves.
 
-## Option 2: Using the 'Files' App or Cloud Storage
+## Option 2: On-Demand via "Self Service" (Highly Recommended)
 
-1. **Cloud Hosting**: Upload materials to a school cloud service (e.g., Google Drive or Microsoft OneDrive).
-2. **Deploy the Cloud App**: Distribute the corresponding app via Jamf Pro.
-3. **Student Access**: Students open the app to view and download the teaching materials.
+- **The Mechanics**: Instead of setting the eBook to "Install Automatically," publish it to **[Make Available in Self Service]**.
+- **The Advantage**: This prevents 500 iPads from simultaneously downloading a massive file and consuming local storage. Students actively download the syllabus or reading material only when instructed by their teacher during class.
 
-## Option 3: Learning Management Systems (LMS)
+> **Storage Management Tip**: The 64 GB iPad's local storage is finite. Avoid using MDM to forcefully push large, multimedia-rich ePub files to every device. Adopting an on-demand download model (Option 2) or a cloud-based approach (Option 3) is the core principle for keeping the system lean and preventing app update failures caused by insufficient storage.
 
-- Upload materials to your LMS (e.g., Google Classroom, Canvas). Students access the content via the LMS app or web browser.
+## Option 3: Cloud Storage or LMS Platforms (The Most Flexible Long-Term Approach)
 
-## Key Considerations:
-
-- **Regional Restrictions**: You cannot "purchase" books from the Apple Books Store in bulk through ASM like you do with apps in certain regions.
-- **Copyright**: Ensure you have the legal right to distribute any materials you upload to these platforms.
-
-## Practical Advice:
-
-Focus on distributing custom PDF/ePub files or leveraging existing cloud and LMS platforms rather than trying to deploy content directly from the Apple Books Store through ASM.
+- **The Mechanics**: Upload materials to a Learning Management System (LMS) like Canvas, Google Classroom, or a shared Google Drive folder. The MDM's only job is to deploy the LMS app or a Web Clip shortcut.
+- **The Advantage**: The files live centrally in the cloud. When a teacher updates a typo in the PDF, every student instantly sees the correction without requiring the MDM to push a new 50MB payload.

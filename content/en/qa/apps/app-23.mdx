@@ -10,22 +10,21 @@ important: true
 tags: ["DDM", "App Management", "Declarative", "Auto-Update", "iOS 26"]
 ---
 
-**Declarative App Management is a new architecture introduced in iOS 26, iPadOS 26, and macOS 26. It allows devices to 'Autonomously' manage their app installation and update status, replacing the old model that relied on constant commands from the MDM server.**
+**"Declarative App Management" is a modernized MDM framework introduced in iOS/iPadOS and macOS. It empowers devices to "autonomously" manage their own app installation and update states, fundamentally replacing the traditional model that heavily relied on the MDM server frequently pushing remote commands.**
 
 ## Comparison: Traditional VPP vs. Declarative App Management
 
-| Feature               | Traditional MDM (InstallApplication)                                | Declarative App Management (App Declaration)                                           |
-| :-------------------- | :------------------------------------------------------------------ | :------------------------------------------------------------------------------------- |
-| **Trigger Mechanism** | Server must 'push' the command; fails if device is briefly offline. | Server pushes a 'Declaration.' The device autonomously retries until successful.       |
-| **Status Reporting**  | Passive. MDM must 'poll' the device to see if it finished.          | **Real-time**. Device pushes status updates (installing, failed, success) immediately. |
-| **Update Control**    | Global 'Auto-Update' or manual pushes.                              | Granular control **per app**: Force update, defer, or follow user preference.          |
-| **Scope**             | App Store Apps, VPP Apps.                                           | App Store, VPP, Custom Apps, and **.pkg** files on macOS.                              |
+| Feature               | Traditional MDM (InstallApplication)                                                                   | Declarative App Management (App Declaration)                                                                                                       |
+| :-------------------- | :----------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Trigger Mechanism** | The MDM server must "actively" push an installation command. If it fails, the server must retry.       | The MDM simply transmits a "Declaration." The device **autonomously** attempts installation until successful.                                      |
+| **Status Reporting**  | Passive. The MDM must periodically wait for the device to "Check-in" to learn the installation status. | **Real-time**. The device proactively uses a dedicated channel to instantly report whether the installation is downloading, successful, or failed. |
+| **Update Control**    | Limited to global "Automatic Updates" or entirely manual pushes.                                       | Can be configured per **individual app**: force updates, delay updates, or respect the user's App Store preferences.                               |
+| **Deployment Scope**  | App Store Apps, VPP Apps.                                                                              | App Store Apps, VPP Apps, Custom Apps, and crucially, standard `.pkg` installers on macOS.                                                         |
 
-## Supported Platforms
+## Supported Platforms and Requirements
 
-- **iOS 26 / iPadOS 26**: Supports Declarative management for App Store and Custom apps.
-- **macOS 26 (Tahoe)**: Extends DDM support to **.pkg** installers.
-- **visionOS 26**: Full support for Declarative app management.
+- **iOS / iPadOS**: Fully supports declarative deployment for App Store and Custom Apps.
+- **macOS**: Extends declarative deployment capabilities to include enterprise `.pkg` installers alongside standard apps.
 
 ## Setup in Jamf Pro
 
@@ -44,6 +43,8 @@ On DDM-compatible versions of Jamf Pro:
 
 ## Deployment Strategy
 
-- **New Fleet**: For devices running v26+, we recommend shifting entirely to Declarative deployment to reduce server load and increase success rates.
-- **Mixed Fleet**: Use **Jamf Smart Groups** to distinguish between legacy (v25 and below) and modern (v26+) devices to apply the appropriate deployment method.
-- **Monitoring**: Leverage the real-time Status Channel to quickly identify failed installs and take corrective action.
+## Best Practice Deployment Recommendations
+
+- **Transition for New Devices**: For devices meeting the minimum OS requirements, we strongly recommend fully transitioning to the Declarative App Management framework. This significantly reduces Jamf Pro server load while vastly improving deployment success rates on endpoints.
+- **Hybrid Environment Strategy**: Legacy devices will still require the traditional VPP assignment model. Utilize Jamf Pro "Smart Groups" to categorize devices by OS version and apply the appropriate deployment strategy to each cohort.
+- **Leverage Proactive Monitoring**: Take full advantage of DDM's real-time status reporting to rapidly identify devices where installations are stalled or failing, allowing IT admins to intervene promptly.

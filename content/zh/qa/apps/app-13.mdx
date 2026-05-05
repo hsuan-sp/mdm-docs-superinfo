@@ -1,7 +1,7 @@
 ---
 id: app-13
 
-title: "什麼是「受管理的應用程式設定 (Managed App Configuration)」？如何應用於大量部署？"
+title: "什麼是「管理式 App 設定 (Managed App Configuration)」？如何應用於大量部署？"
 
 category: "第三部分：應用程式分發與管理 (Apps & Books)"
 
@@ -10,17 +10,17 @@ important: false
 tags: ["AppConfig", "XML", "變數代換", "Jamf Pro"]
 ---
 
-**「受管理的應用程式設定」是利用 MDM 協定，將 XML 格式的設定檔注入至支援 AppConfig 標準的應用程式中，實現「免接觸設定 (Zero-touch Configuration)」。**
+**「管理式 App 設定」是利用 MDM 協定，將 XML 格式的設定參數直接注入至支援 AppConfig 標準的 App 中，以實現真正的「零接觸部署 (Zero-touch Deployment)」。**
 
-這不只是單純的預填資料，而是能強制鎖定 App 的特定行為，防止使用者修改。
+此機制不僅能自動預填資料（如：伺服器網址、使用者信箱），更能強制鎖定 App 的特定功能與行為，防止學生或使用者自行修改。
 
-## 技術實作與 Jamf Pro 變數應用 ：
+## 技術實作與 Jamf Pro 變數應用
 
-在 Jamf Pro 的行動裝置 App 詳細資訊頁面中，切換至 **「App Configuration」** 分頁。您需要貼入符合該 App 開發者規範的 **Plist (Property List)** XML 代碼。
+在 Jamf Pro 的行動裝置 App 詳細資訊頁面中，切換至 **[App Configuration]** 標籤頁。您必須在此貼入符合該 App 開發者規範的 **Plist (Property List)** XML 程式碼。
 
-### Jamf Pro 獨家優勢：變數代換 (Variable Substitution)
+### Jamf Pro 的強大優勢：變數代換 (Variable Substitution)
 
-您可以使用 Jamf Pro 的內建變數來動態填入每台裝置的專屬資訊，無需為每個人製作獨立的設定檔。
+透過 Jamf Pro 內建的變數機制，系統能在派發時自動將變數轉換為對應裝置或使用者的專屬資訊，資訊組長無需為數百名學生製作獨立的設定檔。
 
 - **常用變數範例** ：
   - `$SERIALNUMBER`：自動填入裝置序號。

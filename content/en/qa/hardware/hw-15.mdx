@@ -1,7 +1,7 @@
 ---
 id: hw-15
 
-title: "How do I restrict USB/Thunderbolt drive access on macOS to prevent data leaks?"
+title: "How do I restrict USB/Thunderbolt drive access on macOS via MDM?"
 
 category: "Section 6: Hardware & Maintenance"
 
@@ -10,26 +10,31 @@ important: false
 tags: ["macOS", "Disk Management", "Security", "USB Restrictions"]
 ---
 
-**Starting with macOS 15, Apple introduced a new 'Media Management' framework that allows for granular control over external storage devices. macOS 26 (Tahoe) further strengthens this security.** Controlled USB access is vital in computer labs or administrative offices to prevent unauthorized file copying or malware injection.
+**Starting with macOS 15, Apple introduced a enhanced 'Media Management' framework for granular control over external storage. macOS 26 further strengthens these security controls.**
 
-## Important Background: macOS 26 (Tahoe) and Intel Mac End-of-Life:
+Managing USB access is vital for school computer labs and administrative offices to prevent unauthorized file transfers or malware injection.
+
+## Important Background: macOS 26 and Intel Mac End-of-Life
 
 - **Final Support**: macOS 26 is the **last supported version** for Intel-based Macs (announced WWDC 2025).
-- **Eligible Models**: Only four Intel Macs can upgrade: 16" MacBook Pro (2019), 13" MacBook Pro (2020), iMac (2020), Mac Pro (2019).
-- **Future**: Starting with macOS 27 (2026), only Apple Silicon is supported. Intel Macs get security updates until 2028.
-- **Strategy**: Plan for Apple Silicon upgrades for computer labs.
+- **Eligible Models**: Limited to a few specific Intel Macs from 2019/2020.
+- **Maintenance**: While security updates for macOS 26 will continue until 2028, macOS 27 (2026) will be Apple Silicon exclusive. Schools should prioritize upgrading to M-series Macs to maintain feature compatibility.
 
 ## Implementation Strategies in Jamf Pro:
 
-1. **Read-Only Mode**:
-   - Set external drives to read-only. Students can read teaching materials from a flash drive but **cannot copy files out** of the computer.
+### 1. Read-Only Mode
 
-2. **Full Block**:
-   - For high-security administrative Macs, you can disable the mounting of external storage devices entirely.
+- Set external drives to read-only via a **Configuration Profile**.
+- **Result**: Students can open teaching materials from a flash drive but **cannot copy sensitive files out** of the computer.
 
-3. **Thunderbolt Accessory Security**:
-   - On Apple Silicon (M-series) Macs, you can restrict new Thunderbolt accessories to require "User Approval" or "Admin Authorization" for data transfer, preventing attacks.
+### 2. Full Block
 
-## Practical Advice:
+- For exam environments or high-security administrative Macs, you can disable the mounting of external storage devices entirely.
 
-For Mac computer labs, administrators can create a Smart Group that automatically applies a "Block External Disks" profile during exam times, and reverts to normal read/write permissions afterwards.
+### 3. Thunderbolt Accessory Security
+
+- On Apple Silicon (M-series) Macs, administrators can enforce "User Approval" for data transfer when new accessories are connected, preventing automated "Rubber Ducky" style hardware attacks.
+
+## Expert Strategy:
+
+For shared Mac computer labs, IT administrators can leverage a Jamf Pro **Smart Group** to automatically deploy a strict "Block External Disks" profile during exam windows, and seamlessly remove it afterward. Establishing these automated access control policies is essential for sustainable, zero-trust campus lab management and significantly reduces the daily administrative burden on IT staff.

@@ -1,24 +1,37 @@
 ---
 id: acc-19
 
-title: "How do I control access to Apple Intelligence features for Managed Apple Accounts?"
+title: "How do I control whether Managed Apple Accounts can use Apple Intelligence features?"
 
 category: "Section 1: Account & Server Management"
 
 important: false
 
-tags: ["Apple Intelligence", "Service Access", "ASM"]
+tags: ["Apple Intelligence", "Service Access", "ASM", "Privacy"]
 ---
 
-**Administrators can determine whether to allow AI features through the 'Service Access' settings in Apple School Manager (ASM).**
+**IT Administrators can precisely control AI feature availability through a dual-layered approach: 'Account-Level' configurations in Apple School Manager (ASM) and 'Device-Level' restrictions in the MDM.**
 
-As Apple expands **Apple Intelligence** through 2024 and 2025, ASM provides account-level toggles that complement MDM device restrictions.
+As Apple deeply integrated **Apple Intelligence** into the OS layer throughout 2024 and 2025, defining the boundaries of Generative AI in education became critical. Apple provides strict isolation mechanisms specifically designed for K-12 and Higher Education environments.
 
-## Configuration Methods:
+## The Dual-Layered Control Mechanism:
 
-1. **Account Level (ASM)**: Log in to ASM > **Settings > User Management > Service Access**. Here, you can enable or disable Apple Intelligence services for specific roles (e.g., students).
-2. **Device Level (MDM)**: In the Jamf Pro Restrictions profile, you can specifically disable features like "Writing Tools" or "Image Playground."
+### 1. Account-Level Control (via ASM)
 
-## Why configure at the account level?
+If your goal is to completely sever a student's ability to utilize Apple's cloud-based AI processing, you must configure this in ASM:
 
-If you disable the service in ASM, the student will be unable to use Apple Intelligence cloud-based features even if they sign into their Managed Apple Account on a personal, unmanaged device. This ensures the educational institution maintains absolute control over data flow.
+- **Path**: Log in to ASM > Click your name at the bottom left for **[Preferences]** > **[Service Access]**.
+- **Function**: Within this interface, you can toggle Apple Intelligence on or off based on specific "Roles" (e.g., Students, Instructors, Staff).
+- **The Advantage**: If disabled in ASM, even if a student signs into their Managed Apple Account on an **unmanaged, personally owned iPad or Mac**, that specific account remains explicitly barred from utilizing Apple's Private Cloud Compute resources. This guarantees institutional data control.
+
+### 2. Device-Level Control (via MDM Profiles)
+
+If you only wish to restrict institutional hardware from using specific AI features, you configure this in Jamf Pro:
+
+- **Path**: Jamf Pro > **[Configuration Profiles]** > **[Restrictions]**.
+- **Granular Control**: You can selectively disable distinct features like "Writing Tools," "Image Playground," or "Genmoji" without crippling standard Siri functions on the device.
+
+## Strategy: AI Usage Policies
+
+The responsibility for defining campus AI policies rests with local school boards.
+We strongly recommend an "Opt-out by default" strategy during the initial adoption phase: Navigate to "Service Access" in ASM and globally disable Apple Intelligence for the "Student" role, while enabling it for "Instructors". Once your academic committee establishes clear guidelines regarding AI-assisted writing and academic integrity, you can progressively unlock specific features via MDM payloads for designated grade levels.

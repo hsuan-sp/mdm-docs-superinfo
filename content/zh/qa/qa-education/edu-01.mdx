@@ -3,29 +3,27 @@ id: edu-01
 
 title: "iPadOS 17 以上沒有顯示 VPN 圖示，這樣網路過濾或是使用率資料回傳還有在作用嗎？"
 
-category: "第八部分：教育場域常見情境 (Education Scenarios)"
+category: "第八部分：教育教學與情境應用 (Educational Scenarios & Applications)"
 
 important: true
 
-tags: ["精進方案", "VPN", "Jamf Trust", "網路過濾", "使用率資料回傳"]
+tags: ["VPN", "Jamf Trust", "網路過濾", "使用率資料回傳", "DNS Proxy"]
 ---
 
 **完全正常運作中。iPadOS 17 之後，Jamf Trust 改用「DNS Proxy」與「內容過濾器」技術，不再需要建立 VPN 通道，因此狀態列不會顯示 VPN 圖示。**
 
-許多學校在將精進方案平板升級至 iPadOS 17 後，發現螢幕上方的 VPN 圖示消失了，因而擔心內容過濾功能失效。這其實是配合教育部架構調整的技術演進，並非故障。
+許多學校在將 iPad 升級至 iPadOS 17 後，發現螢幕上方的 VPN 圖示消失了，因而擔心內容過濾功能失效。這其實是 Apple 底層網路架構的技術演進，並非故障。
 
-## 技術演進說明 ：
+## 技術演進說明
 
-| 版本             | 技術架構                    | 狀態列顯示          |
-| :--------------- | :-------------------------- | :------------------ |
-| iPadOS 16 及以前 | Per-App VPN / Always-On VPN | 顯示 VPN 圖示       |
-| iPadOS 17 ~ 26   | DNS Proxy + Content Filter  | **不顯示** VPN 圖示 |
+| 版本                 | 技術架構                                 | 狀態列顯示          |
+| :------------------- | :--------------------------------------- | :------------------ |
+| iPadOS 16 及以前     | Per-App VPN / Always-On VPN              | 顯示 VPN 圖示       |
+| iPadOS 17 及更新版本 | DNS Proxy / 徹底重置 (Return to Service) | **不顯示** VPN 圖示 |
 
-## 2026 年新技術：Return to Service (RTS) 網路保留
+在現代 iPadOS 中，即便進行遠端重置，透過 Jamf Pro 部署的網路過濾配置會受到 **RTS 系統保護**，確保裝置重啟後第一時間即處於受管網路環境。
 
-在 iOS 26 中，即便進行遠端重置，透過 Jamf Pro 部署的網路過濾配置會受到 **RTS 系統保護**，確保裝置重啟後第一時間即處於受管網路環境。
-
-## 新架構的優點 ：
+## 新架構的優點
 
 - **更省電**：不需維持持續的 VPN 連線。
 - **更穩定**：DNS 層級過濾較少連線中斷問題。

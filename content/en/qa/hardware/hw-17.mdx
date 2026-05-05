@@ -1,7 +1,7 @@
 ---
 id: hw-17
 
-title: "Can I see device warranty expiration dates directly in the MDM console?"
+title: "Can I view device warranty expiration dates directly in the MDM console?"
 
 category: "Section 6: Hardware & Maintenance"
 
@@ -10,28 +10,27 @@ important: false
 tags: ["Warranty", "Asset Management", "GSX", "Extension Attributes"]
 ---
 
-**Yes. Jamf Pro integrates with Apple’s Global Service Exchange (GSX) database to automatically pull 'Limited Warranty' status for every device.** This is extremely helpful for auditing the Digital Initiative fleet in 2026.
+**Yes. Jamf Pro integrates with Apple's Global Service Exchange (GSX) database to automatically pull the "Limited Warranty" status for every managed device.**
+
+However, IT administrators must understand a critical distinction: the warranty date displayed in Jamf Pro **only reflects Apple's factory records** and may differ significantly from your school's actual procurement contract coverage.
 
 ## How to View:
 
-1. **Individual**: Search for a specific device in Jamf Pro > **Purchasing** tab.
+1. **Path**: Search for a specific device in Jamf Pro > **[Purchasing]** tab.
 2. **Field Interpretation**:
-   - **Warranty Expires**: The date Apple’s official system shows the warranty ends.
-   - **AppleCare ID**: Shows the contract number if you have AppleCare+.
+   - **Warranty Expires**: The date Apple's official system shows the standard limited warranty ends (typically 1 year from activation).
+   - **AppleCare ID**: Displays the contract number if the device is covered under AppleCare+, which also extends the warranty date automatically.
 
-## The 'Project Warranty' Blind Spot:
+## ⚠️ The Warranty Blind Spot: Factory vs. Contract Coverage
 
-In many MOE projects, schools receive a 4-year warranty. If this extra coverage is provided by a **"Reseller agreement"** rather than official AppleCare+:
+Many schools have procurement contracts that include extended warranty coverage beyond Apple's standard 1-year factory warranty. If this extended coverage is provided via a **"Reseller Service Agreement"** rather than official AppleCare+:
 
-- **Symptom**: Jamf may show the warranty as "Expired" (because it only sees the original 1-year Apple warranty).
+- **Symptom**: Jamf Pro may report the warranty as "Expired," even though the device is still covered under your vendor's service contract.
+- **Risk**: If IT staff rely solely on Jamf Pro's date, they may miss valid repair claims still covered by the procurement agreement.
+- **Solution**: Use **Extension Attributes** in Jamf Pro to create a custom field titled "Procurement Contract End Date" and batch-upload the correct dates from your actual purchase agreement. This allows your MDM system to display both warranty timelines simultaneously.
 
-- **Fix**: You must record the project-specific dates. Use **Extension Attributes** in Jamf Pro to create a custom field titled "Project Warranty End Date" and batch-upload the correct contract dates.
+## Expert Strategy: Proactive Warranty Management
 
-## Practical Advice: Recommended Workflow
-
-- **Advanced Search**: Create a search criteria for **"Warranty Expiration"** is **"Before [Date]"** (e.g., today or end of semester).
-- **Usage**: Quickly generate a "Repair Priority List" to ensure all faulty hardware is fixed before the contract expires.
-
-## Monitoring Strategy:
-
-In the final year (2026), export this warranty report monthly. If any device approaching expiration shows signs of battery aging or screen flicker, initiate the repair process immediately.
+1. **Advanced Search**: Create a search query for **"Procurement Contract End Date"** is **"Before [Date]"** to quickly identify devices about to lose contract coverage.
+2. **Pre-Expiration Audit**: Before the contract expires, conduct a physical inspection of these devices (check for battery swelling, screen bright spots, etc.) to ensure all hardware issues are reported while still under coverage.
+3. **Monthly Reporting**: In the final year of your contract, export warranty reports monthly. If you detect signs of batch-wide aging (e.g., declining battery health across a specific purchase lot), submit repair claims early to avoid costly out-of-pocket expenses after the contract ends.

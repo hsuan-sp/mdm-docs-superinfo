@@ -10,23 +10,31 @@ important: false
 tags: ["Password Reset", "ASM", "Managed Apple Account"]
 ---
 
-**Password resets for Managed Apple Accounts are handled by administrators within Apple School Manager (ASM).** Because these are school-managed assets, students cannot use the standard "I forgot my password" link on their own.
+**Password resets for Managed Apple Accounts must be performed by administrators within Apple School Manager (ASM).**
 
-## Individual Reset Steps:
+Due to educational security policies, students cannot use standard "forgot password" links to recover their accounts independently. Administrators can perform individual or bulk resets as needed.
 
-1. Log in to [school.apple.com](https://school.apple.com).
-2. Select **"Users"** from the sidebar and search for the student's name or ID.
-3. Select the user from the list.
-4. Click **"Reset Password"** in the right-hand panel.
-5. ASM will provide a **temporary password**. Give this to the student; they will be prompted to create a new, permanent password the next time they sign in.
+## Individual Reset Workflow:
 
-## Bulk Reset (Multiple Students):
+1. Log in to [school.apple.com](https://school.apple.com) using an Administrator account.
+2. Select **[Users]** from the left sidebar and search for the student's name or ID.
+3. Click on the user to display their details in the right-hand panel.
+4. Click **[Reset Password]** (or **[Create Sign-In Communications]** if they have never logged in).
+5. ASM will generate a **temporary password**. Provide this to the student. They will be prompted to create a permanent password upon their next login.
 
-1. In the **"Users"** list, filter for the specific grade or class.
-2. Use keyboard shortcuts to select multiple students (Hold **Command** or **Shift** while clicking).
-3. Click **"Create Sign-In Communications"** (or Reset Password) in the right-hand panel.
-4. Download the results as a **PDF** or **CSV**. This file will contain a list of temporary passwords that you can print out or distribute to the teachers.
+## Bulk Reset Workflow (Ideal for New Semesters):
 
-## Important Note: Federated Authentication
+1. In the **[Users]** list, use the filter to isolate a specific class or grade level.
+2. **Multi-Select**: Hold the **Command** (Mac) or **Ctrl** (Windows) key while clicking to select specific users, or hold **Shift** to select a continuous block.
+3. Once selected, the right-hand panel will display "X users selected."
+4. Click **[Create Sign-In Communications]** (or Reset Passwords).
+5. Choose to download the result as a **[PDF]** or **[CSV]** file. This document will contain a list of temporary passwords that can be printed and distributed securely by homeroom teachers.
 
-If your school has enabled **Federated Authentication** with Google or Microsoft (Microsoft Entra ID), you **cannot** reset passwords in ASM. Instead, you must reset the student's password in the Google Admin Console or Microsoft 365 Admin Center. The change will automatically sync to their Apple account.
+## ⚠️ Important Exception: Federated Authentication
+
+If your school has enabled **Federated Authentication** linking ASM to Google Workspace or Microsoft Entra ID, the password reset functions in ASM are disabled.
+In this scenario, password authority lies with the identity provider. You must reset the student's password in the Google Admin Console or Microsoft 365 Admin Center; the change will sync automatically to their Apple services.
+
+## Strategy:
+
+If password reset procedures have historically been handled by vendor support staff, IT directors should familiarize themselves with ASM's bulk reset procedures. Transitioning to "Federated Authentication" is highly recommended, as it consolidates all password management into a single platform (like Google), drastically reducing administrative overhead.

@@ -7,27 +7,29 @@ category: "第一部分：帳號與伺服器管理 (Account & Server Management)
 
 important: false
 
-tags: ["PSSO", "FileVault", "macOS 15+", "身分驗證"]
+tags: ["PSSO", "FileVault", "macOS 26", "身分驗證"]
 ---
 
-**在 macOS 15 (Sequoia) 以上版本，Platform SSO 支援了與 FileVault 的深度整合，真正解決了「二次密碼」的痛點。**
+**自 macOS 15 (Sequoia) 起引入的 Platform SSO 協定，在最新的 macOS 26 Tahoe 中已與 FileVault 達成極致深度的整合，徹底解決了長期困擾教育機構的「二次密碼」痛點。**
 
-## 解決方案 ：
+在過去的架構中，即使 Mac 電腦已透過 MDM 加入了校園網域 (Active Directory 或 Entra ID)，因為硬碟採用 FileVault 全機加密，開機時的第一道解鎖畫面仍強制要求輸入「本機密碼」，進入桌面後才能進行網路帳號驗證。這導致師生時常忘記密碼而頻繁報修。
 
-以往即使 Mac 加入了網域，開機時的第一層 FileVault 畫面仍須輸入本機密碼。
+## PSSO 的解決方案與運作邏輯：
 
-透過 macOS 15 引入的 Platform SSO 延伸功能，可以達成：
+透過最新的 Platform SSO (PSSO) 延伸功能，身分驗證邏輯發生了根本性改變：
 
-1.  **密碼同步** ：將網路帳號（如 Microsoft Entra ID / Okta）的憑證直接寫入加密磁碟的解鎖清單中。
+1. **密碼同步寫入底層**：當使用者初次登入時，系統會攔截與 IdP (身分提供者) 驗證的網路密碼，並將其雜湊值安全地寫入 FileVault 磁碟加密系統的「授權解鎖清單」中。
+2. **無縫單一登入體驗**：從第二次開機起，使用者在開機的第一個畫面直接輸入 Google 或 Microsoft 的「校務信箱與密碼」。系統解鎖 FileVault 磁碟後，會自動將該驗證身分「透傳 (Passthrough)」至 macOS 桌面環境，無需經過二次登入畫面。
 
-2.  **單一登入體驗** ：使用者在開機畫面輸入組織帳號密碼，系統解鎖磁碟後會自動透傳身分至桌面，無需再次登入。
+## 技術實作需求：
 
-## 技術需求 ：
+- **作業系統版本**：最低要求為 macOS 15，但強烈建議部署 **macOS 26 Tahoe**，因其大幅優化了 PSSO 的離線快取機制與斷網容錯率。
+- **IdP 伺服器支援**：您的校園身分提供者必須支援 Apple 最新的 PSSO 協定。目前 Microsoft Entra ID 與 Okta 均已原生支援，Google Workspace 亦透過外掛支援此功能。
+- **MDM 派送設定**：
+  1. 在 Jamf Pro 中建立「單一登入延伸功能 (SSO Extension)」描述檔。
+  2. 負載類型選擇 **[Platform SSO]**。
+  3. 必須勾選啟用 **[Shared Device Keys]** 與 **[FileVault Integration]** 參數。
 
-- **系統版本** ：macOS 15 或更新版本（建議升級至 **macOS 26 Tahoe** 以獲得最穩定體驗）。
-- **IdP 支援** ：您的身分提供者必須支援 Platform SSO 的最新協定（如 Microsoft Entra ID 已於 2025 年正式支援此功能）。
-- **MDM 設定** ：需在 Jamf Pro 的「單一登入延伸功能」描述檔中，將 `Shared Device Keys` 與 `FileVault` 相關設定開啟。
+## 實務建議：校園 Mac 部署藍圖
 
-## 實際效益 ：
-
-大幅減少師生因忘記本機密碼而導致無法解鎖電腦的報修案件。
+若學校計畫採購 Mac 設備作為教學機或行政機，強烈建議資訊組長從第一天起就導入 PSSO 架構。這不僅能 100% 回收管理權，確保學生無法透過修改本機密碼來綁架設備，還能將忘記密碼的救援案件全數轉移至 Google/微軟後台進行統一重置，極大地減輕維運負擔。

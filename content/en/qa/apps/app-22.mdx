@@ -10,22 +10,23 @@ important: false
 tags: ["Procreate", "App Purchasing", "VPP", "Universal Purchase", "Refund"]
 ---
 
-**Buying the wrong version of a high-profile app is a common clerical error in educational procurement.** These two apps are distinct product lines and do **not** support "Universal Purchase."
+Purchasing the wrong app version is a common mistake in educational licensing. For instance, Procreate (iPad) and Procreate Pocket (iPhone) are entirely separate product lines and do not support Apple's "Universal Purchase" feature.
 
-## Specification Comparison:
+## Product Specifications Comparison
 
-- **Procreate (iPad version)**: Designed specifically for iPadOS and Apple Pencil. Supports large canvases and the full brush engine. This is the industry standard for art classes. **Higher price point**.
-- **Procreate Pocket (iPhone version)**: Designed for the smaller iPhone interface. While it _can_ be installed on an iPad (via compatibility mode), it will have black bars around the interface and lacks support for Pencil pressure sensitivity and tilt. **Lower price point**.
+- **Procreate (iPad version)**: Designed specifically for iPadOS and deeply integrated with the Apple Pencil. It supports large canvas sizes and a full rendering engine, making it the standard software for art programs. **It carries a higher unit price.**
+- **Procreate Pocket (iPhone version)**: Designed for the smaller iOS interface. While it can run on an iPad via compatibility mode, it will display with black borders and lacks support for the Apple Pencil's advanced pressure and tilt sensitivity. **It has a lower unit price.**
 
-## Standard Process for Correction:
+## Standard Remediation Workflow for Incorrect Purchases
 
-1. **Request a VPP Refund**:
-   - The administrator should log in to **Apple School Manager**, go to **Settings > Payments and Billing > View Purchase History**.
-   - Alternatively, log in to **reportaproblem.apple.com** using the Managed Apple Account used for the purchase.
-   - Select the order and "Request a refund," citing "Purchased wrong version." (_Note: Apple typically decides on refunds within 24–48 hours._)
+1. **Submit a VPP Refund Request**:
+   - The IT administrator must log in to **Apple School Manager (ASM)**, navigate to **[Preferences]** > **[Payments and Billing]** > **[View Purchase History]**.
+   - Alternatively, log in directly to **reportaproblem.apple.com** using the ASM Managed Apple Account.
+   - Locate the incorrect order, select "Request a refund," and explicitly state "Purchased wrong version" in the reasoning field.
+   - **Note**: Apple's review process for refund requests typically takes 24 to 48 hours, and submissions cannot be withdrawn.
 
-2. **Re-purchase**:
-   - Because the licenses are not interchangeable, you must purchase the correct iPad version to deploy it to student iPads.
+2. **Repurchase the Correct Version**:
+   - Because the licenses are not interchangeable, you must purchase the correct iPad version licenses in ASM before you can proceed with deployment.
 
-3. **Clean Up**:
-   - In Jamf Pro, ensure you remove the "Pocket" version from any scopes to prevent students from installing the low-resolution version, which would degrade the classroom experience.
+3. **Revoke the Incorrect Scope**:
+   - Log in to Jamf Pro and immediately remove the deployment scope for the "Pocket" version. This is critical to prevent the iPhone app from being mistakenly pushed to student iPads, which would negatively impact their learning experience.

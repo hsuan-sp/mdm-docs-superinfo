@@ -1,41 +1,42 @@
 ---
 id: dl-17
 
-title: "How do I set a unify school wallpaper and prevent students from changing it?"
+title: "How do I set a unified school wallpaper and prevent students from changing it?"
 
-category: "Section 5: Digital Initiatives (MOE Project)"
+category: "Section 5: Digital Learning & Network Protection"
 
 important: false
 
 tags: ["Wallpaper", "Lock Screen", "Restrictions", "Automated Management"]
 ---
 
-**This is a common requirement for asset branding. We recommend using 'Automated Management' to set the image and 'Restrictions' to lock the permission.**
+**Consistent branding reinforces school identity and simplifies asset tracking. We recommend combining 'Automated Management' for silent image deployment and a 'Restrictions' profile for policy enforcement. Maintaining a highly unified aesthetic across the fleet provides a decisive advantage for visual asset identification and classroom management in large deployments.**
 
 ## Implementation Steps (Jamf Pro):
 
 ### 1. Automated Management (Recommended)
 
-- **Scenario**: The wallpaper is set automatically the moment a device is assigned to a group (e.g., "Freshmen iPads").
-- **Path**: Go to a **Smart Device Group > Automated Management** tab.
-- **Setting**: Click **Set Wallpaper**.
-- **Upload**: Upload your school logo/wallpaper (JPG/PNG). Apply it to both the "Lock Screen" and "Home Screen."
+- **Scenario**: Use this for a "set and forget" approach where new devices receive the school wallpaper automatically upon enrollment.
+- **Path**: Navigate to a **Smart Mobile Device Group > Automated Management** tab.
+- **Action**: Click **Set Wallpaper**. Upload your image (JPG/PNG) and apply it to both the "Lock Screen" and "Home Screen."
+- **Result**: Any device entering this group will have its wallpaper forcibly updated.
 
 ### 2. Manual Mass Action
 
-- **Scenario**: Setting a one-time wallpaper for a school anniversary or event.
-- **Path**: In the group view, click **Action > Send Remote Commands > Set Wallpaper**.
+- **Scenario**: Best for one-time events like a school anniversary.
+- **Path**: In the device group view, click **Action > Send Remote Commands > Set Wallpaper**.
 
-### 3. Critical Step: Lock Modification
+### 3. Critical Step: Locking the Permission
 
-- **Path**: In a **Restrictions** profile > **Functionality**.
+Without this restriction, students can easily revert to their personal photos.
+
+- **Path**: Within a **Restrictions** configuration profile > **Functionality**.
 - **Setting**: Uncheck **Allow modifying wallpaper**.
-- **Effect**: The "Wallpaper" option in the iPad Settings menu will be grayed out, preventing students from changing it.
+- **Effect**: The "Wallpaper" menu in iPad Settings will become grayed out and unclickable.
 
-### 4. Advanced: Lock Screen Message
+## Strategy: Dynamic Lock Screen Messages
 
-Instead of editing every image, use the **Lock Screen Message** payload.
+Instead of manually editing text onto images, use the **Lock Screen Message** payload to display real-time asset data:
 
-- **Setting**: Use Jamf variables like `Owned by: $DEVICENAME` or `Asset: $ASSET_TAG`.
-
-- **Effect**: This dynamic text appears at the bottom of the Lock Screen, making physical audits much easier.
+- **Settings**: Use variables like `Asset ID: $ASSET_TAG` or `Assigned to: $DEVICENAME`.
+- **Effect**: The device pulls this info from the Jamf database and displays it at the bottom of the lock screen, making physical audits significantly faster.

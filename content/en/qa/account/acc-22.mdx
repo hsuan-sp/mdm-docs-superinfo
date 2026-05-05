@@ -1,7 +1,7 @@
 ---
 id: acc-22
 
-title: "How do I batch create Managed Apple Accounts? Should I use SFTP or CSV import?"
+title: "How do I batch create student accounts in ASM? Should I use SFTP or CSV import?"
 
 category: "Section 1: Account & Server Management"
 
@@ -10,51 +10,38 @@ important: true
 tags: ["ASM", "Batch Operations", "SFTP", "CSV", "Managed Apple Account"]
 ---
 
-**According to official Apple documentation, there are three primary ways to create Managed Apple Accounts: SFTP Upload (SIS integration), Manual CSV Import, and Federated Authentication.**
+**Apple’s official architecture provides three core methods for provisioning Managed Apple Accounts: Automated SFTP Upload (SIS integration), Manual CSV Web Import, and Federated Authentication.**
 
-## Comparison of Methods
+Given the massive influx of new students and departing graduates every semester, selecting the optimal provisioning strategy is crucial for minimizing the IT department's administrative burden.
 
-| Method                       | Best For                                      | Key Features                                                       |
-| :--------------------------- | :-------------------------------------------- | :----------------------------------------------------------------- |
-| **Manual CSV Import**        | Small schools, no SIS, or temporary batches   | Straightforward web-based upload. Good for initial setup.          |
-| **SFTP Upload**              | Schools with a SIS, requiring regular updates | Supports Apple templates and OneRoster. Highly automated.          |
-| **Federated Authentication** | Schools using Google Workspace / Entra ID     | **Most Recommended**. Automatic account creation upon first login. |
+## Comparison of Provisioning Strategies:
 
-## 1. Uploading Data via SFTP (Automation/SIS Integration)
+| Provisioning Method          | Ideal Scenarios                                                                                                                | Key Features & Technical Demands                                                                                                                                                                                                         |
+| :--------------------------- | :----------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Manual CSV Import**        | Small-scale schools without a Student Information System (SIS), or for processing a handful of mid-semester transfer students. | The lowest barrier to entry. Simply upload filled CSV templates via the ASM web interface. Lacks automated synchronization capabilities.                                                                                                 |
+| **SFTP Upload**              | Schools with comprehensive SIS platforms requiring automated, recurring bulk roster updates every semester.                    | Supports both Apple’s proprietary CSV templates and the industry-standard OneRoster 1.1 format. Highly automated, suitable for processing thousands of records seamlessly.                                                               |
+| **Federated Authentication** | Modern campuses fully standardized on Google Workspace or Microsoft Entra ID.                                                  | **The most forward-looking approach.** When a user signs in for the first time using their school email, ASM generates the Apple Account instantly in the background, achieving true Single Sign-On (SSO) and "Zero-Touch" provisioning. |
 
-If your school uses a Student Information System (SIS), you can upload data via Secure File Transfer Protocol (SFTP).
+## 1. Uploading Data via SFTP (High Automation / SIS Integration)
 
-- **Supported Formats**:
-  - **Apple CSV Format**: Using standard Apple-provided templates.
-  - **OneRoster CSV**: Supporting OneRoster version 1.1 specifications.
+If your school has engineering support or an SIS capable of automated exports:
 
-- **Workflow**:
-  1. **Setup Connection**: Obtain your SFTP URL, username, and password from ASM.
-  2. **Prepare Files**: Export data and create a **ZIP archive** containing all necessary CSV files.
-  3. **Upload**: Use an SFTP client to connect and drag the ZIP file into the **dropbox** folder (this is the default root folder on Apple’s SFTP server).
-  4. **Processing**: ASM will process the files automatically. You can download logs to check for errors.
+- **Supported Standards**: You may use the standard Apple CSV format or OneRoster CSV.
+- **The Technical Workflow**:
+  1. **Establish Connection**: Enable SFTP in ASM settings to generate your unique SFTP URL, username, and secure password.
+  2. **Package Data**: Export your rosters and compress all required CSV files into a single **ZIP archive**.
+  3. **Secure Transmission**: Use an SFTP client (like FileZilla) to connect, and drag the ZIP file strictly into the root folder named `dropbox` (Note: This is Apple's internal server directory nomenclature and has absolutely no relation to the commercial "Dropbox" cloud service).
+  4. **Backend Parsing**: ASM automatically decompresses the ZIP and overwrites the database. Administrators can download error logs from the ASM portal if formatting issues arise.
+- **The Golden Rule of SFTP**: Following the initial payload, every subsequent upload must contain **ALL** complete CSV files (Classes, Courses, Locations, Rosters, Students, Staff). Even if you are only adding one new student, you cannot upload a delta file containing just that single row.
 
-- **Note**: After the initial connection, every subsequent update must include "all" CSV files, even those that haven't changed.
+## 2. Federated Authentication (The Modern Hybrid Model)
 
-## 2. Manual CSV Upload
+This is the most highly recommended architecture for deployments utilizing **macOS 26** and modern iPads, perfectly marrying your Identity Provider (IdP) with educational rosters:
 
-Ideal for scenarios without an SFTP server, performed directly via the browser.
+- **Separation of Identity**: Account creation, login verification, and password resets are entirely delegated to Google or Microsoft.
+- **Roster Augmentation**: While the IdP handles identity, administrators can still utilize manual CSV uploads or SFTP to forge the links between "Classes" and "Rosters," enabling the Apple Classroom app to group students correctly.
 
-- **Path**: Log in to ASM > Select CSV options in the sidebar > "Upload CSV."
+## Strategy: Account Provisioning
 
-- **Process**: Choose your format (Apple or OneRoster) > Upload files > System validates and imports.
-
-## 3. Federated Authentication (with Directory Sync)
-
-This is the most modern approach, linking ASM to **Google Workspace** or **Microsoft Entra ID**.
-
-- **Advantage**: Users log in with their existing organizational Email and password to create their Managed Apple Account on the fly.
-
-- **Hybrid Mode**:
-  - **Account Source**: Provided by Federated Authentication (IdP).
-  - **Classes & Roster**: Can still be created via SFTP CSV uploads.
-  - This perfectly combines existing identity providers with curriculum data.
-
-## Expert Advice
-
-- **Person ID is Key**: Regardless of the method, the `person_id` must be a **permanently unique** identifier. We strongly recommend using a Student ID number rather than a classroom seat number, as the latter changes every year and will cause account duplicates or data corruption.
+1. **The 'Person ID' Integrity Disaster**: Whether using CSV or SFTP, the `person_id` column must be populated with a **permanently unique identifier** (we strongly recommend the **Official Student ID Number**). Never use temporary variables like "Grade+Class+Seat Number". If a student's `person_id` changes the following year, the system registers them as a brand-new user, entirely severing their access to previously saved iCloud data and causing catastrophic data loss.
+2. **Implement Federation Early**: We strongly urge schools to abandon manual CSV uploads and fully transition to Federated Authentication. This guarantees that account lifecycle management remains fully automated and sustainable.

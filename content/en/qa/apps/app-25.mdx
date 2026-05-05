@@ -10,17 +10,17 @@ important: false
 tags: ["macOS 26", "Package", "DDM", ".pkg", "Jamf Policy"]
 ---
 
-**macOS 26 (Tahoe) extends Declarative Device Management (DDM) to support non-App Store software (.pkg). This allows you to deploy installation packages via 'Declarations' for a more modern, transparent, and resilient installation experience compared to the legacy Jamf Binary/Policy method.**
+**Starting from the macOS (Tahoe) generation, Apple officially extends Declarative Device Management (DDM) to support non-App Store enterprise `.pkg` software installations. This provides a more modernized, low-latency, and highly transparent deployment experience compared to the traditional Jamf Policy architecture.**
 
 ## DDM Package vs. Jamf Policy
 
-| Feature             | Jamf Policy (Legacy)                                       | DDM Package Declaration (Modern)                                         |
-| :------------------ | :--------------------------------------------------------- | :----------------------------------------------------------------------- |
-| **Execution**       | Relies on the `Jamf` binary to run scripts and installers. | Relies on the macOS native MDM framework.                                |
-| **Trigger**         | Requires a trigger (e.g., Login, Recurring Check-in).      | **Autonomous**. Device installs as soon as conditions are met.           |
-| **Status Channel**  | Reported through Jamf logs with potential delay.           | **Real-time** reporting of progress and error codes to MDM.              |
-| **Offline Support** | Must be online to trigger the check-in.                    | If the declaration is local, the device handles install retries offline. |
-| **Suitability**     | Best for complex scripts and .dmg installs.                | Best for standard signed **Distribution Packages (.pkg)**.               |
+| Feature               | Jamf Policy (Legacy Architecture)                                                                  | DDM Package Declaration (Modern Architecture)                                                                                               |
+| :-------------------- | :------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Execution Core**    | Heavily relies on the `Jamf` binary agent to execute scripts and run installers in the background. | Relies directly on the macOS native MDM framework to execute the installation.                                                              |
+| **Trigger Mechanism** | Requires a defined trigger (e.g., Login, Recurring Check-in).                                      | **Autonomous Evaluation**. The system attempts installation instantly as soon as the device determines it meets the declaration conditions. |
+| **Status Reporting**  | Reported via Jamf Pro logs, subject to polling delays.                                             | **Real-time Reporting**. Installation progress and error codes are pushed immediately to the MDM status channel.                            |
+| **Offline Support**   | The device must be connected to the Jamf Pro server at the exact moment the policy is triggered.   | Once the device receives the Declaration, it can manage the installation process and retries offline in the background.                     |
+| **Suitability**       | Any custom installer or script format (.pkg, .dmg, .sh).                                           | Strictly limited to standard **Distribution Packages (.pkg)** signed by Apple.                                                              |
 
 ## Requirements & Limitations
 
@@ -32,8 +32,8 @@ tags: ["macOS 26", "Package", "DDM", ".pkg", "Jamf Policy"]
 
 ## When to use each?
 
-- **Use DDM Packages**: For standard core software (Microsoft Office, Google Chrome, Adobe Acrobat) on macOS 26+ machines where you need high visibility of success rates.
-- **Use Jamf Policies**: For legacy machines (v25 and below), complex workflows (requires post-install scripts or UI interaction), or non-standard installers (DMGs).
+- **Use DDM Packages**: For deploying standard, large-scale software architectures (e.g., Microsoft Office, Google Chrome, Adobe Acrobat), or when you need real-time visibility into the "installation success rate" for critical apps on modern macOS environments, minimizing reliance on the Jamf binary.
+- **Maintain Jamf Policies**: For highly complex deployment workflows (e.g., requiring a Bash script to modify `.plist` preferences post-installation, or requiring interactive prompts), non-standard `.pkg` formats (like drag-and-drop `.dmg` apps), or legacy macOS devices.
 
 ## Expert Tip: The Notarization Check
 

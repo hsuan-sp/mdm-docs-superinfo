@@ -3,31 +3,38 @@ id: dl-5
 
 title: "學生刪除了 Jamf Trust App，會影響使用率計算嗎？該如何防範？"
 
-category: "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+category: "第五部分：數位學習與網路防護 (Digital Learning & Network Protection)"
 
 important: false
 
 tags: ["資料回報", "安全性", "Jamf Trust", "限制描述檔"]
 ---
 
-**會嚴重影響。Jamf Trust 是流量回報的唯一感應器，一旦被刪除，**該裝置在教育部報表中將被視為「未使用」。** 為了保證學校的 KPI 達標，管理員必須採取強硬的防護措施： **防範措施一：禁止刪除 App (最有效)** 1. 在 Jamf Pro 編輯該批裝置的 **「限制 (Restrictions)」\*\* 描述檔。
+**防護 App (如 Jamf Trust) 被移除將嚴重破壞校園網路的防護機制與使用率追蹤。**
 
-1. **取消勾選**「允許移除 App (Allow removing apps)」\*\* 。
+這些 App 通常是流量回報與內容過濾的唯一本地代理器。一旦被刪除，該裝置在 MDM 系統與雲端儀表板中將被視為「離線 (Offline)」或「未使用」。為了維持校園網路安全防護 (Cybersecurity) 與資產管理的完整性，資訊管理員必須採取強硬的 MDM 限制措施：
 
-1. **效果** ：學生長按任何 App 圖示時，都不會出現「刪除 App」的選項，
+## 防範對策一：禁用「刪除 App」權限 (最有效且根本)
 
-這是最根本的解決之道。 **防範措施二：設定自動修復** 1. 在 Jamf Pro 的 Jamf Trust App 設定頁面中。
+防止學生隨意卸載教學或防護軟體，是校園設備管理的第一道防線。
 
-1. 將分發方法設為 **「自動安裝/提示安裝」** 。
+1. 登入 Jamf Pro，前往或建立目標裝置群組的 **[組態設定檔 (Configuration Profiles)]**。
+2. 選擇 **[限制 (Restrictions)]** 裝載。
+3. 在「功能 (Functionality)」標籤頁中，**取消勾選**「允許移除 App (Allow removing apps)」。
+4. **管理效果**：派發此描述檔後，當學生長按主畫面上的任何 App 圖示時，選單中將徹底隱藏「刪除 App」的選項，從根本上杜絕誤刪或惡意卸載。
 
-1. 確保 Jamf Trust 隨時在 Scope 範圍內。
+## 防範對策二：啟用「強制自動修復 (Auto-reinstall)」
 
-即便學生透過特殊手段刪除了 App，裝置在下次 Check-in 時也會被強制重新安裝。
+作為第二道防線，可確保 App 即使因系統異常消失，也能自動復原。
 
-**實務建議** ：
+1. 進入 Jamf Pro 的 **[行動裝置 App (Mobile Device Apps)]**，選擇需要防護的 App。
+2. 確保在「一般」設定中，將「分發方法 (Distribution Method)」設定為 **「自動安裝/提示安裝 (Install Automatically/Prompt Users to Install)」**。
+3. 確保所有學生裝置皆被妥善包含在該 App 的 **[範圍 (Scope)]** 內。
+4. **管理效果**：即便 App 意外毀損或被越權刪除，裝置在下一次向 Jamf Pro 定期回報 (Check-in) 時，系統便會自動觸發並強制重新安裝該 App。
 
-建議建立一個 **「缺少 Jamf Trust」** 的智慧型群組
+## 實務建議：主動稽核
 
-（條件：Application Title **does not have** Jamf Trust）。
+除了被動防禦，建議管理員化被動為主動，建立一個名為 **「異常稽核：缺少防護 App」** 的智慧型群組 (Smart Group)。
 
-若此群組的裝置數量 > 0，代表有裝置脫離監控，需立即處理。
+- **條件設定**：`Application Title` **[does not have]** `Jamf Trust` (或對應之 App 名稱)
+- 若發現此群組內的裝置數量大於 0，即代表有裝置脫離了安全監控網路（可能是處於長期無網路狀態而無法接收指令）。管理員應優先將這些裝置召回資訊組進行人工檢測。

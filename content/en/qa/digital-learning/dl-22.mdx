@@ -1,47 +1,66 @@
 ---
 id: dl-22
 
-title: "How does the iOS 26 Network Extension URL Filtering API impact school content filters?"
+title: "How does the iPadOS 26 Network Extension URL Filtering API impact school content filters?"
 
-category: "Section 5: Digital Initiatives (MOE Project)"
+category: "Section 5: Digital Learning & Network Protection"
 
 important: true
 
 tags:
-  ["Jamf Trust", "URL Filtering", "iOS 26", "Content Filter", "Cybersecurity"]
+  [
+    "Jamf Trust",
+    "URL Filtering",
+    "iPadOS 26",
+    "Content Filter",
+    "Cybersecurity",
+  ]
 ---
 
-**The 'Network Extension URL Filtering API' introduced in iOS 26, iPadOS 26, and macOS 26 is a major technical upgrade for content filtering services. While schools should be aware of this development, project-assigned devices should prioritize following regional guidelines (such as the MOE's DNS Proxy or Content Filter architectures).**
+**The 'Network Extension URL Filtering API' introduced in iPadOS 26 and macOS 26 is a major technical upgrade for content filtering services. For large campus networks utilizing centralized MDM management, this new technology significantly reduces terminal power consumption while providing granular protection down to specific URLs, all while safeguarding user privacy.**
 
-## Evolution of Content Filtering Technologies
+## Evolution of Content Filtering Technology:
 
-| Era            | Technology        | Advantage                                      | Limitation                                                              |
-| :------------- | :---------------- | :--------------------------------------------- | :---------------------------------------------------------------------- |
-| **Pre-iOS 15** | Per-App VPN       | High maturity.                                 | VPN icon in status bar; higher battery drain.                           |
-| **iOS 16–25**  | DNS Proxy         | Lightweight; no VPN icon.                      | Limits filtering to the domain level (cannot filter specific sub-URLs). |
-| **iOS 26+**    | URL Filtering API | High performance; granular; battery efficient. | Requires iOS 26 or later.                                               |
+| Era               | Technology        | Advantages                                     | Potential Limitations                                                   |
+| :---------------- | :---------------- | :--------------------------------------------- | :---------------------------------------------------------------------- |
+| **Pre-iPadOS 15** | Per-App VPN       | Highly mature.                                 | VPN icon in status bar; higher battery drain.                           |
+| **iPadOS 16–25**  | DNS Proxy         | Lightweight; no VPN icon.                      | Limits filtering to the domain level (cannot filter specific sub-URLs). |
+| **iPadOS 26+**    | URL Filtering API | High performance; granular; battery efficient. | Requires iPadOS 26 or later.                                            |
 
-## Technical Characteristics of the iOS 26 API
+## Technical Characteristics of the iPadOS 26 API:
 
-### 1. Granular Filtering
+### 1. Granular Filtering Capabilities
 
-- **Past**: Could only block a domain (e.g., `example.com`). All pages on that site were treated the same.
-- **New API**: Can identify full URL paths (e.g., `example.com/bad-content`). This allows a school to block a specific inappropriate page while leaving the rest of the educational domain accessible.
+- **Past Limitations**: Could only recognize domains (e.g., `example.com`), meaning all content under that domain was treated the same.
+- **New Advantage**: Can identify full URL paths (e.g., `example.com/inappropriate-content`).
+- **Practical Application**: Can block specific inappropriate pages while allowing access to normal educational content on the same domain.
 
-### 2. Privacy-First Design
+### 2. Privacy-Friendly Design
 
-- **On-Device Processing**: Most filtering decisions happen locally on the device using a Bloom Filter, meaning private browsing history isn't sent to a cloud server.
-- **Private Information Retrieval (PIR)**: When a cloud check is needed, it uses PIR technology so the server cannot see exactly which URL was queried.
-- **Oblivious HTTP (OHTTP)**: Queries are anonymized through a relay, ensuring neither Apple nor the provider can link a query to a specific student ID.
+- **On-Device Evaluation**: Most filtering checks are done on the device using Bloom Filters, without sending the full browsing history to the cloud.
+- **Anonymous Queries (PIR)**: When cloud database verification is needed, it uses "Private Information Retrieval (PIR)" technology. The server cannot know which specific URL the device queried.
+- **Dual-Blind Routing**: Uses Oblivious HTTP (OHTTP) relaying to ensure neither Apple nor the service provider can link queried content to a specific user identity.
+- **No Decryption**: It only checks URL metadata and does not (and cannot) decrypt HTTPS connection content.
 
-### 3. Performance
+### 3. Performance and User Experience Optimization
 
-- Integrated at the system level for faster processing and minimal impact on battery life.
+- **System-Level Integration**: Handled directly by the OS kernel for much higher efficiency.
+- **Background Operation**: Does not display extra icons or prompts on the screen.
+- **Battery Life**: More power-efficient compared to older architectures, making it ideal for long teaching sessions.
 
-## Practical Advice for Schools
+## Practical Impact on Schools:
 
-If you use a service like **Jamf Trust**, the transition to this new API is typically handled automatically by the provider. IT administrators usually don't need to manually change settings. However, we recommend:
+### 1. Improved Educational Platform Compatibility
 
-- **Testing**: When upgrading a classroom to iOS 26, verify that your regional teaching platforms (educational portals) remain accessible.
+- The new technology can more accurately identify educational platforms and digital textbooks from regional education networks, significantly reducing false-positive blocks on teaching videos or materials.
+- IT administrators and teachers will experience much less friction when accessing educational websites.
 
-- **Battery Monitoring**: Observe if the newer API reduces "battery drain" complaints from students, as this is a common side effect of older VPN-based filters.
+### 2. Seamless Management Transition
+
+- If your school continues to use Jamf Trust or a similar compliance filtering service, upgrading devices to iPadOS 26 will generally automatically switch them to use the new API.
+- IT administrators do not need to manually modify the "Content Filter" configuration profiles in their MDM. Older iPadOS devices will continue to use the legacy DNS Proxy technology without disruption.
+
+### 3. Upgrade and Testing Recommendations
+
+- **Phased Upgrades**: We recommend taking advantage of summer or winter breaks to unify device fleets to the latest iPadOS 26 version (e.g., iPadOS 26.5) for the best filtering results.
+- **Testing Workflow**: After upgrading, test common educational platforms and YouTube videos to ensure the filter works as expected. Report any anomalies to your MDM service vendor for adjustment.

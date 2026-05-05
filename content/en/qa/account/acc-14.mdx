@@ -1,38 +1,44 @@
 ---
 id: acc-14
 
-title: "Newly purchased devices are not syncing from ASM to Jamf Pro? (ADE Server Token Renewal)"
+title: "Newly purchased devices aren't syncing from ASM to Jamf Pro? (ADE Server Token Renewal)"
 
 category: "Section 1: Account & Server Management"
 
 important: true
 
-tags: ["ADE", "Server Token", "Automated Device Enrollment"]
+tags:
+  [
+    "ADE",
+    "Server Token",
+    "Automated Device Enrollment",
+    "Certificate Management",
+  ]
 ---
 
-**If newly purchased devices do not appear in your MDM inventory, the most common reason is an expired 'Server Token' or unassigned devices in Apple School Manager (ASM).**
+**When newly purchased Apple hardware fails to automatically populate in your Jamf Pro inventory, the root cause is almost always an expired 'Server Token' or devices lingering unassigned within Apple School Manager.**
 
-The Server Token acts as the secure bridge between ASM and Jamf Pro for hardware management (formerly known as the DEP process). It is responsible for syncing purchase serial numbers from Apple to your MDM console.
+The Server Token acts as the cryptographic bridge linking Apple School Manager (ASM) to your MDM (Jamf Pro) for hardware procurement (a workflow veteran IT staff know as the Device Enrollment Program or DEP). Unlike the VPP Token which handles software licenses, the ADE Server Token exclusively manages hardware serial numbers. **It is strictly valid for one year and requires manual annual renewal.**
 
-## Troubleshooting Steps:
+## Core Troubleshooting Analysis:
 
-1. **Token Expiration**: Server Tokens are valid for exactly one year. Once expired, Jamf Pro cannot fetch new serial numbers or update the enrollment status of existing ones from Apple.
-2. **Unassigned Devices**: New devices must be assigned to your Jamf Pro "MDM Server" within ASM before Jamf Pro can "see" them.
-3. **Unaccepted Terms**: As mentioned in `acc-1`, if new Apple terms and conditions have not been accepted, Apple will suspend all ADE synchronization activities.
+1. **Token Expiration**: Once the token expires, Jamf Pro severs communication with Apple’s enrollment servers. It can neither fetch new purchase serials nor update the enrollment flags (like Activation Lock status) of existing inventory.
+2. **Unassigned Devices in ASM**: When a reseller submits your purchase to ASM, the devices initially land in an "Unassigned" pool. They must be explicitly assigned to your configured "MDM Server" within ASM before Jamf Pro is permitted to see them.
+3. **Unaccepted Terms of Service**: As detailed in `acc-1`, if Apple publishes updated Terms and Conditions, all Automated Device Enrollment (ADE) synchronization is suspended at the server level until an Administrator accepts them.
 
-## How to Renew the Server Token:
+## Standard Operating Procedure for Token Renewal:
 
-1. Log in to [school.apple.com](https://school.apple.com).
-2. Click your name at the bottom left > **Preferences > Your MDM Servers**.
-3. Select your server and click **Download Token**.
-4. Log in to Jamf Pro, go to **Settings > Global Management > Device Enrollment**.
-5. Select your server instance and upload the new token file to complete the renewal.
+1. **Download New Token**: Log in to [school.apple.com](https://school.apple.com) using an Administrator account.
+2. Click your account name at the bottom left and navigate to **[Preferences]** > **[Your MDM Servers]**.
+3. Select the active MDM server profile and click **[Download Token]** to save the file locally.
+4. **Upload to Jamf Pro**: Log into your Jamf Pro dashboard. Navigate to **[Settings]** > **[Global Management]** > **[Automated Device Enrollment]** (or Device Enrollment Program).
+5. Select your specific server instance, click **[Edit]**, upload the newly downloaded token file, and click **[Save]**.
 
-## Synchronization Context:
+## Synchronization Mechanics Context:
 
-- **Sync Now**: While syncing occurs periodically, you can click "Sync Now" in Jamf Pro to force an immediate refresh after assigning devices in ASM.
-- **Automation Trends**: In modern OS versions, Apple has enhanced background push mechanisms. Synchronization typically occurs automatically within minutes of assignment in ASM, but "Sync Now" remains the go-to tool for manual troubleshooting.
+- **Force Sync / Sync Now**: If you just assigned a batch of devices in ASM and need them to appear in Jamf Pro immediately for profiling, click the **[Force Sync]** or **[Sync Now]** button in the Jamf Pro ADE interface.
+- **Modern Automation Trends**: Apple has heavily optimized server-to-server webhook communications. Today, devices assigned in ASM typically sync to the MDM automatically within minutes. However, when onboarding large fleets (e.g., hundreds of iPads at once), manually triggering a sync remains the most reliable diagnostic step.
 
-## Practical Advice:
+## Strategy: Automated Operations
 
-We recommend setting a "Default Device Assignment" in ASM for iPad and Mac. This ensures all future purchases are automatically linked to your Jamf Pro server, requiring only the annual token renewal for a fully automated hardware intake workflow.
+- **Enable Default Assignment**: We strongly advise configuring "Default Device Assignment" within ASM settings. Once configured, any iPad or Mac purchased through an authorized reseller is automatically routed directly to your Jamf Pro server. This achieves true "Zero-Touch Deployment"—meaning IT staff only need to remember to renew the Server Token once a year, and the entire hardware intake pipeline becomes fully automated.

@@ -10,25 +10,23 @@ important: true
 tags: ["AI", "Apple Intelligence", "App Management", "Privacy", "Exam Security"]
 ---
 
-**With Apple Intelligence reaching full maturity in 2024–2025, teaching apps have entered the "AI-Assisted Era."**
+**As the Apple Intelligence ecosystem reaches full maturity, educational apps have definitively entered the "AI-Assisted Era."**
 
-For schools, the primary challenge is balancing the productivity gains of AI with academic integrity, data privacy, and security. iOS 26/iPadOS 26 provides granular MDM controls to manage these features.
+For educational environments, the primary challenge lies in balancing the "instructional efficiency driven by AI" with "fairness in academic assessment" and "campus data privacy." Apple addresses this through its latest MDM protocols, providing highly flexible and granular control mechanisms.
 
 ## 1. Controlling Core AI Features
 
 Administrators can manage these via a "Restrictions" profile in Jamf Pro:
 
-- **Writing Tools**: Can be set to "Allow All," "On-Device Processing Only," or "Disabled." During formal exams, it is recommended to disable this via a DDM declaration to ensure students write independently.
-
-- **Image Generation (Image Playground / Genmoji)**: Access can be restricted to specific grade levels or limited to certain apps (e.g., Freeform).
+- **Writing Tools**: Depending on school policy, this can be set to "Allow All," "On-Device Processing Only," or "Disabled." During formal assessments or writing exams, we strongly recommend deploying a DDM declaration to temporarily apply the "Disabled" restriction, ensuring students complete writing tasks independently.
+- **Image Generation (Image Playground / Genmoji)**: Access can be restricted based on grade levels (e.g., disabled for primary students, permitted for seniors), or scoped to function exclusively within specific educational apps.
 
 ## 2. Auditing Third-Party AI Apps
 
 For apps integrating third-party LLMs (e.g., OpenAI, Google Gemini):
 
-- **Review Privacy Labels**: App Store requirements in 2026 demand transparent AI privacy labels. Admins should prioritize apps labeled as "Not tracking personal data" or "Contextual reasoning only."
-
-- **VPP Distribution**: Distribute approved AI tools via Jamf Pro and restrict students from downloading unvetted AI apps from the App Store.
+- **Strict Privacy Label Auditing**: App Store guidelines now enforce strict transparency for AI privacy labels. Before procurement, schools should prioritize educational apps labeled as "Not tracking personal data" or stating that "Data is used solely for contextual reasoning during the active session."
+- **VPP as the Sole Distribution Channel**: Centrally procure and distribute security-vetted AI tools exclusively through Jamf Pro via VPP. Simultaneously, use restriction profiles to prohibit students from independently downloading unapproved AI software from the App Store.
 
 ## 3. Flexible Management in the Classroom
 

@@ -1,32 +1,41 @@
 ---
 id: dl-11
 
-title: "How do I transfer 'Digital Initiative' iPads from graduating students to new students?"
+title: "How do I transfer iPads from graduating students to new students?"
 
-category: "Section 5: Digital Initiatives (MOE Project)"
+category: "Section 5: Digital Learning & Network Protection"
 
 important: false
 
 tags: ["Graduation", "Asset Transfer", "Return to Service", "Automation"]
 ---
 
-**Utilize the 'Return to Service (RTS)' feature to achieve a seamless transition from 'Wipe' to 'Redeploy' without manual Wi-Fi configuration.** Graduation season is a major event for device management. We recommend the following automated workflow:
+**Utilize the 'Return to Service (RTS)' feature within the Apple MDM architecture for a seamless transition from 'Wipe' to 'Redeploy' without manual Wi-Fi configuration. This Zero-Touch automated workflow remains the absolute most efficient strategy for managing massive school IT asset turnovers and minimizing staff workload.**
+
+End-of-year rotation is a critical task for IT staff. Follow this workflow to ensure devices are clean and ready for the next academic year:
 
 ## Standard Operating Procedure (SOP):
 
-1. **Backup for Graduates (T-minus 2 weeks)**:
-   - Notify students to export personal photos and projects to Google Drive or external storage.
-   - Encourage students to manually sign out of personal Apple or Google accounts to avoid cloud-lock disputes (though MDM can forcibly clear the device).
+### 1. Data Export and Sign-Out (T-minus 2 weeks)
 
-2. **Execute Return to Service (Recommended)**:
-   - Select the graduate devices in Jamf Pro.
-   - Send the **Wipe Device** command.
-   - **Crucial Step**: Check **Return to Service** in the command options and specify the school's Wi-Fi profile.
-   - **Result**: The device will erase, automatically reconnect to Wi-Fi, skip initial setup, and land on the "Remote Management" screen awaiting the new student.
+- Notify students to export personal projects and notes to Google Drive or external storage.
+- If personal Apple Accounts were permitted, remind students to sign out to avoid potential Activation Lock issues.
 
-3. **Physical Inspection & Cleaning**:
-   - Inspect hardware for damage. Clean using 75% ethyl alcohol wiped onto a cloth (avoid direct spraying).
-   - For summer storage, maintain battery levels between 50%-60% and power the device off to prevent deep discharge.
+### 2. Execute Return to Service (Recommended)
 
-4. **Issuance to New Students**:
-   - New students power on the device to see the "Remote Management" screen. They follow the updated PreStage Enrollment settings (e.g., login with student ID) to complete activation.
+This method is significantly faster than a traditional wipe:
+
+1. Select the devices in Jamf Pro.
+2. Send the **Wipe Device** command.
+3. **Crucial Step**: Check the **Return to Service** option in the command window and specify the school's Wi-Fi profile.
+4. **Result**: The device will erase, **automatically reconnect to Wi-Fi**, skip initial setup screens, and land on the "Remote Management" screen awaiting the new student.
+
+### 3. Hardware Inspection & Storage
+
+- Check for physical damage like cracked screens or bent frames.
+- Clean using 75% alcohol applied to a cloth.
+- **Battery Care**: For long-term summer storage, keep battery levels at **50%-60%** and power down the device to prevent deep discharge.
+
+### 4. Issuance to New Students
+
+New students will see the "Remote Management" screen immediately upon powering on. They can complete enrollment (e.g., via student ID authentication) and automatically receive their required apps.

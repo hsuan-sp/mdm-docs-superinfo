@@ -1,29 +1,41 @@
 ---
 id: app-7
 
-title: "I cannot find the app I want in ASM (due to regional restrictions or removal). How do I solve this?"
+title: "I cannot find the app I want to deploy in ASM. How do I solve this?"
 
 category: "Section 3: App Management & Distribution"
 
 important: false
 
-tags: ["ASM Search", "Regional Restrictions", "Developer Settings", "App Store"]
+tags:
+  [
+    "ASM Search",
+    "Regional Restrictions",
+    "Volume Purchase Program",
+    "App Store",
+  ]
 ---
 
-**Search results in Apple School Manager (ASM) can sometimes differ from the consumer App Store. If you cannot find a specific item, check these factors in order:**
+**Search results within Apple School Manager (ASM) frequently diverge from the consumer App Store results on your personal iPhone. If you cannot locate a specific educational tool, sequentially execute the following technical checks:**
 
-## 1. Search by Apple ID String (Recommended)
+## 1. Abandon Keyword Search; Use the "App ID String" (Highly Recommended)
 
-Don't search by name. Instead, find the app on the web-based App Store and locate its unique ID (e.g., `id123456789`). Paste this ID directly into the ASM search bar. This is the most accurate way to find a specific entry.
+- **The Mechanics**: The search engine within ASM is notoriously rigid and struggles with partial matches or localized names.
+- **Standard Operating Procedure (SOP)**:
+  1. Open a web browser on a computer and use Google to find the web-based App Store page for the desired app.
+  2. Inspect the URL and locate the app's unique identifier string (e.g., the URL ends with `id123456789`).
+  3. Copy that exact string (`id123456789`) and paste it directly into the ASM search bar. This circumvents the keyword engine and guarantees a 100% accurate hit if the app is available.
 
-## 2. Regional Store Consistency
+## 2. Verify Regional Store Consistency
 
-ASM only searches the App Store associated with your organization's registered region (e.g., the Taiwan store). If a developer has released an app exclusively for the U.S. store, it will not appear in a Taiwan-based ASM account.
+- **The Mechanics**: ASM operates under strict geographical boundaries. It can only query the App Store corresponding to your institution's registered country (e.g., the Taiwan storefront).
+- **The Pitfall**: If an international developer neglected to check the "Taiwan" distribution box when publishing their app, it is physically impossible for it to appear in your ASM. You must contact the software developer directly and request they enable regional availability in their App Store Connect portal.
 
-## 3. B2B / Custom Apps
+## 3. Check for B2B "Custom Apps"
 
-Some proprietary or school-specific apps are distributed as "Custom Apps." Ensure the developer has added your **Organization ID** to their distribution list in App Store Connect.
+- **The Mechanics**: Some publishers or government agencies distribute proprietary tools as "Custom Apps" to prevent the general public from downloading them.
+- **The Solution**: These apps will never appear in the standard public search. You must provide your school's **[Organization ID]** (found in ASM settings) to the developer. Once the developer whitelists your ID, the software will magically populate within the **[Custom Apps]** section of your ASM sidebar.
 
-## Risk Warning:
+## 4. Beware of the "Delisted App" Long-Term Risk
 
-If an app has been removed (delisted) from the App Store, you may be unable to download it to new devices even if you have remaining VPP licenses. Administrators should periodically audit the status of critical teaching apps in the store to avoid deployment gaps.
+If an educational app acquired years ago was later purged from the App Store, your MDM can still deploy it to new students as long as you retain the original VPP licenses in your ASM. However, this means the app is effectively "out of print." If the school ever accidentally deletes these licenses or migrates to a completely new ASM structure, you will never be able to repurchase that software. If an essential app has been delisted, proactively procure a modern alternative to avoid future curriculum disruptions.

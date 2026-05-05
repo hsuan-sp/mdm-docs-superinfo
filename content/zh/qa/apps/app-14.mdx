@@ -10,25 +10,25 @@ important: false
 tags: ["TestFlight", "App Store Connect", "管理式 Apple 帳號", "服務存取"]
 ---
 
-**可以。Apple 已允許「管理式 Apple 帳號 (Managed Apple Account)」作為 TestFlight 的測試者，但必須先在 ASM 端開放權限。**
+**可以。Apple 已允許使用「管理式 Apple 帳號 (Managed Apple Account)」作為 TestFlight 的測試者，但必須先由管理員在 ASM 端開啟相關權限。**
 
-## 前置需求檢查 (ASM 端) ：
+## 前置需求檢查 (ASM 端)
 
-管理員必須登入 **Apple 校務管理** ，前往 **「設定」>「使用者登入與目錄同步」>「服務存取」** ，確認已將 **「TestFlight」** 服務設定為「開啟」。若此開關關閉，使用者即使收到邀請也無法登入 TestFlight。
+管理員必須登入 **Apple 校務管理 (ASM)**，前往 **[設定]** > **[使用者登入與目錄同步]** > **[服務存取]**，確認已將 **[TestFlight]** 服務設定為「開啟」。若此開關處於關閉狀態，老師即使收到邀請郵件也無法登入 TestFlight。
 
-## 標準部署流程 ：
+## 標準部署流程
 
-1.  **App Store Connect 設定** ：
-    - 校內開發者將老師的「管理式 Apple 帳號」加入 **「外部測試群組 (External Testing)」** 。
-    - 系統會發送邀請郵件至老師的信箱。
+1. **App Store Connect 設定**：
+   - 校內開發團隊需在 App Store Connect 中，將老師的「管理式 Apple 帳號」加入 **「外部測試群組 (External Testing)」**。
+   - 系統將自動發送邀請電子郵件至該帳號的信箱。
 
-2.  **派送 TestFlight App** ：
-    - 管理員需在 ASM 採購免費的 **TestFlight App** 授權。
-    - 透過 Jamf Pro 將 TestFlight 以 **「裝置型分派」** 方式安裝至老師的 iPad。
+2. **派送 TestFlight App**：
+   - 資訊管理員需在 ASM 的「App 與書籍」中採購免費的 **TestFlight** 授權。
+   - 透過 Jamf Pro 將 TestFlight 以 **「裝置型指派 (Device-based Assignment)」** 的方式靜默安裝至老師的 iPad 上。
 
-3.  **兌換邀請** ：
-    - 老師在 iPad 上開啟邀請郵件，點擊「View in TestFlight」。
-    - TestFlight App 會自動啟動，老師使用其管理式帳號登入並接受測試。
+3. **兌換邀請與測試**：
+   - 老師在 iPad 上開啟邀請電子郵件，點擊「在 TestFlight 中檢視 (View in TestFlight)」。
+   - TestFlight App 啟動後，老師使用其管理式 Apple 帳號登入，即可接受邀請並下載 Beta 版 App 進行測試。
 
 ## 與個人帳號的差異 ：
 

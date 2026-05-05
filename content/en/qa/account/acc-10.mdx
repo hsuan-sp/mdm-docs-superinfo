@@ -1,7 +1,7 @@
 ---
 id: acc-10
 
-title: "Our school email domain has changed (e.g., from .edu.tw to .xh.edu.tw). How do I update the Managed Apple Accounts?"
+title: "Our school email domain has changed. How do I update the Managed Apple Accounts?"
 
 category: "Section 1: Account & Server Management"
 
@@ -10,45 +10,43 @@ important: false
 tags: ["Domain Change", "Account Management", "Major Migration"]
 ---
 
-**This involves a major underlying system change.** Since the format of a Managed Apple Account changes with the domain, it directly affects user login identities.
+**This is a major system-level migration.**
+
+Because the format of a Managed Apple Account is tied directly to the domain, any change to the email domain directly impacts user login identities and authentication flows.
 
 ## Pre-Migration Assessment:
 
-- **Timing**: Strongly recommended to perform this during **long breaks (Summer/Winter)**. After the change, old accounts on all devices will become invalid, requiring re-login.
-- **Data Continuity**: The unique internal ID of the Apple Account remains the same, so cloud data (iCloud Drive, Photos) will migrate with the new account name, but users must "Sign Out and Sign Back In" to regain access.
+- **Execution Timing**: It is strongly advised to perform this operation _only_ during **long summer or winter breaks**. Once the change takes effect, old accounts on all devices become invalid instantly, forcing a campus-wide re-authentication process.
+- **Data Continuity**: The underlying "Internal ID" of the Apple Account remains unchanged. Therefore, cloud data (iCloud Drive files, Notes, Photos) migrates seamlessly with the new account name. However, users must "Sign Out and Sign Back In" to regain access to that data.
 
-## Procedure:
+## Migration Procedure:
 
 ### Step 1: Add and Verify the New Domain
 
 1. Log in to Apple School Manager ([school.apple.com](https://school.apple.com)).
-2. Go to **Preferences > Accounts** (or "User Sign-in & Directory Sync").
-3. In the Domains section, click **Add** and enter the new domain (e.g., `@school.xh.edu.tw`).
-4. Follow the instructions to add a TXT record to your DNS settings. Once verified, the domain can be assigned to users.
+2. Navigate to **[Preferences]** > **[Directory Sync]** (or Accounts).
+3. Under the Domains section, click **[Add]** and input the new domain (e.g., `@school.xh.edu.tw`).
+4. Follow the prompts to add the required TXT record to your public DNS. The domain becomes available for use only after Apple verifies this record.
 
 ### Step 2: Batch Update Account Formats
 
-- **For Manually Managed Accounts**:
-  1. Export all users as a CSV from the "Users" list.
-  2. Find & Replace the domain part of the "Managed Apple Account" column in the CSV with the new domain.
-  3. Re-upload the updated CSV via the import function.
+- **For Manually Managed Accounts (CSV)**:
+  1. Export the entire user list as a CSV file from the **[Users]** section.
+  2. Use the "Find & Replace" function in Excel to change the domain portion of the "Managed Apple Account" column to the new domain.
+  3. Re-upload the modified CSV into ASM to update the accounts.
 
 - **For Federated Authentication (Google / Microsoft)**:
-  1. **Critical Order**: You must first complete the email domain migration on the Google or Microsoft side.
-  2. Return to ASM to trigger a re-sync.
-  3. ASM will detect the email changes and automatically update the corresponding Managed Apple Accounts.
+  1. **Order of Operations**: You must complete the email domain migration on the Google Workspace or Microsoft Entra ID side **first**.
+  2. Return to ASM and trigger a directory re-sync.
+  3. ASM will detect the email address modifications and automatically update the corresponding Managed Apple Accounts.
 
-### Step 3: Client-Side Action
+### Step 3: Client-Side Action (Forced Re-login)
 
-- **Forced Re-login**: After the change, iPhones/iPads will prompt "Account Verification Failed" or request a password.
-- **Correct Action**: Users should manually sign out of the old domain account and then sign in using the **new email format** (password usually remains unchanged).
+- Following the update, iPads and Macs will display "Account Verification Failed" prompts.
+- **Required Action**: Users must manually sign out of the old domain account in Settings, and then sign back in using the **new email format**.
 
-## Important Notes:
+## Important Notes & Advice:
 
-- **Federation Conflicts**: If the new domain has already been used by staff/students for personal Apple Accounts, enabling federation will trigger the **60-day conflict resolution process**, requiring those users to change their personal account emails.
-- **VPP Licenses**: App licenses are tied to the account's internal ID, so changing the domain does not cause license loss.
-- **Shared iPad**: If deploying Shared iPad, the login screen will automatically update to reflect the domain change; students simply need to enter their new credentials.
-
-## Practical Advice:
-
-Before rolling this out globally, manually update 2-3 test accounts (e.g., IT staff) to verify that iCloud data and MDM commands continue to function correctly after switching domains.
+- **Federation Conflicts**: If the new domain was previously used by staff to create personal Apple Accounts, enabling federation triggers a **60-day conflict resolution process**. Affected users will be forced by Apple to change their personal account emails to private ones (e.g., @gmail.com).
+- **VPP License Integrity**: App licenses are tied to the immutable internal ID; changing the domain will **not** result in lost App licenses.
+- **Pre-Migration Testing**: Before rolling out a domain change campus-wide, test the migration on 2-3 IT staff accounts first to verify iCloud data continuity and MDM distribution remain intact.

@@ -3,14 +3,16 @@ id: dl-5
 
 title: "Students are deleting the Jamf Trust app. How does this affect compliance, and how do we prevent it?"
 
-category: "Section 5: Digital Initiatives (MOE Project)"
+category: "Section 5: Digital Learning & Network Protection"
 
 important: false
 
 tags: ["Compliance", "Security", "Restrictions", "Jamf Trust"]
 ---
 
-**Deleting Jamf Trust effectively blinds your reporting system. The device will be marked as "Unused" in official compliance audits, even if the student is using it for class every day.** To ensure your school meets its Key Performance Indicators (KPIs), you must implement technical safeguards.
+**If a protection app (like Jamf Trust) is deleted, it critically compromises the campus network's security posture and usage tracking.**
+
+These apps serve as the primary local agents for traffic reporting and content filtering. Once uninstalled, the device is effectively rendered "Offline" or "Unused" in the MDM system and cloud dashboards. To maintain the integrity of cybersecurity and asset management, IT administrators must enforce strict MDM restrictions.
 
 ## Barrier 1: Prevent App Deletion (Most Effective)
 
@@ -24,6 +26,9 @@ tags: ["Compliance", "Security", "Restrictions", "Jamf Trust"]
 2. Make sure the app is "In Scope" for all student groups.
 3. Even if a student manages to bypass restrictions and delete the app, the device will detect the "Missing App" status during its next check-in and forcefully reinstall Jamf Trust in the background.
 
-## Institutional Advice:
+## Strategy: Proactive Auditing
 
-Create a Smart Group for "Devices Missing Jamf Trust" (Logic: Application Title _does not have_ Jamf Trust). Set this as a tile on your Jamf dashboard. If the number is greater than zero, your ICT team knows exactly which students need to be called in for a hardware check.
+Beyond passive defenses, administrators should take a proactive approach by creating an **"Audit: Missing Protection App"** Smart Group.
+
+- **Criterion**: `Application Title` **[does not have]** `Jamf Trust`
+- If the device count in this group is greater than zero, it indicates devices have dropped off the security radar (potentially due to being offline for extended periods, preventing the receipt of re-install commands). The IT team should prioritize physically recalling these devices for manual inspection.

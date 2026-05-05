@@ -10,18 +10,18 @@ important: false
 tags: ["Home Screen Layout", "Restrictions", "Folders"]
 ---
 
-**Yes. Using a 'Home Screen Layout' configuration profile, administrators can precisely define the placement of apps on student devices.**
+**Yes. By deploying a 'Home Screen Layout' Configuration Profile, administrators can enforce the exact placement of apps and folders on the iPad Home Screen.**
 
-## Configuration Method:
+## Configuration Steps
 
-1. In Jamf Pro, go to **Mobile Devices > Configuration Profiles**.
-2. Select the **Home Screen Layout** payload.
-3. Define the contents of the **Dock** and specific **Pages**.
-4. You can create "Folders" to group similar apps (e.g., iWork productivity tools).
+1. In the Jamf Pro sidebar, navigate to **[Devices]** > **[Configuration Profiles]**.
+2. Create a new profile and select the **[Home Screen Layout]** payload.
+3. You can visually define the contents of the **[Dock]** and individual **[Pages]**.
+4. The system supports creating folders to group similar apps together (e.g., iWork productivity apps).
 
-## Important Constraints and Risks:
+## Important Limitations and Best Practices
 
-- **Locked Layout**: Once applied, **students cannot move or delete app icons** on the Home Screen. The entire layout is "frozen" in the state defined by the administrator.
-- **The Overflow Effect**: Any apps not specified in your layout will be pushed to the final page or hidden in the App Library.
-- **Recommendation**: This is ideal for younger students or special education needs where a simplified, consistent interface is required. For older students, we recommend allowing flexibility for them to organize their own learning environments.
+- **Lockdown Effect**: Once applied, **students cannot move or delete app icons on the Home Screen**. The entire interface is "frozen" in a read-only state defined by the administrator.
+- **Displacement**: Any installed apps not explicitly included in your layout will be pushed to the last page or hidden within the App Library.
+- **Classroom Advice**: This feature is highly recommended for younger students or special education needs (simplifying the interface and preventing accidental deletion). For older students, we recommend maintaining flexibility so they can build their personalized digital learning environment.
 - **Note**: Many regional MOE/School District setups already include a default layout. Verify yours before creating a competing profile.

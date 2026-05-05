@@ -19,17 +19,19 @@ tags:
   ]
 ---
 
-**The key is to disable 'Automatic Updates' and adopt a 'Manual Push during Maintenance Window' strategy.**
+**The key is to disable App Store 'Automatic Updates' and adopt a 'Maintenance Window' deployment strategy.**
 
-The App Store's automatic update mechanism can be unpredictable. To ensure classroom stability, use the following settings for critical apps:
+Because background update times for the App Store cannot be precisely predicted, we recommend the following strategy for critical educational apps to ensure classroom stability:
 
-## 1. Disable Automatic Updates for Specific Apps
+## 1. Disable Automatic Updates per App
 
-In the app details page within Jamf Pro, **uncheck 'Automatically update app'**. Perform this for critical tools like Google Classroom, Meet, or exam apps to prevent a sudden update from introducing bugs mid-lesson.
+- In the App details page within Jamf Pro, **uncheck [Automatically update app]**.
+- It is crucial to do this for core apps like Google Classroom, Meet, or exam-taking software, preventing potential bugs in new versions from disrupting lessons.
 
 ## 2. Establish a 'Maintenance Window'
 
-Coordinate a fixed time with the school (e.g., every Friday after 5 PM). Use Jamf Pro's **Mass Actions** to select the target device groups and manually send the **Update Application** command.
+- Agree on a fixed weekly maintenance window with the school administration (e.g., after 5 PM on Fridays).
+- Use the **[Mass Actions]** feature in Jamf Pro to select the target device group and manually send the **[Update Application Version]** command.
 
 ## 3. Leverage Version Pinning
 

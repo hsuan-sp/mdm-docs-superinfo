@@ -1,7 +1,7 @@
 ---
 id: hw-24
 
-title: "Managing Wi-Fi 6, 6E, and 7: How to plan school network upgrades for a mixed fleet."
+title: "Managing Wi-Fi 6, 6E, and 7: Upgrade strategies for a mixed-model school fleet."
 
 category: "Section 6: Hardware & Maintenance"
 
@@ -10,51 +10,48 @@ important: true
 tags:
   [
     "Wi-Fi 7",
-
     "Wi-Fi 6E",
-
     "Wireless Networking",
-
     "Infrastructure",
-
     "Procurement",
   ]
 ---
 
-**With the introduction of M4/M5 iPads and Macs, school networks are now 'Tri-generational.' Handling Wi-Fi 6, 6E, and 7 simultaneously requires careful planning to prevent newer devices from being throttled while ensuring older iPads (like the iPad 9) remain connected.**
+**With the introduction of M4/M5 series iPads and Macs, school wireless environments are entering a 'Tri-generational' transition phase.**
 
-## Wi-Fi Tech Specs Comparison:
+Effective planning is required to ensure that high-performance devices aren't throttled by legacy network configurations while maintaining stable connectivity for older units like the iPad 9th gen.
 
-| Generation             | Main Bands | Max Theory Speed | Key Tech            | Education Devices       |
-| :--------------------- | :--------- | :--------------- | :------------------ | :---------------------- |
-| **Wi-Fi 6 (802.11ax)** | 2.4/5GHz   | 9.6 Gbps         | OFDMA, TWT          | iPad 9, iPad 10         |
-| **Wi-Fi 6E**           | **+ 6GHz** | 9.6 Gbps         | 160MHz Width        | M4 iPad Pro, M3 MacBook |
-| **Wi-Fi 7 (802.11be)** | 2.4/5/6GHz | **46 Gbps**      | MLO, 320MHz, 4K-QAM | M5 iPad Pro, iPhone 16  |
+## 2026 Campus Wireless Technology Comparison:
 
-## Upgrade Planning Strategy:
+| Standard                | Bands           | Max Theoretical Speed | Example Devices                    |
+| :---------------------- | :-------------- | :-------------------- | :--------------------------------- |
+| **Wi-Fi 6 (802.11ax)**  | 2.4 / 5 GHz     | 9.6 Gbps              | iPad 9th gen, iPad (A16)           |
+| **Wi-Fi 6E (802.11ax)** | **+ 6 GHz**     | 9.6 Gbps              | iPad Pro (M2/M4), MacBook Air (M3) |
+| **Wi-Fi 7 (802.11be)**  | 2.4 / 5 / 6 GHz | **46 Gbps**           | iPad Pro (M5), iPhone 16           |
 
-### 1. Isolate 6GHz for High Performance
+## Infrastructure Upgrade Planning Strategy:
 
-Newer M4/M5 devices support 6GHz (Wi-Fi 6E/7), which has almost zero interference.
+### 1. Isolate the 6 GHz Band for Performance
 
-- **Recommendation**: Create a separate SSID for 6GHz (e.g., `Roaming-HighSpeed`) for "Video Editing" or "VR Labs" that need high bandwidth and low latency.
+Newer M-series devices support the 6 GHz band, which is free from interference by legacy appliances.
 
-### 2. WPA3 Compatibility
+- **Recommendation**: Create a dedicated SSID for the 6 GHz band (e.g., `School-6G-Net`) for "Multimedia Labs" or "VR Classrooms" that require high bandwidth and low latency.
 
-- **Mandatory**: Wi-Fi 6E/7 **requires** WPA3 encryption.
-- **Legacy Risk**: Older iPads (5th/6th Gen) might struggle with WPA3.
-- **Plan**: Keep a "Mixed Mode" (WPA2/WPA3) SSID for general classrooms.
+### 2. Mandatory WPA3 Security
 
-### 3. Benefit of MLO (Multi-Link Operation)
+- **Requirement**: Wi-Fi 6E and Wi-Fi 7 standards **mandate** WPA3 encryption.
+- **Legacy Management**: Older iPads may struggle with WPA3. Ensure that general-purpose SSIDs support WPA2/WPA3 Mixed Mode to maintain backwards compatibility.
 
-Wi-Fi 7's MLO allows M5 iPad Pros to transmit on 5GHz and 6GHz simultaneously.
+### 3. Benefits of Multi-Link Operation (MLO)
 
-- **Benefit**: Even if Bluetooth interferes with one band, the stream continues uninterrupted on the other.
+Wi-Fi 7 introduces **MLO**, allowing M5 chip devices to transmit data across multiple bands simultaneously.
 
-### 4. Infrastructure Bottleneck
+- **Result**: Even if interference occurs on one band, the instructional stream continues uninterrupted on the other, ensuring smoother classroom video sessions.
 
-- If upgrading to Wi-Fi 7 APs, your core switches must support **Multi-Gig (2.5GbE or 5GbE)**. Plugging a 46Gbps AP into a 1Gbps port is a waste of money.
+### 4. Eliminating the Ethernet Bottleneck
 
-## Practical Advice:
+When deploying Wi-Fi 7 Access Points, the core switches must support **Multi-Gig (2.5 GbE or 5 GbE)**. Plugging a high-performance AP into a standard 1 Gbps port creates an immediate bottleneck for high-density student traffic.
 
-For most general classrooms, **Wi-Fi 6E** offers the best cost-performance ratio. Reserve **Wi-Fi 7** for "Future Labs" or multimedia centers where M5 devices are deployed.
+## Expert Strategy:
+
+For standard classrooms, **Wi-Fi 6E** already provides excellent value. **Wi-Fi 7** is best prioritized for specialized creative labs or STEAM environments. IT leads should also verify that their PoE switches provide sufficient power (PoE+ or PoE++) to support the higher energy requirements of high-performance Wi-Fi 7 access points.

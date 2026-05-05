@@ -21,17 +21,19 @@ tags:
   ]
 ---
 
-**A missing App Store icon usually results from 'Screen Time' restrictions on the device or a 'Restrictions' profile from the MDM. Follow these steps to troubleshoot:**
+**A missing App Store icon is usually the result of a restriction imposed by local 'Screen Time' settings or an 'MDM Configuration Profile'. Please verify the following:**
 
-## Step 1: Check Local 'Screen Time' (Most Common)
+## 1. Check Local "Screen Time" Settings (Most Common)
 
-- **Path**: Go to **Settings > Screen Time > Content & Privacy Restrictions > iTunes & App Store Purchases**.
-- **Key Setting**: Ensure **Installing Apps** is set to **Allow**. (_Note: This is a local iOS restriction; even if the MDM doesn't lock it, a user can accidentally disable it._)
+- **Path**: On the iPad, navigate to **[Settings]** > **[Screen Time]** > **[Content & Privacy Restrictions]** > **[iTunes & App Store Purchases]**.
+- **Key Setting**: Check if **[Installing Apps]** is set to **"Don't Allow"**.
+- **Explanation**: This is a local iOS restriction. Even if the MDM allows it, a user might have accidentally toggled this setting, causing the App Store to disappear.
 
-## Step 2: Check MDM Restrictions Profile
+## 2. Check MDM Restriction Profiles
 
-- **Path**: Go to **Settings > General > VPN & Device Management** and inspect the "Restrictions" profile.
-- **Key Setting**: Look for an entry stating **Allow installing apps using App Store** is disabled. (_Note: This restriction only applies to Supervised devices._)
+- **Path**: On the iPad, go to **[Settings]** > **[General]** > **[VPN & Device Management]** and review the installed "Restrictions" profile.
+- **Key Setting**: Look for an **"Allow installing apps"** restriction rule.
+- **Explanation**: This MDM restriction applies specifically to "Supervised" devices. The administrator will need to remove this restriction payload from Jamf Pro.
 
 ## Step 3: Home Screen Search
 

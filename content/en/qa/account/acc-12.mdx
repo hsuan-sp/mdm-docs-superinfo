@@ -1,30 +1,33 @@
 ---
 id: acc-12
 
-title: "Can I migrate to a new MDM provider without wiping device data?"
+title: "MDM Migration: Can I transition to a new MDM provider in 2026 without wiping device data?"
 
 category: "Section 1: Account & Server Management"
 
 important: true
 
-tags: ["Migration", "MDM Transfer", "OS 26"]
+tags: ["Migration", "MDM Transfer", "OS 26", "Return to Service"]
 ---
 
-**While System Version 26 supports 'Automated MDM Migration', it remains 'strongly discouraged' in educational environments due to potential configuration conflicts.**
+**While recent OS updates support 'Automated MDM Migration' without data loss, executing a silent, non-wipe migration is 'strongly discouraged' within the complex configurations of educational environments.**
 
-According to the latest updates from WWDC 25, Apple has enhanced the `MigrateDevice` command in **Version 26** (iOS 26 / macOS 26 Tahoe), allowing devices to migrate silently from an old MDM to a new one. However, significant risks remain:
+When schools transition from a legacy MDM to a newly procured system, Apple provides the `MigrateDevice` command in **iPadOS 26 and macOS 26 Tahoe** to allow for wipe-free MDM swapping. However, this approach carries substantial operational risks in educational settings.
 
-## 1. Educational Environment Constraints:
+## Why 'Wipe-Free' Migration is Risky in Education:
 
-- **Profile Residue**: Non-wipe migrations often lead to residual "Restriction Profiles" or "Education Settings" from the old MDM conflicting with the new one, potentially breaking Apple Classroom.
-- **Data Integrity**: Over time, student devices accumulate cache and temporary files. Without a clean reset, new MDM configurations may not apply correctly.
-- **License Sync**: VPP app licenses may fail to transition smoothly, preventing subsequent updates.
+| Risk Factor                       | Detailed Explanation                                                                                                                                                                                                                                                                                |
+| :-------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Profile Residue & Conflicts**   | "Restriction Profiles," "Wi-Fi Certificates," or "Education Configurations" deployed by the old MDM can stubbornly remain in the system registry. When the new MDM pushes its own payloads, conflicts arise that often break critical services like Apple Classroom or secure Wi-Fi authentication. |
+| **Data Integrity & System Bloat** | After 4 years of intense student usage, devices accumulate massive amounts of cache, corrupted temporary files, and obsolete app data. Transitioning without a factory reset prevents the new deployment from achieving optimal performance.                                                        |
+| **VPP License Synchronization**   | Handing over Volume Purchase Program (VPP) app licenses between two active MDMs without wiping the app can lead to orphaned licenses, preventing the new MDM from executing future app updates.                                                                                                     |
 
-## 2. Technical Context:
+## The Best Practice Solution: Return to Service (RTS)
 
-- Devices must be updated to **Version 26 (iOS/iPadOS 26, macOS 26 Tahoe)** for the most stable "wipe-free" migration experience.
-- While this feature has been significantly bolstered since WWDC 2025, a clean reset remains the recommended option for complex educational deployments.
+To guarantee a stable and clean foundation for your fleet during a transition, IT administrators should prioritize the **Return to Service (RTS)** framework for the migration.
 
-## Practical Advice:
+**How RTS Works and Its Advantages:**
 
-To ensure device stability for a new semester, we prioritize the **Return to Service (RTS)** feature. Introduced in iOS 17 and optimized in **Version 26**, RTS allows administrators to send a single command that wipes the device and automatically re-enrolls it using cached Wi-Fi credentials. Crucially, **OS 26 supports retaining installed managed apps during the RTS process**, providing a "clean, stable, and fully automated" transition.
+1. **Zero-Touch Erase and Connect**: When the administrator sends the RTS wipe command from the legacy MDM, it packages the school's Wi-Fi payload alongside the erase instruction.
+2. **Fully Automated Provisioning**: Upon rebooting, the device automatically connects to the Wi-Fi, silently skips all Setup Assistant screens (Language, Region, etc.), and immediately enrolls into the **new MDM server** (as dictated by your ASM token assignment).
+3. **The OS 26 Evolution**: In **iPadOS 26** and **macOS 26 Tahoe**, RTS received a massive upgrade. Administrators can now instruct the RTS process to **"Retain installed Managed Apps"** during the wipe. This achieves the holy grail of migrations: a perfectly clean OS state without the bandwidth-crushing necessity of re-downloading gigabytes of educational software.

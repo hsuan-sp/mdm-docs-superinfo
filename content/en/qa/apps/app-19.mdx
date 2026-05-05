@@ -10,15 +10,15 @@ important: true
 tags: ["Single App Mode", "ASAM", "Assessment Mode", "Risk Warning"]
 ---
 
-**Standard 'Single App Mode' cannot be exited by the user. If you need exit flexibility, you should use 'Autonomous Single App Mode (ASAM)'.**
+**Native "Single App Mode" cannot be exited by the user on the device once applied. If you require the flexibility to exit the app (e.g., after completing an exam), you should use "Autonomous Single App Mode (ASAM)".**
 
-Choosing the wrong mode is a leading cause of "bricked" devices during school deployments:
+The underlying operational logic of these two modes is fundamentally different. Misconfiguration is a primary cause of devices becoming "stuck" when network connectivity fluctuates:
 
 ## Mode 1: MDM-Enforced Single App Mode
 
-- **Logic**: The administrator sends a lock command. The device remains locked until a second "unlock" command is received.
-- **Risk**: **Network Dependency**. If Wi-Fi fails while locked, the device cannot receive the unlock command. Since the user cannot access Settings to reconnect Wi-Fi, the device is "stuck" and may require an Ethernet adapter (RJ45) or a full restore to rescue.
-- **Use Case**: Kiosks, digital signage, library lookup stations.
+- **Characteristics**: The MDM administrator sends a remote command to lock the device into the app. Unless the administrator sends a subsequent "Unlock" command, the student **absolutely cannot exit the app**.
+- **Risks**: **Network loss equals a stuck device**. If the device loses its Wi-Fi connection while locked, the user cannot return to the Home Screen to access Settings and reconnect. The device will never receive the MDM unlock command, requiring rescue via a **physical wired network adapter (RJ45)** or a forced restore.
+- **Use Cases**: Library catalogs, digital signage, or kiosks (stationary devices that do not require user configuration and have stable networks).
 
 ## Mode 2: Autonomous Single App Mode (ASAM) — Recommended for Exams
 
@@ -26,13 +26,13 @@ Choosing the wrong mode is a leading cause of "bricked" devices during school de
 - **Benefit**: No network dependency for unlocking. Even if the Wi-Fi drops, the student can finish the exam and the app can release the lock locally.
 - **Setup**: In Jamf Pro, add the app's Bundle ID to the "Autonomous Single App Mode" allowlist in a Restrictions profile.
 
-## Mode 3: Guided Access — Small Scale
+## Mode 3: Guided Access (Small Scale Only)
 
-- **Logic**: A local iOS feature (not MDM). A teacher triples-clicks the power button to lock.
-- **Benefit**: Controlled by the person in the room; no "network bricking" risk.
+- **Characteristics**: This is a built-in iOS accessibility feature, not an MDM remote command. The proctor manually triple-clicks the power button to lock it, and triple-clicks again entering a passcode to unlock it.
+- **Advantages**: Completely controlled by the on-site staff, eliminating the risk of network-related lockouts.
 
-## Practical Advice for 2026:
+## Deployment Recommendations
 
-- **Formal Assessments**: Require your software vendor to support **ASAM** (e.g., LockDown Browser). This is the enterprise standard. **OS 26 integrates ASAM into the DDM framework, ensuring stability even during transient network drops.**
-- **Informal Quizzes**: Use **Guided Access** for manual control.
-- **Avoid**: MDM-Enforced Single App Mode for large groups of student devices unless you have 100% Wi-Fi confidence and Ethernet adapters on standby.
+- **Formal Exams**: Strongly advise software vendors to support **ASAM** (e.g., LockDown Browser), as it is the most secure and professional method. iOS 18+ integrates ASAM into the DDM declarative framework, allowing the device to maintain its locked state based on local declarations even during temporary network drops, greatly improving exam stability.
+- **Pop Quizzes**: If the teaching app does not support ASAM, advise teachers to use **"Guided Access"** for manual, localized control.
+- **To Avoid**: Avoid using MDM-Enforced Single App Mode for large-scale student exams unless you can guarantee absolute Wi-Fi stability in the testing environment and have the on-site capability to handle stuck devices.

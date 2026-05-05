@@ -1,31 +1,35 @@
 ---
 id: acc-17
 
-title: "How do I use Platform SSO (PSSO) to unlock FileVault at system boot?"
+title: "How do I use Platform SSO (PSSO) to unlock FileVault natively at system boot?"
 
 category: "Section 1: Account & Server Management"
 
 important: false
 
-tags: ["PSSO", "FileVault", "macOS 15+", "Authentication"]
+tags: ["PSSO", "FileVault", "macOS 26", "Authentication"]
 ---
 
-**Starting with macOS 15 (Sequoia), Platform SSO supports deep integration with FileVault, effectively eliminating the 'dual-password' friction point during startup.**
+**The Platform SSO (PSSO) protocols introduced in macOS 15 have reached deep, native integration with FileVault in macOS 26 Tahoe, entirely eliminating the notoriously frustrating 'dual-password' friction point for educational deployments.**
 
-## The Solution:
+In legacy domain-bound environments, even if a Mac was connected to an Active Directory or Entra ID, the initial FileVault pre-boot screen demanded a local disk password. Only after unlocking the disk could the OS connect to the network to authenticate the directory password. This frequently led to password desynchronization and high volumes of helpdesk tickets.
 
-Previously, even if a Mac was domain-joined, the initial FileVault unlock screen required a local password. With the Platform SSO extensions introduced in macOS 15, we can achieve:
+## The PSSO Solution and Operational Logic:
 
-1. **Password Synchronization**: Write network credentials (e.g., Microsoft Entra ID / Okta) directly into the FileVault unlock list.
+Platform SSO fundamentally alters the authentication chain:
 
-2. **Single Sign-On Experience**: Users enter their organizational credentials at the boot screen. Once the disk is unlocked, the identity is passed through to the desktop, bypassing the second login screen.
+1. **Low-Level Credential Synchronization**: Upon the user's initial network login, PSSO intercepts the credential exchange with the Identity Provider (IdP) and securely writes a cryptographic hash of that network password directly into FileVault's authorized unlock keychain.
+2. **Seamless Passthrough Experience**: On subsequent reboots, the user encounters a single login screen where they input their school Google or Microsoft credentials. Once FileVault accepts the password and decrypts the drive, the identity token is passed seamlessly through to the macOS desktop environment.
 
-## Technical Requirements:
+## Technical Implementation Requirements:
 
-- **System Version**: macOS 15 or later (upgrading to **macOS 26 Tahoe** is recommended for the most stable experience).
-- **IdP Support**: Your Identity Provider must support the latest Platform SSO protocols (Microsoft Entra ID officially supported this from 2025).
-- **MDM Configuration**: In the Jamf Pro "Single Sign-On Extensions" profile, you must enable settings for `Shared Device Keys` and `FileVault` integration.
+- **OS Baseline**: macOS 15 is the absolute minimum, but upgrading fleets to **macOS 26 Tahoe** is highly recommended. Version 26 introduced vital optimizations for PSSO offline credential caching and network-drop fault tolerance.
+- **IdP Compatibility**: Your school’s Identity Provider must support Apple's current PSSO API structure. Microsoft Entra ID and Okta provide native support, while Google Workspace supports it via specific extensions.
+- **MDM Configuration via Jamf Pro**:
+  1. Create a new "Single Sign-On Extensions" configuration profile.
+  2. Set the payload type to **[Platform SSO]**.
+  3. You must explicitly enable the **[Shared Device Keys]** and **[FileVault Integration]** toggles.
 
-## Benefits:
+## Strategy: The Mac Deployment Blueprint
 
-This significantly reduces support tickets caused by teachers forgetting their local Mac passwords, as they only need to remember one school-managed credential.
+Schools deploying new Mac labs or administrative machines should mandate PSSO from day one. This architecture ensures complete institutional ownership (preventing users from locking down machines with local passwords) and centralizes all password reset requests within your Google or Microsoft admin console, drastically reducing IT overhead.

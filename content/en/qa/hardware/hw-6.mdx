@@ -1,54 +1,51 @@
 ---
 id: hw-6
 
-title: "How do I handle 'Ghost Touch' or issues with auto-rotation on the screen?"
+title: "How do I handle 'Ghost Touch' or auto-rotation issues on the iPad?"
 
-category: "Section 6: Hardware Maintenance & Troubleshooting"
+category: "Section 6: Hardware & Maintenance"
 
 important: false
 
 tags:
   [
     "Touch Issues",
-
     "Gyroscope",
-
     "Accelerometer",
-
     "Ghost Touch",
-
     "Troubleshooting",
   ]
 ---
 
-**'Ghost Touch' (erratic touch input) typically involves Electromagnetic Interference (EMI) or a damaged digitizer layer. Auto-rotation issues are usually related to hardware failure of internal sensors (accelerometer and gyroscope).** These issues directly impact the usability of the device. Administrators should distinguish between software settings, environmental interference, and pure hardware failure before deciding on a repair.
+**'Ghost Touch' (erratic touch input) typically involves Electromagnetic Interference (EMI) or a damaged digitizer layer. Auto-rotation issues are usually related to hardware failure of internal sensors (accelerometer and gyroscope).**
 
 ## Part 1: Troubleshooting Ghost Touch
 
-1. **Eliminate Electrical Noise and EMI**:
-   - **Common Cause**: Using non-original cables or unstable charging carts can generate "ripple noise" that interferes with the screen's capacitive sensor, causing erratic touches.
-   - **The Big Test**: **Unplug all charging cables.** If touch returns to normal while running strictly on battery, the problem lies with the charging equipment (cables or the PDU module in the cart). Switch to MFi-certified cables or inspect the cart.
+### 1. Eliminate Electrical Noise (EMI)
 
-2. **Physical Cleaning and Pressure Check**:
-   - **Cleaning**: Ensure the screen edges are free from sweat, oils, or liquid seepage.
-   - **Case Pressure**: Check if a rugged case is too tight or if a screen protector is damaged at the edges, as this can transmit constant "false" pressure signals to the digitizer.
+- **Common Cause**: Unstable power from non-original cables or charging carts can interfere with the screen's capacitive sensors, causing erratic input.
+- **The Test**: **Unplug all charging cables.** If the touch returns to normal on battery power, the issue is with your charging hardware. Switch to MFi-certified cables.
 
-3. **Hard Reset**:
-   - **iPad 9th Gen (with Home Button)**: Press and hold the Top button and the Home button until the Apple logo appears.
-   - **iPad 10th Gen (no Home Button)**: Press and release Volume Up, press and release Volume Down, then press and hold the Top button until the logo appears.
+### 2. Physical Pressure & Cleaning
 
-## Part 2: Determining Sensor Hardware Failure (Rotation)
+- **Case Pressure**: Verify that a rugged case is not pressing too tightly against the screen or that a screen protector is not peeling/cracked at the edges.
+- **Cleaning**: Ensure the screen surface and edges are free from residue, oils, or liquid.
 
-If the iPad screen won't rotate with the device, check the following in order:
+### 3. Force Restart
 
-1. **Control Center Lock**: Ensure the "Rotation Lock" icon (a lock with a circular arrow) is not highlighted in red.
+- **iPad 9th gen (with Home Button)**: Press and hold the Top button and the Home button until the Apple logo appears.
+- **iPad (A16, 10th gen, without Home Button)**: Press and release Volume Up, then Volume Down, and then press and hold the Top button until the logo appears.
 
-2. **MDM Restriction Check**: Admins should verify that a **Restrictions** profile in Jamf Pro hasn't accidentally enabled "Lock Screen Orientation," which would disable rotation for all scoped devices.
+## Part 2: Determining Sensor Hardware Failure
+
+If the screen fails to rotate, follow these steps:
+
+1. **[Control Center] Lock**: Ensure "Rotation Lock" is not enabled in the Control Center.
+2. **MDM Restriction Check**: Admins should verify that a **Restrictions** profile in Jamf Pro has not accidentally enabled "Lock Screen Orientation."
 3. **Sensor Self-Diagnosis**:
-   - **Logic**: Rotation relies on the internal **Accelerometer** and **Gyroscope**.
-   - **Test Method**: Open the built-in **Compass** app. If the needle is completely frozen, or the level feature doesn't react to tilt, the internal sensor hardware is likely damaged.
+   - **Test Method**: Open the built-in **Compass** app. If the needle is frozen or the leveling feature is unresponsive, the internal **Accelerometer** or **Gyroscope** hardware is likely faulty.
 
-## Practical Advice: Repair Strategy
+## Expert Strategy:
 
-- **When to Repair**: If Ghost Touch persists after removing external power and cleaning, or if the Compass app is unresponsive, it typically indicates a damaged **digitizer layer** or **logic board sensor**.
-- **Contract Coverage**: Provided there is no obvious physical damage or screen cracks, these issues are generally considered natural hardware failures. Contact support immediately to facilitate repair or replacement under your project's warranty.
+- **When to Repair**: If Ghost Touch persists after removing external power and a Force Restart, or if the Compass app remains unresponsive, the device requires official hardware service.
+- **Warranty Coverage**: Provided there is no obvious physical damage or cracked glass, these issues are generally classified as natural hardware failures. Ensure you maintain an accurate audit of your fleet's warranty expiration dates and facilitate repairs before coverage lapses.

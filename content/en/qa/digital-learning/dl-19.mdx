@@ -3,7 +3,7 @@ id: dl-19
 
 title: "Troubleshooting: Apple Classroom keeps losing student connections or showing 'Offline'."
 
-category: "Section 5: Digital Initiatives (MOE Project)"
+category: "Section 5: Digital Learning & Network Protection"
 
 important: false
 
@@ -25,7 +25,7 @@ tags:
 
 ## Phase 1: Local Device Check (Most Common)
 
-1. **Bluetooth Permissions**: Ensure Bluetooth is enabled on both teacher and student devices. In **iOS 26**, go to **Settings > Privacy & Security > Bluetooth** and confirm the "Classroom" app permission is toggled **ON**.
+1. **Bluetooth Permissions**: Ensure Bluetooth is enabled on both teacher and student devices. In **iPadOS 26**, go to **Settings > Privacy & Security > Bluetooth** and confirm the "Classroom" app permission is toggled **ON**.
 
 2. **Same Wi-Fi SSID**: Verify both the teacher and student are on the exact same SSID (e.g., `School-Wi-Fi`). Even if they are on different radio bands (2.4G/5G), using different SSIDs can sometimes lead to client isolation.
 
@@ -41,6 +41,6 @@ tags:
 - If the devices are local and configured correctly but still won't talk, the Wi-Fi infrastructure is likely blocking **mDNS (Bonjour)**.
 - **Action**: IT coordinators often cannot fix this at the school level. Contact your regional network center or vendor and request that they allow **mDNS Relay** and open **TCP/UDP Ports 3283 and 3284**. Ensure "Client Isolation" is disabled for the classroom VLAN.
 
-## Practical Advice:
+## Strategy:
 
-If connection issues only occur in specific rooms, check if that specific Access Point (AP) is overloaded or has a firmware issue causing packet drops.
+If connection issues only occur in a specific single classroom, immediately collaborate with the network administrator to check if that specific Access Point (AP) is suffering from client overload or a firmware anomaly causing broadcast packet loss.

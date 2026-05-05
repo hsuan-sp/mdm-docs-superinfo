@@ -1,31 +1,36 @@
 ---
 id: acc-13
 
-title: "Can users reset their own Managed Apple Account passwords?"
+title: "Can students reset their own Managed Apple Account passwords via self-service?"
 
 category: "Section 1: Account & Server Management"
 
 important: false
 
-tags: ["Password Reset", "ASM", "Administrator Action"]
+tags: ["Password Reset", "ASM", "Administrator Action", "Security Policy"]
 ---
 
-**Standard Apple School Manager (ASM) accounts do not currently offer a global 'Self-Service Password Reset' toggle for end-users.** Apple maintains strict permission levels for Managed Apple Account security. Password reset logic depends on your setup:
+**In a standard Apple School Manager (ASM) deployment, there is no global 'Self-Service Password Reset' toggle for students. Password authority is strictly retained by IT administrators.**
+
+Due to international educational privacy regulations (like COPPA and GDPR-K), Managed Apple Accounts operate under significantly different security paradigms compared to consumer Apple Accounts. If you cannot find a toggle to allow user self-reset, this is by design. Password resolution follows these operational logic paths:
 
 ## 1. Federated Authentication (Google / Microsoft)
 
-- If your school uses Google or Microsoft credentials to log in, password resets are **handled entirely on the Google or Microsoft side.**
-- The user simply changes their password on that platform, and the Apple Account syncs automatically. This is currently the only way to achieve true "Self-Service Reset."
+- If your ASM is federated with Google Workspace or Microsoft Entra ID, Apple’s native password management is overridden.
+- **Resolution**: Password resets are **handled entirely within the Google or Microsoft portals**. Users simply update their identity provider password, and their Apple services sync the new credentials automatically. This is the _only_ official way to enable true "Self-Service Password Reset" in an educational setting.
 
 ## 2. Standard Managed Apple Accounts (Non-Federated)
 
-- **Administrator Action Required**: Users cannot reset passwords via `iforgot.apple.com` (unless a recovery phone is linked, which is only supported in specific regions).
-- **Authorized Roles**: Personnel with "Administrator," "Site Manager," or "People Manager" roles must manually click "Reset Password" or "Create Sign-In Information" in ASM.
+- **Blocked Pathways**: Students cannot use the standard `iforgot.apple.com` portal. The system will reject the request outright (unless a school-controlled recovery phone number was explicitly bound to the account, which is rare in bulk deployments).
+- **Required Admin Action**: Staff with "Administrator", "Site Manager", or "People Manager" privileges must manually log into ASM, locate the user, and select **[Create Sign-In Information]** or **[Reset Password]** to generate a new temporary password.
 
-## 3. Regarding Account Recovery
+## 3. OS-Level Account Recovery (OS 26 Context)
 
-While Apple optimized account recovery in OS 26, the primary control for student accounts remains with the school IT administrator for security and compliance reasons.
+While Apple optimized local credential caching and offline recovery flows in **iPadOS 26 and macOS 26 Tahoe**, the ultimate authority to issue a new password for a locked Managed Account remains centralized within the ASM console to prevent unauthorized takeovers.
 
-## Practical Advice:
+## Strategy: Reducing Administrative Overhead
 
-If your accounts are not federated, students **must contact the ICT Support Team** if they forget their password. We recommend that administrators use the batch selection feature at the start of the semester to generate PDFs or CSVs containing temporary passwords for distribution.
+The daily burden of resetting student passwords can consume significant IT resources. To mitigate this:
+
+1. **Batch Generation**: At the start of each semester, utilize ASM's bulk-selection tool to generate PDFs or CSVs containing temporary passwords for entire incoming classes, delegating distribution to homeroom teachers.
+2. **Implement Federation**: We strongly advise deploying Federated Authentication. Consolidating into a single identity provider (like Google) allows students to use credentials they already know, eliminating the administrative nightmare of maintaining dual password systems.

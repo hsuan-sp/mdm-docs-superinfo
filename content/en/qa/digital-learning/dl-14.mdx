@@ -1,42 +1,41 @@
 ---
 id: dl-14
 
-title: "Students keep changing their iPad names, making it hard to track assets. How can I fix this?"
+title: "Students keep changing their iPad names, making asset tracking difficult. How can I fix this?"
 
-category: "Section 5: Digital Initiatives (MOE Project)"
+category: "Section 5: Digital Learning & Network Protection"
 
 important: false
 
 tags: ["Device Naming", "Asset Management", "The MUT", "Batch Update"]
 ---
 
-**This is a common classroom management headache. Beyond 'Blocking Changes,' you need a 'Batch Renaming' tool to quickly correct your entire fleet.**
+**This is a common classroom management challenge. Beyond utilizing a 'Restrictions' profile to block local changes, you can use a 'Batch Renaming' tool to quickly standardize your entire fleet. Maintaining strict standardization and consistency in device naming is absolutely vital for effective whole-school asset management, auditing, and precise troubleshooting.**
 
 ## The Three-Step Solution:
 
 ### 1. Stop the Bleed: Disable Local Modification
 
-- In the Jamf Pro **Restrictions** profile, **uncheck** `Allow modifying device name`.
-- **Result**: The "Name" field in **Settings > General > About** will turn gray and become unclickable.
+- In the Jamf Pro **Restrictions** configuration profile, **uncheck** `Allow modifying device name`.
+- **Result**: The "Name" field in **Settings > General > About** will turn gray and become unclickable, preventing students from altering the identity of the device.
 
 ### 2. The Treatment: Batch Rename with 'The MUT'
 
-To correct hundreds of already-mislabeled iPads, use **The MUT (Mass Update Tool)**.
+To correct hundreds of already-mislabeled iPads, use **The MUT (Mass Update Tool)** instead of manual editing.
 
-- **Download**: Search for "The MUT" in the Mac App Store (Free tool developed by Jamf employees).
-
+- **Tool Info**: A free utility developed by Jamf staff. Download it from the **Mac App Store** on macOS.
 - **Action**:
   1. Prepare a CSV with two columns: **Serial Number** and **Device Name**.
-  2. Open The MUT, log in with your Jamf Pro credentials.
+  2. Open The MUT, and log in with your Jamf Pro credentials.
   3. Upload the CSV and click **Update**.
   4. The system will instantly push renaming commands to all targeted devices.
 
 ### 3. Prevention: Enforce Naming
 
-Enable **Enforce Mobile Device Name** in your smart groups or device records in Jamf Pro.
+Enable the **Enforce Mobile Device Name** feature in Jamf Pro for your managed groups.
 
-- **Result**: This background mechanism monitors the fleet. If a device name deviates from the record (e.g., if a student bypasses a restriction), the MDM automatically pushes a correction command.
+- **Result**: This background mechanism monitors the fleet. If a device's local name deviates from its database record, the MDM automatically pushes a correction command. This is the industry-standard automated approach for maintaining large-scale educational deployments.
 
-## Practical Advice:
+## Strategy:
 
-For future deployments, define your naming convention (e.g., `Class-2026-%SERIALNUMBER%`) directly within the **PreStage Enrollment** settings. New devices will be named automatically upon activation without any manual effort.
+For any future device additions, define your naming convention (e.g., `Class-2026-%SERIALNUMBER%`) directly within the **PreStage Enrollment** settings. New devices will then be named automatically upon initial activation, requiring zero manual effort.

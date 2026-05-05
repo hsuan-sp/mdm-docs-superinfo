@@ -10,23 +10,23 @@ important: false
 tags: ["Procreate", "App 採購", "VPP", "通用購買", "退款"]
 ---
 
-**買錯 App 版本，是教育採購很常發生的錯誤。這兩款 App 屬於不同的產品線，且不支援「通用購買 (Universal Purchase)」。**
+**採購到錯誤的 App 版本是校園授權管理中常見的失誤。以 Procreate 為例，其 iPad 版與 iPhone 版（Pocket）屬於各自獨立的產品線，且未支援 Apple 的「通用購買 (Universal Purchase)」。**
 
-## 規格對照 ：
+## 產品規格對照
 
-- **Procreate (iPad 版)** ：專為 iPadOS 與 Apple Pencil 設計。支援大畫布與完整繪圖引擎，是美術班的標準教材。 **單價較高** 。
-- **Procreate Pocket (iPhone 版)** ：專為 iOS 手機介面設計。雖然能在 iPad 上安裝（相容模式），但畫面周圍會有黑邊，且不支援 Pencil 的壓力感應與傾斜功能。 **單價較低** 。
+- **Procreate (iPad 版)**：專為 iPadOS 與 Apple Pencil 深度優化。支援超大畫布與完整繪圖引擎，是許多學校美術班的標準教材。**軟體單價較高**。
+- **Procreate Pocket (iPhone 版)**：專為 iOS 較小的手機介面所設計。雖然透過相容模式也能在 iPad 上安裝運行，但畫面四周將出現黑邊，且無法支援 Apple Pencil 的進階壓力感應與傾斜偵測。**軟體單價較低**。
 
-## 買錯後的標準處理流程 ：
+## 誤購後的標準處置流程
 
-1.  **VPP 退款申請** ：
-    - 管理員登入 **Apple 校務管理** ，前往 **「偏好設定」>「付款與帳單」>「檢視購買記錄」** 。
-    - 或是直接登入 **reportaproblem.apple.com** ，使用 ASM 管理式帳號登入。
-    - 選擇該筆訂單，提出「要求退款 (Request a refund)」請求，理由註明「購買了錯誤的版本 (Purchased wrong version)」。
-    - **注意** ：Apple 審核退款通常需要 24-48 小時做出決定，且不可撤回。
+1. **提交 VPP 退款申請**：
+   - 資訊管理員需登入 **Apple 校務管理 (ASM)**，前往 **[偏好設定]** > **[付款與帳單]** > **[檢視購買記錄]**。
+   - 或者是，使用 ASM 的管理式帳號直接登入 **reportaproblem.apple.com**。
+   - 找到該筆錯誤訂單並點擊「要求退款 (Request a refund)」，於理由欄位明確註明「購買了錯誤的版本 (Purchased wrong version)」。
+   - **注意事項**：Apple 原廠審核退款請求通常需時 24 至 48 小時，且該請求一旦送出即無法撤回。
 
-2.  **重新採購** ：
-    - 由於授權不通用，您必須重新購買正確的 iPad 版本才能進行派送。
+2. **重新採購正確版本**：
+   - 由於兩種版本的授權無法互相轉換，您必須在 ASM 中重新採購正確的 iPad 版本授權以供後續派發。
 
-3.  **移除錯誤指派** ：
-    - 在 Jamf Pro 中，務必移除 Pocket 版的指派範圍，以免學生安裝到錯誤版本，影響上課體驗。
+3. **撤銷錯誤指派 (Scope)**：
+   - 請務必登入 Jamf Pro 管理主控台，將原本已設定的 Pocket 版 App 派送範圍移除，避免將手機版 App 錯誤地推播至學生的 iPad 上，嚴重影響教學體驗。

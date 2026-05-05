@@ -7,16 +7,30 @@ category: "Section 1: Account & Server Management"
 
 important: false
 
-tags: ["MFA", "Security", "Managed Apple Account"]
+tags: ["MFA", "Security", "Managed Apple Account", "Disaster Recovery"]
 ---
 
-**Yes. Managed Apple Accounts support MFA via managed recovery phones or Federated Authentication.** Enables MFA is a basic security standard for high-privilege accounts, such as administrators or teachers.
+**Yes, absolutely. Managed Apple Accounts support robust MFA through either Apple's native managed recovery phone system or via delegated Federated Authentication.**
 
-## Implementation Methods:
+Given escalating cybersecurity threats, Apple enforces MFA as a non-negotiable standard for any account holding administrative privileges within ASM.
 
-1. **Federated Authentication (Recommended)**: If you have integrated with Google or Microsoft, MFA is handled by that platform. After entering the domain password, the user is prompted by Google Authenticator or Microsoft Authenticator. Apple only receives the successful authentication result.
-2. **Standard ASM Accounts**: Users link a trusted phone number upon login. If a user loses their phone or changes numbers, a **Manager or Administrator** in ASM can select the user and click **Reset MFA Status**, allowing the user to bind a new device.
+## The Two Methods of MFA Implementation:
 
-## Practical Advice:
+### 1. Federated Authentication (Highly Recommended)
 
-We strongly recommend that all accounts with the "Administrator" role link at least two recovery channels or use physical hardware **Security Keys** to prevent a single lost device from locking the entire school out of the management console.
+- If your ASM is federated with Google Workspace or Microsoft Entra ID, the entire MFA challenge and verification process is **offloaded to the Identity Provider (IdP)**.
+- **The Workflow**: After entering their domain password, the user is prompted by Google Authenticator or Microsoft Authenticator (via push notification or SMS). Apple simply receives a secure token confirming successful authentication. This allows IT to manage all MFA policies and lockouts from a single, centralized Google or Microsoft dashboard.
+
+### 2. Standard ASM Accounts (Non-Federated)
+
+- During their initial login, users are required to register a trusted phone number to receive 6-digit verification codes via SMS or voice call.
+- **Handling Lost Devices (Disaster Recovery)**: If a teacher loses their phone or changes their number and is locked out, personnel with the "Site Manager" or "Administrator" role must intervene:
+  1. Log in to ASM and select the locked user from the **[Users]** list.
+  2. In the right-hand details panel, locate the security section and click **[Reset MFA Status]**.
+  3. This action flushes the old phone number from the system, prompting the user to register a new trusted device upon their next login attempt.
+
+## Strategy: The Security Baseline
+
+The responsibility for securing the MDM infrastructure falls entirely on the school, necessitating robust disaster recovery mechanisms.
+
+- **Prevent Single Points of Failure**: It is a critical institutional mandate that all ASM accounts with the **[Administrator]** role must link at least two distinct recovery phone numbers (e.g., the IT Director's mobile and a fixed office line). Alternatively, deploy FIDO-compliant physical **Security Keys**. This ensures that if the primary administrator leaves abruptly, loses their phone, or is incapacitated, the school will not be permanently locked out of its own management servers.

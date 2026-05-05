@@ -10,19 +10,19 @@ important: true
 tags: ["iOS 18", "Hide App", "Lock App", "Restrictions"]
 ---
 
-**The privacy features in iOS 18 allow users to lock or hide apps behind Face ID. This can interfere with classroom asset audits and instructional management.**
+**Apple introduced privacy features in iOS 18 allowing users to lock or hide specific apps via Face ID or passcode. In an educational environment, however, this can interfere with asset inventory and classroom management.**
 
-## MDM Countermeasures (Requires Jamf Pro 11.9+ and iOS 18+):
+## MDM Countermeasures (Requires Jamf Pro 11.9+ and iOS/iPadOS 18+)
 
-Administrators must enable two new restrictions in the **Restrictions** profile for **Supervised** devices:
+Administrators should check the following two new restrictions within the **[Restrictions]** profile for **"Supervised"** devices:
 
-1. **Disallow Locking Apps (allowLockedApps)**:
-   - Prevents users from enabling Face ID/Touch ID verification for any app.
-   - **Note**: Disabling this item also automatically disables the ability to hide apps.
+1. **Don't Allow Locked Apps (allowLockedApps)**:
+   - Enabling this restriction prevents users from applying Face ID/Touch ID authentication locks to any app.
+   - **Note**: If this permission is disabled, the system will automatically disable the "Hide App" feature as well, because hiding requires locking first.
 
-2. **Disallow Hiding Apps (allowHiddenApps)**:
-   - Prevents users from moving apps into the "Hidden" folder.
+2. **Don't Allow Hidden Apps (allowHiddenApps)**:
+   - Prevents users from moving apps into the system-level "Hidden" folder.
 
-## Technical Detail:
+## Technical Implementation
 
-These settings are deployed via **Declarative Device Management (DDM)** configurations in iOS 18+, which are more immediate than traditional profiles. Once applied, the options to "Require Face ID" or "Hide and Require Face ID" will be grayed out or removed from the app's long-press menu.
+In iOS/iPadOS 18 and later, these restrictions can be deployed via the _Configurations_ payload of **Declarative Device Management (DDM)**, making them take effect much faster than traditional profiles. Once applied, when a student long-presses an app icon on the Home Screen, the "Require Face ID" or "Hide and Require Face ID" options will be grayed out or removed, ensuring educational apps remain visible and accessible.

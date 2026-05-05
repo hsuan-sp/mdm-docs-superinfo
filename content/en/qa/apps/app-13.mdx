@@ -10,17 +10,17 @@ important: false
 tags: ["AppConfig", "XML", "Variables", "Jamf Pro"]
 ---
 
-**'Managed App Configuration' uses the MDM protocol to inject XML-based settings into apps that support the AppConfig standard, enabling 'Zero-touch Configuration'.**
+**'Managed App Configuration' utilizes the MDM protocol to inject XML-based preference parameters directly into apps supporting the AppConfig standard, enabling true 'Zero-touch Deployment'.**
 
-This goes beyond just pre-filling data; it can lock specific app behaviors to prevent user modification.
+This mechanism goes beyond simply pre-filling data; it can forcefully lock specific app behaviors and settings, preventing end-users from making unauthorized changes.
 
-## Technical Implementation with Jamf Pro Variables:
+## Technical Implementation with Jamf Pro
 
-In the mobile device app details page in Jamf Pro, switch to the **App Configuration** tab. You will need to paste a **Plist (Property List)** XML code that follows the developer's specifications.
+In the mobile device app details page within Jamf Pro, navigate to the **[App Configuration]** tab. You must paste **Plist (Property List)** XML code that adheres to the specific app developer's documentation.
 
-## The Jamf Advantage: Variable Substitution
+### The Jamf Advantage: Variable Substitution
 
-You can use Jamf Pro's built-in variables to dynamically fill in specific information for each device, eliminating the need for individual configuration files.
+By leveraging Jamf Pro's built-in variables, the system dynamically populates device- or user-specific information during deployment. This eliminates the need for IT admins to create individual configuration profiles for hundreds of students.
 
 - **Common Variables**:
   - `$SERIALNUMBER`: Automatically fills the device serial number.

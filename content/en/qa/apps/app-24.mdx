@@ -10,25 +10,25 @@ important: false
 tags: ["Cellular Data", "Wi-Fi", "App Download", "Traffic Management", "iOS 26"]
 ---
 
-**In iOS 26 and iPadOS 26, the 'Declarative Device Management' (DDM) framework includes a new 'Restrict App Download Over Cellular' setting. This allows schools to force apps to download or update only in Wi-Fi environments, effectively managing SIM card data costs.**
+**The Declarative Device Management (DDM) framework in iOS/iPadOS introduces a new "Restrict App Download Over Cellular" configuration payload. This allows IT administrators to strictly enforce that student devices only execute app downloads and updates while connected to Wi-Fi, effectively preventing the exhaustion of SIM card cellular data.**
 
 ## Configuration
 
 This feature is implemented via **DDM** configurations. In **Jamf Pro**:
 
-1. Go to **Blueprints** or **App Declarations**.
+### Jamf Pro Configuration Steps
 
-2. Define the policy for individual managed apps or a group of apps.
-3. Set the **'CellularDataPolicy'** in the deployment declaration:
-   - **Disallow**: Forces download/update to happen only over Wi-Fi.
-   - **Allow**: Permits installation over any available network.
-
-4. Deploy to the target group (Requires **iOS 18+** and a **Supervised** device).
+1. In the Jamf Pro console, navigate to the **[Blueprints]** or **[App Declarations]** section.
+2. Define the configuration for the specific managed apps.
+3. Configure the **"CellularDataPolicy"** parameter within the deployment declaration:
+   - **Disallow**: Strictly enforces downloading and updating over Wi-Fi only.
+   - **Allow**: Permits installation over any available network, including cellular data.
+4. Save and assign the declaration to your target device groups (devices must be Supervised and running a compatible OS).
 
 ## Use Cases and Benefits
 
-- **Subsidized SIM Cards**: Many government projects provide iPads with limited monthly data (e.g., 10GB). This prevents students from accidentally exhausting the plan by downloading large apps or updates outside of school.
-- **BYOD/Parent-Paid Plans**: For personal devices where parents pay for the data, this setting helps prevent high bills caused by background app activity.
+- **Subsidized SIM Cards**: Many educational projects provide iPads or Chromebooks with built-in SIM cards and strict monthly data caps (e.g., 10GB/month). This restriction prevents students from accidentally draining their monthly data allowance by downloading large games or apps while off-campus.
+- **BYOD (Bring Your Own Device) Management**: For personal student devices where parents cover the cellular data costs, this setting helps the school govern inappropriate download behaviors, preventing unexpected data overage charges and subsequent disputes.
 
 ## Impact and Limitations
 
@@ -47,7 +47,6 @@ This feature is implemented via **DDM** configurations. In **Jamf Pro**:
 
 Restricting app downloads is only one part of data management. For complete control, combine this with:
 
-- **Content Filtering**: To block data-heavy sites or streaming.
-
-- **Per-App VPN**: To route specific app traffic only through school-approved gateways.
-- **User Education**: Teaching students to identify high-bandwidth behaviors.
+- **Network Content Filtering**: Deploy a Web Content Filter profile via MDM to restrict access to high-bandwidth streaming platforms (like YouTube or TikTok) over cellular.
+- **Per-App VPN**: Force the network traffic of specific educational apps through the school's internal VPN server, ensuring they can only connect when interacting with the campus network environment.
+- **Digital Literacy Education**: Clearly instruct students during early IT classes to identify and avoid digital behaviors that consume excessive bandwidth.

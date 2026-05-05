@@ -1,7 +1,7 @@
 ---
 id: hw-11
 
-title: "How do I check iPad battery health? Why can't I see this data in the MDM console?"
+title: "How do I check iPad battery health? Why is the data missing from the MDM console?"
 
 category: "Section 6: Hardware & Maintenance"
 
@@ -10,33 +10,34 @@ important: false
 tags: ["Battery Health", "Longevity", "Troubleshooting", "Asset Management"]
 ---
 
-**For base models like the iPad 9 and the later iPad 11 (A16), technical limitations prevent "Battery Maximum Capacity (%)" from being displayed directly in System Settings or the Jamf Pro console.** However, newer models released in 2024 (such as the M4 iPad Pro and M2/M3 iPad Air) now include a comprehensive Battery Health menu similar to the iPhone.
+**For base models like the iPad 9th gen and the USB-C based iPad (A16), technical limitations prevent "Battery Maximum Capacity (%)" from being displayed directly in System Settings or the Jamf Pro console.**
 
-## 1. Check "Battery Usage History" (Most Reliable Indicator):
+However, newer models released in 2024 (such as the M4 iPad Pro and M2 iPad Air) now include a comprehensive Battery Health menu. For older models, follow these practical diagnostic steps:
 
-1. Go to **Settings > Battery**.
+## 1. Check "Battery Usage History" (Most Reliable)
+
+1. Go to **[Settings]** > **[Battery]**.
 2. View the Last 24 Hours or Last 10 Days chart.
-3. **Observe the Slope**: If the battery percentage curve shows a "cliff dive" or drops more than 20% in a short time while performing simple tasks (like browsing), significant chemical aging has occurred.
-4. **Unexpected Shutdowns**: If the device shuts down suddenly while still showing 10-20% charge, this is a classic sign of battery failure.
+3. **Observe the Slope**: If the battery percentage curve shows a "cliff dive" (dropping more than 20% in a short time) while performing simple tasks like browsing, significant chemical aging has occurred.
+4. **Unexpected Shutdowns**: If the device shuts down suddenly while still showing 10-20% charge, it is a classic sign of battery failure.
 
-## 2. Check Performance Throttling:
+## 2. Performance Throttling Indicators
 
-Go to **Settings > Battery > Battery Health & Charging**.
+Go to **[Settings]** > **[Battery]** > **[Battery Health & Charging]**.
 
 - **New Models (M4/M2)**: Displays "Maximum Capacity" and "Cycle Count" directly.
+- **Older Models (iPad 9)**: If you see a message stating "This iPad has experienced an unexpected shutdown...", the system is actively throttling the CPU to prevent crashes due to a weak battery.
 
-- **Older Models (iPad 9)**: If you see a message saying "This iPad has experienced an unexpected shutdown...", the system is actively throttling the CPU to prevent crashes due to a weak battery.
-
-## 3. Use Jamf Pro's "Last Battery Level" Tracking:
+## 3. Use Jamf Pro's "Battery Level" Tracking
 
 In your Jamf Pro inventory, add the "Battery Level" column.
 
-- **Method**: If a batch of devices finishes a charging cycle (should be 100%) but consistently reports less than 60% after just one class period, create a Smart Group to flag these units for inspection.
+- **Method**: If a batch of devices finishes a charging cycle (should be 100%) but consistently reports less than 60% after just one class period, create a **Smart Group** to flag these units for physical inspection.
 
-## 4. Advanced Management for 2024+ Models:
+## 4. Advanced Management (2024+ Models)
 
-For the latest iPads, administrators can use a Restrictions Profile to enable the **"80% Charge Limit."** This is critical for devices stored in charging carts for long periods, as it significantly extends battery lifespan.
+For the latest iPads, administrators can use a **Restrictions Profile** to enable the **"80% Charge Limit."** This is critical for devices stored in charging carts for long periods, as it significantly extends battery lifespan.
 
-## Practical Advice:
+## Expert Strategy:
 
-Lithium batteries typically show noticeable degradation after **800-1,000 charge cycles**. For project devices that have been in use for three years, if battery life is severely impacting teaching, prepare for a repair or battery replacement service.
+Lithium batteries typically show noticeable degradation after **1,000 full charge cycles**. For devices that have been in service for several years, if battery life is severely impacting instructional time, prepare a repair request. Ensure all battery-related service claims are filed before the device's hardware warranty or AppleCare+ coverage expires to minimize school expenditures.

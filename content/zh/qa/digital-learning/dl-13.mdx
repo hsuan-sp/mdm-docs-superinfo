@@ -1,26 +1,27 @@
 ---
 id: dl-13
 
-title: "如何防止學生登入個人 Apple 帳號並自行安裝非教學用 App？"
+title: "如何防止學生登入個人 Apple 帳號並自行安裝 App？"
 
-category: "第五部分：數位學習精進方案專區 (MOE Digital Learning Project)"
+category: "第五部分：數位學習與網路防護 (Digital Learning & Network Protection)"
 
 important: false
 
 tags: ["Apple 帳號", "App Store", "限制", "App 管理", "資產政策"]
 ---
 
-**這是 iPad 部署核心的管控項目。若要避免 App 購買權限混亂與個人資料隱私問題，必須透過「限制」描述檔，直接鎖死帳號登入與 App Store 安裝權限。**
+**這是受監管 (Supervised) 裝置管控的核心項目。為避免 App 購買權限混亂、啟用鎖定問題以及個人資料隱私疑慮，資訊組長必須透過「限制 (Restrictions)」描述檔徹底鎖定帳號設定與 App Store。維持設備的「純淨教學用途」是長久管理的最高指導原則。**
 
-精進方案載具為學校公有資產，不應允許學生登入私人帳號，以免造成 App 購買權限混亂與個人資料隱私問題。
+## 標準防護設定 (Jamf Pro)：
 
-## 標準防護設定 (Jamf Pro) ：
+### 1. 鎖定帳號修改 (核心設定)
 
-1.  **鎖定帳號修改 (最核心)** ：
-    - 在限制描述檔 (Restrictions) > 功能 (Functionality)。
-    - **取消勾選** `Allow modifying account settings` (允許修改帳號設定)。
-    - **效果** ：iPad 的「設定」頁面中，最上方的 Apple 帳號區塊會變成灰色（反白），學生完全無法登入或登出任何帳號。
+- 前往**「限制 (Restrictions)」**描述檔 > **「功能 (Functionality)」**。
+- **取消勾選**：`Allow modifying account settings` (允許修改帳號設定)。
+- **效果**：iPad 的「設定」頁面中，最上方的 Apple 帳號區塊會變為灰色（反白），學生完全無法登入、登出或修改任何帳號資訊。這能有效防止裝置被私人的「尋找我的 iPad」鎖定。
 
-2.  **停用 App Store** ：
-    - **取消勾選** `Allow installing apps using App Store`。
-    - **效果** ：App Store 圖示會直接從主畫面上消失，徹底杜絕學生自行安裝 App 的管道。所有 App 應由 MDM 統一透過 VPP (裝置型指派) 派送。
+### 2. 停用 App Store
+
+- **取消勾選**：`Allow installing apps using App Store` (允許使用 App Store 安裝 App)。
+- **效果**：App Store 圖示會從主畫面上完全消失。學生將沒有任何管道自行下載遊戲或社群軟體。
+- **正確部署方式**：所有教學用 App 應由 MDM 統一透過 **量購計畫 (VPP)** 以「裝置型指派」的方式派送，無需在裝置上登入任何 Apple 帳號即可安裝。

@@ -10,16 +10,15 @@ important: true
 tags: ["App Update", "Jamf Pro", "Manual Update", "Auto Update", "DDM"]
 ---
 
-**In Jamf Pro, app updates are primarily managed through "Automated Enforcement" and the "Force Update" button.** To ensure classroom iPads remain up-to-date, it is recommended to combine automated checking with manual enforcement when necessary.
+**Within the Jamf Pro architecture, application version updates are primarily managed through two operational mechanisms: "Automated Enforcement Scheduling" and "Manual Force Updates."** To ensure that iPads in the learning environment consistently operate on the latest and most stable software versions, IT administrators are strongly advised to flexibly combine both methods.
 
 ## 1. Configuring Automated Updates and Sync Schedules
 
 Go to **Devices > Mobile Device Apps** and select the app you wish to manage. In the **"General"** tab, configure the following:
 
-- **Schedule App Checks**: Check the option **"Automatically check for app updates"**. This ensures Jamf Pro stays informed about new descriptions, icons, and versions.
-
-- **Automated Enforcement**: Check **"Automatically force app updates"**. The system will then automatically send update commands to mobile devices whenever a new version is detected.
-- **Sync Time**: Adjust the **"App Store Sync Time"** to a time outside of school hours (e.g., midnight) to avoid peak network traffic.
+- **Schedule App Checks**: Check the option **"Automatically check for app updates."** Once enabled, Jamf Pro will periodically cross-reference app descriptions, icons, and version information with the Apple App Store.
+- **Automated Enforcement**: Check **"Automatically force app updates."** When the system detects that a new version has been released, it will autonomously send a silent update command to the scoped device groups.
+- **Sync Time (App Store Sync Time)**: Administrators can customize the schedule for these checks. It is recommended to configure this for early morning hours (e.g., 02:00 AM) to circumvent network bandwidth peaks during daytime campus instruction.
 
 ## 2. Manually Forcing App Updates (Force Update)
 
@@ -30,14 +29,13 @@ For urgent updates, navigate to **Devices > Mobile Device Apps** and select the 
 2. Scroll down to the **"Force App Update"** section.
 3. Click the **`Force Update`** button. Jamf Pro will immediately send a force update command to all devices within the app's **"Scope."**
 
-## 3. Considerations for 2026: DDM and Update Constraints
+## 3. Considerations for DDM and Update Constraints
 
 In iOS 26 and the latest system environments, update execution is still subject to the following rules:
 
-- **In-Use Limitation**: If a student is currently using the app, the update will remain "Pending." Forcing the update will attempt to close the app, which may cause a crash during teaching.
-
-- **Single App Mode**: If an iPad is in "Guided Access" or "Single App Mode," it will not receive or install app updates. The mode must be deactivated first.
-- **Silent Conversion**: If an app was originally installed manually by a student, ensure **"Convert unmanaged app to managed"** is enabled so Jamf Pro can take control.
+- **App Actively In Use**: If a student is currently actively using the app, the update command will temporarily remain in a "Pending" state. If an administrator forces the update via Jamf Pro at this moment, the system attempts to force-close the app to execute the installation, which causes a sudden "crash" on the student's screen and severely disrupts the lesson.
+- **Single App Mode Lockdown**: If the iPad is locked in "Single App Mode" or "Guided Access," the device will refuse to receive and install any app updates. The lockdown mode must be deactivated before the update can successfully write.
+- **Unmanaged App Conversion**: If the app is "Unmanaged" software that the student originally downloaded manually from the App Store using a personal Apple Account, the administrator must check **"Convert unmanaged app to managed"** in the settings. This ensures Jamf Pro can smoothly assume control of the app and push version updates.
 
 **💡 Pro Tip**:
 

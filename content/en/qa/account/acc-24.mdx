@@ -1,38 +1,39 @@
 ---
 id: acc-24
 
-title: "How is the iCloud storage quota managed for Managed Apple Accounts? What if a student runs out of space?"
+title: "How is iCloud storage managed for Managed Apple Accounts? What if a student runs out of space?"
 
 category: "Section 1: Account & Server Management"
 
 important: false
 
-tags: ["iCloud", "Storage", "Quota", "Managed Apple Account"]
+tags: ["iCloud", "Storage", "Quota", "Data Backup"]
 ---
 
-**Managed Apple Accounts for education default to a 200GB iCloud storage quota. Administrators cannot adjust individual quotas or purchase additional space for specific users.**
+**Managed Apple Accounts in educational environments default to a generous 200GB iCloud storage quota. However, IT administrators "CANNOT" purchase additional storage tiers or expand this quota for individual users under any circumstances.**
 
-## Storage Quotas by Organization Type
+This is a fundamental architectural difference compared to consumer Apple Accounts (where users can simply pay to upgrade to 2TB). In ASM, storage is treated as a provisioned organizational resource, not a personal hard drive.
 
-- **Education (ASM)**: Apple provides **200GB** of iCloud storage for every user (staff and students) at no additional cost.
-- **Business (ABM)**: Defaults to 5GB. Organizations with **Apple Business Essentials (ABE)** may have 50GB or 200GB quotas. _Note: As of early 2026, ABE is not yet widely available in all regions (including Taiwan)._
+## Strict Quota Specifications:
 
-## Handling a Full 200GB Quota
+- **Education Organizations (ASM)**: Apple provides **200GB** of iCloud storage for every provisioned user (staff and students) entirely free of charge.
+- **Business Organizations (ABM)**: The default is a mere 5GB. Organizations subscribing to Apple Business Essentials (ABE) can access 50GB or 200GB tiers. _(Note: As of 2026, ABE remains unavailable in many regions including Taiwan, leaving most local corporate managed accounts capped at 5GB)._
 
-If a student's 200GB is full (often due to backing up large personal photo/video libraries), consider the following strategies:
+## Standard Operating Procedure for Exhausted 200GB Quotas:
 
-1. **Utilize the 'Schoolwork' App**:
-   - Files submitted via the **Schoolwork** app (Pages, Keynote, video assignments) are managed separately from the student’s personal iCloud quota, reducing pressure on their individual space.
-   - Teach students to manage files effectively instead of storing all miscellaneous data in iCloud.
+Students typically exhaust their 200GB by indiscriminately backing up 4K video projects or massive photo libraries. Since you cannot buy your way out of this problem, IT staff must guide users through these steps:
 
-2. **Cleanup and Backup (SOP)**:
-   - **Check Backup Content**: Go to Settings > Apple Account > iCloud > iCloud Backup and disable backups for non-essential apps.
-   - **Offload Photos**: Guide students to move non-academic photos to personal devices or a school-provided Google Photos account.
-   - **Purge Old Coursework**: At the end of the semester, export important files to a school NAS or external storage and clear the iCloud space for the next term.
+1. **Offload Assignments via the 'Schoolwork' App**
+   - Files and projects (Pages, Keynote, media) submitted natively through the Apple **Schoolwork** app utilize a separate, institutional storage mechanism. They do **not** count against the student’s personal 200GB iCloud quota. Encourage teachers to use this workflow.
+2. **Purge Bloated System Backups**
+   - Guide the student to **[Settings]** > **[Apple Account]** > **[iCloud]** > **[iCloud Backup]**.
+   - Select the current device and manually toggle off the backup switches for non-essential applications or massive games that do not require cloud state saving.
+3. **Leverage Secondary Institutional Cloud Storage**
+   - Establish good data hygiene: Teach students to export and upload massive, static files (like finalized video projects) to the school's Google Workspace (Google Drive) or Microsoft 365 (OneDrive) environments. iCloud should be fiercely protected and reserved strictly for OS backups, app sync, and active lightweight documents.
 
-3. **Alternative Cloud Services**:
-   - If your school provides **Google Workspace for Education** or **Microsoft 365**, direct students to store large static files (like long-form video projects) on Google Drive or OneDrive. Keep iCloud reserved for app syncing and current documents.
+## Strategy: Graduation Cycles and Data Transfer
 
-## Expert Insight
+During graduation cycles or when students transition to different programs, data management becomes critical.
 
-- **Academic Opportunity**: Use this as a chance to teach students about "Digital Decluttering" and file management. Storage is always a finite resource, and organizing data is a key digital literacy skill.
+- **Proactive Education**: IT Directors must actively promote "Digital Decluttering." Students must be taught to export critical portfolios to personal external drives or personal clouds before the academic year ends.
+- **Strict Offboarding Policies**: Once a student graduates, their Managed Apple Account is deleted by the school, instantly vaporizing the contents of that 200GB iCloud drive. School IT will not have the bandwidth to field parent complaints about lost data. Establish and clearly communicate rigid deadlines for account deactivation and data purging.

@@ -1,26 +1,37 @@
 ---
 id: acc-19
 
-title: "如何控管「管理式 Apple 帳號」是否能使用 Apple Intelligence 功能？"
+title: "如何控管師生的「管理式 Apple 帳號」是否能使用 Apple Intelligence 功能？"
 
 category: "第一部分：帳號與伺服器管理 (Account & Server Management)"
 
 important: false
 
-tags: ["Apple Intelligence", "服務存取", "ASM"]
+tags: ["Apple Intelligence", "服務存取", "ASM", "隱私權限"]
 ---
 
-**管理員可透過 Apple 校務管理 (ASM) 的服務存取設定，決定是否開放 AI 相關功能。**
+**資訊組長可同時透過 Apple 校務管理 (ASM) 的「帳號層級」與 MDM 的「裝置層級」雙管齊下，精確決定是否開放 AI 相關功能。**
 
-隨著 Apple 於 2024 年底至 2025 年全面推廣 **Apple Intelligence** ，ASM 提供了帳號層級的開關，這與 MDM 的裝置限制是相輔相成的。
+隨著 Apple 於 2024 年底至 2025 年間將 **Apple Intelligence** 全面整合至作業系統底層，校園環境對於生成式 AI 的使用界線變得極具挑戰。Apple 針對教育環境提供了嚴謹的權限隔離機制。
 
-## 設定方式 ：
+## 雙層管控機制：
 
-1.  **帳號層級 (ASM)** ：登入 ASM > **「設定」>「使用者登入與目錄同步」>「服務存取」** 。在此可以針對不同職務（如學生）關閉或開啟 Apple Intelligence 服務。
-2.  **裝置層級 (MDM)** ：在 Jamf Pro 的限制描述檔中，可以進一步禁用「寫作工具」、「影像遊樂場」等具體功能。
+### 1. 帳號層級管控 (ASM 後台)
 
-## 為什麼要在帳號層級設定？
+如果您希望徹底切斷某個學生帳號使用 Apple 雲端 AI 運算的能力，必須在 ASM 中設定：
 
-若在 ASM 中關閉了該服務，即便學生將其管理式帳號登入到未受監管的個人裝置，該帳號依然無法使用 Apple Intelligence 的雲端運算功能。
+- **操作路徑**：登入 ASM > 點選左下角前往 **[偏好設定]** > **[服務存取 (Service Access)]**。
+- **功能描述**：在此介面中，您可以針對不同的「職務 (Roles)」(如：學生、講師、職員) 開啟或關閉 Apple Intelligence。
+- **優勢**：一旦在 ASM 中關閉，即便學生將其「管理式 Apple 帳號」登入到他們自己購買的**未受監管個人 iPad 或 Mac 上**，該帳號也絕對無法調用 Apple Intelligence 的私密雲端運算 (Private Cloud Compute) 資源，確保教育資料絕不流出。
 
-這確保了教育機構對資料流向的絕對控制權。
+### 2. 裝置層級管控 (MDM 限制描述檔)
+
+如果您只是想限制學校的公有 iPad 不能使用特定 AI 功能，可透過 Jamf Pro 控制：
+
+- **操作路徑**：Jamf Pro > **[設定檔]** > **[限制 (Restrictions)]**。
+- **精細控制**：您可以個別禁用「寫作工具 (Writing Tools)」、「影像遊樂場 (Image Playground)」或「Genmoji」等具體功能，而不影響 Siri 的基礎運作。
+
+## 實務建議：教學政策的管控
+
+關於 AI 在校園內的使用政策，各校應依據教學需求自主規範。
+建議資訊組在政策過渡期間採取「預設關閉 (Opt-out default)」策略：在 ASM 的「服務存取」中，對「學生」職務全面關閉 Apple Intelligence，僅對「講師 (教師)」職務開放。待校內教務會議針對 AI 輔助寫作與防作弊機制有明確共識後，再透過 MDM 針對特定年級的裝置逐步解鎖對應功能。
