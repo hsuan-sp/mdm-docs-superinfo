@@ -20,7 +20,9 @@ export const metadata: Metadata = {
   },
   description:
     "專業的 Apple 裝置管理 (MDM) 知識庫，包含實戰指南、技術術語與常見問題解答。",
-  metadataBase: new URL("https://your-domain.com"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://mdm.superinfo.com.tw"
+  ),
 };
 
 export default async function RootLayout({
@@ -55,7 +57,7 @@ export default async function RootLayout({
                 </Navbar>
               }
               search={null}
-              footer={<CustomFooter />}
+              footer={<CustomFooter key="footer" />}
               pageMap={pageMap}
               docsRepositoryBase="https://github.com/hsuan-sp/mdm-docs-superinfo/tree/main"
               editLink="編輯此頁"
@@ -66,9 +68,11 @@ export default async function RootLayout({
               nextThemes={{ defaultTheme: "light" }}
               toc={{ float: true, title: "本頁目錄" }}
             >
-              <SecurityGuard key="security-guard" />
-              <AuthGuard key="auth-guard">{children}</AuthGuard>
-              <BackToTop key="back-to-top" />
+              <>
+                <SecurityGuard />
+                <AuthGuard>{children}</AuthGuard>
+                <BackToTop />
+              </>
             </Layout>
           </LanguageProvider>
         </UserProvider>

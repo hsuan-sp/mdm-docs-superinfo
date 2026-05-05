@@ -249,6 +249,12 @@ export const en = {
       "System cannot retrieve your valid email. This usually happens after first registration, please reset session and sign-in again to complete sync.",
     zombieBtn: "Reset Session & Re-login",
   },
+  unauthorized: {
+    title: "Access Denied",
+    desc: 'Sorry, this platform is restricted to <span class="text-apple-blue dark:text-apple-blue font-bold">.edu.tw</span> education accounts.<br /><br />Please sign out and use a qualified account to sign in.',
+    signOut: "Sign Out",
+    backHome: "Back to Home",
+  },
   error404: {
     title: "Page Not Found",
     subtitle:

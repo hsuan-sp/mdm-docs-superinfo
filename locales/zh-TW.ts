@@ -247,6 +247,12 @@ export const zhTW = {
       "系統目前無法取得您的有效郵件資訊。這通常發生在初次註冊後，請嘗試「重置會話」並重新登入以完成同步。",
     zombieBtn: "重置會話並重新登入",
   },
+  unauthorized: {
+    title: "存取被拒絕",
+    desc: '抱歉，此平台僅限使用 <span class="text-apple-blue dark:text-apple-blue font-bold">.edu.tw</span> 教育信箱登入。<br /><br />請登出並使用符合資格的帳號重新登入。',
+    signOut: "登出目前帳號",
+    backHome: "返回首頁",
+  },
   error404: {
     title: "頁面失蹤了",
     subtitle:

@@ -9,6 +9,17 @@ import React, {
 } from "react";
 import { isAuthorizedEmail } from "@/lib/auth";
 
+// ✅ Auth 抽象層：透過環境變數控制是否啟用驗證
+// 設定 NEXT_PUBLIC_AUTH_DISABLED=true 即可繞過所有 Logto 驗證，方便本地部署
+const AUTH_DISABLED = process.env.NEXT_PUBLIC_AUTH_DISABLED === "true";
+
+// Bypass 模式下使用的模擬使用者
+const MOCK_USER: LogtoUser = {
+  sub: "local-dev-user",
+  email: "dev@superinfo.com.tw",
+  name: "Local Dev",
+};
+
 interface LogtoUser {
   sub: string;
   email?: string;
@@ -31,15 +42,18 @@ const UserContext = createContext<UserContextType | undefined>(undefined);
 export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [data, setData] = useState<{ user: LogtoUser | null; auth: boolean }>({
-    user: null,
-    auth: false,
-  });
-  const [isLoading, setIsLoading] = useState(true);
-  const hasFetched = useRef(false);
+  // ✅ Bypass 模式：直接設為已驗證，不發送任何 API 請求
+  const [data, setData] = useState<{ user: LogtoUser | null; auth: boolean }>(
+    AUTH_DISABLED
+      ? { user: MOCK_USER, auth: true }
+      : { user: null, auth: false }
+  );
+  const [isLoading, setIsLoading] = useState(!AUTH_DISABLED);
+  const hasFetched = useRef(AUTH_DISABLED); // Bypass 模式下標記為已抓取
 
   // ✅ 深層清理函數：自動處理 Cookie 以外的所有殘留資料
   const clearLocalPersistence = useCallback(() => {
+    if (AUTH_DISABLED) return; // Bypass 模式下不需要清理
     try {
       localStorage.clear();
       sessionStorage.clear();
@@ -111,6 +125,10 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
   }, [fetchUser]);
 
   const signIn = (redirectPath?: string) => {
+    if (AUTH_DISABLED) {
+      console.log("[Auth Bypass] signIn() called but auth is disabled.");
+      return;
+    }
     const path = redirectPath || window.location.pathname;
     window.location.replace(
       `/api/logto/sign-in?redirect=${encodeURIComponent(path)}`
@@ -118,6 +136,10 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
   };
 
   const signOut = () => {
+    if (AUTH_DISABLED) {
+      console.log("[Auth Bypass] signOut() called but auth is disabled.");
+      return;
+    }
     // 登出時順便執行深層清理
     clearLocalPersistence();
     window.location.replace("/api/logto/sign-out");

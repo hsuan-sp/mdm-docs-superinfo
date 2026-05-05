@@ -214,10 +214,6 @@ const Guide: React.FC<GuideProps> = ({ initialData }) => {
     setMounted(true);
   }, []);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   // Handle ESC key to close drawer
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {

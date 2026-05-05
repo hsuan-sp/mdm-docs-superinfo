@@ -4,19 +4,7 @@ import React from "react";
 // ✅ Nextra 4 / App Router 下必須從 next/navigation 引入 useRouter
 import { useRouter } from "next/navigation";
 import CardSheen from "@/components/ui/CardSheen";
-import {
-  User,
-  Package,
-  Smartphone,
-  GraduationCap,
-  Apple,
-  Wrench,
-  Monitor,
-  HelpCircle,
-  Book,
-  ArrowRight,
-  ChevronRight,
-} from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import { translations } from "@/locales";
 import { useLanguage } from "@/hooks/useLanguage";
 
